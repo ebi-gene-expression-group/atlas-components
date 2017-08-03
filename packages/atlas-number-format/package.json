@@ -1,6 +1,6 @@
 {
   "name": "expression-atlas-number-format",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Format numbers nicely",
   "main": "lib/index.js",
   "scripts": {
