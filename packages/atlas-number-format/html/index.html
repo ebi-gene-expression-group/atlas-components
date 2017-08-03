@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Atlas Number Format demo</title>
+
+    <link rel="stylesheet" href="https://www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/libraries/foundation-6/css/foundation.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="https://www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/css/ebi-global.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="https://www.ebi.ac.uk/web_guidelines/EBI-Icon-fonts/v1.2/fonts.css" type="text/css" media="all" />
+
+    <link rel="stylesheet" href="https://www.ebi.ac.uk/gxa/resources/css/foundation/atlas.css" type="text/css" media="all">
+</head>
+
+<body>
+<div class="row">
+
+    <div class="row column padding-bottom-large">
+        <div class="small-6 columns">
+            <label>Type in a value and press Enter:</label>
+            <input type="number" id="input-number"/>
+        </div>
+        <div class="small-6 columns">
+            <label>Result:</label>
+            <p><span id="render-input"></span></p>
+        </div>
+    </div>
+
+    <div class="row column">
+        <div class="small-12 columns">
+            <table>
+                <thead>
+                <tr>
+                    <td>Value</td>
+                    <td>Rendered as</td>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>0</td>
+                    <td><span id="0"></span></td>
+                </tr>
+                <tr>
+                    <td>0.1</td>
+                    <td><span id="0.1"></span></td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td><span id="1"></span></td>
+                </tr>
+                <tr>
+                    <td>1000</td>
+                    <td><span id="1000"></span></td>
+                </tr>
+                <tr>
+                    <td>99999.999999</td>
+                    <td><span id="99999.999999"></span></td>
+                </tr>
+                <tr>
+                    <td>0.000001</td>
+                    <td><span id="0.000001"></span></td>
+                </tr>
+                <tr>
+                    <td>1000000000</td>
+                    <td><span id="1000000000"></span></td>
+                </tr>
+                <tr>
+                    <td>10000000001</td>
+                    <td><span id="10000000001"></span></td>
+                </tr>
+                <tr>
+                    <td>0.00004998549</td>
+                    <td><span id="0.00004998549"></span></td>
+                </tr>
+                <tr>
+                    <td>-0.00004998549</td>
+                    <td><span id="-0.00004998549"></span></td>
+                </tr>                <tr>
+                    <td>57832234.0234</td>
+                    <td><span id="57832234.0234"></span></td>
+                </tr>
+                </tr>                <tr>
+                    <td>-57832234.0234</td>
+                    <td><span id="-57832234.0234"></span></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+</body>
+
+<script src="vendorCommons.bundle.js"></script>
+<script src="scientificNotationNumber.bundle.js"></script>
+
+<script>
+    [0, 0.1, 1, 1000, 99999.999999, 0.000001, 1000000000, 10000000001, 0.00004998549, -0.00004998549, 57832234.0234, -57832234.0234]
+      .forEach(function(e) {
+        scientificNotationNumber.render({value: e}, e.toString())
+      })
+
+    document.getElementById("input-number").addEventListener("change", function(e) {
+      scientificNotationNumber.render({value: Number.parseFloat(e.target.value)}, "render-input")
+    })
+</script>
+
+</html>
