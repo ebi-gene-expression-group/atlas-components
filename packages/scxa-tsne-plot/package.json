@@ -6,7 +6,8 @@
   "scripts": {
     "dist": "NODE_ENV=production webpack --optimize-minimize",
     "prepublishOnly": "rm -rf lib && babel src -d lib --copy-files",
-    "test": "jest --coverage"
+    "test": "jest --coverage",
+    "posttest": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
   },
   "jest": {
     "moduleNameMapper": {
@@ -26,6 +27,10 @@
     "url": "https://github.com/gxa/scxa-experiment-page-tsne-plot-view"
   },
   "dependencies": {
+    "atlas-autocomplete": "latest",
+    "color": "^2.0.0",
+    "expression-atlas-tsne-plot": "latest",
+    "query-string": "^4.3.4",
     "prop-types": "^15.5.10",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
