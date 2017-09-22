@@ -18,14 +18,6 @@ describe(`SeriesMapper.colourizeClusters`, () => {
     })
   })
 
-  test(`must not dim (i.e. add a color field) any series if none are passed to highlight`, () => {
-    const randomSeries = RandomSeriesGenerator.generate(seriesNames, maxPointsPerSeries)
-    _colourizeClusters([], `lightgrey`)(randomSeries).forEach((series) => {
-      series.data.forEach((point) => {
-        expect(point).not.toHaveProperty(`color`)
-      })
-    })
-  })
 
   test(`must not dim (i.e. add a color field) any series if all are highlighted`, () => {
     const randomSeries = RandomSeriesGenerator.generate(seriesNames, maxPointsPerSeries)
@@ -36,11 +28,24 @@ describe(`SeriesMapper.colourizeClusters`, () => {
     })
   })
 
-  test(`dims all series but the highlighted one`, () => {
+  test(`must not dim (i.e. add a color field) any series if none are passed to highlight`, () => {
+    const randomSeries = RandomSeriesGenerator.generate(seriesNames, maxPointsPerSeries)
+    _colourizeClusters([], `lightgrey`)(randomSeries).forEach((series) => {
+      series.data.forEach((point) => {
+        expect(point).not.toHaveProperty(`color`)
+      })
+    })
+  })
+
+  test(`dims all series but the highlighted ones`, () => {
     const randomSeries = RandomSeriesGenerator.generate(seriesNames, maxPointsPerSeries)
 
-    const highlightRandomSeries =
-      seriesNames.reduce((acc, seriesName) =>  Math.random() > 0.5 ? acc.concat(seriesName) : acc, [])
+    // Make sure that we’re not testing the test above by highlighting at least one cluster
+    let highlightRandomSeries = []
+    while (highlightRandomSeries.length === 0) {
+      highlightRandomSeries =
+        seriesNames.reduce((acc, seriesName) =>  Math.random() > 0.5 ? acc.concat(seriesName) : acc, [])
+    }
 
     _colourizeClusters(highlightRandomSeries, `lightgrey`)(randomSeries).forEach((series) => {
       series.data.forEach((point) => {
@@ -114,7 +119,7 @@ describe(`SeriesMapper.colourizeExpressionLevel`, () => {
     _colourizeExpressionLevel(hue)(randomSeries).forEach((series) => {
       series.data.forEach((point) => {
           if (String(point.expressionLevel).includes(`.`)) {
-            expect(String(point.expressionLevel).split(`.`)[1].length).toBeLessThanOrEqual(2)  
+            expect(String(point.expressionLevel).split(`.`)[1].length).toBeLessThanOrEqual(2)
           }
         })
     })
