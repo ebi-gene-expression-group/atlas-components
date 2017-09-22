@@ -31,11 +31,9 @@
     "color": "^2.0.0",
     "expression-atlas-tsne-plot": "latest",
     "prop-types": "^15.5.10",
-    "query-string": "^4.3.4",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
-    "seedrandom": "^2.4.3",
-    "urijs": "^1.18.12"
+    "seedrandom": "^2.4.3"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
