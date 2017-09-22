@@ -7,7 +7,7 @@ var CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
     entry: {
-        myPackage: './html/render.js',
+        demo: ['babel-polyfill', './html/Demo.js'],
         dependencies: ['prop-types', 'react', 'react-dom', 'urijs']
     },
 
