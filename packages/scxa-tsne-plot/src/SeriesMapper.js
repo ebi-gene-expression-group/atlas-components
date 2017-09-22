@@ -17,7 +17,7 @@ const _colourizeClusters = (highlightSeries, dimColour) => {
   }))
 }
 
-const _colourizeExpressionLevel = (hue) => {
+const _colourizeExpressionLevel = (hue, lightness) => {
   return (series) => {
     const allPoints = series.reduce((acc, series) => acc.concat(series.data), [])
 
@@ -31,7 +31,7 @@ const _colourizeExpressionLevel = (hue) => {
         return {
           ...point,
           expressionLevel: Math.round10(point.expressionLevel, -2),
-          color: Color(`hsl(${hue}, ${saturation}%, 10%)`).rgb().toString()
+          color: Color(`hsl(${hue}, ${saturation}%, ${lightness}%)`).rgb().toString()
         }
       })
     }))
