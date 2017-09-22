@@ -1,3 +1,5 @@
+import seedrandom from 'seedrandom'
+
 //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
 const getRandomArbitrary = (min, max) => Math.random() * (max - min) + min
 
@@ -21,7 +23,9 @@ const generateRandomSeriesData = (pointsCount) => {
   return seriesData
 }
 
-const generateRandomSeries = (seriesNames, maxPointsPerSeries) => {
+const generateRandomSeries = (seriesNames, maxPointsPerSeries, seed) => {
+  seedrandom(seed, { global: true })
+
   return seriesNames.map((seriesName) => ({
     name: seriesName,
     data: generateRandomSeriesData(getRandomInt(0, maxPointsPerSeries))
