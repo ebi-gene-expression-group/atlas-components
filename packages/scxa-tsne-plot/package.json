@@ -30,8 +30,8 @@
     "atlas-autocomplete": "latest",
     "color": "^2.0.0",
     "expression-atlas-tsne-plot": "latest",
-    "query-string": "^4.3.4",
     "prop-types": "^15.5.10",
+    "query-string": "^4.3.4",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "urijs": "^1.18.12"
@@ -44,6 +44,7 @@
     "babel-preset-env": "^1.6.0",
     "babel-preset-react": "^6.24.1",
     "clean-webpack-plugin": "^0.1.16",
+    "coveralls": "^2.13.1",
     "enzyme": "^2.9.1",
     "jest": "^21.1.0",
     "react-test-renderer": "^15.6.1",
