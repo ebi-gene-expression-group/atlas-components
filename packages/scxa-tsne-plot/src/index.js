@@ -1,3 +1,3 @@
-import MyComponent from './MyComponent.js'
+import ExperimentPageView from './ExperimentPageView'
 
-export default MyComponent
+export default ExperimentPageView
