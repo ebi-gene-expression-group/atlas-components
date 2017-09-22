@@ -1,6 +1,7 @@
 import Color from 'color'
 import {_colourizeClusters, _colourizeExpressionLevel} from '../src/SeriesMapper'
 import RandomSeriesGenerator from './RandomSeriesGenerator'
+import '../src/util/MathRound10'
 
 const seriesNames = [`0`, `1`, `2`, `3`, `4`]
 const maxPointsPerSeries = 1000
@@ -87,29 +88,34 @@ describe(`SeriesMapper.colourizeExpressionLevel`, () => {
   test(`point with highest expression has the maximum colour`, () => {
     const randomSeries = RandomSeriesGenerator.generate(seriesNames, maxPointsPerSeries)
     const allPoints = randomSeries.reduce((acc, series) => acc.concat(series.data), [])
-    const maxExpressionLevel = Math.max(...allPoints.map((point) => point.expressionLevel))
+    const maxExpressionLevel = Math.round10(Math.max(...allPoints.map((point) => point.expressionLevel)), -2)
 
-    _colourizeExpressionLevel(hue)(randomSeries).forEach((series) => {
-      series.data.forEach((point) => {
-        if (point.expressionLevel === maxExpressionLevel) {
-          expect(point).toHaveProperty(`color`, Color(`hsl(${hue}, 100%, 10%)`).rgb().toString())
-        }
-      })
+    const maxExpressionLevelPoints = _colourizeExpressionLevel(hue)(randomSeries).reduce((acc, series) => {
+      acc.push(series.data.filter((point) => point.expressionLevel === maxExpressionLevel, -2))
+      return acc
+    }, [])
+    .reduce((acc, points) => points.length ? acc.concat(points) : acc, [])
+
+    expect(maxExpressionLevelPoints.length).toBeGreaterThanOrEqual(1)
+    maxExpressionLevelPoints.forEach((point) => {
+      expect(point).toHaveProperty(`color`, Color(`hsl(${hue}, 100%, 10%)`).rgb().toString())
     })
   })
 
   test(`point with lowest expression has the minimum colour`, () => {
     const randomSeries = RandomSeriesGenerator.generate(seriesNames, maxPointsPerSeries)
     const allPoints = randomSeries.reduce((acc, series) => acc.concat(series.data), [])
-    const minExpressionLevel = Math.min(...allPoints.map((point) => point.expressionLevel))
+    const minExpressionLevel = Math.round10(Math.min(...allPoints.map((point) => point.expressionLevel)), -2)
 
-    _colourizeExpressionLevel(hue)(randomSeries).forEach((series) => {
-      series.data.forEach((point) => {
-        if (point.expressionLevel === minExpressionLevel) {
-          console.log(`Match min!`)
-          expect(point).toHaveProperty(`color`, Color(`hsl(${hue}, 0%, 10%)`).rgb().toString())
-        }
-      })
+    const minExpressionLevelPoints = _colourizeExpressionLevel(hue)(randomSeries).reduce((acc, series) => {
+      acc.push(series.data.filter((point) => point.expressionLevel === minExpressionLevel, -2))
+      return acc
+    }, [])
+    .reduce((acc, points) => points.length ? acc.concat(points) : acc, [])
+
+    expect(minExpressionLevelPoints.length).toBeGreaterThanOrEqual(1)
+    minExpressionLevelPoints.forEach((point) => {
+      expect(point).toHaveProperty(`color`, Color(`hsl(${hue}, 0%, 10%)`).rgb().toString())
     })
   })
 

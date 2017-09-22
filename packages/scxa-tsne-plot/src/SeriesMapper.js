@@ -19,7 +19,7 @@ const _colourizeClusters = (highlightSeries, dimColour) => {
 
 const _colourizeExpressionLevel = (hue) => {
   return (series) => {
-    const allPoints = series.reduce((acc, series) => acc.concat(series), [])
+    const allPoints = series.reduce((acc, series) => acc.concat(series.data), [])
 
     const min = Math.min(...allPoints.map((point) => point.expressionLevel))
     const max = Math.max(...allPoints.map((point) => point.expressionLevel))
