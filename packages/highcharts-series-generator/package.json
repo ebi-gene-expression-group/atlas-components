@@ -1,6 +1,6 @@
 {
   "name": "highcharts-series-generator",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Utility package to generate seedable random series for Highcharts scatter plots",
   "main": "lib/index.js",
   "scripts": {
