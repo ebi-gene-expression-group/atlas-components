@@ -18,7 +18,7 @@
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/highcharts-series-generator.git"
+    "url": "https://github.com/gxa/highcharts-series-generator.git"
   },
   "dependencies": {
     "seedrandom": "^2.4.3"
