@@ -1,0 +1,37 @@
+{
+  "name": "highcharts-series-generator",
+  "version": "1.0.0",
+  "description": "Utility package to generate seedable random series for Highcharts scatter plots",
+  "main": "lib/index.js",
+  "scripts": {
+    "dist": "NODE_ENV=production webpack --optimize-minimize",
+    "prepublishOnly": "rm -rf lib && babel src -d lib --copy-files",
+    "test": "jest --coverage",
+    "posttest": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
+  },
+  "author": "Expression Atlas developers <arrayexpress-atlas@ebi.ac.uk>",
+  "collaborators": [
+    "Elisabet Barrera <barrera@ebi.ac.uk>",
+    "Wojciech Bażant <wbazant@ebi.ac.uk>",
+    "Alfonso Muñoz-Pomer Fuentes <amunoz@ebi.ac.uk>"
+  ],
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/highcharts-series-generator.git"
+  },
+  "dependencies": {
+    "seedrandom": "^2.4.3"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.6.0",
+    "clean-webpack-plugin": "^0.1.16",
+    "coveralls": "^2.13.1",
+    "jest": "^21.1.0",
+    "webpack": "^3.6.0"
+  }
+}
