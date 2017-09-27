@@ -36,7 +36,7 @@ describe (`HighchartsSeriesGenerator`, () => {
     })
   })
 
-  test(`data with the same see`, () => {
+  test(`data with the same seed`, () => {
     const randomSeriesNames =
       seriesNames.reduce((acc, seriesName) => Math.random() > 0.5 ? acc.concat(seriesName) : acc, [])
 
@@ -52,6 +52,6 @@ describe (`HighchartsSeriesGenerator`, () => {
   // Jest: `.not` cannot be used with `.toMatchSnapshot()`.
   test(`series generated without a seed don’t match snapshot`, () => {
     const series = HighchartsSeriesGenerator.generate(seriesNames, maxPointsPerSeries)
-    expect(series).toThrowErrorMatchingSnapshot() 
+    expect(series).toThrowErrorMatchingSnapshot()
   })
 })
