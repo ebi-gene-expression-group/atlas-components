@@ -16187,3 +16187,5 @@ Array [
   },
 ]
 `;
+
+exports[`HighchartsSeriesGenerator series generated without a seed don’t match snapshot 1`] = `"received is not a function"`;

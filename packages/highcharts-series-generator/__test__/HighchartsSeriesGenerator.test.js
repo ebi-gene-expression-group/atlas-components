@@ -50,8 +50,8 @@ describe (`HighchartsSeriesGenerator`, () => {
   })
 
   // Jest: `.not` cannot be used with `.toMatchSnapshot()`.
-  // test(`series generated without a seed don’t match snapshot`, () => {
-  //   const series = HighchartsSeriesGenerator.generate(seriesNames, maxPointsPerSeries)
-  //   expect(series).not.toMatchSnapshot()
-  // })
+  test(`series generated without a seed don’t match snapshot`, () => {
+    const series = HighchartsSeriesGenerator.generate(seriesNames, maxPointsPerSeries)
+    expect(series).toThrowErrorMatchingSnapshot() 
+  })
 })
