@@ -4,9 +4,10 @@
   "description": "t-SNE plot view tab for Single Cell Expression Atlas experiment page",
   "main": "lib/index.js",
   "scripts": {
+    "dev": "webpack-dev-server -d",
     "dist": "NODE_ENV=production webpack --optimize-minimize",
     "prepublishOnly": "rm -rf lib && babel src -d lib --copy-files",
-    "test": "jest --coverage",
+    "test": "jest --coverage --verbose",
     "posttest": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
   },
   "jest": {
@@ -27,12 +28,12 @@
     "url": "https://github.com/gxa/scxa-experiment-page-tsne-plot-view"
   },
   "dependencies": {
-    "atlas-autocomplete": "latest",
     "color": "^2.0.0",
-    "expression-atlas-tsne-plot": "latest",
-    "prop-types": "^15.5.10",
-    "react": "^15.6.1",
-    "react-dom": "^15.6.1",
+    "expression-atlas-autocomplete": "^1.0.0",
+    "expression-atlas-tsne-plot": "^1.4.0",
+    "prop-types": "^15.6.0",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
     "seedrandom": "^2.4.3"
   },
   "devDependencies": {
@@ -43,13 +44,14 @@
     "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.6.0",
     "babel-preset-react": "^6.24.1",
-    "clean-webpack-plugin": "^0.1.16",
-    "coveralls": "^2.13.1",
-    "enzyme": "^2.9.1",
-    "file-loader": "^0.11.2",
-    "jest": "^21.1.0",
-    "react-test-renderer": "^15.6.1",
+    "clean-webpack-plugin": "^0.1.17",
+    "coveralls": "^3.0.0",
+    "enzyme": "^3.1.0",
+    "file-loader": "^1.1.5",
+    "highcharts-series-generator": "^1.0.1",
+    "jest": "^21.2.1",
+    "react-test-renderer": "^16.0.0",
     "webpack": "^3.6.0",
-    "webpack-dev-server": "^2.8.2"
+    "webpack-dev-server": "^2.9.1"
   }
 }
