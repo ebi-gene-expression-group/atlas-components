@@ -1,3 +1,3 @@
-import ExperimentPageView from './ExperimentPageView'
+import TSnePlotView from './TSnePlotView'
 
-export default ExperimentPageView
+export default TSnePlotView
