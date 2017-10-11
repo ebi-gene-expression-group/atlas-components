@@ -1,4 +1,4 @@
-import '../src/util/MathRound'
+import '../../src/util/MathRound'
 
 describe(`Mozilla’s round util`, () => {
 
