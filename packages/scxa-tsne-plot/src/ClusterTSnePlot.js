@@ -80,7 +80,7 @@ ClusterTSnePlot.propTypes = {
   highlightClusters: PropTypes.array,
 
   availableClusters: PropTypes.array.isRequired,
-  k: PropTypes.string.isRequired,
+  k: PropTypes.number.isRequired,
   onChange: PropTypes.func.isRequired,
 
   loading: PropTypes.bool.isRequired,
