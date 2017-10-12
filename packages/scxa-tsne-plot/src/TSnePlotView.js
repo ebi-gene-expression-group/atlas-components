@@ -38,6 +38,7 @@ class ExperimentPageView extends React.Component {
       loadingClusters: true,
       loadingGeneExpression: true
     }, this._fetchAndSetState)
+    this.props.onKChange(event.target.value)
   }
 
   _handleSelect(event) {
@@ -45,6 +46,7 @@ class ExperimentPageView extends React.Component {
       geneId: event,
       loadingGeneExpression: true
     }, this._fetchAndSetState)
+    this.props.onGeneIdSelect(event)
   }
 
   _fetchAndSetState() {
@@ -135,12 +137,16 @@ ExperimentPageView.propTypes = {
   geneId: PropTypes.string,
   height: PropTypes.number,
   resourcesUrl: PropTypes.string,
+  onGeneIdSelect: PropTypes.func,
+  onKChange: PropTypes.func
 }
 
 ExperimentPageView.defaultProps = {
   highlightClusters: [],
   geneId: ``,
-  height: 600
+  height: 600,
+  onGeneIdSelect: () => {},
+  onKChange: () => {}
 }
 
 export default ExperimentPageView
