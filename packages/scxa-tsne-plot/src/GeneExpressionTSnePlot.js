@@ -2,8 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Color from 'color'
 
-import fetchMock from 'fetch-mock'
-
 import ScatterPlotLoader from './plotloader/PlotLoader'
 import AtlasAutocomplete from 'expression-atlas-autocomplete'
 
