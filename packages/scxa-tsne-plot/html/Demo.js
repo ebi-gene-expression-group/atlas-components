@@ -7,6 +7,9 @@ class Demo extends React.Component {
     super(props)
 
     this.state = {
+      k: 2,
+      perplexity: 1,
+      geneId: ``,
       inputHighlightClusters: ``,
       highlightClusters: []
     }
@@ -43,9 +46,21 @@ class Demo extends React.Component {
         <ExperimentPageView atlasUrl={`http://localhost:8080/gxa_sc/`}
                             suggesterEndpoint={`json/suggestions`}
                             experimentAccession={`E-MTAB-4388`}
-                            ks={[2, 3, 4, 5, 6, 7, 8, 9, 10]}
                             perplexities={[1, 2, 3, 4, 5, 6]}
+                            perplexity={this.state.perplexity}
+                            ks={[2, 3, 4, 5, 6, 7, 8, 9, 10]}
+                            k={this.state.k}
                             highlightClusters={this.state.highlightClusters}
+                            geneId={this.state.geneId}
+                            onChangePerplexity={
+                              (event) => { this.setState({perplexity: Number(event.target.value)}) }
+                            }
+                            onChangeK={
+                              (event) => { this.setState({k: Number(event.target.value)}) }
+                            }
+                            onSelectGeneId={
+                              (event) => { this.setState({geneId: event}) }
+                            }
         />
       </div>
     )
