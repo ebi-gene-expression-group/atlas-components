@@ -11,7 +11,9 @@ const MAX_WHITE = 90
 
 const _colourizeExpressionLevel = (hue, highlightSeries) =>
   (plotData) => plotData.series.map((aSeries) => {
-    if (!highlightSeries.length || highlightSeries.includes(aSeries.name)) {
+    // I can’t think of a better way to reconcile series.name being a string and highlightSeries being an array of
+    // numbers. For more flexibility we might think of having our series be identified by an arbitrary ID string
+    if (!highlightSeries.length || highlightSeries.map((hs) => String(hs)).includes(aSeries.name)) {
       return {
         name: aSeries.name,
         data: aSeries.data.map((point) => {
