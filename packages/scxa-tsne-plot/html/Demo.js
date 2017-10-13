@@ -32,6 +32,8 @@ class Demo extends React.Component {
     })
   }
 
+  
+
   render() {
     return(
       <div className={`row column`}>
@@ -53,13 +55,13 @@ class Demo extends React.Component {
                             highlightClusters={this.state.highlightClusters}
                             geneId={this.state.geneId}
                             onChangePerplexity={
-                              (event) => { this.setState({perplexity: Number(event.target.value)}) }
+                              (perplexity) => { this.setState({perplexity: perplexity}) }
                             }
                             onChangeK={
-                              (event) => { this.setState({k: Number(event.target.value)}) }
+                              (k) => { this.setState({k: k}) }
                             }
                             onSelectGeneId={
-                              (event) => { this.setState({geneId: event}) }
+                              (geneId) => { this.setState({geneId: geneId}) }
                             }
         />
       </div>

@@ -62,13 +62,13 @@ const ClusterTSnePlot = (props) => {
       <div key={`perplexity-k-select`} className={`row`}>
           <div className={`column medium-6`}>
               <label>Perplexity</label>
-              <select value={perplexity} onChange={onChangePerplexity}>
+              <select value={perplexity} onChange={ (event) => { onChangePerplexity(Number(event.target.value)) } }>
                   {perplexityOptions}
               </select>
           </div>
           <div className={`column medium-6`}>
             <label>Number of clusters, <i>k</i></label>
-            <select value={k} onChange={onChangeK}>
+            <select value={k} onChange={ (event) => { onChangeK(Number(event.target.value)) } }>
               {kOptions}
             </select>
           </div>

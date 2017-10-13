@@ -41,7 +41,7 @@ const _colourizeExpressionLevel = (hue, highlightSeries) =>
   })
 
 const GeneExpressionScatterPlot = (props) => {
-  const {atlasUrl, suggesterEndpoint, geneId, onSelect} = props             // Suggester
+  const {atlasUrl, suggesterEndpoint, geneId, onSelectGeneId} = props       // Suggester
   const {height, plotData, expressionColourHue, highlightClusters} = props  // Chart
   const {loading, resourcesUrl, errorMessage} = props                       // Overlay
 
@@ -71,7 +71,7 @@ const GeneExpressionScatterPlot = (props) => {
                        suggesterEndpoint={suggesterEndpoint}
                        enableSpeciesFilter={false}
                        initialValue={geneId}
-                       onSelect={onSelect}
+                       onSelect={ (event) => { onSelectGeneId(event) } }
     />,
 
     <ScatterPlotLoader key={`expression-plot`}
@@ -115,8 +115,7 @@ GeneExpressionScatterPlot.propTypes = {
 
   atlasUrl: PropTypes.string.isRequired,
   suggesterEndpoint: PropTypes.string.isRequired,
-  geneId: PropTypes.string.isRequired,
-  onSelect: PropTypes.func.isRequired,
+  onSelectGeneId: PropTypes.func.isRequired,
 
   loading: PropTypes.bool.isRequired,
   resourcesUrl: PropTypes.string,

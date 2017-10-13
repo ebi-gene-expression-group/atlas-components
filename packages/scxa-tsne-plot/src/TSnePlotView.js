@@ -107,7 +107,7 @@ class ExperimentPageView extends React.Component {
                                   plotData={data}
                                   atlasUrl={atlasUrl}
                                   suggesterEndpoint={suggesterEndpoint}
-                                  onSelect={onSelectGeneId}
+                                  onSelectGeneId={onSelectGeneId}
                                   geneId={geneId}
                                   highlightClusters={highlightClusters}
                                   loading={loadingGeneExpression}
@@ -139,7 +139,7 @@ ExperimentPageView.propTypes = {
   geneId: PropTypes.string.isRequired,
   height: PropTypes.number,
   resourcesUrl: PropTypes.string,
-  onGeneIdSelect: PropTypes.func,
+  onSelectGeneId: PropTypes.func,
   onChangeK: PropTypes.func,
   onChangePerplexity: PropTypes.func
 }
