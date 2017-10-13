@@ -20,9 +20,9 @@ const _colourizeClusters = (highlightSeries) =>
   })
 
 const ClusterTSnePlot = (props) => {
-  const {availableClusters, k, perplexityArray, perplexity} = props                     // Select
-  const {plotData, highlightClusters, height, onChange, onChangePerplexity} = props     // Chart
-  const {loading, resourcesUrl, errorMessage} = props                                   // Overlay
+  const {ks, k, onChangeK, perplexities, perplexity, onChangePerplexity} = props  // Select
+  const {plotData, highlightClusters, height} = props   // Chart
+  const {loading, resourcesUrl, errorMessage} = props   // Overlay
 
   const highchartsConfig = {
     plotOptions: {
@@ -48,25 +48,25 @@ const ClusterTSnePlot = (props) => {
     }
   }
 
-  const clusterOptions = availableClusters.sort().map((name, ix) => (
-    <option key={ix} value={name}>{name}</option>
+  const kOptions = ks.sort().map((k) => (
+    <option key={k} value={k}>{k}</option>
   ))
 
-  const perplexityOptions = perplexityArray.sort().map((name, ix) => (
-    <option key={ix} value={name}>{name}</option>
+  const perplexityOptions = perplexities.sort().map((perplexity) => (
+    <option key={perplexity} value={perplexity}>{perplexity}</option>
   ))
 
   return [
       <div key={`k-perplexity-select`} className={`row`}>
           <div className={`column medium-6`}>
             <label>Number of clusters, <i>k</i></label>
-            <select value={k} onChange={onChange}>
-              {clusterOptions}
+            <select value={k} onChange={onChangeK}>
+              {kOptions}
             </select>
           </div>
 
           <div className={`column medium-6`}>
-              <label>Perplexity, <i>perplexity</i></label>
+              <label>Perplexity</label>
               <select value={perplexity} onChange={onChangePerplexity}>
                   {perplexityOptions}
               </select>
@@ -92,9 +92,13 @@ ClusterTSnePlot.propTypes = {
   }),
   highlightClusters: PropTypes.array,
 
-  availableClusters: PropTypes.array.isRequired,
+  ks: PropTypes.arrayOf(PropTypes.number).isRequired,
   k: PropTypes.number.isRequired,
-  onChange: PropTypes.func.isRequired,
+  onChangeK: PropTypes.func.isRequired,
+
+  perplexities: PropTypes.arrayOf(PropTypes.number).isRequired,
+  perplexity: PropTypes.number.isRequired,
+  onChangePerplexity: PropTypes.func.isRequired,
 
   loading: PropTypes.bool.isRequired,
   resourcesUrl: PropTypes.string,

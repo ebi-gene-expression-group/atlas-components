@@ -34,17 +34,17 @@ class Demo extends React.Component {
       <div className={`row column`}>
         <div className={`row column`}>
           <form onSubmit={this._handleSubmit}>
-            <label>Highlight clusters (cluster names separated by commas):</label>
+            <label>Highlight clusters (cluster integer IDs separated by commas):</label>
             <input type={`text`} onChange={this._handleChange} value={this.state.inputHighlightClusters}/>
             <input className={`button`} type="submit" value="Submit" />
           </form>
         </div>
 
-        <ExperimentPageView atlasUrl={`http://localhost:9090/gxa_sc/`}
+        <ExperimentPageView atlasUrl={`http://localhost:8080/gxa_sc/`}
                             suggesterEndpoint={`json/suggestions`}
                             experimentAccession={`E-MTAB-4388`}
-                            availableClusters={[`2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`]}
-                            perplexityArray={[`1`, `2`, `3`, `4`, `5`, `6`]}
+                            ks={[2, 3, 4, 5, 6, 7, 8, 9, 10]}
+                            perplexities={[1, 2, 3, 4, 5, 6]}
                             highlightClusters={this.state.highlightClusters}
         />
       </div>

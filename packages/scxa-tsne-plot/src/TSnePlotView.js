@@ -16,8 +16,8 @@ class ExperimentPageView extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      k: this.props.k || this.props.availableClusters[0],
-      perplexity: this.props.perplexity || this.props.perplexityArray[0],
+      k: this.props.k || this.props.ks[0],
+      perplexity: this.props.perplexity || this.props.perplexities[0],
       geneId: this.props.geneId,
       responseJson: {
         series: [],
@@ -28,33 +28,25 @@ class ExperimentPageView extends React.Component {
       loadingGeneExpression: false
     }
 
-    this._handleChange = this._handleChange.bind(this)
+    this._handleChangeK = this._handleChange(`k`).bind(this)
+    this._handleChangePerplexity = this._handleChange(`perplexity`).bind(this)
     this._handleSelect = this._handleSelect.bind(this)
     this._fetchAndSetState = this._fetchAndSetState.bind(this)
-    this._onChangePerplexity = this._onChangePerplexity.bind(this)
   }
 
-  _handleChange(event) {
-    this.setState({
-      k: event.target.value,
-      loadingClusters: true,
-      loadingGeneExpression: true
-    }, this._fetchAndSetState)
-    this.props.onKChange(event.target.value)
+  _handleChange(stateField) {
+    return (event) => {
+      this.setState({
+        [stateField]: Number(event.target.value),
+        loadingClusters: true,
+        loadingGeneExpression: true
+      }, this._fetchAndSetState)
+    }
   }
 
   _handleSelect(event) {
     this.setState({
       geneId: event,
-      loadingGeneExpression: true
-    }, this._fetchAndSetState)
-    this.props.onGeneIdSelect(event)
-  }
-
-  _onChangePerplexity(event) {
-    this.setState({
-      perplexity: event.target.value,
-      loadingClusters: true,
       loadingGeneExpression: true
     }, this._fetchAndSetState)
   }
@@ -93,7 +85,7 @@ class ExperimentPageView extends React.Component {
   }
 
   render() {
-    const {height, atlasUrl, suggesterEndpoint, availableClusters, highlightClusters, resourcesUrl, perplexityArray} = this.props
+    const {height, atlasUrl, suggesterEndpoint, ks, perplexities, highlightClusters, resourcesUrl} = this.props
     const {loadingClusters, loadingGeneExpression, responseJson, errorMessage, k, geneId, perplexity} = this.state
 
     return (
@@ -101,12 +93,12 @@ class ExperimentPageView extends React.Component {
         <div className={`small-12 medium-6 columns`}>
           <ClusterTSnePlot height={height}
                            plotData={responseJson}
-                           availableClusters={availableClusters}
-                           perplexityArray={perplexityArray}
+                           ks={ks}
                            k={k}
-                           onChange={this._handleChange}
+                           onChangeK={this._handleChangeK}
+                           perplexities={perplexities}
                            perplexity={perplexity}
-                           onChangePerplexity={this._onChangePerplexity}
+                           onChangePerplexity={this._handleChangePerplexity}
                            highlightClusters={highlightClusters}
                            loading={loadingClusters}
                            resourcesUrl={resourcesUrl}
@@ -143,10 +135,10 @@ ExperimentPageView.propTypes = {
   atlasUrl: PropTypes.string.isRequired,
   suggesterEndpoint: PropTypes.string.isRequired,
   experimentAccession: PropTypes.string.isRequired,
-  availableClusters: PropTypes.array.isRequired,
+  ks: PropTypes.arrayOf(PropTypes.number).isRequired,
   k: PropTypes.number,
+  perplexities: PropTypes.arrayOf(PropTypes.number).isRequired,
   perplexity: PropTypes.number,
-  perplexityArray: PropTypes.array,
   highlightClusters: PropTypes.array,
   geneId: PropTypes.string,
   height: PropTypes.number,
