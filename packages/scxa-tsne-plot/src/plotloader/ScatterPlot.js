@@ -20,7 +20,7 @@ const highchartsBaseConfig = {
     enabled: false
   },
   legend: {
-    labelFormat: `Cluster {name} – click to hide`
+    labelFormat: `{name}`
   },
   chart: {
     type: `scatter`,
