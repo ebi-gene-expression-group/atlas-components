@@ -96,29 +96,17 @@ class ExperimentPageView extends React.Component {
     const {height, atlasUrl, suggesterEndpoint, availableClusters, highlightClusters, resourcesUrl, perplexityArray} = this.props
     const {loadingClusters, loadingGeneExpression, responseJson, errorMessage, k, geneId, perplexity} = this.state
 
-    const perplexityOptions = perplexityArray.sort().map((name, ix) => (
-        <option key={ix} value={name}>{name}</option>
-    ))
-
-
     return (
       <div className={`row`}>
-        <div className={`column`}>
-          <div key={`perplexity-select`} className={`medium-2`}>
-            <label>Perplexity, <i>perplexity</i></label>
-            <select value={perplexity} onChange={this._onChangePerplexity}>
-                {perplexityOptions}
-            </select>
-          </div>
-        </div>
-
-
         <div className={`small-12 medium-6 columns`}>
           <ClusterTSnePlot height={height}
                            plotData={responseJson}
                            availableClusters={availableClusters}
+                           perplexityArray={perplexityArray}
                            k={k}
                            onChange={this._handleChange}
+                           perplexity={perplexity}
+                           onChangePerplexity={this._onChangePerplexity}
                            highlightClusters={highlightClusters}
                            loading={loadingClusters}
                            resourcesUrl={resourcesUrl}

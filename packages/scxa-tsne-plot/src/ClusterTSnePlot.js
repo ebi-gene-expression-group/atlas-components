@@ -20,9 +20,9 @@ const _colourizeClusters = (highlightSeries) =>
   })
 
 const ClusterTSnePlot = (props) => {
-  const {availableClusters, k} = props                            // Select
-  const {plotData, highlightClusters, height, onChange} = props   // Chart
-  const {loading, resourcesUrl, errorMessage} = props             // Overlay
+  const {availableClusters, k, perplexityArray, perplexity} = props                     // Select
+  const {plotData, highlightClusters, height, onChange, onChangePerplexity} = props     // Chart
+  const {loading, resourcesUrl, errorMessage} = props                                   // Overlay
 
   const highchartsConfig = {
     plotOptions: {
@@ -52,12 +52,25 @@ const ClusterTSnePlot = (props) => {
     <option key={ix} value={name}>{name}</option>
   ))
 
+  const perplexityOptions = perplexityArray.sort().map((name, ix) => (
+    <option key={ix} value={name}>{name}</option>
+  ))
+
   return [
-      <div key={`cluster-select`} className={`row column`}>
-        <label>Number of clusters, <i>k</i></label>
-        <select value={k} onChange={onChange}>
-          {clusterOptions}
-        </select>
+      <div className={`row`}>
+          <div key={`cluster-select`} className={`column medium-6`}>
+            <label>Number of clusters, <i>k</i></label>
+            <select value={k} onChange={onChange}>
+              {clusterOptions}
+            </select>
+          </div>
+
+          <div key={`perplexity-select`} className={`column medium-6`}>
+              <label>Perplexity, <i>perplexity</i></label>
+              <select value={perplexity} onChange={onChangePerplexity}>
+                  {perplexityOptions}
+              </select>
+          </div>
       </div>,
 
       <ScatterPlotLoader key={`cluster-plot`}
