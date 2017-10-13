@@ -17,6 +17,7 @@ class ExperimentPageView extends React.Component {
     super(props)
     this.state = {
       k: this.props.k || this.props.availableClusters[0],
+      perplexity: this.props.perplexity || this.props.perplexityArray[0],
       geneId: this.props.geneId,
       responseJson: {
         series: [],
@@ -30,6 +31,7 @@ class ExperimentPageView extends React.Component {
     this._handleChange = this._handleChange.bind(this)
     this._handleSelect = this._handleSelect.bind(this)
     this._fetchAndSetState = this._fetchAndSetState.bind(this)
+    this._onChangePerplexity = this._onChangePerplexity.bind(this)
   }
 
   _handleChange(event) {
@@ -49,11 +51,19 @@ class ExperimentPageView extends React.Component {
     this.props.onGeneIdSelect(event)
   }
 
+  _onChangePerplexity(event) {
+    this.setState({
+      perplexity: event.target.value,
+      loadingClusters: true,
+      loadingGeneExpression: true
+    }, this._fetchAndSetState)
+  }
+
   _fetchAndSetState() {
     const {experimentAccession, atlasUrl} = this.props
-    const {k, geneId} = this.state
+    const {k, geneId, perplexity} = this.state
 
-    const atlasEndpoint = `json/experiments/${experimentAccession}/tsneplot/clusters/${k}/expression/${geneId}`
+    const atlasEndpoint = `json/experiments/${experimentAccession}/tsneplot/${perplexity}/clusters/${k}/expression/${geneId}`
 
     return fetchResponseJson(atlasUrl, atlasEndpoint)
       .then((responseJson) => {
@@ -83,11 +93,25 @@ class ExperimentPageView extends React.Component {
   }
 
   render() {
-    const {height, atlasUrl, suggesterEndpoint, availableClusters, highlightClusters, resourcesUrl} = this.props
-    const {loadingClusters, loadingGeneExpression, responseJson, errorMessage, k, geneId} = this.state
+    const {height, atlasUrl, suggesterEndpoint, availableClusters, highlightClusters, resourcesUrl, perplexityArray} = this.props
+    const {loadingClusters, loadingGeneExpression, responseJson, errorMessage, k, geneId, perplexity} = this.state
+
+    const perplexityOptions = perplexityArray.sort().map((name, ix) => (
+        <option key={ix} value={name}>{name}</option>
+    ))
+
 
     return (
       <div className={`row`}>
+        <div className={`column`}>
+          <div key={`perplexity-select`} className={`medium-2`}>
+            <label>Perplexity, <i>perplexity</i></label>
+            <select value={perplexity} onChange={this._onChangePerplexity}>
+                {perplexityOptions}
+            </select>
+          </div>
+        </div>
+
 
         <div className={`small-12 medium-6 columns`}>
           <ClusterTSnePlot height={height}
@@ -133,6 +157,8 @@ ExperimentPageView.propTypes = {
   experimentAccession: PropTypes.string.isRequired,
   availableClusters: PropTypes.array.isRequired,
   k: PropTypes.number,
+  perplexity: PropTypes.number,
+  perplexityArray: PropTypes.array,
   highlightClusters: PropTypes.array,
   geneId: PropTypes.string,
   height: PropTypes.number,

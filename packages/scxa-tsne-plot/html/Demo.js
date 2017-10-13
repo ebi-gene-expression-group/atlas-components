@@ -40,10 +40,11 @@ class Demo extends React.Component {
           </form>
         </div>
 
-        <ExperimentPageView atlasUrl={`https://localhost:8443/gxa_sc/`}
+        <ExperimentPageView atlasUrl={`http://localhost:9090/gxa_sc/`}
                             suggesterEndpoint={`json/suggestions`}
                             experimentAccession={`E-MTAB-4388`}
                             availableClusters={[`2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`]}
+                            perplexityArray={[`1`, `2`, `3`, `4`, `5`, `6`]}
                             highlightClusters={this.state.highlightClusters}
         />
       </div>
