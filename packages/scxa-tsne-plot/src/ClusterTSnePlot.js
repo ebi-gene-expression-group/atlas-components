@@ -48,28 +48,27 @@ const ClusterTSnePlot = (props) => {
     }
   }
 
-  const kOptions = ks.sort().map((k) => (
-    <option key={k} value={k}>{k}</option>
-  ))
-
   const perplexityOptions = perplexities.sort().map((perplexity) => (
     <option key={perplexity} value={perplexity}>{perplexity}</option>
   ))
 
-  return [
-      <div key={`k-perplexity-select`} className={`row`}>
-          <div className={`column medium-6`}>
-            <label>Number of clusters, <i>k</i></label>
-            <select value={k} onChange={onChangeK}>
-              {kOptions}
-            </select>
-          </div>
+  const kOptions = ks.sort().map((k) => (
+    <option key={k} value={k}>{k}</option>
+  ))
 
+  return [
+      <div key={`perplexity-k-select`} className={`row`}>
           <div className={`column medium-6`}>
               <label>Perplexity</label>
               <select value={perplexity} onChange={onChangePerplexity}>
                   {perplexityOptions}
               </select>
+          </div>
+          <div className={`column medium-6`}>
+            <label>Number of clusters, <i>k</i></label>
+            <select value={k} onChange={onChangeK}>
+              {kOptions}
+            </select>
           </div>
       </div>,
 
