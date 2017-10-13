@@ -57,15 +57,15 @@ const ClusterTSnePlot = (props) => {
   ))
 
   return [
-      <div className={`row`}>
-          <div key={`cluster-select`} className={`column medium-6`}>
+      <div key={`k-perplexity-select`} className={`row`}>
+          <div className={`column medium-6`}>
             <label>Number of clusters, <i>k</i></label>
             <select value={k} onChange={onChange}>
               {clusterOptions}
             </select>
           </div>
 
-          <div key={`perplexity-select`} className={`column medium-6`}>
+          <div className={`column medium-6`}>
               <label>Perplexity, <i>perplexity</i></label>
               <select value={perplexity} onChange={onChangePerplexity}>
                   {perplexityOptions}
