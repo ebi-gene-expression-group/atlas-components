@@ -102,7 +102,7 @@ ShallowWrapper {
               "enabled": false,
             },
             "legend": Object {
-              "labelFormat": "Cluster {name} – click to hide",
+              "labelFormat": "{name}",
             },
             "plotOptions": Object {
               "series": Object {
@@ -228,7 +228,7 @@ ShallowWrapper {
                 "enabled": false,
               },
               "legend": Object {
-                "labelFormat": "Cluster {name} – click to hide",
+                "labelFormat": "{name}",
               },
               "plotOptions": Object {
                 "series": Object {
@@ -19709,7 +19709,7 @@ ShallowWrapper {
               "enabled": false,
             },
             "legend": Object {
-              "labelFormat": "Cluster {name} – click to hide",
+              "labelFormat": "{name}",
             },
             "plotOptions": Object {
               "series": Object {
@@ -39111,7 +39111,7 @@ ShallowWrapper {
                 "enabled": false,
               },
               "legend": Object {
-                "labelFormat": "Cluster {name} – click to hide",
+                "labelFormat": "{name}",
               },
               "plotOptions": Object {
                 "series": Object {
@@ -58538,7 +58538,7 @@ ShallowWrapper {
               "enabled": false,
             },
             "legend": Object {
-              "labelFormat": "Cluster {name} – click to hide",
+              "labelFormat": "{name}",
             },
             "plotOptions": Object {
               "series": Object {
@@ -58612,7 +58612,7 @@ ShallowWrapper {
                 "enabled": false,
               },
               "legend": Object {
-                "labelFormat": "Cluster {name} – click to hide",
+                "labelFormat": "{name}",
               },
               "plotOptions": Object {
                 "series": Object {
