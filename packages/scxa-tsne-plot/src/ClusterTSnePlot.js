@@ -47,6 +47,9 @@ const ClusterTSnePlot = (props) => {
             ],
     chart: {
       height: height
+    },
+    title: {
+      text: `Clusters`
     }
   }
 
@@ -61,7 +64,7 @@ const ClusterTSnePlot = (props) => {
   return [
       <div key={`perplexity-k-select`} className={`row`}>
           <div className={`column medium-6`}>
-              <label>Perplexity</label>
+              <label>t-SNE Perplexity</label>
               <select value={perplexity} onChange={ (event) => { onChangePerplexity(Number(event.target.value)) } }>
                   {perplexityOptions}
               </select>

@@ -56,6 +56,9 @@ const GeneExpressionScatterPlot = (props) => {
     },
     chart: {
       height: height
+    },
+    title: {
+      text: `Gene expression`
     }
   }
 
