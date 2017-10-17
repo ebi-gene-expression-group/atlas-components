@@ -109,7 +109,7 @@ class ExperimentPageView extends React.Component {
                                   suggesterEndpoint={suggesterEndpoint}
                                   onSelectGeneId={onSelectGeneId}
                                   geneId={geneId}
-                                  highlightClusters={highlightClusters}
+                                  highlightClusters={[]}
                                   loading={loadingGeneExpression}
                                   resourcesUrl={resourcesUrl}
                                   errorMessage={errorMessage}
