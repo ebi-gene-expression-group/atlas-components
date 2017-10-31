@@ -65,7 +65,16 @@ const GeneExpressionScatterPlot = (props) => {
   const renderGradient = plotData.max && plotData.min && plotData.max > plotData.min
   const chartClassName = renderGradient ? `small-10 columns` : `small-12 columns`
   const gradient = renderGradient ?
-    <Gradient height={height} colourHue={expressionColourHue} plotData={plotData}/> : null
+    <LinearGradient height={height}
+                    colours={[
+                      Color(`rgb(0, 0, 115)`),
+                      Color(`rgb(0, 85, 225)`),
+                      Color(`rgb(128, 255, 255)`),
+                      Color(`rgb(215, 255, 255)`)
+                    ]}
+                    plotData={plotData}/> :
+    null
+
 
   return [
     <AtlasAutocomplete key={`expression-autocomplete`}
@@ -90,17 +99,26 @@ const GeneExpressionScatterPlot = (props) => {
   ]
 }
 
-const Gradient = ({height, colourHue, plotData}) => {
-  const topColour = Color(`hwb(${colourHue}, 0%, 0%)`).rgb().toString()
-  const bottomColour = Color(`hwb(${colourHue}, ${MAX_WHITE}%, 0%)`).rgb().toString()
+const LinearGradient = ({height, colours, plotData}) => {
+  const background = colours.map((colour) => colour.rgb().toString()).join(`, `)
 
   return (
     <div className={`small-2 columns text-center`}>
       <div><small>{Math.round10(plotData.max, -2)} {plotData.unit}</small></div>
-      <div style={{width: `20px`, height: `${height - 100}px`, background: `linear-gradient(${topColour}, ${bottomColour})`, verticalAlign: `middle`, margin: `auto`}}/>
+      <div style={{width: `20px`, height: `${height - 100}px`, background: `linear-gradient(${background})`, verticalAlign: `middle`, margin: `auto`}}/>
       <div><small>{Math.round10(plotData.min, -2)} {plotData.unit}</small></div>
     </div>
   )
+}
+
+LinearGradient.propTypes = {
+  height: PropTypes.number.isRequired,
+  colours: PropTypes.arrayOf(PropTypes.instanceOf(Color)).isRequired,
+  plotData: PropTypes.shape({
+    min: PropTypes.number.isRequired,
+    max: PropTypes.number.isRequired,
+    unit: PropTypes.string.isRequired
+  })
 }
 
 
