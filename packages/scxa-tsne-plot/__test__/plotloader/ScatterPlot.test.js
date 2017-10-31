@@ -37,8 +37,10 @@ describe(`ScatterPlot`, () => {
     const longSeriesData = []
     for (let i = 0 ; i < 5000 ; i++) {
       longSeriesData.push({
+        name: `Point ${i}`,
         x: 0,
-        y: 0
+        y: 0,
+        expressionLevel: 0
       })
     }
     const longSeries = {
@@ -52,8 +54,10 @@ describe(`ScatterPlot`, () => {
     const shortSeriesData = []
     for (let i = 0 ; i < 4999 ; i++) {
       shortSeriesData.push({
+        name: `Point ${i}`,
         x: 0,
-        y: 0
+        y: 0,
+        expressionLevel: 0
       })
     }
     const shortSeries = {

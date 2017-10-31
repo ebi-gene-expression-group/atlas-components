@@ -74,6 +74,7 @@ ShallowWrapper {
       className={undefined}
     >
       <HighchartsChart
+        callback={[Function]}
         config={
           Object {
             "boost": Object {
@@ -190,6 +191,7 @@ ShallowWrapper {
             },
           }
         }
+        domProps={Object {}}
       />
     </div>,
     <div />,
@@ -200,6 +202,7 @@ ShallowWrapper {
         className={undefined}
       >
         <HighchartsChart
+          callback={[Function]}
           config={
             Object {
               "boost": Object {
@@ -316,6 +319,7 @@ ShallowWrapper {
               },
             }
           }
+          domProps={Object {}}
         />
       </div>,
       <div />,
@@ -19681,6 +19685,7 @@ ShallowWrapper {
       className={undefined}
     >
       <HighchartsChart
+        callback={[Function]}
         config={
           Object {
             "boost": Object {
@@ -39073,6 +39078,7 @@ ShallowWrapper {
             },
           }
         }
+        domProps={Object {}}
       />
     </div>,
     <div />,
@@ -39083,6 +39089,7 @@ ShallowWrapper {
         className={undefined}
       >
         <HighchartsChart
+          callback={[Function]}
           config={
             Object {
               "boost": Object {
@@ -58475,6 +58482,7 @@ ShallowWrapper {
               },
             }
           }
+          domProps={Object {}}
         />
       </div>,
       <div />,
@@ -58510,6 +58518,7 @@ ShallowWrapper {
       className={undefined}
     >
       <HighchartsChart
+        callback={[Function]}
         config={
           Object {
             "boost": Object {
@@ -58574,6 +58583,7 @@ ShallowWrapper {
             },
           }
         }
+        domProps={Object {}}
       />
     </div>,
     <div />,
@@ -58584,6 +58594,7 @@ ShallowWrapper {
         className={undefined}
       >
         <HighchartsChart
+          callback={[Function]}
           config={
             Object {
               "boost": Object {
@@ -58648,6 +58659,7 @@ ShallowWrapper {
               },
             }
           }
+          domProps={Object {}}
         />
       </div>,
       <div />,

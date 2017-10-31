@@ -73,16 +73,16 @@ describe(`SeriesMapper.colourizeExpressionLevel`, () => {
     }
   }
 
-  const hue = 240
+  const gradientColours = [`rgb(0, 0, 115)`, `rgb(0, 85, 225)`, `rgb(128, 255, 255)`, `rgb(215, 255, 255)`]
 
   test(`must not change the number of series`, () => {
     const randomSeries = HighchartsSeriesGenerator.generate(seriesNames, maxPointsPerSeries)
-    expect(_colourizeExpressionLevel(hue, [])(plotData(randomSeries))).toHaveLength(seriesNames.length)
+    expect(_colourizeExpressionLevel(gradientColours, [])(plotData(randomSeries))).toHaveLength(seriesNames.length)
   })
 
   test(`must not change the number of points in each series`, () => {
     const randomSeries = HighchartsSeriesGenerator.generate(seriesNames, maxPointsPerSeries)
-    _colourizeExpressionLevel(hue, [])(plotData(randomSeries)).forEach((series, i) => {
+    _colourizeExpressionLevel(gradientColours, [])(plotData(randomSeries)).forEach((series, i) => {
       expect(series.data).toHaveLength(randomSeries[i].data.length)
     })
   })
@@ -90,7 +90,7 @@ describe(`SeriesMapper.colourizeExpressionLevel`, () => {
   test(`adds a color field to all points`, () => {
     const randomSeries = HighchartsSeriesGenerator.generate(seriesNames, maxPointsPerSeries)
 
-    _colourizeExpressionLevel(hue, [])(plotData(randomSeries)).forEach((series) => {
+    _colourizeExpressionLevel(gradientColours, [])(plotData(randomSeries)).forEach((series) => {
       series.data.forEach((point) => {
         expect(point).toHaveProperty(`color`)
       })
@@ -102,7 +102,7 @@ describe(`SeriesMapper.colourizeExpressionLevel`, () => {
     const allPoints = randomSeries.reduce((acc, series) => acc.concat(series.data), [])
     const maxExpressionLevel = Math.round10(Math.max(...allPoints.map((point) => point.expressionLevel)), -2)
 
-    const maxExpressionLevelPoints = _colourizeExpressionLevel(hue, [])(plotData(randomSeries)).reduce((acc, series) => {
+    const maxExpressionLevelPoints = _colourizeExpressionLevel(gradientColours, [])(plotData(randomSeries)).reduce((acc, series) => {
       acc.push(series.data.filter((point) => point.expressionLevel === maxExpressionLevel, -2))
       return acc
     }, [])
@@ -110,7 +110,7 @@ describe(`SeriesMapper.colourizeExpressionLevel`, () => {
 
     expect(maxExpressionLevelPoints.length).toBeGreaterThanOrEqual(1)
     maxExpressionLevelPoints.forEach((point) => {
-      expect(point).toHaveProperty(`color`, Color(`hwb(${hue}, 0%, 0%)`).alpha(0.65).rgb().toString())
+      expect(point).toHaveProperty(`color`, Color(gradientColours[0]).alpha(0.65).rgb().toString())
     })
   })
 
@@ -119,7 +119,7 @@ describe(`SeriesMapper.colourizeExpressionLevel`, () => {
     const allPoints = randomSeries.reduce((acc, series) => acc.concat(series.data), [])
     const minExpressionLevel = Math.round10(Math.min(...allPoints.map((point) => point.expressionLevel)), -2)
 
-    const minExpressionLevelPoints = _colourizeExpressionLevel(hue, [])(plotData(randomSeries)).reduce((acc, series) => {
+    const minExpressionLevelPoints = _colourizeExpressionLevel(gradientColours, [])(plotData(randomSeries)).reduce((acc, series) => {
       acc.push(series.data.filter((point) => point.expressionLevel === minExpressionLevel, -2))
       return acc
     }, [])
@@ -127,14 +127,14 @@ describe(`SeriesMapper.colourizeExpressionLevel`, () => {
 
     expect(minExpressionLevelPoints.length).toBeGreaterThanOrEqual(1)
     minExpressionLevelPoints.forEach((point) => {
-      expect(point).toHaveProperty(`color`, Color(`hwb(${hue}, 90%, 0%)`).alpha(0.65).rgb().toString())
+      expect(point).toHaveProperty(`color`, Color(gradientColours[gradientColours.length - 1]).alpha(0.65).rgb().toString())
     })
   })
 
   test(`rounds expression level to two decimal places`, () => {
     const randomSeries = HighchartsSeriesGenerator.generate(seriesNames, maxPointsPerSeries)
 
-    _colourizeExpressionLevel(hue, [])(plotData(randomSeries)).forEach((series) => {
+    _colourizeExpressionLevel(gradientColours, [])(plotData(randomSeries)).forEach((series) => {
       series.data.forEach((point) => {
           if (String(point.expressionLevel).includes(`.`)) {
             expect(String(point.expressionLevel).split(`.`)[1].length).toBeLessThanOrEqual(2)
@@ -143,8 +143,8 @@ describe(`SeriesMapper.colourizeExpressionLevel`, () => {
     })
   })
 
-  test(`assigns maximum colour if all points have the same expression level`, () => {
-    _colourizeExpressionLevel(hue, [])({
+  test(`assigns default colour, i.e. blue, if all points have the same expression level`, () => {
+    _colourizeExpressionLevel(gradientColours, [])({
       series: [
         {
           name: `Cluster 1`,
@@ -179,7 +179,7 @@ describe(`SeriesMapper.colourizeExpressionLevel`, () => {
       max: 100.0
     }).forEach((series) => {
       series.data.forEach((point) => {
-          expect(point).toHaveProperty(`color`, Color(`hwb(${hue}, 0%, 0%)`).alpha(0.65).rgb().toString())
+          expect(point).toHaveProperty(`color`, Color(`blue`).alpha(0.65).rgb().toString())
         })
     })
   })
