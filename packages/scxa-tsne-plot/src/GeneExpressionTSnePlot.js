@@ -9,21 +9,47 @@ import './util/MathRound'
 
 const MAX_WHITE = 90
 
-const _colourizeExpressionLevel = (hue, highlightSeries) =>
-  (plotData) => plotData.series.map((aSeries) => {
+
+const _colourize = (colourStrings, defaultColour = `blue`, alpha = 0.65) => {
+  const colours = colourStrings.map((colourStr) => Color(colourStr))
+
+  return (val) => {
+    if (isNaN(val)) {
+      return Color(defaultColour).alpha(alpha).rgb().toString()
+    }
+
+    const bucket = val <= 0 ? 0 : val >= 1 ? colours.length - 2 : Math.floor(val / (1 / (colours.length - 1)))
+
+    const loColour = colours[bucket]
+    const hiColour = colours[bucket + 1]
+
+    const redDelta = hiColour.red() - loColour.red()
+    const greenDelta = hiColour.green() - loColour.green()
+    const blueDelta = hiColour.blue() - loColour.blue()
+
+    return Color(
+      `rgb(` +
+      `${Math.floor(loColour.red() + redDelta * val)}, ` +
+      `${Math.floor(loColour.green() + greenDelta * val)}, ` +
+      `${Math.floor(loColour.blue() + blueDelta * val)})`).alpha(alpha).rgb().toString()
+  }
+}
+
+
+const _colourizeExpressionLevel = (gradientColours, highlightSeries) => {
+  const colourize = _colourize(gradientColours)
+
+  return (plotData) => plotData.series.map((aSeries) => {
     // I can’t think of a better way to reconcile series.name being a string and highlightSeries being an array of
     // numbers. For more flexibility we might think of having our series be identified by an arbitrary ID string
     if (!highlightSeries.length || highlightSeries.map((hs) => String(hs)).includes(aSeries.name)) {
       return {
         name: aSeries.name,
         data: aSeries.data.map((point) => {
-          const white = plotData.max > plotData.min ?
-            (1 - (point.expressionLevel - plotData.min) / (plotData.max - plotData.min)) * MAX_WHITE :
-            0
           return {
             ...point,
             expressionLevel: Math.round10(point.expressionLevel, -2),
-            color: Color(`hwb(${hue}, ${white}%, 0%)`).alpha(0.65).rgb().toString()
+            color: colourize(1 - (point.expressionLevel - plotData.min) / (plotData.max - plotData.min))
           }
         })
       }
@@ -37,12 +63,12 @@ const _colourizeExpressionLevel = (hue, highlightSeries) =>
         }))
       }
     }
-
   })
+}
 
 const GeneExpressionScatterPlot = (props) => {
   const {atlasUrl, suggesterEndpoint, geneId, onSelectGeneId} = props       // Suggester
-  const {height, plotData, expressionColourHue, highlightClusters} = props  // Chart
+  const {height, plotData, expressionGradientColours, highlightClusters} = props  // Chart
   const {loading, resourcesUrl, errorMessage} = props                       // Overlay
 
   const highchartsConfig = {
@@ -66,15 +92,9 @@ const GeneExpressionScatterPlot = (props) => {
   const chartClassName = renderGradient ? `small-10 columns` : `small-12 columns`
   const gradient = renderGradient ?
     <LinearGradient height={height}
-                    colours={[
-                      Color(`rgb(0, 0, 115)`),
-                      Color(`rgb(0, 85, 225)`),
-                      Color(`rgb(128, 255, 255)`),
-                      Color(`rgb(215, 255, 255)`)
-                    ]}
+                    colours={expressionGradientColours}
                     plotData={plotData}/> :
     null
-
 
   return [
     <AtlasAutocomplete key={`expression-autocomplete`}
@@ -89,7 +109,7 @@ const GeneExpressionScatterPlot = (props) => {
     <ScatterPlotLoader key={`expression-plot`}
                        wrapperClassName={`row`}
                        chartClassName={chartClassName}
-                       series={_colourizeExpressionLevel(expressionColourHue, highlightClusters)(plotData)}
+                       series={_colourizeExpressionLevel(expressionGradientColours, highlightClusters)(plotData)}
                        highchartsConfig={highchartsConfig}
                        children={gradient}
                        loading={loading}
@@ -100,7 +120,7 @@ const GeneExpressionScatterPlot = (props) => {
 }
 
 const LinearGradient = ({height, colours, plotData}) => {
-  const background = colours.map((colour) => colour.rgb().toString()).join(`, `)
+  const background = colours.map((colour) => Color(colour).rgb().toString()).join(`, `)
 
   return (
     <div className={`small-2 columns text-center`}>
@@ -113,7 +133,7 @@ const LinearGradient = ({height, colours, plotData}) => {
 
 LinearGradient.propTypes = {
   height: PropTypes.number.isRequired,
-  colours: PropTypes.arrayOf(PropTypes.instanceOf(Color)).isRequired,
+  colours: PropTypes.arrayOf(PropTypes.string).isRequired,
   plotData: PropTypes.shape({
     min: PropTypes.number.isRequired,
     max: PropTypes.number.isRequired,
@@ -131,7 +151,7 @@ GeneExpressionScatterPlot.propTypes = {
     max: PropTypes.number,
     min: PropTypes.number
   }),
-  expressionColourHue: PropTypes.number,
+  expressionGradientColours: PropTypes.arrayOf(PropTypes.string).isRequired,
   highlightClusters: PropTypes.array,
 
   atlasUrl: PropTypes.string.isRequired,
@@ -144,7 +164,7 @@ GeneExpressionScatterPlot.propTypes = {
 }
 
 GeneExpressionScatterPlot.defaultProps = {
-  expressionColourHue: 240
+  expressionGradientColours: [`rgb(0, 0, 115)`, `rgb(0, 85, 225)`, `rgb(128, 255, 255)`, `rgb(215, 255, 255)`]
 }
 
 export {GeneExpressionScatterPlot as default, _colourizeExpressionLevel}
