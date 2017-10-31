@@ -28,11 +28,11 @@ class Demo extends React.Component {
     event.preventDefault()
 
     this.setState({
-      highlightClusters: this.state.inputHighlightClusters.split(`,`).map((e) => e.trim()).filter((e) => e.length)
+      highlightClusters: this.state.inputHighlightClusters.split(`,`).map((e) => parseInt(e.trim())).filter((e) => !isNaN(e))
     })
   }
 
-  
+
 
   render() {
     return(
