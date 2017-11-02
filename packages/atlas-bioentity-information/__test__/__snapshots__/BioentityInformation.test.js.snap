@@ -1,0 +1,111 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BioentityInformation matches snapshot 1`] = `
+<div
+  className="row row-padding small-12"
+>
+  <ul
+    className="accordion"
+    data-accordion={true}
+    data-allow-all-closed="true"
+  >
+    <li
+      className="accordion-item"
+      data-accordion-item={true}
+    >
+      <a
+        className="accordion-title"
+        href="#geneInfo"
+        style={
+          Object {
+            "fontSize": "1.1rem",
+          }
+        }
+      >
+        Gene Information
+      </a>
+      <div
+        className="accordion-content"
+        data-tab-content={true}
+        id="geneInfo"
+      >
+        <table>
+          <tbody>
+            <tr>
+              <td
+                className="gxaBioentityInformationCardPropertyType"
+              >
+                Gene Ontology
+              </td>
+              <td>
+                <div>
+                  <span>
+                    <a
+                      className="bioEntityCardLink"
+                      href="http://amigo.geneontology.org/amigo/term/GO%3A0000978"
+                      target="_blank"
+                    >
+                      Link of relevance 3
+                    </a>
+                    <span>
+                      , 
+                    </span>
+                    <a
+                      className="bioEntityCardLink"
+                      href="http://amigo.geneontology.org/amigo/term/GO%3A0000978"
+                      target="_blank"
+                    >
+                      Link of relevance 3- another
+                    </a>
+                    <span>
+                      , 
+                    </span>
+                    <a
+                      className="bioEntityCardLink"
+                      href="http://amigo.geneontology.org/amigo/term/GO%3A0000978"
+                      target="_blank"
+                    >
+                      a Link of relevance 2
+                    </a>
+                    <span>
+                      , 
+                    </span>
+                    <a
+                      className="bioEntityCardLink"
+                      href="http://amigo.geneontology.org/amigo/term/GO%3A0000978"
+                      target="_blank"
+                    >
+                      b Link of relevance 2
+                    </a>
+                    <a
+                      onClick={[Function]}
+                      role="button"
+                      style={
+                        Object {
+                          "cursor": "pointer",
+                        }
+                      }
+                    >
+                       … and 9 more
+                    </a>
+                  </span>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td
+                className="gxaBioentityInformationCardPropertyType"
+              >
+                Reactome Pathways
+              </td>
+              <td>
+                <div />
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </li>
+  </ul>
+</div>
+`;

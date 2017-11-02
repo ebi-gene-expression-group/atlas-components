@@ -11,18 +11,27 @@ class BioentityInformation extends React.Component {
 
   render() {
         return (
-          <div className={`row`}>
-              <table>
-                  <tbody>
-                  {this.props.bioentityProperties.map(function(bioentityProperty){
-                      return (
-                          <BioentityProperty
-                              key={bioentityProperty.type}
-                              {...bioentityProperty} />
-                      )
-                  })}
-                  </tbody>
-              </table>
+          <div className={`row row-padding small-12`}>
+              <ul className={`accordion`} data-accordion data-allow-all-closed="true">
+                  <li className={`accordion-item`} data-accordion-item>
+                      <a href="#geneInfo" className={`accordion-title`} style={{fontSize: '1.1rem'}}>Gene Information</a>
+                      <div id="geneInfo" className={`accordion-content`} data-tab-content>
+
+                          <table>
+                              <tbody>
+                              {this.props.bioentityProperties.map(function(bioentityProperty){
+                                  return (
+                                      <BioentityProperty
+                                          key={bioentityProperty.type}
+                                          {...bioentityProperty} />
+                                  )
+                              })}
+                              </tbody>
+                          </table>
+
+                      </div>
+                  </li>
+              </ul>
           </div>
     )
   }

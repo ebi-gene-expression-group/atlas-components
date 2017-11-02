@@ -24,3 +24,7 @@ td.gxaBioentityInformationCardPropertyType {
 .gxaBioentityInformationCardPropertyValue {
     border: none;
 }
+
+/*ul#geneInformation>li a.gxaAccordionTitle {*/
+    /*font-size: 1.2rem !important;*/
+/*}*/
