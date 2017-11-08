@@ -4,40 +4,41 @@ import Color from 'color'
 
 import ScatterPlotLoader from './plotloader/PlotLoader'
 import AtlasAutocomplete from 'expression-atlas-autocomplete'
+import MultiStopGradient from './MultiStopGradient'
 
 import './util/MathRound'
 
 const MAX_WHITE = 90
 
 
-const _colourize = (colourStrings, defaultColour = `blue`, alpha = 0.65) => {
-  const colours = colourStrings.map((colourStr) => Color(colourStr))
-
+const _colourize = (colourRanges,  maxExpressionLevel, minExpressionLevel, defaultColour = `blue`, alpha = 0.65) => {
   return (val) => {
-    if (isNaN(val)) {
+    if (minExpressionLevel === 0 && maxExpressionLevel === 0) {
       return Color(defaultColour).alpha(alpha).rgb().toString()
     }
 
-    const bucket = val <= 0 ? 0 : val >= 1 ? colours.length - 2 : Math.floor(val / (1 / (colours.length - 1)))
+    const rangeIndex = val <= 0 ? 0 : colourRanges.findIndex((colourRange) => colourRange.threshold >= val) - 1
 
-    const loColour = colours[bucket]
-    const hiColour = colours[bucket + 1]
+    const loColour = Color(colourRanges[rangeIndex].colour)
+    const hiColour = Color(colourRanges[rangeIndex + 1].colour)
 
     const redDelta = hiColour.red() - loColour.red()
     const greenDelta = hiColour.green() - loColour.green()
     const blueDelta = hiColour.blue() - loColour.blue()
+    const increment = (val - colourRanges[rangeIndex].threshold) / (colourRanges[rangeIndex + 1].threshold - colourRanges[rangeIndex].threshold)
 
     return Color(
       `rgb(` +
-      `${Math.floor(loColour.red() + redDelta * val)}, ` +
-      `${Math.floor(loColour.green() + greenDelta * val)}, ` +
-      `${Math.floor(loColour.blue() + blueDelta * val)})`).alpha(alpha).rgb().toString()
+      `${Math.floor(loColour.red() + redDelta * increment)}, ` +
+      `${Math.floor(loColour.green() + greenDelta * increment)}, ` +
+      `${Math.floor(loColour.blue() + blueDelta * increment)})`
+    ).alpha(alpha).rgb().toString()
   }
 }
 
 
-const _colourizeExpressionLevel = (gradientColours, highlightSeries) => {
-  const colourize = _colourize(gradientColours)
+const _colourizeExpressionLevel = (gradientColours, maxExpressionLevel, minExpressionLevel, highlightSeries) => {
+  const colourize = _colourize(gradientColours, maxExpressionLevel, minExpressionLevel)
 
   return (plotData) => plotData.series.map((aSeries) => {
     // I can’t think of a better way to reconcile series.name being a string and highlightSeries being an array of
@@ -49,7 +50,7 @@ const _colourizeExpressionLevel = (gradientColours, highlightSeries) => {
           return {
             ...point,
             expressionLevel: Math.round10(point.expressionLevel, -2),
-            color: colourize(1 - (point.expressionLevel - plotData.min) / (plotData.max - plotData.min))
+            color: colourize(point.expressionLevel)
           }
         })
       }
@@ -91,9 +92,9 @@ const GeneExpressionScatterPlot = (props) => {
   const renderGradient = plotData.max && plotData.min && plotData.max > plotData.min
   const chartClassName = renderGradient ? `small-10 columns` : `small-12 columns`
   const gradient = renderGradient ?
-    <LinearGradient height={height}
-                    colours={expressionGradientColours}
-                    plotData={plotData}/> :
+    <MultiStopGradient height={height}
+                       colourRanges={expressionGradientColours}
+                       plotData={plotData}/> :
     null
 
   return [
@@ -109,7 +110,7 @@ const GeneExpressionScatterPlot = (props) => {
     <ScatterPlotLoader key={`expression-plot`}
                        wrapperClassName={`row`}
                        chartClassName={chartClassName}
-                       series={_colourizeExpressionLevel(expressionGradientColours, highlightClusters)(plotData)}
+                       series={_colourizeExpressionLevel(expressionGradientColours, plotData.max, plotData.min, highlightClusters)(plotData)}
                        highchartsConfig={highchartsConfig}
                        children={gradient}
                        loading={loading}
@@ -118,29 +119,6 @@ const GeneExpressionScatterPlot = (props) => {
     />
   ]
 }
-
-const LinearGradient = ({height, colours, plotData}) => {
-  const background = colours.map((colour) => Color(colour).rgb().toString()).join(`, `)
-
-  return (
-    <div className={`small-2 columns text-center`}>
-      <div><small>{Math.round10(plotData.max, -2)} {plotData.unit}</small></div>
-      <div style={{width: `20px`, height: `${height - 100}px`, background: `linear-gradient(${background})`, verticalAlign: `middle`, margin: `auto`}}/>
-      <div><small>{Math.round10(plotData.min, -2)} {plotData.unit}</small></div>
-    </div>
-  )
-}
-
-LinearGradient.propTypes = {
-  height: PropTypes.number.isRequired,
-  colours: PropTypes.arrayOf(PropTypes.string).isRequired,
-  plotData: PropTypes.shape({
-    min: PropTypes.number.isRequired,
-    max: PropTypes.number.isRequired,
-    unit: PropTypes.string.isRequired
-  })
-}
-
 
 GeneExpressionScatterPlot.propTypes = {
   height: PropTypes.number.isRequired,
@@ -151,7 +129,10 @@ GeneExpressionScatterPlot.propTypes = {
     max: PropTypes.number,
     min: PropTypes.number
   }),
-  expressionGradientColours: PropTypes.arrayOf(PropTypes.string).isRequired,
+  expressionGradientColours: PropTypes.arrayOf(PropTypes.shape({
+    colour: PropTypes.string.isRequired,
+    threshold: PropTypes.number.isRequired
+  })).isRequired,
   highlightClusters: PropTypes.array,
 
   atlasUrl: PropTypes.string.isRequired,
@@ -164,7 +145,28 @@ GeneExpressionScatterPlot.propTypes = {
 }
 
 GeneExpressionScatterPlot.defaultProps = {
-  expressionGradientColours: [`rgb(0, 0, 115)`, `rgb(0, 85, 225)`, `rgb(128, 255, 255)`, `rgb(215, 255, 255)`]
+  expressionGradientColours: [
+    {
+      colour: `rgb(215, 255, 255)`,
+      threshold: 0,
+      stopPosition: 0
+    },
+    {
+      colour: `rgb(128, 255, 255)`,
+      threshold: 10,
+      stopPosition: 5
+    },
+    {
+      colour: `rgb(0, 85, 225)`,
+      threshold: 100,
+      stopPosition: 30
+    },
+    {
+      colour: `rgb(0, 0, 115)`,
+      threshold: 1e6,
+      stopPosition: 100
+    }
+  ]
 }
 
 export {GeneExpressionScatterPlot as default, _colourizeExpressionLevel}
