@@ -11,9 +11,9 @@ import './util/MathRound'
 const MAX_WHITE = 90
 
 
-const _colourize = (colourRanges,  maxExpressionLevel, minExpressionLevel, defaultColour = `blue`, alpha = 0.65) => {
+const _colourize = (colourRanges, defaultColour = `blue`, alpha = 0.65) => {
   return (val) => {
-    if (minExpressionLevel === 0 && maxExpressionLevel === 0) {
+    if (isNaN(val)) {
       return Color(defaultColour).alpha(alpha).rgb().toString()
     }
 
@@ -38,7 +38,7 @@ const _colourize = (colourRanges,  maxExpressionLevel, minExpressionLevel, defau
 
 
 const _colourizeExpressionLevel = (gradientColours, maxExpressionLevel, minExpressionLevel, highlightSeries) => {
-  const colourize = _colourize(gradientColours, maxExpressionLevel, minExpressionLevel)
+  const colourize = _colourize(gradientColours)
 
   return (plotData) => plotData.series.map((aSeries) => {
     // I can’t think of a better way to reconcile series.name being a string and highlightSeries being an array of
@@ -154,7 +154,7 @@ GeneExpressionScatterPlot.defaultProps = {
     {
       colour: `rgb(128, 255, 255)`,
       threshold: 10,
-      stopPosition: 5
+      stopPosition: 15
     },
     {
       colour: `rgb(0, 85, 225)`,
@@ -163,7 +163,7 @@ GeneExpressionScatterPlot.defaultProps = {
     },
     {
       colour: `rgb(0, 0, 115)`,
-      threshold: 1e6,
+      threshold: 1e5,
       stopPosition: 100
     }
   ]
