@@ -20,7 +20,7 @@ const putInRange = (ranges, val) => {
   const withinRangeOffset =
     (val - ranges[rangeIndex].threshold) / (ranges[rangeIndex + 1].threshold - ranges[rangeIndex].threshold)
 
-  return ranges[rangeIndex].stopPosition * (1 + withinRangeOffset) / 100
+  return (ranges[rangeIndex].stopPosition + (ranges[rangeIndex + 1].stopPosition - ranges[rangeIndex].stopPosition) * withinRangeOffset) / 100
 }
 
 
