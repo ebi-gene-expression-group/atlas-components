@@ -7,12 +7,9 @@ import './util/MathRound'
 
 // ranges have at least threshold (in ascending order) and stopPosition [0..100]
 const putInRange = (ranges, val) => {
-  if (val <= ranges[0].threshold) {
-    return 0
-  }
-
-  if (val >= ranges[ranges.length - 1].threshold) {
-    return 1
+  const stopMatch = ranges.filter((range) => range.threshold === val)
+  if (stopMatch.length) {
+    return stopMatch[0].stopPosition / 100
   }
 
   const rangeIndex = ranges.findIndex((range) => range.threshold >= val) - 1
@@ -23,18 +20,24 @@ const putInRange = (ranges, val) => {
   return (ranges[rangeIndex].stopPosition + (ranges[rangeIndex + 1].stopPosition - ranges[rangeIndex].stopPosition) * withinRangeOffset) / 100
 }
 
+// The +24 adjustment is to account for the line height of the top label
+const Tick = ({value, colour, top}) =>
+  <div style={{position: `absolute`, height: `2px`, width: `20px`, background: colour, top: `${top + 24}px`}}>
+    <div style={{position: `absolute`, marginLeft: `24px`, marginTop: `-0.75rem`}}>
+      <small style={{color: colour}}><ScientificNotationNumber value={Math.round10(value, -2)}/></small>
+    </div>
+  </div>
 
-
-const MultiStopGradient = ({height, colourRanges, plotData}) => {
+const MultiStopGradient = ({height, showTicks, colourRanges, plotData}) => {
   const bg = colourRanges.map((colourRange) => `${colourRange.colour} ${colourRange.stopPosition}%`).join(`, `)
   const minMaxExpressionTickHeight = 2
   const gradientHeight = height - 100
 
-  const minExpressionBottom =
+  const minExpressionTopPosition =
     Math.min(
       gradientHeight - minMaxExpressionTickHeight,
       gradientHeight - gradientHeight * putInRange(colourRanges, plotData.min))
-  const maxExpressionBottom =
+  const maxExpressionTopPosition =
     Math.max(
       minMaxExpressionTickHeight,
       gradientHeight - gradientHeight * putInRange(colourRanges, plotData.max))
@@ -53,17 +56,13 @@ const MultiStopGradient = ({height, colourRanges, plotData}) => {
         verticalAlign: `middle`,
         margin: `auto`}}>
 
-        <div style={{position: `relative`, height: `2px`, width: `20px`, background: `grey`, top: `${maxExpressionBottom}px`}}>
-          <div style={{position: `absolute`, marginLeft: `24px`, marginTop: `-0.75rem`}}>
-            <small><ScientificNotationNumber value={Math.round10(plotData.max, -2)}/></small>
-          </div>
-        </div>
-        <div style={{position: `relative`, height: `2px`, width: `20px`, background: `grey`, top: `${minExpressionBottom}px`}}>
-          <div style={{position: `absolute`, marginLeft: `24px`, marginTop: `-0.75rem`}}>
-            <small><ScientificNotationNumber value={Math.round10(plotData.min, -2)}/></small>
-          </div>
-        </div>
+      <Tick value={plotData.max} colour={`dimgray`} top={maxExpressionTopPosition}/>
+      <Tick value={plotData.min} colour={`dimgray`} top={minExpressionTopPosition}/>
 
+      {showTicks &&
+        colourRanges.slice(1, -1).map((colourRange) =>
+          <Tick key={colourRange.threshold} value={colourRange.threshold} colour={`lightgray`} top={gradientHeight - gradientHeight * putInRange(colourRanges, colourRange.threshold)}/>
+      )}
       </div>
 
       <div>
@@ -75,9 +74,11 @@ const MultiStopGradient = ({height, colourRanges, plotData}) => {
 
 MultiStopGradient.propTypes = {
   height: PropTypes.number.isRequired,
+  showTicks: PropTypes.bool,
   colourRanges: PropTypes.arrayOf(PropTypes.shape({
     colour: PropTypes.string.isRequired,
-    threshold: PropTypes.number.isRequired
+    threshold: PropTypes.number.isRequired,
+    stopPosition: PropTypes.number.isRequired
   })).isRequired,
   plotData: PropTypes.shape({
     min: PropTypes.number.isRequired,

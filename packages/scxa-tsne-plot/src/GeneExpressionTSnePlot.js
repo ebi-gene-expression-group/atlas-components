@@ -93,6 +93,7 @@ const GeneExpressionScatterPlot = (props) => {
   const chartClassName = renderGradient ? `small-10 columns` : `small-12 columns`
   const gradient = renderGradient ?
     <MultiStopGradient height={height}
+                       showTicks={true}
                        colourRanges={expressionGradientColours}
                        plotData={plotData}/> :
     null
@@ -131,7 +132,8 @@ GeneExpressionScatterPlot.propTypes = {
   }),
   expressionGradientColours: PropTypes.arrayOf(PropTypes.shape({
     colour: PropTypes.string.isRequired,
-    threshold: PropTypes.number.isRequired
+    threshold: PropTypes.number.isRequired,
+    stopPosition: PropTypes.number.isRequired
   })).isRequired,
   highlightClusters: PropTypes.array,
 
@@ -154,16 +156,16 @@ GeneExpressionScatterPlot.defaultProps = {
     {
       colour: `rgb(128, 255, 255)`,
       threshold: 10,
-      stopPosition: 15
+      stopPosition: 20
     },
     {
       colour: `rgb(0, 85, 225)`,
       threshold: 100,
-      stopPosition: 30
+      stopPosition: 40
     },
     {
       colour: `rgb(0, 0, 115)`,
-      threshold: 1e5,
+      threshold: 10000,
       stopPosition: 100
     }
   ]
