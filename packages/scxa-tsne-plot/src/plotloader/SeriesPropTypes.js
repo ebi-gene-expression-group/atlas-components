@@ -6,7 +6,7 @@ const SeriesPropTypes = PropTypes.arrayOf(PropTypes.shape({
     name: PropTypes.string.isRequired,
     x: PropTypes.number.isRequired,
     y: PropTypes.number.isRequired,
-    expressionLevel: PropTypes.number.isRequired,
+    expressionLevel: PropTypes.number,
     color: PropTypes.string
   })).isRequired,
   color: PropTypes.string
