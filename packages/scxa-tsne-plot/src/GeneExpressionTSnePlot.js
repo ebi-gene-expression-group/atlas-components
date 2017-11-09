@@ -37,7 +37,7 @@ const _colourize = (colourRanges, defaultColour = `blue`, alpha = 0.65) => {
 }
 
 
-const _colourizeExpressionLevel = (gradientColours, maxExpressionLevel, minExpressionLevel, highlightSeries) => {
+const _colourizeExpressionLevel = (gradientColours, highlightSeries) => {
   const colourize = _colourize(gradientColours)
 
   return (plotData) => plotData.series.map((aSeries) => {
