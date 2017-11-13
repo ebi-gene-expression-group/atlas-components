@@ -111,7 +111,7 @@ const GeneExpressionScatterPlot = (props) => {
     <ScatterPlotLoader key={`expression-plot`}
                        wrapperClassName={`row`}
                        chartClassName={chartClassName}
-                       series={_colourizeExpressionLevel(expressionGradientColours, plotData.max, plotData.min, highlightClusters)(plotData)}
+                       series={_colourizeExpressionLevel(expressionGradientColours, highlightClusters)(plotData)}
                        highchartsConfig={highchartsConfig}
                        children={gradient}
                        loading={loading}
