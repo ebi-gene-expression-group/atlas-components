@@ -20,10 +20,10 @@ const putInRange = (ranges, val) => {
   return (ranges[rangeIndex].stopPosition + (ranges[rangeIndex + 1].stopPosition - ranges[rangeIndex].stopPosition) * withinRangeOffset) / 100
 }
 
-// The +24 adjustment is to account for the line height of the top label
+const lineHeight = 24
 const Tick = ({value, colour, top}) =>
-  <div style={{position: `absolute`, height: `2px`, width: `20px`, background: colour, top: `${top + 24}px`}}>
-    <div style={{position: `absolute`, marginLeft: `24px`, marginTop: `-0.75rem`}}>
+  <div style={{position: `absolute`, height: `2px`, width: `20px`, background: colour, top: `${top + lineHeight}px`}}>
+    <div style={{position: `absolute`, marginLeft: `24px`, marginTop: `-${lineHeigh / 2}px`}}>
       <small style={{color: colour}}><ScientificNotationNumber value={Math.round10(value, -2)}/></small>
     </div>
   </div>
