@@ -23,7 +23,7 @@ const putInRange = (ranges, val) => {
 const lineHeight = 24
 const Tick = ({value, colour, top}) =>
   <div style={{position: `absolute`, height: `2px`, width: `20px`, background: colour, top: `${top + lineHeight}px`}}>
-    <div style={{position: `absolute`, marginLeft: `24px`, marginTop: `-${lineHeigh / 2}px`}}>
+    <div style={{position: `absolute`, marginLeft: `24px`, marginTop: `-${lineHeight / 2}px`}}>
       <small style={{color: colour}}><ScientificNotationNumber value={Math.round10(value, -2)}/></small>
     </div>
   </div>
