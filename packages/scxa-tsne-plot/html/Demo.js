@@ -47,7 +47,7 @@ class Demo extends React.Component {
 
         <ExperimentPageView atlasUrl={`http://localhost:8080/gxa_sc/`}
                             suggesterEndpoint={`json/suggestions`}
-                            experimentAccession={`E-MTAB-4388`}
+                            experimentAccession={`E-MTAB-5061`}
                             perplexities={[1, 2, 3, 4, 5, 6]}
                             perplexity={this.state.perplexity}
                             ks={[2, 3, 4, 5, 6, 7, 8, 9, 10]}

@@ -1,6 +1,7 @@
 const webpack = require(`webpack`)
 const path = require(`path`)
 const CleanWebpackPlugin = require(`clean-webpack-plugin`)
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 // If you get the message “loaderUtils.parseQuery() received a non-string value...” uncomment next line
 // process.traceDeprecation = true;
@@ -20,6 +21,7 @@ config = {
 
     plugins: [
         new CleanWebpackPlugin([`dist`], {verbose: true, dry: false}),
+        new ExtractTextPlugin(`styles.css`),
         new webpack.optimize.CommonsChunkPlugin({
             name: `dependencies`,
             filename: `vendorCommons.bundle.js`,
@@ -31,7 +33,16 @@ config = {
         rules: [
             {
                 test: /\.css$/i,
-                use: [ `style-loader`, `css-loader` ]
+                use: ExtractTextPlugin.extract({
+                    fallback: 'style-loader',
+                    use: [{
+                        loader: 'css-loader',
+                        options: {
+                            modules: true,
+                            localIdentName: '[name]__[local]___[hash:base64:5]'
+                        }
+                    }]
+                })
             },
             {
                 test: /\.less$/i,

@@ -1,0 +1,142 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MultiStopGradient with random data matches snapshot 1`] = `
+<div
+  className="small-2 columns text-center"
+>
+  <div
+    style={
+      Object {
+        "whiteSpace": "nowrap",
+      }
+    }
+  >
+    <small>
+      <span>
+        10000
+      </span>
+       
+      TPM
+    </small>
+  </div>
+  <div
+    className="gradient"
+    style={
+      Object {
+        "background": "linear-gradient(0deg, rgb(215, 255, 255) 0%, rgb(128, 255, 255) 20%, rgb(0, 85, 225) 40%, rgb(0, 0, 115) 100%)",
+        "height": "500px",
+      }
+    }
+  >
+    <div
+      className="tick"
+      style={
+        Object {
+          "background": "dimgray",
+          "top": "26px",
+        }
+      }
+    >
+      <div
+        className="left"
+      >
+        <small
+          style={
+            Object {
+              "color": "dimgray",
+            }
+          }
+        >
+          <span>
+            9997.45
+          </span>
+        </small>
+      </div>
+    </div>
+    <div
+      className="tick"
+      style={
+        Object {
+          "background": "dimgray",
+          "top": "487.57040149782796px",
+        }
+      }
+    >
+      <div
+        className="left"
+      >
+        <small
+          style={
+            Object {
+              "color": "dimgray",
+            }
+          }
+        >
+          <span>
+            3.64
+          </span>
+        </small>
+      </div>
+    </div>
+    <div
+      className="tick"
+      style={
+        Object {
+          "background": "lightgray",
+          "top": "424px",
+        }
+      }
+    >
+      <div
+        className="right"
+      >
+        <small
+          style={
+            Object {
+              "color": "lightgray",
+            }
+          }
+        >
+          <span>
+            10
+          </span>
+        </small>
+      </div>
+    </div>
+    <div
+      className="tick"
+      style={
+        Object {
+          "background": "lightgray",
+          "top": "324px",
+        }
+      }
+    >
+      <div
+        className="right"
+      >
+        <small
+          style={
+            Object {
+              "color": "lightgray",
+            }
+          }
+        >
+          <span>
+            100
+          </span>
+        </small>
+      </div>
+    </div>
+  </div>
+  <div>
+    <small>
+      <span>
+        0
+      </span>
+       
+      TPM
+    </small>
+  </div>
+</div>
+`;

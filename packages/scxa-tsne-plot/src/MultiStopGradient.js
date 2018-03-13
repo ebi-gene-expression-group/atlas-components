@@ -5,6 +5,8 @@ import ScientificNotationNumber from 'expression-atlas-number-format'
 
 import './util/MathRound'
 
+import styles from './MultiStopGradient.css'
+
 // ranges have at least threshold (in ascending order) and stopPosition [0..100]
 const putInRange = (ranges, val) => {
   const stopMatch = ranges.filter((range) => range.threshold === val)
@@ -20,10 +22,12 @@ const putInRange = (ranges, val) => {
   return (ranges[rangeIndex].stopPosition + (ranges[rangeIndex + 1].stopPosition - ranges[rangeIndex].stopPosition) * withinRangeOffset) / 100
 }
 
+
 const lineHeight = 24
-const Tick = ({value, colour, top}) =>
-  <div style={{position: `absolute`, height: `2px`, width: `20px`, background: colour, top: `${top + lineHeight}px`}}>
-    <div style={{position: `absolute`, marginLeft: `24px`, marginTop: `-${lineHeight / 2}px`}}>
+
+const Tick = ({value, colour, top, position}) =>
+  <div className={styles.tick} style={{background: colour, top: `${top + lineHeight}px`}}>
+    <div className={styles[position]}>
       <small style={{color: colour}}><ScientificNotationNumber value={Math.round10(value, -2)}/></small>
     </div>
   </div>
@@ -44,24 +48,21 @@ const MultiStopGradient = ({height, showTicks, colourRanges, plotData}) => {
 
   return (
     <div className={`small-2 columns text-center`}>
-      <div>
+      <div style={{whiteSpace: `nowrap`}}>
         <small><ScientificNotationNumber value={colourRanges[colourRanges.length - 1].threshold}/> {plotData.unit}</small>
       </div>
 
-      <div
+      <div className={styles.gradient}
         style={{
-        width: `20px`,
         height: `${gradientHeight}px`,
-        background: `linear-gradient(0deg, ${bg})`,
-        verticalAlign: `middle`,
-        margin: `auto`}}>
+        background: `linear-gradient(0deg, ${bg})`}}>
 
-      <Tick value={plotData.max} colour={`dimgray`} top={maxExpressionTopPosition}/>
-      <Tick value={plotData.min} colour={`dimgray`} top={minExpressionTopPosition}/>
+      <Tick value={plotData.max} colour={`dimgray`} top={maxExpressionTopPosition} position={`left`}/>
+      <Tick value={plotData.min} colour={`dimgray`} top={minExpressionTopPosition} position={`left`}/>
 
       {showTicks &&
         colourRanges.slice(1, -1).map((colourRange) =>
-          <Tick key={colourRange.threshold} value={colourRange.threshold} colour={`lightgray`} top={gradientHeight - gradientHeight * putInRange(colourRanges, colourRange.threshold)}/>
+          <Tick key={colourRange.threshold} value={colourRange.threshold} colour={`lightgray`} top={gradientHeight - gradientHeight * putInRange(colourRanges, colourRange.threshold)} position={`right`}/>
       )}
       </div>
 

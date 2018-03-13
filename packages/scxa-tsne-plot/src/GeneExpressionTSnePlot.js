@@ -17,6 +17,10 @@ const _colourize = (colourRanges, defaultColour = `blue`, alpha = 0.65) => {
       return Color(defaultColour).alpha(alpha).rgb().toString()
     }
 
+    if (val === 0) {
+      return Color('lightgrey').alpha(alpha).rgb().toString()
+    }
+
     const rangeIndex = val <= 0 ? 0 : colourRanges.findIndex((colourRange) => colourRange.threshold >= val) - 1
 
     const loColour = Color(colourRanges[rangeIndex].colour)
@@ -89,7 +93,7 @@ const GeneExpressionScatterPlot = (props) => {
     }
   }
 
-  const renderGradient = plotData.max && plotData.min && plotData.max > plotData.min
+  const renderGradient = plotData.max !== null && plotData.min !== null && plotData.max >= plotData.min
   const chartClassName = renderGradient ? `small-10 columns` : `small-12 columns`
   const gradient = renderGradient ?
     <MultiStopGradient height={height}

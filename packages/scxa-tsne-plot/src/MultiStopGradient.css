@@ -1,0 +1,28 @@
+.gradient {
+    width: 20px;
+    vertical-align: middle;
+    margin: auto;
+}
+
+.tick {
+    position: absolute;
+    height: 2px;
+    width: 20px;
+}
+
+.tickLabel {
+    position: absolute;
+    margin-top: -12px;
+}
+
+.left {
+    composes: tickLabel;
+    right: 20px;
+    padding-right: 5px;
+}
+
+.right {
+    composes: tickLabel;
+    left: 20px;
+    padding-left: 5px;
+}

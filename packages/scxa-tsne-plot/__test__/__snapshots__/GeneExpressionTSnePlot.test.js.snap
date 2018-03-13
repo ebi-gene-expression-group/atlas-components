@@ -1,0 +1,233 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GeneExpressionTSnePlot with random data matches snapshot 1`] = `
+Array [
+  <div
+    className="row column"
+  >
+    <div
+      className=""
+    >
+      <label>
+        Gene ID, gene name or gene feature
+      </label>
+      <div
+        style={
+          Object {
+            "display": "",
+          }
+        }
+      >
+        <input
+          aria-autocomplete="list"
+          aria-expanded={false}
+          autoComplete="off"
+          name="geneId"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onClick={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          role="combobox"
+          type="text"
+          value=""
+        />
+      </div>
+    </div>
+  </div>,
+  <div
+    className="row"
+    style={
+      Object {
+        "position": "relative",
+      }
+    }
+  >
+    <div
+      className="small-10 columns"
+    >
+      <div />
+    </div>
+    <div>
+      <div
+        className="small-2 columns text-center"
+      >
+        <div
+          style={
+            Object {
+              "whiteSpace": "nowrap",
+            }
+          }
+        >
+          <small>
+            <span>
+              10000
+            </span>
+             
+            TPM
+          </small>
+        </div>
+        <div
+          className="gradient"
+          style={
+            Object {
+              "background": "linear-gradient(0deg, rgb(215, 255, 255) 0%, rgb(128, 255, 255) 20%, rgb(0, 85, 225) 40%, rgb(0, 0, 115) 100%)",
+              "height": "500px",
+            }
+          }
+        >
+          <div
+            className="tick"
+            style={
+              Object {
+                "background": "dimgray",
+                "top": "26px",
+              }
+            }
+          >
+            <div
+              className="left"
+            >
+              <small
+                style={
+                  Object {
+                    "color": "dimgray",
+                  }
+                }
+              >
+                <span>
+                  9997.45
+                </span>
+              </small>
+            </div>
+          </div>
+          <div
+            className="tick"
+            style={
+              Object {
+                "background": "dimgray",
+                "top": "487.57040149782796px",
+              }
+            }
+          >
+            <div
+              className="left"
+            >
+              <small
+                style={
+                  Object {
+                    "color": "dimgray",
+                  }
+                }
+              >
+                <span>
+                  3.64
+                </span>
+              </small>
+            </div>
+          </div>
+          <div
+            className="tick"
+            style={
+              Object {
+                "background": "lightgray",
+                "top": "424px",
+              }
+            }
+          >
+            <div
+              className="right"
+            >
+              <small
+                style={
+                  Object {
+                    "color": "lightgray",
+                  }
+                }
+              >
+                <span>
+                  10
+                </span>
+              </small>
+            </div>
+          </div>
+          <div
+            className="tick"
+            style={
+              Object {
+                "background": "lightgray",
+                "top": "324px",
+              }
+            }
+          >
+            <div
+              className="right"
+            >
+              <small
+                style={
+                  Object {
+                    "color": "lightgray",
+                  }
+                }
+              >
+                <span>
+                  100
+                </span>
+              </small>
+            </div>
+          </div>
+        </div>
+        <div>
+          <small>
+            <span>
+              0
+            </span>
+             
+            TPM
+          </small>
+        </div>
+      </div>
+    </div>
+    <div
+      style={
+        Object {
+          "alignItems": "center",
+          "background": "rgba(255,255,255,0.8)",
+          "bottom": 0,
+          "display": "flex",
+          "justifyContent": "center",
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        }
+      }
+    >
+      <div
+        style={
+          Object {
+            "textAlign": "center",
+          }
+        }
+      >
+        <p>
+          Loading, please wait...
+        </p>
+        <img
+          src="test-file-stub"
+        />
+        <p>
+          <small>
+            Powered by 
+            <a
+              href="https://loading.io"
+            >
+              loading.io
+            </a>
+          </small>
+        </p>
+      </div>
+    </div>
+  </div>,
+]
+`;

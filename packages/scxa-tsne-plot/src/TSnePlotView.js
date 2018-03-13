@@ -17,6 +17,8 @@ class ExperimentPageView extends React.Component {
     super(props)
     this.state = {
       data: {
+        max: null,
+        min: null,
         series: [],
         unit: ``
       },

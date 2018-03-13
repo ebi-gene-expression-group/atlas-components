@@ -4828,7 +4828,7 @@ ShallowWrapper {
               "y": 18.17866327969759,
             },
           ],
-          "name": "Series 1",
+          "name": "0",
         },
         Object {
           "data": Array [
@@ -9555,7 +9555,7 @@ ShallowWrapper {
               "y": 10.4517721651991,
             },
           ],
-          "name": "Series 2",
+          "name": "1",
         },
         Object {
           "data": Array [
@@ -11882,7 +11882,7 @@ ShallowWrapper {
               "y": 66.14740265165557,
             },
           ],
-          "name": "Series 3",
+          "name": "2",
         },
         Object {
           "data": Array [
@@ -14545,7 +14545,7 @@ ShallowWrapper {
               "y": 5.13675659522671,
             },
           ],
-          "name": "Series 4",
+          "name": "3",
         },
         Object {
           "data": Array [
@@ -19668,7 +19668,7 @@ ShallowWrapper {
               "y": 27.991396266190467,
             },
           ],
-          "name": "Series 5",
+          "name": "4",
         },
       ]
     }
@@ -24211,7 +24211,7 @@ ShallowWrapper {
                     "y": 18.17866327969759,
                   },
                 ],
-                "name": "Series 1",
+                "name": "0",
               },
               Object {
                 "data": Array [
@@ -28938,7 +28938,7 @@ ShallowWrapper {
                     "y": 10.4517721651991,
                   },
                 ],
-                "name": "Series 2",
+                "name": "1",
               },
               Object {
                 "data": Array [
@@ -31265,7 +31265,7 @@ ShallowWrapper {
                     "y": 66.14740265165557,
                   },
                 ],
-                "name": "Series 3",
+                "name": "2",
               },
               Object {
                 "data": Array [
@@ -33928,7 +33928,7 @@ ShallowWrapper {
                     "y": 5.13675659522671,
                   },
                 ],
-                "name": "Series 4",
+                "name": "3",
               },
               Object {
                 "data": Array [
@@ -39051,7 +39051,7 @@ ShallowWrapper {
                     "y": 27.991396266190467,
                   },
                 ],
-                "name": "Series 5",
+                "name": "4",
               },
             ],
             "title": Object {
@@ -43615,7 +43615,7 @@ ShallowWrapper {
                       "y": 18.17866327969759,
                     },
                   ],
-                  "name": "Series 1",
+                  "name": "0",
                 },
                 Object {
                   "data": Array [
@@ -48342,7 +48342,7 @@ ShallowWrapper {
                       "y": 10.4517721651991,
                     },
                   ],
-                  "name": "Series 2",
+                  "name": "1",
                 },
                 Object {
                   "data": Array [
@@ -50669,7 +50669,7 @@ ShallowWrapper {
                       "y": 66.14740265165557,
                     },
                   ],
-                  "name": "Series 3",
+                  "name": "2",
                 },
                 Object {
                   "data": Array [
@@ -53332,7 +53332,7 @@ ShallowWrapper {
                       "y": 5.13675659522671,
                     },
                   ],
-                  "name": "Series 4",
+                  "name": "3",
                 },
                 Object {
                   "data": Array [
@@ -58455,7 +58455,7 @@ ShallowWrapper {
                       "y": 27.991396266190467,
                     },
                   ],
-                  "name": "Series 5",
+                  "name": "4",
                 },
               ],
               "title": Object {

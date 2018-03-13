@@ -1,0 +1,90 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ClusterTSnePlot with no data matches snapshot 1`] = `
+Array [
+  <div
+    className="row"
+  >
+    <div
+      className="column medium-6"
+    >
+      <label>
+        t-SNE Perplexity
+      </label>
+      <select
+        onChange={[Function]}
+        value={0}
+      />
+    </div>
+    <div
+      className="column medium-6"
+    >
+      <label>
+        Number of clusters, 
+        <i>
+          k
+        </i>
+      </label>
+      <select
+        onChange={[Function]}
+        value={0}
+      />
+    </div>
+  </div>,
+  <div
+    className="row column"
+    style={
+      Object {
+        "position": "relative",
+      }
+    }
+  >
+    <div
+      className=""
+    >
+      <div />
+    </div>
+    <div />
+    <div
+      style={
+        Object {
+          "alignItems": "center",
+          "background": "rgba(255,255,255,0.8)",
+          "bottom": 0,
+          "display": "flex",
+          "justifyContent": "center",
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        }
+      }
+    >
+      <div
+        style={
+          Object {
+            "textAlign": "center",
+          }
+        }
+      >
+        <p>
+          Loading, please wait...
+        </p>
+        <img
+          src="test-file-stub"
+        />
+        <p>
+          <small>
+            Powered by 
+            <a
+              href="https://loading.io"
+            >
+              loading.io
+            </a>
+          </small>
+        </p>
+      </div>
+    </div>
+  </div>,
+]
+`;

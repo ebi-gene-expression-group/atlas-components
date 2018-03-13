@@ -1,63 +1,40 @@
+import React from 'react'
+import renderer from 'react-test-renderer'
 import Color from 'color'
-import HighchartsSeriesGenerator from 'highcharts-series-generator'
+
+import Enzyme from 'enzyme'
+import {shallow, mount} from 'enzyme'
+import Adapter from 'enzyme-adapter-react-16'
 
 import {_colourizeExpressionLevel} from '../src/GeneExpressionTSnePlot'
-import '../src/util/MathRound'
+import GeneExpressionTSnePlot from '../src/GeneExpressionTSnePlot'
+import MultiStopGradient from '../src/MultiStopGradient'
 
-const seriesNames = [`0`, `1`, `2`, `3`, `4`]
-const maxPointsPerSeries = 1000
+import '../src/util/MathRound'
+import {gradientColourRanges, randomHighchartsSeries, randomHighchartsSeriesWithNamesAndMaxPoints, plotData, randomHighchartsSeriesWithSeed} from './Utils'
+
+Enzyme.configure({ adapter: new Adapter() })
 
 describe(`GeneExpressionTSnePlot colourize function`, () => {
 
-  const plotData = (series) => {
-    const allPoints = series.reduce((acc, series) => acc.concat(series.data), [])
-
-    return {
-      series: series,
-      min: Math.min(...allPoints.map((point) => point.expressionLevel)),
-      max: Math.max(...allPoints.map((point) => point.expressionLevel))
-    }
-  }
-
-  const expressionLevelGradientRanges = [
-    {
-      colour: `rgb(215, 255, 255)`,
-      threshold: 0,
-      stopPosition: 0
-    },
-    {
-      colour: `rgb(128, 255, 255)`,
-      threshold: 10,
-      stopPosition: 20
-    },
-    {
-      colour: `rgb(0, 85, 225)`,
-      threshold: 100,
-      stopPosition: 40
-    },
-    {
-      colour: `rgb(0, 0, 115)`,
-      threshold: 10000,
-      stopPosition: 100
-    }
-  ]
-
   test(`must not change the number of series`, () => {
-    const randomSeries = HighchartsSeriesGenerator.generate(seriesNames, maxPointsPerSeries)
-    expect(_colourizeExpressionLevel(expressionLevelGradientRanges, [])(plotData(randomSeries))).toHaveLength(seriesNames.length)
+    const seriesNames = [`0`, `1`, `2`, `3`, `4`]
+    const maxPointsPerSeries = 1000
+    const randomSeries = randomHighchartsSeriesWithNamesAndMaxPoints(seriesNames, maxPointsPerSeries)
+    expect(_colourizeExpressionLevel(gradientColourRanges(), [])(plotData(randomSeries))).toHaveLength(seriesNames.length)
   })
 
   test(`must not change the number of points in each series`, () => {
-    const randomSeries = HighchartsSeriesGenerator.generate(seriesNames, maxPointsPerSeries)
-    _colourizeExpressionLevel(expressionLevelGradientRanges, [])(plotData(randomSeries)).forEach((series, i) => {
+    const randomSeries = randomHighchartsSeries()
+    _colourizeExpressionLevel(gradientColourRanges(), [])(plotData(randomSeries)).forEach((series, i) => {
       expect(series.data).toHaveLength(randomSeries[i].data.length)
     })
   })
 
   test(`adds a color field to all points`, () => {
-    const randomSeries = HighchartsSeriesGenerator.generate(seriesNames, maxPointsPerSeries)
+    const randomSeries = randomHighchartsSeries()
 
-    _colourizeExpressionLevel(expressionLevelGradientRanges, [])(plotData(randomSeries)).forEach((series) => {
+    _colourizeExpressionLevel(gradientColourRanges(), [])(plotData(randomSeries)).forEach((series) => {
       series.data.forEach((point) => {
         expect(point).toHaveProperty(`color`)
       })
@@ -65,7 +42,7 @@ describe(`GeneExpressionTSnePlot colourize function`, () => {
   })
 
   test(`assigns maximum colour to the point with highest expression`, () => {
-    const randomSeries = HighchartsSeriesGenerator.generate(seriesNames, maxPointsPerSeries)
+    const randomSeries = randomHighchartsSeries()
     randomSeries[randomSeries.length - 1].data.push({
       x: 0,
       y: 0,
@@ -76,7 +53,7 @@ describe(`GeneExpressionTSnePlot colourize function`, () => {
     const allPoints = randomSeries.reduce((acc, series) => acc.concat(series.data), [])
     const maxExpressionLevel = Math.round10(Math.max(...allPoints.map((point) => point.expressionLevel)), -2)
 
-    const maxExpressionLevelPoints = _colourizeExpressionLevel(expressionLevelGradientRanges, [])(plotData(randomSeries)).reduce((acc, series) => {
+    const maxExpressionLevelPoints = _colourizeExpressionLevel(gradientColourRanges(), [])(plotData(randomSeries)).reduce((acc, series) => {
       acc.push(series.data.filter((point) => point.expressionLevel === maxExpressionLevel, -2))
       return acc
     }, [])
@@ -84,12 +61,12 @@ describe(`GeneExpressionTSnePlot colourize function`, () => {
 
     expect(maxExpressionLevelPoints.length).toBeGreaterThanOrEqual(1)
     maxExpressionLevelPoints.forEach((point) => {
-      expect(point).toHaveProperty(`color`, Color(expressionLevelGradientRanges[expressionLevelGradientRanges.length - 1].colour).alpha(0.65).rgb().toString())
+      expect(point).toHaveProperty(`color`, Color(gradientColourRanges()[gradientColourRanges().length - 1].colour).alpha(0.65).rgb().toString())
     })
   })
 
-  test(`assigns minimum colour to the point with lowest expression`, () => {
-    const randomSeries = HighchartsSeriesGenerator.generate(seriesNames, maxPointsPerSeries)
+  test(`assigns grey colour to the point with 0 expression`, () => {
+    const randomSeries = randomHighchartsSeries()
     randomSeries[randomSeries.length - 1].data.push({
       x: 0,
       y: 0,
@@ -100,7 +77,7 @@ describe(`GeneExpressionTSnePlot colourize function`, () => {
     const allPoints = randomSeries.reduce((acc, series) => acc.concat(series.data), [])
     const minExpressionLevel = Math.round10(Math.min(...allPoints.map((point) => point.expressionLevel)), -2)
 
-    const minExpressionLevelPoints = _colourizeExpressionLevel(expressionLevelGradientRanges, [])(plotData(randomSeries)).reduce((acc, series) => {
+    const minExpressionLevelPoints = _colourizeExpressionLevel(gradientColourRanges(), [])(plotData(randomSeries)).reduce((acc, series) => {
       acc.push(series.data.filter((point) => point.expressionLevel === minExpressionLevel, -2))
       return acc
     }, [])
@@ -108,14 +85,14 @@ describe(`GeneExpressionTSnePlot colourize function`, () => {
 
     expect(minExpressionLevelPoints.length).toBeGreaterThanOrEqual(1)
     minExpressionLevelPoints.forEach((point) => {
-      expect(point).toHaveProperty(`color`, Color(expressionLevelGradientRanges[0].colour).alpha(0.65).rgb().toString())
+      expect(point).toHaveProperty(`color`, Color('lightgrey').alpha(0.65).rgb().toString())
     })
   })
 
   test(`rounds expression level to two decimal places`, () => {
-    const randomSeries = HighchartsSeriesGenerator.generate(seriesNames, maxPointsPerSeries)
+    const randomSeries = randomHighchartsSeries()
 
-    _colourizeExpressionLevel(expressionLevelGradientRanges, [])(plotData(randomSeries)).forEach((series) => {
+    _colourizeExpressionLevel(gradientColourRanges(), [])(plotData(randomSeries)).forEach((series) => {
       series.data.forEach((point) => {
           if (String(point.expressionLevel).includes(`.`)) {
             expect(String(point.expressionLevel).split(`.`)[1].length).toBeLessThanOrEqual(2)
@@ -125,7 +102,7 @@ describe(`GeneExpressionTSnePlot colourize function`, () => {
   })
 
   test(`assigns default colour, i.e. blue, if points have no expression level property`, () => {
-    _colourizeExpressionLevel(expressionLevelGradientRanges, [])({
+    _colourizeExpressionLevel(gradientColourRanges(), [])({
       series: [
         {
           name: `Cluster 1`,
@@ -160,5 +137,27 @@ describe(`GeneExpressionTSnePlot colourize function`, () => {
           expect(point).toHaveProperty(`color`, Color(`blue`).alpha(0.65).rgb().toString())
         })
     })
+  })
+})
+
+describe(`GeneExpressionTSnePlot`, () => {
+  test(`with random data matches snapshot`, () => {
+    const randomSeries = randomHighchartsSeriesWithSeed()
+    const onSelectGeneId = () => {}
+
+    const tree = renderer
+      .create(<GeneExpressionTSnePlot height={600} expressionGradientColours={gradientColourRanges()} atlasUrl={``} suggesterEndpoint={``} onSelectGeneId={onSelectGeneId} loading={true} plotData={plotData(randomSeries)} highlightClusters={[]}/>)
+      .toJSON()
+
+    expect(tree).toMatchSnapshot()
+  })
+
+  test(`contains MultiStopGradient component when min and max values exist`, () => {
+    const randomSeries = randomHighchartsSeriesWithSeed()
+    const onSelectGeneId = () => {}
+
+    const wrapper = mount(<GeneExpressionTSnePlot height={600} expressionGradientColours={gradientColourRanges()} atlasUrl={``} suggesterEndpoint={``} onSelectGeneId={onSelectGeneId} loading={true} plotData={plotData(randomSeries)} highlightClusters={[]}/>)
+
+    expect(wrapper.find(MultiStopGradient).length).toBe(1)
   })
 })

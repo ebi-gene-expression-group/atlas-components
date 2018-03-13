@@ -4,9 +4,9 @@ import Enzyme from 'enzyme'
 import {shallow, mount} from 'enzyme'
 import Adapter from 'enzyme-adapter-react-16'
 
-import HighchartsSeriesGenerator from 'highcharts-series-generator'
-
 import ScatterPlot from '../../src/plotloader/ScatterPlot'
+import {randomHighchartsSeriesWithSeed} from '../Utils'
+
 
 Enzyme.configure({ adapter: new Adapter() })
 
@@ -71,10 +71,7 @@ describe(`ScatterPlot`, () => {
   })
 
   test(`matches snapshot with randomized series`, () => {
-    const seed = `A hair, Morty. I need one of your hairs. This isn’t Game of Thrones.`
-    const seriesNames = [`Series 1`, `Series 2`, `Series 3`, `Series 4`, `Series 5`]
-    const maxPointsPerSeries = 1000
-    const series = HighchartsSeriesGenerator.generate(seriesNames, maxPointsPerSeries, seed)
+    const series = randomHighchartsSeriesWithSeed()
     const tree = shallow(<ScatterPlot series={series}/>)
     expect(tree).toMatchSnapshot()
   })
