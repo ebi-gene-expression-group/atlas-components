@@ -58,7 +58,10 @@ const MultiStopGradient = ({height, showTicks, colourRanges, plotData}) => {
         background: `linear-gradient(0deg, ${bg})`}}>
 
       <Tick value={plotData.max} colour={`dimgray`} top={maxExpressionTopPosition} position={`left`}/>
-      <Tick value={plotData.min} colour={`dimgray`} top={minExpressionTopPosition} position={`left`}/>
+      {
+        plotData.min < plotData.max &&
+        <Tick value={plotData.min} colour={`dimgray`} top={minExpressionTopPosition} position={`left`}/>
+      }
 
       {showTicks &&
         colourRanges.slice(1, -1).map((colourRange) =>
