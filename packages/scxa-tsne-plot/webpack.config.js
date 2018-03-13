@@ -1,7 +1,7 @@
 const webpack = require(`webpack`)
 const path = require(`path`)
 const CleanWebpackPlugin = require(`clean-webpack-plugin`)
-const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const ExtractTextPlugin = require(`extract-text-webpack-plugin`)
 
 // If you get the message “loaderUtils.parseQuery() received a non-string value...” uncomment next line
 // process.traceDeprecation = true;
