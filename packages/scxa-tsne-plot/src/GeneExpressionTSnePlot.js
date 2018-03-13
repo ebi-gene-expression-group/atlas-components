@@ -93,7 +93,7 @@ const GeneExpressionScatterPlot = (props) => {
     }
   }
 
-  const renderGradient = plotData.max !== null && plotData.min !== null && plotData.max >= plotData.min
+  const renderGradient = plotData.max > 0
   const chartClassName = renderGradient ? `small-10 columns` : `small-12 columns`
   const gradient = renderGradient ?
     <MultiStopGradient height={height}
