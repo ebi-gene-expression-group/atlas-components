@@ -1,6 +1,6 @@
 {
   "name": "expression-atlas-experiment-page-tsne-plot",
-  "version": "1.13.2",
+  "version": "1.13.3",
   "description": "t-SNE plot view tab for Single Cell Expression Atlas experiment page",
   "main": "lib/index.js",
   "scripts": {
