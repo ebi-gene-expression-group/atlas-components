@@ -7,7 +7,7 @@ var CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
     entry: {
-        bioentityInformation: ['whatwg-fetch','./src/index.js'],
+        demo: [`babel-polyfill`, './html/Demo.js'],
         dependencies: ['prop-types', 'react', 'react-dom', 'urijs']
     },
 
@@ -15,7 +15,7 @@ module.exports = {
         library: '[name]',
         path: path.resolve(__dirname, 'dist'),
         filename: '[name].bundle.js',
-        publicPath: '/dist/'
+        publicPath: '/html/'
     },
 
     plugins: [

@@ -1,100 +1,97 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
+
+const PropertyValue = ({hasUrl, isLast, text, url}) =>
+  <span>
+    {hasUrl ? (
+        <a className={"bioEntityCardLink"} href={url} target="_blank">{text}</a>
+      ) : (
+        <span>{text}</span>
+      )
+    }
+
+    {!isLast &&
+      <span>, </span>
+    }
+    </span>
+
+const TOP_RELEVANT_VALUES = 3
+
 class BioentityProperty extends React.Component {
 
-    constructor(props) {
-        super(props)
-        this.state = {
-            showAll: false
-        }
+  constructor(props) {
+    super(props)
+    this.state = {
+      showAll: false
     }
 
-    // take three most relevant links and then all of the same relevance
-    _pickMostRelevant(properties) {
-        const relevanceThreshold =
-            properties
-                .map(p => p.relevance)
-                .sort((l,r) => r-l)
-                .concat([0,0,0])
-                [properties.size < 3 ? properties.size-1 : 2];
-        return properties.filter(p => p.relevance>=relevanceThreshold);
-    }
+    this.handleShowMoreClick = this.handleClick.bind(this)
+  }
 
-    _renderProperty(property, ix) {
-        return (
-            property.url
-                ? <a key={property.url+" "+ix} className={"bioEntityCardLink"} href={property.url} target="_blank">
-                    {property.text}
-                </a>
-                : <span key={property.text + " "+ix}>
-          {property.text}
-        </span>
-        )
-    }
+  handleClick() {
+    this.setState(previousState => ({
+      showAll: !previousState.showAll
+    }))
+  }
 
-    _zipWithCommaSpans(elts) {
-        return (
-            [].concat.apply([],
-                elts.map((e, ix)=>[e, <span key={"comma "+ix}>, </span>])
-            )
-                .slice(0,-1)
-        )
-    }
+  // Return three most relevant links
+  _getMostRelevant(properties) {
+    // The properties are sorted in descending order by relevance in the backend
+    return properties.slice(0,TOP_RELEVANT_VALUES)
+  }
 
-    render() {
-        const numUnshownLinks = this.props.values.length - this._pickMostRelevant(this.props.values).length;
-        const hasOptionalLinks = ["go","po"].indexOf(this.props.type) > -1 && numUnshownLinks >0;
-        const showMoreLessButton = <a role="button" style={{cursor:"pointer"}} onClick={function(){
-                                        this.setState((previousState)=>({showAll: !previousState.showAll}))
-                                      }.bind(this)}>
-                                      {this.state.showAll ? " (show less)" : " … and "+numUnshownLinks+" more"}
-                                  </a>;
+  _renderPropertyValues(values) {
+    return values.map((value, index) =>
+      <PropertyValue key={value.text}
+                     isLast={index >= values.length - 1}
+                     hasUrl={!!value.url}
+                     text={value.text} url={value.url}/>
+    )
+  }
 
-        return (
-          <tr>
-            <td className={"gxaBioentityInformationCardPropertyType"}>
-                {this.props.name}
-            </td>
-            <td>
-            <div>
-              {hasOptionalLinks
-                ?
-                <span>
-                  {
-                    this._zipWithCommaSpans(
-                      (this.state.showAll
-                        ? this.props.values
-                        : this._pickMostRelevant(this.props.values)
-                      )
-                        .sort((l,r)=>(
-                          r.relevance === l.relevance
-                            ? r.text.toLowerCase() < l.text.toLowerCase() ? 1 : -1
-                            : r.relevance - l.relevance
-                          )
-                        ).map(this._renderProperty)
-                    )}
+  render() {
+    const numberOfHiddenLinks = this.props.values.length - TOP_RELEVANT_VALUES
+    const hasOptionalLinks = ["go","po"].indexOf(this.props.type) > -1 && numberOfHiddenLinks > 0
+    const showMoreLessButton =
+      <a key="showButton"
+         role="button"
+         style={{cursor:`pointer`}}
+         onClick={this.handleShowMoreClick}>
+          {this.state.showAll ? ` (show less)` : ` … and ${numberOfHiddenLinks} more`}
+        </a>
 
-                  {showMoreLessButton}
-                </span>
-                : this._zipWithCommaSpans(this.props.values.map(this._renderProperty))
-              }
+    const allValuesWithOptionalLinks = this._renderPropertyValues(this.props.values)
+    const topThreeValuesWithOptionalLinks = this._renderPropertyValues(this._getMostRelevant(this.props.values))
 
-                </div>
-            </td>
-          </tr>
-        )
-    }
+    return (
+      <div>
+        {!hasOptionalLinks && allValuesWithOptionalLinks}
+
+        {(hasOptionalLinks && !this.state.showAll) &&
+        [
+          topThreeValuesWithOptionalLinks,
+          showMoreLessButton
+        ]}
+
+        {(hasOptionalLinks && this.state.showAll) &&
+        [
+          allValuesWithOptionalLinks,
+          showMoreLessButton
+        ]}
+
+      </div>
+    )
+  }
 }
 
 BioentityProperty.propTypes = {
-    type: PropTypes.string.isRequired,
-    name: PropTypes.string.isRequired,
-    values: PropTypes.arrayOf(PropTypes.shape({
-        text: PropTypes.string.isRequired,
-        url: PropTypes.string.isRequired,
-        relevance: PropTypes.number.isRequired
-    }))
+  type: PropTypes.string.isRequired,
+  values: PropTypes.arrayOf(PropTypes.shape({
+    text: PropTypes.string.isRequired,
+    url: PropTypes.string.isRequired,
+    relevance: PropTypes.number.isRequired
+  }))
 }
 
 export default BioentityProperty

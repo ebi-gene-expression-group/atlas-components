@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BioentityProperty with data matches snapshot 1`] = `
+<div>
+  <span>
+    <a
+      className="bioEntityCardLink"
+      href="http://amigo.geneontology.org/amigo/term/GO%3A0000978"
+      target="_blank"
+    >
+      Link of relevance 1
+    </a>
+    <span>
+      , 
+    </span>
+  </span>
+  <span>
+    <a
+      className="bioEntityCardLink"
+      href="http://amigo.geneontology.org/amigo/term/GO%3A0000978"
+      target="_blank"
+    >
+      a Link of relevance 2
+    </a>
+    <span>
+      , 
+    </span>
+  </span>
+  <span>
+    <a
+      className="bioEntityCardLink"
+      href="http://amigo.geneontology.org/amigo/term/GO%3A0000978"
+      target="_blank"
+    >
+      Link of relevance 3
+    </a>
+  </span>
+  <a
+    onClick={[Function]}
+    role="button"
+    style={
+      Object {
+        "cursor": "pointer",
+      }
+    }
+  >
+     … and 10 more
+  </a>
+</div>
+`;

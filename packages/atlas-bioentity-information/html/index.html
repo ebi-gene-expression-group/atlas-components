@@ -9,6 +9,7 @@
 
     <link rel="stylesheet" href="https://www.ebi.ac.uk/gxa/resources/css/foundation/atlas.css" type="text/css" media="all">
 
+
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
     <script src="https://code.jquery.com/jquery-migrate-1.4.1.min.js"></script>
 
@@ -25,21 +26,12 @@
 </div>
 </body>
 
-<script src="../dist/vendorCommons.bundle.js"></script>
-<script src="../dist/bioentityInformation.bundle.js"></script>
-
-<script src="bioentityData.js"></script>
+<script src="vendorCommons.bundle.js"></script>
+<script src="demo.bundle.js"></script>
 
 <script type="text/javascript">
 
-    $(document).ready(function(){
-        $(document).foundation();
-    });
-
-    bioentityInformation.render({
-      atlasUrl: "http://localhost:9090/gxa_sc/",
-      bioentityProperties: bioentityData
-  }, 'target')
+    demo.render({}, 'target')
 
 </script>
 
