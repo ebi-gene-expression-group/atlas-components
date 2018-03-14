@@ -27,9 +27,7 @@ const lineHeight = 24
 
 const Tick = ({value, tickStyle, top, position}) =>
   <div className={styles[tickStyle]} style={{top: `${top + lineHeight}px`}}>
-    <div className={styles[position]}>
-      <small style={{color: tickStyle}}><ScientificNotationNumber value={Math.round10(value, -2)}/></small>
-    </div>
+    <small className={styles[position]}><ScientificNotationNumber value={Math.round10(value, -2)}/></small>
   </div>
 
 const MultiStopGradient = ({height, showTicks, colourRanges, plotData}) => {

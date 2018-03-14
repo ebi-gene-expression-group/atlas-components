@@ -30,12 +30,14 @@
 
 .left {
     composes: tickLabel;
+    color: dimgray;
     right: 20px;
     padding-right: 5px;
 }
 
 .right {
     composes: tickLabel;
+    color: lightgray;
     left: 20px;
     padding-left: 5px;
 }
