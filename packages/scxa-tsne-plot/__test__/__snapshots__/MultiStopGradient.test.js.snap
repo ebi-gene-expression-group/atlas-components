@@ -28,21 +28,13 @@ exports[`MultiStopGradient with random data matches snapshot 1`] = `
         }
       }
     >
-      <div
+      <small
         className="left"
       >
-        <small
-          style={
-            Object {
-              "color": "dimgray",
-            }
-          }
-        >
-          <span>
-            9997.45
-          </span>
-        </small>
-      </div>
+        <span>
+          9997.45
+        </span>
+      </small>
     </div>
     <div
       className="dimgray"
@@ -52,21 +44,13 @@ exports[`MultiStopGradient with random data matches snapshot 1`] = `
         }
       }
     >
-      <div
+      <small
         className="left"
       >
-        <small
-          style={
-            Object {
-              "color": "dimgray",
-            }
-          }
-        >
-          <span>
-            3.64
-          </span>
-        </small>
-      </div>
+        <span>
+          3.64
+        </span>
+      </small>
     </div>
     <div
       className="lightgray"
@@ -76,21 +60,13 @@ exports[`MultiStopGradient with random data matches snapshot 1`] = `
         }
       }
     >
-      <div
+      <small
         className="right"
       >
-        <small
-          style={
-            Object {
-              "color": "lightgray",
-            }
-          }
-        >
-          <span>
-            10
-          </span>
-        </small>
-      </div>
+        <span>
+          10
+        </span>
+      </small>
     </div>
     <div
       className="lightgray"
@@ -100,21 +76,13 @@ exports[`MultiStopGradient with random data matches snapshot 1`] = `
         }
       }
     >
-      <div
+      <small
         className="right"
       >
-        <small
-          style={
-            Object {
-              "color": "lightgray",
-            }
-          }
-        >
-          <span>
-            100
-          </span>
-        </small>
-      </div>
+        <span>
+          100
+        </span>
+      </small>
     </div>
   </div>
   <div>
