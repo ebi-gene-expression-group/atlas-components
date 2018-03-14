@@ -10,8 +10,21 @@
     width: 20px;
 }
 
+.lightgray {
+  composes: tick;
+  background: lightgray;
+  z-index: 1;
+}
+
+.dimgray {
+  composes: tick;
+  background: dimgray;
+  z-index: 2;
+}
+
 .tickLabel {
     position: absolute;
+    white-space: nowrap;
     margin-top: -12px;
 }
 

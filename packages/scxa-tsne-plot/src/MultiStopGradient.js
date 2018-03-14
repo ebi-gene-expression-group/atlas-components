@@ -25,10 +25,10 @@ const putInRange = (ranges, val) => {
 
 const lineHeight = 24
 
-const Tick = ({value, colour, top, position}) =>
-  <div className={styles.tick} style={{background: colour, top: `${top + lineHeight}px`}}>
+const Tick = ({value, tickStyle, top, position}) =>
+  <div className={styles[tickStyle]} style={{top: `${top + lineHeight}px`}}>
     <div className={styles[position]}>
-      <small style={{color: colour}}><ScientificNotationNumber value={Math.round10(value, -2)}/></small>
+      <small style={{color: tickStyle}}><ScientificNotationNumber value={Math.round10(value, -2)}/></small>
     </div>
   </div>
 
@@ -48,24 +48,22 @@ const MultiStopGradient = ({height, showTicks, colourRanges, plotData}) => {
 
   return (
     <div className={`small-2 columns text-center`}>
-      <div style={{whiteSpace: `nowrap`}}>
-        <small><ScientificNotationNumber value={colourRanges[colourRanges.length - 1].threshold}/> {plotData.unit}</small>
-      </div>
+      <small><ScientificNotationNumber value={colourRanges[colourRanges.length - 1].threshold}/> {plotData.unit}</small>
 
       <div className={styles.gradient}
         style={{
         height: `${gradientHeight}px`,
         background: `linear-gradient(0deg, ${bg})`}}>
 
-      <Tick value={plotData.max} colour={`dimgray`} top={maxExpressionTopPosition} position={`left`}/>
+      <Tick value={plotData.max} tickStyle={`dimgray`} top={maxExpressionTopPosition} position={`left`}/>
       {
         plotData.min < plotData.max &&
-        <Tick value={plotData.min} colour={`dimgray`} top={minExpressionTopPosition} position={`left`}/>
+        <Tick value={plotData.min} tickStyle={`dimgray`} top={minExpressionTopPosition} position={`left`}/>
       }
 
       {showTicks &&
         colourRanges.slice(1, -1).map((colourRange) =>
-          <Tick key={colourRange.threshold} value={colourRange.threshold} colour={`lightgray`} top={gradientHeight - gradientHeight * putInRange(colourRanges, colourRange.threshold)} position={`right`}/>
+          <Tick key={colourRange.threshold} value={colourRange.threshold} tickStyle={`lightgray`} top={gradientHeight - gradientHeight * putInRange(colourRanges, colourRange.threshold)} position={`right`}/>
       )}
       </div>
 
