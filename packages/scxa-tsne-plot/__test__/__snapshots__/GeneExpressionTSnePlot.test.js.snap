@@ -52,21 +52,13 @@ Array [
       <div
         className="small-2 columns text-center"
       >
-        <div
-          style={
-            Object {
-              "whiteSpace": "nowrap",
-            }
-          }
-        >
-          <small>
-            <span>
-              10000
-            </span>
-             
-            TPM
-          </small>
-        </div>
+        <small>
+          <span>
+            10000
+          </span>
+           
+          TPM
+        </small>
         <div
           className="gradient"
           style={
@@ -77,10 +69,9 @@ Array [
           }
         >
           <div
-            className="tick"
+            className="dimgray"
             style={
               Object {
-                "background": "dimgray",
                 "top": "26px",
               }
             }
@@ -102,10 +93,9 @@ Array [
             </div>
           </div>
           <div
-            className="tick"
+            className="dimgray"
             style={
               Object {
-                "background": "dimgray",
                 "top": "487.57040149782796px",
               }
             }
@@ -127,10 +117,9 @@ Array [
             </div>
           </div>
           <div
-            className="tick"
+            className="lightgray"
             style={
               Object {
-                "background": "lightgray",
                 "top": "424px",
               }
             }
@@ -152,10 +141,9 @@ Array [
             </div>
           </div>
           <div
-            className="tick"
+            className="lightgray"
             style={
               Object {
-                "background": "lightgray",
                 "top": "324px",
               }
             }

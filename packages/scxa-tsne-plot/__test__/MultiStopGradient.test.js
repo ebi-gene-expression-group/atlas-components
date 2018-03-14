@@ -28,9 +28,10 @@ describe(`MultiStopGradient`, () => {
     const randomSeries = randomHighchartsSeries()
     const wrapper = mount(<MultiStopGradient height={GRADIENT_HEIGHT} showTicks={true} colourRanges={gradientColourRanges()} plotData={plotData(randomSeries)}/>)
 
-    expect(wrapper.find('.tick').length).toBe(4)
-    expect(wrapper.find('.tick .right').length).toBe(2)
-    expect( wrapper.find('.tick .left').length).toBe(2)
+    expect(wrapper.find(`.dimgray`).length).toBe(2)
+    expect(wrapper.find(`.lightgray`).length).toBe(2)
+    expect(wrapper.find(`.lightgray .right`).length).toBe(2)
+    expect(wrapper.find(`.dimgray .left`).length).toBe(2)
   })
 
   test(`min tick has a lower value and position than max tick`, () => {
@@ -39,14 +40,14 @@ describe(`MultiStopGradient`, () => {
     const wrapper = mount(<MultiStopGradient height={GRADIENT_HEIGHT} showTicks={true} colourRanges={gradientColourRanges()} plotData={data}/>)
 
     // The max tick should be positioned higher than the min tick
-    const maxTick = wrapper.find('.tick .left').parent().get(0)
-    const minTick = wrapper.find('.tick .left').parent().get(0)
+    const maxTick = wrapper.find(`.dimgray .left`).parent().get(0)
+    const minTick = wrapper.find(`.dimgray .left`).parent().get(0)
 
     expect(parseInt(maxTick.props.style.top)).toBeGreaterThanOrEqual(parseInt(minTick.props.style.top))
 
     // The first left tick should be the max expression value, the second the min expression value
-    const maxTickNumber = wrapper.find('.tick .left').find(ScientificNotationNumber).get(0)
-    const minTickNumber = wrapper.find('.tick .left').find(ScientificNotationNumber).get(1)
+    const maxTickNumber = wrapper.find(`.dimgray .left`).find(ScientificNotationNumber).get(0)
+    const minTickNumber = wrapper.find(`.dimgray .left`).find(ScientificNotationNumber).get(1)
 
     expect(maxTickNumber.props.value).toBe(Math.round10(data.max, -2))
     expect(minTickNumber.props.value).toBe(Math.round10(data.min, -2))
