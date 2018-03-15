@@ -63,9 +63,16 @@ describe(`BioentityInformation`, () => {
   })
 
   test(`should show loading screen by default`, () => {
-    const wrapper = mount(<BioentityInformation atlasUrl={``} geneId={``} />)
+    const wrapper = mount(<BioentityInformation atlasUrl={``} geneId={defaultProps.geneId} />)
 
     expect((wrapper).find(Loading).exists()).toBe(true)
+  })
+
+  test(`should not render if gene ID is empty`, () => {
+    const wrapper = mount(<BioentityInformation atlasUrl={``} geneId={``} />)
+
+    expect(wrapper.find(`table`)).toHaveLength(0)
+    expect((wrapper).find(Loading).exists()).toBe(false)
   })
 
   test(`changes in gene ID change state`, async() => {
