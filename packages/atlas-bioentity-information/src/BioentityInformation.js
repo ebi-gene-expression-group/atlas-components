@@ -79,6 +79,7 @@ class BioentityInformation extends React.Component {
     )
 
     return (
+      this.props.geneId &&
       <div className={`row column`}>
         <Loading loading={this.state.loading}/>
         <table>
@@ -94,6 +95,10 @@ class BioentityInformation extends React.Component {
 BioentityInformation.propTypes = {
   atlasUrl: PropTypes.string.isRequired,
   geneId: PropTypes.string.isRequired
+}
+
+BioentityInformation.defaultProps = {
+  geneId: ``
 }
 
 export default BioentityInformation

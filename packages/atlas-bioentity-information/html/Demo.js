@@ -8,7 +8,7 @@ class Demo extends React.Component {
     super(props)
 
     this.state = {
-      geneId: `ENSMUSG00000021789`
+      geneId: ``
     }
   }
 
