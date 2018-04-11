@@ -33,7 +33,7 @@
   "dependencies": {
     "color": "^2.0.0",
     "deepmerge": "^2.0.0",
-    "expression-atlas-autocomplete": "^1.1.1",
+    "expression-atlas-autocomplete": "^1.2.0",
     "expression-atlas-number-format": "^2.0.2",
     "prop-types": "^15.6.0",
     "react": "^16.0.0",

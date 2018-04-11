@@ -82,7 +82,7 @@ class ExperimentPageView extends React.Component {
 
   render() {
     const {height, atlasUrl, resourcesUrl} = this.props
-    const {suggesterEndpoint, geneId, highlightClusters, ks, k, perplexities, perplexity} = this.props
+    const {suggesterEndpoint, geneId, speciesName, highlightClusters, ks, k, perplexities, perplexity} = this.props
     const {onChangePerplexity, onChangeK, onSelectGeneId} = this.props
     const {loadingClusters, loadingGeneExpression, data, errorMessage} = this.state
 
@@ -111,6 +111,7 @@ class ExperimentPageView extends React.Component {
                                   suggesterEndpoint={suggesterEndpoint}
                                   onSelectGeneId={onSelectGeneId}
                                   geneId={geneId}
+                                  speciesName={speciesName}
                                   highlightClusters={[]}
                                   loading={loadingGeneExpression}
                                   resourcesUrl={resourcesUrl}
@@ -139,6 +140,7 @@ ExperimentPageView.propTypes = {
   perplexity: PropTypes.number.isRequired,
   highlightClusters: PropTypes.arrayOf(PropTypes.number),
   geneId: PropTypes.string.isRequired,
+  speciesName: PropTypes.string.isRequired,
   height: PropTypes.number,
   resourcesUrl: PropTypes.string,
   onSelectGeneId: PropTypes.func,
@@ -148,7 +150,8 @@ ExperimentPageView.propTypes = {
 
 ExperimentPageView.defaultProps = {
   highlightClusters: [],
-  geneId: ``,
+  geneId: '',
+  speciesName: '',
   height: 600,
   onSelectGeneId: () => {},
   onKChange: () => {},

@@ -54,6 +54,7 @@ class Demo extends React.Component {
                             k={this.state.k}
                             highlightClusters={this.state.highlightClusters}
                             geneId={this.state.geneId}
+                            speciesName={'Homo sapiens'}
                             onChangePerplexity={
                               (perplexity) => { this.setState({perplexity: perplexity}) }
                             }

@@ -72,7 +72,7 @@ const _colourizeExpressionLevel = (gradientColours, highlightSeries) => {
 }
 
 const GeneExpressionScatterPlot = (props) => {
-  const {atlasUrl, suggesterEndpoint, geneId, onSelectGeneId} = props       // Suggester
+  const {atlasUrl, suggesterEndpoint, geneId, onSelectGeneId, speciesName} = props       // Suggester
   const {height, plotData, expressionGradientColours, highlightClusters} = props  // Chart
   const {loading, resourcesUrl, errorMessage} = props                       // Overlay
 
@@ -109,6 +109,7 @@ const GeneExpressionScatterPlot = (props) => {
                        suggesterEndpoint={suggesterEndpoint}
                        enableSpeciesFilter={false}
                        initialValue={geneId}
+                       defaultSpecies={speciesName}
                        onSelect={ (event) => { onSelectGeneId(event) } }
     />,
 
@@ -143,6 +144,7 @@ GeneExpressionScatterPlot.propTypes = {
 
   atlasUrl: PropTypes.string.isRequired,
   suggesterEndpoint: PropTypes.string.isRequired,
+  speciesName: PropTypes.string.isRequired,
   onSelectGeneId: PropTypes.func.isRequired,
 
   loading: PropTypes.bool.isRequired,
