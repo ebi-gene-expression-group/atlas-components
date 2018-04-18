@@ -16,14 +16,14 @@ class Demo extends React.Component {
     return (
       <div>
         <AtlasAutocomplete key={`expression-autocomplete`}
-                           atlasUrl={`http://localhost:8080/gxa_sc/`}
+                           atlasUrl={`http://localhost:8080/scxa/`}
                            wrapperClassName={`row column`}
                            enableSpeciesFilter={false}
                            suggesterEndpoint={`json/suggestions`}
                            initialValue={this.state.geneId}
                            onSelect={ (geneId) => { this.setState({geneId: geneId}) }}/>
 
-        <BioentityInformation atlasUrl={`http://localhost:8080/gxa_sc/`}
+        <BioentityInformation atlasUrl={`http://localhost:8080/scxa/`}
                               geneId={this.state.geneId}
         />
       </div>
