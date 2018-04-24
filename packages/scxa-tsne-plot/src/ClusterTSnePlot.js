@@ -53,7 +53,7 @@ const ClusterTSnePlot = (props) => {
     }
   }
 
-  const perplexityOptions = perplexities.sort().map((perplexity) => (
+  const perplexityOptions = perplexities.sort((a, b) => a - b).map((perplexity) => (
     <option key={perplexity} value={perplexity}>{perplexity}</option>
   ))
 
