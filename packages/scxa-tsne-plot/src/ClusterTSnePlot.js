@@ -22,7 +22,7 @@ const _colourizeClusters = (highlightSeries) =>
   })
 
 const ClusterTSnePlot = (props) => {
-  const {ks, k, onChangeK, perplexities, perplexity, onChangePerplexity} = props  // Select
+  const {ks, selectedK, onChangeK, perplexities, selectedPerplexity, onChangePerplexity} = props  // Select
   const {plotData, highlightClusters, height} = props   // Chart
   const {loading, resourcesUrl, errorMessage} = props   // Overlay
 
@@ -30,26 +30,45 @@ const ClusterTSnePlot = (props) => {
     plotOptions: {
       scatter: {
         tooltip: {
-          headerFormat: `<b>Cluster {series.name}</b><br>`,
+          headerFormat: `<b>{series.name}</b><br>`,
           pointFormat: `{point.name}`
+        },
+        marker: {
+          symbol: `circle`
         }
       }
     },
+    // Generated with http://tools.medialab.sciences-po.fr/iwanthue/
     colors: [
-              'rgba(178, 95, 188, 0.7)',
-              'rgba(118, 179, 65, 0.7)',
-              'rgba(104, 130, 207, 0.7)',
-              'rgba(206, 155, 68, 0.7)',
-              'rgba(200, 87, 123, 0.7)',
-              'rgba(79, 174, 132, 0.7)',
-              'rgba(201, 92, 63, 0.7)',
-              'rgba(124, 127, 57, 0.7)'
-            ],
+      `rgba(212, 137, 48, 0.7)`,
+      `rgba(71, 193, 152, 0.7)`,
+      `rgba(193, 84, 47, 0.7)`,
+      `rgba(90, 147, 221, 0.7)`,
+      `rgba(194, 73, 97, 0.7)`,
+      `rgba(128, 177, 66, 0.7)`,
+      `rgba(208, 76, 134, 0.7)`,
+      `rgba(188, 176, 59, 0.7)`,
+      `rgba(132, 43, 102, 0.7)`,
+      `rgba(93, 188, 108, 0.7)`,
+      `rgba(82, 45, 128, 0.7)`,
+      `rgba(101, 133, 52, 0.7)`,
+      `rgba(169, 107, 212, 0.7)`,
+      `rgba(185, 140, 70, 0.7)`,
+      `rgba(82, 88, 180, 0.7)`,
+      `rgba(176, 73, 62, 0.7)`,
+      `rgba(101, 127, 233, 0.7)`,
+      `rgba(214, 126, 188, 0.7)`,
+      `rgba(196, 86, 178, 0.7)`,
+      `rgba(173, 131, 211, 0.7)`
+    ],
     chart: {
       height: height
     },
     title: {
       text: `Clusters`
+    },
+    legend: {
+      enabled: false
     }
   }
 
@@ -57,7 +76,7 @@ const ClusterTSnePlot = (props) => {
     <option key={perplexity} value={perplexity}>{perplexity}</option>
   ))
 
-  const kOptions = ks.sort().map((k) => (
+  const kOptions = ks.sort((a, b) => a - b).map((k) => (
     <option key={k} value={k}>{k}</option>
   ))
 
@@ -65,13 +84,13 @@ const ClusterTSnePlot = (props) => {
       <div key={`perplexity-k-select`} className={`row`}>
           <div className={`column medium-6`}>
               <label>t-SNE Perplexity</label>
-              <select value={perplexity} onChange={ (event) => { onChangePerplexity(Number(event.target.value)) } }>
+              <select value={selectedPerplexity} onChange={ (event) => { onChangePerplexity(Number(event.target.value)) } }>
                   {perplexityOptions}
               </select>
           </div>
           <div className={`column medium-6`}>
             <label>Number of clusters, <i>k</i></label>
-            <select value={k} onChange={ (event) => { onChangeK(Number(event.target.value)) } }>
+            <select value={selectedK} onChange={ (event) => { onChangeK(Number(event.target.value)) } }>
               {kOptions}
             </select>
           </div>
@@ -97,11 +116,11 @@ ClusterTSnePlot.propTypes = {
   highlightClusters: PropTypes.array,
 
   ks: PropTypes.arrayOf(PropTypes.number).isRequired,
-  k: PropTypes.number.isRequired,
+  selectedK: PropTypes.number.isRequired,
   onChangeK: PropTypes.func.isRequired,
 
   perplexities: PropTypes.arrayOf(PropTypes.number).isRequired,
-  perplexity: PropTypes.number.isRequired,
+  selectedPerplexity: PropTypes.number.isRequired,
   onChangePerplexity: PropTypes.func.isRequired,
 
   loading: PropTypes.bool.isRequired,

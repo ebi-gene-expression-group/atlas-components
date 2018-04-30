@@ -12,101 +12,113 @@ const fetchResponseJson = async (base, endpoint) => {
   return responseJson
 }
 
-class ExperimentPageView extends React.Component {
+class TSnePlotView extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      data: {
+      geneExpressionData: {
         max: null,
         min: null,
         series: [],
         unit: ``
       },
-      errorMessage: null,
-      loadingClusters: false,
+      cellClustersData: {
+        series: []
+      },
+      geneExpressionErrorMessage: null,
+      cellClustersErrorMessage: null,
+      loadingCellClusters: false,
       loadingGeneExpression: false
     }
   }
 
-  _fetchAndSetState({atlasUrl, experimentAccession, k, perplexity, geneId}) {
-    const atlasEndpoint = `json/experiments/${experimentAccession}/tsneplot/${perplexity}/clusters/${k}/expression/${geneId}`
+  _fetchAndSetStateCellClusters({atlasUrl, experimentAccession, selectedK, selectedPerplexity}) {
+    this.setState({
+      loadingCellClusters: true
+    }, () => {
+      fetchResponseJson(atlasUrl, `json/experiments/${experimentAccession}/tsneplot/${selectedPerplexity}/clusters/k/${selectedK}`)
+        .then((responseJson) => {
+          this.setState({
+            cellClustersData: responseJson,
+            cellClustersErrorMessage: null,
+            loadingCellClusters: false
+          })
+        })
+        .catch((reason) => {
+          this.setState({
+            cellClustersErrorMessage: `${reason.name}: ${reason.message}`,
+            loadingCellClusters: false
+          })
+        })
+    })
+  }
 
-    return fetchResponseJson(atlasUrl, atlasEndpoint)
-      .then((responseJson) => {
-        this.setState({
-          data: responseJson,
-          errorMessage: null,
-          loadingClusters: false,
-          loadingGeneExpression: false
+  _fetchAndSetStateGeneId({atlasUrl, experimentAccession, selectedPerplexity, geneId}) {
+    this.setState({
+      loadingGeneExpression: true
+    }, () => {
+      fetchResponseJson(atlasUrl, `json/experiments/${experimentAccession}/tsneplot/${selectedPerplexity}/expression/${geneId}`)
+        .then((responseJson) => {
+          this.setState({
+            geneExpressionData: responseJson,
+            geneExpressionErrorMessage: null,
+            loadingGeneExpression: false,
+          })
         })
-      })
-      .catch((reason) => {
-        this.setState({
-          errorMessage: `${reason.name}: ${reason.message}`,
-          loadingClusters: false,
-          loadingGeneExpression: false
+        .catch((reason) => {
+          this.setState({
+            geneExpressionErrorMessage: `${reason.name}: ${reason.message}`,
+            loadingGeneExpression: false
+          })
         })
-      })
+    })
   }
 
   componentWillReceiveProps(nextProps) {
-    if (nextProps.atlasUrl !== this.props.atlasUrl ||  // First two will never happen but it’s the right thing to do
-        nextProps.experimentAccession !== this.props.experimentAccession ||
-        nextProps.perplexity !== this.props.perplexity ||
-        nextProps.k !== this.props.k) {
-
-      this.setState({
-        loadingClusters: true,
-        loadingGeneExpression: true
-      })
-      this._fetchAndSetState(nextProps)
-
+    if (nextProps.selectedPerplexity !== this.props.selectedPerplexity) {
+      this._fetchAndSetStateCellClusters(nextProps)
+      this._fetchAndSetStateGeneId(nextProps)
+    } else if (nextProps.selectedK !== this.props.selectedK) {
+      this._fetchAndSetStateCellClusters(nextProps)
     } else if (nextProps.geneId !== this.props.geneId) {
-
-      this.setState({
-        loadingGeneExpression: true
-      })
-      this._fetchAndSetState(nextProps)
-
+      this._fetchAndSetStateGeneId(nextProps)
     }
   }
 
   componentDidMount() {
-    this.setState({
-      loadingClusters: true,
-      loadingGeneExpression: true
-    })
-    // Having _fetchAndSetState as callback is the right thing, but then we can’t return the promise; see tests
-    return this._fetchAndSetState(this.props)
+    this._fetchAndSetStateCellClusters(this.props)
+    this._fetchAndSetStateGeneId(this.props)
   }
 
   render() {
-    const {height, atlasUrl, resourcesUrl} = this.props
-    const {suggesterEndpoint, geneId, speciesName, highlightClusters, ks, k, perplexities, perplexity} = this.props
+    const {height, atlasUrl, resourcesUrl, suggesterEndpoint} = this.props
+    const {geneId, speciesName, highlightClusters} = this.props
+    const {ks, selectedK, perplexities, selectedPerplexity} = this.props
     const {onChangePerplexity, onChangeK, onSelectGeneId} = this.props
-    const {loadingClusters, loadingGeneExpression, data, errorMessage} = this.state
+    const {loadingGeneExpression, geneExpressionData, geneExpressionErrorMessage} = this.state
+    const {loadingCellClusters, cellClustersData, cellClustersErrorMessage} = this.state
 
     return (
       <div className={`row`}>
         <div className={`small-12 medium-6 columns`}>
           <ClusterTSnePlot height={height}
-                           plotData={data}
+                           plotData={cellClustersData}
                            perplexities={perplexities}
-                           perplexity={perplexity}
+                           selectedPerplexity={selectedPerplexity}
                            onChangePerplexity={onChangePerplexity}
                            ks={ks}
-                           k={k}
+                           selectedK={selectedK}
                            onChangeK={onChangeK}
                            highlightClusters={highlightClusters}
-                           loading={loadingClusters}
+                           loading={loadingCellClusters}
                            resourcesUrl={resourcesUrl}
-                           errorMessage={errorMessage}
+                           errorMessage={cellClustersErrorMessage}
           />
         </div>
 
         <div className={`small-12 medium-6 columns`}>
           <GeneExpressionTSnePlot height={height}
-                                  plotData={data}
+                                  plotData={geneExpressionData}
                                   atlasUrl={atlasUrl}
                                   suggesterEndpoint={suggesterEndpoint}
                                   onSelectGeneId={onSelectGeneId}
@@ -115,7 +127,7 @@ class ExperimentPageView extends React.Component {
                                   highlightClusters={[]}
                                   loading={loadingGeneExpression}
                                   resourcesUrl={resourcesUrl}
-                                  errorMessage={errorMessage}
+                                  errorMessage={geneExpressionErrorMessage}
           />
         </div>
 
@@ -130,14 +142,14 @@ class ExperimentPageView extends React.Component {
   }
 }
 
-ExperimentPageView.propTypes = {
+TSnePlotView.propTypes = {
   atlasUrl: PropTypes.string.isRequired,
   suggesterEndpoint: PropTypes.string.isRequired,
   experimentAccession: PropTypes.string.isRequired,
   ks: PropTypes.arrayOf(PropTypes.number).isRequired,
-  k: PropTypes.number.isRequired,
+  selectedK: PropTypes.number.isRequired,
   perplexities: PropTypes.arrayOf(PropTypes.number).isRequired,
-  perplexity: PropTypes.number.isRequired,
+  selectedPerplexity: PropTypes.number.isRequired,
   highlightClusters: PropTypes.arrayOf(PropTypes.number),
   geneId: PropTypes.string.isRequired,
   speciesName: PropTypes.string.isRequired,
@@ -148,7 +160,7 @@ ExperimentPageView.propTypes = {
   onChangePerplexity: PropTypes.func
 }
 
-ExperimentPageView.defaultProps = {
+TSnePlotView.defaultProps = {
   highlightClusters: [],
   geneId: '',
   speciesName: '',
@@ -158,4 +170,4 @@ ExperimentPageView.defaultProps = {
   onPerplexityChange: () => {}
 }
 
-export default ExperimentPageView
+export default TSnePlotView

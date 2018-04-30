@@ -80,8 +80,11 @@ const GeneExpressionScatterPlot = (props) => {
     plotOptions: {
       scatter: {
         tooltip: {
-          headerFormat: `<b>{point.key} – Cluster {series.name}</b><br>`,
+          headerFormat: `<b>{point.key}</b><br>`,
           pointFormat: geneId ? `Expression level: {point.expressionLevel} ${plotData.unit}` : `No gene selected`
+        },
+        marker: {
+          symbol: `circle`
         }
       }
     },
@@ -90,6 +93,9 @@ const GeneExpressionScatterPlot = (props) => {
     },
     title: {
       text: `Gene expression`
+    },
+    legend: {
+      enabled: false
     }
   }
 

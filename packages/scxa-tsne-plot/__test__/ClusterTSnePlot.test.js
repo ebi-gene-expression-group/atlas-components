@@ -80,7 +80,7 @@ describe(`ClusterTSnePlot`, () => {
     }
 
     const tree = renderer
-      .create(<ClusterTSnePlot height={500} ks={[]} k={0} onChangeK={onChangeK} perplexities={[]} perplexity={0} onChangePerplexity={onChangePerplexity} loading={true} plotData={plotData}/>)
+      .create(<ClusterTSnePlot height={500} ks={[]} selectedK={0} onChangeK={onChangeK} perplexities={[]} selectedPerplexity={0} onChangePerplexity={onChangePerplexity} loading={true} plotData={plotData}/>)
       .toJSON()
 
     expect(tree).toMatchSnapshot()
@@ -93,7 +93,7 @@ describe(`ClusterTSnePlot`, () => {
       series: []
     }
 
-    const wrapper = mount(<ClusterTSnePlot height={500} ks={[]} k={0} onChangeK={onChangeK} perplexities={[]} perplexity={0} onChangePerplexity={onChangePerplexity} loading={true} plotData={plotData}/>)
+    const wrapper = mount(<ClusterTSnePlot height={500} ks={[]} selectedK={0} onChangeK={onChangeK} perplexities={[]} selectedPerplexity={0} onChangePerplexity={onChangePerplexity} loading={true} plotData={plotData}/>)
 
     expect(wrapper.find(ScatterPlotLoader).length).toBe(1)
   })
