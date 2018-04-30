@@ -7,6 +7,8 @@ import Adapter from 'enzyme-adapter-react-16'
 import ScatterPlot from '../../src/plotloader/ScatterPlot'
 import {randomHighchartsSeriesWithSeed} from '../Utils'
 
+// *IMPORTANT*: Highcharts and React Highcharts aren’t the easiest components to inspect for testing. The mysterious
+//              `n` node was in earlier versions `HighchartsChart`. However the mock was also thinner, so who knows!
 
 Enzyme.configure({ adapter: new Adapter() })
 
@@ -20,7 +22,7 @@ describe(`ScatterPlot`, () => {
       }
     }
     const wrapper = mount(<ScatterPlot series={[]} highchartsConfig={highchartsConfig}/>)
-    const highchartsWrapper = wrapper.find(`HighchartsChart`)
+    const highchartsWrapper = wrapper.find(`n`)
     expect(highchartsWrapper.prop(`config`)).toHaveProperty(`chart.height`, `50%`)
     expect(highchartsWrapper.prop(`config`)).toHaveProperty(`chart.width`, `50%`)
   })
@@ -48,7 +50,7 @@ describe(`ScatterPlot`, () => {
       data: longSeriesData
     }
     wrapper.setProps({ series: [longSeries] }).mount()
-    const markerRadiusLongSeries = wrapper.find(`HighchartsChart`).prop(`config`).plotOptions.series.marker.radius
+    const markerRadiusLongSeries = wrapper.find(`n`).prop(`config`).plotOptions.series.marker.radius
 
     const shortSeriesName = `Series with 4,999 points`
     const shortSeriesData = []
@@ -65,7 +67,7 @@ describe(`ScatterPlot`, () => {
       data: shortSeriesData
     }
     wrapper.setProps({ series: [shortSeries] }).mount()
-    const markerRadiusShortSeries = wrapper.find(`HighchartsChart`).prop(`config`).plotOptions.series.marker.radius
+    const markerRadiusShortSeries = wrapper.find(`n`).prop(`config`).plotOptions.series.marker.radius
 
     expect(markerRadiusLongSeries).toBeLessThan(markerRadiusShortSeries)
   })

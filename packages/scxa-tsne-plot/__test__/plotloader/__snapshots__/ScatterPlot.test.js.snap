@@ -73,7 +73,7 @@ ShallowWrapper {
     <div
       className={undefined}
     >
-      <HighchartsChart
+      <n
         callback={[Function]}
         config={
           Object {
@@ -201,7 +201,7 @@ ShallowWrapper {
       <div
         className={undefined}
       >
-        <HighchartsChart
+        <n
           callback={[Function]}
           config={
             Object {
@@ -19684,7 +19684,7 @@ ShallowWrapper {
     <div
       className={undefined}
     >
-      <HighchartsChart
+      <n
         callback={[Function]}
         config={
           Object {
@@ -39088,7 +39088,7 @@ ShallowWrapper {
       <div
         className={undefined}
       >
-        <HighchartsChart
+        <n
           callback={[Function]}
           config={
             Object {
@@ -58517,7 +58517,7 @@ ShallowWrapper {
     <div
       className={undefined}
     >
-      <HighchartsChart
+      <n
         callback={[Function]}
         config={
           Object {
@@ -58593,7 +58593,7 @@ ShallowWrapper {
       <div
         className={undefined}
       >
-        <HighchartsChart
+        <n
           callback={[Function]}
           config={
             Object {
