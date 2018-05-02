@@ -3,18 +3,13 @@ import PropTypes from 'prop-types'
 
 
 const PropertyValue = ({hasUrl, isLast, text, url}) =>
-  <span>
-    {hasUrl ? (
-        <a className={"bioEntityCardLink"} href={url} target="_blank">{text}</a>
-      ) : (
-        <span>{text}</span>
-      )
-    }
-
-    {!isLast &&
-      <span>, </span>
-    }
-    </span>
+   hasUrl ?
+      <span>
+        <a className={"bioEntityCardLink"} href={url} target="_blank">{text}</a>{!isLast ? `, ` : ``}
+      </span> :
+      <span>
+        {text + (!isLast ? `, ` : ``)}
+      </span>
 
 const TOP_RELEVANT_VALUES = 3
 
