@@ -67,14 +67,11 @@ class GeneSearchResults extends React.Component {
         })
       )
       .catch(
-        (e) =>
+        (error) =>
           this.setState({
             data: null,
             loading: false,
-            error: {
-              name: e.name,
-              message: e.message
-            }
+            error: error
           })
       )
   }
