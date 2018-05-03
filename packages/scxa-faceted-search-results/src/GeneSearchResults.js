@@ -9,24 +9,28 @@ const _fetch = async (host, resource) => {
   if (response.ok) {
     return await response.json()
   }
-  throw new Error(
-    `There was a problem communicating with the server. Please try again later. ` +
-     `If the error persists, in order to help us debug the issue, please copy and paste this message and send it to ` +
-     `atlas-feedback@ebi.ac.uk [${url} => ${response.status}]`
-   )
+  throw new Error(`${url} => ${response.status}`)
 }
 
-const CalloutAlert = ({title, message}) =>
+const CalloutAlert = ({error}) =>
   <div className={`row column`}>
     <div className={`callout alert small`}>
-      <h5>{title}</h5>
-      <p>{message}</p>
+      <h5>Oops!</h5>
+      <p>
+        {error.description}<br/>
+        If the error persists, in order to help us debug the issue, please copy and paste the URL and this message and
+        send it to <a href={`mailto:atlas-feedback@ebi.ac.uk`}>atlas-feedback@ebi.ac.uk</a>:
+      </p>
+      <code>{`${error.name}: ${error.message}`}</code>
     </div>
   </div>
 
 CalloutAlert.propTypes = {
-  title: PropTypes.string.isRequired,
-  message: PropTypes.string.isRequired
+  error: PropTypes.shape({
+    description: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    message: PropTypes.string.isRequired
+  })
 }
 
 class GeneSearchResults extends React.Component {
@@ -44,20 +48,23 @@ class GeneSearchResults extends React.Component {
     const {data, loading, error} = this.state
 
     return(
+      error ?
+        <CalloutAlert error={error} /> :
       loading ?
-        <div>Loading. Please wait...</div> :
-        error ?
-          <CalloutAlert title={error.name} message={error.message} />  :
-          <div>Success!</div>
+        <div id={`loader`}>Loading. Please wait...</div> :
+        <div>Success!</div>
     )
   }
 
   _fetchAndSetState(host, resource) {
     this.setState({ loading: true })
 
-    // then and catch methods are run asyncrhonously, “at the end of the current run of the JavaScript event loop”
-    // according to section ‘Timing’ in https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises
-    // so state.loading will be true when the Promise is handled
+    // then and catch methods are run “at the end of the current run of the JavaScript event loop” according to section
+    // ‘Timing’ in https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises so state.loading will
+    // be true when the promise is handled. Strictly speaking, the right thing to do would be to call _fetch in a
+    // callback passed as the second argument to setState, but if we wanted to also return the promise to test the
+    // component we’d need to declare a variable outside, set it within the callback, and return it... not pretty!
+
     return _fetch(host, resource).then(
       (responseJson) =>
         this.setState({
@@ -71,7 +78,11 @@ class GeneSearchResults extends React.Component {
           this.setState({
             data: null,
             loading: false,
-            error: error
+            error: {
+              description: `There was a problem communicating with the server. Please try again later.`,
+              name: error.name,
+              message: error.message
+            }
           })
       )
   }
@@ -82,8 +93,12 @@ class GeneSearchResults extends React.Component {
 
   componentDidCatch(error, info) {
     this.setState({
-       error: error
-     })
+      error: {
+          description: `There was a problem rendering this component.`,
+          name: error.name,
+          message: `${error.message} – ${info}`
+      }
+     });
   }
 }
 
