@@ -7,7 +7,7 @@ var CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
     entry: {
-        myPackage: './html/render.js',
+        geneSearchResults: ['babel-polyfill', './html/render.js'],
         dependencies: ['prop-types', 'react', 'react-dom', 'urijs']
     },
 
