@@ -15,7 +15,6 @@ const LoadingOverlay = (props) =>
     <div style={{textAlign: `center`}}>
       <p>Loading, please wait...</p>
       <img src={URI(require(`./svg/flask-loader.svg`), props.resourcesUrl).toString()}/>
-      <p><small>Powered by <a href={`https://loading.io`}>loading.io</a></small></p>
     </div>
   </div>
 
