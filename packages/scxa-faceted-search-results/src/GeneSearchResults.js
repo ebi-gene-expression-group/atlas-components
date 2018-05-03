@@ -55,9 +55,9 @@ class GeneSearchResults extends React.Component {
   _fetchAndSetState(host, resource) {
     this.setState({ loading: true })
 
-    // than and catch methods are run asyncrhonously, “at the end of the current run of the JavaScript event loop”
+    // then and catch methods are run asyncrhonously, “at the end of the current run of the JavaScript event loop”
     // according to section ‘Timing’ in https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises
-    // so it’s fine even though it’s not passed as the setState callback
+    // so state.loading will be true when the Promise is handled
     return _fetch(host, resource).then(
       (responseJson) =>
         this.setState({
