@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 const FacetItem = ({label, filterAttribute, checked, onChangeHandler}) =>
   <checkbox label={label} checked={checked} onChange={() => onChangeHandler(filterAttribute, checked)} />
 
-FacetItem.PropTypes = {
+FacetItem.propTypes = {
   label: PropTypes.string.isRequired,
   filterAttribute: PropTypes.string.isRequired,
   checked: PropTypes.bool.isRequired,
@@ -23,12 +23,12 @@ const FacetGroup = ({facetName, facetItems, onChangeHandler}) =>
                    key={facetItem.label} />)}
   </div>
 
-FacetGroup.Proptypes = {
+FacetGroup.propTypes = {
   facetName: PropTypes.string.isRequired,
   facetItems: PropTypes.arrayOf(PropTypes.shape({
-    label: FacetItem.PropTypes.label,
-    filterAttribute: FacetItem.PropTypes.filterAttribute,
-    checked: FacetItem.PropTypes.checked,
+    label: FacetItem.propTypes.label,
+    filterAttribute: FacetItem.propTypes.filterAttribute,
+    checked: FacetItem.propTypes.checked,
   })).isRequired,
   onChangeHandler: PropTypes.func.isRequired
 }
@@ -37,10 +37,10 @@ const FilterSidebar = ({facetGroups, onChangeHandler}) =>
   facetGroups.map((facetGroup) =>
     <FacetGroup {...facetGroup} onChangeHandler={onChangeHandler} key={facetGroup.facetName} />)
 
-FilterSidebar.PropTypes = {
+FilterSidebar.propTypes = {
   facetGroups: PropTypes.arrayOf(PropTypes.shape({
-    facetName: FacetGroup.PropTypes.facetName,
-    facetItems: FacetGroup.PropTypes.facetItems,
+    facetName: FacetGroup.propTypes.facetName,
+    facetItems: FacetGroup.propTypes.facetItems,
   })).isRequired,
   onChangeHandler: PropTypes.func.isRequired
 }
