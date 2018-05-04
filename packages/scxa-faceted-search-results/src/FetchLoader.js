@@ -2,6 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import URI from 'urijs'
 
+import SearchContainer from './SearchContainer'
+
 const _fetch = async (host, resource) => {
   const url = URI(resource, host).toString()
   const response = await fetch(url)
@@ -33,7 +35,7 @@ CalloutAlert.propTypes = {
   })
 }
 
-class GeneSearchResults extends React.Component {
+class FetchLoader extends React.Component {
   constructor(props) {
     super(props)
 
@@ -52,7 +54,11 @@ class GeneSearchResults extends React.Component {
         <CalloutAlert error={error} /> :
       loading ?
         <div id={`loader`}>Loading. Please wait...</div> :
-        <div>Success!</div>
+        <div className={`row`}>
+          <div className={`small-12 medium-4 large-2 columns`}>
+            <SearchContainer {...data} />
+          </div>
+        </div>
     )
   }
 
@@ -102,9 +108,9 @@ class GeneSearchResults extends React.Component {
   }
 }
 
-GeneSearchResults.propTypes = {
+FetchLoader.propTypes = {
   host: PropTypes.string.isRequired,
   resource: PropTypes.string.isRequired
 }
 
-export default GeneSearchResults
+export default FetchLoader
