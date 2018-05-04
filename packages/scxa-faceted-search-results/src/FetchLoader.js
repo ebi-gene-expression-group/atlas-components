@@ -56,7 +56,7 @@ class FetchLoader extends React.Component {
         <div id={`loader`}>Loading. Please wait...</div> :
         <div className={`row`}>
           <div className={`small-12 medium-4 large-2 columns`}>
-            <SearchContainer {...data} />
+            {/*<SearchContainer {...data} />*/}
           </div>
         </div>
     )

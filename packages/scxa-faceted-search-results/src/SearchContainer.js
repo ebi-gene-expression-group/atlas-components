@@ -18,16 +18,16 @@ class SearchContainer extends React.Component {
   render() {
     <div className={`row`}>
       <div className={`small-12 medium-4 large-2 columns`}>
-        <FilterSidebar />
+        {/*<FilterSidebar />*/}
       </div>
       <div className={`small-12 medium-8 large-10 columns`}>
-        <ResultsList />
+        {/*<ResultsList />*/}
       </div>
     </div>
   }
 }
 
-SearchContainer.PropTypes = {
+SearchContainer.propTypes = {
   // A list of results from where facets can be inferred by inspecting each result’s attribute field
   // Supplied by FetchLoader, or set manually for testing
 }
