@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>FilterList demo</title>
+
+    <link rel="stylesheet" href="https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/css/ebi-global.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="https://ebi.emblstatic.net/web_guidelines/EBI-Icon-fonts/v1.3/fonts.css" type="text/css" media="all" />
+</head>
+
+<body>
+<div id="wrapper" class="row">
+    <div id="content" class="small-12 columns">
+        <div id="target">
+        </div>
+    </div>
+</div>
+</body>
+
+<script src="vendorCommons.bundle.js"></script>
+<script src="filterList.bundle.js"></script>
+
+<!-- Set to http://localhost:8080/gxa/ or http://localhost:8080/gxa_sc/ -- Remember the trailing slash! -->
+<script>
+    var results = [
+      {
+        result: {
+          text: "An experiment about white cells, red blood cells and lung cancer"
+        },
+        filterAttributes: [
+          {
+            group: "cell type",
+            value: "white cell",
+            label: "Lymphocyte"
+          },
+          {
+            group: "cell type",
+            value: "red blood cell",
+            label: "Erythrocyte"
+          },
+          {
+            group: "disease",
+            value: "adenocarcinoma",
+            label: "Lung cancer"
+          }
+        ]
+      },
+      {
+        result: {
+          text: "A great experiment with marker genes about influenza"
+        },
+        filterAttributes: [
+          {
+            group: "Marker Genes",
+            value: "marker gene",
+            label: "Experiment with marker genes"
+          },
+          {
+            group: "disease",
+            value: "flu",
+            label: "Flu"
+          }
+        ]
+      },
+      {
+        result: {
+          text: "A funny experiment about red blood cells and influenza"
+        },
+        filterAttributes: [
+          {
+            group: "disease",
+            value: "flu",
+            label: "Flue"
+          },
+          {
+            group: "cell type",
+            value: "red blood cell",
+            label: "Red blood cell"
+          }
+        ]
+      }
+    ];
+
+    filterList.render({
+      results: results
+    }, 'target');
+</script>
+
+</html>

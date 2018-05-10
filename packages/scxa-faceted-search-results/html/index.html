@@ -1,30 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Demo</title>
+    <title>FilterList demo</title>
 
     <link rel="stylesheet" href="https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/css/ebi-global.css" type="text/css" media="all" />
     <link rel="stylesheet" href="https://ebi.emblstatic.net/web_guidelines/EBI-Icon-fonts/v1.3/fonts.css" type="text/css" media="all" />
 </head>
 
 <body>
-<div id="wrapper" class="row">
-    <div id="content" class="small-12 columns">
-        <div id="target">
-        </div>
-    </div>
-</div>
+  <div class="row column">
+    <ul>
+      <li>
+        <a href="fetch-loader.html">FetchLoader (retrieves data via <code>fetch</code>)</a>
+      </li>
+
+      <li>
+        <a href="filter-list.html">FilterList (pass <code>props</code> directly)</a>
+      </li>
+    </ul>
+  </div>
 </body>
-
-<script src="vendorCommons.bundle.js"></script>
-<script src="geneSearchResults.bundle.js"></script>
-
-<!-- Set to http://localhost:8080/gxa/ or http://localhost:8080/gxa_sc/ -- Remember the trailing slash! -->
-<script>
-    geneSearchResults.render({
-      host: 'https://www.ebi.ac.uk/gxa/',
-      resource: 'json/dbsolr/status'
-    }, 'target');
-</script>
-
-</html>
