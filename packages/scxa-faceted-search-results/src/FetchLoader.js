@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import URI from 'urijs'
 
-import SearchContainer from './SearchContainer'
+import FilterList from './FilterList'
 
 const _fetch = async (host, resource) => {
   const url = URI(resource, host).toString()
@@ -53,12 +53,8 @@ class FetchLoader extends React.Component {
       error ?
         <CalloutAlert error={error} /> :
       loading ?
-        <div id={`loader`}>Loading. Please wait...</div> :
-        <div className={`row`}>
-          <div className={`small-12 medium-4 large-2 columns`}>
-            {/*<SearchContainer {...data} />*/}
-          </div>
-        </div>
+        <div id={`loader`}>Loading, please wait...</div> :
+        <FilterList {...data} />
     )
   }
 
@@ -66,7 +62,7 @@ class FetchLoader extends React.Component {
     this.setState({ loading: true })
 
     // then and catch methods are run “at the end of the current run of the JavaScript event loop” according to section
-    // ‘Timing’ in https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises so state.loading will
+    // ‘Timing’ in https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises, so state.loading will
     // be true when the promise is handled. Strictly speaking, the right thing to do would be to call _fetch in a
     // callback passed as the second argument to setState, but if we wanted to also return the promise to test the
     // component we’d need to declare a variable outside, set it within the callback, and return it... not pretty!
@@ -104,7 +100,7 @@ class FetchLoader extends React.Component {
           name: error.name,
           message: `${error.message} – ${info}`
       }
-     });
+    })
   }
 }
 
