@@ -15,27 +15,34 @@ const getRandomInt = (min, max) => {
   return Math.floor(Math.random() * (max - min)) + min; //The maximum is exclusive and the minimum is inclusive
 }
 
-describe(`CheckboxFacetGroup`, () => {
-  const vindicators = [
-    { value: `supernova`, label: `Supernova`},
-    { value: `noob-noob`, label: `Noob-Noob` },
-    { value: `vance_maximus`, label: `Vance Maximus`},
-    { value: `alan_rails`, label: `Alan Rails`},
-    { value: `crocubot`, label: `Crocubot` },
-    { value: `million_ants`, label: `Million Ants`},
-    { value: `morty_smith`, label: `Morty Smith`},
-    { value: `rick_sanchez`, label: `Rick Sanchez`},
-    { value: `lady_katana`, label: `Lady Katana`},
-    { value: `calypso`, label: `Calypso`},
-    { value: `diablo_verde`, label: `Diablo Verde`}
-  ]
+const vindicators = [
+  { value: `supernova`, label: `Supernova`},
+  { value: `noob-noob`, label: `Noob-Noob` },
+  { value: `vance_maximus`, label: `Vance Maximus`},
+  { value: `alan_rails`, label: `Alan Rails`},
+  { value: `crocubot`, label: `Crocubot` },
+  { value: `million_ants`, label: `Million Ants`},
+  { value: `morty_smith`, label: `Morty Smith`},
+  { value: `rick_sanchez`, label: `Rick Sanchez`},
+  { value: `lady_katana`, label: `Lady Katana`},
+  { value: `calypso`, label: `Calypso`},
+  { value: `diablo_verde`, label: `Diablo Verde`}
+]
 
-  const props = {
-    facetName: `Vindicators`,
-    hideName: false,
-    facetItems: vindicators.filter((vindicator) => Math.random() > 0.5),
-    onChange: () => {}
-  }
+const props = {
+  facetName: `Vindicators`,
+  hideName: false,
+  facetItems: [],
+  onChange: () => {}
+}
+
+describe(`CheckboxFacetGroup`, () => {
+  beforeEach(() => {
+    const facetItems = []
+    while (props.facetItems.length === 0) {
+      props.facetItems = vindicators.filter((vindicator) => Math.random() > 0.5)
+    }
+  })
 
   test(`renders the right number of checkboxes and the facet name`, () => {
     const wrapper = mount(<CheckboxFacetGroup {...props} />)
