@@ -1,4 +1,5 @@
 import React from 'react'
+import renderer from 'react-test-renderer'
 import Enzyme from 'enzyme'
 import {mount} from 'enzyme'
 import Adapter from 'enzyme-adapter-react-16'
@@ -28,7 +29,7 @@ describe(`FetchLoader`, () => {
   const getRandomHttpErrorCode = () => getRandomInt(400, 600)
 
   test(`until the fetch promise is not resolved a loading message is displayed, then goes away`, async () => {
-    fetchMock.get(`*`, `{}`)
+    fetchMock.get(`*`, `{"results":[]}`)
     const wrapper = mount(<FetchLoader {...props} />)
 
     expect(wrapper.find(`#loader`)).toHaveLength(1)
@@ -57,7 +58,7 @@ describe(`FetchLoader`, () => {
     expect(wrapper.find(`.callout .alert`)).toHaveLength(1)
   })
 
-  test(`renders an error message if the error boundary kicks in`, async () => {
+  test(`renders an error message if the child receives invalid JSON (and the error boundary kicks in)`, async () => {
     fetchMock.get(`*`, `{}`)
     const wrapper = mount(<FetchLoader {...props} />)
 
