@@ -1,0 +1,132 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CheckboxFacetGroup matches snapshot 1`] = `
+<div
+  className="padding-bottom-xlarge"
+>
+  <h4>
+    Vindicators
+  </h4>
+  <div>
+    <input
+      checked={false}
+      onChange={[Function]}
+      type="checkbox"
+      value="supernova"
+    />
+    <label>
+      Supernova
+    </label>
+  </div>
+  <div>
+    <input
+      checked={false}
+      onChange={[Function]}
+      type="checkbox"
+      value="noob-noob"
+    />
+    <label>
+      Noob-Noob
+    </label>
+  </div>
+  <div>
+    <input
+      checked={false}
+      onChange={[Function]}
+      type="checkbox"
+      value="vance_maximus"
+    />
+    <label>
+      Vance Maximus
+    </label>
+  </div>
+  <div>
+    <input
+      checked={false}
+      onChange={[Function]}
+      type="checkbox"
+      value="alan_rails"
+    />
+    <label>
+      Alan Rails
+    </label>
+  </div>
+  <div>
+    <input
+      checked={false}
+      onChange={[Function]}
+      type="checkbox"
+      value="crocubot"
+    />
+    <label>
+      Crocubot
+    </label>
+  </div>
+  <div>
+    <input
+      checked={false}
+      onChange={[Function]}
+      type="checkbox"
+      value="million_ants"
+    />
+    <label>
+      Million Ants
+    </label>
+  </div>
+  <div>
+    <input
+      checked={false}
+      onChange={[Function]}
+      type="checkbox"
+      value="morty_smith"
+    />
+    <label>
+      Morty Smith
+    </label>
+  </div>
+  <div>
+    <input
+      checked={false}
+      onChange={[Function]}
+      type="checkbox"
+      value="rick_sanchez"
+    />
+    <label>
+      Rick Sanchez
+    </label>
+  </div>
+  <div>
+    <input
+      checked={false}
+      onChange={[Function]}
+      type="checkbox"
+      value="lady_katana"
+    />
+    <label>
+      Lady Katana
+    </label>
+  </div>
+  <div>
+    <input
+      checked={false}
+      onChange={[Function]}
+      type="checkbox"
+      value="calypso"
+    />
+    <label>
+      Calypso
+    </label>
+  </div>
+  <div>
+    <input
+      checked={false}
+      onChange={[Function]}
+      type="checkbox"
+      value="diablo_verde"
+    />
+    <label>
+      Diablo Verde
+    </label>
+  </div>
+</div>
+`;
