@@ -5,16 +5,11 @@ import {mount} from 'enzyme'
 import Adapter from 'enzyme-adapter-react-16'
 import fetchMock from 'fetch-mock'
 
+import {getRandomInt} from './TestUtils'
+
 import FetchLoader from '../src/FetchLoader'
 
 Enzyme.configure({ adapter: new Adapter() })
-
-// Stolen from https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
-const getRandomInt = (min, max) => {
-  min = Math.ceil(min);
-  max = Math.floor(max);
-  return Math.floor(Math.random() * (max - min)) + min; //The maximum is exclusive and the minimum is inclusive
-}
 
 describe(`FetchLoader`, () => {
   beforeEach(() => {
