@@ -5,6 +5,8 @@ import {shallow, mount} from 'enzyme'
 import Adapter from 'enzyme-adapter-react-16'
 
 import CheckboxFacetGroup from '../src/facetgroups/CheckboxFacetGroup'
+import MultiselectDropdownFacetGroup from '../src/facetgroups/MultiselectDropdownFacetGroup'
+import Select from 'react-select'
 
 Enzyme.configure({ adapter: new Adapter() })
 
@@ -73,4 +75,36 @@ describe(`CheckboxFacetGroup`, () => {
     const tree = renderer.create(<CheckboxFacetGroup {...props} facetItems={vindicators}/>).toJSON()
     expect(tree).toMatchSnapshot()
   })
+})
+
+// I would’ve liked to test the MultiselectDropdownFacetGroup component a bit more, for instance some workflow like
+// “clicking on the component opens up the menu and choosing an option invokes the callback with the right arguments”
+// (similar to CheckboxFacetGroup above) but I tried simulating a click event on a number of components (even the
+// dropdown indicator) and nothing happened. It turns out that React-Select isn’t very straightforward when it comes to
+// testing, as one can see in e.g. https://github.com/JedWatson/react-select/blob/v2/src/__tests__/Select.test.js.
+// Still, a good deal of such a test would end up in testing-the-behaviour-of-third-party-software territory, so below
+// is the minimum I think we should at least cover (snapshot tests would be pretty dumb, though). Fortunately coverage
+// of React-Select is very good and the people behind the component are using Jest and Enzyme too, so if at any point
+// we really want to do some complex testing we can have a look at the repo to learn how to do so... properly.
+describe(`MultiselectDropdownFacetGroup`, () => {
+  beforeEach(() => {
+    const facetItems = []
+    while (props.facetItems.length === 0) {
+      props.facetItems = vindicators.filter((vindicator) => Math.random() > 0.5)
+    }
+  })
+
+  test(`can hide the header`, () => {
+    const wrapper = mount(<CheckboxFacetGroup {...props} hideName={true} />)
+    expect(wrapper.find(`h4`)).toHaveLength(0)
+  })
+
+  test(`callback includes facet name in arguments`, () => {
+    const mockCallback = jest.fn()
+    const wrapper = mount(<MultiselectDropdownFacetGroup {...props} onChange={mockCallback} />)
+    wrapper.find(Select).instance().onChange()
+    expect(mockCallback.mock.calls.length).toBe(1)
+    expect(mockCallback.mock.calls[0][0]).toEqual(props.facetName)
+  })
+
 })

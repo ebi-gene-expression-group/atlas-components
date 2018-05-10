@@ -56,7 +56,7 @@ const MultiselectDropdownFacetGroup = ({hideName, facetName, facetItems, onChang
             closeMenuOnSelect={false}
             isMulti={true}
             onChange={(args) => onChange(facetName, args)}
-            options={ facetItems } />
+            options={facetItems} />
   </div>
 
 MultiselectDropdownFacetGroup.propTypes = FacetGroupPropTypes
