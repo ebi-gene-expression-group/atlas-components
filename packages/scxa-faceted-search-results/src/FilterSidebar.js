@@ -1,48 +1,40 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const FacetItem = ({label, filterAttribute, checked, onChangeHandler}) =>
-  <checkbox label={label} checked={checked} onChange={() => onChangeHandler(filterAttribute, checked)} />
+import FacetGroupPropTypes from './facetgroups/FacetGroupPropTypes'
+import CheckboxFacetGroup from './facetgroups/CheckboxFacetGroup'
+import MultiselectDropdownFacetGroup from './facetgroups/MultiselectDropdownFacetGroup'
 
-FacetItem.propTypes = {
-  label: PropTypes.string.isRequired,
-  filterAttribute: PropTypes.string.isRequired,
-  checked: PropTypes.bool.isRequired,
-  onChangeHandler: PropTypes.func.isRequired
-}
-
-const FacetGroup = ({facetName, facetItems, onChangeHandler}) =>
-  <div>
-    <h4>{facetName}</h4>
-    {facetItems.map(
-      (facetItem) =>
-        <FacetItem label={facetItem.label}
-                   filterAttribute={facetItem.filterAttribute}
-                   checked={facetItem.checked}
-                   onChangeHandler={onChangeHandler}
-                   key={facetItem.label} />)}
-  </div>
-
-FacetGroup.propTypes = {
-  facetName: PropTypes.string.isRequired,
-  facetItems: PropTypes.arrayOf(PropTypes.shape({
-    label: FacetItem.propTypes.label,
-    filterAttribute: FacetItem.propTypes.filterAttribute,
-    checked: FacetItem.propTypes.checked,
-  })).isRequired,
-  onChangeHandler: PropTypes.func.isRequired
-}
-
-const FilterSidebar = ({facetGroups, onChangeHandler}) =>
-  facetGroups.map((facetGroup) =>
-    <FacetGroup {...facetGroup} onChangeHandler={onChangeHandler} key={facetGroup.facetName} />)
+// Facets as checkboxes go first by design
+const FilterSidebar = ({hideGroupNames, asCheckboxes, facetGroups, onChange}) =>
+[
+  facetGroups
+    .filter((facetGroup) => asCheckboxes.includes(facetGroup.facetName))
+    .map((facetGroup) => <CheckboxFacetGroup {...facetGroup}
+                                             hideName={hideGroupNames.includes(facetGroup.facetName)}
+                                             onChange={onChange}
+                                             key={facetGroup.facetName} />),
+  facetGroups
+    .filter((facetGroup) => !asCheckboxes.includes(facetGroup.facetName))
+    .map((facetGroup) => <MultiselectDropdownFacetGroup {...facetGroup}
+                                                        hideName={hideGroupNames.includes(facetGroup.facetName)}
+                                                        onChange={onChange}
+                                                        key={facetGroup.facetName} />)
+]
 
 FilterSidebar.propTypes = {
+  hideGroupNames: PropTypes.arrayOf(PropTypes.string),
+  asCheckboxes: PropTypes.arrayOf(PropTypes.string),
   facetGroups: PropTypes.arrayOf(PropTypes.shape({
-    facetName: FacetGroup.propTypes.facetName,
-    facetItems: FacetGroup.propTypes.facetItems,
+    facetName: FacetGroupPropTypes.facetName,
+    facetItems: FacetGroupPropTypes.facetItems,
   })).isRequired,
-  onChangeHandler: PropTypes.func.isRequired
+  onChange: PropTypes.func.isRequired
+}
+
+FilterSidebar.defaultProps = {
+  hideGroupNames: [],
+  asCheckboxes: []
 }
 
 export default FilterSidebar
