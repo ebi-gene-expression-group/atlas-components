@@ -11,6 +11,8 @@ import FetchLoader from '../src/FetchLoader'
 
 Enzyme.configure({ adapter: new Adapter() })
 
+const DummyComponent = (props) => <div></div>
+
 describe(`FetchLoader`, () => {
   beforeEach(() => {
     fetchMock.restore()
@@ -18,7 +20,8 @@ describe(`FetchLoader`, () => {
 
   const props = {
     host: `glip/`,
-    resource: `glops`
+    resource: `glops`,
+    ResultElementComponent: DummyComponent
   }
 
   const getRandomHttpErrorCode = () => getRandomInt(400, 600)
