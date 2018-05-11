@@ -1,4 +1,4 @@
-# Filter Search Results for Single Cell Expression Atlas
+# Faceted Search Results for Single Cell Expression Atlas
 
 [![Build Status](https://travis-ci.org/ebi-gene-expression-group/scxa-gene-search-results.svg?branch=master)](https://travis-ci.org/ebi-gene-expression-group/scxa-gene-search-results) [![Coverage Status](https://coveralls.io/repos/github/ebi-gene-expression-group/scxa-gene-search-results/badge.svg?branch=master)](https://coveralls.io/github/ebi-gene-expression-group/scxa-gene-search-results?branch=master)
 
@@ -16,7 +16,7 @@ The prop `ResultElementComponent` must be coupled to the shape of your `element`
 Detailed information coming soon!
 
 ## Example
-[Demo here](https://ebi-gene-expression-group.github.io/scxa-gene-search-results/html/filter-list.html).
+[Demo here](https://ebi-gene-expression-group.github.io/scxa-faceted-search-results/html/filter-list.html).
 
 ```
 <div style={{border: `2px solid grey`, marginBottom: `0.5rem`, borderRadius: `4px`, padding: `0.25rem`}}>
