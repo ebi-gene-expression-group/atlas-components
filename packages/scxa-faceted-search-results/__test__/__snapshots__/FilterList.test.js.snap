@@ -1,0 +1,331 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FilterList matches snapshot 1`] = `
+<div
+  className="row"
+>
+  <div
+    className="small-12 medium-4 columns"
+  >
+    <div
+      className="padding-bottom-xlarge"
+    >
+      <h4>
+        Season
+      </h4>
+      <div>
+        <input
+          checked={false}
+          onChange={[Function]}
+          type="checkbox"
+          value="1"
+        />
+        <label>
+          Season 1
+        </label>
+      </div>
+      <div>
+        <input
+          checked={false}
+          onChange={[Function]}
+          type="checkbox"
+          value="2"
+        />
+        <label>
+          Season 2
+        </label>
+      </div>
+      <div>
+        <input
+          checked={false}
+          onChange={[Function]}
+          type="checkbox"
+          value="3"
+        />
+        <label>
+          Season 3
+        </label>
+      </div>
+    </div>
+    <div
+      className="input-clear padding-bottom-xlarge"
+    >
+      <h4>
+        Planet
+      </h4>
+      <div
+        className="css-10nd86i "
+        id={undefined}
+        onKeyDown={[Function]}
+      >
+        <span
+          aria-atomic="true"
+          aria-live="polite"
+          className="css-1uvvha"
+          role="status"
+        >
+          3 results available.
+        </span>
+        <div
+          className="css-12emboz "
+          onMouseDown={[Function]}
+          onTouchEnd={[Function]}
+        >
+          <div
+            className="css-nbc25y "
+          >
+            <div
+              className="css-1492t68 "
+            >
+              Select...
+            </div>
+            <div
+              className="css-rsyb7x"
+            >
+              <div
+                className=""
+                style={
+                  Object {
+                    "display": "inline-block",
+                  }
+                }
+              >
+                <input
+                  aria-activedescendant={undefined}
+                  aria-autocomplete="list"
+                  aria-busy={false}
+                  aria-describedby={undefined}
+                  aria-expanded={false}
+                  aria-haspopup={false}
+                  aria-label={undefined}
+                  aria-labelledby={undefined}
+                  aria-owns={undefined}
+                  autoCapitalize="none"
+                  autoComplete="off"
+                  autoCorrect="off"
+                  className={undefined}
+                  disabled={false}
+                  id="react-select-10-input"
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  onFocus={[Function]}
+                  role="combobox"
+                  spellCheck="false"
+                  style={
+                    Object {
+                      "background": 0,
+                      "border": 0,
+                      "boxSizing": "content-box",
+                      "color": "inherit",
+                      "fontSize": "inherit",
+                      "opacity": 1,
+                      "outline": 0,
+                      "padding": 0,
+                      "width": "1px",
+                    }
+                  }
+                  tabIndex="0"
+                  type="text"
+                  value=""
+                />
+                <div
+                  style={
+                    Object {
+                      "height": 0,
+                      "left": 0,
+                      "overflow": "scroll",
+                      "position": "absolute",
+                      "top": 0,
+                      "visibility": "hidden",
+                      "whiteSpace": "pre",
+                    }
+                  }
+                >
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="css-1wy0on6 "
+          >
+            <span
+              style={
+                Object {
+                  "backgroundImage": "url(\\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' width='32' height='24' viewBox='0 0 32 24'><polygon points='0,0 32,0 16,24' style='fill: rgb%28138, 138, 138%29'></polygon></svg>\\")",
+                  "backgroundOrigin": "content-box",
+                  "backgroundPosition": "center",
+                  "backgroundRepeat": "no-repeat",
+                  "backgroundSize": "9px 6px",
+                  "height": "1rem",
+                  "width": "1.5rem",
+                }
+              }
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="input-clear padding-bottom-xlarge"
+    >
+      <h4>
+        Guest character
+      </h4>
+      <div
+        className="css-10nd86i "
+        id={undefined}
+        onKeyDown={[Function]}
+      >
+        <span
+          aria-atomic="true"
+          aria-live="polite"
+          className="css-1uvvha"
+          role="status"
+        >
+          6 results available.
+        </span>
+        <div
+          className="css-12emboz "
+          onMouseDown={[Function]}
+          onTouchEnd={[Function]}
+        >
+          <div
+            className="css-nbc25y "
+          >
+            <div
+              className="css-1492t68 "
+            >
+              Select...
+            </div>
+            <div
+              className="css-rsyb7x"
+            >
+              <div
+                className=""
+                style={
+                  Object {
+                    "display": "inline-block",
+                  }
+                }
+              >
+                <input
+                  aria-activedescendant={undefined}
+                  aria-autocomplete="list"
+                  aria-busy={false}
+                  aria-describedby={undefined}
+                  aria-expanded={false}
+                  aria-haspopup={false}
+                  aria-label={undefined}
+                  aria-labelledby={undefined}
+                  aria-owns={undefined}
+                  autoCapitalize="none"
+                  autoComplete="off"
+                  autoCorrect="off"
+                  className={undefined}
+                  disabled={false}
+                  id="react-select-11-input"
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  onFocus={[Function]}
+                  role="combobox"
+                  spellCheck="false"
+                  style={
+                    Object {
+                      "background": 0,
+                      "border": 0,
+                      "boxSizing": "content-box",
+                      "color": "inherit",
+                      "fontSize": "inherit",
+                      "opacity": 1,
+                      "outline": 0,
+                      "padding": 0,
+                      "width": "1px",
+                    }
+                  }
+                  tabIndex="0"
+                  type="text"
+                  value=""
+                />
+                <div
+                  style={
+                    Object {
+                      "height": 0,
+                      "left": 0,
+                      "overflow": "scroll",
+                      "position": "absolute",
+                      "top": 0,
+                      "visibility": "hidden",
+                      "whiteSpace": "pre",
+                    }
+                  }
+                >
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="css-1wy0on6 "
+          >
+            <span
+              style={
+                Object {
+                  "backgroundImage": "url(\\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' width='32' height='24' viewBox='0 0 32 24'><polygon points='0,0 32,0 16,24' style='fill: rgb%28138, 138, 138%29'></polygon></svg>\\")",
+                  "backgroundOrigin": "content-box",
+                  "backgroundPosition": "center",
+                  "backgroundRepeat": "no-repeat",
+                  "backgroundSize": "9px 6px",
+                  "height": "1rem",
+                  "width": "1.5rem",
+                }
+              }
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="small-12 medium-8 columns"
+  >
+    <ul>
+      <li>
+        <div>
+          <p>
+            Raising Gazorpazorp
+          </p>
+        </div>
+      </li>
+      <li>
+        <div>
+          <p>
+            The wedding squanchers
+          </p>
+        </div>
+      </li>
+      <li>
+        <div>
+          <p>
+            The Rickshank redemption
+          </p>
+        </div>
+      </li>
+      <li>
+        <div>
+          <p>
+            Ricksy business
+          </p>
+        </div>
+      </li>
+      <li>
+        <div>
+          <p>
+            Close Rick-counters of the Rick kind
+          </p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+`;
