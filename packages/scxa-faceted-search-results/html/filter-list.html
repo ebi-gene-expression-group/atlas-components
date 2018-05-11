@@ -23,65 +23,140 @@
 <script>
     var results = [
       {
-        result: {
-          text: "An experiment about white cells, red blood cells and lung cancer"
+        element: {
+          text: "Raising Gazorpazorp"
         },
-        filterAttributes: [
+        facets: [
           {
-            group: "cell type",
-            value: "white cell",
-            label: "Lymphocyte"
+            group: "Planet",
+            value: "gazorpazorp",
+            label: "Gazorpazorp"
           },
           {
-            group: "cell type",
-            value: "red blood cell",
-            label: "Erythrocyte"
+            group: "Guest character",
+            value: "gwendolyn",
+            label: "Gwendolyn"
           },
           {
-            group: "disease",
-            value: "adenocarcinoma",
-            label: "Lung cancer"
+            group: "Guest character",
+            value: "ma-sha",
+            label: "Ma-Sha"
+          },
+          {
+            group: "Season",
+            value: "1",
+            label: "1"
           }
         ]
       },
       {
-        result: {
-          text: "A great experiment with marker genes about influenza"
+        element: {
+          text: "The wedding squanchers"
         },
-        filterAttributes: [
+        facets: [
           {
-            group: "Marker Genes",
-            value: "marker gene",
-            label: "Experiment with marker genes"
+            group: "Planet",
+            value: "squanch",
+            label: "Squanch"
           },
           {
-            group: "disease",
-            value: "flu",
-            label: "Flu"
+            group: "Guest character",
+            value: "birdperson",
+            label: "Birdperson"
+          },
+          {
+            group: "Guest character",
+            value: "squanchy",
+            label: "Squanchy"
+          },
+          {
+            group: "Season",
+            value: "2",
+            label: "2"
           }
         ]
       },
       {
-        result: {
-          text: "A funny experiment about red blood cells and influenza"
+        element: {
+          text: "The Rickshank redemption"
         },
-        filterAttributes: [
+        facets: [
           {
-            group: "disease",
-            value: "flu",
-            label: "Flue"
+            group: "Guest character",
+            value: "birdperson",
+            label: "Birdperson"
           },
           {
-            group: "cell type",
-            value: "red blood cell",
-            label: "Red blood cell"
+            group: "Planet",
+            value: "buttworld",
+            label: "Buttworld"
+          },
+          {
+            group: "Season",
+            value: "3",
+            label: "3"
+          }
+        ]
+      },
+      {
+        element: {
+          text: "Ricksy business"
+        },
+        facets: [
+          {
+            group: "Guest character",
+            value: "squanchy",
+            label: "Squanchy"
+          },
+          {
+            group: "Guest character",
+            value: "abradolf_lincler",
+            label: "Abradolf Lincler"
+          },
+          {
+            group: "Planet",
+            value: "buttworld",
+            label: "Buttworld"
+          },
+          {
+            group: "Season",
+            value: "1",
+            label: "1"
+          }
+        ]
+      },
+      {
+        element: {
+          text: "Close Rick-counters of the Rick kind"
+        },
+        facets: [
+          {
+            group: "Guest character",
+            value: "ricktiminus_sancheziminius",
+            label: "Ricktiminus Sancheziminius"
+          },
+          {
+            group: "Guest character",
+            value: "abradolf_lincler",
+            label: "Abradolf Lincler"
+          },
+          {
+            group: "Planet",
+            value: "buttworld",
+            label: "Buttworld"
+          },
+          {
+            group: "Season",
+            value: "1",
+            label: "1"
           }
         ]
       }
     ];
 
     filterList.render({
-      results: results
+      results: results,
+      checkboxFacetGroups: [`Season`]
     }, 'target');
 </script>
 

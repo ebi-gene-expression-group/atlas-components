@@ -13,26 +13,25 @@ import Select from 'react-select'
 Enzyme.configure({ adapter: new Adapter() })
 
 const props = {
-  facetName: `Vindicators`,
+  facetGroupName: `Vindicators`,
   hideName: false,
-  facetItems: [],
+  facets: [],
   onChange: () => {}
 }
 
 describe(`CheckboxFacetGroup`, () => {
   beforeEach(() => {
-    const facetItems = []
-    while (props.facetItems.length === 0) {
-      props.facetItems = vindicators.filter((vindicator) => Math.random() > 0.5)
+    while (props.facets.length === 0) {
+      props.facets = vindicators.filter((vindicator) => Math.random() > 0.5)
     }
   })
 
   test(`renders the right number of checkboxes and the facet name`, () => {
     const wrapper = mount(<CheckboxFacetGroup {...props} />)
-    expect(wrapper.find(`input`)).toHaveLength(props.facetItems.length)
-    expect(wrapper.find({ type: `checkbox` })).toHaveLength(props.facetItems.length)
+    expect(wrapper.find(`input`)).toHaveLength(props.facets.length)
+    expect(wrapper.find({ type: `checkbox` })).toHaveLength(props.facets.length)
     expect(wrapper.find(`h4`)).toHaveLength(1)
-    expect(wrapper.find(`h4`).text()).toEqual(props.facetName)
+    expect(wrapper.find(`h4`).text()).toEqual(props.facetGroupName)
   })
 
   test(`can hide the header`, () => {
@@ -41,19 +40,19 @@ describe(`CheckboxFacetGroup`, () => {
   })
 
   test(`callback is called when a checkbox is checked/unchecked with the right arguments`, () => {
-    const randomCheckboxIndex = getRandomInt(0, props.facetItems.length)
+    const randomCheckboxIndex = getRandomInt(0, props.facets.length)
     const mockCallback = jest.fn()
     const wrapper = mount(<CheckboxFacetGroup {...props} onChange={mockCallback} />)
     wrapper.find({ type: `checkbox` }).at(randomCheckboxIndex).simulate(`change`)
     expect(mockCallback.mock.calls.length).toBe(1)
-    expect(mockCallback.mock.calls[0]).toEqual([`Vindicators`, [props.facetItems[randomCheckboxIndex]]])
+    expect(mockCallback.mock.calls[0]).toEqual([props.facets[randomCheckboxIndex].group, [props.facets[randomCheckboxIndex]]])
     wrapper.find({ type: `checkbox` }).at(randomCheckboxIndex).simulate(`change`)
     expect(mockCallback.mock.calls.length).toBe(2)
-    expect(mockCallback.mock.calls[1]).toEqual([`Vindicators`, []])
+    expect(mockCallback.mock.calls[1]).toEqual([props.facets[randomCheckboxIndex].group, []])
   })
 
   test(`matches snapshot`, () => {
-    const tree = renderer.create(<CheckboxFacetGroup {...props} facetItems={vindicators}/>).toJSON()
+    const tree = renderer.create(<CheckboxFacetGroup {...props} facets={vindicators}/>).toJSON()
     expect(tree).toMatchSnapshot()
   })
 })
@@ -69,9 +68,8 @@ describe(`CheckboxFacetGroup`, () => {
 // we really want to do some complex testing we can have a look at the repo to learn how to do so... properly.
 describe(`MultiselectDropdownFacetGroup`, () => {
   beforeEach(() => {
-    const facetItems = []
-    while (props.facetItems.length === 0) {
-      props.facetItems = vindicators.filter((vindicator) => Math.random() > 0.5)
+    while (props.facets.length === 0) {
+      props.facets = vindicators.filter((vindicator) => Math.random() > 0.5)
     }
   })
 
@@ -85,7 +83,7 @@ describe(`MultiselectDropdownFacetGroup`, () => {
     const wrapper = mount(<MultiselectDropdownFacetGroup {...props} onChange={mockCallback} />)
     wrapper.find(Select).instance().onChange()
     expect(mockCallback.mock.calls.length).toBe(1)
-    expect(mockCallback.mock.calls[0][0]).toEqual(props.facetName)
+    expect(mockCallback.mock.calls[0][0]).toEqual(props.facetGroupName)
   })
 
 })

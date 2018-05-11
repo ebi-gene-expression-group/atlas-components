@@ -35,6 +35,7 @@
     "url": "https://github.com/ebi-gene-expression-group/scxa-gene-search-results.git"
   },
   "dependencies": {
+    "lodash": "^4.17.10",
     "prop-types": "^15.6.1",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",

@@ -1,9 +1,11 @@
 import PropTypes from 'prop-types'
 
 const FacetGroupPropTypes = {
-  facetName: PropTypes.string.isRequired,
+  facetGroupName: PropTypes.string.isRequired,
   hideName: PropTypes.bool.isRequired,
-  facetItems: PropTypes.arrayOf(PropTypes.shape({
+  facets: PropTypes.arrayOf(PropTypes.shape({
+    // Passed but not used:
+    // group: PropTypes.string.isRequired,
     value: PropTypes.string.isRequired,
     label: PropTypes.string.isRequired
   })).isRequired,

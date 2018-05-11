@@ -12,24 +12,22 @@ Enzyme.configure({ adapter: new Adapter() })
 
 describe(`FilterSidebar`, () => {
   const props = {
-    asCheckboxes: [`Status`],
-    facetGroups: [
+    facets: [
+      ...vindicators,
       {
-        facetName: `Vindicators`,
-        facetItems: vindicators
-      },
-      {
-        facetName: `Status`,
-        facetItems: [{value: `deceased`, label: `Deceased`}]
+        group: `Status`,
+        value: `deceased`,
+        label: `Deceased`
       }
     ],
+    checkboxFacetGroups: [`Status`],
     onChange: () => {}
   }
 
   test(`Checkbox filters are shown above dropdown filters`, () => {
-    const wrapper = mount(<FilterSidebar {...props} asCheckboxes={[`Status`]}/>)
+    const wrapper = mount(<FilterSidebar {...props} />)
     expect(wrapper.find(`h4`).first().text()).toEqual(`Status`)
-    expect(wrapper.find(`h4`).last().text()).toEqual(`Vindicators`)
+    expect(wrapper.find(`h4`).last().text()).toEqual(vindicators[getRandomInt(0, vindicators.length)].group)
   }),
 
   test(`matches snapshot`, () => {
