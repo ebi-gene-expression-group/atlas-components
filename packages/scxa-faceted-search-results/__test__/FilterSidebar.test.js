@@ -7,6 +7,8 @@ import Adapter from 'enzyme-adapter-react-16'
 import {getRandomInt, vindicators} from './TestUtils'
 
 import FilterSidebar from '../src/FilterSidebar'
+import CheckboxFacetGroup from '../src/facetgroups/CheckboxFacetGroup'
+import MultiselectDropdownFacetGroup from '../src/facetgroups/MultiselectDropdownFacetGroup'
 
 Enzyme.configure({ adapter: new Adapter() })
 
@@ -29,6 +31,14 @@ describe(`FilterSidebar`, () => {
     expect(wrapper.find(`h4`).first().text()).toEqual(`Status`)
     expect(wrapper.find(`h4`).last().text()).toEqual(vindicators[getRandomInt(0, vindicators.length)].group)
   }),
+
+  test(`doesn’t display duplicates`, () => {
+    const dupedFacets = [...vindicators, ...vindicators, props.facets[props.facets.length - 1], props.facets[props.facets.length - 1]]
+    const wrapper = mount(<FilterSidebar {...props} facets={dupedFacets} />)
+    expect(wrapper.props().facets).toHaveLength(vindicators.length * 2 + 2)
+    expect(wrapper.find(CheckboxFacetGroup).props().facets).toHaveLength(1)
+    expect(wrapper.find(MultiselectDropdownFacetGroup).props().facets).toHaveLength(vindicators.length)
+  })
 
   test(`matches snapshot`, () => {
     const tree = renderer.create(<FilterSidebar {...props}/>).toJSON()
