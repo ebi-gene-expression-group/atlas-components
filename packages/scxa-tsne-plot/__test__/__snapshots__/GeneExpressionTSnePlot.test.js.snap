@@ -172,16 +172,6 @@ Array [
         <img
           src="test-file-stub"
         />
-        <p>
-          <small>
-            Powered by 
-            <a
-              href="https://loading.io"
-            >
-              loading.io
-            </a>
-          </small>
-        </p>
       </div>
     </div>
   </div>,
