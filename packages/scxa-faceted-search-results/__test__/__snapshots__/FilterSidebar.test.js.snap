@@ -104,7 +104,6 @@ Array [
               <div
                 style={
                   Object {
-                    "boxShadow": "none",
                     "height": 0,
                     "left": 0,
                     "overflow": "scroll",
