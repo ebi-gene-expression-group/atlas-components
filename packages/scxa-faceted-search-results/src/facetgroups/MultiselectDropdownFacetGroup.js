@@ -23,7 +23,7 @@ const DropdownIndicator = () => <span style={ebiVfSelectBackgroundStyles} />
 // Stolen from https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/css/ebi-global.css select
 const ebiVfSelectStyles = {
   control: (styles, state) => ({
-    height: `2.4375rem`,
+    minHeight: `2.4375rem`,
     margin: `0 0 1rem`,
     padding: `0`,
     appearance: `none`,
