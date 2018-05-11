@@ -65,7 +65,7 @@ class FilterList extends React.Component {
 }
 
 FilterList.propTypes = {
-  // A list of results from where facets can be inferred by inspecting each result’s attribute field
+  // A list of results from where facets can be inferred by inspecting each result’s facets field
   // Supplied by FetchLoader, or set manually for testing
   results: PropTypes.arrayOf(PropTypes.shape({
     element: PropTypes.object.isRequired,
@@ -77,7 +77,7 @@ FilterList.propTypes = {
   })).isRequired,
   checkboxFacetGroups: PropTypes.arrayOf(PropTypes.string),
   hideFacetGroupNames: PropTypes.arrayOf(PropTypes.string),
-  ResultElementComponent: PropTypes.func.isRequired // must be a React.Component, sadly there’s no such prop :()
+  ResultElementComponent: PropTypes.func.isRequired // must be a React.Component, sadly there’s no such prop :(
 }
 
 FilterList.defaultProps = {
