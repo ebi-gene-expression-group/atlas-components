@@ -1,6 +1,6 @@
 # Faceted Search Results for Single Cell Expression Atlas
 
-[![Build Status](https://travis-ci.org/ebi-gene-expression-group/scxa-gene-search-results.svg?branch=master)](https://travis-ci.org/ebi-gene-expression-group/scxa-gene-search-results) [![Coverage Status](https://coveralls.io/repos/github/ebi-gene-expression-group/scxa-gene-search-results/badge.svg?branch=master)](https://coveralls.io/github/ebi-gene-expression-group/scxa-gene-search-results?branch=master)
+[![Build Status](https://travis-ci.org/ebi-gene-expression-group/scxa-faceted-search-results.svg?branch=master)](https://travis-ci.org/ebi-gene-expression-group/scxa-faceted-search-results) [![Coverage Status](https://coveralls.io/repos/github/ebi-gene-expression-group/scxa-faceted-search-results/badge.svg?branch=master)](https://coveralls.io/github/ebi-gene-expression-group/scxa-faceted-search-results?branch=master)
 
 A lightweight and extensible component to list and filter lists of search results. It receives a URL (as a combination
 of `host` and `resource`) to async-fetch the results, and a React component to visualise each element (e.g. a card).
