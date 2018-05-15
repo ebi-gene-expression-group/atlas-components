@@ -118,11 +118,6 @@ Detailed information coming soon!
         "label": "Abradolf Lincler"
       },
       {
-        "group": "Planet",
-        "value": "buttworld",
-        "label": "Buttworld"
-      },
-      {
         "group": "Season",
         "value": "1",
         "label": "1"
