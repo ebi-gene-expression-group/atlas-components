@@ -21,18 +21,18 @@ const _colourizeClusters = (highlightSeries) =>
     }
   })
 
+const _tooltipFormatter = (cellId) => {
+  return `Request for ${cellId} goes here`
+}
+
 const ClusterTSnePlot = (props) => {
   const {ks, selectedK, onChangeK, perplexities, selectedPerplexity, onChangePerplexity} = props  // Select
-  const {plotData, highlightClusters, height} = props   // Chart
+  const {plotData, highlightClusters, height, tooltipContent} = props   // Chart
   const {loading, resourcesUrl, errorMessage} = props   // Overlay
 
   const highchartsConfig = {
     plotOptions: {
       scatter: {
-        tooltip: {
-          headerFormat: `<b>{series.name}</b><br>`,
-          pointFormat: `{point.name}`
-        },
         marker: {
           symbol: `circle`
         }
@@ -69,6 +69,28 @@ const ClusterTSnePlot = (props) => {
     },
     legend: {
       enabled: false
+    },
+    tooltip: {
+      formatter: function(tooltip) {
+        const text = 'Loading metadata...'
+        const header = `<b>Cell ID:</b> ${this.point.name} <br> <b>Cluster ID:</b> ${this.series.name} <br/>`
+
+        tooltipContent(this.point.name)
+          .then((response) => {
+            const content = response.map((metadata) => {
+              return `<b>${metadata.displayName}:</b> ${metadata.value}`
+            })
+
+            tooltip.label.attr({
+              text: header + content.join("<br/>")
+            });
+          })
+          .catch((reason) => {
+            return `failure`
+          })
+
+        return header + text
+      }
     }
   }
 
@@ -125,7 +147,9 @@ ClusterTSnePlot.propTypes = {
 
   loading: PropTypes.bool.isRequired,
   resourcesUrl: PropTypes.string,
-  errorMessage: PropTypes.string
+  errorMessage: PropTypes.string,
+
+  tooltipContent: PropTypes.func
 }
 
 export {ClusterTSnePlot as default, _colourizeClusters}

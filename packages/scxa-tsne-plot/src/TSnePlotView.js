@@ -75,7 +75,7 @@ class TSnePlotView extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    if (nextProps.selectedPerplexity !== this.props.selectedPerplexity) {
+    if (nextProps.selectedPerplexity !== this.props.selectedPerplexity || nextProps.experimentAccession !== this.props.experimentAccession) {
       this._fetchAndSetStateCellClusters(nextProps)
       this._fetchAndSetStateGeneId(nextProps)
     } else if (nextProps.selectedK !== this.props.selectedK) {
@@ -98,6 +98,10 @@ class TSnePlotView extends React.Component {
     const {loadingGeneExpression, geneExpressionData, geneExpressionErrorMessage} = this.state
     const {loadingCellClusters, cellClustersData, cellClustersErrorMessage} = this.state
 
+    const getTooltipContent = (cellId) => {
+      return fetchResponseJson(atlasUrl, `json/experiment/${this.props.experimentAccession}/cell/${cellId}/metadata`)
+    }
+
     return (
       <div className={`row`}>
         <div className={`small-12 medium-6 columns`}>
@@ -113,6 +117,7 @@ class TSnePlotView extends React.Component {
                            loading={loadingCellClusters}
                            resourcesUrl={resourcesUrl}
                            errorMessage={cellClustersErrorMessage}
+                           tooltipContent={getTooltipContent}
           />
         </div>
 

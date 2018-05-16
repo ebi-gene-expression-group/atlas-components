@@ -14,16 +14,20 @@ class Demo extends React.Component {
       perplexity: perplexities[Math.round((perplexities.length - 1) / 2)],
       geneId: ``,
       inputHighlightClusters: ``,
-      highlightClusters: []
+      highlightClusters: [],
+      inputExperimentAccession: `E-ENAD-14`,
+      experimentAccession: `E-ENAD-14`
     }
 
-    this._handleChange = this._handleChange.bind(this)
+    this._handleInputChange = this._handleInputChange.bind(this)
     this._handleSubmit = this._handleSubmit.bind(this)
   }
 
-  _handleChange(event) {
+  _handleInputChange(event) {
+    const name = event.target.name
+
     this.setState({
-      inputHighlightClusters: event.target.value
+      [name]: event.target.value
     })
   }
 
@@ -31,11 +35,10 @@ class Demo extends React.Component {
     event.preventDefault()
 
     this.setState({
+      experimentAccession: this.state.inputExperimentAccession,
       highlightClusters: this.state.inputHighlightClusters.split(`,`).map((e) => parseInt(e.trim())).filter((e) => !isNaN(e))
     })
   }
-
-
 
   render() {
     return(
@@ -43,14 +46,16 @@ class Demo extends React.Component {
         <div className={`row column`}>
           <form onSubmit={this._handleSubmit}>
             <label>Highlight clusters (cluster integer IDs separated by commas):</label>
-            <input type={`text`} onChange={this._handleChange} value={this.state.inputHighlightClusters}/>
+            <input name={`inputHighlightClusters`} type={`text`} onChange={this._handleInputChange} value={this.state.inputHighlightClusters}/>
+            <label>Experiment accession:</label>
+            <input name={`inputExperimentAccession`} type={`text`} onChange={this._handleInputChange} value={this.state.inputExperimentAccession}/>
             <input className={`button`} type="submit" value="Submit" />
           </form>
         </div>
 
         <ExperimentPageView atlasUrl={`http://localhost:8080/scxa/`}
                             suggesterEndpoint={`json/suggestions`}
-                            experimentAccession={`E-GEOD-106540`}
+                            experimentAccession={this.state.experimentAccession}
                             perplexities={perplexities}
                             selectedPerplexity={this.state.perplexity}
                             ks={ks}
