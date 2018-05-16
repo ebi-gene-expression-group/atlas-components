@@ -92,6 +92,7 @@ class TSnePlotView extends React.Component {
 
   render() {
     const {height, atlasUrl, resourcesUrl, suggesterEndpoint} = this.props
+    const {wrapperClassName, clusterPlotClassName, expressionPlotClassName} = this.props
     const {geneId, speciesName, highlightClusters} = this.props
     const {ks, selectedK, perplexities, selectedPerplexity} = this.props
     const {onChangePerplexity, onChangeK, onSelectGeneId} = this.props
@@ -103,8 +104,8 @@ class TSnePlotView extends React.Component {
     }
 
     return (
-      <div className={`row`}>
-        <div className={`small-12 medium-6 columns`}>
+      <div className={wrapperClassName}>
+        <div className={clusterPlotClassName}>
           <ClusterTSnePlot height={height}
                            plotData={cellClustersData}
                            perplexities={perplexities}
@@ -121,7 +122,7 @@ class TSnePlotView extends React.Component {
           />
         </div>
 
-        <div className={`small-12 medium-6 columns`}>
+        <div className={expressionPlotClassName}>
           <GeneExpressionTSnePlot height={height}
                                   plotData={geneExpressionData}
                                   atlasUrl={atlasUrl}
@@ -149,6 +150,9 @@ class TSnePlotView extends React.Component {
 
 TSnePlotView.propTypes = {
   atlasUrl: PropTypes.string.isRequired,
+  wrapperClassName: PropTypes.string,
+  clusterPlotClassName: PropTypes.string,
+  expressionPlotClassName: PropTypes.string,
   suggesterEndpoint: PropTypes.string.isRequired,
   experimentAccession: PropTypes.string.isRequired,
   ks: PropTypes.arrayOf(PropTypes.number).isRequired,
@@ -167,8 +171,11 @@ TSnePlotView.propTypes = {
 
 TSnePlotView.defaultProps = {
   highlightClusters: [],
-  geneId: '',
-  speciesName: '',
+  wrapperClassName: `row`,
+  clusterPlotClassName: `small-12 medium-6 columns`,
+  expressionPlotClassName: `small-12 medium-6 columns`,
+  geneId: ``,
+  speciesName: ``,
   height: 600,
   onSelectGeneId: () => {},
   onKChange: () => {},
