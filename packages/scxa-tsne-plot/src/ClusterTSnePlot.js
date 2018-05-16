@@ -21,10 +21,6 @@ const _colourizeClusters = (highlightSeries) =>
     }
   })
 
-const _tooltipFormatter = (cellId) => {
-  return `Request for ${cellId} goes here`
-}
-
 const ClusterTSnePlot = (props) => {
   const {ks, selectedK, onChangeK, perplexities, selectedPerplexity, onChangePerplexity} = props  // Select
   const {plotData, highlightClusters, height, tooltipContent} = props   // Chart
