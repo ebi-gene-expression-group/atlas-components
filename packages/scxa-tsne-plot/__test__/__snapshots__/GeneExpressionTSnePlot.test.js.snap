@@ -3,10 +3,10 @@
 exports[`GeneExpressionTSnePlot with random data matches snapshot 1`] = `
 Array [
   <div
-    className="row column"
+    className="row"
   >
     <div
-      className=""
+      className="smal-12 columns"
     >
       <label>
         Gene ID, gene name or gene feature

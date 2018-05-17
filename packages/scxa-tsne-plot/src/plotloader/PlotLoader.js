@@ -14,8 +14,7 @@ const PlotLoader = ({loading, series, errorMessage, highchartsConfig, resourcesU
     </div> :
 
     <div style={{position: `relative`}} className={wrapperClassName}>
-      <ScatterPlot wrapperClassName={wrapperClassName}
-                   chartClassName={chartClassName}
+      <ScatterPlot chartClassName={chartClassName}
                    series={series}
                    highchartsConfig={highchartsConfig}
                    children={children}

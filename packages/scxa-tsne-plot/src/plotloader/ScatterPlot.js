@@ -66,7 +66,7 @@ const highchartsBaseConfig = {
 }
 
 const ScatterPlot = (props) => {
-  const {wrapperClassName, chartClassName, series, highchartsConfig, children} = props
+  const {chartClassName, series, highchartsConfig, children} = props
 
   const numPoints = series.reduce((acc, aSeries) => acc + aSeries.data.length, 0)
   const config =
@@ -95,7 +95,6 @@ const ScatterPlot = (props) => {
 }
 
 ScatterPlot.propTypes = {
-  wrapperClassName: PropTypes.string,
   chartClassName: PropTypes.string,
   series: SeriesPropTypes,
   highchartsConfig: PropTypes.object,
