@@ -115,7 +115,8 @@ const ClusterTSnePlot = (props) => {
       </div>,
 
       <ScatterPlotLoader key={`cluster-plot`}
-                         wrapperClassName={`row column`}
+                         wrapperClassName={`row`}
+                         chartClassName={`small-12 columns`}
                          series={_colourizeClusters(highlightClusters)(plotData.series)}
                          highchartsConfig={highchartsConfig}
                          loading={loading}

@@ -110,7 +110,8 @@ const GeneExpressionScatterPlot = (props) => {
 
   return [
     <AtlasAutocomplete key={`expression-autocomplete`}
-                       wrapperClassName={`row column`}
+                       wrapperClassName={`row`}
+                       autocompleteClassName={`smal-12 columns`}
                        atlasUrl={atlasUrl}
                        suggesterEndpoint={suggesterEndpoint}
                        enableSpeciesFilter={false}
