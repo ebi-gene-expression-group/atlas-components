@@ -1,6 +1,6 @@
 {
-  "name": "scxa-faceted-search-results",
-  "version": "1.0.0rc1",
+  "name": "react-faceted-search",
+  "version": "1.0.0",
   "description": "Faceted experiments list for Single Cell Expression Atlas gene search results",
   "main": "lib/index.js",
   "scripts": {
