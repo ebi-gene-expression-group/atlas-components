@@ -15,7 +15,7 @@ import {randomHighchartsSeriesWithNamesAndMaxPoints} from './Utils'
 
 Enzyme.configure({ adapter: new Adapter() })
 
-const seriesNames = [`0`, `1`, `2`, `3`, `4`]
+const seriesNames = [`Cluster 0`, `Cluster 1`, `Cluster 2`, `Cluster 3`, `Cluster 4`]
 const maxPointsPerSeries = 1000
 
 describe(`ClusterTSnePlot colourize function`, () => {
@@ -33,7 +33,12 @@ describe(`ClusterTSnePlot colourize function`, () => {
 
   test(`must not dim (i.e. add a color field) any series if all are highlighted`, () => {
     const randomSeries = randomHighchartsSeriesWithNamesAndMaxPoints(seriesNames, maxPointsPerSeries)
+
+    randomSeries.forEach((series) => {
+      console.log("series name", series.name)
+    })
     _colourizeClusters(seriesNames, `lightgrey`)(randomSeries).forEach((series) => {
+      console.log('which series am i looking at', series.name)
       series.data.forEach((point) => {
         expect(point).not.toHaveProperty(`color`)
       })
@@ -56,12 +61,14 @@ describe(`ClusterTSnePlot colourize function`, () => {
     let highlightRandomSeries = []
     while (highlightRandomSeries.length === 0) {
       highlightRandomSeries =
-        seriesNames.reduce((acc, seriesName) =>  Math.random() > 0.5 ? acc.concat(seriesName) : acc, [])
+        seriesNames.reduce((acc, seriesName, index) =>  Math.random() > 0.5 ? acc.concat(index) : acc, [])
     }
+
+    const highlightRandomSeriesNames = highlightRandomSeries.map((series) => `Cluster ${series}`)
 
     _colourizeClusters(highlightRandomSeries, `lightgrey`)(randomSeries).forEach((series) => {
       series.data.forEach((point) => {
-        if (highlightRandomSeries.includes(series.name)) {
+        if (highlightRandomSeriesNames.includes(series.name)) {
           expect(point).not.toHaveProperty(`color`)
         } else {
           expect(point).toHaveProperty(`color`, Color(`lightgrey`).alpha(0.65).rgb().toString())
