@@ -47,7 +47,7 @@ class FetchLoader extends React.Component {
   }
 
   render() {
-    const {ResultElementComponent} = this.props
+    const {ResultElementComponent, noResultsMessage} = this.props
     const {data, loading, error} = this.state
 
     return(
@@ -55,7 +55,10 @@ class FetchLoader extends React.Component {
         <CalloutAlert error={error} /> :
       loading ?
         <div id={`loader`}>Loading, please wait...</div> :
-        <FilterList {...data} ResultElementComponent={ResultElementComponent}/>
+        data.results ?
+          <FilterList {...data} ResultElementComponent={ResultElementComponent}/> :
+          <div>{noResultsMessage}</div>
+
     )
   }
 
@@ -108,7 +111,8 @@ class FetchLoader extends React.Component {
 FetchLoader.propTypes = {
   host: PropTypes.string.isRequired,
   resource: PropTypes.string.isRequired,
-  ResultElementComponent: PropTypes.func.isRequired
+  ResultElementComponent: PropTypes.func.isRequired,
+  noResultsMessage: PropTypes.string
 }
 
 export default FetchLoader

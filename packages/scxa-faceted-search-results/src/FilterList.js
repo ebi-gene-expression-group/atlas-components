@@ -47,17 +47,16 @@ class FilterList extends React.Component {
             facet.group.length && facet.value.length && facet.value.length))
 
     return(
-      <div className={`row`}>
+      <div className={`expanded row`}>
         { resultsHaveFacets &&
-          <div className={`small-12 medium-4 columns`}>
+          <div className={`small-12 medium-2 columns`}>
             <FilterSidebar {...{checkboxFacetGroups, hideFacetGroupNames}}
                            facets={_(results).flatMap('facets').value()}
                            onChange={this._handleChange}/>
-          </div> }
-        <div className={resultsHaveFacets ? `small-12 medium-8 columns` : `small-12 columns`}>
-          <ul>
-            {filteredElements.map((element, index) => <li key={index}><ResultElementComponent {...element}/></li>)}
-          </ul>
+          </div>
+        }
+        <div className={resultsHaveFacets ? `small-12 medium-10 columns` : `small-12 columns`}>
+            {filteredElements.map((element, index) => <div key={index}><ResultElementComponent {...element}/></div>)}
         </div>
       </div>
     )

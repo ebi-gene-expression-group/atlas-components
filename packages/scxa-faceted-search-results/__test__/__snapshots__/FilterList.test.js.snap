@@ -2,10 +2,10 @@
 
 exports[`FilterList matches snapshot 1`] = `
 <div
-  className="row"
+  className="expanded row"
 >
   <div
-    className="small-12 medium-4 columns"
+    className="small-12 medium-2 columns"
   >
     <div
       className="padding-bottom-xlarge"
@@ -287,45 +287,43 @@ exports[`FilterList matches snapshot 1`] = `
     </div>
   </div>
   <div
-    className="small-12 medium-8 columns"
+    className="small-12 medium-10 columns"
   >
-    <ul>
-      <li>
-        <div>
-          <p>
-            Raising Gazorpazorp
-          </p>
-        </div>
-      </li>
-      <li>
-        <div>
-          <p>
-            The wedding squanchers
-          </p>
-        </div>
-      </li>
-      <li>
-        <div>
-          <p>
-            The Rickshank redemption
-          </p>
-        </div>
-      </li>
-      <li>
-        <div>
-          <p>
-            Ricksy business
-          </p>
-        </div>
-      </li>
-      <li>
-        <div>
-          <p>
-            Close Rick-counters of the Rick kind
-          </p>
-        </div>
-      </li>
-    </ul>
+    <div>
+      <div>
+        <p>
+          Raising Gazorpazorp
+        </p>
+      </div>
+    </div>
+    <div>
+      <div>
+        <p>
+          The wedding squanchers
+        </p>
+      </div>
+    </div>
+    <div>
+      <div>
+        <p>
+          The Rickshank redemption
+        </p>
+      </div>
+    </div>
+    <div>
+      <div>
+        <p>
+          Ricksy business
+        </p>
+      </div>
+    </div>
+    <div>
+      <div>
+        <p>
+          Close Rick-counters of the Rick kind
+        </p>
+      </div>
+    </div>
   </div>
 </div>
 `;

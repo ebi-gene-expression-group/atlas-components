@@ -4,6 +4,7 @@
   "description": "Faceted experiments list for Single Cell Expression Atlas gene search results",
   "main": "lib/index.js",
   "scripts": {
+    "dev": "webpack-dev-server -d",
     "dist": "NODE_ENV=production webpack --optimize-minimize",
     "prepublishOnly": "rm -rf lib && babel src -d lib --copy-files",
     "testOnly": "jest --coverage --verbose",
