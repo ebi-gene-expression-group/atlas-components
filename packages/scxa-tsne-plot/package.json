@@ -6,9 +6,8 @@
   "scripts": {
     "dev": "webpack-dev-server -d",
     "dist": "NODE_ENV=production webpack --optimize-minimize",
-    "prepublishOnly": "rm -rf lib && babel src -d lib --copy-files",
-    "testOnly": "jest --coverage --verbose",
-    "test": "yarn run testOnly",
+    "prepack": "rm -rf lib && babel src -d lib --copy-files",
+    "test": "jest --coverage --verbose",
     "posttest": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
     "postversion": "npm publish",
     "postpublish": "git push && git push --tags"
