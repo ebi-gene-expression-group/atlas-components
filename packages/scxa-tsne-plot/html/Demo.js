@@ -53,7 +53,7 @@ class Demo extends React.Component {
           </form>
         </div>
 
-        <ExperimentPageView atlasUrl={`http://localhost:8080/scxa/`}
+        <ExperimentPageView atlasUrl={`http://localhost:8080/gxa/sc/`}
                             suggesterEndpoint={`json/suggestions`}
                             experimentAccession={this.state.experimentAccession}
                             perplexities={perplexities}
@@ -62,7 +62,7 @@ class Demo extends React.Component {
                             selectedK={this.state.k}
                             highlightClusters={this.state.highlightClusters}
                             geneId={this.state.geneId}
-                            speciesName={'Homo sapiens'}
+                            speciesName={'Mus musculus'}
                             onChangePerplexity={
                               (perplexity) => { this.setState({perplexity: perplexity}) }
                             }
