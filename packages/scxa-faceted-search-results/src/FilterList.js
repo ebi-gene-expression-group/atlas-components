@@ -56,7 +56,7 @@ class FilterList extends React.Component {
           </div>
         }
         <div className={resultsHaveFacets ? `small-12 medium-10 columns` : `small-12 columns`}>
-          <h3>{resultsMessage}</h3>
+          <h4>{resultsMessage}</h4>
             {filteredElements.map((element, index) => <div key={index}><ResultElementComponent {...element}/></div>)}
         </div>
       </div>

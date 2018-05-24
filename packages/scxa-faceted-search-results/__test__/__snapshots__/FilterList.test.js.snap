@@ -51,7 +51,7 @@ exports[`FilterList matches snapshot 1`] = `
       className="input-clear padding-bottom-xlarge"
     >
       <h4>
-        Guest character
+        Planet
       </h4>
       <div
         className="css-10nd86i "
@@ -64,7 +64,7 @@ exports[`FilterList matches snapshot 1`] = `
           className="css-1uvvha"
           role="status"
         >
-          6 results available.
+          3 results available.
         </span>
         <div
           className="css-12emboz "
@@ -170,7 +170,7 @@ exports[`FilterList matches snapshot 1`] = `
       className="input-clear padding-bottom-xlarge"
     >
       <h4>
-        Planet
+        Guest character
       </h4>
       <div
         className="css-10nd86i "
@@ -183,7 +183,7 @@ exports[`FilterList matches snapshot 1`] = `
           className="css-1uvvha"
           role="status"
         >
-          3 results available.
+          6 results available.
         </span>
         <div
           className="css-12emboz "
@@ -289,6 +289,7 @@ exports[`FilterList matches snapshot 1`] = `
   <div
     className="small-12 medium-10 columns"
   >
+    <h4 />
     <div>
       <div>
         <p>
