@@ -6,8 +6,6 @@ import URI from 'urijs'
 import BioentityProperty from './BioentityProperty'
 import Loading from './Loading'
 
-import './BioentityInformation.css'
-
 const fetchResponseJson = async (base, endpoint) => {
   const response = await fetch(URI(endpoint, base).toString())
   const responseJson = await response.json()
@@ -69,9 +67,9 @@ class BioentityInformation extends React.Component {
   render() {
     const bioentityProperties = this.state.bioentityProperties.map((property) =>
       <tr key={property.type}>
-        <td className={`gxaBioentityInformationCardPropertyType`}>
+        <th style={{whiteSpace: `nowrap`}}>
           {property.name}
-        </td>
+        </th>
         <td>
           <BioentityProperty type={property.type} values={property.values} />
         </td>
@@ -82,7 +80,7 @@ class BioentityInformation extends React.Component {
       this.props.geneId &&
       <div className={this.props.wrapperClassName}>
         <Loading loading={this.state.loading} resourcesUrl={this.props.resourcesUrl}/>
-        <table>
+        <table class={`hover`}>
           <tbody>
           {bioentityProperties}
           </tbody>
