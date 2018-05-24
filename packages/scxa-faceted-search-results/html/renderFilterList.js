@@ -134,7 +134,7 @@ const render = (target) => {
   ]
 
   ReactDOM.render(
-    <FilterList results={episodes} ResultElementComponent={EpisodeCard} checkboxFacetGroups={[`Season`]} />,
+    <FilterList results={episodes} ResultElementComponent={EpisodeCard} checkboxFacetGroups={[`Season`]} resultsMessage={`Search results`}/>,
     document.getElementById(target))
 }
 

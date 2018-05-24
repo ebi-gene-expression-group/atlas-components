@@ -26,7 +26,7 @@ class FilterList extends React.Component {
   }
 
   render() {
-    const {results, checkboxFacetGroups, hideFacetGroupNames, ResultElementComponent} = this.props
+    const {results, checkboxFacetGroups, hideFacetGroupNames, ResultElementComponent, resultsMessage} = this.props
     const {selectedFacets} = this.state
 
     const filteredElements =
@@ -56,6 +56,7 @@ class FilterList extends React.Component {
           </div>
         }
         <div className={resultsHaveFacets ? `small-12 medium-10 columns` : `small-12 columns`}>
+          <h3>{resultsMessage}</h3>
             {filteredElements.map((element, index) => <div key={index}><ResultElementComponent {...element}/></div>)}
         </div>
       </div>
@@ -76,7 +77,8 @@ FilterList.propTypes = {
   })).isRequired,
   checkboxFacetGroups: PropTypes.arrayOf(PropTypes.string),
   hideFacetGroupNames: PropTypes.arrayOf(PropTypes.string),
-  ResultElementComponent: PropTypes.func.isRequired // must be a React.Component, sadly there’s no such prop :(
+  ResultElementComponent: PropTypes.func.isRequired, // must be a React.Component, sadly there’s no such prop :(
+  resultsMessage: PropTypes.string
 }
 
 FilterList.defaultProps = {
