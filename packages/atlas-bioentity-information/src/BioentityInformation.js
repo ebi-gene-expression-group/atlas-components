@@ -80,7 +80,7 @@ class BioentityInformation extends React.Component {
 
     return (
       this.props.geneId &&
-      <div className={`row column`}>
+      <div className={this.props.wrapperClassName}>
         <Loading loading={this.state.loading} resourcesUrl={this.props.resourcesUrl}/>
         <table>
           <tbody>
@@ -94,12 +94,14 @@ class BioentityInformation extends React.Component {
 
 BioentityInformation.propTypes = {
   atlasUrl: PropTypes.string.isRequired,
-  geneId: PropTypes.string.isRequired,
-  resourcesUrl: PropTypes.string
+  geneId: PropTypes.string,
+  resourcesUrl: PropTypes.string,
+  wrapperClassName: PropTypes.string
 }
 
 BioentityInformation.defaultProps = {
-  geneId: ``
+  geneId: ``,
+  wrapperClassName: `row column expanded`
 }
 
 export default BioentityInformation
