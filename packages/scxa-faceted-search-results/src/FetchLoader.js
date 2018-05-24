@@ -20,8 +20,8 @@ const CalloutAlert = ({error}) =>
       <h5>Oops!</h5>
       <p>
         {error.description}<br/>
-        If the error persists, in order to help us debug the issue, please copy and paste the URL and this message and
-        send it to <a href={`mailto:atlas-feedback@ebi.ac.uk`}>atlas-feedback@ebi.ac.uk</a>:
+        If the error persists, in order to help us debug the issue, please copy the URL and this message and
+        send it to us via <a href={`https://www.ebi.ac.uk/support/gxasc`}>the EBI Support & Feedback system</a>:
       </p>
       <code>{`${error.name}: ${error.message}`}</code>
     </div>
