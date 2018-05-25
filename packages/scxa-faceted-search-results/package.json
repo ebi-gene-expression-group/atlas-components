@@ -1,6 +1,6 @@
 {
   "name": "react-faceted-search",
-  "version": "1.2.2",
+  "version": "1.3.0",
   "description": "Faceted experiments list for Single Cell Expression Atlas gene search results",
   "main": "lib/index.js",
   "scripts": {
