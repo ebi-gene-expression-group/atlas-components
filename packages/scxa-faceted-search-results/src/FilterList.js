@@ -47,7 +47,7 @@ class FilterList extends React.Component {
             facet.group.length && facet.value.length && facet.value.length))
 
     return(
-      <div className={`expanded row`}>
+      <div className={`row expanded`}>
         { resultsHaveFacets &&
           <div className={`small-12 medium-2 columns`}>
             <FilterSidebar {...{checkboxFacetGroups, hideFacetGroupNames}}

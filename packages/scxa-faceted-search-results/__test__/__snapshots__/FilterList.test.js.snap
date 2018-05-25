@@ -2,7 +2,7 @@
 
 exports[`FilterList matches snapshot 1`] = `
 <div
-  className="expanded row"
+  className="row expanded"
 >
   <div
     className="small-12 medium-2 columns"
