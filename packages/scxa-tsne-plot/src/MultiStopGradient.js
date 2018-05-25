@@ -36,13 +36,18 @@ const MultiStopGradient = ({height, showTicks, colourRanges, plotData}) => {
   const gradientHeight = height - 100
 
   const minExpressionTopPosition =
-    Math.min(
-      gradientHeight - minMaxExpressionTickHeight,
-      gradientHeight - gradientHeight * putInRange(colourRanges, plotData.min))
+    plotData.min < 9999 ?
+      Math.min(
+        gradientHeight - minMaxExpressionTickHeight,
+        gradientHeight - gradientHeight * putInRange(colourRanges, plotData.min)) :
+      gradientHeight - gradientHeight * putInRange(colourRanges, 10000)
+
   const maxExpressionTopPosition =
+    plotData.max < 999 ?
     Math.max(
       minMaxExpressionTickHeight,
-      gradientHeight - gradientHeight * putInRange(colourRanges, plotData.max))
+      gradientHeight - gradientHeight * putInRange(colourRanges, plotData.max)) :
+    gradientHeight - gradientHeight * putInRange(colourRanges, 10000)  
 
   return (
     <div className={`small-2 columns text-center`}>

@@ -24,7 +24,7 @@ exports[`MultiStopGradient with random data matches snapshot 1`] = `
       className="dimgray"
       style={
         Object {
-          "top": "26px",
+          "top": "24px",
         }
       }
     >

@@ -21,6 +21,10 @@ const _colourize = (colourRanges, defaultColour = `blue`, alpha = 0.65) => {
       return Color('lightgrey').alpha(alpha).rgb().toString()
     }
 
+    if (val > 9999) {
+      return Color(`rgb(0, 0, 115)`).alpha(alpha).rgb().toString()
+    }
+
     const rangeIndex = val <= 0 ? 0 : colourRanges.findIndex((colourRange) => colourRange.threshold >= val) - 1
 
     const loColour = Color(colourRanges[rangeIndex].colour)

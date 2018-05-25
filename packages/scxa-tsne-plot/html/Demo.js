@@ -12,11 +12,11 @@ class Demo extends React.Component {
     this.state = {
       k: ks[Math.round((ks.length -1) / 2)],
       perplexity: perplexities[Math.round((perplexities.length - 1) / 2)],
-      geneId: ``,
+      geneId: `ENSG00000111640`,
       inputHighlightClusters: ``,
       highlightClusters: [],
-      inputExperimentAccession: `E-ENAD-14`,
-      experimentAccession: `E-ENAD-14`
+      inputExperimentAccession: `E-GEOD-106540`,
+      experimentAccession: `E-GEOD-106540`
     }
 
     this._handleInputChange = this._handleInputChange.bind(this)
@@ -62,7 +62,7 @@ class Demo extends React.Component {
                             selectedK={this.state.k}
                             highlightClusters={this.state.highlightClusters}
                             geneId={this.state.geneId}
-                            speciesName={'Mus musculus'}
+                            speciesName={'Homo sapiens'}
                             onChangePerplexity={
                               (perplexity) => { this.setState({perplexity: perplexity}) }
                             }
