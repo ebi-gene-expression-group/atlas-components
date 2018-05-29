@@ -69,7 +69,8 @@ const ClusterTSnePlot = (props) => {
     tooltip: {
       formatter: function(tooltip) {
         const text = 'Loading metadata...'
-        const header = `<b>Cell ID:</b> ${this.point.name} <br> <b>Cluster ID:</b> ${this.series.name} <br/>`
+        const header = `<b>Cell ID:</b> ${this.point.name}<br>` +
+                       `<b>Cluster ID:</b> ${this.series.name}<br>`
 
         tooltipContent(this.point.name)
           .then((response) => {
@@ -78,7 +79,7 @@ const ClusterTSnePlot = (props) => {
             })
 
             tooltip.label.attr({
-              text: header + content.join("<br/>")
+              text: header + content.join("<br>")
             });
           })
           .catch((reason) => {
