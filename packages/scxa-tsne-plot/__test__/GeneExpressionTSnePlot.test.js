@@ -146,7 +146,7 @@ describe(`GeneExpressionTSnePlot`, () => {
     const onSelectGeneId = () => {}
 
     const tree = renderer
-      .create(<GeneExpressionTSnePlot height={600} expressionGradientColours={gradientColourRanges()} atlasUrl={``} suggesterEndpoint={``} onSelectGeneId={onSelectGeneId} loading={true} plotData={plotData(randomSeries)} highlightClusters={[]}/>)
+      .create(<GeneExpressionTSnePlot height={600} expressionGradientColours={gradientColourRanges()} atlasUrl={``} suggesterEndpoint={``} onSelectGeneId={onSelectGeneId} loading={true} plotData={plotData(randomSeries)} highlightClusters={[]} speciesName={``}/>)
       .toJSON()
 
     expect(tree).toMatchSnapshot()
@@ -156,7 +156,7 @@ describe(`GeneExpressionTSnePlot`, () => {
     const randomSeries = randomHighchartsSeriesWithSeed()
     const onSelectGeneId = () => {}
 
-    const wrapper = mount(<GeneExpressionTSnePlot height={600} expressionGradientColours={gradientColourRanges()} atlasUrl={``} suggesterEndpoint={``} onSelectGeneId={onSelectGeneId} loading={true} plotData={plotData(randomSeries)} highlightClusters={[]}/>)
+    const wrapper = mount(<GeneExpressionTSnePlot height={600} expressionGradientColours={gradientColourRanges()} atlasUrl={``} suggesterEndpoint={``} onSelectGeneId={onSelectGeneId} loading={true} plotData={plotData(randomSeries)} highlightClusters={[]} speciesName={``}/>)
 
     expect(wrapper.find(MultiStopGradient).length).toBe(1)
   })
