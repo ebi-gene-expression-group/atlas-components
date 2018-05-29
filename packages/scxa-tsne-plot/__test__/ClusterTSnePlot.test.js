@@ -35,10 +35,10 @@ describe(`ClusterTSnePlot colourize function`, () => {
     const randomSeries = randomHighchartsSeriesWithNamesAndMaxPoints(seriesNames, maxPointsPerSeries)
 
     randomSeries.forEach((series) => {
-      console.log("series name", series.name)
+      // console.log("series name", series.name)
     })
     _colourizeClusters(seriesNames, `lightgrey`)(randomSeries).forEach((series) => {
-      console.log('which series am i looking at', series.name)
+      // console.log('which series am i looking at', series.name)
       series.data.forEach((point) => {
         expect(point).not.toHaveProperty(`color`)
       })
