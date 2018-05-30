@@ -80,7 +80,7 @@ class BioentityInformation extends React.Component {
       this.props.geneId &&
       <div className={this.props.wrapperClassName}>
         <Loading loading={this.state.loading} resourcesUrl={this.props.resourcesUrl}/>
-        <table class={`hover`}>
+        <table className={`hover`}>
           <tbody>
           {bioentityProperties}
           </tbody>
