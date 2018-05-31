@@ -6,7 +6,7 @@ Array [
     className="row"
   >
     <div
-      className="column medium-6"
+      className="small-12 medium-6 columns"
     >
       <label>
         t-SNE Perplexity
@@ -17,7 +17,7 @@ Array [
       />
     </div>
     <div
-      className="column medium-6"
+      className="small-12 medium-6 columns"
     >
       <label>
         Number of clusters, 

@@ -6,7 +6,7 @@ Array [
     className="row"
   >
     <div
-      className="smal-12 columns"
+      className="small-12 columns"
     >
       <label>
         Gene ID, gene name or gene feature
