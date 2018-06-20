@@ -3,15 +3,20 @@
 [![Build Status](https://travis-ci.org/ebi-gene-expression-group/scxa-faceted-search-results.svg?branch=master)](https://travis-ci.org/ebi-gene-expression-group/scxa-faceted-search-results) [![Coverage Status](https://coveralls.io/repos/github/ebi-gene-expression-group/scxa-faceted-search-results/badge.svg?branch=master)](https://coveralls.io/github/ebi-gene-expression-group/scxa-faceted-search-results?branch=master)
 
 A lightweight and extensible component to list and filter lists of search results. It receives a URL (as a combination
-of `host` and `resource`) to async-fetch the results, and a React component to visualise each element (e.g. a card).
+of `host` and `resource`) to async-fetch the results, and a React component class to visualise each element (e.g. a
+card).
 
 The only imposed contract is that the JSON payload contains a `results` array where each element is an object
 containing, in turn, a mandatory `element` object of arbitrary shape (the result itself) with an optional array of
 `facets` (objects with the fields `group`, `value` and `label`). The facets are used to render a sidebar on the left as
 a set of filtering controls. Filter groups can be displayed either as searchable, multiselect dropdown lists
-(the default), or as checkboxes. You can optionally hide group titles.
+(the default), or as checkboxes.
 
-The prop `ResultElementComponent` must be coupled to the shape of your `element` objects to be shown correctly.
+The prop `ResultElementClass` must be coupled to the shape of your `element` objects to be shown correctly.
+
+The sidebar disables/hides options in order to avoid combinations that would produce empty results. However it is not
+100% foolproof since you can arrive at a no results state by unchecking options, but you disabling an already chosen
+facet is bad UX.
 
 # Try it out
 Just run [webpack-serve](https://github.com/webpack-contrib/webpack-serve):
