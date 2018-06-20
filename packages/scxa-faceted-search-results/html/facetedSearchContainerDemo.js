@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-import FilterList from '../src/FilterList'
+import FacetedSearchContainer from '../src/FacetedSearchContainer'
 import EpisodeCard from './EpisodeCard'
 
 const render = (target) => {
@@ -134,7 +134,10 @@ const render = (target) => {
   ]
 
   ReactDOM.render(
-    <FilterList results={episodes} ResultElementComponent={EpisodeCard} checkboxFacetGroups={[`Season`]} resultsMessage={`Search results`}/>,
+    <FacetedSearchContainer results={episodes}
+                            ResultElementClass={EpisodeCard}
+                            checkboxFacetGroups={[`Season`]}
+                            resultsMessage={`Search results`}/>,
     document.getElementById(target))
 }
 

@@ -10,121 +10,154 @@ exports[`CheckboxFacetGroup matches snapshot 1`] = `
   <div>
     <input
       checked={false}
+      disabled={false}
       onChange={[Function]}
       type="checkbox"
       value="supernova"
     />
-    <label>
+    <label
+      style={Object {}}
+    >
       Supernova
     </label>
   </div>
   <div>
     <input
       checked={false}
+      disabled={false}
       onChange={[Function]}
       type="checkbox"
       value="noob-noob"
     />
-    <label>
+    <label
+      style={Object {}}
+    >
       Noob-Noob
     </label>
   </div>
   <div>
     <input
       checked={false}
+      disabled={false}
       onChange={[Function]}
       type="checkbox"
       value="vance_maximus"
     />
-    <label>
+    <label
+      style={Object {}}
+    >
       Vance Maximus
     </label>
   </div>
   <div>
     <input
       checked={false}
+      disabled={false}
       onChange={[Function]}
       type="checkbox"
       value="alan_rails"
     />
-    <label>
+    <label
+      style={Object {}}
+    >
       Alan Rails
     </label>
   </div>
   <div>
     <input
       checked={false}
+      disabled={false}
       onChange={[Function]}
       type="checkbox"
       value="crocubot"
     />
-    <label>
+    <label
+      style={Object {}}
+    >
       Crocubot
     </label>
   </div>
   <div>
     <input
       checked={false}
+      disabled={false}
       onChange={[Function]}
       type="checkbox"
       value="million_ants"
     />
-    <label>
+    <label
+      style={Object {}}
+    >
       Million Ants
     </label>
   </div>
   <div>
     <input
       checked={false}
+      disabled={false}
       onChange={[Function]}
       type="checkbox"
       value="morty_smith"
     />
-    <label>
+    <label
+      style={Object {}}
+    >
       Morty Smith
     </label>
   </div>
   <div>
     <input
       checked={false}
+      disabled={false}
       onChange={[Function]}
       type="checkbox"
       value="rick_sanchez"
     />
-    <label>
+    <label
+      style={Object {}}
+    >
       Rick Sanchez
     </label>
   </div>
   <div>
     <input
       checked={false}
+      disabled={false}
       onChange={[Function]}
       type="checkbox"
       value="lady_katana"
     />
-    <label>
+    <label
+      style={Object {}}
+    >
       Lady Katana
     </label>
   </div>
   <div>
     <input
       checked={false}
+      disabled={false}
       onChange={[Function]}
       type="checkbox"
       value="calypso"
     />
-    <label>
+    <label
+      style={Object {}}
+    >
       Calypso
     </label>
   </div>
   <div>
     <input
       checked={false}
+      disabled={false}
       onChange={[Function]}
       type="checkbox"
       value="diablo_verde"
     />
-    <label>
+    <label
+      style={Object {}}
+    >
       Diablo Verde
     </label>
   </div>

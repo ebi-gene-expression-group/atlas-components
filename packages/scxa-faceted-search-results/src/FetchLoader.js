@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import URI from 'urijs'
 
-import FilterList from './FilterList'
+import FacetedSearchContainer from './FacetedSearchContainer'
 
 const _fetch = async (host, resource) => {
   const url = URI(resource, host).toString()
@@ -47,7 +47,7 @@ class FetchLoader extends React.Component {
   }
 
   render() {
-    const {ResultElementComponent, noResultsMessage, resultsMessage} = this.props
+    const {ResultElementClass, noResultsMessage, resultsMessage} = this.props
     const {data, loading, error} = this.state
 
     return(
@@ -58,7 +58,9 @@ class FetchLoader extends React.Component {
           <p>Loading, please wait...</p>
         </div> :
         data.results && data.results.length > 0 ?
-          <FilterList {...data} ResultElementComponent={ResultElementComponent} resultsMessage={resultsMessage}/> :
+          <FacetedSearchContainer {...data}
+                                  ResultElementClass={ResultElementClass}
+                                  resultsMessage={resultsMessage}/> :
           <div className={`row column`}>
             <p>{noResultsMessage}</p>
           </div>
@@ -114,7 +116,7 @@ class FetchLoader extends React.Component {
 FetchLoader.propTypes = {
   host: PropTypes.string.isRequired,
   resource: PropTypes.string.isRequired,
-  ResultElementComponent: PropTypes.func.isRequired,
+  ResultElementClass: PropTypes.func.isRequired,
   noResultsMessage: PropTypes.string,
   resultsMessage: PropTypes.string
 }

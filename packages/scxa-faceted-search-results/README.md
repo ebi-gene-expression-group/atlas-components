@@ -13,7 +13,31 @@ a set of filtering controls. Filter groups can be displayed either as searchable
 
 The prop `ResultElementComponent` must be coupled to the shape of your `element` objects to be shown correctly.
 
-Detailed information coming soon!
+# Try it out
+Just run [webpack-serve](https://github.com/webpack-contrib/webpack-serve):
+```
+npx webpack-serve ./webpack-serve.config.js
+```
+
+# Combining with the EBI Visual Framework
+React-Select allows you to style the `div` that encloses the `input` element, but not the `input` element itself.
+Therefore it’s convenient to add the snippet below to override the styling set by the
+[EBI Visual Framework](https://github.com/ebiwd/EBI-Framework) for `input` elements.
+```
+.input-clear input, .input-clear input:focus {
+  height: unset;
+  box-shadow: none;
+  margin: 0;
+}
+```
+At the time of writing this applies to the most recent version (v1.3). Wrapping these styles within the appropriate
+`div` selector is sufficient. See https://github.com/ebi-gene-expression-group/scxa-faceted-search-results/blob/master/html/filter-list.html for a
+working example.
+
+# A note about building with Webpack
+The component uses `async`/`await` to fetch the JSON payload from the server. This requires to prefix the entry with
+`babel-polyfill`. If you are already using an equivalent polyfill or
+[Runtime transform](http://babeljs.io/docs/plugins/transform-runtime/) you may skip this.
 
 ## Example
 [Demo here](https://ebi-gene-expression-group.github.io/scxa-faceted-search-results/html/filter-list.html).

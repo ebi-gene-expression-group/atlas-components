@@ -7,7 +7,7 @@ const EpisodeCard = ({title}) =>
   </div>
 
 EpisodeCard.propTypes = {
-  text: PropTypes.string.isRequired
+  title: PropTypes.string.isRequired
 }
 
 export default EpisodeCard

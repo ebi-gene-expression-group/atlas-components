@@ -1,7 +1,0 @@
-/* Unfortunately we need to set some EBI VF overrides here because it applies styles to elements deper than
-React-Select’s APIs (e.g. the div that encloses the input rather than the input itself) */
-.input-clear input, .input-clear input:focus {
-  height: unset;
-  box-shadow: none;
-  margin: 0;
-}

@@ -4,7 +4,7 @@ import Enzyme from 'enzyme'
 import {mount} from 'enzyme'
 import Adapter from 'enzyme-adapter-react-16'
 
-import {getRandomInt, vindicators} from './TestUtils'
+import {getRandomInt, episodes} from './TestUtils'
 
 import FilterSidebar from '../src/FilterSidebar'
 import CheckboxFacetGroup from '../src/facetgroups/CheckboxFacetGroup'
@@ -13,32 +13,28 @@ import MultiselectDropdownFacetGroup from '../src/facetgroups/MultiselectDropdow
 Enzyme.configure({ adapter: new Adapter() })
 
 describe(`FilterSidebar`, () => {
+  const allFacets = episodes.reduce((acc, episode) => acc.concat(episode.facets), [])
+  const uniqueFacets =
+    allFacets
+      .filter((facet, index) => allFacets.findIndex((thatFacet) => facet.value === thatFacet.value) === index)
+      .map((facet) => ({
+        ...facet,
+        disabled: false
+      }))
+
   const props = {
-    facets: [
-      ...vindicators,
-      {
-        group: `Status`,
-        value: `deceased`,
-        label: `Deceased`
-      }
-    ],
-    checkboxFacetGroups: [`Status`],
+    facets: uniqueFacets,
+    checkboxFacetGroups: [`Season`],
     onChange: () => {}
   }
 
-  test(`Checkbox filters are shown above dropdown filters`, () => {
-    const wrapper = mount(<FilterSidebar {...props} />)
-    expect(wrapper.find(`h4`).first().text()).toEqual(`Status`)
-    expect(wrapper.find(`h4`).last().text()).toEqual(vindicators[getRandomInt(0, vindicators.length)].group)
+  test(`shows checkbox facet groups above dropdown filters`, () => {
+    const groups = [...new Set(uniqueFacets.map((facet) => facet.group))]
+    const randomCheckboxFacetGroup = groups[getRandomInt(0, groups.length)]
+    const wrapper = mount(<FilterSidebar {...props} checkboxFacetGroups={[randomCheckboxFacetGroup]} />)
+    expect(wrapper.find(`h4`).first().text()).toEqual(randomCheckboxFacetGroup)
+    expect(wrapper.find(`h4`).last().text()).not.toEqual(randomCheckboxFacetGroup)
   }),
-
-  test(`doesn’t display duplicates`, () => {
-    const dupedFacets = [...vindicators, ...vindicators, props.facets[props.facets.length - 1], props.facets[props.facets.length - 1]]
-    const wrapper = mount(<FilterSidebar {...props} facets={dupedFacets} />)
-    expect(wrapper.props().facets).toHaveLength(vindicators.length * 2 + 2)
-    expect(wrapper.find(CheckboxFacetGroup).props().facets).toHaveLength(1)
-    expect(wrapper.find(MultiselectDropdownFacetGroup).props().facets).toHaveLength(vindicators.length)
-  })
 
   test(`matches snapshot`, () => {
     const tree = renderer.create(<FilterSidebar {...props}/>).toJSON()

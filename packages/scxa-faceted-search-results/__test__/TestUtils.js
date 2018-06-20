@@ -18,17 +18,17 @@ const getRandomInt = (min, max) => {
 }
 
 const vindicators = [
-  { group:`Vindicator`, value: `supernova`, label: `Supernova`},
-  { group:`Vindicator`, value: `noob-noob`, label: `Noob-Noob` },
-  { group:`Vindicator`, value: `vance_maximus`, label: `Vance Maximus`},
-  { group:`Vindicator`, value: `alan_rails`, label: `Alan Rails`},
-  { group:`Vindicator`, value: `crocubot`, label: `Crocubot` },
-  { group:`Vindicator`, value: `million_ants`, label: `Million Ants`},
-  { group:`Vindicator`, value: `morty_smith`, label: `Morty Smith`},
-  { group:`Vindicator`, value: `rick_sanchez`, label: `Rick Sanchez`},
-  { group:`Vindicator`, value: `lady_katana`, label: `Lady Katana`},
-  { group:`Vindicator`, value: `calypso`, label: `Calypso`},
-  { group:`Vindicator`, value: `diablo_verde`, label: `Diablo Verde`}
+  { group:`Vindicator`, value: `supernova`, label: `Supernova`, disabled: false},
+  { group:`Vindicator`, value: `noob-noob`, label: `Noob-Noob`, disabled: false},
+  { group:`Vindicator`, value: `vance_maximus`, label: `Vance Maximus`, disabled: false},
+  { group:`Vindicator`, value: `alan_rails`, label: `Alan Rails`, disabled: false},
+  { group:`Vindicator`, value: `crocubot`, label: `Crocubot`, disabled: false},
+  { group:`Vindicator`, value: `million_ants`, label: `Million Ants`, disabled: false},
+  { group:`Vindicator`, value: `morty_smith`, label: `Morty Smith`, disabled: false},
+  { group:`Vindicator`, value: `rick_sanchez`, label: `Rick Sanchez`, disabled: false},
+  { group:`Vindicator`, value: `lady_katana`, label: `Lady Katana`, disabled: false},
+  { group:`Vindicator`, value: `calypso`, label: `Calypso`, disabled: false},
+  { group:`Vindicator`, value: `diablo_verde`, label: `Diablo Verde`, disabled: false}
 ]
 
 const episodes = [
@@ -158,7 +158,5 @@ const episodes = [
     ]
   }
 ]
-
-
 
 export {getRandomInt, vindicators, episodes, EpisodeCard}

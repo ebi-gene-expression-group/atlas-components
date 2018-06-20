@@ -14,7 +14,6 @@ Enzyme.configure({ adapter: new Adapter() })
 
 const props = {
   facetGroupName: `Vindicators`,
-  hideName: false,
   facets: [],
   onChange: () => {}
 }
@@ -32,11 +31,23 @@ describe(`CheckboxFacetGroup`, () => {
     expect(wrapper.find({ type: `checkbox` })).toHaveLength(props.facets.length)
     expect(wrapper.find(`h4`)).toHaveLength(1)
     expect(wrapper.find(`h4`).text()).toEqual(props.facetGroupName)
+    // All checkboxes are enabled, cf. with next test
+    const inputProps = wrapper.find(`input`).map((labelWrapper) => labelWrapper.props())
+    inputProps.every((inputProp) => expect(inputProp).toHaveProperty(`disabled`, false))
+
+    const labelStyles = wrapper.find(`label`).map((labelWrapper) => labelWrapper.props().style)
+    labelStyles.every((labelStyle) => expect(labelStyle).not.toHaveProperty(`color`))
   })
 
-  test(`can hide the header`, () => {
-    const wrapper = mount(<CheckboxFacetGroup {...props} hideName={true} />)
-    expect(wrapper.find(`h4`)).toHaveLength(0)
+  test(`displays disabled check boxes greyed out`, () => {
+    props.facets = props.facets.map(e => ({...e, disabled: true}))
+    const wrapper = mount(<CheckboxFacetGroup {...props} />)
+
+    const inputProps = wrapper.find(`input`).map((labelWrapper) => labelWrapper.props())
+    inputProps.every((inputProp) => expect(inputProp).toHaveProperty(`disabled`, true))
+
+    const labelStyles = wrapper.find(`label`).map((labelWrapper) => labelWrapper.props().style)
+    labelStyles.every((labelStyle) => expect(labelStyle).toHaveProperty(`color`, `lightgrey`))
   })
 
   test(`callback is called when a checkbox is checked/unchecked with the right arguments`, () => {
@@ -45,7 +56,9 @@ describe(`CheckboxFacetGroup`, () => {
     const wrapper = mount(<CheckboxFacetGroup {...props} onChange={mockCallback} />)
     wrapper.find({ type: `checkbox` }).at(randomCheckboxIndex).simulate(`change`)
     expect(mockCallback.mock.calls.length).toBe(1)
-    expect(mockCallback.mock.calls[0]).toEqual([props.facets[randomCheckboxIndex].group, [props.facets[randomCheckboxIndex]]])
+    expect(mockCallback.mock.calls[0]).toEqual([
+      props.facets[randomCheckboxIndex].group,
+      [props.facets[randomCheckboxIndex]]])
     wrapper.find({ type: `checkbox` }).at(randomCheckboxIndex).simulate(`change`)
     expect(mockCallback.mock.calls.length).toBe(2)
     expect(mockCallback.mock.calls[1]).toEqual([props.facets[randomCheckboxIndex].group, []])
@@ -71,11 +84,6 @@ describe(`MultiselectDropdownFacetGroup`, () => {
     while (props.facets.length === 0) {
       props.facets = vindicators.filter((vindicator) => Math.random() > 0.5)
     }
-  })
-
-  test(`can hide the header`, () => {
-    const wrapper = mount(<CheckboxFacetGroup {...props} hideName={true} />)
-    expect(wrapper.find(`h4`)).toHaveLength(0)
   })
 
   test(`callback includes facet name in arguments`, () => {
