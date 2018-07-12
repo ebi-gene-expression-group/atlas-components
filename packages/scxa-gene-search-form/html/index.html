@@ -1,30 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Demo</title>
-
-    <link rel="stylesheet" href="https://www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/libraries/foundation-6/css/foundation.css" type="text/css" media="all" />
-    <link rel="stylesheet" href="https://www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/css/ebi-global.css" type="text/css" media="all" />
-    <link rel="stylesheet" href="https://www.ebi.ac.uk/web_guidelines/EBI-Icon-fonts/v1.2/fonts.css" type="text/css" media="all" />
-
+    <title>Single Cell Expression Atlas Gene Search Form demo</title>
+    <link rel="stylesheet" href="https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/css/ebi-global.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="https://ebi.emblstatic.net/web_guidelines/EBI-Icon-fonts/v1.2/fonts.css" type="text/css" media="all" />
     <link rel="stylesheet" href="https://www.ebi.ac.uk/gxa/resources/css/foundation/atlas.css" type="text/css" media="all">
 </head>
 
 <body>
-<div id="wrapper" class="row">
-    <div id="content" class="small-12 columns">
-        <div id="target">
-        </div>
+  <div class="row column">
+
+    <div class="row column">
+      <h1>Gene Search Form with species selection</h1>
+      <div class="row column">
+        <div id="species_select"></div>
+      </div>
     </div>
-</div>
+
+    <hr>
+
+    <div class="row column">
+      <h1>Gene Search Form without species selection</h1>
+      <div class="row column">
+        <h2>All species, <tt>defaultSpecies: undefined</tt></h2>
+        <div id="no_species_select"></div>
+      </div>
+
+      <div class="row column">
+        <h2>Human, <tt>defaultSpecies: 'Homo sapiens'</tt></h2>
+        <div id="no_species_select_human"></div>
+      </div>
+    </div>
+  </div>
 </body>
 
-<script src="vendorCommons.bundle.js"></script>
-<script src="myComponent.bundle.js"></script>
+<script src="../dist/vendors.bundle.js"></script>
+<script src="../dist/geneSearchForm.bundle.js"></script>
+<script src="../dist/geneSearchFormDemo.bundle.js"></script>
 
-<!-- Set to http://localhost:8080/gxa/ or http://localhost:8080/gxa_sc/ -- Remember the trailing slash! -->
 <script>
-  myComponent.render({}, 'target')
+
+  geneSearchFormDemo.render({
+    atlasUrl: 'http://localhost:8080/gxa/sc/',
+    actionEndpoint: 'search',
+    suggesterEndpoint: 'json/suggestions',
+    initialValue: 'ENS',
+    wrapperClassName: 'row',
+    autocompleteClassName: 'small-8 columns',
+    enableSpeciesSelect: true,
+    speciesSelectClassName: 'small-4 columns'
+  }, 'species_select');
+
+  geneSearchFormDemo.render({
+    atlasUrl: 'http://localhost:8080/gxa/sc/',
+    actionEndpoint: 'search',
+    suggesterEndpoint: 'json/suggestions',
+    initialValue: 'zinc',
+    wrapperClassName: 'row',
+    autocompleteClassName: 'small-8 columns',
+    enableSpeciesSelect: false,
+    speciesSelectClassName: 'small-4 columns',
+  }, 'no_species_select');
+
+  geneSearchFormDemo.render({
+    atlasUrl: 'http://localhost:8080/gxa/sc/',
+    actionEndpoint: 'search',
+    suggesterEndpoint: 'json/suggestions',
+    initialValue: 'zinc',
+    wrapperClassName: 'row column',
+    enableSpeciesFilter: false,
+    defaultSpecies: 'Homo sapiens'
+  }, 'no_species_select_human');
+
 </script>
 
 </html>
