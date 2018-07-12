@@ -2,7 +2,7 @@ const CleanWebpackPlugin = require(`clean-webpack-plugin`)
 
 module.exports = {
   entry: {
-    scxaGeneSearchFormDemo: [`./html/render.js`],
+    geneSearchFormDemo: [`babel-polyfill`, `./html/render.js`],
   },
 
   plugins: [
@@ -21,7 +21,7 @@ module.exports = {
       cacheGroups: {
         facetedSearch: {
           test: /[\\/]src[\\/]/,
-          name: `scxaGeneSearchForm`,
+          name: `geneSearchForm`,
           priority: -20
         },
         vendors: {
