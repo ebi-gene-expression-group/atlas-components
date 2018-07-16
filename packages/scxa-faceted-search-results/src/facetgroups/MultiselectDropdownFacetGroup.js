@@ -39,6 +39,10 @@ const ebiVfSelectStyles = {
     cursor: state.isDisabled ? `not-allowed` : `default`,
     display: `flex`
   }),
+  multiValueLabel: (styles, state) => ({
+    ...styles,
+    whiteSpace: `pre-line`
+  }),
   menu: (styles, state) => ({
     ...styles,
     borderRadius: `0`,

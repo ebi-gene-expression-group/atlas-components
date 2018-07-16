@@ -120,12 +120,12 @@ class FacetedSearchContainer extends React.Component {
       <div className={`row expanded`}>
         {
           facets.length > 0 &&
-          <div className={`small-12 medium-2 columns`}>
+          <div className={`small-12 medium-4 columns`}>
             <FilterSidebar {...{facets, checkboxFacetGroups}} onChange={this._handleChange}/>
           </div>
         }
 
-        <div className={`small-12 medium-10 columns`}>
+        <div className={`small-12 medium-8 columns`}>
           <FilterList {...{resultsMessage, ResultElementClass}}
                       filteredResults={this._filterResults(selectedFacets)}/>
         </div>
