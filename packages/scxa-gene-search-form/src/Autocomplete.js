@@ -33,11 +33,11 @@ const ebiVfSelectStyles = {
   })
 }
 
-const _asyncFetchOptions = (atlasUrl, suggesterEndpoint, selectedSpecies) =>
+const _asyncFetchOptions = (atlasUrl, suggesterEndpoint, selectedSpecies, allSpecies) =>
   async (inputValue) => {
     const suggesterUrl = URI(suggesterEndpoint, atlasUrl).search({
       query: inputValue,
-      species: selectedSpecies
+      species: selectedSpecies || allSpecies.join(`,`)
     }).toString()
 
     const response = await fetch(suggesterUrl)
@@ -73,9 +73,9 @@ const _asyncFetchOptions = (atlasUrl, suggesterEndpoint, selectedSpecies) =>
     throw new Error(`${suggesterUrl} => ${response.status}`)
   }
 
-const Autocomplete = ({atlasUrl, suggesterEndpoint, selectedSpecies, onChange}) => {
+const Autocomplete = ({atlasUrl, suggesterEndpoint, selectedSpecies, allSpecies, onChange}) => {
 
-  const loadOptions = _asyncFetchOptions(atlasUrl, suggesterEndpoint, selectedSpecies)
+  const loadOptions = _asyncFetchOptions(atlasUrl, suggesterEndpoint, selectedSpecies, allSpecies)
 
   return (
     [
@@ -85,14 +85,14 @@ const Autocomplete = ({atlasUrl, suggesterEndpoint, selectedSpecies, onChange}) 
                             onChange={onChange}
                             loadOptions={loadOptions}
                             defaultOptions
+                            allowCreateWhileLoading={true}
                             isClearable={true}
                             createOptionPosition={`first`}
                             formatCreateLabel={(inputValue) => inputValue}
                             isValidNewOption={(inputValue, selectValue, selectOptions) => inputValue.trim() !== ``}
-                            inputId={`geneQuery`}
                             placeholder={``}
                             // isMulti
-                            name={`geneId`}
+                            name={`geneQuery`}
                             key={`autocomplete`}/>
     ]
   )
@@ -102,6 +102,7 @@ Autocomplete.propTypes = {
   atlasUrl: PropTypes.string.isRequired,
   suggesterEndpoint: PropTypes.string.isRequired,
   selectedSpecies: PropTypes.string,
+  allSpecies: PropTypes.arrayOf(PropTypes.string).isRequired,
   onChange: PropTypes.func.isRequired
 }
 
