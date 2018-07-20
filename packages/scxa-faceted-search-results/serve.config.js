@@ -8,7 +8,7 @@ module.exports.output.publicPath = `/dist`
 
 module.exports.serve = {
   content: path.resolve(__dirname, `html`),
-  dev: {
+  devMiddleware: {
     publicPath: `/dist/`
   },
 
