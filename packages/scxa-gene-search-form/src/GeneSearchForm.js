@@ -45,7 +45,11 @@ class GeneSearchForm extends React.Component {
           </div>
           <div className={`row`}>
               <div className={`small-12 columns`}>
-                  <button className={`button`} type={`submit`} value={`Search`}>Search</button>
+                  <button type={`Submit`}
+                          className={`button`}
+                          disabled={!this.state.query.term || this.state.query.term.trim() === ``}>
+                          Search
+                  </button>
               </div>
           </div>
         </form>
