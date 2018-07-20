@@ -63,6 +63,7 @@ class FetchLoader extends React.Component {
                                   resultsMessage={resultsMessage}/> :
           <div className={`row column`}>
             <p>{noResultsMessage}</p>
+            { data.reason && <p>{data.reason}</p> }
           </div>
     )
   }
@@ -90,7 +91,7 @@ class FetchLoader extends React.Component {
             data: null,
             loading: false,
             error: {
-              description: `There was a problem communicating with the server. Please try again later.`,
+              description: `There was a problem processing your request. Please try again later.`,
               name: error.name,
               message: error.message
             }
