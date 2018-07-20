@@ -5,6 +5,14 @@
     <link rel="stylesheet" href="https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/css/ebi-global.css" type="text/css" media="all" />
     <link rel="stylesheet" href="https://ebi.emblstatic.net/web_guidelines/EBI-Icon-fonts/v1.2/fonts.css" type="text/css" media="all" />
     <link rel="stylesheet" href="https://www.ebi.ac.uk/gxa/resources/css/foundation/atlas.css" type="text/css" media="all">
+
+    <style type="text/css">
+      #species_select input, #no_species_select input, #no_species_select_human input {
+        height: unset;
+        box-shadow: none;
+        margin: 0;
+      }
+    </style>
 </head>
 
 <body>
@@ -43,34 +51,35 @@
   geneSearchFormDemo.render({
     atlasUrl: 'http://localhost:8080/gxa/sc/',
     actionEndpoint: 'search',
-    suggesterEndpoint: 'json/suggestions',
+    suggesterEndpoint: 'json/suggestions/gene_ids',
     initialValue: 'ENS',
     wrapperClassName: 'row',
     autocompleteClassName: 'small-8 columns',
     enableSpeciesSelect: true,
+    speciesEndpoint: 'json/suggestions/species',
     speciesSelectClassName: 'small-4 columns'
   }, 'species_select');
 
-  geneSearchFormDemo.render({
-    atlasUrl: 'http://localhost:8080/gxa/sc/',
-    actionEndpoint: 'search',
-    suggesterEndpoint: 'json/suggestions',
-    initialValue: 'zinc',
-    wrapperClassName: 'row',
-    autocompleteClassName: 'small-8 columns',
-    enableSpeciesSelect: false,
-    speciesSelectClassName: 'small-4 columns',
-  }, 'no_species_select');
-
-  geneSearchFormDemo.render({
-    atlasUrl: 'http://localhost:8080/gxa/sc/',
-    actionEndpoint: 'search',
-    suggesterEndpoint: 'json/suggestions',
-    initialValue: 'zinc',
-    wrapperClassName: 'row column',
-    enableSpeciesFilter: false,
-    defaultSpecies: 'Homo sapiens'
-  }, 'no_species_select_human');
+  // geneSearchFormDemo.render({
+  //   atlasUrl: 'http://localhost:8080/gxa/sc/',
+  //   actionEndpoint: 'search',
+  //   suggesterEndpoint: 'json/suggestions',
+  //   initialValue: 'zinc',
+  //   wrapperClassName: 'row',
+  //   autocompleteClassName: 'small-8 columns',
+  //   enableSpeciesSelect: false,
+  //   speciesSelectClassName: 'small-4 columns',
+  // }, 'no_species_select');
+  //
+  // geneSearchFormDemo.render({
+  //   atlasUrl: 'http://localhost:8080/gxa/sc/',
+  //   actionEndpoint: 'search',
+  //   suggesterEndpoint: 'json/suggestions',
+  //   initialValue: 'zinc',
+  //   wrapperClassName: 'row column',
+  //   enableSpeciesFilter: false,
+  //   defaultSpecies: 'Homo sapiens'
+  // }, 'no_species_select_human');
 
 </script>
 
