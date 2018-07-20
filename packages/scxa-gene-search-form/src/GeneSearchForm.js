@@ -67,8 +67,8 @@ GeneSearchForm.propTypes = {
 
   enableSpeciesSelect: PropTypes.bool,
   speciesSelectClassName: PropTypes.string,
-  allSpecies: PropTypes.arrayOf(PropTypes.string).isRequired,
-  topSpecies: PropTypes.arrayOf(PropTypes.string).isRequired,
+  allSpecies: PropTypes.arrayOf(PropTypes.string),
+  topSpecies: PropTypes.arrayOf(PropTypes.string),
   defaultSpecies: PropTypes.string,
 
   speciesSelectStatusMessage: PropTypes.string
