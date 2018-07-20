@@ -40,37 +40,35 @@ class GeneSearchForm extends React.Component {
     const {allSpecies, topSpecies} = this.props
 
     return (
-      <div className={wrapperClassName}>
-        <form action={atlasUrl + actionEndpoint} method={`post`}>
-          <div className={`row`}>
-            <div className={autocompleteClassName}>
-              <Autocomplete atlasUrl={atlasUrl}
-                            suggesterEndpoint={suggesterEndpoint}
-                            onChange={this.autocompleteOnChange}
-                            selectedSpecies={this.state.selectedSpecies}
-                            allSpecies={allSpecies}/>
+      <form action={atlasUrl + actionEndpoint} method={`post`}>
+        <div className={wrapperClassName}>
+          <div className={autocompleteClassName}>
+            <Autocomplete atlasUrl={atlasUrl}
+                          suggesterEndpoint={suggesterEndpoint}
+                          onChange={this.autocompleteOnChange}
+                          selectedSpecies={this.state.selectedSpecies}
+                          allSpecies={allSpecies}/>
+          </div>
+          { enableSpeciesSelect &&
+            <div className={speciesSelectClassName}>
+              <SpeciesSelect allSpecies={allSpecies}
+                             topSpecies={topSpecies}
+                             statusMessage={speciesSelectStatusMessage}
+                             selectedValue={this.state.selectedSpecies}
+                             onChange={this.speciesSelectOnChange}/>
             </div>
-            { enableSpeciesSelect &&
-              <div className={speciesSelectClassName}>
-                <SpeciesSelect allSpecies={allSpecies}
-                               topSpecies={topSpecies}
-                               statusMessage={speciesSelectStatusMessage}
-                               selectedValue={this.state.selectedSpecies}
-                               onChange={this.speciesSelectOnChange}/>
-              </div>
-            }
+          }
+        </div>
+        <div className={wrapperClassName}>
+          <div className={`small-12 columns`}>
+            <button type={`Submit`}
+                    className={`button`}
+                    disabled={!this.state.query.term || this.state.query.term.trim() === ``}>
+                    Search
+            </button>
           </div>
-          <div className={`row`}>
-              <div className={`small-12 columns`}>
-                  <button type={`Submit`}
-                          className={`button`}
-                          disabled={!this.state.query.term || this.state.query.term.trim() === ``}>
-                          Search
-                  </button>
-              </div>
-          </div>
-        </form>
-      </div>
+        </div>
+      </form>
     )
   }
 }

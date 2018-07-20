@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://www.ebi.ac.uk/gxa/resources/css/foundation/atlas.css" type="text/css" media="all">
 
     <style type="text/css">
-      #species_select input, #no_species_select input, #no_species_select_human input {
+      #search input, #no_species_select input, #no_species_select_human input {
         height: unset;
         box-shadow: none;
         margin: 0;
@@ -16,27 +16,33 @@
 </head>
 
 <body>
-  <div class="row column">
+  <div class="row expanded column">
+    <div class="row expanded">
+      <ul class="tabs" data-tabs id="search-tabs">
+        <li class="tabs-title is-active"><a href="#search-atlas" aria-selected="true">Search</a></li>
+      </ul>
+    </div>
 
-    <div class="row column">
-      <h1>Gene Search Form with species selection</h1>
-      <div class="row column">
-        <div id="species_select"></div>
-      </div>
+    <div class="tabs-content" data-tabs-content="search-tabs">
+        <div class="tabs-panel is-active " id="search-atlas" style="background-color: #e6e6e6;">
+            <div id="search"></div>
+        </div>
     </div>
 
     <hr>
 
-    <div class="row column">
-      <h1>Gene Search Form without species selection</h1>
+    <div class="row expanded column">
       <div class="row column">
-        <h2>All species, <tt>defaultSpecies: undefined</tt></h2>
-        <div id="no_species_select"></div>
-      </div>
+        <h1>Gene Search Form without species selection</h1>
+        <div class="row column">
+          <h2>All species, <tt>defaultSpecies: undefined</tt></h2>
+          <div id="no_species_select"></div>
+        </div>
 
-      <div class="row column">
-        <h2>Human, <tt>defaultSpecies: 'Homo sapiens'</tt></h2>
-        <div id="no_species_select_human"></div>
+        <div class="row column">
+          <h2>Human, <tt>defaultSpecies: 'Homo sapiens'</tt></h2>
+          <div id="no_species_select_human"></div>
+        </div>
       </div>
     </div>
   </div>
@@ -50,36 +56,38 @@
 
   geneSearchFormDemo.render({
     atlasUrl: 'http://localhost:8080/gxa/sc/',
+    wrapperClassName: 'row expanded',
     actionEndpoint: 'search',
     suggesterEndpoint: 'json/suggestions/gene_ids',
     initialValue: 'ENS',
-    wrapperClassName: 'row',
     autocompleteClassName: 'small-8 columns',
     enableSpeciesSelect: true,
     speciesEndpoint: 'json/suggestions/species',
     speciesSelectClassName: 'small-4 columns'
-  }, 'species_select');
+  }, 'search');
 
-  // geneSearchFormDemo.render({
-  //   atlasUrl: 'http://localhost:8080/gxa/sc/',
-  //   actionEndpoint: 'search',
-  //   suggesterEndpoint: 'json/suggestions',
-  //   initialValue: 'zinc',
-  //   wrapperClassName: 'row',
-  //   autocompleteClassName: 'small-8 columns',
-  //   enableSpeciesSelect: false,
-  //   speciesSelectClassName: 'small-4 columns',
-  // }, 'no_species_select');
-  //
-  // geneSearchFormDemo.render({
-  //   atlasUrl: 'http://localhost:8080/gxa/sc/',
-  //   actionEndpoint: 'search',
-  //   suggesterEndpoint: 'json/suggestions',
-  //   initialValue: 'zinc',
-  //   wrapperClassName: 'row column',
-  //   enableSpeciesFilter: false,
-  //   defaultSpecies: 'Homo sapiens'
-  // }, 'no_species_select_human');
+  geneSearchFormDemo.render({
+    atlasUrl: 'http://localhost:8080/gxa/sc/',
+    wrapperClassName: 'row',
+    actionEndpoint: 'search',
+    suggesterEndpoint: 'json/suggestions/gene_ids',
+    autocompleteClassName: 'small-8 columns',
+    enableSpeciesSelect: false,
+    speciesEndpoint: 'json/suggestions/species',
+    speciesSelectClassName: 'small-4 columns'
+  }, 'no_species_select');
+
+  geneSearchFormDemo.render({
+    atlasUrl: 'http://localhost:8080/gxa/sc/',
+    wrapperClassName: 'row',
+    actionEndpoint: 'search',
+    suggesterEndpoint: 'json/suggestions/gene_ids',
+    autocompleteClassName: 'small-8 columns',
+    enableSpeciesSelect: false,
+    speciesEndpoint: 'json/suggestions/species',
+    speciesSelectClassName: 'small-4 columns',
+    defaultSpecies: 'Homo sapiens'
+  }, 'no_species_select_human');
 
 </script>
 
