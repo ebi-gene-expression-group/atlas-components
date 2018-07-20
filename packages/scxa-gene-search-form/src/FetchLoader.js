@@ -5,7 +5,7 @@ import URI from 'urijs'
 import GeneSearchForm from './GeneSearchForm'
 
 const _fetch = async (host, resource) => {
-  const url = URI(resource, host).segment(`species`).toString()
+  const url = URI(resource, host).toString()
   const response = await fetch(url)
   // The promise returned by fetch may be fulfilled with a 4xx or 5xx return code...
   if (response.ok) {
@@ -70,7 +70,7 @@ class FetchLoader extends React.Component {
   }
 
   componentDidMount() {
-    return this._fetchAndSetState(this.props.atlasUrl, this.props.suggesterEndpoint)
+    return this._fetchAndSetState(this.props.atlasUrl, this.props.speciesEndpoint)
   }
 
   componentDidCatch(error, info) {
@@ -97,6 +97,7 @@ FetchLoader.propTypes = {
   }),
 
   enableSpeciesSelect: PropTypes.bool,
+  speciesEndpoint: PropTypes.string,
   speciesSelectClassName: PropTypes.string,
   defaultSpecies: PropTypes.string
 }
