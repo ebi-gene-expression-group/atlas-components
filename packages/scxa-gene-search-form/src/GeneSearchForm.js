@@ -1,6 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import URI from 'urijs'
 
+import Autocomplete from './Autocomplete'
 import SpeciesSelect from './SpeciesSelect'
 
 class GeneSearchForm extends React.Component {
@@ -21,17 +23,21 @@ class GeneSearchForm extends React.Component {
   render() {
     const {wrapperClassName, actionEndpoint} = this.props
 
-    const {autocompleteClassName} = this.props
+    const {autocompleteClassName, atlasUrl, suggesterEndpoint} = this.props
 
     const {enableSpeciesSelect, speciesSelectClassName, speciesSelectStatusMessage} = this.props
     const {allSpecies, topSpecies} = this.props
 
     return (
       <div className={wrapperClassName}>
-        <form action={actionEndpoint} method={`post`}>
+        <form action={atlasUrl + actionEndpoint} method={`post`}>
           <div className={`row`}>
             <div className={autocompleteClassName}>
-              React-Select goes here...
+              <Autocomplete atlasUrl={atlasUrl}
+                            suggesterEndpoint={suggesterEndpoint}
+                            onChange={this.autocompleteOnChange}
+                            selectedSpecies={this.state.selectedSpecies}
+                            allSpecies={allSpecies}/>
             </div>
             { enableSpeciesSelect &&
               <div className={speciesSelectClassName}>
