@@ -10,10 +10,21 @@ class GeneSearchForm extends React.Component {
     super(props)
 
     this.state = {
+      // A JSON-formatted query object with two fields, term and category
+      query: {},
       selectedSpecies: props.defaultSpecies
     }
 
     this.speciesSelectOnChange = this._speciesSelectOnChange.bind(this)
+    this.autocompleteOnChange = this._autocompleteOnChange.bind(this)
+  }
+
+  _autocompleteOnChange(selectedItem) {
+    this.setState({
+      query: selectedItem ?
+        JSON.parse(selectedItem.value) :
+        {}
+    })
   }
 
   _speciesSelectOnChange(event) {
