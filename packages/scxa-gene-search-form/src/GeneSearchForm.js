@@ -59,8 +59,9 @@ class GeneSearchForm extends React.Component {
 }
 
 GeneSearchForm.propTypes = {
-  wrapperClassName: PropTypes.string,
+  atlasUrl: PropTypes.string.isRequired,
   actionEndpoint: PropTypes.string.isRequired,
+  wrapperClassName: PropTypes.string,
 
   autocompleteClassName: PropTypes.string,
   suggesterEndpoint: PropTypes.string.isRequired,
