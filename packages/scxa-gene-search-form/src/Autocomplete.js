@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import URI from 'urijs'
-import _ from 'lodash'
 
 import AsyncCreatableSelect from 'react-select/lib/AsyncCreatable'
 
@@ -43,32 +42,7 @@ const _asyncFetchOptions = (atlasUrl, suggesterEndpoint, selectedSpecies, allSpe
     const response = await fetch(suggesterUrl)
     if (response.ok) {
       const json = await response.json()
-
-      const groups =
-        _(json)
-          .groupBy(`category`)
-          .toPairs()
-          .map((biArray) => ({
-            label: biArray[0],
-            options: biArray[1].map(element => ({
-              value: JSON.stringify(element),
-              label: `${element.value}`}))
-          }))
-          .value()
-          // .map(element => ({
-          //   value: JSON.stringify(element),
-          //   label: `${element.value} (${element.category})`}))
-          // .groupBy(`category`)
-        //label: Object.keys(obj)[0],
-        // options: Object.values(obj)[0].map(element => ({ value: JSON.stringify(element), label: element.value }))
-      // }))
-      console.log(groups)
-
-      return groups
-      // return json.map(element => ({
-      //   value: JSON.stringify(element),
-      //   label: `${element.value} (${element.category})`
-      // }))
+      return json
     }
     throw new Error(`${suggesterUrl} => ${response.status}`)
   }
@@ -90,6 +64,7 @@ const Autocomplete = ({atlasUrl, suggesterEndpoint, selectedSpecies, allSpecies,
                             createOptionPosition={`first`}
                             formatCreateLabel={(inputValue) => inputValue}
                             isValidNewOption={(inputValue, selectValue, selectOptions) => inputValue.trim() !== ``}
+                            getNewOptionData={(inputValue, optionLabel) => ({label : inputValue, value: JSON.stringify({term: inputValue, category: `q`})}) }
                             placeholder={``}
                             // isMulti
                             name={`geneQuery`}
