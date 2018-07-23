@@ -47,7 +47,7 @@ const _asyncFetchOptions = (atlasUrl, suggesterEndpoint, selectedSpecies, allSpe
     throw new Error(`${suggesterUrl} => ${response.status}`)
   }
 
-const Autocomplete = ({atlasUrl, suggesterEndpoint, selectedSpecies, allSpecies, onChange}) =>
+const Autocomplete = ({atlasUrl, suggesterEndpoint, selectedSpecies, allSpecies, onChange, defaultValue}) =>
 [
   <label key={`label`}>Gene ID or gene symbol</label>,
   <AsyncCreatableSelect components={{ DropdownIndicator: null, IndicatorSeparator: null }}
@@ -65,7 +65,8 @@ const Autocomplete = ({atlasUrl, suggesterEndpoint, selectedSpecies, allSpecies,
                         placeholder={``}
                         // isMulti
                         name={`geneQuery`}
-                        key={`autocomplete`}/>
+                        key={`autocomplete`}
+                        defaultValue={{label: defaultValue.queryTerm, value: JSON.stringify(defaultValue)}}/>
 ]
 
 Autocomplete.propTypes = {
@@ -73,7 +74,11 @@ Autocomplete.propTypes = {
   suggesterEndpoint: PropTypes.string.isRequired,
   selectedSpecies: PropTypes.string,
   allSpecies: PropTypes.arrayOf(PropTypes.string),
-  onChange: PropTypes.func.isRequired
+  onChange: PropTypes.func.isRequired,
+  defaultValue: PropTypes.shape({
+    queryTerm: PropTypes.string,
+    category: PropTypes.string
+  }),
 }
 
 Autocomplete.defaultProps = {

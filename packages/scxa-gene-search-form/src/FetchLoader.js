@@ -92,7 +92,7 @@ FetchLoader.propTypes = {
   autocompleteClassName: PropTypes.string,
   suggesterEndpoint: PropTypes.string.isRequired,
   defaultValue: PropTypes.shape({
-    queryTerm: PropTypes.string.isRequired,
+    queryTerm: PropTypes.string,
     category: PropTypes.string
   }),
 
