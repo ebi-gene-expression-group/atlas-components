@@ -77,7 +77,6 @@ Autocomplete.propTypes = {
 }
 
 Autocomplete.defaultProps = {
-  selectedSpecies: ``,
   allSpecies: []
 }
 
