@@ -47,6 +47,7 @@
     "clean-webpack-plugin": "^0.1.19",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
+    "fetch-mock": "^6.5.2",
     "jest": "^23.4.1",
     "react-test-renderer": "^16.4.1",
     "webpack": "^4.16.2",

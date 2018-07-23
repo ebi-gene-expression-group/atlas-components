@@ -3,25 +3,37 @@ import renderer from 'react-test-renderer'
 import Enzyme from 'enzyme'
 import {shallow, mount, render} from 'enzyme'
 import Adapter from 'enzyme-adapter-react-16'
+import fetchMock from 'fetch-mock'
+import URI from 'urijs'
 
 import Autocomplete from '../src/Autocomplete.js'
 import AsyncCreatableSelect from 'react-select/lib/AsyncCreatable'
 
 Enzyme.configure({ adapter: new Adapter() })
 
+const props = {
+  atlasUrl: `foo/`,
+  actionEndpoint: `bar`,
+  suggesterEndpoint: `suggest`,
+  onChange: () => {}
+}
+
+const defaultValue = {
+  term: `foo`,
+  category: `bar`
+}
+
+const species = [
+  `Meeseek`,
+  `Gromflomite`,
+  `Cromulon`,
+  `Zigerion`,
+  `Moopian`,
+  `Bliznarvian`,
+  `Greebybobe`
+]
+
 describe(`Autocomplete`, () => {
-  const props = {
-    atlasUrl: `foo/`,
-    actionEndpoint: `bar`,
-    suggesterEndpoint: `suggest`,
-    onChange: () => {}
-  }
-
-  const defaultValue = {
-    term: `foo`,
-    category: `bar`
-  }
-
   test(`displays the default value`, () => {
      const wrapper = mount(<Autocomplete {...props} defaultValue={defaultValue}/>)
      expect(wrapper.find(AsyncCreatableSelect).props().defaultValue).toEqual({
@@ -29,21 +41,28 @@ describe(`Autocomplete`, () => {
        value: JSON.stringify(defaultValue)
      })
   })
+})
 
-  // test(`should be selectable by class "foo"`, () => {
-  //   expect(shallow(<GeneSearchForm />).is(`.foo`)).toBe(true)
-  // })
-  //
-  // test(`should mount in a full DOM`, () => {
-  //   expect(mount(<GeneSearchForm />).find(`.foo`)).toHaveLength(1)
-  // })
-  //
-  // test(`should render to static HTML`, () => {
-  //   expect(render(<GeneSearchForm />).text()).toEqual(`Bar`)
-  // })
-  //
-  // test(`matches snapshot`, () => {
-  //   const tree = renderer.create(<GeneSearchForm />).toJSON()
-  //   expect(tree).toMatchSnapshot()
-  // })
+describe(`Autocomplete suggestions fetch`, () => {
+  beforeEach(() => {
+    fetchMock.restore()
+  })
+
+  test(`calls suggester with selected species as request parameter`, () => {
+    fetchMock.get(`*`, [])
+
+    const randomSpecies = species[Math.floor(Math.random() * species.length)]
+    const wrapper = mount(<Autocomplete {...props} selectedSpecies={randomSpecies}/>)
+    expect(fetchMock.calls()).toHaveLength(1)
+    expect(URI(fetchMock.lastUrl()).search(true)).toHaveProperty(`species`, randomSpecies)
+  })
+
+  test(`calls suggester with all species as request parameter if no selected species is provided`, () => {
+    fetchMock.get(`*`, [])
+
+    const wrapper = mount(<Autocomplete {...props} allSpecies={species}/>)
+    expect(fetchMock.calls()).toHaveLength(1)
+    expect(URI(fetchMock.lastUrl()).search(true)).toHaveProperty(`species`, species.join(`,`))
+
+  })
 })
