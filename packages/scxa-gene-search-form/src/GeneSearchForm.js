@@ -40,7 +40,7 @@ class GeneSearchForm extends React.Component {
     const {allSpecies, topSpecies} = this.props
 
     return (
-      <form action={atlasUrl + actionEndpoint} method={`post`}>
+      <form action={URI(actionEndpoint, atlasUrl).toString()} method={`post`}>
         <div className={wrapperClassName}>
           <div className={autocompleteClassName}>
             <Autocomplete atlasUrl={atlasUrl}
