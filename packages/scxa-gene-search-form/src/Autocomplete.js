@@ -47,32 +47,26 @@ const _asyncFetchOptions = (atlasUrl, suggesterEndpoint, selectedSpecies, allSpe
     throw new Error(`${suggesterUrl} => ${response.status}`)
   }
 
-const Autocomplete = ({atlasUrl, suggesterEndpoint, selectedSpecies, allSpecies, onChange}) => {
-
-  const loadOptions = _asyncFetchOptions(atlasUrl, suggesterEndpoint, selectedSpecies, allSpecies)
-
-  return (
-    [
-      <label key={`label`}>Gene ID or gene symbol</label>,
-      <AsyncCreatableSelect components={{ DropdownIndicator: null, IndicatorSeparator: null }}
-                            styles={ebiVfSelectStyles}
-                            onChange={onChange}
-                            loadOptions={loadOptions}
-                            noOptionsMessage={() => null}
-                            defaultOptions
-                            allowCreateWhileLoading={true}
-                            isClearable={true}
-                            createOptionPosition={`first`}
-                            formatCreateLabel={(inputValue) => inputValue}
-                            isValidNewOption={(inputValue, selectValue, selectOptions) => inputValue.trim() !== ``}
-                            getNewOptionData={(inputValue, optionLabel) => ({label : inputValue, value: JSON.stringify({term: inputValue, category: `q`})}) }
-                            placeholder={``}
-                            // isMulti
-                            name={`geneQuery`}
-                            key={`autocomplete`}/>
-    ]
-  )
-}
+const Autocomplete = ({atlasUrl, suggesterEndpoint, selectedSpecies, allSpecies, onChange}) =>
+[
+  <label key={`label`}>Gene ID or gene symbol</label>,
+  <AsyncCreatableSelect components={{ DropdownIndicator: null, IndicatorSeparator: null }}
+                        styles={ebiVfSelectStyles}
+                        onChange={onChange}
+                        loadOptions={_asyncFetchOptions(atlasUrl, suggesterEndpoint, selectedSpecies, allSpecies)}
+                        noOptionsMessage={() => null}
+                        defaultOptions
+                        allowCreateWhileLoading={true}
+                        isClearable={true}
+                        createOptionPosition={`first`}
+                        formatCreateLabel={(inputValue) => inputValue}
+                        isValidNewOption={(inputValue, selectValue, selectOptions) => inputValue.trim() !== ``}
+                        getNewOptionData={(inputValue, optionLabel) => ({label : inputValue, value: JSON.stringify({term: inputValue, category: `q`})}) }
+                        placeholder={``}
+                        // isMulti
+                        name={`geneQuery`}
+                        key={`autocomplete`}/>
+]
 
 Autocomplete.propTypes = {
   atlasUrl: PropTypes.string.isRequired,
