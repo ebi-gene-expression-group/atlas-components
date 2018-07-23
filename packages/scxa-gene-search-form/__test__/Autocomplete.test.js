@@ -11,21 +11,22 @@ Enzyme.configure({ adapter: new Adapter() })
 
 describe(`Autocomplete`, () => {
   const props = {
-    atlasUrl: `foo`,
+    atlasUrl: `foo/`,
     actionEndpoint: `bar`,
-    suggesterEndpoint: `foosuggest`,
-    onChange: () => {},
-    defaultValue: {
-      queryTerm: `foo`,
-      category: `bar`
-    },
+    suggesterEndpoint: `suggest`,
+    onChange: () => {}
+  }
+
+  const defaultValue = {
+    term: `foo`,
+    category: `bar`
   }
 
   test(`displays the default value`, () => {
-     const wrapper = mount(<Autocomplete {...props}/>)
+     const wrapper = mount(<Autocomplete {...props} defaultValue={defaultValue}/>)
      expect(wrapper.find(AsyncCreatableSelect).props().defaultValue).toEqual({
-       label: props.defaultValue.queryTerm,
-       value: JSON.stringify(props.defaultValue)
+       label: defaultValue.term,
+       value: JSON.stringify(defaultValue)
      })
   })
 

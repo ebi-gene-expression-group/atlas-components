@@ -76,13 +76,14 @@ Autocomplete.propTypes = {
   allSpecies: PropTypes.arrayOf(PropTypes.string),
   onChange: PropTypes.func.isRequired,
   defaultValue: PropTypes.shape({
-    queryTerm: PropTypes.string,
+    term: PropTypes.string,
     category: PropTypes.string
   }),
 }
 
 Autocomplete.defaultProps = {
-  allSpecies: []
+  allSpecies: [],
+  defaultValue: {}
 }
 
 export default Autocomplete
