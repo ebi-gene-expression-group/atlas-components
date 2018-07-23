@@ -47,27 +47,40 @@ const _asyncFetchOptions = (atlasUrl, suggesterEndpoint, selectedSpecies, allSpe
     throw new Error(`${suggesterUrl} => ${response.status}`)
   }
 
-const Autocomplete = ({atlasUrl, suggesterEndpoint, selectedSpecies, allSpecies, onChange, defaultValue}) =>
-[
-  <label key={`label`}>Gene ID or gene symbol</label>,
-  <AsyncCreatableSelect components={{ DropdownIndicator: null, IndicatorSeparator: null }}
-                        styles={ebiVfSelectStyles}
-                        onChange={onChange}
-                        loadOptions={_asyncFetchOptions(atlasUrl, suggesterEndpoint, selectedSpecies, allSpecies)}
-                        noOptionsMessage={() => null}
-                        defaultOptions
-                        allowCreateWhileLoading={true}
-                        isClearable={true}
-                        createOptionPosition={`first`}
-                        formatCreateLabel={(inputValue) => inputValue}
-                        isValidNewOption={(inputValue, selectValue, selectOptions) => inputValue.trim() !== ``}
-                        getNewOptionData={(inputValue, optionLabel) => ({label : inputValue, value: JSON.stringify({term: inputValue, category: `q`})}) }
-                        placeholder={``}
-                        // isMulti
-                        name={`geneQuery`}
-                        key={`autocomplete`}
-                        defaultValue={{label: defaultValue.queryTerm, value: JSON.stringify(defaultValue)}}/>
-]
+const Autocomplete = ({atlasUrl, suggesterEndpoint, selectedSpecies, allSpecies, onChange, defaultValue}) => {
+  const _defaultValue = defaultValue.term && defaultValue.term.trim() ?
+    {
+      label: defaultValue.term.trim(),
+      value: defaultValue.category && defaultValue.category.trim() ?
+        JSON.stringify(defaultValue) :
+        JSON.stringify({term: inputValue, category: `q`})
+    } :
+    {}
+
+  return [
+    <label key={`label`}>Gene ID or gene symbol</label>,
+    <AsyncCreatableSelect components={{ DropdownIndicator: null, IndicatorSeparator: null }}
+                          styles={ebiVfSelectStyles}
+                          onChange={onChange}
+                          loadOptions={_asyncFetchOptions(atlasUrl, suggesterEndpoint, selectedSpecies, allSpecies)}
+                          noOptionsMessage={() => null}
+                          defaultOptions
+                          allowCreateWhileLoading={true}
+                          isClearable={true}
+                          createOptionPosition={`first`}
+                          formatCreateLabel={(inputValue) => inputValue}
+                          isValidNewOption={(inputValue, selectValue, selectOptions) => inputValue.trim() !== ``}
+                          getNewOptionData={(inputValue, optionLabel) => ({
+                            label: inputValue,
+                            value: JSON.stringify({term: inputValue, category: `q`})
+                          })}
+                          placeholder={``}
+                          // isMulti
+                          name={`geneQuery`}
+                          key={`autocomplete`}
+                          defaultValue={_defaultValue}/>
+  ]
+}
 
 Autocomplete.propTypes = {
   atlasUrl: PropTypes.string.isRequired,
