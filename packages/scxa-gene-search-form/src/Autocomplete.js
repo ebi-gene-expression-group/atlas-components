@@ -58,6 +58,7 @@ const Autocomplete = ({atlasUrl, suggesterEndpoint, selectedSpecies, allSpecies,
                             styles={ebiVfSelectStyles}
                             onChange={onChange}
                             loadOptions={loadOptions}
+                            noOptionsMessage={() => null}
                             defaultOptions
                             allowCreateWhileLoading={true}
                             isClearable={true}
