@@ -102,4 +102,13 @@ FetchLoader.propTypes = {
   defaultSpecies: PropTypes.string
 }
 
+FetchLoader.defaultProps = {
+  autocompleteClassName: ``,
+  defaultValue: {},
+  enableSpeciesSelect: false,
+  speciesEndpoint: ``,
+  speciesSelectClassName: ``,
+  defaultSpecies: ``
+}
+
 export default FetchLoader

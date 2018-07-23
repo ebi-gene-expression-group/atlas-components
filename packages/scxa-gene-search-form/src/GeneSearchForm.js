@@ -94,4 +94,16 @@ GeneSearchForm.propTypes = {
   speciesSelectStatusMessage: PropTypes.string
 }
 
+GeneSearchForm.defaultProps = {
+  wrapperClassName: ``,
+  autocompleteClassName: ``,
+  defaultValue: {},
+  enableSpeciesSelect: false,
+  speciesSelectClassName: ``,
+  allSpecies: [],
+  topSpecies: [],
+  defaultSpecies: ``,
+  speciesSelectStatusMessage: ``
+}
+
 export default GeneSearchForm

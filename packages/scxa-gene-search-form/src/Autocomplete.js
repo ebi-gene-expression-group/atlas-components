@@ -77,8 +77,13 @@ Autocomplete.propTypes = {
   atlasUrl: PropTypes.string.isRequired,
   suggesterEndpoint: PropTypes.string.isRequired,
   selectedSpecies: PropTypes.string,
-  allSpecies: PropTypes.arrayOf(PropTypes.string).isRequired,
+  allSpecies: PropTypes.arrayOf(PropTypes.string),
   onChange: PropTypes.func.isRequired
+}
+
+Autocomplete.defaultProps = {
+  selectedSpecies: ``,
+  allSpecies: []
 }
 
 export default Autocomplete

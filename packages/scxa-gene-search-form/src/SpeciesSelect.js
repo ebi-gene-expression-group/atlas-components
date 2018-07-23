@@ -33,4 +33,10 @@ SpeciesSelect.propTypes = {
   selectedValue: PropTypes.string
 }
 
+SpeciesSelect.defaultProps = {
+  topSpecies: [],
+  allSpecies: [],
+  selectedValue: ``
+}
+
 export default SpeciesSelect
