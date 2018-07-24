@@ -1,7 +1,7 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
 import Enzyme from 'enzyme'
-import {shallow, mount, render} from 'enzyme'
+import {mount} from 'enzyme'
 import Adapter from 'enzyme-adapter-react-16'
 import fetchMock from 'fetch-mock'
 import URI from 'urijs'
