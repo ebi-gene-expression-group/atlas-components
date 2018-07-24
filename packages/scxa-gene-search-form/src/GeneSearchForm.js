@@ -9,9 +9,17 @@ class GeneSearchForm extends React.Component {
   constructor(props) {
     super(props)
 
+    const defaultValue = props.defaultValue.term && props.defaultValue.term.trim() ?
+      {
+        term: props.defaultValue.term.trim(),
+        category: props.defaultValue.category && props.defaultValue.category.trim() ?
+          props.defaultValue.category : `q`
+      } :
+      {}
+
     this.state = {
       // A JSON-formatted query object with two fields, term and category
-      query: {},
+      query: defaultValue,
       selectedSpecies: props.defaultSpecies
     }
 
