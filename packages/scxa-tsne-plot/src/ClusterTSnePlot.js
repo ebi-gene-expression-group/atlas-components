@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import Color from 'color'
 
 import ScatterPlotLoader from './plotloader/PlotLoader'
+import PlotSettingsDropdown from './PlotSettingsDropdown'
 
 const _colourizeClusters = (highlightSeries) =>
   (series) => series.map((aSeries) => {
@@ -22,7 +23,7 @@ const _colourizeClusters = (highlightSeries) =>
   })
 
 const ClusterTSnePlot = (props) => {
-  const {ks, selectedK, onChangeK, perplexities, selectedPerplexity, onChangePerplexity} = props  // Select
+  const {ks, perplexities, metadata, selectedPerplexity, onChangePerplexity, selectedColourBy, onChangeColourBy} = props  // Select
   const {plotData, highlightClusters, height, tooltipContent} = props   // Chart
   const {loading, resourcesUrl, errorMessage} = props   // Overlay
 
@@ -38,7 +39,6 @@ const ClusterTSnePlot = (props) => {
     colors: [
       `rgba(212, 137, 48, 0.7)`,
       `rgba(71, 193, 152, 0.7)`,
-      `rgba(193, 84, 47, 0.7)`,
       `rgba(90, 147, 221, 0.7)`,
       `rgba(194, 73, 97, 0.7)`,
       `rgba(128, 177, 66, 0.7)`,
@@ -55,7 +55,8 @@ const ClusterTSnePlot = (props) => {
       `rgba(101, 127, 233, 0.7)`,
       `rgba(214, 126, 188, 0.7)`,
       `rgba(196, 86, 178, 0.7)`,
-      `rgba(173, 131, 211, 0.7)`
+      `rgba(173, 131, 211, 0.7)`,
+      `rgba(193, 84, 47, 0.7)`
     ],
     chart: {
       height: height
@@ -64,13 +65,21 @@ const ClusterTSnePlot = (props) => {
       text: `Clusters`
     },
     legend: {
-      enabled: false
+      enabled: true,
+      align: 'center',
+      verticalAlign: 'bottom',
+      layout: 'horizontal'
     },
     tooltip: {
+      style: {
+        width:'200px',
+        overflow:'auto',
+        whiteSpace: 'normal'
+      },
       formatter: function(tooltip) {
         const text = 'Loading metadata...'
         const header = `<b>Cell ID:</b> ${this.point.name}<br>` +
-                       `<b>Cluster ID:</b> ${this.series.name}<br>`
+                       `<b>Cluster name:</b> ${this.series.name}<br>`
 
         tooltipContent(this.point.name)
           .then((response) => {
@@ -79,8 +88,8 @@ const ClusterTSnePlot = (props) => {
             })
 
             tooltip.label.attr({
-              text: header + content.join("<br>")
-            });
+              text: header + content.join('<br>')
+            })
           })
           .catch((reason) => {
             tooltip.label.attr({
@@ -93,27 +102,48 @@ const ClusterTSnePlot = (props) => {
     }
   }
 
-  const perplexityOptions = perplexities.sort((a, b) => a - b).map((perplexity) => (
-    <option key={perplexity} value={perplexity}>{perplexity}</option>
-  ))
+  const perplexityOptions = perplexities.sort((a, b) => a - b).map((perplexity) => ({
+   value: perplexity,
+   label: perplexity
+  }))
 
-  const kOptions = ks.sort((a, b) => a - b).map((k) => (
-    <option key={k} value={k}>{k}</option>
-  ))
+  const kOptions = ks.sort((a, b) => a-b).map((k) => ({
+    value: k.toString(),
+    label: `k = ${k}`,
+    group: 'clusters'
+  }))
+
+  const metadataOptions = metadata.map((metadata) => ({
+    ...metadata,
+    group: 'metadata'
+  }))
+
+  const options = [
+    {
+      label: 'Metadata',
+      options: metadataOptions,
+    },
+    {
+      label: 'Number of clusters',
+      options: kOptions,
+    },
+  ]
 
   return [
       <div key={`perplexity-k-select`} className={`row`}>
           <div className={`small-12 medium-6 columns`}>
-              <label>t-SNE Perplexity</label>
-              <select value={selectedPerplexity} onChange={ (event) => { onChangePerplexity(Number(event.target.value)) } }>
-                  {perplexityOptions}
-              </select>
+            <PlotSettingsDropdown
+              labelText={'t-SNE Perplexity'}
+              options={perplexityOptions}
+              defaultValue={{ value: selectedPerplexity, label: selectedPerplexity }}
+              onSelect={(selectedOption) => {onChangePerplexity(selectedOption.value)}}/>
           </div>
           <div className={`small-12 medium-6 columns`}>
-            <label>Number of clusters, <i>k</i></label>
-            <select value={selectedK} onChange={ (event) => { onChangeK(Number(event.target.value)) } }>
-              {kOptions}
-            </select>
+            <PlotSettingsDropdown
+              labelText={'Colour plot by:'}
+              options={metadata ? options : kOptions} // Some experiments don't have metadata in Solr, although they should do. Leaving this check in for now so we don't break the entire experiment page.
+              defaultValue={{ value: selectedColourBy, label: `k = ${selectedColourBy}`}}
+              onSelect={(selectedOption) => { onChangeColourBy(selectedOption.group, selectedOption.value)}}/>
           </div>
       </div>,
 
@@ -138,8 +168,12 @@ ClusterTSnePlot.propTypes = {
   highlightClusters: PropTypes.array,
 
   ks: PropTypes.arrayOf(PropTypes.number).isRequired,
-  selectedK: PropTypes.number.isRequired,
-  onChangeK: PropTypes.func.isRequired,
+  metadata: PropTypes.arrayOf(PropTypes.shape({
+    value: PropTypes.string,
+    label: PropTypes.string
+  })),
+  selectedColourBy: PropTypes.string,
+  onChangeColourBy: PropTypes.func,
 
   perplexities: PropTypes.arrayOf(PropTypes.number).isRequired,
   selectedPerplexity: PropTypes.number.isRequired,

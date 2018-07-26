@@ -32,11 +32,18 @@ class TSnePlotView extends React.Component {
     }
   }
 
-  _fetchAndSetStateCellClusters({atlasUrl, experimentAccession, selectedK, selectedPerplexity}) {
+  _fetchAndSetStateCellClusters({atlasUrl, experimentAccession, selectedColourBy, selectedColourByCategory, selectedPerplexity}) {
+    let endpoint
+    if(selectedColourByCategory === `clusters`) {
+      endpoint = `json/experiments/${experimentAccession}/tsneplot/${selectedPerplexity}/clusters/k/${selectedColourBy}`
+    }
+    else if(selectedColourByCategory === `metadata`) {
+      endpoint = `json/experiments/${experimentAccession}/tsneplot/${selectedPerplexity}/metadata/${selectedColourBy}`
+    }
     this.setState({
       loadingCellClusters: true
     }, () => {
-      fetchResponseJson(atlasUrl, `json/experiments/${experimentAccession}/tsneplot/${selectedPerplexity}/clusters/k/${selectedK}`)
+      fetchResponseJson(atlasUrl, endpoint)
         .then((responseJson) => {
           this.setState({
             cellClustersData: responseJson,
@@ -78,7 +85,7 @@ class TSnePlotView extends React.Component {
     if (nextProps.selectedPerplexity !== this.props.selectedPerplexity || nextProps.experimentAccession !== this.props.experimentAccession) {
       this._fetchAndSetStateCellClusters(nextProps)
       this._fetchAndSetStateGeneId(nextProps)
-    } else if (nextProps.selectedK !== this.props.selectedK) {
+    } else if (nextProps.selectedColourByCategory !== this.props.selectedColourBy && nextProps.selectedColourBy !== this.props.selectedColourBy) {
       this._fetchAndSetStateCellClusters(nextProps)
     } else if (nextProps.geneId !== this.props.geneId) {
       this._fetchAndSetStateGeneId(nextProps)
@@ -94,8 +101,8 @@ class TSnePlotView extends React.Component {
     const {height, atlasUrl, resourcesUrl, suggesterEndpoint} = this.props
     const {wrapperClassName, clusterPlotClassName, expressionPlotClassName} = this.props
     const {geneId, speciesName, highlightClusters} = this.props
-    const {ks, selectedK, perplexities, selectedPerplexity} = this.props
-    const {onChangePerplexity, onChangeK, onSelectGeneId} = this.props
+    const {ks, perplexities, selectedPerplexity, metadata, selectedColourBy} = this.props
+    const {onChangePerplexity, onSelectGeneId, onChangeColourBy} = this.props
     const {loadingGeneExpression, geneExpressionData, geneExpressionErrorMessage} = this.state
     const {loadingCellClusters, cellClustersData, cellClustersErrorMessage} = this.state
 
@@ -112,8 +119,9 @@ class TSnePlotView extends React.Component {
                            selectedPerplexity={selectedPerplexity}
                            onChangePerplexity={onChangePerplexity}
                            ks={ks}
-                           selectedK={selectedK}
-                           onChangeK={onChangeK}
+                           metadata={metadata}
+                           onChangeColourBy={onChangeColourBy}
+                           selectedColourBy={selectedColourBy}
                            highlightClusters={highlightClusters}
                            loading={loadingCellClusters}
                            resourcesUrl={resourcesUrl}
@@ -136,7 +144,6 @@ class TSnePlotView extends React.Component {
                                   errorMessage={geneExpressionErrorMessage}
           />
         </div>
-
       </div>
     )
   }
@@ -156,16 +163,23 @@ TSnePlotView.propTypes = {
   suggesterEndpoint: PropTypes.string.isRequired,
   experimentAccession: PropTypes.string.isRequired,
   ks: PropTypes.arrayOf(PropTypes.number).isRequired,
-  selectedK: PropTypes.number.isRequired,
   perplexities: PropTypes.arrayOf(PropTypes.number).isRequired,
   selectedPerplexity: PropTypes.number.isRequired,
+
+  metadata: PropTypes.arrayOf(PropTypes.shape({
+    value: PropTypes.string,
+    label: PropTypes.string
+  })),
+  selectedColourBy: PropTypes.string,
+  selectedColourByCategory: PropTypes.string,
+  onChangeColourBy: PropTypes.func,
+
   highlightClusters: PropTypes.arrayOf(PropTypes.number),
   geneId: PropTypes.string.isRequired,
   speciesName: PropTypes.string.isRequired,
   height: PropTypes.number,
   resourcesUrl: PropTypes.string,
   onSelectGeneId: PropTypes.func,
-  onChangeK: PropTypes.func,
   onChangePerplexity: PropTypes.func
 }
 
@@ -176,9 +190,9 @@ TSnePlotView.defaultProps = {
   expressionPlotClassName: `small-12 medium-6 columns`,
   geneId: ``,
   speciesName: ``,
-  height: 600,
+  height: 800,
   onSelectGeneId: () => {},
-  onKChange: () => {},
+  onChangeColourBy: () => {},
   onPerplexityChange: () => {}
 }
 

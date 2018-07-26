@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import URI from 'urijs'
 
 import LoadingOverlay from './LoadingOverlay'
 import ScatterPlot from './ScatterPlot'

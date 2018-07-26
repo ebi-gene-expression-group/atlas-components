@@ -8,13 +8,23 @@
     <link rel="stylesheet" href="fonts.css" type="text/css" media="all" />
 
     <link rel="stylesheet" href="https://www.ebi.ac.uk/gxa/resources/css/foundation/atlas.css" type="text/css" media="all">
+
+    <style type="text/css">
+        #target input {
+            height: unset;
+            box-shadow: none;
+            margin: 0;
+        }
+
+        #target .highcharts-container { overflow: visible !important; }
+        #target svg { overflow: visible !important; }
+    </style>
+
 </head>
 
 <body>
-<div id="wrapper" class="row">
-    <div id="content" class="small-12 columns">
-        <div id="target">
-        </div>
+<div id="wrapper" class="row column expanded">
+    <div id="target">
     </div>
 </div>
 </body>
