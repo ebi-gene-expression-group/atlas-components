@@ -33,16 +33,16 @@ class TSnePlotView extends React.Component {
   }
 
   _fetchAndSetStateCellClusters({atlasUrl, experimentAccession, selectedColourBy, selectedColourByCategory, selectedPerplexity}) {
-    let endpoint
-    if(selectedColourByCategory === `clusters`) {
-      endpoint = `json/experiments/${experimentAccession}/tsneplot/${selectedPerplexity}/clusters/k/${selectedColourBy}`
-    }
-    else if(selectedColourByCategory === `metadata`) {
-      endpoint = `json/experiments/${experimentAccession}/tsneplot/${selectedPerplexity}/metadata/${selectedColourBy}`
-    }
     this.setState({
       loadingCellClusters: true
     }, () => {
+      let endpoint
+      if(selectedColourByCategory === `clusters`) {
+        endpoint = `json/experiments/${experimentAccession}/tsneplot/${selectedPerplexity}/clusters/k/${selectedColourBy}`
+      }
+      else if(selectedColourByCategory === `metadata`) {
+        endpoint = `json/experiments/${experimentAccession}/tsneplot/${selectedPerplexity}/metadata/${selectedColourBy}`
+      }
       fetchResponseJson(atlasUrl, endpoint)
         .then((responseJson) => {
           this.setState({
@@ -81,14 +81,14 @@ class TSnePlotView extends React.Component {
     })
   }
 
-  componentWillReceiveProps(nextProps) {
-    if (nextProps.selectedPerplexity !== this.props.selectedPerplexity || nextProps.experimentAccession !== this.props.experimentAccession) {
-      this._fetchAndSetStateCellClusters(nextProps)
-      this._fetchAndSetStateGeneId(nextProps)
-    } else if (nextProps.selectedColourByCategory !== this.props.selectedColourBy && nextProps.selectedColourBy !== this.props.selectedColourBy) {
-      this._fetchAndSetStateCellClusters(nextProps)
-    } else if (nextProps.geneId !== this.props.geneId) {
-      this._fetchAndSetStateGeneId(nextProps)
+  componentDidUpdate(previousProps, previousState) {
+    if (previousProps.selectedPerplexity !== this.props.selectedPerplexity || previousProps.experimentAccession !== this.props.experimentAccession) {
+      this._fetchAndSetStateCellClusters(this.props)
+      this._fetchAndSetStateGeneId(this.props)
+    } else if (previousProps.selectedColourByCategory !== this.props.selectedColourBy && previousProps.selectedColourBy !== this.props.selectedColourBy) {
+      this._fetchAndSetStateCellClusters(this.props)
+    } else if (previousProps.geneId !== this.props.geneId) {
+      this._fetchAndSetStateGeneId(this.props)
     }
   }
 
