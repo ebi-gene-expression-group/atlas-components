@@ -27,31 +27,30 @@ class Demo extends React.Component {
       geneId: `ENSG00000111640`,
       selectedColourBy: ks[Math.round((ks.length -1) / 2)].toString(),
       selectedColourByCategory: `clusters`,
-      inputHighlightClusters: ``,
       highlightClusters: [],
-      inputExperimentAccession: `E-EHCA-2`,
       experimentAccession: `E-EHCA-2`
     }
 
-    this._handleInputChange = this._handleInputChange.bind(this)
+    this.experimentAccessionInput = React.createRef()
+    this.highlightClustersInput = React.createRef()
+
     this._handleSubmit = this._handleSubmit.bind(this)
   }
 
-  _handleInputChange(event) {
-    const name = event.target.name
-
+  _handleSubmit(event) {
     this.setState({
-      [name]: event.target.value
+      experimentAccession: this.experimentAccessionInput.current.value,
+      highlightClusters: this.highlightClustersInput.current.value.split(`,`).map((e) => parseInt(e.trim())).filter((e) => !isNaN(e))
     })
+
+    event.preventDefault()
   }
 
-  _handleSubmit(event) {
-    event.preventDefault()
-
+  _resetHighlightClusters() {
     this.setState({
-      experimentAccession: this.state.inputExperimentAccession,
-      highlightClusters: this.state.inputHighlightClusters.split(`,`).map((e) => parseInt(e.trim())).filter((e) => !isNaN(e))
+      highlightClusters: [] // reset highlight clusters
     })
+    this.highlightClustersInput.current.value = `` // reset the form field
   }
 
   render() {
@@ -59,11 +58,13 @@ class Demo extends React.Component {
       <div className={`row column expanded`}>
         <div className={`row column expanded`}>
           <form onSubmit={this._handleSubmit}>
-            <label>Highlight clusters (cluster integer IDs separated by commas):</label>
-            <input name={`inputHighlightClusters`} type={`text`} onChange={this._handleInputChange} value={this.state.inputHighlightClusters}/>
-            <label>Experiment accession:</label>
-            <input name={`inputExperimentAccession`} type={`text`} onChange={this._handleInputChange} value={this.state.inputExperimentAccession}/>
-            <input className={`button`} type="submit" value="Submit" />
+            <label>Highlight clusters (cluster integer IDs separated by commas):
+              <input name={`inputHighlightClusters`} type={`text`} ref={this.highlightClustersInput} defaultValue={``}/>
+            </label>
+            <label>Experiment accession:
+              <input name={`inputExperimentAccession`} type={`text`} ref={this.experimentAccessionInput} defaultValue={this.state.experimentAccession}/>
+            </label>
+            <button className={`button`} type="submit">Submit</button>
           </form>
         </div>
 
@@ -87,12 +88,20 @@ class Demo extends React.Component {
                       }
                       onChangeColourBy={
                         (colourByCategory, colourByValue) => {
-                          this.setState({selectedColourBy : colourByValue})
-                          this.setState({selectedColourByCategory : colourByCategory})
+                          this.setState({
+                            selectedColourBy : colourByValue,
+                            selectedColourByCategory : colourByCategory,
+                          })
+                          this._resetHighlightClusters()
                         }
                       }
                       onSelectGeneId={
-                        (geneId) => { this.setState({geneId: geneId}) }
+                        (geneId) => {
+                          this.setState({
+                            geneId: geneId,
+                          })
+                          this._resetHighlightClusters()
+                        }
                       }
         />
       </div>
