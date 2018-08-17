@@ -1,0 +1,19 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+
+
+# Dependency directories
+node_modules/
+
+# IntelliJ IDEA project files
+*.iml
+_idea
+.idea
+.idea-files
+.project
+.settings/
+
+# MacOS
+.DS_Store
