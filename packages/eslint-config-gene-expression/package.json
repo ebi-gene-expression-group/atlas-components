@@ -1,0 +1,19 @@
+{
+  "name": "eslint-config-gene-expression",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "author": "Expression Atlas developers <atlas-developers@ebi.ac.uk>",
+  "collaborators": [
+    "Monica Jianu <monica@ebi.ac.uk>"
+  ],
+  "license": "Apache-2.0",
+  "dependencies": {
+    "eslint": "^5.3.0",
+    "eslint-plugin-react": "^7.11.1"
+  },
+  "peerDependencies": {
+    "eslint": ">= 5",
+    "eslint-plugin-react": ">= 7"
+  }
+}
