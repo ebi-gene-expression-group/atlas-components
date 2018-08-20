@@ -10,7 +10,13 @@ module.exports = {
   },
 
   env: {
-    'browser': true
+    'browser': true,
+    'jest': true
+  },
+
+  // TODO This doesn't seem to do anything... This should solve issues like requiring static image files (see this https://github.com/airbnb/javascript/issues/1332)
+  settings: {
+    'import/resolver': 'webpack'
   },
 
   rules: {
