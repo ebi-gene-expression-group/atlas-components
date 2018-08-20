@@ -11,7 +11,8 @@ module.exports = {
 
   env: {
     'browser': true,
-    'jest': true
+    'jest': true,
+    'es6': true
   },
 
   // TODO This doesn't seem to do anything... This should solve issues like requiring static image files (see this https://github.com/airbnb/javascript/issues/1332)
