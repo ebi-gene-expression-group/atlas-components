@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-gene-expression",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "",
   "main": "index.js",
   "author": "Expression Atlas developers <atlas-developers@ebi.ac.uk>",
