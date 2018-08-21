@@ -15,7 +15,6 @@ module.exports = {
     'es6': true
   },
 
-  // TODO This doesn't seem to do anything... This should solve issues like requiring static image files (see this https://github.com/airbnb/javascript/issues/1332)
   settings: {
     'import/resolver': 'webpack'
   },
@@ -24,6 +23,7 @@ module.exports = {
     'no-var': 'error', // Enforce using const and let, rather than var
     semi: ['error', 'never'], // Disallow semicolons
     quotes: ['error', 'backtick'], // Enforce using `` for strings
-    eqeqeq: ['error', 'always'] // Enforce using === and !==
+    eqeqeq: ['error', 'always'], // Enforce using === and !==
+    indent: ['error', 2] // Enforce indentation using 2 spaces
   }
 }
