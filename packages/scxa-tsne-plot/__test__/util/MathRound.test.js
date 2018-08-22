@@ -45,7 +45,7 @@ describe(`Mozilla’s round util`, () => {
   })
 
   test(`defaults to Math’s rounding methods if exp is 0 or undefined`, () => {
-    const value = Math.random() * 100;
+    const value = Math.random() * 100
     expect(Math.round10(value, 0)).toEqual(Math.round(value))
     expect(Math.floor10(value, 0)).toEqual(Math.floor(value))
     expect(Math.ceil10(value, 0)).toEqual(Math.ceil(value))

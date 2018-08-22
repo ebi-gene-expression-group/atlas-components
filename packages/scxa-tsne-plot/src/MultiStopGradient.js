@@ -30,6 +30,13 @@ const Tick = ({value, tickStyle, top, position}) =>
     <small className={styles[position]}><ScientificNotationNumber value={Math.round10(value, -2)}/></small>
   </div>
 
+Tick.propTypes = {
+  value: PropTypes.number,
+  tickStyle: PropTypes.string,
+  top: PropTypes.number,
+  position: PropTypes.string
+}
+
 const MultiStopGradient = ({height, showTicks, colourRanges, plotData}) => {
   const bg = colourRanges.map((colourRange) => `${colourRange.colour} ${colourRange.stopPosition}%`).join(`, `)
   const minMaxExpressionTickHeight = 2
@@ -44,10 +51,10 @@ const MultiStopGradient = ({height, showTicks, colourRanges, plotData}) => {
 
   const maxExpressionTopPosition =
     plotData.max < 999 ?
-    Math.max(
-      minMaxExpressionTickHeight,
-      gradientHeight - gradientHeight * putInRange(colourRanges, plotData.max)) :
-    gradientHeight - gradientHeight * putInRange(colourRanges, 10000)  
+      Math.max(
+        minMaxExpressionTickHeight,
+        gradientHeight - gradientHeight * putInRange(colourRanges, plotData.max)) :
+      gradientHeight - gradientHeight * putInRange(colourRanges, 10000)  
 
   return (
     <div className={`small-2 columns text-center`}>
@@ -55,19 +62,19 @@ const MultiStopGradient = ({height, showTicks, colourRanges, plotData}) => {
 
       <div className={styles.gradient}
         style={{
-        height: `${gradientHeight}px`,
-        background: `linear-gradient(0deg, ${bg})`}}>
+          height: `${gradientHeight}px`,
+          background: `linear-gradient(0deg, ${bg})`}}>
 
-      <Tick value={plotData.max} tickStyle={`dimgray`} top={maxExpressionTopPosition} position={`left`}/>
-      {
-        plotData.min < plotData.max &&
+        <Tick value={plotData.max} tickStyle={`dimgray`} top={maxExpressionTopPosition} position={`left`}/>
+        {
+          plotData.min < plotData.max &&
         <Tick value={plotData.min} tickStyle={`dimgray`} top={minExpressionTopPosition} position={`left`}/>
-      }
+        }
 
-      {showTicks &&
+        {showTicks &&
         colourRanges.slice(1, -1).map((colourRange) =>
           <Tick key={colourRange.threshold} value={colourRange.threshold} tickStyle={`lightgray`} top={gradientHeight - gradientHeight * putInRange(colourRanges, colourRange.threshold)} position={`right`}/>
-      )}
+        )}
       </div>
 
       <div>

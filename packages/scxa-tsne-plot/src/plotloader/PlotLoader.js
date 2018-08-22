@@ -13,13 +13,14 @@ const PlotLoader = ({loading, series, errorMessage, highchartsConfig, resourcesU
     </div> :
 
     <div style={{position: `relative`}} className={wrapperClassName}>
-      <ScatterPlot chartClassName={chartClassName}
-                   series={series}
-                   highchartsConfig={highchartsConfig}
-                   children={children}
+      <ScatterPlot
+        chartClassName={chartClassName}
+        series={series}
+        highchartsConfig={highchartsConfig}
+        children={children}
       />
       <LoadingOverlay show={loading}
-                      resourcesUrl={resourcesUrl}
+        resourcesUrl={resourcesUrl}
       />
     </div>
 
@@ -30,7 +31,8 @@ PlotLoader.propTypes = {
   highchartsConfig: PropTypes.object,
   chartClassName: PropTypes.string,
   resourcesUrl: PropTypes.string,
-  children: PropTypes.object
+  children: PropTypes.object,
+  wrapperClassName: PropTypes.string
 }
 
 PlotLoader.defaultProps = {

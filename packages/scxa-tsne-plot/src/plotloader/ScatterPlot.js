@@ -11,8 +11,8 @@ import SeriesPropTypes from './SeriesPropTypes'
 const Highcharts = ReactHighcharts.Highcharts
 // Only apply modules if Highcharts isn’t a *good* mock -- Boost/Exporting can break tests
 // if (Highcharts.getOptions()) {
-  HighchartsExporting(Highcharts)
-  HighchartsBoost(Highcharts)
+HighchartsExporting(Highcharts)
+HighchartsBoost(Highcharts)
 // }
 
 const highchartsBaseConfig = {

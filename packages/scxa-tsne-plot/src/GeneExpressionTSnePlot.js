@@ -1,3 +1,4 @@
+/* eslint-disable react/no-children-prop */
 import React from 'react'
 import PropTypes from 'prop-types'
 import Color from 'color'
@@ -8,9 +9,6 @@ import MultiStopGradient from './MultiStopGradient'
 
 import './util/MathRound'
 
-const MAX_WHITE = 90
-
-
 const _colourize = (colourRanges, defaultColour = `blue`, alpha = 0.65) => {
   return (val) => {
     if (isNaN(val)) {
@@ -18,7 +16,7 @@ const _colourize = (colourRanges, defaultColour = `blue`, alpha = 0.65) => {
     }
 
     if (val === 0) {
-      return Color('lightgrey').alpha(alpha).rgb().toString()
+      return Color(`lightgrey`).alpha(alpha).rgb().toString()
     }
 
     if (val > 9999) {
@@ -106,33 +104,37 @@ const GeneExpressionScatterPlot = (props) => {
   const renderGradient = plotData.max > 0
   const chartClassName = renderGradient ? `small-10 columns` : `small-12 columns`
   const gradient = renderGradient ?
-    <MultiStopGradient height={height}
-                       showTicks={true}
-                       colourRanges={expressionGradientColours}
-                       plotData={plotData}/> :
+    <MultiStopGradient
+      height={height}
+      showTicks={true}
+      colourRanges={expressionGradientColours}
+      plotData={plotData}
+    /> :
     null
 
   return [
-    <AtlasAutocomplete key={`expression-autocomplete`}
-                       wrapperClassName={`row`}
-                       autocompleteClassName={`small-12 columns`}
-                       atlasUrl={atlasUrl}
-                       suggesterEndpoint={suggesterEndpoint}
-                       enableSpeciesFilter={false}
-                       initialValue={geneId}
-                       defaultSpecies={speciesName}
-                       onSelect={ (event) => { onSelectGeneId(event) } }
+    <AtlasAutocomplete
+      key={`expression-autocomplete`}
+      wrapperClassName={`row`}
+      autocompleteClassName={`small-12 columns`}
+      atlasUrl={atlasUrl}
+      suggesterEndpoint={suggesterEndpoint}
+      enableSpeciesFilter={false}
+      initialValue={geneId}
+      defaultSpecies={speciesName}
+      onSelect={ (event) => { onSelectGeneId(event) } }
     />,
 
-    <ScatterPlotLoader key={`expression-plot`}
-                       wrapperClassName={`row`}
-                       chartClassName={chartClassName}
-                       series={_colourizeExpressionLevel(expressionGradientColours, highlightClusters)(plotData)}
-                       highchartsConfig={highchartsConfig}
-                       children={gradient}
-                       loading={loading}
-                       resourcesUrl={resourcesUrl}
-                       errorMessage={errorMessage}
+    <ScatterPlotLoader
+      key={`expression-plot`}
+      wrapperClassName={`row`}
+      chartClassName={chartClassName}
+      series={_colourizeExpressionLevel(expressionGradientColours, highlightClusters)(plotData)}
+      highchartsConfig={highchartsConfig}
+      children={gradient}
+      loading={loading}
+      resourcesUrl={resourcesUrl}
+      errorMessage={errorMessage}
     />
   ]
 }

@@ -58,6 +58,8 @@
     "css-loader": "^0.28.11",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.0.2",
+    "eslint": "^5.4.0",
+    "eslint-config-gene-expression": "^0.3.0",
     "fetch-mock": "^6.3.0",
     "file-loader": "^1.1.11",
     "highcharts-series-generator": "^1.0.1",
