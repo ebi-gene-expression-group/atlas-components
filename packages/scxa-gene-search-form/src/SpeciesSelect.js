@@ -10,14 +10,16 @@ const SpeciesSelect = ({statusMessage, topSpecies, allSpecies, separator, onChan
     <label htmlFor={`species`} key={`label`}>Species</label>,
 
     statusMessage ?
-      <select disabled={`true`}
-              name={`species`}
-              key={`select`}>{_option(statusMessage)}</select> :
+      <select
+        disabled={`true`}
+        name={`species`}
+        key={`select`}>{_option(statusMessage)}</select> :
 
-      <select onChange={onChange}
-              value={selectedValue}
-              name={`species`}
-              key={`select`}>
+      <select
+        onChange={onChange}
+        value={selectedValue}
+        name={`species`}
+        key={`select`}>
         <option value={``}>Any</option>
         {topSpecies.length && topSpecies.map(_option)}
         {topSpecies.length && <option value={`-`} disabled={`true`}>{Math.random() < 0.999 ? `━━━━━━━━━━━━` : `(╯°□°）╯︵ ┻━┻`}</option>}

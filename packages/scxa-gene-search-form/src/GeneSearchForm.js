@@ -51,28 +51,31 @@ class GeneSearchForm extends React.Component {
       <form action={URI(actionEndpoint, atlasUrl).toString()} method={`post`}>
         <div className={wrapperClassName}>
           <div className={autocompleteClassName}>
-            <Autocomplete atlasUrl={atlasUrl}
-                          suggesterEndpoint={suggesterEndpoint}
-                          onChange={this.autocompleteOnChange}
-                          selectedSpecies={this.state.selectedSpecies}
-                          allSpecies={allSpecies}
-                          defaultValue={defaultValue}/>
+            <Autocomplete
+              atlasUrl={atlasUrl}
+              suggesterEndpoint={suggesterEndpoint}
+              onChange={this.autocompleteOnChange}
+              selectedSpecies={this.state.selectedSpecies}
+              allSpecies={allSpecies}
+              defaultValue={defaultValue}/>
           </div>
           { enableSpeciesSelect &&
             <div className={speciesSelectClassName}>
-              <SpeciesSelect allSpecies={allSpecies}
-                             topSpecies={topSpecies}
-                             statusMessage={speciesSelectStatusMessage}
-                             selectedValue={this.state.selectedSpecies}
-                             onChange={this.speciesSelectOnChange}/>
+              <SpeciesSelect
+                allSpecies={allSpecies}
+                topSpecies={topSpecies}
+                statusMessage={speciesSelectStatusMessage}
+                selectedValue={this.state.selectedSpecies}
+                onChange={this.speciesSelectOnChange}/>
             </div>
           }
         </div>
         <div className={wrapperClassName}>
           <div className={`small-12 columns`}>
-            <button type={`Submit`}
-                    className={`button`}
-                    disabled={!this.state.query.term || this.state.query.term.trim() === ``}>
+            <button
+              type={`Submit`}
+              className={`button`}
+              disabled={!this.state.query.term || this.state.query.term.trim() === ``}>
                     Search
             </button>
           </div>

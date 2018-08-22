@@ -1,0 +1,3 @@
+__mocks__/
+webpack.config.js
+serve.config.js

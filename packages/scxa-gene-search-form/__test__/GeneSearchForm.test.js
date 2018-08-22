@@ -1,5 +1,4 @@
 import React from 'react'
-import renderer from 'react-test-renderer'
 import Enzyme from 'enzyme'
 import {mount} from 'enzyme'
 import Adapter from 'enzyme-adapter-react-16'
@@ -33,18 +32,18 @@ const species = [
 
 describe(`GeneSearchForm`, () => {
   test(`search button is initially disabled`, () => {
-     const wrapper = mount(<GeneSearchForm {...props}/>)
-     expect(wrapper.find(`button`).at(0).props()).toHaveProperty(`disabled`, true)
+    const wrapper = mount(<GeneSearchForm {...props}/>)
+    expect(wrapper.find(`button`).at(0).props()).toHaveProperty(`disabled`, true)
   })
 
   test(`search button with invalid default value is disabled`, () => {
-     const wrapper = mount(<GeneSearchForm {...props} defaultValue={{term: `   `, category: `q`}}/>)
-     expect(wrapper.find(`button`).at(0).props()).toHaveProperty(`disabled`, true)
+    const wrapper = mount(<GeneSearchForm {...props} defaultValue={{term: `   `, category: `q`}}/>)
+    expect(wrapper.find(`button`).at(0).props()).toHaveProperty(`disabled`, true)
   })
 
   test(`search button with valid default value is enabled`, () => {
-     const wrapper = mount(<GeneSearchForm {...props} defaultValue={defaultValue}/>)
-     expect(wrapper.find(`button`).at(0).props()).toHaveProperty(`disabled`, false)
+    const wrapper = mount(<GeneSearchForm {...props} defaultValue={defaultValue}/>)
+    expect(wrapper.find(`button`).at(0).props()).toHaveProperty(`disabled`, false)
   })
 
 })

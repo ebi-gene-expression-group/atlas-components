@@ -31,10 +31,10 @@ class FetchLoader extends React.Component {
     return(
       error ?
         <GeneSearchForm {...data} {...this.props} speciesSelectStatusMessage={`${error.name}: ${error.message}`}/> :
-      loading ?
-        <GeneSearchForm {...data} {...this.props} speciesSelectStatusMessage={`Fetching species…`}/> :
-      // promise fulfilled
-        <GeneSearchForm {...data} {...this.props} speciesSelectStatusMessage={``}/>
+        loading ?
+          <GeneSearchForm {...data} {...this.props} speciesSelectStatusMessage={`Fetching species…`}/> :
+        // promise fulfilled
+          <GeneSearchForm {...data} {...this.props} speciesSelectStatusMessage={``}/>
     )
   }
 
@@ -54,7 +54,7 @@ class FetchLoader extends React.Component {
           loading: false,
           error: null
         })
-      )
+    )
       .catch(
         (error) =>
           this.setState({
@@ -76,9 +76,9 @@ class FetchLoader extends React.Component {
   componentDidCatch(error, info) {
     this.setState({
       error: {
-          description: `There was a problem rendering this component.`,
-          name: error.name,
-          message: `${error.message} – ${info}`
+        description: `There was a problem rendering this component.`,
+        name: error.name,
+        message: `${error.message} – ${info}`
       }
     })
   }

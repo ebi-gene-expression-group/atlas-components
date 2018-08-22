@@ -1,5 +1,4 @@
 import React from 'react'
-import renderer from 'react-test-renderer'
 import Enzyme from 'enzyme'
 import {mount} from 'enzyme'
 import Adapter from 'enzyme-adapter-react-16'
@@ -35,11 +34,11 @@ const species = [
 
 describe(`Autocomplete`, () => {
   test(`displays the default value`, () => {
-     const wrapper = mount(<Autocomplete {...props} defaultValue={defaultValue}/>)
-     expect(wrapper.find(AsyncCreatableSelect).props().defaultValue).toEqual({
-       label: defaultValue.term,
-       value: JSON.stringify(defaultValue)
-     })
+    const wrapper = mount(<Autocomplete {...props} defaultValue={defaultValue}/>)
+    expect(wrapper.find(AsyncCreatableSelect).props().defaultValue).toEqual({
+      label: defaultValue.term,
+      value: JSON.stringify(defaultValue)
+    })
   })
 })
 
@@ -52,7 +51,7 @@ describe(`Autocomplete suggestions fetch`, () => {
     fetchMock.get(`*`, [])
 
     const randomSpecies = species[Math.floor(Math.random() * species.length)]
-    const wrapper = mount(<Autocomplete {...props} selectedSpecies={randomSpecies}/>)
+    mount(<Autocomplete {...props} selectedSpecies={randomSpecies}/>)
     expect(fetchMock.calls()).toHaveLength(1)
     expect(URI(fetchMock.lastUrl()).search(true)).toHaveProperty(`species`, randomSpecies)
   })
@@ -60,7 +59,7 @@ describe(`Autocomplete suggestions fetch`, () => {
   test(`calls suggester with all species as request parameter if no selected species is provided`, () => {
     fetchMock.get(`*`, [])
 
-    const wrapper = mount(<Autocomplete {...props} allSpecies={species}/>)
+    mount(<Autocomplete {...props} allSpecies={species}/>)
     expect(fetchMock.calls()).toHaveLength(1)
     expect(URI(fetchMock.lastUrl()).search(true)).toHaveProperty(`species`, species.join(`,`))
 
