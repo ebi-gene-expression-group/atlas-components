@@ -2,7 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import _ from 'lodash'
 
-import FacetGroupPropTypes from './facetgroups/FacetGroupPropTypes'
 import CheckboxFacetGroup from './facetgroups/CheckboxFacetGroup'
 import MultiselectDropdownFacetGroup from './facetgroups/MultiselectDropdownFacetGroup'
 

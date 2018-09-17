@@ -21,7 +21,7 @@ const props = {
 describe(`CheckboxFacetGroup`, () => {
   beforeEach(() => {
     while (props.facets.length === 0) {
-      props.facets = vindicators.filter((vindicator) => Math.random() > 0.5)
+      props.facets = vindicators.filter(() => Math.random() > 0.5)
     }
   })
 
@@ -82,7 +82,7 @@ describe(`CheckboxFacetGroup`, () => {
 describe(`MultiselectDropdownFacetGroup`, () => {
   beforeEach(() => {
     while (props.facets.length === 0) {
-      props.facets = vindicators.filter((vindicator) => Math.random() > 0.5)
+      props.facets = vindicators.filter(() => Math.random() > 0.5)
     }
   })
 

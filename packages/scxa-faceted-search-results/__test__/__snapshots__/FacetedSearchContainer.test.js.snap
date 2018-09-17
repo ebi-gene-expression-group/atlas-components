@@ -5,7 +5,7 @@ exports[`FacetedSearchContainer matches snapshot 1`] = `
   className="row expanded"
 >
   <div
-    className="small-12 medium-4 columns"
+    className="small-12 medium-4 large-3 columns"
   >
     <div
       className="padding-bottom-xlarge"
@@ -66,14 +66,6 @@ exports[`FacetedSearchContainer matches snapshot 1`] = `
         className="css-10nd86i"
         onKeyDown={[Function]}
       >
-        <span
-          aria-atomic="true"
-          aria-live="polite"
-          className="css-1uvvha"
-          role="status"
-        >
-          6 results available.
-        </span>
         <div
           className="css-12emboz"
           onMouseDown={[Function]}
@@ -100,9 +92,6 @@ exports[`FacetedSearchContainer matches snapshot 1`] = `
               >
                 <input
                   aria-autocomplete="list"
-                  aria-busy={false}
-                  aria-expanded={false}
-                  aria-haspopup={false}
                   autoCapitalize="none"
                   autoComplete="off"
                   autoCorrect="off"
@@ -111,7 +100,6 @@ exports[`FacetedSearchContainer matches snapshot 1`] = `
                   onBlur={[Function]}
                   onChange={[Function]}
                   onFocus={[Function]}
-                  role="combobox"
                   spellCheck="false"
                   style={
                     Object {
@@ -169,14 +157,6 @@ exports[`FacetedSearchContainer matches snapshot 1`] = `
         className="css-10nd86i"
         onKeyDown={[Function]}
       >
-        <span
-          aria-atomic="true"
-          aria-live="polite"
-          className="css-1uvvha"
-          role="status"
-        >
-          3 results available.
-        </span>
         <div
           className="css-12emboz"
           onMouseDown={[Function]}
@@ -203,9 +183,6 @@ exports[`FacetedSearchContainer matches snapshot 1`] = `
               >
                 <input
                   aria-autocomplete="list"
-                  aria-busy={false}
-                  aria-expanded={false}
-                  aria-haspopup={false}
                   autoCapitalize="none"
                   autoComplete="off"
                   autoCorrect="off"
@@ -214,7 +191,6 @@ exports[`FacetedSearchContainer matches snapshot 1`] = `
                   onBlur={[Function]}
                   onChange={[Function]}
                   onFocus={[Function]}
-                  role="combobox"
                   spellCheck="false"
                   style={
                     Object {
@@ -264,7 +240,7 @@ exports[`FacetedSearchContainer matches snapshot 1`] = `
     </div>
   </div>
   <div
-    className="small-12 medium-8 columns"
+    className="small-12 medium-8 large-9 columns"
   >
     <div>
       <h4>

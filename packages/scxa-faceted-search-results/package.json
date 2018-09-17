@@ -55,6 +55,8 @@
     "coveralls": "^3.0.2",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
+    "eslint": "^5.4.0",
+    "eslint-config-gene-expression": "^0.2.0",
     "fetch-mock": "^6.5.1",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^23.4.1",

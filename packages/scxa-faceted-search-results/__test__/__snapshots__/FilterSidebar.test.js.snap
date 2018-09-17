@@ -61,14 +61,6 @@ Array [
       className="css-10nd86i"
       onKeyDown={[Function]}
     >
-      <span
-        aria-atomic="true"
-        aria-live="polite"
-        className="css-1uvvha"
-        role="status"
-      >
-        6 results available.
-      </span>
       <div
         className="css-12emboz"
         onMouseDown={[Function]}
@@ -95,9 +87,6 @@ Array [
             >
               <input
                 aria-autocomplete="list"
-                aria-busy={false}
-                aria-expanded={false}
-                aria-haspopup={false}
                 autoCapitalize="none"
                 autoComplete="off"
                 autoCorrect="off"
@@ -106,7 +95,6 @@ Array [
                 onBlur={[Function]}
                 onChange={[Function]}
                 onFocus={[Function]}
-                role="combobox"
                 spellCheck="false"
                 style={
                   Object {
@@ -164,14 +152,6 @@ Array [
       className="css-10nd86i"
       onKeyDown={[Function]}
     >
-      <span
-        aria-atomic="true"
-        aria-live="polite"
-        className="css-1uvvha"
-        role="status"
-      >
-        3 results available.
-      </span>
       <div
         className="css-12emboz"
         onMouseDown={[Function]}
@@ -198,9 +178,6 @@ Array [
             >
               <input
                 aria-autocomplete="list"
-                aria-busy={false}
-                aria-expanded={false}
-                aria-haspopup={false}
                 autoCapitalize="none"
                 autoComplete="off"
                 autoCorrect="off"
@@ -209,7 +186,6 @@ Array [
                 onBlur={[Function]}
                 onChange={[Function]}
                 onFocus={[Function]}
-                role="combobox"
                 spellCheck="false"
                 style={
                   Object {

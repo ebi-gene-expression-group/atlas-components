@@ -4,7 +4,7 @@ import Enzyme from 'enzyme'
 import {mount} from 'enzyme'
 import Adapter from 'enzyme-adapter-react-16'
 
-import {getRandomInt, episodes, EpisodeCard} from './TestUtils'
+import {episodes, EpisodeCard} from './TestUtils'
 
 import FacetedSearchContainer from '../src/FacetedSearchContainer'
 import FilterSidebar from '../src/FilterSidebar'

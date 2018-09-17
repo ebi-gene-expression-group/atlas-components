@@ -1,5 +1,4 @@
 import React from 'react'
-import renderer from 'react-test-renderer'
 import Enzyme from 'enzyme'
 import {mount} from 'enzyme'
 import Adapter from 'enzyme-adapter-react-16'
@@ -11,7 +10,7 @@ import FetchLoader from '../src/FetchLoader'
 
 Enzyme.configure({ adapter: new Adapter() })
 
-const DummyComponentClass = (props) => <div></div>
+const DummyComponentClass = () => <div></div>
 
 describe(`FetchLoader`, () => {
   beforeEach(() => {
@@ -39,7 +38,7 @@ describe(`FetchLoader`, () => {
   })
 
   test(`renders an error message if request to the server returns 4xx or 5xx`, async () => {
-    fetchMock.get(`*`, getRandomHttpErrorCode);
+    fetchMock.get(`*`, getRandomHttpErrorCode)
     const wrapper = mount(<FetchLoader {...props} />)
 
     await wrapper.instance().componentDidMount()

@@ -7,8 +7,6 @@ import Adapter from 'enzyme-adapter-react-16'
 import {getRandomInt, episodes} from './TestUtils'
 
 import FilterSidebar from '../src/FilterSidebar'
-import CheckboxFacetGroup from '../src/facetgroups/CheckboxFacetGroup'
-import MultiselectDropdownFacetGroup from '../src/facetgroups/MultiselectDropdownFacetGroup'
 
 Enzyme.configure({ adapter: new Adapter() })
 
