@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Color from 'color'
+import {find as _find, flatten as _flatten} from 'lodash'
 
 import ScatterPlotLoader from './plotloader/PlotLoader'
 import PlotSettingsDropdown from './PlotSettingsDropdown'
@@ -129,6 +130,13 @@ const ClusterTSnePlot = (props) => {
     },
   ]
 
+  const defaultValue = _find(
+    _flatten(
+      options.map((item) => (item.options))
+    ),
+    { value: selectedColourBy }
+  )
+
   return [
     <div key={`perplexity-k-select`} className={`row`}>
       <div className={`small-12 medium-6 columns`}>
@@ -142,12 +150,13 @@ const ClusterTSnePlot = (props) => {
         <PlotSettingsDropdown
           labelText={`Colour plot by:`}
           options={metadata ? options : kOptions} // Some experiments don't have metadata in Solr, although they should do. Leaving this check in for now so we don't break the entire experiment page.
-          defaultValue={{ value: selectedColourBy, label: `k = ${selectedColourBy}`}}
+          defaultValue={defaultValue}
           onSelect={(selectedOption) => { onChangeColourBy(selectedOption.group, selectedOption.value)}}/>
       </div>
     </div>,
 
-    <ScatterPlotLoader key={`cluster-plot`}
+    <ScatterPlotLoader
+      key={`cluster-plot`}
       wrapperClassName={`row`}
       chartClassName={`small-12 columns`}
       series={_colourizeClusters(highlightClusters)(plotData.series)}

@@ -112,4 +112,47 @@ describe(`ClusterTSnePlot`, () => {
 
     expect(wrapper.find(PlotSettingsDropdown).length).toBe(2)
   })
+
+  test(`dropdown selection text is to be "k = x" when plot is coloured by cluster ID x`, () => {
+    const onChangeColourBy = () => {}
+    const onChangePerplexity = () => {}
+    const plotData = {
+      series: []
+    }
+    const ks = [1, 2, 3]
+    const metadata = [
+      {
+        value: `metadata-1`,
+        label: `The first metadata value`
+      }
+    ]
+
+    const wrapper = mount(<ClusterTSnePlot height={500} ks={ks} metadata={metadata} selectedColourBy={`2`} onChangeColourBy={onChangeColourBy} perplexities={[]} selectedPerplexity={0} onChangePerplexity={onChangePerplexity} loading={true} plotData={plotData}/>)
+
+    const dropdown = wrapper.find({ labelText: `Colour plot by:`})
+
+    expect(dropdown.props().defaultValue.label).toContain(`k = 2`)
+
+  })
+
+  test(`dropdown selection text is the name of the metadata when plot is coloured by metadata`, () => {
+    const onChangeColourBy = () => {}
+    const onChangePerplexity = () => {}
+    const plotData = {
+      series: []
+    }
+    const ks = [1, 2, 3]
+    const metadata = [
+      {
+        value: `metadata-1`,
+        label: `The first metadata value`
+      }
+    ]
+
+    const wrapper = mount(<ClusterTSnePlot height={500} ks={ks} metadata={metadata} selectedColourBy={`metadata-1`} onChangeColourBy={onChangeColourBy} perplexities={[]} selectedPerplexity={0} onChangePerplexity={onChangePerplexity} loading={true} plotData={plotData}/>)
+
+    const dropdown = wrapper.find({ labelText: `Colour plot by:`})
+
+    expect(dropdown.props().defaultValue.label).toContain(`The first metadata value`)
+  })
 })
