@@ -307,6 +307,9 @@ ShallowWrapper {
               "name": "Cluster 3",
             },
           ],
+          "subtitle": Object {
+            "text": "Analysis results for 6 cells",
+          },
           "title": Object {
             "style": Object {
               "fontSize": "25px",
@@ -583,6 +586,9 @@ ShallowWrapper {
                 "name": "Cluster 3",
               },
             ],
+            "subtitle": Object {
+              "text": "Analysis results for 6 cells",
+            },
             "title": Object {
               "style": Object {
                 "fontSize": "25px",
@@ -58778,6 +58784,9 @@ ShallowWrapper {
               "name": "4",
             },
           ],
+          "subtitle": Object {
+            "text": "Analysis results for 3217 cells",
+          },
           "title": Object {
             "style": Object {
               "fontSize": "25px",
@@ -97606,6 +97615,9 @@ ShallowWrapper {
                 "name": "4",
               },
             ],
+            "subtitle": Object {
+              "text": "Analysis results for 3217 cells",
+            },
             "title": Object {
               "style": Object {
                 "fontSize": "25px",
@@ -97815,6 +97827,9 @@ ShallowWrapper {
             },
           },
           "series": Array [],
+          "subtitle": Object {
+            "text": "Analysis results for 0 cells",
+          },
           "title": Object {
             "style": Object {
               "fontSize": "25px",
@@ -97987,6 +98002,9 @@ ShallowWrapper {
               },
             },
             "series": Array [],
+            "subtitle": Object {
+              "text": "Analysis results for 0 cells",
+            },
             "title": Object {
               "style": Object {
                 "fontSize": "25px",
