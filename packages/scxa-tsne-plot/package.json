@@ -7,12 +7,14 @@
     "dev": "webpack-dev-server -d",
     "dist": "NODE_ENV=production webpack --optimize-minimize",
     "prepack": "rm -rf lib && babel src -d lib --copy-files",
-    "test": "jest --coverage --verbose",
+    "test": "jest --coverage",
     "posttest": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
     "postversion": "npm publish",
     "postpublish": "git push && git push --tags"
   },
   "jest": {
+    "verbose": true,
+    "testURL": "http://localhost/",
     "moduleNameMapper": {
       "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
       "\\.(css|less)$": "identity-obj-proxy"
@@ -41,6 +43,7 @@
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
     "react-highcharts": "^16.0.2",
+    "react-responsive": "^5.0.0",
     "react-select": "^2.0.0-beta.6",
     "seedrandom": "^2.4.3",
     "styled-components": "^3.3.3"

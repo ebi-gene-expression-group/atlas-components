@@ -8,7 +8,6 @@ import Adapter from 'enzyme-adapter-react-16'
 
 import {_colourizeExpressionLevel} from '../src/GeneExpressionTSnePlot'
 import GeneExpressionTSnePlot from '../src/GeneExpressionTSnePlot'
-import MultiStopGradient from '../src/MultiStopGradient'
 
 import '../src/util/MathRound'
 import {gradientColourRanges, randomHighchartsSeries, randomHighchartsSeriesWithNamesAndMaxPoints, plotData, randomHighchartsSeriesWithSeed} from './Utils'
@@ -36,18 +35,19 @@ describe(`GeneExpressionTSnePlot colourize function`, () => {
 
     _colourizeExpressionLevel(gradientColourRanges(), [])(plotData(randomSeries)).forEach((series) => {
       series.data.forEach((point) => {
-        expect(point).toHaveProperty(`color`)
+        expect(point).toHaveProperty(`colorValue`)
       })
     })
   })
 
-  test(`assigns maximum colour to the point with highest expression`, () => {
+  test(`assigns maximum colour scale to the point with highest expression`, () => {
     const randomSeries = randomHighchartsSeries()
+    const maximum = 10000;
     randomSeries[randomSeries.length - 1].data.push({
       x: 0,
       y: 0,
-      expressionLevel: 10000,
-      name: `Maximum overkill`
+      expressionLevel: maximum,
+      name: "Maximum overkill"
     })
 
     const allPoints = randomSeries.reduce((acc, series) => acc.concat(series.data), [])
@@ -62,7 +62,7 @@ describe(`GeneExpressionTSnePlot colourize function`, () => {
 
     expect(maxExpressionLevelPoints.length).toBeGreaterThanOrEqual(1)
     maxExpressionLevelPoints.forEach((point) => {
-      expect(point).toHaveProperty(`color`, Color(gradientColourRanges()[gradientColourRanges().length - 1].colour).alpha(0.65).rgb().toString())
+      expect(point).toHaveProperty(`colorValue`, maximum)
     })
   })
 
@@ -103,7 +103,7 @@ describe(`GeneExpressionTSnePlot colourize function`, () => {
     })
   })
 
-  test(`assigns default colour, i.e. blue, if points have no expression level property`, () => {
+  test(`assigns default colour, i.e. lightgrey, if points have no expression level property`, () => {
     _colourizeExpressionLevel(gradientColourRanges(), [])({
       series: [
         {
@@ -136,8 +136,8 @@ describe(`GeneExpressionTSnePlot colourize function`, () => {
       max: 100.0
     }).forEach((series) => {
       series.data.forEach((point) => {
-        expect(point).toHaveProperty(`color`, Color(`blue`).alpha(0.65).rgb().toString())
-      })
+          expect(point).toHaveProperty(`color`, Color(`lightgrey`).alpha(0.65).rgb().toString())
+        })
     })
   })
 })
@@ -154,12 +154,4 @@ describe(`GeneExpressionTSnePlot`, () => {
     expect(tree).toMatchSnapshot()
   })
 
-  test(`contains MultiStopGradient component when min and max values exist`, () => {
-    const randomSeries = randomHighchartsSeriesWithSeed()
-    const onSelectGeneId = () => {}
-
-    const wrapper = mount(<GeneExpressionTSnePlot height={600} expressionGradientColours={gradientColourRanges()} atlasUrl={``} suggesterEndpoint={``} onSelectGeneId={onSelectGeneId} loading={true} plotData={plotData(randomSeries)} highlightClusters={[]} speciesName={``}/>)
-
-    expect(wrapper.find(MultiStopGradient).length).toBe(1)
-  })
 })

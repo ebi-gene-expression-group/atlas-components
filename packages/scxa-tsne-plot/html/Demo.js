@@ -24,7 +24,7 @@ class Demo extends React.Component {
 
     this.state = {
       perplexity: perplexities[Math.round((perplexities.length - 1) / 2)],
-      geneId: `ENSG00000111640`,
+      geneId: `ENSMUSG00000059897`,
       selectedColourBy: ks[Math.round((ks.length -1) / 2)].toString(),
       selectedColourByCategory: `clusters`,
       highlightClusters: [],
@@ -61,49 +61,48 @@ class Demo extends React.Component {
             <label>Highlight clusters (cluster integer IDs separated by commas):
               <input name={`inputHighlightClusters`} type={`text`} ref={this.highlightClustersInput} defaultValue={``}/>
             </label>
-            <label>Experiment accession:
+            <label className={`margin-bottom-large`}>Experiment accession:
               <input name={`inputExperimentAccession`} type={`text`} ref={this.experimentAccessionInput} defaultValue={this.state.experimentAccession}/>
             </label>
             <button className={`button`} type="submit">Submit</button>
           </form>
         </div>
 
-        <TsnePlotView
-          atlasUrl={`http://localhost:8080/gxa/sc/`}
-          suggesterEndpoint={`json/suggestions`}
-          experimentAccession={this.state.experimentAccession}
-          wrapperClassName={`row expanded`}
-          clusterPlotClassName={`small-12 large-6 columns`}
-          expressionPlotClassName={`small-12 large-6 columns`}
-          perplexities={perplexities}
-          selectedPerplexity={this.state.perplexity}
-          ks={ks}
-          metadata={metadata}
-          selectedColourBy={this.state.selectedColourBy}
-          selectedColourByCategory={this.state.selectedColourByCategory} // Is the plot coloured by clusters or metadata
-          highlightClusters={this.state.highlightClusters}
-          geneId={this.state.geneId}
-          speciesName={`Homo sapiens`}
-          onChangePerplexity={
-            (perplexity) => { this.setState({perplexity: perplexity}) }
-          }
-          onChangeColourBy={
-            (colourByCategory, colourByValue) => {
-              this.setState({
-                selectedColourBy : colourByValue,
-                selectedColourByCategory : colourByCategory,
-              })
-              this._resetHighlightClusters()
-            }
-          }
-          onSelectGeneId={
-            (geneId) => {
-              this.setState({
-                geneId: geneId,
-              })
-              this._resetHighlightClusters()
-            }
-          }
+        <TsnePlotView atlasUrl={`http://localhost:8080/gxa/sc/`}
+                      suggesterEndpoint={`json/suggestions`}
+                      experimentAccession={this.state.experimentAccession}
+                      wrapperClassName={`row expanded`}
+                      clusterPlotClassName={`small-12 large-6 columns`}
+                      expressionPlotClassName={`small-12 large-6 columns`}
+                      perplexities={perplexities}
+                      selectedPerplexity={this.state.perplexity}
+                      ks={ks}
+                      metadata={metadata}
+                      selectedColourBy={this.state.selectedColourBy}
+                      selectedColourByCategory={this.state.selectedColourByCategory} // Is the plot coloured by clusters or metadata
+                      highlightClusters={this.state.highlightClusters}
+                      geneId={this.state.geneId}
+                      speciesName={'Mus musculus'}
+                      onChangePerplexity={
+                        (perplexity) => { this.setState({perplexity: perplexity}) }
+                      }
+                      onChangeColourBy={
+                        (colourByCategory, colourByValue) => {
+                          this.setState({
+                            selectedColourBy : colourByValue,
+                            selectedColourByCategory : colourByCategory,
+                          })
+                          this._resetHighlightClusters()
+                        }
+                      }
+                      onSelectGeneId={
+                        (geneId) => {
+                          this.setState({
+                            geneId: geneId,
+                          })
+                          this._resetHighlightClusters()
+                        }
+                      }
         />
       </div>
     )

@@ -24,7 +24,7 @@ describe(`PlotSettingsDropdown`, () => {
 
   test(`contains Select component and label`, () => {
     const onSelect = () => {}
-    
+
     const options = [
       {
         value: `hello`,
@@ -36,7 +36,15 @@ describe(`PlotSettingsDropdown`, () => {
       }
     ]
 
-    const wrapper = mount(<PlotSettingsDropdown labelText={`Test dropdown`} defaultValue={`world`} options={options} onSelect={onSelect}/>)
+    const wrapper =
+      mount(<PlotSettingsDropdown labelText={`Test dropdown`}
+                                  defaultValue={
+                                    {
+                                      value: `world`,
+                                      label: `world`
+                                    }
+                                  }
+                                  options={options} onSelect={onSelect}/>)
 
     expect(wrapper.find(`label`).text()).toBe(`Test dropdown`)
     expect(wrapper.find(Select).length).toBe(1)

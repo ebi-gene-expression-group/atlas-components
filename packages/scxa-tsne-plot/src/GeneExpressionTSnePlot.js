@@ -5,9 +5,16 @@ import Color from 'color'
 
 import ScatterPlotLoader from './plotloader/PlotLoader'
 import AtlasAutocomplete from 'expression-atlas-autocomplete'
-import MultiStopGradient from './MultiStopGradient'
 
 import './util/MathRound'
+import Responsive from 'react-responsive';
+
+
+const Desktop = props => <Responsive {...props} minWidth={1800} />;
+const Tablet = props => <Responsive {...props} minWidth={1000} maxWidth={1799} />;
+const Mobile = props => <Responsive {...props} minWidth={767} maxWidth={999} />;
+const Default = props => <Responsive {...props} maxWidth={766} />;
+
 
 const _colourize = (colourRanges, defaultColour = `blue`, alpha = 0.65) => {
   return (val) => {
@@ -45,45 +52,63 @@ const _colourize = (colourRanges, defaultColour = `blue`, alpha = 0.65) => {
 
 const _colourizeExpressionLevel = (gradientColours, highlightSeries) => {
   const colourize = _colourize(gradientColours)
+    return (plotData) => plotData.series.map((aSeries) => {
+      // I can’t think of a better way to reconcile series.name being a string and highlightSeries being an array of
+      // numbers. For more flexibility we might think of having our series be identified by an arbitrary ID string
 
-  return (plotData) => plotData.series.map((aSeries) => {
-    // I can’t think of a better way to reconcile series.name being a string and highlightSeries being an array of
-    // numbers. For more flexibility we might think of having our series be identified by an arbitrary ID string
-    if (!highlightSeries.length || highlightSeries.map((hs) => String(hs)).includes(aSeries.name)) {
-      return {
-        name: aSeries.name,
-        data: aSeries.data.map((point) => {
-          return {
+      if (!highlightSeries.length || highlightSeries.map((hs) => String(hs)).includes(aSeries.name)) {
+        return {
+          name: aSeries.name,
+          data: aSeries.data.map((point) => {
+            if(point.expressionLevel > 0){
+              return {
+                ...point,
+                expressionLevel: Math.round10(point.expressionLevel, -2),
+                colorValue: Math.round10(point.expressionLevel, -2)
+              }
+            } else {
+                return {
+                  ...point,
+                  expressionLevel: Math.round10(point.expressionLevel, -2),
+                  color: Color(`lightgrey`).alpha(0.65).rgb().toString()
+                }
+            }
+
+          })
+        }
+      } else {
+        return {
+          name: aSeries.name,
+          data: aSeries.data.map((point) => ({
             ...point,
             expressionLevel: Math.round10(point.expressionLevel, -2),
-            color: colourize(point.expressionLevel)
-          }
-        })
+            color: Color(`lightgrey`).alpha(0.65).rgb().toString()
+          }))
+        }
       }
-    } else {
-      return {
-        name: aSeries.name,
-        data: aSeries.data.map((point) => ({
-          ...point,
-          expressionLevel: Math.round10(point.expressionLevel, -2),
-          color: Color(`lightgrey`).alpha(0.65).rgb().toString()
-        }))
-      }
-    }
-  })
+    })
 }
 
 const GeneExpressionScatterPlot = (props) => {
   const {atlasUrl, suggesterEndpoint, geneId, onSelectGeneId, speciesName} = props       // Suggester
   const {height, plotData, expressionGradientColours, highlightClusters} = props  // Chart
   const {loading, resourcesUrl, errorMessage} = props                       // Overlay
+  const colourSchema = [`#d4e4fb`,`#95adde`,`#6077bf`,`#1151D1`,`#35419b`,`#0e0573`] // light blue to dark blue
+  const colourSchemaLength = colourSchema.length
 
+  const plotDisable = !Boolean(plotData.max)
+
+  const dataScale = plotDisable ?
+    0 :
+    plotData.max.toFixed(0).toString().length // The digit before demical
   const highchartsConfig = {
     plotOptions: {
       scatter: {
         tooltip: {
           headerFormat: `<b>Cell ID:</b> {point.key}<br>`,
-          pointFormat: geneId ? `<b>Expression level:</b> {point.expressionLevel} ${plotData.unit}` : `No gene selected`
+          pointFormat: geneId ?
+            `<b>Expression level:</b> {point.expressionLevel} ${plotData.unit}` :
+            `No gene selected`
         },
         marker: {
           symbol: `circle`
@@ -91,26 +116,54 @@ const GeneExpressionScatterPlot = (props) => {
       }
     },
     chart: {
-      height: height
+      height: plotDisable ? height * 0.95 : height
     },
     title: {
       text: `Gene expression`
     },
-    legend: {
-      enabled: false
+    colorAxis: plotDisable ?
+    {} :
+    {
+      min: 0.1,
+      max: 10 ** dataScale - 1,
+      type: `logarithmic`,
+      reversed: false,
+      //Dynamic stop where the last change colour is 100K
+      stop: colourSchema.map((val,idx) => {
+        return idx <= (Math.min(dataScale,colourSchemaLength) - 1) ?
+        [(idx + 1)/Math.min(dataScale,colourSchemaLength),val] : []
+      }),
+      minColor:`rgb(215, 255, 255)`,
+      maxColor: dataScale > colourSchemaLength ?
+        colourSchema[colourSchemaLength - 1] : colourSchema[dataScale - 1],
+      marker: {
+         color: `#c4463a`
+      }
+    },
+    legend: plotDisable ?
+    {enabled: false} :
+    {
+      title: {
+        text: `Expression level (TPM)`
+      },
+      floating: false,
+      align: `center`,
+      symbolHeight: 5,
+      symbolWidth: 450
     }
   }
 
-  const renderGradient = plotData.max > 0
-  const chartClassName = renderGradient ? `small-10 columns` : `small-12 columns`
-  const gradient = renderGradient ?
-    <MultiStopGradient
-      height={height}
-      showTicks={true}
-      colourRanges={expressionGradientColours}
-      plotData={plotData}
-    /> :
-    null
+  const responsiveComponent = width =>
+    <ScatterPlotLoader key={`expression-plot`}
+                       wrapperClassName={`row`}
+                       chartClassName={`small-12 columns`}
+                       series={_colourizeExpressionLevel(expressionGradientColours, highlightClusters)(plotData)}
+                       highchartsConfig={highchartsConfig}
+                       loading={loading}
+                       legendWidth={width}
+                       resourcesUrl={resourcesUrl}
+                       errorMessage={errorMessage}
+    />
 
   return [
     <AtlasAutocomplete
@@ -124,19 +177,20 @@ const GeneExpressionScatterPlot = (props) => {
       defaultSpecies={speciesName}
       onSelect={ (event) => { onSelectGeneId(event) } }
     />,
-
-    <ScatterPlotLoader
-      key={`expression-plot`}
-      wrapperClassName={`row`}
-      chartClassName={chartClassName}
-      series={_colourizeExpressionLevel(expressionGradientColours, highlightClusters)(plotData)}
-      highchartsConfig={highchartsConfig}
-      children={gradient}
-      loading={loading}
-      resourcesUrl={resourcesUrl}
-      errorMessage={errorMessage}
-    />
-  ]
+    //react-responsive design
+    <Desktop key={`Desktop`}>
+      {responsiveComponent(1800/2.2)}
+    </Desktop>,
+    <Tablet key={`Tablet`}>
+      {responsiveComponent(1000/2.2)}
+    </Tablet>,
+    <Mobile key={`Mobile`}>
+      {responsiveComponent(750)}
+    </Mobile>,
+    <Default key={`Default`}>
+      {responsiveComponent(350)}
+    </Default>
+    ]
 }
 
 GeneExpressionScatterPlot.propTypes = {

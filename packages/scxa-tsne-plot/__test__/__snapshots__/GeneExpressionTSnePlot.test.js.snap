@@ -1,179 +1,37 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`GeneExpressionTSnePlot with random data matches snapshot 1`] = `
-Array [
+<div
+  className="row"
+>
   <div
-    className="row"
+    className="small-12 columns"
   >
-    <div
-      className="small-12 columns"
-    >
-      <label>
-        Gene ID, gene name or gene feature
-      </label>
-      <div
-        style={
-          Object {
-            "display": "",
-          }
-        }
-      >
-        <input
-          aria-autocomplete="list"
-          aria-expanded={false}
-          autoComplete="off"
-          name="geneId"
-          onBlur={[Function]}
-          onChange={[Function]}
-          onClick={[Function]}
-          onFocus={[Function]}
-          onKeyDown={[Function]}
-          role="combobox"
-          type="text"
-          value=""
-        />
-      </div>
-    </div>
-  </div>,
-  <div
-    className="row"
-    style={
-      Object {
-        "position": "relative",
-      }
-    }
-  >
-    <div
-      className="small-10 columns"
-    >
-      <div />
-    </div>
-    <div>
-      <div
-        className="small-2 columns text-center"
-      >
-        <small>
-          <span>
-            10000
-          </span>
-           
-          TPM
-        </small>
-        <div
-          className="gradient"
-          style={
-            Object {
-              "background": "linear-gradient(0deg, rgb(215, 255, 255) 0%, rgb(128, 255, 255) 20%, rgb(0, 85, 225) 40%, rgb(0, 0, 115) 100%)",
-              "height": "500px",
-            }
-          }
-        >
-          <div
-            className="dimgray"
-            style={
-              Object {
-                "top": "24px",
-              }
-            }
-          >
-            <small
-              className="left"
-            >
-              <span>
-                9997.45
-              </span>
-            </small>
-          </div>
-          <div
-            className="dimgray"
-            style={
-              Object {
-                "top": "487.57040149782796px",
-              }
-            }
-          >
-            <small
-              className="left"
-            >
-              <span>
-                3.64
-              </span>
-            </small>
-          </div>
-          <div
-            className="lightgray"
-            style={
-              Object {
-                "top": "424px",
-              }
-            }
-          >
-            <small
-              className="right"
-            >
-              <span>
-                10
-              </span>
-            </small>
-          </div>
-          <div
-            className="lightgray"
-            style={
-              Object {
-                "top": "324px",
-              }
-            }
-          >
-            <small
-              className="right"
-            >
-              <span>
-                100
-              </span>
-            </small>
-          </div>
-        </div>
-        <div>
-          <small>
-            <span>
-              0
-            </span>
-             
-            TPM
-          </small>
-        </div>
-      </div>
-    </div>
+    <label>
+      Gene ID, gene name or gene feature
+    </label>
     <div
       style={
         Object {
-          "alignItems": "center",
-          "background": "rgba(255,255,255,0.8)",
-          "bottom": 0,
-          "display": "flex",
-          "justifyContent": "center",
-          "left": 0,
-          "position": "absolute",
-          "right": 0,
-          "top": 0,
+          "display": "",
         }
       }
     >
-      <div
-        style={
-          Object {
-            "textAlign": "center",
-          }
-        }
-      >
-        <p>
-          Loading, please wait...
-        </p>
-        <img
-          src="test-file-stub"
-        />
-      </div>
+      <input
+        aria-autocomplete="list"
+        aria-expanded={false}
+        autoComplete="off"
+        name="geneId"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        role="combobox"
+        type="text"
+        value=""
+      />
     </div>
-  </div>,
-]
+  </div>
+</div>
 `;

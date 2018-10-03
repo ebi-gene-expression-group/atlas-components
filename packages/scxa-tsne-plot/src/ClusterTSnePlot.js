@@ -27,6 +27,7 @@ const ClusterTSnePlot = (props) => {
   const {ks, perplexities, metadata, selectedPerplexity, onChangePerplexity, selectedColourBy, onChangeColourBy} = props  // Select
   const {plotData, highlightClusters, height, tooltipContent} = props   // Chart
   const {loading, resourcesUrl, errorMessage} = props   // Overlay
+  const opacity = 0.7;
 
   const highchartsConfig = {
     plotOptions: {
@@ -38,26 +39,26 @@ const ClusterTSnePlot = (props) => {
     },
     // Generated with http://tools.medialab.sciences-po.fr/iwanthue/
     colors: [
-      `rgba(212, 137, 48, 0.7)`,
-      `rgba(71, 193, 152, 0.7)`,
-      `rgba(90, 147, 221, 0.7)`,
-      `rgba(194, 73, 97, 0.7)`,
-      `rgba(128, 177, 66, 0.7)`,
-      `rgba(208, 76, 134, 0.7)`,
-      `rgba(188, 176, 59, 0.7)`,
-      `rgba(132, 43, 102, 0.7)`,
-      `rgba(93, 188, 108, 0.7)`,
-      `rgba(82, 45, 128, 0.7)`,
-      `rgba(101, 133, 52, 0.7)`,
-      `rgba(169, 107, 212, 0.7)`,
-      `rgba(185, 140, 70, 0.7)`,
-      `rgba(82, 88, 180, 0.7)`,
-      `rgba(176, 73, 62, 0.7)`,
-      `rgba(101, 127, 233, 0.7)`,
-      `rgba(214, 126, 188, 0.7)`,
-      `rgba(196, 86, 178, 0.7)`,
-      `rgba(173, 131, 211, 0.7)`,
-      `rgba(193, 84, 47, 0.7)`
+      `rgba(212, 137, 48, ${opacity})`,
+      `rgba(71, 193, 152, ${opacity})`,
+      `rgba(90, 147, 221, ${opacity})`,
+      `rgba(194, 73, 97, ${opacity})`,
+      `rgba(128, 177, 66, ${opacity})`,
+      `rgba(208, 76, 134, ${opacity})`,
+      `rgba(188, 176, 59, ${opacity})`,
+      `rgba(132, 43, 102, ${opacity})`,
+      `rgba(93, 188, 108, ${opacity})`,
+      `rgba(82, 45, 128, ${opacity})`,
+      `rgba(101, 133, 52, ${opacity})`,
+      `rgba(169, 107, 212, ${opacity})`,
+      `rgba(185, 140, 70, ${opacity})`,
+      `rgba(82, 88, 180, ${opacity})`,
+      `rgba(176, 73, 62, ${opacity})`,
+      `rgba(101, 127, 233, ${opacity})`,
+      `rgba(214, 126, 188, ${opacity})`,
+      `rgba(196, 86, 178, ${opacity})`,
+      `rgba(173, 131, 211, ${opacity})`,
+      `rgba(193, 84, 47, ${opacity})`
     ],
     chart: {
       height: height
@@ -69,7 +70,8 @@ const ClusterTSnePlot = (props) => {
       enabled: true,
       align: `center`,
       verticalAlign: `bottom`,
-      layout: `horizontal`
+      layout: `horizontal`,
+      itemMarginBottom: 20,
     },
     tooltip: {
       style: {
