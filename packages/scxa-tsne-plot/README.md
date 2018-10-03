@@ -1,6 +1,6 @@
 # t-SNE plot for Single Cell Expression Atlas experiments
 
-[![Build Status](https://travis-ci.org/ebi-gene-expression-group/react-ebi-species.svg?branch=master)](https://travis-ci.org/ebi-gene-expression-group/react-ebi-species) [![Coverage Status](https://coveralls.io/repos/github/ebi-gene-expression-group/scxa-experiment-page-tsne-plot-view/badge.svg?branch=master)](https://coveralls.io/github/ebi-gene-expression-group/scxa-experiment-page-tsne-plot-view?branch=master)
+[![Build Status](https://travis-ci.org/ebi-gene-expression-group/scxa-experiment-page-tsne-plot-view.svg?branch=master)](https://travis-ci.org/ebi-gene-expression-group/scxa-experiment-page-tsne-plot-view) [![Coverage Status](https://coveralls.io/repos/github/ebi-gene-expression-group/scxa-experiment-page-tsne-plot-view/badge.svg?branch=master)](https://coveralls.io/github/ebi-gene-expression-group/scxa-experiment-page-tsne-plot-view?branch=master)
 
 Visualisation of [t-SNE plots](https://lvdmaaten.github.io/tsne/) of single cell expression experiments for [Single Cell Expression Atlas](https://wwwdev.ebi.ac.uk/scxa). The component is able to select and display different plots for more than one perplexity value, and several clustering strategies. At the moment only the number of clusters produced by different values of *k* in [single-cell consensus clustering (SC3)](http://www.sanger.ac.uk/science/tools/single-cell-consensus-clustering-sc3) is supported.
 
