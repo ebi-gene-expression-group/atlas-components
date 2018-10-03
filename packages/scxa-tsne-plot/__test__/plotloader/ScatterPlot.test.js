@@ -108,4 +108,29 @@ describe(`ScatterPlot`, () => {
     const tree = shallow(<ScatterPlot {...series}/>)
     expect(tree).toMatchSnapshot()
   })
+
+  
+  test(`displays the number of cells`,() =>{
+    const randomCellNumber = Math.floor(Math.random()*1000)
+    const wrapper = mount(<ScatterPlot series={[]}/>)
+
+    const randomSeriesName = `Series with ${randomCellNumber} points`
+    const randomSeriesData = []
+    for (let i = 0 ; i < randomCellNumber ; i++) {
+      randomSeriesData.push({
+        name: `Point ${i}`,
+        x: 0,
+        y: 0,
+        expressionLevel: 0
+      })
+    }
+    const randomSeries = {
+      name: randomSeriesName,
+      data: randomSeriesData
+    }
+    wrapper.setProps({ series: [randomSeries] }).mount()
+
+    expect(wrapper.find(`n`).prop(`config`)).toHaveProperty(`subtitle.text`, `Analysis results for ${randomCellNumber} cells`)
+
+  })
 })

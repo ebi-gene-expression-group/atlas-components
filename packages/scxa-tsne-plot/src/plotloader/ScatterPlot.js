@@ -118,7 +118,10 @@ const ScatterPlot = (props) => {
           series: {
             marker: {radius: 3}
           }
-        }
+        },
+        subtitle:{
+          text: `Analysis results for ${numPoints} cells`
+        },
       },
       {series: series},
       highchartsConfig,
