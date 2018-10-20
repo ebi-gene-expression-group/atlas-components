@@ -29,12 +29,15 @@
 </div>
 </body>
 
-<script src="vendorCommons.bundle.js"></script>
-<script src="demo.bundle.js"></script>
+<script defer src="../dist/vendors.bundle.js"></script>
+<script defer src="../dist/tSnePlotView.bundle.js"></script>
+<script defer src="../dist/tSnePlotViewDemo.bundle.js"></script>
 
 <!-- Set to http://localhost:8080/gxa/ or http://localhost:8080/gxa/sc/ -- Remember the trailing slash! -->
 <script>
-  demo.render({}, 'target')
+  document.addEventListener("DOMContentLoaded", function(event) {
+    tSnePlotViewDemo.render({}, 'target')
+  })
 </script>
 
 </html>

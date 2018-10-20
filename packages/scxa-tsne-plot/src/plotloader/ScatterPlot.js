@@ -27,6 +27,9 @@ async function addModules(){
 
 addModules()
 
+// https://stackoverflow.com/questions/2901102/how-to-print-a-number-with-commas-as-thousands-separators-in-javascript
+const numberWithCommas = (x) => x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, `,`)
+
 const highchartsBaseConfig = {
   credits: {
     enabled: false
@@ -120,7 +123,7 @@ const ScatterPlot = (props) => {
           }
         },
         subtitle:{
-          text: `Analysis results for ${numPoints} cells`
+          text: numPoints > 0 ? `Analysis results for ${numberWithCommas(numPoints)} cells` : ``
         },
       },
       {series: series},

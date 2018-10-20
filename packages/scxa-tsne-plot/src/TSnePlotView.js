@@ -6,12 +6,6 @@ import URI from 'urijs'
 import ClusterTSnePlot from './ClusterTSnePlot'
 import GeneExpressionTSnePlot from './GeneExpressionTSnePlot'
 
-const fetchResponseJson = async (base, endpoint) => {
-  const response = await fetch(URI(endpoint, base).toString())
-  const responseJson = await response.json()
-  return responseJson
-}
-
 class TSnePlotView extends React.Component {
   constructor(props) {
     super(props)
@@ -32,60 +26,60 @@ class TSnePlotView extends React.Component {
     }
   }
 
-  _fetchAndSetStateCellClusters({atlasUrl, experimentAccession, selectedColourBy, selectedColourByCategory, selectedPerplexity}) {
+  async _fetchAndSetState(resource, baseUrl, dataField, errorMessageField, loadingField) {
     this.setState({
-      loadingCellClusters: true
-    }, () => {
-      let endpoint
-      if(selectedColourByCategory === `clusters`) {
-        endpoint = `json/experiments/${experimentAccession}/tsneplot/${selectedPerplexity}/clusters/k/${selectedColourBy}`
-      }
-      else if(selectedColourByCategory === `metadata`) {
-        endpoint = `json/experiments/${experimentAccession}/tsneplot/${selectedPerplexity}/metadata/${selectedColourBy}`
-      }
-      fetchResponseJson(atlasUrl, endpoint)
-        .then((responseJson) => {
-          this.setState({
-            cellClustersData: responseJson,
-            cellClustersErrorMessage: null,
-            loadingCellClusters: false
-          })
-        })
-        .catch((reason) => {
-          this.setState({
-            cellClustersErrorMessage: `${reason.name}: ${reason.message}`,
-            loadingCellClusters: false
-          })
-        })
+      [loadingField]: true
     })
+
+    const url = URI(resource, baseUrl).toString()
+    const response = await fetch(url)
+
+    try {
+      if (!response.ok) {
+        throw new Error(`${url} => ${response.status}`)
+      }
+
+      this.setState({
+        [dataField]: await response.json(),
+        [errorMessageField]: null,
+        [loadingField]: false,
+      })
+    } catch(e) {
+      this.setState({
+        [errorMessageField]: `${e.name}: ${e.message}`,
+        [loadingField]: false
+      })
+    }
+  }
+
+  _fetchAndSetStateCellClusters(
+    {atlasUrl, experimentAccession, selectedColourBy, selectedColourByCategory, selectedPerplexity}) {
+    const resource =
+      selectedColourByCategory === `clusters` ?
+        `json/experiments/${experimentAccession}/tsneplot/${selectedPerplexity}/clusters/k/${selectedColourBy}` :
+      selectedColourByCategory === `metadata` ?
+        `json/experiments/${experimentAccession}/tsneplot/${selectedPerplexity}/metadata/${selectedColourBy}` :
+      // We shouldn’t arrive here...
+      undefined
+
+    this._fetchAndSetState(
+      resource, atlasUrl, `cellClustersData`, `cellClustersErrorMessage`, `loadingCellClusters`)
   }
 
   _fetchAndSetStateGeneId({atlasUrl, experimentAccession, selectedPerplexity, geneId}) {
-    this.setState({
-      loadingGeneExpression: true
-    }, () => {
-      fetchResponseJson(atlasUrl, `json/experiments/${experimentAccession}/tsneplot/${selectedPerplexity}/expression/${geneId}`)
-        .then((responseJson) => {
-          this.setState({
-            geneExpressionData: responseJson,
-            geneExpressionErrorMessage: null,
-            loadingGeneExpression: false,
-          })
-        })
-        .catch((reason) => {
-          this.setState({
-            geneExpressionErrorMessage: `${reason.name}: ${reason.message}`,
-            loadingGeneExpression: false
-          })
-        })
-    })
+    const resource = `json/experiments/${experimentAccession}/tsneplot/${selectedPerplexity}/expression/${geneId}`
+
+    this._fetchAndSetState(
+      resource, atlasUrl, `geneExpressionData`, `geneExpressionErrorMessage`, `loadingGeneExpression`)
   }
 
   componentDidUpdate(previousProps) {
-    if (previousProps.selectedPerplexity !== this.props.selectedPerplexity || previousProps.experimentAccession !== this.props.experimentAccession) {
+    if (previousProps.selectedPerplexity !== this.props.selectedPerplexity ||
+        previousProps.experimentAccession !== this.props.experimentAccession) {
       this._fetchAndSetStateCellClusters(this.props)
       this._fetchAndSetStateGeneId(this.props)
-    } else if (previousProps.selectedColourByCategory !== this.props.selectedColourBy && previousProps.selectedColourBy !== this.props.selectedColourBy) {
+    } else if (previousProps.selectedColourByCategory !== this.props.selectedColourBy &&
+               previousProps.selectedColourBy !== this.props.selectedColourBy) {
       this._fetchAndSetStateCellClusters(this.props)
     } else if (previousProps.geneId !== this.props.geneId) {
       this._fetchAndSetStateGeneId(this.props)
