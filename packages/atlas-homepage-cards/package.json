@@ -5,7 +5,9 @@
   "main": "lib/index.js",
   "scripts": {
     "prepack": "rm -rf lib && babel src -d lib --copy-files",
-    "test": "jest --env=node --coverage --verbose",
+    "testOnly": "jest --env=node --coverage --verbose",
+    "test": "npm run testOnly",
+    "posttest": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
     "postversion": "npm publish",
     "postpublish": "git push && git push --tags"
   },
