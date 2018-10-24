@@ -3,11 +3,8 @@
 <head>
     <title>Atlas Number Format demo</title>
 
-    <link rel="stylesheet" href="https://www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/libraries/foundation-6/css/foundation.css" type="text/css" media="all" />
-    <link rel="stylesheet" href="https://www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/css/ebi-global.css" type="text/css" media="all" />
-    <link rel="stylesheet" href="https://www.ebi.ac.uk/web_guidelines/EBI-Icon-fonts/v1.2/fonts.css" type="text/css" media="all" />
-
-    <link rel="stylesheet" href="https://www.ebi.ac.uk/gxa/resources/css/foundation/atlas.css" type="text/css" media="all">
+    <link rel="stylesheet" href="https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/css/ebi-global.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="https://ebi.emblstatic.net/web_guidelines/EBI-Icon-fonts/v1.2/fonts.css" type="text/css" media="all" />
 </head>
 
 <body>
@@ -88,18 +85,18 @@
 </div>
 </body>
 
-<script src="vendorCommons.bundle.js"></script>
-<script src="scientificNotationNumber.bundle.js"></script>
+<script src="../dist/vendors.bundle.js"></script>
+<script src="../dist/scientificNotationNumber.bundle.js"></script>
 
 <script>
     [0, 0.1, 1, 1000, 99999.999999, 0.000001, 1000000000, 10000000001, 0.00004998549, -0.00004998549, 57832234.0234, -57832234.0234]
       .forEach(function(e) {
         scientificNotationNumber.render({value: e}, e.toString())
-      })
+      });
 
     document.getElementById("input-number").addEventListener("change", function(e) {
       scientificNotationNumber.render({value: Number.parseFloat(e.target.value)}, "render-input")
-    })
+    });
 </script>
 
 </html>
