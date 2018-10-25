@@ -2,7 +2,7 @@ import React from 'react'
 import renderer from 'react-test-renderer'
 import fetchMock from 'fetch-mock'
 import Enzyme from 'enzyme'
-import {shallow, mount, render} from 'enzyme'
+import {shallow, mount} from 'enzyme'
 import Adapter from 'enzyme-adapter-react-16'
 
 import BioentityInformation from '../src/BioentityInformation.js'
@@ -13,7 +13,7 @@ Enzyme.configure({ adapter: new Adapter() })
 
 describe(`BioentityInformation`, () => {
   const defaultProps = {
-    atlasUrl: `https://www.ebi.ac.uk/gxa_sc/`,
+    atlasUrl: `https://www.ebi.ac.uk/gxa/sc/`,
     geneId: `ENS0001`
   }
 
