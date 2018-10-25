@@ -1,6 +1,6 @@
 {
   "name": "sc-atlas-bioentity-information",
-  "version": "1.5.1",
+  "version": "1.6.0",
   "description": "Bioentity information",
   "main": "lib/index.js",
   "scripts": {
