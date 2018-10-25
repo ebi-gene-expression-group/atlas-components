@@ -18,7 +18,6 @@ class Demo extends React.Component {
         <AtlasAutocomplete key={`expression-autocomplete`}
                            atlasUrl={`http://localhost:8080/gxa/sc/`}
                            wrapperClassName={`row column expanded`}
-                           enableSpeciesFilter={false}
                            suggesterEndpoint={`json/suggestions`}
                            initialValue={this.state.geneId}
                            onSelect={ (geneId) => { this.setState({geneId: geneId}) }}/>

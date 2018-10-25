@@ -10,7 +10,7 @@ const Loading = (props) => {
 
   return (
     <div className={`text-center`}>
-      <img className={`small-centered`} src={URI(require(`./images/loading.gif`), props.resourcesUrl).toString()} />
+      <img className={`small-centered`} src={URI(require(`./images/flask-loader.svg`), props.resourcesUrl).toString()} />
     </div>
   )
 }
