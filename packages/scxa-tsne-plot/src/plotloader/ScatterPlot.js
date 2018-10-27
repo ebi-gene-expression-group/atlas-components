@@ -6,9 +6,10 @@ import HighchartsExporting from 'highcharts/modules/exporting'
 import HighchartsBoost from 'highcharts/modules/boost'
 import HighchartsHeatmap from 'highcharts/modules/heatmap'
 //import HighchartsMap from 'highcharts/modules/map'
-
 // import highchartsYAxisPanningModule from './highchartsYAxisPanningModule'
+
 import highchartsHeatmapLegendModule from './highchartsHeatmapLegendModule'
+import highchartsAdaptChartToLegendModule from 'highcharts-adapt-chart-to-legend'
 
 import deepmerge from 'deepmerge'
 import SeriesPropTypes from './SeriesPropTypes'
@@ -19,16 +20,14 @@ const Highcharts = ReactHighcharts.Highcharts
 async function addModules(){
   await HighchartsExporting(Highcharts)
   await HighchartsBoost(Highcharts)
-  //await HighchartsMap(Highcharts)
   await HighchartsHeatmap(Highcharts)
   await highchartsHeatmapLegendModule(Highcharts)
+  await highchartsAdaptChartToLegendModule(Highcharts)
+  //await HighchartsMap(Highcharts)
   // await highchartsYAxisPanningModule(Highcharts)
 }
 
 addModules()
-
-// https://stackoverflow.com/questions/2901102/how-to-print-a-number-with-commas-as-thousands-separators-in-javascript
-const numberWithCommas = (x) => x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, `,`)
 
 const highchartsBaseConfig = {
   credits: {
@@ -43,6 +42,13 @@ const highchartsBaseConfig = {
     panning: true,
     spacingTop: 50,
     zoomType: `xy`
+  },
+
+  legend: {
+    adjustChartSize: true,
+    navigation: {
+      enabled: false
+    }
   },
 
   // mapNavigation: {
@@ -112,7 +118,6 @@ const highchartsBaseConfig = {
 const ScatterPlot = (props) => {
   const {chartClassName, series, highchartsConfig, legendWidth} = props
 
-  const numPoints = series.reduce((acc, aSeries) => acc + aSeries.data.length, 0)
   const config =
     deepmerge.all([
       highchartsBaseConfig,
@@ -121,10 +126,7 @@ const ScatterPlot = (props) => {
           series: {
             marker: {radius: 3}
           }
-        },
-        subtitle:{
-          text: numPoints > 0 ? `Analysis results for ${numberWithCommas(numPoints)} cells` : ``
-        },
+        }
       },
       {series: series},
       highchartsConfig,

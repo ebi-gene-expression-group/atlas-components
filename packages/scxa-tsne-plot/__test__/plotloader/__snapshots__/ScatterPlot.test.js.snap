@@ -106,6 +106,10 @@ ShallowWrapper {
               "enabled": false,
             },
             "legend": Object {
+              "adjustChartSize": true,
+              "navigation": Object {
+                "enabled": false,
+              },
               "symbolWidth": undefined,
             },
             "plotOptions": Object {
@@ -170,9 +174,6 @@ ShallowWrapper {
                 "name": "Cluster 3",
               },
             ],
-            "subtitle": Object {
-              "text": "Analysis results for 6 cells",
-            },
             "title": Object {
               "style": Object {
                 "fontSize": "25px",
@@ -243,6 +244,10 @@ ShallowWrapper {
             "enabled": false,
           },
           "legend": Object {
+            "adjustChartSize": true,
+            "navigation": Object {
+              "enabled": false,
+            },
             "symbolWidth": undefined,
           },
           "plotOptions": Object {
@@ -307,9 +312,6 @@ ShallowWrapper {
               "name": "Cluster 3",
             },
           ],
-          "subtitle": Object {
-            "text": "Analysis results for 6 cells",
-          },
           "title": Object {
             "style": Object {
               "fontSize": "25px",
@@ -385,6 +387,10 @@ ShallowWrapper {
                 "enabled": false,
               },
               "legend": Object {
+                "adjustChartSize": true,
+                "navigation": Object {
+                  "enabled": false,
+                },
                 "symbolWidth": undefined,
               },
               "plotOptions": Object {
@@ -449,9 +455,6 @@ ShallowWrapper {
                   "name": "Cluster 3",
                 },
               ],
-              "subtitle": Object {
-                "text": "Analysis results for 6 cells",
-              },
               "title": Object {
                 "style": Object {
                   "fontSize": "25px",
@@ -522,6 +525,10 @@ ShallowWrapper {
               "enabled": false,
             },
             "legend": Object {
+              "adjustChartSize": true,
+              "navigation": Object {
+                "enabled": false,
+              },
               "symbolWidth": undefined,
             },
             "plotOptions": Object {
@@ -586,9 +593,6 @@ ShallowWrapper {
                 "name": "Cluster 3",
               },
             ],
-            "subtitle": Object {
-              "text": "Analysis results for 6 cells",
-            },
             "title": Object {
               "style": Object {
                 "fontSize": "25px",
@@ -643,8 +647,6 @@ ShallowWrapper {
         },
       },
     },
-    "attachTo": undefined,
-    "hydrateIn": undefined,
   },
 }
 `;
@@ -20031,6 +20033,10 @@ ShallowWrapper {
               "enabled": false,
             },
             "legend": Object {
+              "adjustChartSize": true,
+              "navigation": Object {
+                "enabled": false,
+              },
               "symbolWidth": undefined,
             },
             "plotOptions": Object {
@@ -39371,9 +39377,6 @@ ShallowWrapper {
                 "name": "4",
               },
             ],
-            "subtitle": Object {
-              "text": "Analysis results for 3,217 cells",
-            },
             "title": Object {
               "style": Object {
                 "fontSize": "25px",
@@ -39444,6 +39447,10 @@ ShallowWrapper {
             "enabled": false,
           },
           "legend": Object {
+            "adjustChartSize": true,
+            "navigation": Object {
+              "enabled": false,
+            },
             "symbolWidth": undefined,
           },
           "plotOptions": Object {
@@ -58784,9 +58791,6 @@ ShallowWrapper {
               "name": "4",
             },
           ],
-          "subtitle": Object {
-            "text": "Analysis results for 3,217 cells",
-          },
           "title": Object {
             "style": Object {
               "fontSize": "25px",
@@ -58862,6 +58866,10 @@ ShallowWrapper {
                 "enabled": false,
               },
               "legend": Object {
+                "adjustChartSize": true,
+                "navigation": Object {
+                  "enabled": false,
+                },
                 "symbolWidth": undefined,
               },
               "plotOptions": Object {
@@ -78202,9 +78210,6 @@ ShallowWrapper {
                   "name": "4",
                 },
               ],
-              "subtitle": Object {
-                "text": "Analysis results for 3,217 cells",
-              },
               "title": Object {
                 "style": Object {
                   "fontSize": "25px",
@@ -78275,6 +78280,10 @@ ShallowWrapper {
               "enabled": false,
             },
             "legend": Object {
+              "adjustChartSize": true,
+              "navigation": Object {
+                "enabled": false,
+              },
               "symbolWidth": undefined,
             },
             "plotOptions": Object {
@@ -97615,9 +97624,6 @@ ShallowWrapper {
                 "name": "4",
               },
             ],
-            "subtitle": Object {
-              "text": "Analysis results for 3,217 cells",
-            },
             "title": Object {
               "style": Object {
                 "fontSize": "25px",
@@ -97672,8 +97678,6 @@ ShallowWrapper {
         },
       },
     },
-    "attachTo": undefined,
-    "hydrateIn": undefined,
   },
 }
 `;
@@ -97730,6 +97734,10 @@ ShallowWrapper {
               "enabled": false,
             },
             "legend": Object {
+              "adjustChartSize": true,
+              "navigation": Object {
+                "enabled": false,
+              },
               "symbolWidth": undefined,
             },
             "plotOptions": Object {
@@ -97742,9 +97750,6 @@ ShallowWrapper {
               },
             },
             "series": Array [],
-            "subtitle": Object {
-              "text": "",
-            },
             "title": Object {
               "style": Object {
                 "fontSize": "25px",
@@ -97815,6 +97820,10 @@ ShallowWrapper {
             "enabled": false,
           },
           "legend": Object {
+            "adjustChartSize": true,
+            "navigation": Object {
+              "enabled": false,
+            },
             "symbolWidth": undefined,
           },
           "plotOptions": Object {
@@ -97827,9 +97836,6 @@ ShallowWrapper {
             },
           },
           "series": Array [],
-          "subtitle": Object {
-            "text": "",
-          },
           "title": Object {
             "style": Object {
               "fontSize": "25px",
@@ -97905,6 +97911,10 @@ ShallowWrapper {
                 "enabled": false,
               },
               "legend": Object {
+                "adjustChartSize": true,
+                "navigation": Object {
+                  "enabled": false,
+                },
                 "symbolWidth": undefined,
               },
               "plotOptions": Object {
@@ -97917,9 +97927,6 @@ ShallowWrapper {
                 },
               },
               "series": Array [],
-              "subtitle": Object {
-                "text": "",
-              },
               "title": Object {
                 "style": Object {
                   "fontSize": "25px",
@@ -97990,6 +97997,10 @@ ShallowWrapper {
               "enabled": false,
             },
             "legend": Object {
+              "adjustChartSize": true,
+              "navigation": Object {
+                "enabled": false,
+              },
               "symbolWidth": undefined,
             },
             "plotOptions": Object {
@@ -98002,9 +98013,6 @@ ShallowWrapper {
               },
             },
             "series": Array [],
-            "subtitle": Object {
-              "text": "",
-            },
             "title": Object {
               "style": Object {
                 "fontSize": "25px",
@@ -98059,8 +98067,6 @@ ShallowWrapper {
         },
       },
     },
-    "attachTo": undefined,
-    "hydrateIn": undefined,
   },
 }
 `;

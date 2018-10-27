@@ -96,14 +96,15 @@ const GeneExpressionScatterPlot = (props) => {
   const colourSchema = [`#d4e4fb`,`#95adde`,`#6077bf`,`#1151D1`,`#35419b`,`#0e0573`] // light blue to dark blue
   const colourSchemaLength = colourSchema.length
 
-  const plotDisable = !plotData.max
+  const plotIsDisabled = !plotData.max
 
-  const dataScale = plotDisable ?
+  const dataScale = plotIsDisabled ?
     0 :
-    plotData.max.toFixed(0).toString().length // The digit before demical
+    plotData.max.toFixed(0).toString().length // Number of digits before decimal point
   const highchartsConfig = {
     chart: {
-      height: plotDisable ? height * 0.95 : height
+      // Magic number to adjust the height discrepancy between the two charts
+      height: plotIsDisabled ? height - 12 : height
     },
     title: {
       text: `Gene expression`
@@ -125,7 +126,7 @@ const GeneExpressionScatterPlot = (props) => {
     marker: {
       symbol: `circle`
     },
-    colorAxis: plotDisable ?
+    colorAxis: plotIsDisabled ?
       {} :
       {
         min: 0.1,
@@ -144,8 +145,10 @@ const GeneExpressionScatterPlot = (props) => {
           color: `#c4463a`
         }
       },
-    legend: plotDisable ?
-      {enabled: false} :
+    legend: plotIsDisabled ?
+      {
+        enabled: false
+      } :
       {
         title: {
           text: `Expression level (TPM)`
@@ -173,7 +176,7 @@ const GeneExpressionScatterPlot = (props) => {
   return [
     <AtlasAutocomplete
       key={`expression-autocomplete`}
-      wrapperClassName={`row`}
+      wrapperClassName={`row margin-bottom-large`}
       atlasUrl={atlasUrl}
       suggesterEndpoint={suggesterEndpoint}
       initialValue={geneId}

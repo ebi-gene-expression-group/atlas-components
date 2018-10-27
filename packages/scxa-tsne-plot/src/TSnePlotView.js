@@ -32,9 +32,10 @@ class TSnePlotView extends React.Component {
     })
 
     const url = URI(resource, baseUrl).toString()
-    const response = await fetch(url)
 
     try {
+      const response = await fetch(url)
+
       if (!response.ok) {
         throw new Error(`${url} => ${response.status}`)
       }
@@ -100,8 +101,19 @@ class TSnePlotView extends React.Component {
     const {loadingGeneExpression, geneExpressionData, geneExpressionErrorMessage} = this.state
     const {loadingCellClusters, cellClustersData, cellClustersErrorMessage} = this.state
 
-    const getTooltipContent = (cellId) => {
-      return fetchResponseJson(atlasUrl, `json/experiment/${this.props.experimentAccession}/cell/${cellId}/metadata`)
+    const getTooltipContent = async (cellId) => {
+      const url = URI(`json/experiment/${this.props.experimentAccession}/cell/${cellId}/metadata`, atlasUrl).toString()
+      try {
+        const response = await fetch(url)
+
+        if (!response.ok) {
+          throw new Error(`${url} => ${response.status}`)
+        }
+
+        return await response.json()
+      } catch(e) {
+        throw new Error(`${e.name}: ${e.message}`)
+      }
     }
 
     return (

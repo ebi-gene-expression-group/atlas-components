@@ -27,7 +27,7 @@ const ClusterTSnePlot = (props) => {
   const {ks, perplexities, metadata, selectedPerplexity, onChangePerplexity, selectedColourBy, onChangeColourBy} = props  // Select
   const {plotData, highlightClusters, height, tooltipContent} = props   // Chart
   const {loading, resourcesUrl, errorMessage} = props   // Overlay
-  const opacity = 0.7;
+  const opacity = 0.7
 
   const highchartsConfig = {
     plotOptions: {
@@ -71,7 +71,7 @@ const ClusterTSnePlot = (props) => {
       align: `center`,
       verticalAlign: `bottom`,
       layout: `horizontal`,
-      itemMarginBottom: 20,
+      itemMarginBottom: 20
     },
     tooltip: {
       style: {
@@ -85,11 +85,12 @@ const ClusterTSnePlot = (props) => {
         this.point.negative = true
 
         const text = `Loading metadata...`
-        const header = `<b>Cell ID:</b> ${this.point.name}<br>` +
-          `<b>Cluster name:</b> ${this.series.name}<br>`
+        const header = `<b>Cell ID:</b> ${this.point.name}<br>` + `<b>Cluster name:</b> ${this.series.name}<br>`
 
-        tooltipContent(this.point.name)
-          .then((response) => {
+        const addMetadataToTooltipText = async () => {
+          try {
+            const response = await tooltipContent(this.point.name)
+
             const content = response.map((metadata) => {
               return `<b>${metadata.displayName}:</b> ${metadata.value}`
             })
@@ -97,12 +98,14 @@ const ClusterTSnePlot = (props) => {
             tooltip.label.attr({
               text: header + content.join(`<br>`)
             })
-          })
-          .catch(() => {
+          } catch (e) {
             tooltip.label.attr({
               text: header
             })
-          })
+          }
+        }
+
+        addMetadataToTooltipText()
 
         return header + text
       }
