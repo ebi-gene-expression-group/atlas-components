@@ -1,0 +1,116 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Autocomplete matches snapshot 1`] = `
+<div>
+  <label
+    htmlFor="geneQuery"
+  >
+    Gene ID or gene symbol
+  </label>
+  ,
+  <div
+    className="css-10nd86i"
+    onKeyDown={[Function]}
+  >
+    <div
+      className="css-12emboz"
+      onMouseDown={[Function]}
+      onTouchEnd={[Function]}
+    >
+      <div
+        className="css-1hwfws3"
+      >
+        <div
+          className="css-xp4uvy"
+        >
+          foo
+        </div>
+        <div
+          className="css-1g6gooi"
+        >
+          <div
+            className=""
+            style={
+              Object {
+                "display": "inline-block",
+              }
+            }
+          >
+            <input
+              aria-autocomplete="list"
+              autoCapitalize="none"
+              autoComplete="off"
+              autoCorrect="off"
+              disabled={false}
+              id="react-select-2-input"
+              onBlur={[Function]}
+              onChange={[Function]}
+              onFocus={[Function]}
+              spellCheck="false"
+              style={
+                Object {
+                  "background": 0,
+                  "border": 0,
+                  "boxSizing": "content-box",
+                  "color": "inherit",
+                  "fontSize": "inherit",
+                  "opacity": 1,
+                  "outline": 0,
+                  "padding": 0,
+                  "width": "1px",
+                }
+              }
+              tabIndex="0"
+              type="text"
+              value=""
+            />
+            <div
+              style={
+                Object {
+                  "height": 0,
+                  "left": 0,
+                  "overflow": "scroll",
+                  "position": "absolute",
+                  "top": 0,
+                  "visibility": "hidden",
+                  "whiteSpace": "pre",
+                }
+              }
+            >
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="css-1wy0on6"
+      >
+        <div
+          aria-hidden="true"
+          className="css-1ep9fjw"
+          onMouseDown={[Function]}
+          onTouchEnd={[Function]}
+        >
+          <svg
+            aria-hidden="true"
+            className="css-19bqh2r"
+            focusable="false"
+            height={20}
+            viewBox="0 0 20 20"
+            width={20}
+          >
+            <path
+              d="M14.348 14.849c-0.469 0.469-1.229 0.469-1.697 0l-2.651-3.030-2.651 3.029c-0.469 0.469-1.229 0.469-1.697 0-0.469-0.469-0.469-1.229 0-1.697l2.758-3.15-2.759-3.152c-0.469-0.469-0.469-1.228 0-1.697s1.228-0.469 1.697 0l2.652 3.031 2.651-3.031c0.469-0.469 1.228-0.469 1.697 0s0.469 1.229 0 1.697l-2.758 3.152 2.758 3.15c0.469 0.469 0.469 1.229 0 1.698z"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+    <input
+      name="geneQuery"
+      type="hidden"
+      value="{\\"term\\":\\"foo\\",\\"category\\":\\"bar\\"}"
+    />
+  </div>
+</div>
+`;

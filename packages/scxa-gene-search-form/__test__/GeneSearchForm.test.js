@@ -1,4 +1,5 @@
 import React from 'react'
+import renderer from 'react-test-renderer'
 import Enzyme from 'enzyme'
 import {mount} from 'enzyme'
 import Adapter from 'enzyme-adapter-react-16'
@@ -46,4 +47,8 @@ describe(`GeneSearchForm`, () => {
     expect(wrapper.find(`button`).at(0).props()).toHaveProperty(`disabled`, false)
   })
 
+  test(`matches snapshot`, () => {
+    const tree = renderer.create(<GeneSearchForm {...props}/>).toJSON()
+    expect(tree).toMatchSnapshot()
+  })
 })

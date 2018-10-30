@@ -35,8 +35,8 @@ class GeneSearchForm extends React.Component {
     })
   }
 
-  _speciesSelectOnChange(event) {
-    this.setState({ selectedSpecies: event.target.value })
+  _speciesSelectOnChange(selectedItem) {
+    this.setState({ selectedSpecies: selectedItem.value })
   }
 
   render() {
@@ -62,10 +62,10 @@ class GeneSearchForm extends React.Component {
           { enableSpeciesSelect &&
             <div className={speciesSelectClassName}>
               <SpeciesSelect
-                allSpecies={allSpecies}
                 topSpecies={topSpecies}
+                allSpecies={allSpecies}
                 statusMessage={speciesSelectStatusMessage}
-                selectedValue={this.state.selectedSpecies}
+                selectedSpecies={this.state.selectedSpecies}
                 onChange={this.speciesSelectOnChange}/>
             </div>
           }
@@ -76,7 +76,7 @@ class GeneSearchForm extends React.Component {
               type={`Submit`}
               className={`button`}
               disabled={!this.state.query.term || this.state.query.term.trim() === ``}>
-                    Search
+                Search
             </button>
           </div>
         </div>
@@ -115,7 +115,6 @@ GeneSearchForm.defaultProps = {
   allSpecies: [],
   topSpecies: [],
   defaultSpecies: ``,
-  speciesSelectStatusMessage: ``
 }
 
 export default GeneSearchForm

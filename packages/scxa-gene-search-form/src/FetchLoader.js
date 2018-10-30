@@ -4,16 +4,6 @@ import URI from 'urijs'
 
 import GeneSearchForm from './GeneSearchForm'
 
-const _fetch = async (host, resource) => {
-  const url = URI(resource, host).toString()
-  const response = await fetch(url)
-  // The promise returned by fetch may be fulfilled with a 4xx or 5xx return code...
-  if (response.ok) {
-    return await response.json()
-  }
-  throw new Error(`${url} => ${response.status}`)
-}
-
 class FetchLoader extends React.Component {
   constructor(props) {
     super(props)
@@ -31,46 +21,41 @@ class FetchLoader extends React.Component {
     return(
       error ?
         <GeneSearchForm {...data} {...this.props} speciesSelectStatusMessage={`${error.name}: ${error.message}`}/> :
-        loading ?
-          <GeneSearchForm {...data} {...this.props} speciesSelectStatusMessage={`Fetching species…`}/> :
-        // promise fulfilled
-          <GeneSearchForm {...data} {...this.props} speciesSelectStatusMessage={``}/>
+      loading ?
+        <GeneSearchForm {...data} {...this.props} speciesSelectStatusMessage={`Fetching species…`}/> :
+      // promise fulfilled
+        <GeneSearchForm {...data} {...this.props} />
     )
   }
 
-  _fetchAndSetState(host, resource) {
+  async componentDidMount() {
     this.setState({ loading: true })
 
-    // then and catch methods are run “at the end of the current run of the JavaScript event loop” according to section
-    // ‘Timing’ in https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises, so state.loading will
-    // be true when the promise is handled. Strictly speaking, the right thing to do would be to call _fetch in a
-    // callback passed as the second argument to setState, but if we wanted to also return the promise to test the
-    // component we’d need to declare a variable outside, set it within the callback, and return it... not pretty!
+    const url = URI(this.props.speciesEndpoint, this.props.atlasUrl).toString()
+    const response = await fetch(url)
 
-    return _fetch(host, resource).then(
-      (responseJson) =>
-        this.setState({
-          data: responseJson,
-          loading: false,
-          error: null
-        })
-    )
-      .catch(
-        (error) =>
-          this.setState({
-            data: null,
-            loading: false,
-            error: {
-              description: `There was a problem communicating with the server. Please try again later.`,
-              name: error.name,
-              message: error.message
-            }
-          })
-      )
-  }
+    try {
+      // The promise returned by fetch may be fulfilled with a 4xx or 5xx return code, so we need to explicitly check ok
+      if (!response.ok) {
+        throw new Error(`${url} => ${response.status}`)
+      }
 
-  componentDidMount() {
-    return this._fetchAndSetState(this.props.atlasUrl, this.props.speciesEndpoint)
+      this.setState({
+        data: await response.json(),
+        loading: false,
+        error: null
+      })
+    } catch (e) {
+      this.setState({
+        data: null,
+        loading: false,
+        error: {
+          description: `There was a problem communicating with the server. Please try again later.`,
+          name: e.name,
+          message: e.message
+        }
+      })
+    }
   }
 
   componentDidCatch(error, info) {

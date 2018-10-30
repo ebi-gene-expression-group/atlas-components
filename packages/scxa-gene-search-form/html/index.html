@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://www.ebi.ac.uk/gxa/resources/css/foundation/atlas.css" type="text/css" media="all">
 
     <style type="text/css">
+      #select input,
       #search input,
       #no_species_select input,
       #no_species_select_human input,
@@ -19,53 +20,102 @@
 </head>
 
 <body>
+  <h1 class="text-center">Single Cell Expression Atlas front page gene search</h1>
 
   <div class="row expanded column">
-    <h1>Single Cell Expression Atlas front page gene search</h1>
-      <div class="row expanded">
-        <ul class="tabs" data-tabs id="search-tabs">
-          <li class="tabs-title is-active"><a href="#search-atlas" aria-selected="true">Search</a></li>
-        </ul>
-      </div>
+    <h2 class="margin-top-xlarge">Full component</h2>
+    <ul class="tabs" data-tabs id="search-tabs">
+      <li class="tabs-title is-active"><a href="#search-atlas" aria-selected="true">Search</a></li>
+    </ul>
 
-      <div class="tabs-content" data-tabs-content="search-tabs">
-          <div class="tabs-panel is-active " id="search-atlas" style="background-color: #e6e6e6;">
-              <div id="search"></div>
-          </div>
-      </div>
+    <div class="tabs-content" data-tabs-content="search-tabs">
+        <div class="tabs-panel is-active " id="search-atlas" style="background-color: #e6e6e6;">
+          <div id="search"></div>
+        </div>
     </div>
+  </div>
 
-    <hr>
+  <div class="row expanded column">
+      <h2 class="margin-top-xlarge">Select component</h2>
+
+      <h3>Normal</h3>
+      <div class="row expanded">
+        <div id="select"></div>
+      </div>
+
+      <h3>With a species pre-selected</h3>
+      <div class="row expanded">
+        <div id="select-with-default-value"></div>
+      </div>
+
+      <h3>Error signaling</h3>
+      <div class="row expanded">
+        <div id="select-error"></div>
+      </div>
+  </div>
+
+  <div class="row expanded column">
+    <h2>Component without species selection</h1>
 
     <div class="row column">
-      <h1>Component without species selection</h1>
-
-      <div class="row column">
-        <h2>All species available in SCEA</h2>
-        <h3><code>defaultSpecies: undefined</code></h3>
-        <div id="no_species_select"></div>
-      </div>
-
-      <div class="row column">
-        <h2>Human</h2>
-        <h3><code>defaultSpecies: 'Homo sapiens'</code></h3>
-        <div id="no_species_select_human"></div>
-      </div>
-
-      <div class="row column">
-        <h2>Mouse, with initial value</h2>
-        <h3><code>defaultSpecies: 'Mus musculus'</code></h3>
-        <div id="no_species_select_mouse"></div>
-      </div>
+      <h3>All species available in SCEA</h2>
+      <h3><code>defaultSpecies: undefined</code></h3>
+      <div id="no_species_select"></div>
     </div>
+
+    <div class="row column">
+      <h3>Human</h2>
+      <h3><code>defaultSpecies: 'Homo sapiens'</code></h3>
+      <div id="no_species_select_human"></div>
+    </div>
+
+    <div class="row column">
+      <h3>Mouse, with initial value</h2>
+      <h3><code>defaultSpecies: 'Mus musculus'</code></h3>
+      <div id="no_species_select_mouse"></div>
+    </div>
+  </div>
 
 </body>
 
 <script src="../dist/vendors.bundle.js"></script>
-<script src="../dist/geneSearchForm.bundle.js"></script>
+<script src="../dist/speciesSelectDemo.bundle.js"></script>
 <script src="../dist/geneSearchFormDemo.bundle.js"></script>
 
 <script>
+  var allSpecies = [
+    `Meeseek`,
+    `Gromflomite`,
+    `Cromulon`,
+    `Zigerion`,
+    `Moopian`,
+    `Bliznarvian`,
+    `Greebybobe`
+  ];
+
+  function getRandomInt(max) {
+    return Math.floor(Math.random() * Math.floor(max));
+  };
+
+  speciesSelectDemo.render({
+    topSpecies: allSpecies.filter(function() {return Math.random() > 0.5}),
+    allSpecies: allSpecies,
+    onChange: function() {}
+  }, 'select');
+
+  speciesSelectDemo.render({
+    topSpecies: allSpecies.filter(function() {return Math.random() > 0.5}),
+    allSpecies: allSpecies,
+    selectedSpecies: allSpecies[getRandomInt(allSpecies.length)],
+    onChange: function() {}
+  }, 'select-with-default-value');
+
+  speciesSelectDemo.render({
+    topSpecies: allSpecies.filter(function() {return Math.random() > 0.5}),
+    allSpecies: allSpecies,
+    statusMessage:'An error occurred somewhere along the InterWebz pipes!',
+    onChange: function() {}
+  }, 'select-error');
 
   geneSearchFormDemo.render({
     atlasUrl: 'http://localhost:8080/gxa/sc/',
