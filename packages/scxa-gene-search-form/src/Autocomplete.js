@@ -31,7 +31,7 @@ const Autocomplete = ({atlasUrl, suggesterEndpoint, selectedSpecies, allSpecies,
 
   return (
     <div>
-      <label key={`label`} htmlFor={`geneQuery`}>Gene ID or gene symbol</label>,
+      <label key={`label`} htmlFor={`geneQuery`}>Gene ID or gene symbol</label>
       <AsyncCreatableSelect
         key={`autocomplete`}
         name={`geneQuery`}
