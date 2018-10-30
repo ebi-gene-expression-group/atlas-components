@@ -7,7 +7,6 @@ exports[`Autocomplete matches snapshot 1`] = `
   >
     Gene ID or gene symbol
   </label>
-  ,
   <div
     className="css-10nd86i"
     onKeyDown={[Function]}
