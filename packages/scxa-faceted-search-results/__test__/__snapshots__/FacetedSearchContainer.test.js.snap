@@ -72,7 +72,7 @@ exports[`FacetedSearchContainer matches snapshot 1`] = `
           onTouchEnd={[Function]}
         >
           <div
-            className="css-1rtrksz"
+            className="css-1hwfws3"
           >
             <div
               className="css-1492t68"
@@ -80,7 +80,7 @@ exports[`FacetedSearchContainer matches snapshot 1`] = `
               Select...
             </div>
             <div
-              className="css-rsyb7x"
+              className="css-1g6gooi"
             >
               <div
                 className=""
@@ -163,7 +163,7 @@ exports[`FacetedSearchContainer matches snapshot 1`] = `
           onTouchEnd={[Function]}
         >
           <div
-            className="css-1rtrksz"
+            className="css-1hwfws3"
           >
             <div
               className="css-1492t68"
@@ -171,7 +171,7 @@ exports[`FacetedSearchContainer matches snapshot 1`] = `
               Select...
             </div>
             <div
-              className="css-rsyb7x"
+              className="css-1g6gooi"
             >
               <div
                 className=""

@@ -1,8 +1,12 @@
+const path = require(`path`)
 const CleanWebpackPlugin = require(`clean-webpack-plugin`)
+
+const commonPublicPath = `/dist/`
+const vendorsBundleName = `vendors`
 
 module.exports = {
   entry: {
-    fetchLoaderDemo: [`babel-polyfill`, `./html/fetchLoaderDemo.js`],
+    fetchLoaderDemo: [`@babel/polyfill`, `./html/fetchLoaderDemo.js`],
     facetedSearchContainerDemo: `./html/facetedSearchContainerDemo.js`
   },
 
@@ -12,23 +16,20 @@ module.exports = {
 
   output: {
     library: `[name]`,
-    filename: `[name].bundle.js`
+    filename: `[name].bundle.js`,
+    publicPath: commonPublicPath
   },
 
   optimization: {
+    runtimeChunk: {
+       name: vendorsBundleName
+    },
     splitChunks: {
-      chunks: `all`,
-      minSize: 1,
       cacheGroups: {
-        facetedSearch: {
-          test: /[\\/]src[\\/]/,
-          name: `facetedSearch`,
-          priority: -20
-        },
-        vendors: {
+        commons: {
           test: /[\\/]node_modules[\\/]/,
-          name: `vendors`,
-          priority: -10
+          name: vendorsBundleName,
+          chunks: 'all'
         }
       }
     }
@@ -42,5 +43,11 @@ module.exports = {
         use: `babel-loader`
       }
     ]
+  },
+
+  devServer: {
+    port: 9000,
+    contentBase: path.resolve(__dirname, `html`),
+    publicPath: commonPublicPath
   }
 }
