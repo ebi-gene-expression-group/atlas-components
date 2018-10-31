@@ -19,9 +19,9 @@ The sidebar disables/hides options in order to avoid combinations that would pro
 facet is bad UX.
 
 # Try it out
-Just run [webpack-serve](https://github.com/webpack-contrib/webpack-serve):
+Just run [webpack-dev-server](https://github.com/webpack/webpack-dev-server):
 ```
-npx webpack-serve ./webpack-serve.config.js
+npx webpack-dev-server --mode=development
 ```
 
 # Combining with the EBI Visual Framework
@@ -41,7 +41,7 @@ working example.
 
 # A note about building with Webpack
 The component uses `async`/`await` to fetch the JSON payload from the server. This requires to prefix the entry with
-`babel-polyfill`. If you are already using an equivalent polyfill or
+`@babel/polyfill`. If you are already using an equivalent polyfill or
 [Runtime transform](http://babeljs.io/docs/plugins/transform-runtime/) you may skip this.
 
 ## Example
@@ -184,5 +184,4 @@ The component uses `async`/`await` to fetch the JSON payload from the server. Th
 ```
 
 # TODO
-- Refactor `FetchLoader` as a HOC. This makes it highly reusable and will let clients of this component get the results
-however they prefer.
+- Refactor `FetchLoader` as a HOC. This makes it highly reusable and will let clients of this component get the results however they prefer.
