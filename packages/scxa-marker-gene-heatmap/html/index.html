@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Demo</title>
+
+    <link rel="stylesheet" href="https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/css/ebi-global.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="https://ebi.emblstatic.net/web_guidelines/EBI-Icon-fonts/v1.2/fonts.css" type="text/css" media="all" />
+
+    <link rel="stylesheet" href="https://www.ebi.ac.uk/gxa/resources/css/foundation/atlas.css" type="text/css" media="all">
+</head>
+
+<body>
+<div id="wrapper" class="row">
+    <div id="content" class="small-12 columns">
+        <div id="target">
+        </div>
+    </div>
+</div>
+</body>
+
+<script src="../dist/vendors.bundle.js"></script>
+<script src="../dist/markerGeneHeatmap.bundle.js"></script>
+<script src="../dist/markerGeneHeatmapDemo.bundle.js"></script>
+
+<!-- Set to http://localhost:8080/gxa/ or http://localhost:8080/gxa/sc/ -- Remember the trailing slash! -->
+<script>
+  markerGeneHeatmapDemo.render({
+    host: 'http://localhost:8080/gxa/sc/',
+    resource: 'json/experiments/E-MTAB-5061/marker-genes'
+  }, 'target')
+</script>
+
+</html>
