@@ -27,7 +27,7 @@
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/gxa/my-package.git"
+    "url": "https://github.com/ebi-gene-expression-group/atlas-homepage-cards"
   },
   "dependencies": {
     "prop-types": "^15.6.2",
