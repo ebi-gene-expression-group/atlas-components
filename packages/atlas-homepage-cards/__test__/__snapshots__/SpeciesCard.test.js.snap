@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SpeciesCard with no data matches snapshot 1`] = `
+<div
+  className="column column-block text-center combo card"
+  style={
+    Object {
+      "marginBottom": 0,
+      "paddingBottom": "25px",
+    }
+  }
+>
+  <span
+    className="species-icon"
+    style={
+      Object {
+        "fontSize": "600%",
+      }
+    }
+  >
+    <span
+      className="icon icon-species"
+      data-icon="❔"
+      style={
+        Object {
+          "color": "black",
+        }
+      }
+      title=""
+    />
+  </span>
+</div>
+`;

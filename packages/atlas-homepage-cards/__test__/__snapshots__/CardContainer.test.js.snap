@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CardContainer with no data matches snapshot 1`] = `
+<div
+  className="row column"
+>
+  <div
+    className="callout alert small"
+  >
+    <h5>
+      Oops!
+    </h5>
+    <p>
+      There was a problem communicating with the server. Please try again later.
+      <br />
+      If the error persists, in order to help us debug the issue, please copy the URL and this message and send it to us via 
+      <a
+        href="https://www.ebi.ac.uk/support/gxasc"
+      >
+        the EBI Support & Feedback system
+      </a>
+      :
+    </p>
+    <code>
+      ReferenceError: fetch is not defined
+    </code>
+  </div>
+</div>
+`;
