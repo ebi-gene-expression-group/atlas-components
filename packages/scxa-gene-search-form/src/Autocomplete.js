@@ -31,12 +31,12 @@ const Autocomplete = ({atlasUrl, suggesterEndpoint, selectedSpecies, allSpecies,
 
   return (
     <div>
-      <label key={`label`} htmlFor={`geneQuery`}>Gene ID or gene symbol</label>
+      <label htmlFor={`geneQuery`}>Gene ID or gene symbol</label>
       <AsyncCreatableSelect
-        key={`autocomplete`}
         name={`geneQuery`}
         components={{ DropdownIndicator: null, IndicatorSeparator: null }}
         styles={ebiVfReactSelectReplacements.styles}
+        inputId={`gene-input`}
         onChange={onChange}
         loadOptions={_asyncFetchOptions(atlasUrl, suggesterEndpoint, selectedSpecies, allSpecies)}
         noOptionsMessage={() => null}

@@ -6,8 +6,7 @@ const vendorsBundleName = `vendors`
 
 module.exports = {
   entry: {
-    geneSearchFormDemo: [`@babel/polyfill`, `./html/render.js`],
-    speciesSelectDemo: `./html/speciesSelectDemo.js`
+    geneSearchFormDemo: [`@babel/polyfill`, `./html/render.js`]
   },
 
   plugins: [

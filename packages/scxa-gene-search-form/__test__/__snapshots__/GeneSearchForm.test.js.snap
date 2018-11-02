@@ -51,7 +51,7 @@ exports[`GeneSearchForm matches snapshot 1`] = `
                     autoComplete="off"
                     autoCorrect="off"
                     disabled={false}
-                    id="react-select-8-input"
+                    id="gene-input"
                     onBlur={[Function]}
                     onChange={[Function]}
                     onFocus={[Function]}
@@ -108,7 +108,7 @@ exports[`GeneSearchForm matches snapshot 1`] = `
     >
       <div>
         <label
-          htmlFor="species"
+          htmlFor="Species"
         >
           Species
         </label>
@@ -131,7 +131,7 @@ exports[`GeneSearchForm matches snapshot 1`] = `
               </div>
               <input
                 className="css-14uuagi"
-                id="react-select-9-input"
+                id="Species-input"
                 onBlur={[Function]}
                 onChange={[Function]}
                 onFocus={[Function]}
@@ -150,7 +150,7 @@ exports[`GeneSearchForm matches snapshot 1`] = `
             </div>
           </div>
           <input
-            name="species"
+            name="Species"
             type="hidden"
             value=""
           />

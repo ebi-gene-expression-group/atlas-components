@@ -1,9 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`SpeciesSelect matches snapshot 1`] = `
+exports[`LabelledSelect matches snapshot 1`] = `
 <div>
   <label
-    htmlFor="species"
+    htmlFor="Species"
   >
     Species
   </label>
@@ -26,7 +26,7 @@ exports[`SpeciesSelect matches snapshot 1`] = `
         </div>
         <input
           className="css-14uuagi"
-          id="react-select-2-input"
+          id="Species-input"
           onBlur={[Function]}
           onChange={[Function]}
           onFocus={[Function]}
@@ -45,7 +45,7 @@ exports[`SpeciesSelect matches snapshot 1`] = `
       </div>
     </div>
     <input
-      name="species"
+      name="Species"
       type="hidden"
       value=""
     />

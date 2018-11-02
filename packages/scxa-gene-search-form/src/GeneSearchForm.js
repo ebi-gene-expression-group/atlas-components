@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import URI from 'urijs'
 
 import Autocomplete from './Autocomplete'
-import SpeciesSelect from './SpeciesSelect'
+import LabelledSelect from './LabelledSelect'
 
 class GeneSearchForm extends React.Component {
   constructor(props) {
@@ -61,11 +61,13 @@ class GeneSearchForm extends React.Component {
           </div>
           { enableSpeciesSelect &&
             <div className={speciesSelectClassName}>
-              <SpeciesSelect
-                topSpecies={topSpecies}
-                allSpecies={allSpecies}
+              <LabelledSelect
+                name={`Species`}
+                topGroup={topSpecies}
+                bottomGroup={allSpecies}
+                bottomGroupLabel={`All species`}
                 statusMessage={speciesSelectStatusMessage}
-                selectedSpecies={this.state.selectedSpecies}
+                value={this.state.selectedSpecies}
                 onChange={this.speciesSelectOnChange}/>
             </div>
           }
@@ -102,7 +104,6 @@ GeneSearchForm.propTypes = {
   allSpecies: PropTypes.arrayOf(PropTypes.string),
   topSpecies: PropTypes.arrayOf(PropTypes.string),
   defaultSpecies: PropTypes.string,
-
   speciesSelectStatusMessage: PropTypes.string
 }
 
@@ -113,8 +114,7 @@ GeneSearchForm.defaultProps = {
   enableSpeciesSelect: false,
   speciesSelectClassName: ``,
   allSpecies: [],
-  topSpecies: [],
-  defaultSpecies: ``,
+  topSpecies: []
 }
 
 export default GeneSearchForm

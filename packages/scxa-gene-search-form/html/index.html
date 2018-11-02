@@ -43,7 +43,7 @@
         <div id="select"></div>
       </div>
 
-      <h3>With a species pre-selected</h3>
+      <h3>With a species pre-selected (Greebybobe)</h3>
       <div class="row expanded">
         <div id="select-with-default-value"></div>
       </div>
@@ -79,7 +79,6 @@
 </body>
 
 <script src="../dist/vendors.bundle.js"></script>
-<script src="../dist/speciesSelectDemo.bundle.js"></script>
 <script src="../dist/geneSearchFormDemo.bundle.js"></script>
 
 <script>
@@ -97,26 +96,32 @@
     return Math.floor(Math.random() * Math.floor(max));
   };
 
-  speciesSelectDemo.render({
-    topSpecies: allSpecies.filter(function() {return Math.random() > 0.5}),
-    allSpecies: allSpecies,
+  geneSearchFormDemo.renderLabelledSelect({
+    name: 'Species',
+    topGroup: allSpecies.filter(function() {return Math.random() > 0.5}),
+    bottomGroup: allSpecies,
+    bottomGroupLabel: `All species`,
     onChange: function() {}
   }, 'select');
 
-  speciesSelectDemo.render({
-    topSpecies: allSpecies.filter(function() {return Math.random() > 0.5}),
-    allSpecies: allSpecies,
-    selectedSpecies: allSpecies[getRandomInt(allSpecies.length)],
+  geneSearchFormDemo.renderLabelledSelect({
+    name: 'Species',
+    topGroup: allSpecies.filter(function() {return Math.random() > 0.5}),
+    bottomGroup: allSpecies,
+    bottomGroupLabel: `All species`,
+    value: `Greebybobe`,
     onChange: function() {}
   }, 'select-with-default-value');
 
-  speciesSelectDemo.render({
-    topSpecies: allSpecies.filter(function() {return Math.random() > 0.5}),
-    allSpecies: allSpecies,
+  geneSearchFormDemo.renderLabelledSelect({
+    name: 'Species',
+    topGroup: allSpecies.filter(function() {return Math.random() > 0.5}),
+    bottomGroup: allSpecies,
+    bottomGroupLabel: `All species`,
     statusMessage:'An error occurred somewhere along the InterWebz pipes!',
     onChange: function() {}
   }, 'select-error');
-
+  
   geneSearchFormDemo.render({
     atlasUrl: 'http://localhost:8080/gxa/sc/',
     wrapperClassName: 'row expanded',

@@ -30,11 +30,10 @@ class FetchLoader extends React.Component {
 
   async componentDidMount() {
     this.setState({ loading: true })
-
     const url = URI(this.props.speciesEndpoint, this.props.atlasUrl).toString()
-    const response = await fetch(url)
 
     try {
+      const response = await fetch(url)
       // The promise returned by fetch may be fulfilled with a 4xx or 5xx return code, so we need to explicitly check ok
       if (!response.ok) {
         throw new Error(`${url} => ${response.status}`)
