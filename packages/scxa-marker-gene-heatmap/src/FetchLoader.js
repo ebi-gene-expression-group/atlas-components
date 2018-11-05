@@ -2,6 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import URI from 'urijs'
 import MarkerGeneHeatmap from './MarkerGeneHeatmap'
+import PlotSettingsDropdown from './PlotSettingsDropdown'
+import LoadingOverlay from './LoadingOverlay'
 
 const CalloutAlert = ({error}) =>
   <div className={`row column`}>
@@ -35,8 +37,12 @@ class FetchLoader extends React.Component {
     }
   }
 
-  async componentDidMount() {
-    const url = URI(this.props.resource, this.props.host).toString()
+  async _fetchAndSetState({resource, host}) {
+    this.setState({
+      isLoading: true
+    })
+
+    const url = URI(resource, host).toString()
 
     try {
       const response = await fetch(url)
@@ -63,6 +69,16 @@ class FetchLoader extends React.Component {
     }
   }
 
+  componentDidMount() {
+    this._fetchAndSetState(this.props)
+  }
+
+  componentDidUpdate(previousProps) {
+    if (previousProps.resource !== this.props.resource) {
+      this._fetchAndSetState(this.props)
+    }
+  }
+
   componentDidCatch(error, info) {
     this.setState({
       hasError: {
@@ -76,12 +92,35 @@ class FetchLoader extends React.Component {
   render() {
     const { data, isLoading, hasError } = this.state
 
+    const { host, ks, selectedK, onSelectK } = this.props
+
+    const kOptions = ks.sort((a, b) => a-b).map((k) => ({
+      value: k.toString(),
+      label: `k = ${k}`
+    }))
+
+
     return (
       hasError ?
         <CalloutAlert error={hasError}/> :
-        isLoading ?
-          <p>Loading...</p> :
-          <MarkerGeneHeatmap isLoading={isLoading} data={data} chartHeight={`800px`}/>
+        [
+          <PlotSettingsDropdown
+            key={`selectK`}
+            labelText={`View marker genes for:`}
+            options={kOptions}
+            onSelect={(selectedOption) => {onSelectK(selectedOption.value)}}
+            defaultValue={{value: selectedK, label: selectedK}}
+          />,
+          isLoading ?
+            <LoadingOverlay
+              show={isLoading}
+            /> :
+            <MarkerGeneHeatmap
+              key={`heatmap`}
+              data={data}
+              chartHeight={`800px`}
+            />
+        ]
     )
   }
 }
@@ -89,7 +128,9 @@ class FetchLoader extends React.Component {
 FetchLoader.propTypes = {
   host: PropTypes.string,
   resource: PropTypes.string,
-  selectedK: PropTypes.number
+  ks: PropTypes.array,
+  selectedK: PropTypes.number,
+  onSelectK: PropTypes.func
 }
 
 export default FetchLoader
