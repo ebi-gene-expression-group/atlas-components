@@ -5,7 +5,7 @@ const commonPublicPath = `/dist/`
 
 module.exports = {
   entry: {
-    markerGeneHeatmapDemo: [`./html/render.js`],
+    markerGeneHeatmapDemo: [`babel-polyfill`, `./html/Demo.js`],
   },
 
   plugins: [
