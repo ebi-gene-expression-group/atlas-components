@@ -33,6 +33,8 @@
     "prop-types": "^15.6.2",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
+    "react-select": "^2.1.1",
+    "styled-components": "^4.0.3",
     "urijs": "^1.19.1"
   },
   "devDependencies": {
@@ -48,6 +50,7 @@
     "enzyme-adapter-react-16": "^1.1.1",
     "eslint": "^5.4.0",
     "eslint-config-gene-expression": "^0.4.2",
+    "file-loader": "^2.0.0",
     "jest": "^23.6.0",
     "react-test-renderer": "^16.4.1",
     "webpack": "^4.16.0",
