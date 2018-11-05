@@ -28,6 +28,8 @@
     "url": "https://github.com/ebi-gene-expression-group/scxa-marker-gene-heatmap"
   },
   "dependencies": {
+    "highcharts-react-official": "^1.5.2",
+    "lodash": "^4.17.11",
     "prop-types": "^15.6.2",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
