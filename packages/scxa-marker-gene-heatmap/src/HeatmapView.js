@@ -111,7 +111,7 @@ class HeatmapView extends React.Component {
             onSelect={(selectedOption) => {onSelectK(selectedOption.value)}}
             defaultValue={{value: selectedK, label: `k = ${selectedK}`}}
           />
-          <div key={`heatmap`} style={{position: `relative`}} className={`row`}>
+          <div key={`heatmap`} style={{position: `relative`}} className={wrapperClassName}>
             <MarkerGeneHeatmap
               key={`heatmap`}
               data={data}

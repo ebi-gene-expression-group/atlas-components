@@ -131,7 +131,7 @@ const MarkerGeneHeatmap = (props) => {
 }
 
 MarkerGeneHeatmap.propTypes = {
-  chartHeight: PropTypes.string,
+  chartHeight: PropTypes.number,
   data: PropTypes.arrayOf(PropTypes.shape({
     x: PropTypes.number,
     y: PropTypes.number,
