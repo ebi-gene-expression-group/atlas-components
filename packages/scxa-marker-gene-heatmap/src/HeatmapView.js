@@ -92,7 +92,7 @@ class HeatmapView extends React.Component {
   render() {
     const { data, isLoading, hasError } = this.state
 
-    const { ks, selectedK, onSelectK, wrapperClassName, heatmapHeight } = this.props
+    const { ks, selectedK, onSelectK, wrapperClassName, plotWrapperClassName, heatmapHeight } = this.props
 
     const kOptions = ks.sort((a, b) => a-b).map((k) => ({
       value: k.toString(),
@@ -104,22 +104,24 @@ class HeatmapView extends React.Component {
       hasError ?
         <CalloutAlert error={hasError}/> :
         <div className={wrapperClassName}>
-          <PlotSettingsDropdown
-            key={`selectK`}
-            labelText={`View marker genes for:`}
-            options={kOptions}
-            onSelect={(selectedOption) => {onSelectK(selectedOption.value)}}
-            defaultValue={{value: selectedK, label: `k = ${selectedK}`}}
-          />
-          <div key={`heatmap`} style={{position: `relative`}} className={wrapperClassName}>
-            <MarkerGeneHeatmap
-              key={`heatmap`}
-              data={data}
-              chartHeight={heatmapHeight}
+          <div className={plotWrapperClassName}>
+            <PlotSettingsDropdown
+              key={`selectK`}
+              labelText={`View marker genes for:`}
+              options={kOptions}
+              onSelect={(selectedOption) => {onSelectK(selectedOption.value)}}
+              defaultValue={{value: selectedK, label: `k = ${selectedK}`}}
             />
-            <LoadingOverlay
-              show={isLoading}
-            />
+            <div key={`heatmap`} style={{position: `relative`}} className={wrapperClassName}>
+              <MarkerGeneHeatmap
+                key={`heatmap`}
+                data={data}
+                chartHeight={heatmapHeight}
+              />
+              <LoadingOverlay
+                show={isLoading}
+              />
+            </div>
           </div>
         </div>
     )
@@ -133,11 +135,13 @@ HeatmapView.propTypes = {
   selectedK: PropTypes.number.isRequired,
   onSelectK: PropTypes.func,
   wrapperClassName: PropTypes.string,
+  plotWrapperClassName: PropTypes.string,
   heatmapHeight: PropTypes.number
 }
 
 HeatmapView.defaultProps = {
   wrapperClassName: `row`,
+  plotWrapperClassName: `medium-12 columns`,
   heatmapHeight: 800
 }
 
