@@ -26,7 +26,14 @@ const MarkerGeneHeatmap = (props) => {
       enabled: false
     },
     title: {
-      text: `Gene Expression Heatmap`
+      text: `Marker genes`,
+      style: {
+        fontSize: `25px`,
+        fontWeight: `bold`
+      }
+    },
+    subtitle: {
+      text: `Showing top 50 marker genes per cluster (sorted by p-value)`
     },
     xAxis: {
       opposite: true,
@@ -78,7 +85,7 @@ const MarkerGeneHeatmap = (props) => {
           return `<b>Cluster ID:</b> ${this.point.x} <br/> <b>Gene ID:</b> ${this.point.name} <br /> <b>Median expression:</b> Not expressed <br/>`
         }
         else {
-          return `<b>Cluster ID:</b> ${this.point.x} <br/> <b>Gene ID:</b> ${this.point.name} <br /> <b>Median expression:</b> ${Math.round(this.point.value)} TPM <br/>`
+          return `<b>Cluster ID:</b> ${this.point.x} <br/> <b>Gene ID:</b> ${this.point.name} <br /> <b>Median expression:</b> ${+this.point.value.toFixed(3)} TPM <br/>`
         }
       }
     },
@@ -98,6 +105,9 @@ const MarkerGeneHeatmap = (props) => {
     },
 
     legend: {
+      title: {
+        text: `Median expression (TPM)`
+      },
       align: `center`,
       verticalAlign: `top`,
       layout: `horizontal`,
