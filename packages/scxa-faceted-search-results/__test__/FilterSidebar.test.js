@@ -26,13 +26,38 @@ describe(`FilterSidebar`, () => {
     onChange: () => {}
   }
 
+  const noTooltipProps = {
+    facets:[
+          {
+            group: `Guest character`,
+            value: `birdperson`,
+            label: `Birdperson`
+          }],
+    checkboxFacetGroups: [`Season`],
+    onChange: () => {}
+  }
+
   test(`shows checkbox facet groups above dropdown filters`, () => {
     const groups = [...new Set(uniqueFacets.map((facet) => facet.group))]
     const randomCheckboxFacetGroup = groups[getRandomInt(0, groups.length)]
     const wrapper = mount(<FilterSidebar {...props} checkboxFacetGroups={[randomCheckboxFacetGroup]} />)
-    expect(wrapper.find(`h4`).first().text()).toEqual(randomCheckboxFacetGroup)
-    expect(wrapper.find(`h4`).last().text()).not.toEqual(randomCheckboxFacetGroup)
-  }),
+    expect(wrapper.find(`h4`).first().text()).toEqual(expect.stringMatching(randomCheckboxFacetGroup))
+    expect(wrapper.find(`h4`).last().text()).not.toEqual(expect.stringMatching(randomCheckboxFacetGroup))
+  })
+
+  test(`checks whether tooltip exists`, () => {
+    const groups = [...new Set(uniqueFacets.map((facet) => facet.group))]
+    const randomCheckboxFacetGroup = groups[getRandomInt(0, groups.length)]
+    const wrapper = mount(<FilterSidebar {...props} checkboxFacetGroups={[randomCheckboxFacetGroup]} />)
+    expect(wrapper.find(`sup`).first().html()).toEqual(expect.stringMatching(`data-tooltip`))
+  })
+
+  test(`checks tooltip does not exist when no tooltip text in payload`, () => {
+    const groups = [...new Set(uniqueFacets.map((facet) => facet.group))]
+    const randomCheckboxFacetGroup = groups[getRandomInt(0, groups.length)]
+    const wrapper = mount(<FilterSidebar {...noTooltipProps} checkboxFacetGroups={[randomCheckboxFacetGroup]} />)
+    expect(wrapper.find(`sup`).exists()).toEqual(false)
+  })
 
   test(`matches snapshot`, () => {
     const tree = renderer.create(<FilterSidebar {...props}/>).toJSON()

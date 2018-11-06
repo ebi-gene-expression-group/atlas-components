@@ -5,7 +5,7 @@ import _ from 'lodash'
 import CheckboxFacetGroup from './facetgroups/CheckboxFacetGroup'
 import MultiselectDropdownFacetGroup from './facetgroups/MultiselectDropdownFacetGroup'
 
-import {FacetPropTypes} from './ResultPropTypes'
+import {FacetPropTypes, FacetTooltipPropTypes} from './ResultPropTypes'
 
 const FilterSidebar = ({facets, checkboxFacetGroups, onChange}) => {
   const facetGroups =
@@ -21,11 +21,13 @@ const FilterSidebar = ({facets, checkboxFacetGroups, onChange}) => {
     [
       facetGroups[0]
         .map((facetGroup) => <CheckboxFacetGroup facetGroupName={facetGroup[0]}
+                                                 facetGroupNameDescription={facetGroup[1][0].description}
                                                  facets={facetGroup[1]}
                                                  onChange={onChange}
                                                  key={facetGroup[0]} />),
       facetGroups[1]
         .map((facetGroup) => <MultiselectDropdownFacetGroup facetGroupName={facetGroup[0]}
+                                                            facetGroupNameDescription={facetGroup[1][0].description}
                                                             facets={facetGroup[1]}
                                                             onChange={onChange}
                                                             key={facetGroup[0]} />)

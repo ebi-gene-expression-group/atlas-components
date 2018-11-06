@@ -40,17 +40,20 @@ const episodes = [
       {
         group: `Planet`,
         value: `gazorpazorp`,
-        label: `Gazorpazorp`
+        label: `Gazorpazorp`,
+        description: `Planets where events in this episode take place`
       },
       {
         group: `Guest character`,
         value: `gwendolyn`,
-        label: `Gwendolyn`
+        label: `Gwendolyn`,
+        description: `Guest characters that tag along for the adventures in this episodes`
       },
       {
         group: `Guest character`,
         value: `ma-sha`,
-        label: `Ma-Sha`
+        label: `Ma-Sha`,
+        description: `Guest characters that tag along for the adventures in this episodes`
       },
       {
         group: `Season`,
@@ -67,17 +70,20 @@ const episodes = [
       {
         group: `Planet`,
         value: `squanch`,
-        label: `Squanch`
+        label: `Squanch`,
+        description: `Planets where events in this episode take place`
       },
       {
         group: `Guest character`,
         value: `birdperson`,
-        label: `Birdperson`
+        label: `Birdperson`,
+        description: `Guest characters that tag along for the adventures in this episodes`
       },
       {
         group: `Guest character`,
         value: `squanchy`,
-        label: `Squanchy`
+        label: `Squanchy`,
+        description: `Guest characters that tag along for the adventures in this episodes`
       },
       {
         group: `Season`,
@@ -94,12 +100,14 @@ const episodes = [
       {
         group: `Guest character`,
         value: `birdperson`,
-        label: `Birdperson`
+        label: `Birdperson`,
+        description: `Guest characters that tag along for the adventures in this episodes`
       },
       {
         group: `Planet`,
         value: `buttworld`,
-        label: `Buttworld`
+        label: `Buttworld`,
+        description: `Planets where events in this episode take place`
       },
       {
         group: `Season`,
@@ -116,12 +124,14 @@ const episodes = [
       {
         group: `Guest character`,
         value: `squanchy`,
-        label: `Squanchy`
+        label: `Squanchy`,
+        description: `Guest characters that tag along for the adventures in this episodes`
       },
       {
         group: `Guest character`,
         value: `abradolf_lincler`,
-        label: `Abradolf Lincler`
+        label: `Abradolf Lincler`,
+        description: `Guest characters that tag along for the adventures in this episodes`
       },
       {
         group: `Season`,
@@ -138,17 +148,20 @@ const episodes = [
       {
         group: `Guest character`,
         value: `ricktiminus_sancheziminius`,
-        label: `Ricktiminus Sancheziminius`
+        label: `Ricktiminus Sancheziminius`,
+        description: `Guest characters that tag along for the adventures in this episodes`
       },
       {
         group: `Guest character`,
         value: `abradolf_lincler`,
-        label: `Abradolf Lincler`
+        label: `Abradolf Lincler`,
+        description: `Guest characters that tag along for the adventures in this episodes`
       },
       {
         group: `Planet`,
         value: `buttworld`,
-        label: `Buttworld`
+        label: `Buttworld`,
+        description: `Planets where events in this episode take place`
       },
       {
         group: `Season`,

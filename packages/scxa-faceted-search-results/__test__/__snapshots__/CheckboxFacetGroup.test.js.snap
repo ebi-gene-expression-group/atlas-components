@@ -1,0 +1,69 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CheckboxFacetGroup matches snapshot 1`] = `
+<div
+  className="padding-bottom-xlarge"
+>
+  <h4>
+    Planet
+    <span>
+      <sup
+        aria-haspopup="true"
+        className="has-tip tip-right"
+        data-tooltip={true}
+        style={
+          Object {
+            "background": "white",
+            "border": "none",
+          }
+        }
+        title="Planets where events in this episode take place"
+      >
+        ?
+      </sup>
+    </span>
+  </h4>
+  <div>
+    <input
+      checked={false}
+      disabled={false}
+      onChange={[Function]}
+      type="checkbox"
+      value="gazorpazorp"
+    />
+    <label
+      style={Object {}}
+    >
+      Gazorpazorp
+    </label>
+  </div>
+  <div>
+    <input
+      checked={false}
+      disabled={false}
+      onChange={[Function]}
+      type="checkbox"
+      value="squanch"
+    />
+    <label
+      style={Object {}}
+    >
+      Squanch
+    </label>
+  </div>
+  <div>
+    <input
+      checked={false}
+      disabled={false}
+      onChange={[Function]}
+      type="checkbox"
+      value="buttworld"
+    />
+    <label
+      style={Object {}}
+    >
+      Buttworld
+    </label>
+  </div>
+</div>
+`;

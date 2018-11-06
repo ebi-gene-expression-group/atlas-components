@@ -30,7 +30,7 @@ describe(`CheckboxFacetGroup`, () => {
     expect(wrapper.find(`input`)).toHaveLength(props.facets.length)
     expect(wrapper.find({ type: `checkbox` })).toHaveLength(props.facets.length)
     expect(wrapper.find(`h4`)).toHaveLength(1)
-    expect(wrapper.find(`h4`).text()).toEqual(props.facetGroupName)
+    expect(wrapper.find(`h4`).text()).toEqual(expect.stringMatching(props.facetGroupName))
     // All checkboxes are enabled, cf. with next test
     const inputProps = wrapper.find(`input`).map((labelWrapper) => labelWrapper.props())
     inputProps.every((inputProp) => expect(inputProp).toHaveProperty(`disabled`, false))

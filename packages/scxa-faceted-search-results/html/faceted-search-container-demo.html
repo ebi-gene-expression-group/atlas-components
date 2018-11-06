@@ -1,27 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>FilterList demo</title>
+  <title>FilterList demo</title>
 
-    <link rel="stylesheet" href="https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/css/ebi-global.css" type="text/css" media="all" />
-    <link rel="stylesheet" href="https://ebi.emblstatic.net/web_guidelines/EBI-Icon-fonts/v1.3/fonts.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/css/ebi-global.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="https://ebi.emblstatic.net/web_guidelines/EBI-Icon-fonts/v1.3/fonts.css" type="text/css" media="all" />
 
-    <style type="text/css">
-    #target input {
-      height: unset;
-      box-shadow: none;
-      margin: 0;
-    }
-    </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.1/js/foundation.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.1/js/plugins/foundation.tooltip.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+
+  <style type="text/css">
+  #target input {
+    height: unset;
+    box-shadow: none;
+    margin: 0;
+  }
+  </style>
 </head>
 
 <body>
-<div id="wrapper" class="row column expanded margin-top-large">
+  <div id="wrapper" class="row column expanded margin-top-large">
     <div id="content" class="small-12 columns">
-        <div id="target">
-        </div>
+      <div id="target">
+      </div>
     </div>
-</div>
+  </div>
 </body>
 
 <script src="../dist/vendors.bundle.js"></script>
@@ -30,7 +35,10 @@
 
 <!-- Set to http://localhost:8080/gxa/ or http://localhost:8080/gxa_sc/ -- Remember the trailing slash! -->
 <script>
-    facetedSearchContainerDemo.render('target');
+$(document).ready(function() {
+  $(document).foundation();
+})
+facetedSearchContainerDemo.render('target');
 </script>
 
 </html>

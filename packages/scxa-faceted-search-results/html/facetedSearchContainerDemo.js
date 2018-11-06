@@ -1,144 +1,162 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
+  import React from 'react'
+  import ReactDOM from 'react-dom'
 
-import FacetedSearchContainer from '../src/FacetedSearchContainer'
-import EpisodeCard from './EpisodeCard'
+  import FacetedSearchContainer from '../src/FacetedSearchContainer'
+  import EpisodeCard from './EpisodeCard'
 
-const render = (target) => {
-  const episodes =  [
-    {
-      element: {
-        title: `Raising Gazorpazorp`
+  const render = (target) => {
+    const episodes =  [
+      {
+        element: {
+          title: `Raising Gazorpazorp`
+        },
+        facets: [
+          {
+            group: `Planet`,
+            value: `gazorpazorp`,
+            label: `Gazorpazorp`,
+            description: `Planet Tooltip`
+          },
+          {
+            group: `Guest character`,
+            value: `gwendolyn`,
+            label: `Gwendolyn`,
+            description: `Guest character Tooltip`
+          },
+          {
+            group: `Guest character`,
+            value: `ma-sha`,
+            label: `Ma-Sha`,
+            description: `Guest character Tooltip`
+          },
+          {
+            group: `Season`,
+            value: `1`,
+            label: `1`,
+            description: `Season Tooltip`
+          }
+        ]
       },
-      facets: [
-        {
-          group: `Planet`,
-          value: `gazorpazorp`,
-          label: `Gazorpazorp`
+      {
+        element: {
+          title: `The wedding squanchers`
         },
-        {
-          group: `Guest character`,
-          value: `gwendolyn`,
-          label: `Gwendolyn`
-        },
-        {
-          group: `Guest character`,
-          value: `ma-sha`,
-          label: `Ma-Sha`
-        },
-        {
-          group: `Season`,
-          value: `1`,
-          label: `1`
-        }
-      ]
-    },
-    {
-      element: {
-        title: `The wedding squanchers`
+        facets: [
+          {
+            group: `Planet`,
+            value: `squanch`,
+            label: `Squanch`,
+            description: `Planet Tooltip`
+          },
+          {
+            group: `Guest character`,
+            value: `birdperson`,
+            label: `Birdperson`,
+            description: `Guest character Tooltip`
+          },
+          {
+            group: `Guest character`,
+            value: `squanchy`,
+            label: `Squanchy`,
+            description: `Guest character Tooltip`
+          },
+          {
+            group: `Season`,
+            value: `2`,
+            label: `2`,
+            description: `Season Tooltip`
+          }
+        ]
       },
-      facets: [
-        {
-          group: `Planet`,
-          value: `squanch`,
-          label: `Squanch`
+      {
+        element: {
+          title: `The Rickshank redemption`
         },
-        {
-          group: `Guest character`,
-          value: `birdperson`,
-          label: `Birdperson`
-        },
-        {
-          group: `Guest character`,
-          value: `squanchy`,
-          label: `Squanchy`
-        },
-        {
-          group: `Season`,
-          value: `2`,
-          label: `2`
-        }
-      ]
-    },
-    {
-      element: {
-        title: `The Rickshank redemption`
+        facets: [
+          {
+            group: `Guest character`,
+            value: `birdperson`,
+            label: `Birdperson`,
+            description: `Guest character Tooltip`
+          },
+          {
+            group: `Planet`,
+            value: `buttworld`,
+            label: `Buttworld`,
+            description: `Planet Tooltip`
+          },
+          {
+            group: `Season`,
+            value: `3`,
+            label: `3`,
+            description: `Season Tooltip`
+          }
+        ]
       },
-      facets: [
-        {
-          group: `Guest character`,
-          value: `birdperson`,
-          label: `Birdperson`
+      {
+        element: {
+          title: `Ricksy business`
         },
-        {
-          group: `Planet`,
-          value: `buttworld`,
-          label: `Buttworld`
-        },
-        {
-          group: `Season`,
-          value: `3`,
-          label: `3`
-        }
-      ]
-    },
-    {
-      element: {
-        title: `Ricksy business`
+        facets: [
+          {
+            group: `Guest character`,
+            value: `squanchy`,
+            label: `Squanchy`,
+            description: `Guest character Tooltip`
+          },
+          {
+            group: `Guest character`,
+            value: `abradolf_lincler`,
+            label: `Abradolf Lincler`,
+            description: `Guest character Tooltip`
+          },
+          {
+            group: `Season`,
+            value: `1`,
+            label: `1`,
+            description: `Season Tooltip`
+          }
+        ]
       },
-      facets: [
-        {
-          group: `Guest character`,
-          value: `squanchy`,
-          label: `Squanchy`
+      {
+        element: {
+          title: `Close Rick-counters of the Rick kind`
         },
-        {
-          group: `Guest character`,
-          value: `abradolf_lincler`,
-          label: `Abradolf Lincler`
-        },
-        {
-          group: `Season`,
-          value: `1`,
-          label: `1`
-        }
-      ]
-    },
-    {
-      element: {
-        title: `Close Rick-counters of the Rick kind`
-      },
-      facets: [
-        {
-          group: `Guest character`,
-          value: `ricktiminus_sancheziminius`,
-          label: `Ricktiminus Sancheziminius`
-        },
-        {
-          group: `Guest character`,
-          value: `abradolf_lincler`,
-          label: `Abradolf Lincler`
-        },
-        {
-          group: `Planet`,
-          value: `buttworld`,
-          label: `Buttworld`
-        },
-        {
-          group: `Season`,
-          value: `1`,
-          label: `1`
-        }
-      ]
-    }
-  ]
+        facets: [
+          {
+            group: `Guest character`,
+            value: `ricktiminus_sancheziminius`,
+            label: `Ricktiminus Sancheziminius`,
+            description: `Guest character Tooltip`
+          },
+          {
+            group: `Guest character`,
+            value: `abradolf_lincler`,
+            label: `Abradolf Lincler`,
+            description: `Guest character Tooltip`
+          },
+          {
+            group: `Planet`,
+            value: `buttworld`,
+            label: `Buttworld`,
+            description: `Planet Tooltip`
+          },
+          {
+            group: `Season`,
+            value: `1`,
+            label: `1`,
+            description: `Season Tooltip`
+          }
+        ]
+      }
+    ]
 
-  ReactDOM.render(
-    <FacetedSearchContainer results={episodes}
-                            ResultElementClass={EpisodeCard}
-                            checkboxFacetGroups={[`Season`]}
-                            resultsMessage={`Search results`}/>,
-    document.getElementById(target))
-}
+    ReactDOM.render(
+      <FacetedSearchContainer results={episodes}
+                              ResultElementClass={EpisodeCard}
+                              checkboxFacetGroups={[`Season`]}
+                              resultsMessage={`Search results`}/>,
+      document.getElementById(target))
+  }
 
-export {render}
+  export {render}

@@ -50,15 +50,25 @@ const ebiVfSelectStyles = {
   })
 }
 
-const MultiselectDropdownFacetGroup = ({facetGroupName, facets, onChange}) =>
+const tooltipStyle = {
+    background: `white`,
+    border: `none`
+}
+
+const MultiselectDropdownFacetGroup = ({facetGroupName, facetGroupNameDescription, facets, onChange}) =>
   <div className={`padding-bottom-xlarge`}>
-    <h4>{facetGroupName}</h4>
-    <Select components={{ DropdownIndicator, IndicatorSeparator: null }}
+    <h4>{facetGroupName}
+    {facetGroupNameDescription &&
+      <span>
+        <sup data-tooltip aria-haspopup="true" className={`has-tip tip-right`} style={tooltipStyle} title={facetGroupNameDescription}>?</sup>
+      </span>
+    }</h4>
+    <Select inputId={`facetGroupMultiSelectDropdown`}
+            components={{ DropdownIndicator, IndicatorSeparator: null }}
             styles={ebiVfSelectStyles}
             closeMenuOnSelect={false}
             isMulti={true}
             onChange={(args) => onChange(facetGroupName, args)}
-            // isOptionDisabled={(option) => option.disabled}
             options={facets.filter((facet) => !facet.disabled)}/>
   </div>
 

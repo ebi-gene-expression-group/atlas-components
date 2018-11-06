@@ -61,6 +61,22 @@ exports[`FacetedSearchContainer matches snapshot 1`] = `
     >
       <h4>
         Guest character
+        <span>
+          <sup
+            aria-haspopup="true"
+            className="has-tip tip-right"
+            data-tooltip={true}
+            style={
+              Object {
+                "background": "white",
+                "border": "none",
+              }
+            }
+            title="Guest characters that tag along for the adventures in this episodes"
+          >
+            ?
+          </sup>
+        </span>
       </h4>
       <div
         className="css-10nd86i"
@@ -96,7 +112,7 @@ exports[`FacetedSearchContainer matches snapshot 1`] = `
                   autoComplete="off"
                   autoCorrect="off"
                   disabled={false}
-                  id="react-select-10-input"
+                  id="facetGroupMultiSelectDropdown"
                   onBlur={[Function]}
                   onChange={[Function]}
                   onFocus={[Function]}
@@ -152,6 +168,22 @@ exports[`FacetedSearchContainer matches snapshot 1`] = `
     >
       <h4>
         Planet
+        <span>
+          <sup
+            aria-haspopup="true"
+            className="has-tip tip-right"
+            data-tooltip={true}
+            style={
+              Object {
+                "background": "white",
+                "border": "none",
+              }
+            }
+            title="Planets where events in this episode take place"
+          >
+            ?
+          </sup>
+        </span>
       </h4>
       <div
         className="css-10nd86i"
@@ -187,7 +219,7 @@ exports[`FacetedSearchContainer matches snapshot 1`] = `
                   autoComplete="off"
                   autoCorrect="off"
                   disabled={false}
-                  id="react-select-11-input"
+                  id="facetGroupMultiSelectDropdown"
                   onBlur={[Function]}
                   onChange={[Function]}
                   onFocus={[Function]}

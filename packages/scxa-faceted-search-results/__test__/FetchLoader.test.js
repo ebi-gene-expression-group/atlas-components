@@ -34,7 +34,7 @@ describe(`FetchLoader`, () => {
     await wrapper.instance().componentDidMount()
     wrapper.update()
     expect(wrapper.find(`#loader`)).toHaveLength(0)
-    expect(wrapper.find(`.callout .alert`)).toHaveLength(0)
+    expect(wrapper.find(`.callout.alert`)).toHaveLength(0)
   })
 
   test(`renders an error message if request to the server returns 4xx or 5xx`, async () => {
