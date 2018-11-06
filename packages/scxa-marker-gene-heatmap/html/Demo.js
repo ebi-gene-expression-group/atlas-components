@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-import FetchLoader from '../src/index.js'
+import HeatmapView from '../src/index.js'
 
 // K values for E-MTAB-5061
 const ks = [7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17]
@@ -21,7 +21,7 @@ class Demo extends React.Component {
 
   render() {
     return (
-      <FetchLoader
+      <HeatmapView
         resource={`json/experiments/${this.state.experimentAccession}/marker-genes/${this.state.selectedK}`}
         host={`http://localhost:8080/gxa/sc/`}
         ks={this.state.ks}

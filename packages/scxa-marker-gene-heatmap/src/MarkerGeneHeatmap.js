@@ -19,6 +19,7 @@ const MarkerGeneHeatmap = (props) => {
       type: `heatmap`,
       height: chartHeight,
       zoomType: `y`,
+      animation: false
       // plotBackgroundColor: `#D3D3D3`
     },
     credits: {

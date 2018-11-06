@@ -1,3 +1,3 @@
-import FetchLoader from './FetchLoader.js'
+import HeatmapView from './HeatmapView.js'
 
-export default FetchLoader
+export default HeatmapView

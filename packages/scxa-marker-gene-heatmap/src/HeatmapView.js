@@ -26,12 +26,12 @@ CalloutAlert.propTypes = {
   })
 }
 
-class FetchLoader extends React.Component {
+class HeatmapView extends React.Component {
   constructor(props) {
     super(props)
 
     this.state = {
-      data: null,
+      data: [],
       isLoading: true,
       hasError: null
     }
@@ -92,7 +92,7 @@ class FetchLoader extends React.Component {
   render() {
     const { data, isLoading, hasError } = this.state
 
-    const { host, ks, selectedK, onSelectK } = this.props
+    const { ks, selectedK, onSelectK, wrapperClassName, heatmapHeight } = this.props
 
     const kOptions = ks.sort((a, b) => a-b).map((k) => ({
       value: k.toString(),
@@ -103,34 +103,42 @@ class FetchLoader extends React.Component {
     return (
       hasError ?
         <CalloutAlert error={hasError}/> :
-        [
+        <div className={wrapperClassName}>
           <PlotSettingsDropdown
             key={`selectK`}
             labelText={`View marker genes for:`}
             options={kOptions}
             onSelect={(selectedOption) => {onSelectK(selectedOption.value)}}
-            defaultValue={{value: selectedK, label: selectedK}}
-          />,
-          isLoading ?
-            <LoadingOverlay
-              show={isLoading}
-            /> :
+            defaultValue={{value: selectedK, label: `k = ${selectedK}`}}
+          />
+          <div key={`heatmap`} style={{position: `relative`}} className={`row`}>
             <MarkerGeneHeatmap
               key={`heatmap`}
               data={data}
-              chartHeight={`800px`}
+              chartHeight={heatmapHeight}
             />
-        ]
+            <LoadingOverlay
+              show={isLoading}
+            />
+          </div>
+        </div>
     )
   }
 }
 
-FetchLoader.propTypes = {
-  host: PropTypes.string,
-  resource: PropTypes.string,
-  ks: PropTypes.array,
-  selectedK: PropTypes.number,
-  onSelectK: PropTypes.func
+HeatmapView.propTypes = {
+  host: PropTypes.string.isRequired,
+  resource: PropTypes.string.isRequired,
+  ks: PropTypes.arrayOf(PropTypes.number).isRequired,
+  selectedK: PropTypes.number.isRequired,
+  onSelectK: PropTypes.func,
+  wrapperClassName: PropTypes.string,
+  heatmapHeight: PropTypes.number
 }
 
-export default FetchLoader
+HeatmapView.defaultProps = {
+  wrapperClassName: `row`,
+  heatmapHeight: 800
+}
+
+export default HeatmapView
