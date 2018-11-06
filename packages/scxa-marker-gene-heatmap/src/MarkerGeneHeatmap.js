@@ -100,7 +100,7 @@ const MarkerGeneHeatmap = (props) => {
         [1, `#0e0573`]
       ],
       marker: {
-        color: `#c4463a`
+        color: `#e96b23`
       }
     },
 
@@ -120,7 +120,8 @@ const MarkerGeneHeatmap = (props) => {
       states: {
         hover: {
           brightness: 0,
-          borderWidth: 2
+          borderWidth: 2,
+          borderColor: `#e96b23`
         }
       },
       boostThreshold: 100,
