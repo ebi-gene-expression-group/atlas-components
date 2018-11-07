@@ -2,6 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import BioentityInformation from '../src/BioentityInformation'
 import AtlasAutocomplete from 'expression-atlas-autocomplete'
+import GeneSearchForm from 'scxa-gene-search-form'
 
 class Demo extends React.Component {
   constructor(props) {
@@ -15,16 +16,16 @@ class Demo extends React.Component {
   render() {
     return (
       <div>
-        <AtlasAutocomplete key={`expression-autocomplete`}
-                           atlasUrl={`http://localhost:8080/gxa/sc/`}
-                           wrapperClassName={`row column expanded`}
-                           suggesterEndpoint={`json/suggestions`}
-                           initialValue={this.state.geneId}
-                           onSelect={ (geneId) => { this.setState({geneId: geneId}) }}/>
+        <AtlasAutocomplete
+          atlasUrl={`http://localhost:8080/gxa/sc/`}
+          wrapperClassName={`row column expanded`}
+          suggesterEndpoint={`json/suggestions`}
+          initialValue={this.state.geneId}
+          onSelect={ (geneId) => { this.setState({geneId: geneId}) }} />
 
-        <BioentityInformation atlasUrl={`http://localhost:8080/gxa/sc/`}
-                              geneId={this.state.geneId}
-        />
+        <BioentityInformation
+          atlasUrl={`http://localhost:8080/gxa/sc/`}
+          geneId={this.state.geneId} />
       </div>
 
     )

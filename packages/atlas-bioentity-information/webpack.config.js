@@ -1,40 +1,37 @@
-const path = require('path')
-const CleanWebpackPlugin = require('clean-webpack-plugin')
+const path = require(`path`)
+const CleanWebpackPlugin = require(`clean-webpack-plugin`)
 
-const commonPublicPath = '/dist/'
+const vendorsBundleName = `vendors`
+const commonPublicPath = `/dist/`
 
 module.exports = {
   entry: {
-    demo: ['babel-polyfill', './html/Demo.js'],
-    // dependencies: ['prop-types', 'react', 'react-dom', 'urijs']
+    bioentityDemo: [`@babel/polyfill`, `./html/Demo.js`],
   },
 
   output: {
-    library: '[name]',
-    filename: '[name].bundle.js',
+    library: `[name]`,
+    filename: `[name].bundle.js`,
     publicPath: commonPublicPath
   },
 
   optimization: {
+    runtimeChunk: {
+       name: vendorsBundleName
+    },
     splitChunks: {
-      chunks: 'all',
-      minSize: 1,
       cacheGroups: {
-        bioentityInformation: {
-          test: /[\\/]src[\\/]/,
-          name: 'bioentityInformation',
-          priority: -20
-        },
-        vendors: {
+        commons: {
           test: /[\\/]node_modules[\\/]/,
-          name: 'vendors',
-          priority: -10
+          name: vendorsBundleName,
+          chunks: `all`
         }
       }
     }
   },
+
   plugins: [
-    new CleanWebpackPlugin(['dist'])
+    new CleanWebpackPlugin([`dist`])
   ],
 
   module: {
@@ -42,18 +39,18 @@ module.exports = {
       {
         test: /\.js$/i,
         exclude: /node_modules\//,
-        use: 'babel-loader'
+        use: `babel-loader`
       },
       {
         test: /\.svg$/i,
         use: [
           {
-            loader: 'file-loader',
+            loader: `file-loader`,
             options: {
               query: {
-                name: '[hash].[ext]',
-                hash: 'sha512',
-                digest: 'hex'
+                name: `[hash].[ext]`,
+                hash: `sha512`,
+                digest: `hex`
               }
             }
           }
@@ -64,7 +61,7 @@ module.exports = {
 
   devServer: {
     port: 9000,
-    contentBase: path.resolve(__dirname, 'html'),
+    contentBase: path.resolve(__dirname, `html`),
     publicPath: commonPublicPath
   }
 }
