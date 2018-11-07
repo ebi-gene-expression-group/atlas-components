@@ -9,6 +9,7 @@
     <style type="text/css">
       #select input,
       #search input,
+      #search-callback input,
       #no_species_select input,
       #no_species_select_human input,
       #no_species_select_mouse input  {
@@ -31,6 +32,21 @@
     <div class="tabs-content" data-tabs-content="search-tabs">
         <div class="tabs-panel is-active " id="search-atlas" style="background-color: #e6e6e6;">
           <div id="search"></div>
+        </div>
+    </div>
+  </div>
+
+<hr>
+
+  <div class="row expanded column">
+    <h2 class="margin-top-xlarge">Full component with callback (open the console for full effect)</h2>
+    <ul class="tabs" data-tabs id="search-tabs">
+      <li class="tabs-title is-active"><a href="#search-atlas" aria-selected="true">Search</a></li>
+    </ul>
+
+    <div class="tabs-content" data-tabs-content="search-tabs">
+        <div class="tabs-panel is-active " id="search-atlas" style="background-color: #e6e6e6;">
+          <div id="search-callback"></div>
         </div>
     </div>
   </div>
@@ -121,7 +137,7 @@
     statusMessage:'An error occurred somewhere along the InterWebz pipes!',
     onChange: function() {}
   }, 'select-error');
-  
+
   geneSearchFormDemo.render({
     atlasUrl: 'http://localhost:8080/gxa/sc/',
     wrapperClassName: 'row expanded',
@@ -133,6 +149,18 @@
     speciesEndpoint: 'json/suggestions/species',
     speciesSelectClassName: 'small-4 columns'
   }, 'search');
+
+  geneSearchFormDemo.render({
+    atlasUrl: 'http://localhost:8080/gxa/sc/',
+    wrapperClassName: 'row expanded',
+    actionEndpoint: 'search',
+    onSubmit: function(event, query, species) {event.preventDefault() ; console.log(event); console.log(query); console.log(species);},
+    suggesterEndpoint: 'json/suggestions/gene_ids',
+    autocompleteClassName: 'small-8 columns',
+    enableSpeciesSelect: true,
+    speciesEndpoint: 'json/suggestions/species',
+    speciesSelectClassName: 'small-4 columns'
+  }, 'search-callback');
 
   geneSearchFormDemo.render({
     atlasUrl: 'http://localhost:8080/gxa/sc/',

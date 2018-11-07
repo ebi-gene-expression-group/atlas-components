@@ -40,7 +40,7 @@ class GeneSearchForm extends React.Component {
   }
 
   render() {
-    const {wrapperClassName, actionEndpoint} = this.props
+    const {wrapperClassName, actionEndpoint, onSubmit} = this.props
 
     const {autocompleteClassName, atlasUrl, suggesterEndpoint, defaultValue} = this.props
 
@@ -62,7 +62,7 @@ class GeneSearchForm extends React.Component {
           { enableSpeciesSelect &&
             <div className={speciesSelectClassName}>
               <LabelledSelect
-                name={`Species`}
+                name={`species`}
                 topGroup={topSpecies}
                 bottomGroup={allSpecies}
                 bottomGroupLabel={`All species`}
@@ -77,7 +77,12 @@ class GeneSearchForm extends React.Component {
             <button
               type={`Submit`}
               className={`button`}
-              disabled={!this.state.query.term || this.state.query.term.trim() === ``}>
+              disabled={!this.state.query.term || this.state.query.term.trim() === ``}
+              onClick={onSubmit ?
+                (event) => {
+                  onSubmit(event, this.state.query, this.state.selectedSpecies)
+                } :
+                null}>
                 Search
             </button>
           </div>
@@ -90,6 +95,7 @@ class GeneSearchForm extends React.Component {
 GeneSearchForm.propTypes = {
   atlasUrl: PropTypes.string.isRequired,
   actionEndpoint: PropTypes.string.isRequired,
+  onSubmit: PropTypes.func,
   wrapperClassName: PropTypes.string,
 
   autocompleteClassName: PropTypes.string,

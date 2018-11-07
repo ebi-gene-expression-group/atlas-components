@@ -108,9 +108,9 @@ exports[`GeneSearchForm matches snapshot 1`] = `
     >
       <div>
         <label
-          htmlFor="Species"
+          htmlFor="species"
         >
-          Species
+          species
         </label>
         <div
           className="css-10nd86i"
@@ -131,7 +131,7 @@ exports[`GeneSearchForm matches snapshot 1`] = `
               </div>
               <input
                 className="css-14uuagi"
-                id="Species-input"
+                id="species-input"
                 onBlur={[Function]}
                 onChange={[Function]}
                 onFocus={[Function]}
@@ -150,7 +150,7 @@ exports[`GeneSearchForm matches snapshot 1`] = `
             </div>
           </div>
           <input
-            name="Species"
+            name="species"
             type="hidden"
             value=""
           />
@@ -167,6 +167,7 @@ exports[`GeneSearchForm matches snapshot 1`] = `
       <button
         className="button"
         disabled={true}
+        onClick={null}
         type="Submit"
       >
         Search

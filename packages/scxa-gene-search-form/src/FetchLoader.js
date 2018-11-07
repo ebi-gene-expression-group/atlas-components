@@ -72,6 +72,7 @@ FetchLoader.propTypes = {
   atlasUrl: PropTypes.string.isRequired,
   wrapperClassName: PropTypes.string,
   actionEndpoint: PropTypes.string.isRequired,
+  onSubmit: PropTypes.func,
 
   autocompleteClassName: PropTypes.string,
   suggesterEndpoint: PropTypes.string.isRequired,

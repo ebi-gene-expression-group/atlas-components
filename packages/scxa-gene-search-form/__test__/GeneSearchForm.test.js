@@ -103,6 +103,36 @@ describe(`GeneSearchForm`, () => {
     expect(wrapper.find(`button`).at(0).props()).toHaveProperty(`disabled`, true)
   })
 
+  test(`if a function is passed via onSubmit, it is run when the Search button is clicked and the query is passed as args`, () => {
+    const onSubmitMock = jest.fn()
+    const wrapper = shallow(<GeneSearchForm {...props} onSubmit={onSubmitMock} />)
+
+    const optionValueToSelect = {
+      term: `foo`,
+      category: `bar`
+    }
+    wrapper.find(Autocomplete)
+      .simulate(
+        `change`,
+        {
+          label: `foo`,
+          value: JSON.stringify(optionValueToSelect)
+        })
+
+    const speciesToSelect = species.getRandom()
+    wrapper.find(LabelledSelect).simulate(`change`, {label: speciesToSelect, value: speciesToSelect})
+
+    const event = {
+      target: `some-DOM-node`
+    }
+    wrapper.find(`button`).at(0).simulate(`click`, event)
+
+    expect(onSubmitMock.mock.calls).toHaveLength(1)
+    expect(onSubmitMock.mock.calls[0][0]).toEqual(event)
+    expect(onSubmitMock.mock.calls[0][1]).toEqual(optionValueToSelect)
+    expect(onSubmitMock.mock.calls[0][2]).toEqual(speciesToSelect)
+  })
+
   test(`matches snapshot`, () => {
     const tree = renderer.create(<GeneSearchForm {...props}/>).toJSON()
     expect(tree).toMatchSnapshot()
