@@ -30,9 +30,13 @@
 
 <!-- Set to http://localhost:8080/gxa/ or http://localhost:8080/gxa/sc/ -- Remember the trailing slash! -->
 <script>
+    const symbol = `foobar`;
+
     fetchLoaderDemo.render({
       host: 'http://localhost:8080/gxa/sc/',
-      resource: 'json/search?symbol=BRCA1'
+      resource: 'json/search?symbol=' + symbol,
+      resultsMessageFormatter: function(data) { return symbol + ' ' + data.searchExplanation + ' is expressed in:'; },
+      noResultsMessageFormatter: function(data) { return 'Your search for ' + symbol + ' yielded no results: ' + data.reason; }
     }, 'target');
 </script>
 

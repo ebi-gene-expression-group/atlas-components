@@ -14,14 +14,25 @@ a set of filtering controls. Filter groups can be displayed either as searchable
 
 The prop `ResultElementClass` must be coupled to the shape of your `element` objects to be shown correctly.
 
+Two more optional props, namely `noResultsMessageFormatter` and `resultsMessageFormatter`, return a string which is
+displayed when there are no results, and as a header on top of the search results, respectively. In many occasions it
+is useful to display such messages using information returned by the server; that’s the reason why both functions take
+the JSON payload as an argument, allowing for some customisation in that regard. For example, if in the case of no
+results the server returns a field `reason` you could have something like this:
+```
+<ReactFacetedSearch
+  ...
+  noResultsMessageFormatter={(data) => `Your search yielded no results: ${data.reason}`}
+```
+
 The sidebar disables/hides options in order to avoid combinations that would produce empty results. However it is not
-100% foolproof since you can arrive at a no results state by unchecking options, but you disabling an already chosen
-facet is bad UX.
+100% foolproof since you can arrive at a no results state by unchecking options, but disabling an already chosen
+facet can potentially lock the user without no apparent reason, resulting in bad UX.
 
 # Try it out
 Just run [webpack-dev-server](https://github.com/webpack/webpack-dev-server):
 ```
-npx webpack-dev-server --mode=development
+npx webpack-dev-server -d
 ```
 
 # Combining with the EBI Visual Framework
@@ -36,7 +47,8 @@ Therefore it’s convenient to add the snippet below to override the styling set
 }
 ```
 At the time of writing this applies to the most recent version (v1.3). Wrapping these styles within the appropriate
-`div` selector is sufficient. See https://github.com/ebi-gene-expression-group/scxa-faceted-search-results/blob/master/html/filter-list.html for a
+`div` selector is sufficient. See
+https://github.com/ebi-gene-expression-group/scxa-faceted-search-results/blob/master/html/filter-list.html for a
 working example.
 
 # A note about building with Webpack
@@ -184,4 +196,5 @@ The component uses `async`/`await` to fetch the JSON payload from the server. Th
 ```
 
 # TODO
-- Refactor `FetchLoader` as a HOC. This makes it highly reusable and will let clients of this component get the results however they prefer.
+- Refactor `FetchLoader` as a HOC. This makes it highly reusable and will let clients of this component get the results
+however they prefer.
