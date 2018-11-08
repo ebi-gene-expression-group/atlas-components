@@ -58,9 +58,11 @@ class LabelledSelect extends React.Component {
       topOptions.concat(bottomOptions.options).find(option => option.value === this.state.value) ||
       bottomOptions.options[0]
 
+    const capitalisedName = name.charAt(0).toUpperCase() + name.slice(1)
+
     return (
       <div>
-        <label htmlFor={name}>{name}</label>
+        <label htmlFor={name}>{capitalisedName}</label>
         <Select
           name={name}
           components={{ IndicatorSeparator: null, DropdownIndicator: ebiVfReactSelectReplacements.DropdownIndicator }}
