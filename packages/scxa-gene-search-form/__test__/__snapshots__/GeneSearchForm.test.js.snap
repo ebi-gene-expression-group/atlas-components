@@ -110,7 +110,7 @@ exports[`GeneSearchForm matches snapshot 1`] = `
         <label
           htmlFor="species"
         >
-          species
+          Species
         </label>
         <div
           className="css-10nd86i"
