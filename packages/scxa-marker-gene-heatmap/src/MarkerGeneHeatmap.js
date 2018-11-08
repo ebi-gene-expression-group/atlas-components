@@ -117,6 +117,7 @@ const MarkerGeneHeatmap = (props) => {
     series: [{
       data: data,
       nullColor: `#D3D3D3`,
+      cursor: `crosshair`,
       states: {
         hover: {
           brightness: 0,
