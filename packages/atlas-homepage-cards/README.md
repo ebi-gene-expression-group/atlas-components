@@ -24,8 +24,8 @@ This repository contains a generic React component that renders grids of cards w
             "type": "string",
             "description": "For species icons, it should have the name of the species. For images, it should be a URL."
         },
-        "iconDescription": {
-            "type": "string"
+        "description": {
+            "$ref": "#/definitions/Content"
         },
         "content": {
             "type": "array",

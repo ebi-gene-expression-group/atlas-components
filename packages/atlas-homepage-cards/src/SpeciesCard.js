@@ -10,30 +10,43 @@ const SpeciesCard = ({iconSrc, description, content}) => {
       </span>
 
       {
-        description && <h5 className={`species-name`}>{description}</h5>
+        description &&
+        <h5 className={`species-name`}>
+          {
+            description.url ?
+              <a className={`species-url`} href={description.url}>{description.text}</a> :
+              description.text
+          }
+        </h5>
       }
 
       {
         content &&
-          <span className={`content`}>
-            {
-              content.map((item) =>
-                item.url ?
-                  <p id={`url`} style={{marginBottom: `5px`}} key={item.text}>
-                    <a href={item.url} key={item.text}>{item.text}</a>
-                  </p> :
-                  <p id={`text`} style={{marginBottom: `5px`}} key={item.text}>{item.text}</p>
-              )
-            }
-          </span>
+        <span className={`content`}>
+          {
+            content.map((item) =>
+              item.url ?
+                <p className={`url`} style={{marginBottom: `5px`}} key={item.text}>
+                  <a href={item.url}>{item.text}</a>
+                </p> :
+                <p className={`text`} style={{marginBottom: `5px`}} key={item.text}>{item.text}</p>
+            )
+          }
+        </span>
+
       }
+
+
     </div>
   )
 }
 
 SpeciesCard.propTypes = {
   iconSrc: PropTypes.string.isRequired,
-  description: PropTypes.string,
+  description: PropTypes.shape({
+    text: PropTypes.string.isRequired,
+    url: PropTypes.string
+  }),
   content: PropTypes.arrayOf(PropTypes.shape({
     text: PropTypes.string.isRequired,
     url: PropTypes.string

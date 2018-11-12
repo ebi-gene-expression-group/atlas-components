@@ -8,7 +8,7 @@ const renderCardTypeComponent = (card) => {
   switch (card.iconType) {
   case `species`:
     return <SpeciesCard iconSrc={card.iconSrc}
-      description={card.iconDescription}
+      description={card.description}
       content={card.content}
       key={card.iconSrc}/>
   default:

@@ -24,6 +24,7 @@ describe(`SpeciesCard`, () => {
   })
 
   test(`does not render non-existent URLs`, () => {
+    const speciesName = `Mus musculus`
     const content = [
       {
         text: `120 experiments`
@@ -35,20 +36,29 @@ describe(`SpeciesCard`, () => {
         text: `119 differential experiments`
       }
     ]
-    const speciesName = `Mus musculus`
 
-    const wrapper = shallow(<SpeciesCard iconSrc={speciesName} content={content} description={speciesName}/>)
+    const description = {
+      text: speciesName
+    }
+
+    const wrapper = shallow(<SpeciesCard iconSrc={speciesName} content={content} description={description}/>)
     expect(wrapper.find(`.species-name`).exists()).toBe(true)
     expect(wrapper.find(`.species-name`).text()).toBe(speciesName)
+    expect(wrapper.find(`.species-url`).exists()).toBe(false)
 
     const contentWrapper = wrapper.find(`.content`)
 
     expect(contentWrapper.exists()).toBe(true)
-    expect(contentWrapper.find(`#text`)).toHaveLength(3)
-    expect(contentWrapper.find(`#url`).exists()).toBe(false)
+    expect(contentWrapper.find(`.content .text`)).toHaveLength(3)
+    expect(contentWrapper.find(`.content .url`).exists()).toBe(false)
   })
 
   test(`renders URLs`, () => {
+    const description = {
+      text: `Mus musculus`,
+      url: `http://foo.bar/species`
+    }
+
     const content = [
       {
         text: `120 experiments`,
@@ -56,8 +66,8 @@ describe(`SpeciesCard`, () => {
       }
     ]
 
-    const wrapper = shallow(<SpeciesCard iconSrc={``} content={content}/>)
-    const urlsWrapper = wrapper.find(`.content #url`)
+    const wrapper = shallow(<SpeciesCard iconSrc={``} content={content} description={description}/>)
+    const urlsWrapper = wrapper.find(`.content .url`)
 
     expect(urlsWrapper).toHaveLength(1)
   })
