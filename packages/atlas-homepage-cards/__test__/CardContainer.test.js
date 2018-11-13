@@ -9,6 +9,8 @@ import {getRandomInt, dummyCards} from './TestUtils'
 
 import CardContainer from '../src/CardContainer'
 import SpeciesCard from '../src/SpeciesCard'
+import ImageCard from '../src/ImageCard'
+import ExtendableSpeciesCard from '../src/ExtendableSpeciesCard'
 
 const getRandomHttpErrorCode = () => getRandomInt(400, 600)
 
@@ -65,5 +67,30 @@ describe(`CardContainer`, () => {
     wrapper.update()
 
     expect(wrapper.find(SpeciesCard)).toHaveLength(2)
+    expect(wrapper.find(ImageCard)).toHaveLength(1)
+    expect(wrapper.find(ExtendableSpeciesCard)).toHaveLength(1)
+  })
+
+  test(`renders species cards using 3 by 3 css style`, async () => {
+    fetchMock.get(`*`, dummyCards().slice(0,2))
+    const wrapper = mount(<CardContainer host={`foo`} resource={`bar`}/>)
+
+    await wrapper.instance().componentDidMount()
+    wrapper.update()
+
+    expect(wrapper.find(SpeciesCard)).toHaveLength(2)
+    expect(wrapper.find(`.row.small-up-2.medium-up-3`).exists()).toBe(true)
+  })
+
+  test(`renders non-species cards without using 3 by 3 css style`, async () => {
+    fetchMock.get(`*`, dummyCards().slice(-3))
+    const wrapper = mount(<CardContainer host={`foo`} resource={`bar`}/>)
+
+    await wrapper.instance().componentDidMount()
+    wrapper.update()
+
+    expect(wrapper.find(ImageCard)).toHaveLength(1)
+    expect(wrapper.find(ExtendableSpeciesCard)).toHaveLength(1)
+    expect(wrapper.find(`.row.small-up-2.medium-up-3`).exists()).toBe(false)
   })
 })

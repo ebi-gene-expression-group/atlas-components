@@ -2,6 +2,9 @@
 .idea/
 
 # https://github.com/github/gitignore/blob/master/Node.gitignore
+# OS X “Desktop Services” files
+.DS_Store
+.module-cache
 
 # Logs
 logs

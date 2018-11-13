@@ -1,6 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import SpeciesCard from './SpeciesCard'
+import ImageCard from './ImageCard'
+import ExtendableSpeciesCard from './ExtendableSpeciesCard'
+import EbiSpeciesIcon from 'react-ebi-species'
+
 import URI from 'urijs'
 
 // A mapping of card types and their associated React component
@@ -8,11 +12,26 @@ const renderCardTypeComponent = (card) => {
   switch (card.iconType) {
   case `species`:
     return <SpeciesCard iconSrc={card.iconSrc}
-      description={card.description}
+      description={card.iconDescription}
       content={card.content}
       key={card.iconSrc}/>
+  case `image`:
+    return <ImageCard {...card}/>
+  case `imagespecies`:
+    return <ExtendableSpeciesCard {...card}/>
   default:
     return null
+  }
+}
+
+const wrapCards = (cards, iconType) => {
+  switch (iconType) {
+    case `species`:
+      return <div className={`row small-up-2 medium-up-3`}>{cards}</div> 
+    case `image`:
+      return <div>{cards}</div>
+    default:
+      return <div>{cards}</div>
   }
 }
 
@@ -91,20 +110,19 @@ class CardContainer extends React.Component {
   render() {
     const { data, isLoading, hasError } = this.state
 
-    const cards = data && data.map((card) => {
-      return renderCardTypeComponent(card)
-    })
+    const cards = data && data.map((card) => renderCardTypeComponent(card))
 
     return (
       hasError ?
         <CalloutAlert error={hasError} /> :
         isLoading ?
           <p className={`row column`} id={`loading-message`}> Loading, please wait...</p> :
-          data.length > 0 ?
-            <div className={`row small-up-2 medium-up-3`}>
-              { cards }
-            </div> :
-            null
+          data.length > 0 ?  
+            <div>   
+            { wrapCards(cards, data[0].iconType) } 
+            </div>
+        : 
+        null
     )
   }
 }
