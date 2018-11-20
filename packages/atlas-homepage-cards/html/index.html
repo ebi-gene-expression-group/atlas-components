@@ -1,60 +1,203 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Demo</title>
+  <title>Atlas Homepage Cards demo</title>
 
-    <link rel="stylesheet" href="https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/css/ebi-global.css" type="text/css" media="all" />
-    <link rel="stylesheet" href="https://ebi.emblstatic.net/web_guidelines/EBI-Icon-fonts/v1.2/fonts.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/css/ebi-global.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="https://ebi.emblstatic.net/web_guidelines/EBI-Icon-fonts/v1.2/fonts.css" type="text/css" media="all" />
 
-    <link rel="stylesheet" href="http://localhost:8080/gxa/sc/resources/css/atlas.css" type="text/css" media="all">
+  <link rel="stylesheet" href="http://localhost:8080/gxa/sc/resources/css/theme-atlas.css" type="text/css" media="all">
 </head>
 
 <body>
-<div id="wrapper" class="row">
-    <div id="content" class="small-12 columns">
-        <p>Species Card Examples (applied in the SC homepage left panel)</p>
-        <div id="target">
-        </div>
+  <div class="row">
+    <h2 class="text-center">Extendable cards, used in HCA landing page</h1>
+    <div class="small-3 columns">
+      <div id="extendable-image-card-long"></div>
     </div>
-</div>
 
-<div id="wrapper" class="row">
-    <div id="content" class="small-12 columns">
-        <p>Image Card Example (applied in the SC featured experiments landing page, e.g. HCA)</p>
-        <div id="target2">
-        </div>
+    <div class="small-3 columns">
+      <div id="extendable-image-card-short"></div>
     </div>
-</div>
+    <div class="small-3 columns">
+      <div id="extendable-species-card-long"></div>
+    </div>
 
-<div id="wrapper" class="row">
-    <div id="content" class="small-12 columns">
-        <p>Image Species Card Example (applied in the SC featured experiments landing page, e.g. Homo sapiens)</p>
-        <div id="target3">
-        </div>
+    <div class="small-3 columns">
+      <div id="extendable-species-card-short"></div>
     </div>
-</div>
+  </div>
+
+  <div class="row column">
+    <h2 class="text-center">Species card container</h1>
+    <div id="species-card-container"></div>
+  </div>
+
+  <div class="row column">
+    <h2 class="text-center">Image card container</h1>
+    <div id="image-card-container"></div>
+  </div>
 </body>
 
 <script src="../dist/vendors.bundle.js"></script>
-<script src="../dist/homepageCards.bundle.js"></script>
 <script src="../dist/homepageCardsDemo.bundle.js"></script>
 
 <!-- Set to http://localhost:8080/gxa/ or http://localhost:8080/gxa/sc/ -- Remember the trailing slash! -->
 <script>
-  homepageCardsDemo.render({
+  homepageCardsDemo.renderExtendableCard({
+    iconType: 'image',
+    iconSrc: 'https://upload.wikimedia.org/wikipedia/en/6/6b/A_Rickle_in_Time.jpg',
+    description: {
+      text: 'A rickle in time',
+      url: 'http://rickandmorty.wikia.com/wiki/A_Rickle_in_Time'
+    },
+    content: [
+      {
+        text: 'Morty Smith',
+      },
+      {
+        text: 'Summer Smith',
+      },
+      {
+        text: 'Rick Sanchez',
+      },
+      {
+        text: 'Rick Sanchez (split reality)',
+      },
+      {
+        text: 'Morty Smith (split reality)',
+      },
+      {
+        text: 'Summer Smith (split reality)',
+      }
+    ]
+  }, 'extendable-image-card-long');
+
+  homepageCardsDemo.renderExtendableCard({
+    iconType: 'image',
+    iconSrc: 'https://upload.wikimedia.org/wikipedia/en/b/b0/Rick_and_Morty_characters.jpg',
+    description: {
+      text: 'The Smith household'
+    },
+    content: [
+      {
+        text: 'Jerry Smith',
+        url: 'https://en.wikipedia.org/wiki/List_of_Rick_and_Morty_characters#Jerry_Smith'
+      },
+      {
+        text: 'Beth Smith',
+        url: 'https://en.wikipedia.org/wiki/List_of_Rick_and_Morty_characters#Beth_Smith'
+      },
+      {
+        text: 'Summer Smith',
+        url: 'https://en.wikipedia.org/wiki/List_of_Rick_and_Morty_characters#Summer_Smith'
+      },
+      {
+        text: 'Morty Smith',
+        url: 'https://en.wikipedia.org/wiki/Morty_Smith'
+      },
+      {
+        text: 'Rick Sanchez',
+        url: 'https://en.wikipedia.org/wiki/Rick_Sanchez_(Rick_and_Morty)'
+      }
+    ]
+  }, 'extendable-image-card-short');
+
+  homepageCardsDemo.renderExtendableCard({
+    iconType: 'species',
+    iconSrc: 'bat',
+    description:{
+      text: 'Batman films'
+    },
+    content: [
+      {
+        url: 'https://en.wikipedia.org/wiki/Batman_(serial)',
+        text: 'Batman (1943)'
+      },
+      {
+        url: 'https://en.wikipedia.org/wiki/Batman_and_Robin_(serial)',
+        text: 'Batman and Robin (1949)'
+      },
+      {
+        url: 'https://en.wikipedia.org/wiki/Batman_(1966_film)',
+        text: 'Batman (1966)'
+      },
+      {
+        url: 'https://en.wikipedia.org/wiki/Batman_(1989_film)',
+        text: 'Batman (1989)'
+      },
+      {
+        url: 'https://en.wikipedia.org/wiki/Batman_Returns',
+        text: 'Batman Returns (1992)'
+      },
+      {
+        url: 'https://en.wikipedia.org/wiki/Batman_Forever',
+        text: 'Batman Forever (1995)'
+      },
+      {
+        url: 'https://en.wikipedia.org/wiki/Batman_%26_Robin_(film)',
+        text: 'Batman & Robin (1997)'
+      },
+      {
+        url: 'https://en.wikipedia.org/wiki/Batman_Begins',
+        text: 'Batman Begins (2005)'
+      },
+      {
+        url: 'https://en.wikipedia.org/wiki/The_Dark_Knight_(film)',
+        text: 'The Dark Knight (2008)'
+      },
+      {
+        url: 'https://en.wikipedia.org/wiki/The_Dark_Knight_Rises',
+        text: 'The Dark Knight Rises (2012)'
+      },
+      {
+        url: 'https://en.wikipedia.org/wiki/Batman_v_Superman:_Dawn_of_Justice',
+        text: 'Batman v Superman: Dawn of Justice (2016)'
+      },
+      {
+        url: 'https://en.wikipedia.org/wiki/Suicide_Squad_(film)',
+        text: 'Suicide Squad (2016)'
+      },
+      {
+        url: 'https://en.wikipedia.org/wiki/Justice_League_(film)',
+        text: 'Justice League (2017)'
+      },
+      {
+        url: 'https://en.wikipedia.org/wiki/Joker_(2019_film)',
+        text: 'Joker (2019)'
+      }
+    ]
+  }, 'extendable-species-card-long');
+
+  homepageCardsDemo.renderExtendableCard({
+    iconType: 'species',
+    iconSrc: 'zebrafish',
+    description: {
+      text: 'Finding Nemo',
+      url: 'https://en.wikipedia.org/wiki/Finding_Nemo'
+    },
+    content: [
+      {
+        text: 'Dory',
+      },
+      {
+        text: 'Nemo',
+      },
+      {
+        text: 'Gill',
+      }
+    ]
+  }, 'extendable-species-card-short');
+
+  homepageCardsDemo.renderSceaHomepageSpeciesContainer({
     host: 'http://localhost:8080/gxa/sc/',
     resource: 'json/experiments/popular-species'
-  }, 'target')
+  }, 'species-card-container');
 
-  homepageCardsDemo.render({
+  homepageCardsDemo.renderHcaLandingPageContainer({
     host: 'http://localhost:8080/gxa/sc/',
-    resource: 'json/landingpage/E-GEOD'
-  }, 'target2')
-
-  homepageCardsDemo.render({
-    host: 'http://localhost:8080/gxa/sc/',
-    resource: `json/landingpage/species/Homo%20sapiens`
-  }, 'target3')
+    resource: 'json/hca'
+  }, 'image-card-container');
 </script>
 
 </html>

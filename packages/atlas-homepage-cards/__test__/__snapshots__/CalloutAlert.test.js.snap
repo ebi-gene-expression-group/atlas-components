@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`CardContainer with no data matches snapshot 1`] = `
+exports[`CalloutAlert matches snapshot 1`] = `
 <div
   className="row column"
 >
@@ -11,7 +11,7 @@ exports[`CardContainer with no data matches snapshot 1`] = `
       Oops!
     </h5>
     <p>
-      There was a problem communicating with the server. Please try again later.
+      A human-readable description of the error, hopefully useful to the user
       <br />
       If the error persists, in order to help us debug the issue, please copy the URL and this message and send it to us via 
       <a
@@ -22,7 +22,7 @@ exports[`CardContainer with no data matches snapshot 1`] = `
       :
     </p>
     <code>
-      ReferenceError: fetch is not defined
+      Error name: Error message
     </code>
   </div>
 </div>

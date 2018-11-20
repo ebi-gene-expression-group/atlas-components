@@ -1,3 +1,11 @@
-import CardContainer from './CardContainer.js'
+import withFetchLoader from './containers/FetchLoader'
+import SceaHomepageSpeciesContainer from './containers/SceaHomepageSpeciesContainer'
+import HcaLandingPageContainer from './containers/HcaLandingPageContainer'
 
-export default CardContainer
+const _SceaHomepageSpeciesContainer = withFetchLoader(SceaHomepageSpeciesContainer)
+const _HcaLandingPageContainer = withFetchLoader(HcaLandingPageContainer)
+
+export {
+  _SceaHomepageSpeciesContainer as SceaHomepageSpeciesContainer,
+  _HcaLandingPageContainer as HcaLandingPageContainer
+}

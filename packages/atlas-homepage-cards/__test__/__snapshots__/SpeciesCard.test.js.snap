@@ -1,33 +1,302 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`SpeciesCard with no data matches snapshot 1`] = `
+exports[`SpeciesCard matches snapshot: Batman films 1`] = `
 <div
-  className="column column-block text-center combo card"
   style={
     Object {
       "marginBottom": 0,
-      "paddingBottom": "25px",
+      "paddingBottom": "2rem",
+      "textAlign": "center",
     }
   }
 >
   <span
-    className="species-icon"
     style={
       Object {
-        "fontSize": "600%",
+        "fontSize": "6rem",
       }
     }
   >
     <span
       className="icon icon-species"
-      data-icon="❔"
+      data-icon="("
       style={
         Object {
-          "color": "black",
+          "color": "indianred",
         }
       }
-      title=""
+      title="Bat"
     />
   </span>
+  <h5>
+    Batman films
+  </h5>
+  <ul
+    style={
+      Object {
+        "listStyle": "none",
+        "marginLeft": 0,
+      }
+    }
+  >
+    <li
+      style={
+        Object {
+          "marginBottom": "0.3rem",
+        }
+      }
+    >
+      <a
+        href="https://en.wikipedia.org/wiki/Batman_(serial)"
+      >
+        Batman (1943)
+      </a>
+    </li>
+    <li
+      style={
+        Object {
+          "marginBottom": "0.3rem",
+        }
+      }
+    >
+      <a
+        href="https://en.wikipedia.org/wiki/Batman_and_Robin_(serial)"
+      >
+        Batman and Robin (1949)
+      </a>
+    </li>
+    <li
+      style={
+        Object {
+          "marginBottom": "0.3rem",
+        }
+      }
+    >
+      <a
+        href="https://en.wikipedia.org/wiki/Batman_(1966_film)"
+      >
+        Batman (1966)
+      </a>
+    </li>
+    <li
+      style={
+        Object {
+          "marginBottom": "0.3rem",
+        }
+      }
+    >
+      <a
+        href="https://en.wikipedia.org/wiki/Batman_(1989_film)"
+      >
+        Batman (1989)
+      </a>
+    </li>
+    <li
+      style={
+        Object {
+          "marginBottom": "0.3rem",
+        }
+      }
+    >
+      <a
+        href="https://en.wikipedia.org/wiki/Batman_Returns"
+      >
+        Batman Returns (1992)
+      </a>
+    </li>
+    <li
+      style={
+        Object {
+          "marginBottom": "0.3rem",
+        }
+      }
+    >
+      <a
+        href="https://en.wikipedia.org/wiki/Batman_Forever"
+      >
+        Batman Forever (1995)
+      </a>
+    </li>
+    <li
+      style={
+        Object {
+          "marginBottom": "0.3rem",
+        }
+      }
+    >
+      <a
+        href="https://en.wikipedia.org/wiki/Batman_%26_Robin_(film)"
+      >
+        Batman &amp; Robin (1997)
+      </a>
+    </li>
+    <li
+      style={
+        Object {
+          "marginBottom": "0.3rem",
+        }
+      }
+    >
+      <a
+        href="https://en.wikipedia.org/wiki/Batman_Begins"
+      >
+        Batman Begins (2005)
+      </a>
+    </li>
+    <li
+      style={
+        Object {
+          "marginBottom": "0.3rem",
+        }
+      }
+    >
+      <a
+        href="https://en.wikipedia.org/wiki/The_Dark_Knight_(film)"
+      >
+        The Dark Knight (2008)
+      </a>
+    </li>
+    <li
+      style={
+        Object {
+          "marginBottom": "0.3rem",
+        }
+      }
+    >
+      <a
+        href="https://en.wikipedia.org/wiki/The_Dark_Knight_Rises"
+      >
+        The Dark Knight Rises (2012)
+      </a>
+    </li>
+    <li
+      style={
+        Object {
+          "marginBottom": "0.3rem",
+        }
+      }
+    >
+      <a
+        href="https://en.wikipedia.org/wiki/Batman_v_Superman:_Dawn_of_Justice"
+      >
+        Batman v Superman: Dawn of Justice (2016)
+      </a>
+    </li>
+    <li
+      style={
+        Object {
+          "marginBottom": "0.3rem",
+        }
+      }
+    >
+      <a
+        href="https://en.wikipedia.org/wiki/Suicide_Squad_(film)"
+      >
+        Suicide Squad (2016)
+      </a>
+    </li>
+    <li
+      style={
+        Object {
+          "marginBottom": "0.3rem",
+        }
+      }
+    >
+      <a
+        href="https://en.wikipedia.org/wiki/Justice_League_(film)"
+      >
+        Justice League (2017)
+      </a>
+    </li>
+    <li
+      style={
+        Object {
+          "marginBottom": "0.3rem",
+        }
+      }
+    >
+      <a
+        href="https://en.wikipedia.org/wiki/Joker_(2019_film)"
+      >
+        Joker (2019)
+      </a>
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`SpeciesCard matches snapshot: Finding Nemo 1`] = `
+<div
+  style={
+    Object {
+      "marginBottom": 0,
+      "paddingBottom": "2rem",
+      "textAlign": "center",
+    }
+  }
+>
+  <a
+    href="https://en.wikipedia.org/wiki/Finding_Nemo"
+    style={
+      Object {
+        "borderBottom": 0,
+        "fontSize": "6rem",
+      }
+    }
+  >
+    <span
+      className="icon icon-species"
+      data-icon="Z"
+      style={
+        Object {
+          "color": "deepskyblue",
+        }
+      }
+      title="Zebrafish"
+    />
+  </a>
+  <h5>
+    <a
+      href="https://en.wikipedia.org/wiki/Finding_Nemo"
+    >
+      Finding Nemo
+    </a>
+  </h5>
+  <ul
+    style={
+      Object {
+        "listStyle": "none",
+        "marginLeft": 0,
+      }
+    }
+  >
+    <li
+      style={
+        Object {
+          "marginBottom": "0.3rem",
+        }
+      }
+    >
+      Dory
+    </li>
+    <li
+      style={
+        Object {
+          "marginBottom": "0.3rem",
+        }
+      }
+    >
+      Nemo
+    </li>
+    <li
+      style={
+        Object {
+          "marginBottom": "0.3rem",
+        }
+      }
+    >
+      Gill
+    </li>
+  </ul>
 </div>
 `;

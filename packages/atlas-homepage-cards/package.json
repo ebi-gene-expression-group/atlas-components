@@ -1,6 +1,6 @@
 {
   "name": "atlas-homepage-cards",
-  "version": "0.3.0",
+  "version": "1.0.0-rc1",
   "description": "A package that renders grids of cards.",
   "main": "lib/index.js",
   "scripts": {
@@ -18,6 +18,9 @@
     },
     "setupFiles": [
       "<rootDir>/__mocks__/requestAnimationFrame.js"
+    ],
+    "coveragePathIgnorePatterns": [
+      "__test__/TestUtils.js"
     ]
   },
   "author": "Expression Atlas developers <arrayexpress-atlas@ebi.ac.uk>",
@@ -33,16 +36,17 @@
     "prop-types": "^15.6.2",
     "react": "^16.6.1",
     "react-ebi-species": "^2.0.0",
+    "styled-components": "^4.1.1",
     "urijs": "^1.19.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.1.2",
     "@babel/core": "^7.1.2",
+    "@babel/polyfill": "^7.0.0",
     "@babel/preset-env": "^7.1.0",
     "@babel/preset-react": "^7.0.0",
     "babel-core": "^7.0.0-bridge.0",
     "babel-loader": "^8.0.4",
-    "babel-polyfill": "^6.26.0",
     "clean-webpack-plugin": "^0.1.19",
     "coveralls": "^3.0.2",
     "enzyme": "^3.7.0",

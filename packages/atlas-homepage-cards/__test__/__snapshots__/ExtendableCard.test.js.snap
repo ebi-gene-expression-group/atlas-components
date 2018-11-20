@@ -1,0 +1,401 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ExtendableCard matches snapshot: A rickle in time 1`] = `
+<div
+  style={
+    Object {
+      "marginBottom": 0,
+      "paddingBottom": "2rem",
+      "textAlign": "center",
+    }
+  }
+>
+  <h4>
+    <a
+      href="http://rickandmorty.wikia.com/wiki/A_Rickle_in_Time"
+    >
+      A rickle in time
+    </a>
+  </h4>
+  <a
+    href="http://rickandmorty.wikia.com/wiki/A_Rickle_in_Time"
+    style={
+      Object {
+        "borderBottom": 0,
+      }
+    }
+  >
+    <img
+      src="https://upload.wikimedia.org/wikipedia/en/6/6b/A_Rickle_in_Time.jpg"
+      style={
+        Object {
+          "height": "8rem",
+          "marginBottom": "2.35rem",
+          "marginTop": "2.50rem",
+        }
+      }
+    />
+  </a>
+  <ul
+    className="content"
+    style={
+      Object {
+        "listStyle": "none",
+        "marginLeft": 0,
+      }
+    }
+  >
+    <li
+      style={
+        Object {
+          "marginBottom": "0.3rem",
+        }
+      }
+    >
+      Morty Smith
+    </li>
+    <li
+      style={
+        Object {
+          "marginBottom": "0.3rem",
+        }
+      }
+    >
+      Summer Smith
+    </li>
+    <li
+      style={
+        Object {
+          "marginBottom": "0.3rem",
+        }
+      }
+    >
+      Rick Sanchez
+    </li>
+    <li
+      style={
+        Object {
+          "marginBottom": "0.3rem",
+        }
+      }
+    >
+      Rick Sanchez(split reality)
+    </li>
+    <li
+      style={
+        Object {
+          "marginBottom": "0.3rem",
+        }
+      }
+    >
+      Morty Smith (split reality)
+    </li>
+  </ul>
+  <button
+    className="button"
+    onClick={[Function]}
+  >
+    Show all
+  </button>
+</div>
+`;
+
+exports[`ExtendableCard matches snapshot: Batman films 1`] = `
+<div
+  style={
+    Object {
+      "marginBottom": 0,
+      "paddingBottom": "2rem",
+      "textAlign": "center",
+    }
+  }
+>
+  <h4>
+    Batman films
+  </h4>
+  <span
+    style={
+      Object {
+        "fontSize": "8rem",
+      }
+    }
+  >
+    <span
+      className="icon icon-species"
+      data-icon="("
+      style={
+        Object {
+          "color": "indianred",
+        }
+      }
+      title="Bat"
+    />
+  </span>
+  <ul
+    className="content"
+    style={
+      Object {
+        "listStyle": "none",
+        "marginLeft": 0,
+      }
+    }
+  >
+    <li
+      style={
+        Object {
+          "marginBottom": "0.3rem",
+        }
+      }
+    >
+      <a
+        href="https://en.wikipedia.org/wiki/Batman_(serial)"
+      >
+        Batman (1943)
+      </a>
+    </li>
+    <li
+      style={
+        Object {
+          "marginBottom": "0.3rem",
+        }
+      }
+    >
+      <a
+        href="https://en.wikipedia.org/wiki/Batman_and_Robin_(serial)"
+      >
+        Batman and Robin (1949)
+      </a>
+    </li>
+    <li
+      style={
+        Object {
+          "marginBottom": "0.3rem",
+        }
+      }
+    >
+      <a
+        href="https://en.wikipedia.org/wiki/Batman_(1966_film)"
+      >
+        Batman (1966)
+      </a>
+    </li>
+    <li
+      style={
+        Object {
+          "marginBottom": "0.3rem",
+        }
+      }
+    >
+      <a
+        href="https://en.wikipedia.org/wiki/Batman_(1989_film)"
+      >
+        Batman (1989)
+      </a>
+    </li>
+    <li
+      style={
+        Object {
+          "marginBottom": "0.3rem",
+        }
+      }
+    >
+      <a
+        href="https://en.wikipedia.org/wiki/Batman_Returns"
+      >
+        Batman Returns (1992)
+      </a>
+    </li>
+  </ul>
+  <button
+    className="button"
+    onClick={[Function]}
+  >
+    Show all
+  </button>
+</div>
+`;
+
+exports[`ExtendableCard matches snapshot: Finding Nemo 1`] = `
+<div
+  style={
+    Object {
+      "marginBottom": 0,
+      "paddingBottom": "2rem",
+      "textAlign": "center",
+    }
+  }
+>
+  <h4>
+    <a
+      href="https://en.wikipedia.org/wiki/Finding_Nemo"
+    >
+      Finding Nemo
+    </a>
+  </h4>
+  <a
+    href="https://en.wikipedia.org/wiki/Finding_Nemo"
+    style={
+      Object {
+        "borderBottom": 0,
+      }
+    }
+  >
+    <span
+      style={
+        Object {
+          "fontSize": "8rem",
+        }
+      }
+    >
+      <span
+        className="icon icon-species"
+        data-icon="Z"
+        style={
+          Object {
+            "color": "deepskyblue",
+          }
+        }
+        title="Zebrafish"
+      />
+    </span>
+  </a>
+  <ul
+    className="content"
+    style={
+      Object {
+        "listStyle": "none",
+        "marginLeft": 0,
+      }
+    }
+  >
+    <li
+      style={
+        Object {
+          "marginBottom": "0.3rem",
+        }
+      }
+    >
+      Dory
+    </li>
+    <li
+      style={
+        Object {
+          "marginBottom": "0.3rem",
+        }
+      }
+    >
+      Nemo
+    </li>
+    <li
+      style={
+        Object {
+          "marginBottom": "0.3rem",
+        }
+      }
+    >
+      Gill
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`ExtendableCard matches snapshot: The Smith household 1`] = `
+<div
+  style={
+    Object {
+      "marginBottom": 0,
+      "paddingBottom": "2rem",
+      "textAlign": "center",
+    }
+  }
+>
+  <h4>
+    The Smith household
+  </h4>
+  <img
+    src="https://upload.wikimedia.org/wikipedia/en/b/b0/Rick_and_Morty_characters.jpg"
+    style={
+      Object {
+        "height": "8rem",
+        "marginBottom": "2.35rem",
+        "marginTop": "2.50rem",
+      }
+    }
+  />
+  <ul
+    className="content"
+    style={
+      Object {
+        "listStyle": "none",
+        "marginLeft": 0,
+      }
+    }
+  >
+    <li
+      style={
+        Object {
+          "marginBottom": "0.3rem",
+        }
+      }
+    >
+      <a
+        href="https://en.wikipedia.org/wiki/List_of_Rick_and_Morty_characters#Jerry_Smith"
+      >
+        Jerry Smith
+      </a>
+    </li>
+    <li
+      style={
+        Object {
+          "marginBottom": "0.3rem",
+        }
+      }
+    >
+      <a
+        href="https://en.wikipedia.org/wiki/List_of_Rick_and_Morty_characters#Beth_Smith"
+      >
+        Beth Smith
+      </a>
+    </li>
+    <li
+      style={
+        Object {
+          "marginBottom": "0.3rem",
+        }
+      }
+    >
+      <a
+        href="https://en.wikipedia.org/wiki/List_of_Rick_and_Morty_characters#Summer_Smith"
+      >
+        Summer Smith
+      </a>
+    </li>
+    <li
+      style={
+        Object {
+          "marginBottom": "0.3rem",
+        }
+      }
+    >
+      <a
+        href="https://en.wikipedia.org/wiki/Morty_Smith"
+      >
+        Morty Smith
+      </a>
+    </li>
+    <li
+      style={
+        Object {
+          "marginBottom": "0.3rem",
+        }
+      }
+    >
+      <a
+        href="https://en.wikipedia.org/wiki/Rick_Sanchez_(Rick_and_Morty)"
+      >
+        Rick Sanchez
+      </a>
+    </li>
+  </ul>
+</div>
+`;
