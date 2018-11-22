@@ -2,13 +2,14 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import {ResultPropTypes} from './ResultPropTypes'
 
-const FilterList = ({filteredResults, resultsMessage, ResultElementClass}) => {
+const FilterList = ({filteredResults, resultsMessage, ResultsHeaderClass, ResultElementClass}) => {
   const filteredElements = filteredResults.map((result) => result.element)
 
   return (
     <div>
       <h4>{resultsMessage}</h4>
-      {filteredElements.map((element, index) => <div key={index}><ResultElementClass {...element}/></div>)}
+      { filteredElements.length && ResultsHeaderClass && <ResultsHeaderClass /> }
+      { filteredElements.map((element, index) => <div key={index}><ResultElementClass {...element}/></div>) }
     </div>
   )
 }
@@ -16,6 +17,7 @@ const FilterList = ({filteredResults, resultsMessage, ResultElementClass}) => {
 FilterList.propTypes = {
   filteredResults: PropTypes.arrayOf(ResultPropTypes).isRequired,
   resultsMessage: PropTypes.string,
+  ResultsHeaderClass: PropTypes.func,
   ResultElementClass: PropTypes.func.isRequired
 }
 

@@ -3,6 +3,7 @@
 
   import FacetedSearchContainer from '../src/FacetedSearchContainer'
   import EpisodeCard from './EpisodeCard'
+  import EpisodesHeader from './EpisodesHeader'
 
   const render = (target) => {
     const episodes =  [
@@ -153,6 +154,7 @@
 
     ReactDOM.render(
       <FacetedSearchContainer results={episodes}
+                              ResultsHeaderClass={EpisodesHeader}
                               ResultElementClass={EpisodeCard}
                               checkboxFacetGroups={[`Season`]}
                               resultsMessage={`Search results`}/>,

@@ -10,6 +10,11 @@ EpisodeCard.propTypes = {
   title: PropTypes.string.isRequired
 }
 
+const EpisodesHeader = () =>
+  <div>
+    <span>Episode title</span>
+  </div>
+
 // Stolen from https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
 const getRandomInt = (min, max) => {
   min = Math.ceil(min)
@@ -172,4 +177,4 @@ const episodes = [
   }
 ]
 
-export {getRandomInt, vindicators, episodes, EpisodeCard}
+export {getRandomInt, vindicators, episodes, EpisodesHeader, EpisodeCard}

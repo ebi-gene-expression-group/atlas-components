@@ -1,10 +1,10 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
 import Enzyme from 'enzyme'
-import {mount} from 'enzyme'
+import { mount } from 'enzyme'
 import Adapter from 'enzyme-adapter-react-16'
 
-import {getRandomInt, vindicators} from './TestUtils'
+import { getRandomInt, vindicators } from './TestUtils'
 
 import CheckboxFacetGroup from '../src/facetgroups/CheckboxFacetGroup'
 import MultiselectDropdownFacetGroup from '../src/facetgroups/MultiselectDropdownFacetGroup'

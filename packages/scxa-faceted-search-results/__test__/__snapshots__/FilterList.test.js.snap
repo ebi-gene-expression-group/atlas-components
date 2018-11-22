@@ -6,6 +6,11 @@ exports[`FilterList matches snapshot 1`] = `
     
   </h4>
   <div>
+    <span>
+      Episode title
+    </span>
+  </div>
+  <div>
     <div>
       <p>
         Raising Gazorpazorp
