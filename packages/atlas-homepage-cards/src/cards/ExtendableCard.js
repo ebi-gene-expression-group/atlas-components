@@ -5,8 +5,16 @@ import EbiSpeciesIcon from 'react-ebi-species'
 
 import renderContentListItems from './renderContentListItems'
 import cardPropTypes from './cardPropTypes'
+import styled from 'styled-components'
 
 const MAX = 5
+
+const CardContentList = styled.ul`
+  list-style: none;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+`
 
 class ExtendableSpeciesCard extends React.Component {
   constructor(props) {
@@ -52,13 +60,13 @@ class ExtendableSpeciesCard extends React.Component {
             )
         }
 
-        <ul className={`content`} style={{listStyle: `none`, marginLeft: 0}}>
+        <CardContentList className={`content`}>
         {
           this.state.isHidden ?
             visibleContent.slice(0, MAX) :
             visibleContent
         }
-        </ul>
+        </CardContentList>
         {
           Array.isArray(content) && content.length > MAX &&
           <button className={`button`} onClick={this.onClick}>{this.state.isHidden ? `Show all` : `Show fewer`}</button>

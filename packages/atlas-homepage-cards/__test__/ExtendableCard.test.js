@@ -63,8 +63,8 @@ describe(`ExtendableCard`, () => {
   test(`does not render non-existent URLs in content`, () => {
     const props = [aRickleInTimeImageCardProps, findingNemoSpeciesCardProps][getRandomInt(0, 2)]
 
-    const wrapper = shallow(<ExtendableCard {...props} />).find(`ul`)
-
+    const wrapper = shallow(<ExtendableCard {...props} />).find(`.content`)
+    
     expect(wrapper.exists()).toBe(true)
     expect(wrapper.find(`li`)).toHaveLength(Math.min(props.content.length, 5))
     expect(wrapper.find(`li a`).exists()).toBe(false)

@@ -37,13 +37,7 @@ exports[`ExtendableCard matches snapshot: A rickle in time 1`] = `
     />
   </a>
   <ul
-    className="content"
-    style={
-      Object {
-        "listStyle": "none",
-        "marginLeft": 0,
-      }
-    }
+    className="content sc-htpNat dUITwr"
   >
     <li
       style={
@@ -132,13 +126,7 @@ exports[`ExtendableCard matches snapshot: Batman films 1`] = `
     />
   </span>
   <ul
-    className="content"
-    style={
-      Object {
-        "listStyle": "none",
-        "marginLeft": 0,
-      }
-    }
+    className="content sc-htpNat dUITwr"
   >
     <li
       style={
@@ -260,13 +248,7 @@ exports[`ExtendableCard matches snapshot: Finding Nemo 1`] = `
     </span>
   </a>
   <ul
-    className="content"
-    style={
-      Object {
-        "listStyle": "none",
-        "marginLeft": 0,
-      }
-    }
+    className="content sc-htpNat dUITwr"
   >
     <li
       style={
@@ -323,13 +305,7 @@ exports[`ExtendableCard matches snapshot: The Smith household 1`] = `
     }
   />
   <ul
-    className="content"
-    style={
-      Object {
-        "listStyle": "none",
-        "marginLeft": 0,
-      }
-    }
+    className="content sc-htpNat dUITwr"
   >
     <li
       style={

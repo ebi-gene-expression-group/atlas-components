@@ -24,16 +24,9 @@ const partitionArray = (arr, lengthOfPartition) => {
   return result
 }
 
-const CardContainer = styled.div`
-  border-radius: 8px;
-  :hover {
-    background: AliceBlue;
-  }
-`
-
 const HcaLandingPageCardContainer = ({cards}) => {
   const columnsPerRow = 12  // A Foundation thing
-  const columnsPerCard = 4  // Our thing, 4 cards per row
+  const columnsPerCard = 6  // Our thing, 6 columns per card (i.e. 2 cards per row)
 
   const cardsSplitByRow = partitionArray(cards, columnsPerRow / columnsPerCard)
 
@@ -45,9 +38,9 @@ const HcaLandingPageCardContainer = ({cards}) => {
             <div className={`row`}>
             {
               rowCards.map((card, index) =>
-                <CardContainer className={`small-${columnsPerRow / rowCards.length} columns`} key={`${rowIndex}-${index}`}>
+                <div className={`small-${columnsPerRow / rowCards.length} columns`} key={`${rowIndex}-${index}`}>
                   <ExtendableCard {...card} />
-                </CardContainer>
+                </div>
               )
             }
             </div>
