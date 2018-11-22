@@ -1,4 +1,5 @@
 import React from 'react'
+import ReactTooltip from 'react-tooltip'
 import PropTypes from 'prop-types'
 import _ from 'lodash'
 
@@ -129,6 +130,7 @@ class FacetedSearchContainer extends React.Component {
           <FilterList {...{resultsMessage, ResultElementClass}}
                       filteredResults={this._filterResults(selectedFacets)}/>
         </div>
+        <ReactTooltip effect={`solid`}/>
       </div>
     )
   }

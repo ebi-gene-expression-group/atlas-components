@@ -49,7 +49,7 @@ describe(`FilterSidebar`, () => {
     const groups = [...new Set(uniqueFacets.map((facet) => facet.group))]
     const randomCheckboxFacetGroup = groups[getRandomInt(0, groups.length)]
     const wrapper = mount(<FilterSidebar {...props} checkboxFacetGroups={[randomCheckboxFacetGroup]} />)
-    expect(wrapper.find(`sup`).first().html()).toEqual(expect.stringMatching(`data-tooltip`))
+    expect(wrapper.find(`sup`).first().html()).toEqual(expect.stringMatching(`data-tip`))
   })
 
   test(`checks tooltip does not exist when no tooltip text in payload`, () => {

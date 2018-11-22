@@ -61,22 +61,21 @@ exports[`FacetedSearchContainer matches snapshot 1`] = `
     >
       <h4>
         Guest character
-        <span>
-          <sup
-            aria-haspopup="true"
-            className="has-tip tip-right"
-            data-tooltip={true}
+        <sup>
+           
+          <span
+            className="icon icon-generic"
+            data-html={true}
+            data-icon="i"
+            data-tip="<span>Guest characters that tag along for the<br>adventures in this episodes</span>"
             style={
               Object {
-                "background": "white",
-                "border": "none",
+                "color": "lightgrey",
+                "fontSize": "smaller",
               }
             }
-            title="Guest characters that tag along for the adventures in this episodes"
-          >
-            ?
-          </sup>
-        </span>
+          />
+        </sup>
       </h4>
       <div
         className="css-10nd86i"
@@ -168,22 +167,21 @@ exports[`FacetedSearchContainer matches snapshot 1`] = `
     >
       <h4>
         Planet
-        <span>
-          <sup
-            aria-haspopup="true"
-            className="has-tip tip-right"
-            data-tooltip={true}
+        <sup>
+           
+          <span
+            className="icon icon-generic"
+            data-html={true}
+            data-icon="i"
+            data-tip="<span>Planets where events in this episode take<br>place</span>"
             style={
               Object {
-                "background": "white",
-                "border": "none",
+                "color": "lightgrey",
+                "fontSize": "smaller",
               }
             }
-            title="Planets where events in this episode take place"
-          >
-            ?
-          </sup>
-        </span>
+          />
+        </sup>
       </h4>
       <div
         className="css-10nd86i"
@@ -315,5 +313,9 @@ exports[`FacetedSearchContainer matches snapshot 1`] = `
       </div>
     </div>
   </div>
+  <div
+    className="__react_component_tooltip place-top type-dark "
+    data-id="tooltip"
+  />
 </div>
 `;

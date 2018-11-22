@@ -21,13 +21,13 @@
             group: `Guest character`,
             value: `gwendolyn`,
             label: `Gwendolyn`,
-            description: `Guest character Tooltip`
+            description: `The “Guest character” tooltip is very long so we can make sure that the tooltip text is conveniently broken into several lines to improve readability and it doesn’t overflow or cover elements in the view that we might want to read at the same time that the tooltip is being shown`
           },
           {
             group: `Guest character`,
             value: `ma-sha`,
             label: `Ma-Sha`,
-            description: `Guest character Tooltip`
+            description: `The “Guest character” tooltip is very long so we can make sure that the tooltip text is conveniently broken into several lines to improve readability and it doesn’t overflow or cover elements in the view that we might want to read at the same time that the tooltip is being shown`
           },
           {
             group: `Season`,
@@ -52,13 +52,13 @@
             group: `Guest character`,
             value: `birdperson`,
             label: `Birdperson`,
-            description: `Guest character Tooltip`
+            description: `The “Guest character” tooltip is very long so we can make sure that the tooltip text is conveniently broken into several lines to improve readability and it doesn’t overflow or cover elements in the view that we might want to read at the same time that the tooltip is being shown`
           },
           {
             group: `Guest character`,
             value: `squanchy`,
             label: `Squanchy`,
-            description: `Guest character Tooltip`
+            description: `The “Guest character” tooltip is very long so we can make sure that the tooltip text is conveniently broken into several lines to improve readability and it doesn’t overflow or cover elements in the view that we might want to read at the same time that the tooltip is being shown`
           },
           {
             group: `Season`,
@@ -77,7 +77,7 @@
             group: `Guest character`,
             value: `birdperson`,
             label: `Birdperson`,
-            description: `Guest character Tooltip`
+            description: `The “Guest character” tooltip is very long so we can make sure that the tooltip text is conveniently broken into several lines to improve readability and it doesn’t overflow or cover elements in the view that we might want to read at the same time that the tooltip is being shown`
           },
           {
             group: `Planet`,
@@ -102,13 +102,13 @@
             group: `Guest character`,
             value: `squanchy`,
             label: `Squanchy`,
-            description: `Guest character Tooltip`
+            description: `The “Guest character” tooltip is very long so we can make sure that the tooltip text is conveniently broken into several lines to improve readability and it doesn’t overflow or cover elements in the view that we might want to read at the same time that the tooltip is being shown`
           },
           {
             group: `Guest character`,
             value: `abradolf_lincler`,
             label: `Abradolf Lincler`,
-            description: `Guest character Tooltip`
+            description: `The “Guest character” tooltip is very long so we can make sure that the tooltip text is conveniently broken into several lines to improve readability and it doesn’t overflow or cover elements in the view that we might want to read at the same time that the tooltip is being shown`
           },
           {
             group: `Season`,
@@ -127,13 +127,13 @@
             group: `Guest character`,
             value: `ricktiminus_sancheziminius`,
             label: `Ricktiminus Sancheziminius`,
-            description: `Guest character Tooltip`
+            description: `The “Guest character” tooltip is very long so we can make sure that the tooltip text is conveniently broken into several lines to improve readability and it doesn’t overflow or cover elements in the view that we might want to read at the same time that the tooltip is being shown`
           },
           {
             group: `Guest character`,
             value: `abradolf_lincler`,
             label: `Abradolf Lincler`,
-            description: `Guest character Tooltip`
+            description: `The “Guest character” tooltip is very long so we can make sure that the tooltip text is conveniently broken into several lines to improve readability and it doesn’t overflow or cover elements in the view that we might want to read at the same time that the tooltip is being shown`
           },
           {
             group: `Planet`,

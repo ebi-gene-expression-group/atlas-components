@@ -44,7 +44,7 @@ describe(`MultiselectDropdownFacetGroup`, () => {
     const randomMultiselectFacetGroupDescription = descriptions[getRandomInt(0, descriptions.length)]
 
     const wrapper = mount(<MultiselectDropdownFacetGroup {...propsWithTooltip} />)
-    expect(wrapper.find(`sup`).first().html()).toEqual(expect.stringMatching(`data-tooltip`))
+    expect(wrapper.find(`sup`).first().html()).toEqual(expect.stringMatching(`data-tip`))
   })
 
   test(`doesn’t display tooltip if not present`, () => {

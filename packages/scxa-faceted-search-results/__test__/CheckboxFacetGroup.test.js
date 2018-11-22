@@ -44,7 +44,7 @@ describe(`CheckboxFacetGroup`, () => {
     const randomCheckboxFacetGroupDescription = descriptions[getRandomInt(0, descriptions.length)]
 
     const wrapper = mount(<CheckboxFacetGroup {...propsWithTooltip} />)
-    expect(wrapper.find(`sup`).first().html()).toEqual(expect.stringMatching(`data-tooltip`))
+    expect(wrapper.find(`sup`).first().html()).toEqual(expect.stringMatching(`data-tip`))
   })
 
   test(`doesn’t display tooltip if not present`, () => {

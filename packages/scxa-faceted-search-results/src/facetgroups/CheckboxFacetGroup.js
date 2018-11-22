@@ -2,6 +2,7 @@ import React from 'react'
 import { xorBy as _xorBy } from 'lodash'
 
 import FacetGroupPropTypes from './FacetGroupPropTypes'
+import TooltipIcon from './TooltipIcon'
 
 const CheckboxOption = ({group, value, label, disabled, checked, onChange}) =>
 <div>
@@ -10,10 +11,6 @@ const CheckboxOption = ({group, value, label, disabled, checked, onChange}) =>
   <label style={disabled ? {color: `lightgrey`} : {}}>{label}</label>
 </div>
 
-const tooltipStyle = {
-  background: `white`,
-  border: `none`
-}
 // In principle we don’t need this component to be stateful, but in doing so we can create a custom _handleChange
 // function that will ultimately call onChange(facetGroupName, facets); this allows us to have the same API as
 // React-Select and reuse the same callback for both checkbox-style and multiselect facet groups
@@ -39,11 +36,9 @@ class CheckboxFacetGroup extends React.Component {
 
     return (
       <div className={`padding-bottom-xlarge`}>
-        <h4>{facetGroupName}
-          {facetGroupNameDescription &&
-          <span>
-            <sup data-tooltip aria-haspopup="true" className={`has-tip tip-right`} style={tooltipStyle} title={facetGroupNameDescription}>?</sup>
-          </span>}
+        <h4>
+          { facetGroupName }
+          { facetGroupNameDescription && <TooltipIcon tooltipText={facetGroupNameDescription}/> }
         </h4>
       {facets.map((facet) =>
         <CheckboxOption {...facet}

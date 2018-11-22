@@ -3,6 +3,7 @@ import Select from 'react-select'
 import styled from 'styled-components'
 
 import FacetGroupPropTypes from './FacetGroupPropTypes'
+import TooltipIcon from './TooltipIcon'
 
 // We replace the dropdown indicator for another component because the default chevron is a SVG element, not a
 // background-image, whereas the control can be styled using the styles API packaged in React-Select
@@ -50,19 +51,12 @@ const ebiVfSelectStyles = {
   })
 }
 
-const tooltipStyle = {
-    background: `white`,
-    border: `none`
-}
-
 const MultiselectDropdownFacetGroup = ({facetGroupName, facetGroupNameDescription, facets, onChange}) =>
   <div className={`padding-bottom-xlarge`}>
-    <h4>{facetGroupName}
-    {facetGroupNameDescription &&
-      <span>
-        <sup data-tooltip aria-haspopup="true" className={`has-tip tip-right`} style={tooltipStyle} title={facetGroupNameDescription}>?</sup>
-      </span>
-    }</h4>
+    <h4>
+      { facetGroupName }
+      { facetGroupNameDescription && <TooltipIcon tooltipText={facetGroupNameDescription} /> }
+    </h4>
     <Select inputId={`facetGroupMultiSelectDropdown`}
             components={{ DropdownIndicator, IndicatorSeparator: null }}
             styles={ebiVfSelectStyles}
