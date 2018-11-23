@@ -96,7 +96,7 @@ class TSnePlotView extends React.Component {
     const {height, atlasUrl, resourcesUrl, suggesterEndpoint} = this.props
     const {wrapperClassName, clusterPlotClassName, expressionPlotClassName} = this.props
     const {geneId, speciesName, highlightClusters} = this.props
-    const {ks, perplexities, selectedPerplexity, metadata, selectedColourBy} = this.props
+    const {ks, perplexities, selectedPerplexity, metadata, selectedColourBy, selectedColourByCategory} = this.props
     const {onChangePerplexity, onSelectGeneId, onChangeColourBy} = this.props
     const {loadingGeneExpression, geneExpressionData, geneExpressionErrorMessage} = this.state
     const {loadingCellClusters, cellClustersData, cellClustersErrorMessage} = this.state
@@ -134,6 +134,7 @@ class TSnePlotView extends React.Component {
             resourcesUrl={resourcesUrl}
             errorMessage={cellClustersErrorMessage}
             tooltipContent={getTooltipContent}
+            clusterType={selectedColourByCategory}
           />
         </div>
 
