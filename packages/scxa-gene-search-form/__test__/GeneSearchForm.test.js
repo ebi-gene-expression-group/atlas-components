@@ -4,11 +4,13 @@ import Enzyme from 'enzyme'
 import { shallow } from 'enzyme'
 import Adapter from 'enzyme-adapter-react-16'
 
-import GeneSearchForm from '../src/GeneSearchForm.js'
+import GeneSearchForm from '../src/GeneSearchForm'
 import Autocomplete from '../src/Autocomplete'
 import LabelledSelect from '../src/LabelledSelect'
+import SearchExamples from '../src/SearchExamples'
 
 import * as species from './utils/species'
+import searchExamples from './utils/searchExamples'
 
 Enzyme.configure({ adapter: new Adapter() })
 
@@ -16,7 +18,8 @@ const props = {
   atlasUrl: `foo/`,
   actionEndpoint: `bar`,
   suggesterEndpoint: `suggest`,
-  enableSpeciesSelect: true
+  enableSpeciesSelect: true,
+  searchExamples: searchExamples
 }
 
 const defaultValue = {
@@ -131,6 +134,11 @@ describe(`GeneSearchForm`, () => {
     expect(onSubmitMock.mock.calls[0][0]).toEqual(event)
     expect(onSubmitMock.mock.calls[0][1]).toEqual(optionValueToSelect)
     expect(onSubmitMock.mock.calls[0][2]).toEqual(speciesToSelect)
+  })
+
+  test(`can optionally display search examples`, () => {
+    expect(shallow(<GeneSearchForm {...props} />).find(SearchExamples)).toHaveLength(1)
+    expect(shallow(<GeneSearchForm {...props} searchExamples={undefined} />).find(SearchExamples)).toHaveLength(0)
   })
 
   test(`matches snapshot`, () => {

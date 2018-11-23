@@ -6,7 +6,7 @@ import Adapter from 'enzyme-adapter-react-16'
 import fetchMock from 'fetch-mock'
 import URI from 'urijs'
 
-import Autocomplete from '../src/Autocomplete.js'
+import Autocomplete from '../src/Autocomplete'
 import AsyncCreatableSelect from 'react-select/lib/AsyncCreatable'
 
 Enzyme.configure({ adapter: new Adapter() })

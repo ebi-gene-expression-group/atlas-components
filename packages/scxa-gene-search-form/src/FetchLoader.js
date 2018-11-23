@@ -84,7 +84,12 @@ FetchLoader.propTypes = {
   enableSpeciesSelect: PropTypes.bool,
   speciesEndpoint: PropTypes.string,
   speciesSelectClassName: PropTypes.string,
-  defaultSpecies: PropTypes.string
+  defaultSpecies: PropTypes.string,
+
+  searchExamples: PropTypes.arrayOf(PropTypes.shape({
+    text: PropTypes.string.isRequired,
+    url: PropTypes.string.isRequired
+  }))
 }
 
 FetchLoader.defaultProps = {

@@ -4,6 +4,7 @@ import URI from 'urijs'
 
 import Autocomplete from './Autocomplete'
 import LabelledSelect from './LabelledSelect'
+import SearchExamples from './SearchExamples'
 
 class GeneSearchForm extends React.Component {
   constructor(props) {
@@ -40,7 +41,7 @@ class GeneSearchForm extends React.Component {
   }
 
   render() {
-    const {wrapperClassName, actionEndpoint, onSubmit} = this.props
+    const {wrapperClassName, actionEndpoint, onSubmit, searchExamples} = this.props
 
     const {autocompleteClassName, atlasUrl, suggesterEndpoint, defaultValue} = this.props
 
@@ -70,6 +71,12 @@ class GeneSearchForm extends React.Component {
                 value={this.state.selectedSpecies}
                 onChange={this.speciesSelectOnChange}/>
             </div>
+          }
+          {
+            searchExamples &&
+              <div className={`small-12 columns`}>
+                <SearchExamples links={searchExamples}/>
+              </div>
           }
         </div>
         <div className={wrapperClassName}>
@@ -110,7 +117,12 @@ GeneSearchForm.propTypes = {
   allSpecies: PropTypes.arrayOf(PropTypes.string),
   topSpecies: PropTypes.arrayOf(PropTypes.string),
   defaultSpecies: PropTypes.string,
-  speciesSelectStatusMessage: PropTypes.string
+  speciesSelectStatusMessage: PropTypes.string,
+
+  searchExamples: PropTypes.arrayOf(PropTypes.shape({
+    text: PropTypes.string.isRequired,
+    url: PropTypes.string.isRequired
+  }))
 }
 
 GeneSearchForm.defaultProps = {

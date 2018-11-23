@@ -157,6 +157,59 @@ exports[`GeneSearchForm matches snapshot 1`] = `
         </div>
       </div>
     </div>
+    <div
+      className="small-12 columns"
+    >
+      <p
+        style={
+          Object {
+            "fontSize": "smaller",
+          }
+        }
+      >
+        Examples:
+        <span>
+           
+          <a
+            href="http://rickandmorty.wikia.com/wiki/Special:Search?query=Rick+Sanchez"
+          >
+            Rick Sanchez
+          </a>
+          , 
+        </span>
+        <span>
+          <a
+            href="http://rickandmorty.wikia.com/wiki/Special:Search?query=Unity"
+          >
+            Unity
+          </a>
+          , 
+        </span>
+        <span>
+          <a
+            href="http://rickandmorty.wikia.com/wiki/Special:Search?query=Galactic+Federation"
+          >
+            Galactic Federation
+          </a>
+          , 
+        </span>
+        <span>
+          <a
+            href="http://rickandmorty.wikia.com/wiki/Special:Search?query=Blemflarck"
+          >
+            Blemflarck
+          </a>
+          , 
+        </span>
+        <span>
+          <a
+            href="http://rickandmorty.wikia.com/wiki/Special:Search?query=anatomy"
+          >
+            anatomy
+          </a>
+        </span>
+      </p>
+    </div>
   </div>
   <div
     className=""
