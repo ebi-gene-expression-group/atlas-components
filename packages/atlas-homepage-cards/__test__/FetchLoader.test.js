@@ -20,36 +20,70 @@ describe(`FetchLoader`, () => {
     fetchMock.restore()
   })
 
+  const props = {
+    host: `foo`,
+    resource: `bar`
+  }
+
   test(`until the fetch promise is not resolved a loading message is displayed, then goes away`, async () => {
     fetchMock.get(`*`, `[]`)
-    const wrapper = shallow(<ComponentWithFetchLoader host={`foo`} resource={`bar`}/>)
+    const wrapper = shallow(<ComponentWithFetchLoader {...props} />)
 
-    expect(wrapper.find(`#loading-message`).exists()).toBe(true)
-    expect(wrapper.find(CalloutAlert).exists()).toBe(false)
+    expect(wrapper.find(`.loading-message`)).toHaveLength(1)
+    expect(wrapper.find(CalloutAlert)).toHaveLength(0)
+
     await wrapper.instance().componentDidMount()
     wrapper.update()
-    expect(wrapper.find(`#loading-message`).exists()).toBe(false)
-    expect(wrapper.find(CalloutAlert).exists()).toBe(false)
+
+    expect(wrapper.find(`.loading-message`)).toHaveLength(0)
+    expect(wrapper.find(CalloutAlert)).toHaveLength(0)
+  })
+
+  test(`renders an error message if the child receives invalid JSON (and the error boundary kicks in)`, async () => {
+    fetchMock.get(`*`, `[]`)
+    const wrapper = shallow(<ComponentWithFetchLoader {...props} />)
+
+    const e = new Error(`They’re inside you building a monument to compromise!`)
+    wrapper.instance().componentDidCatch(e, `Ruben’s seen some rough years, Morty.`)
+    wrapper.update()
+    expect(wrapper.find(CalloutAlert)).toHaveLength(1)
   })
 
   test(`renders an error message if request to the server returns 4xx or 5xx`, async () => {
-    fetchMock.get(`*`, getRandomHttpErrorCode(400, 600))
-    const wrapper = shallow(<ComponentWithFetchLoader host={`foo`} resource={`bar`}/>)
+    fetchMock.get(`*`, getRandomHttpErrorCode)
+    const wrapper = shallow(<ComponentWithFetchLoader {...props} />)
 
     await wrapper.instance().componentDidMount()
     wrapper.update()
-
-    expect(wrapper.find(CalloutAlert).exists()).toBe(true)
+    expect(wrapper.find(CalloutAlert)).toHaveLength(1)
   })
 
-  test(`renders an error message if an error is caught by the error boundary`, async () => {
-    fetchMock.get(`*`, `[]`)
-    const wrapper = shallow(<ComponentWithFetchLoader host={`foo`} resource={`bar`}/>)
+  test(`renders an error message if the component does not receive JSON`, async () => {
+    fetchMock.get(`*`, `Break the cycle, Morty. Rise above. Focus on the science`)
+    const wrapper = shallow(<ComponentWithFetchLoader {...props} />)
 
-    const e = new Error(`This is an error!`)
-    wrapper.instance().componentDidCatch(e, `Descriptive error message goes here`)
+    await wrapper.instance().componentDidMount()
     wrapper.update()
-
-    expect(wrapper.find(CalloutAlert).exists()).toBe(true)
+    expect(wrapper.find(CalloutAlert)).toHaveLength(1)
   })
+
+  test(`re-fetches on props change and recovers from error if new fetch succeeds`, async () => {
+    fetchMock.get(`/foo/bar`, getRandomHttpErrorCode)
+    const wrapper = shallow(<ComponentWithFetchLoader {...props} />)
+
+    await wrapper.instance().componentDidMount()
+    wrapper.update()
+    expect(wrapper.find(CalloutAlert)).toHaveLength(1)
+
+    fetchMock.get(`/pea/lentil`, `{"results":[]}`)
+    wrapper.setProps({
+      host: `pea/`,
+      resource: `lentil`
+    })
+
+    await wrapper.instance().componentDidUpdate()
+    wrapper.update()
+    expect(wrapper.find(CalloutAlert)).toHaveLength(0)
+  })
+
 })

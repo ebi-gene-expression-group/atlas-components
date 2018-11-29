@@ -16,14 +16,37 @@ const withFetchLoader = (WrappedComponent) => {
       }
     }
 
+    static getDerivedStateFromProps(props, state) {
+      const url = URI(props.resource, props.host).toString()
+      // Store url in state so we can compare when props change.
+      // Clear out previously-loaded data (so we don't render stale stuff).
+      if (url !== state.url) {
+        return {
+          data: null,
+          loading: true,
+          hasError: null,
+          url: url
+        }
+      }
+
+      // No state update necessary
+      return null
+    }
+
+    async componentDidUpdate(prevProps, prevState) {
+      if (this.state.data === null && this.state.hasError === null) {
+        await this._loadAsyncData(URI(this.props.resource, this.props.host).toString())
+      }
+    }
+
     async componentDidMount() {
-      this.setState({ isLoading: true })
+      await this._loadAsyncData(URI(this.props.resource, this.props.host).toString())
+    }
 
-      const url = URI(this.props.resource, this.props.host).toString()
-
+    async _loadAsyncData(url) {
       try {
         const response = await fetch(url)
-
+        // The promise returned by fetch may be fulfilled with a 4xx or 5xx return code, so we need to explicitly check ok
         if (!response.ok) {
           throw new Error(`${url} => ${response.status}`)
         }
@@ -33,7 +56,7 @@ const withFetchLoader = (WrappedComponent) => {
           isLoading: false,
           hasError: null
         })
-      } catch(e) {
+      } catch (e) {
         this.setState({
           data: null,
           isLoading: false,
@@ -63,7 +86,7 @@ const withFetchLoader = (WrappedComponent) => {
         hasError ?
           <CalloutAlert error={hasError} /> :
         isLoading ?
-          <p className={`row column`} id={`loading-message`}> Loading, please wait...</p> :
+          <p className={`row column loading-message`} > Loading, please wait...</p> :
         // Promise fulfilled
           <WrappedComponent cards={data}/>
       )
