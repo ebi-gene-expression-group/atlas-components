@@ -1,11 +1,11 @@
 {
   "name": "expression-atlas-my-package",
   "version": "0.0.1",
-  "description": "My package does some neat things",
+  "description": "This feedback form is triggered by clicking a right-side button, which contains a mandatory five-scale smiley score bar and an optional comments textbox.",
   "main": "lib/index.js",
   "scripts": {
     "prepack": "rm -rf lib && babel src -d lib --copy-files",
-    "test": "jest --env=node --coverage",
+    "test": "jest --env=jsdom --coverage",
     "posttest": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
     "postversion": "npm publish",
     "postpublish": "git push && git push --tags"
@@ -21,7 +21,7 @@
   },
   "author": "Expression Atlas developers <arrayexpress-atlas@ebi.ac.uk>",
   "collaborators": [
-    "Alfonso Muñoz-Pomer Fuentes <amunoz@ebi.ac.uk>"
+    "Lingyun Zhao <lingyun@ebi.ac.uk>"
   ],
   "license": "Apache-2.0",
   "repository": {
@@ -29,11 +29,13 @@
     "url": "https://github.com/gxa/my-package.git"
   },
   "dependencies": {
+    "emoji-mart": "^2.9.2",
     "prop-types": "^15.6.2",
-    "react": "^16.6.3",
+    "react": "^16.6.1",
     "react-dom": "^16.6.3",
-    "styled-components": "^4.1.2",
-    "urijs": "^1.19.1"
+    "react-ga": "^2.5.6",
+    "react-popup": "^0.9.3",
+    "styled-components": "^4.1.2"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.0",
@@ -55,7 +57,6 @@
     "react-test-renderer": "^16.6.3",
     "webpack": "^4.27.1",
     "webpack-cli": "^3.1.2",
-    "webpack-dev-server": "^3.1.10",
-    "whatwg-fetch": "^3.0.0"
+    "webpack-dev-server": "^3.1.10"
   }
 }
