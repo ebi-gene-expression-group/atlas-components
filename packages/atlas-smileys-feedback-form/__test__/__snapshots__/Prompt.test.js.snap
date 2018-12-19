@@ -1,0 +1,164 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Prompt matches snapshot 1`] = `
+Array [
+  <p>
+    How satisfied are you ?
+  </p>,
+  <br />,
+  <div
+    className="sc-bwzfXH jmOmbA"
+  >
+    <div
+      className="sc-bdVaJa eQqCNi"
+    >
+      <span
+        className="emoji-mart-emoji"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        title={null}
+      >
+        <span
+          style={
+            Object {
+              "backgroundImage": "url(https://unpkg.com/emoji-datasource-emojione@4.0.4/img/emojione/sheets-256/64.png)",
+              "backgroundPosition": "60.78431372549019% 3.9215686274509802%",
+              "backgroundSize": "5200% 5200%",
+              "display": "inline-block",
+              "height": 40,
+              "width": 40,
+            }
+          }
+        />
+      </span>
+    </div>
+    <div
+      className="sc-bdVaJa eQqCNi"
+    >
+      <span
+        className="emoji-mart-emoji"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        title={null}
+      >
+        <span
+          style={
+            Object {
+              "backgroundImage": "url(https://unpkg.com/emoji-datasource-emojione@4.0.4/img/emojione/sheets-256/64.png)",
+              "backgroundPosition": "60.78431372549019% 72.54901960784314%",
+              "backgroundSize": "5200% 5200%",
+              "display": "inline-block",
+              "height": 40,
+              "width": 40,
+            }
+          }
+        />
+      </span>
+    </div>
+    <div
+      className="sc-bdVaJa eQqCNi"
+    >
+      <span
+        className="emoji-mart-emoji"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        title={null}
+      >
+        <span
+          style={
+            Object {
+              "backgroundImage": "url(https://unpkg.com/emoji-datasource-emojione@4.0.4/img/emojione/sheets-256/64.png)",
+              "backgroundPosition": "58.8235294117647% 78.4313725490196%",
+              "backgroundSize": "5200% 5200%",
+              "display": "inline-block",
+              "height": 40,
+              "width": 40,
+            }
+          }
+        />
+      </span>
+    </div>
+    <div
+      className="sc-bdVaJa eQqCNi"
+    >
+      <span
+        className="emoji-mart-emoji"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        title={null}
+      >
+        <span
+          style={
+            Object {
+              "backgroundImage": "url(https://unpkg.com/emoji-datasource-emojione@4.0.4/img/emojione/sheets-256/64.png)",
+              "backgroundPosition": "58.8235294117647% 49.01960784313725%",
+              "backgroundSize": "5200% 5200%",
+              "display": "inline-block",
+              "height": 40,
+              "width": 40,
+            }
+          }
+        />
+      </span>
+    </div>
+    <div
+      className="sc-bdVaJa eQqCNi"
+    >
+      <span
+        className="emoji-mart-emoji"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        title={null}
+      >
+        <span
+          style={
+            Object {
+              "backgroundImage": "url(https://unpkg.com/emoji-datasource-emojione@4.0.4/img/emojione/sheets-256/64.png)",
+              "backgroundPosition": "58.8235294117647% 58.8235294117647%",
+              "backgroundSize": "5200% 5200%",
+              "display": "inline-block",
+              "height": 40,
+              "width": 40,
+            }
+          }
+        />
+      </span>
+    </div>
+  </div>,
+  <p
+    id="scale"
+    style={
+      Object {
+        "textAlign": "center",
+        "visibility": "hidden",
+      }
+    }
+  >
+    empty
+  </p>,
+  <p
+    style={
+      Object {
+        "color": "red",
+        "visibility": "hidden",
+      }
+    }
+  >
+    This is required field.
+  </p>,
+  <br />,
+  <p>
+    Would you like to add a comment ?
+  </p>,
+  <input
+    className="mm-popup__input"
+    onChange={[Function]}
+    type="text"
+  />,
+]
+`;
