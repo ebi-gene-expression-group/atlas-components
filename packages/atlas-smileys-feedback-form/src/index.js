@@ -1,3 +1,3 @@
-import MyComponent from './MyComponent.js'
+import FeedbackButton from './FeedbackButton.js'
 
-export default MyComponent
+export default FeedbackButton
