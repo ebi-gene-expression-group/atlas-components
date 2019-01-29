@@ -119,7 +119,7 @@ class HeatmapView extends React.Component {
               <MarkerGeneHeatmap
                 key={`heatmap`}
                 data={data}
-                numberOfColumns={selectedK}
+                numberOfColumns={Number.parseInt(selectedK)}
                 chartHeight={hasDynamicHeight ? dynamicHeight : defaultHeatmapHeight}
                 hasDynamicHeight={hasDynamicHeight}
                 heatmapRowHeight={heatmapRowHeight}
