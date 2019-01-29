@@ -92,13 +92,16 @@ class HeatmapView extends React.Component {
   render() {
     const { data, isLoading, hasError } = this.state
 
-    const { ks, selectedK, onSelectK, wrapperClassName, plotWrapperClassName, heatmapHeight } = this.props
+    const { ks, selectedK, onSelectK, wrapperClassName, plotWrapperClassName } = this.props
+    const { hasDynamicHeight, defaultHeatmapHeight, heatmapRowHeight } = this.props
 
     const kOptions = ks.sort((a, b) => a-b).map((k) => ({
       value: k.toString(),
       label: `k = ${k}`
     }))
 
+    const numberOfRows = Object.keys(_.groupBy(data, `name`)).length
+    const dynamicHeight = numberOfRows * heatmapRowHeight + 175 // 175px = title + legend + X axis labels
 
     return (
       hasError ?
@@ -116,7 +119,10 @@ class HeatmapView extends React.Component {
               <MarkerGeneHeatmap
                 key={`heatmap`}
                 data={data}
-                chartHeight={heatmapHeight}
+                numberOfColumns={selectedK}
+                chartHeight={hasDynamicHeight ? dynamicHeight : defaultHeatmapHeight}
+                hasDynamicHeight={hasDynamicHeight}
+                heatmapRowHeight={heatmapRowHeight}
               />
               <LoadingOverlay
                 show={isLoading}
@@ -136,13 +142,17 @@ HeatmapView.propTypes = {
   onSelectK: PropTypes.func,
   wrapperClassName: PropTypes.string,
   plotWrapperClassName: PropTypes.string,
-  heatmapHeight: PropTypes.number
+  defaultHeatmapHeight: PropTypes.number,
+  hasDynamicHeight: PropTypes.bool,
+  heatmapRowHeight: PropTypes.number
 }
 
 HeatmapView.defaultProps = {
   wrapperClassName: `row`,
   plotWrapperClassName: `medium-12 columns`,
-  heatmapHeight: 800
+  defaultHeatmapHeight: 800,
+  hasDynamicHeight: true,
+  heatmapRowHeight: 20
 }
 
 export default HeatmapView

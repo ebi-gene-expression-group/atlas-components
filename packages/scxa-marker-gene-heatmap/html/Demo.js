@@ -6,12 +6,17 @@ import HeatmapView from '../src/index.js'
 // K values for E-MTAB-5061
 const ks = [7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17]
 
+// K values for E-EHCA-2
+// const ks = [8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18]
+
+
 class Demo extends React.Component {
   constructor(props) {
     super(props)
 
     this.state = {
       experimentAccession: `E-MTAB-5061`,
+      // experimentAccession: `E-EHCA-2`,
       // experimentAccession: `E-GEOD-99058`,
       ks: ks,
       selectedK: ks[0],
@@ -34,6 +39,8 @@ class Demo extends React.Component {
             })
           }
         }
+        hasDynamicHeight={true}
+        heatmapRowHeight={10}
       />
     )
   }
