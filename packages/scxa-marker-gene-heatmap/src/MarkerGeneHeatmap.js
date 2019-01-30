@@ -45,7 +45,6 @@ const MarkerGeneHeatmap = (props) => {
 
     let plotLine = {
       color: color,
-      // color: '#FFFFFF',
       width: 2,
       value: plotLineAxisPosition,
       zIndex: zIndex,
@@ -71,7 +70,7 @@ const MarkerGeneHeatmap = (props) => {
       zoomType: `y`,
       animation: false,
       marginRight: 100,
-      plotBackgroundColor: `#ebebeb`
+      plotBackgroundColor: `#eaeaea`
     },
     credits: {
       enabled: false
@@ -141,10 +140,8 @@ const MarkerGeneHeatmap = (props) => {
 
     colorAxis: {
       type: `logarithmic`,
-      minColor: `#d7ffff`,
-      maxColor: `#024990`,
       stops: [
-        [0, `#d4e4fb`],
+        [0, `#ffffff`],
         [0.67, `#6077bf`],
         [1, `#0e0573`]
       ],
@@ -165,7 +162,7 @@ const MarkerGeneHeatmap = (props) => {
 
     series: [{
       data: data,
-      nullColor: `#D3D3D3`,
+      nullColor: `#eaeaea`,
       cursor: `crosshair`,
       states: {
         hover: {
@@ -194,16 +191,16 @@ const MarkerGeneHeatmap = (props) => {
 }
 
 MarkerGeneHeatmap.propTypes = {
-  chartHeight: PropTypes.number.required,
-  numberOfColumns: PropTypes.number.required,
+  chartHeight: PropTypes.number.isRequired,
+  numberOfColumns: PropTypes.number.isRequired,
   data: PropTypes.arrayOf(PropTypes.shape({
     x: PropTypes.number,
     y: PropTypes.number,
     name: PropTypes.string,
     value: PropTypes.number
   })),
-  hasDynamicHeight: PropTypes.number.required,
-  heatmapRowHeight: PropTypes.number.required
+  hasDynamicHeight: PropTypes.bool.isRequired,
+  heatmapRowHeight: PropTypes.number.isRequired
 }
 
 export default MarkerGeneHeatmap
