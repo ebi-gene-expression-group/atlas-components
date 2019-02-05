@@ -120,7 +120,7 @@ class HeatmapView extends React.Component {
                 key={`heatmap`}
                 data={data}
                 numberOfColumns={Number.parseInt(selectedK)}
-                chartHeight={hasDynamicHeight ? dynamicHeight : defaultHeatmapHeight}
+                chartHeight={hasDynamicHeight && numberOfRows ? dynamicHeight : defaultHeatmapHeight}
                 hasDynamicHeight={hasDynamicHeight}
                 heatmapRowHeight={heatmapRowHeight}
               />
@@ -138,7 +138,7 @@ HeatmapView.propTypes = {
   host: PropTypes.string.isRequired,
   resource: PropTypes.string.isRequired,
   ks: PropTypes.arrayOf(PropTypes.number).isRequired,
-  selectedK: PropTypes.number.isRequired,
+  selectedK: PropTypes.string.isRequired,
   onSelectK: PropTypes.func,
   wrapperClassName: PropTypes.string,
   plotWrapperClassName: PropTypes.string,
@@ -150,7 +150,7 @@ HeatmapView.propTypes = {
 HeatmapView.defaultProps = {
   wrapperClassName: `row`,
   plotWrapperClassName: `medium-12 columns`,
-  defaultHeatmapHeight: 800,
+  defaultHeatmapHeight: 300,
   hasDynamicHeight: true,
   heatmapRowHeight: 20
 }

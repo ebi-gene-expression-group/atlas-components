@@ -3,11 +3,13 @@ import PropTypes from 'prop-types'
 import Highcharts from 'highcharts'
 import HighchartsReact from 'highcharts-react-official'
 import HC_heatmap from 'highcharts/modules/heatmap'
+import HC_nodata from 'highcharts/modules/no-data-to-display'
 import _ from 'lodash'
 
 // init the module
 async function addModules() {
   HC_heatmap(Highcharts)
+  HC_nodata(Highcharts)
 }
 
 addModules()
@@ -71,6 +73,16 @@ const MarkerGeneHeatmap = (props) => {
       animation: false,
       marginRight: 100,
       plotBackgroundColor: `#eaeaea`
+    },
+    lang: {
+      noData: `There are no marker genes for this k value.\nTry selecting another k.`
+    },
+    noData: {
+      style: {
+        fontWeight: `bold`,
+        fontSize: `15px`,
+        color: `#000000`
+      }
     },
     credits: {
       enabled: false
@@ -140,6 +152,7 @@ const MarkerGeneHeatmap = (props) => {
 
     colorAxis: {
       type: `logarithmic`,
+      min: 0.1,
       stops: [
         [0, `#ffffff`],
         [0.67, `#6077bf`],
