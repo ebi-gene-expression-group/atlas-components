@@ -4,10 +4,13 @@ import ReactDOM from 'react-dom'
 import HeatmapView from '../src/index.js'
 
 // K values for E-MTAB-5061
-const ks = [7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17]
+// const ks = [7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17]
 
 // K values for E-EHCA-2
 // const ks = [8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18]
+
+// K values for E-ENAD-19
+const ks = [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
 
 
 class Demo extends React.Component {
@@ -15,11 +18,12 @@ class Demo extends React.Component {
     super(props)
 
     this.state = {
-      experimentAccession: `E-MTAB-5061`,
+      // experimentAccession: `E-MTAB-5061`,
       // experimentAccession: `E-EHCA-2`,
-      // experimentAccession: `E-GEOD-99058`,
+      experimentAccession: `E-ENAD-19`,
       ks: ks,
-      selectedK: ks[0],
+      ksWithMarkers: [4, 7, 9],
+      selectedK: ks[0]
       // selectedK: 17,
     }
   }
@@ -31,6 +35,7 @@ class Demo extends React.Component {
         resource={`json/experiments/${this.state.experimentAccession}/marker-genes/${this.state.selectedK}`}
         host={`http://localhost:8080/gxa/sc/`}
         ks={this.state.ks}
+        ksWithMarkers={this.state.ksWithMarkers}
         selectedK={this.state.selectedK}
         onSelectK={
           (k) => {
@@ -40,7 +45,7 @@ class Demo extends React.Component {
           }
         }
         hasDynamicHeight={true}
-        heatmapRowHeight={10}
+        heatmapRowHeight={20}
       />
     )
   }

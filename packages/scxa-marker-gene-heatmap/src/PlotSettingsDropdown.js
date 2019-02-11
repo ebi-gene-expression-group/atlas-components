@@ -18,7 +18,7 @@ const DropdownIndicator = styled.span`
  `
 
 const PlotSettingsDropdown = (props) => {
-  const {labelText, options, onSelect, defaultValue} = props
+  const {labelText, options, onSelect, defaultValue, isOptionDisabled} = props
 
   const formatGroupLabel = data => (
     <span>{data.label}</span>
@@ -60,7 +60,9 @@ const PlotSettingsDropdown = (props) => {
       onChange={onSelect}
       value={defaultValue}
       formatGroupLabel={formatGroupLabel}
-      styles={ebiVfSelectStyles} />
+      styles={ebiVfSelectStyles}
+      isOptionDisabled={isOptionDisabled}
+    />
   ]
 }
 
@@ -68,7 +70,8 @@ PlotSettingsDropdown.propTypes = {
   labelText: PropTypes.string,
   defaultValue: PropTypes.object,
   options: PropTypes.array.isRequired,
-  onSelect: PropTypes.func.isRequired
+  onSelect: PropTypes.func.isRequired,
+  isOptionDisabled: PropTypes.func
 }
 
 export default PlotSettingsDropdown

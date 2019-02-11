@@ -4,6 +4,7 @@ import URI from 'urijs'
 import MarkerGeneHeatmap from './MarkerGeneHeatmap'
 import PlotSettingsDropdown from './PlotSettingsDropdown'
 import LoadingOverlay from './LoadingOverlay'
+import _ from 'lodash'
 
 const CalloutAlert = ({error}) =>
   <div className={`row column`}>
@@ -92,7 +93,7 @@ class HeatmapView extends React.Component {
   render() {
     const { data, isLoading, hasError } = this.state
 
-    const { ks, selectedK, onSelectK, wrapperClassName, plotWrapperClassName } = this.props
+    const { ks, ksWithMarkers, selectedK, onSelectK, wrapperClassName, plotWrapperClassName } = this.props
     const { hasDynamicHeight, defaultHeatmapHeight, heatmapRowHeight } = this.props
 
     const kOptions = ks.sort((a, b) => a-b).map((k) => ({
@@ -112,8 +113,9 @@ class HeatmapView extends React.Component {
               key={`selectK`}
               labelText={`View marker genes for:`}
               options={kOptions}
-              onSelect={(selectedOption) => {onSelectK(selectedOption.value)}}
+              onSelect={(selectedOption) => onSelectK(selectedOption.value)}
               defaultValue={{value: selectedK, label: `k = ${selectedK}`}}
+              isOptionDisabled={(option) => !ksWithMarkers.includes(parseInt(option.value))}
             />
             <div key={`heatmap`} style={{position: `relative`}} className={wrapperClassName}>
               <MarkerGeneHeatmap
@@ -138,6 +140,7 @@ HeatmapView.propTypes = {
   host: PropTypes.string.isRequired,
   resource: PropTypes.string.isRequired,
   ks: PropTypes.arrayOf(PropTypes.number).isRequired,
+  ksWithMarkers: PropTypes.arrayOf(PropTypes.number),
   selectedK: PropTypes.string.isRequired,
   onSelectK: PropTypes.func,
   wrapperClassName: PropTypes.string,

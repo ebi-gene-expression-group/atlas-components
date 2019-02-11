@@ -184,7 +184,7 @@ const MarkerGeneHeatmap = (props) => {
           borderColor: `#e96b23`
         }
       },
-      boostThreshold: 100,
+      // boostThreshold: 100,
       turboThreshold: 0
     }],
 
