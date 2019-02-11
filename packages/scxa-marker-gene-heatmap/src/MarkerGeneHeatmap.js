@@ -20,18 +20,28 @@ const MarkerGeneHeatmap = (props) => {
   const xAxisCategories = Array.from(Array(numberOfColumns+1).keys()).slice(1)
   const yAxisCategories = _.uniq(data.map(x => x.name))
 
+  const totalNumberOfRows = Object.keys(_.groupBy(data, `name`)).length
   const groupedData = _.groupBy(data, `clusterIdWhereMarker`)
+
   let plotLines = []
   let plotLineAxisPosition = -0.5
 
   const clusterIds = Object.keys(groupedData)
 
+  // If we don't have a set row height, we try to estimate the height as worked out by Highcharts
+  let rowHeight = hasDynamicHeight ?
+    heatmapRowHeight :
+    Math.round((chartHeight - 175) / totalNumberOfRows + ((clusterIds.length-1) * 8))
+
+  // 175px = title + legend + X axis labels; 8 is the height of a plot line separating the clusters
+  const dynamicHeight = (totalNumberOfRows * heatmapRowHeight) + (clusterIds.length * 8) + 175
+
   clusterIds.forEach((clusterId, idx, array) => {
     let numberOfRows = Object.keys(_.groupBy(groupedData[clusterId], `y`)).length // how many marker genes per cluster
 
     plotLineAxisPosition = plotLineAxisPosition + numberOfRows
-    // Magic number 5 should bring label to the centre the heatmap slice
-    const yOffset = hasDynamicHeight ? -numberOfRows * heatmapRowHeight/2 + 5 : 0
+
+    const yOffset = -numberOfRows * rowHeight/2
 
     let color, zIndex
     // don't show last plot line
@@ -68,19 +78,20 @@ const MarkerGeneHeatmap = (props) => {
   const options = {
     chart: {
       type: `heatmap`,
-      height: chartHeight,
+      height: hasDynamicHeight ? dynamicHeight : chartHeight,
       zoomType: `y`,
       animation: false,
-      marginRight: 100,
-      plotBackgroundColor: `#eaeaea`
+      marginRight: data.length !== 0 ? 100 : 0,
+      plotBackgroundColor: `#eaeaea`,
+      spacingBottom: 0
     },
     lang: {
-      noData: `There are no marker genes for this k value.\nTry selecting another k.`
+      noData: `There are no marker genes for this k value. Try selecting another k.`,
     },
     noData: {
       style: {
         fontWeight: `bold`,
-        fontSize: `15px`,
+        fontSize: `16px`,
         color: `#000000`
       }
     },
@@ -106,7 +117,8 @@ const MarkerGeneHeatmap = (props) => {
       endOnTick: false,
       gridLineWidth: 0,
       minorGridLineWidth: 0,
-      max: numberOfColumns-1
+      max: numberOfColumns-1,
+      showEmpty: false
     },
 
     yAxis: [{
@@ -122,7 +134,9 @@ const MarkerGeneHeatmap = (props) => {
       endOnTick: false,
       gridLineWidth: 0,
       minorGridLineWidth: 0,
-      plotLines: plotLines
+      plotLines: plotLines,
+      showEmpty: false,
+      visible: data.length !== 0
     },
     ],
 
@@ -160,7 +174,7 @@ const MarkerGeneHeatmap = (props) => {
       ],
       marker: {
         color: `#e96b23`
-      }
+      },
     },
 
     legend: {
@@ -170,7 +184,8 @@ const MarkerGeneHeatmap = (props) => {
       align: `center`,
       verticalAlign: `top`,
       layout: `horizontal`,
-      symbolWidth: 480
+      symbolWidth: 480,
+      enabled: data.length !== 0
     },
 
     series: [{
@@ -184,7 +199,6 @@ const MarkerGeneHeatmap = (props) => {
           borderColor: `#e96b23`
         }
       },
-      // boostThreshold: 100,
       turboThreshold: 0
     }],
 

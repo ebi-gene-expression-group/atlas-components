@@ -7,9 +7,8 @@ const LoadingOverlay = (props) =>
   <div style={{
     display: props.show ? `flex` : `none`,
     position: `absolute`,
-    top: 0, left: 0, right: 0, bottom: 0,
+    top: `20px`, left: 0, right: 0, bottom: 0,
     background: `rgba(255,255,255,0.8)`,
-    alignItems: `center`,
     justifyContent: `center`
   }}>
     <div style={{textAlign: `center`}}>

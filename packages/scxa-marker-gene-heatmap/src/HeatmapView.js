@@ -101,9 +101,6 @@ class HeatmapView extends React.Component {
       label: `k = ${k}`
     }))
 
-    const numberOfRows = Object.keys(_.groupBy(data, `name`)).length
-    const dynamicHeight = numberOfRows * heatmapRowHeight + 175 // 175px = title + legend + X axis labels
-
     return (
       hasError ?
         <CalloutAlert error={hasError}/> :
@@ -118,14 +115,16 @@ class HeatmapView extends React.Component {
               isOptionDisabled={(option) => !ksWithMarkers.includes(parseInt(option.value))}
             />
             <div key={`heatmap`} style={{position: `relative`}} className={wrapperClassName}>
-              <MarkerGeneHeatmap
-                key={`heatmap`}
-                data={data}
-                numberOfColumns={Number.parseInt(selectedK)}
-                chartHeight={hasDynamicHeight && numberOfRows ? dynamicHeight : defaultHeatmapHeight}
-                hasDynamicHeight={hasDynamicHeight}
-                heatmapRowHeight={heatmapRowHeight}
-              />
+              {
+                !isLoading && <MarkerGeneHeatmap
+                  key={`heatmap`}
+                  data={data}
+                  numberOfColumns={Number.parseInt(selectedK)}
+                  chartHeight={defaultHeatmapHeight}
+                  hasDynamicHeight={data.length > 2 ? hasDynamicHeight : false} // don't want dynamic height if there is little or no data
+                  heatmapRowHeight={heatmapRowHeight}
+                />
+              }
               <LoadingOverlay
                 show={isLoading}
               />
