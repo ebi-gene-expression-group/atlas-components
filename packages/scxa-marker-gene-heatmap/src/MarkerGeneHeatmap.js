@@ -16,62 +16,66 @@ addModules()
 
 const MarkerGeneHeatmap = (props) => {
   const { chartHeight, hasDynamicHeight, heatmapRowHeight } = props
-  const { data, xAxisCategories, yAxisCategories } = props
+  const { data, isDataFiltered, xAxisCategories, yAxisCategories } = props
 
   const totalNumberOfRows = Object.keys(_.groupBy(data, `name`)).length
   const groupedData = _.groupBy(data, `clusterIdWhereMarker`)
 
   let plotLines = []
-  let plotLineAxisPosition = -0.5
 
   const clusterIds = Object.keys(groupedData)
-
-  // If we don't have a set row height, we try to estimate the height as worked out by Highcharts
-  let rowHeight = hasDynamicHeight ?
-    heatmapRowHeight :
-    Math.round((chartHeight - 175) / totalNumberOfRows + ((clusterIds.length-1) * 8))
 
   // 175px = title + legend + X axis labels; 8 is the height of a plot line separating the clusters
   const dynamicHeight = (totalNumberOfRows * heatmapRowHeight) + (clusterIds.length * 8) + 175
 
-  clusterIds.forEach((clusterId, idx, array) => {
-    let numberOfRows = Object.keys(_.groupBy(groupedData[clusterId], `y`)).length // how many marker genes per cluster
+  // We don't need to worry about plotlines and labels if the heatmap is showing data filtered by cluster ID
+  if (!isDataFiltered) {
+    let plotLineAxisPosition = -0.5
 
-    plotLineAxisPosition = plotLineAxisPosition + numberOfRows
+    // If we don't have a set row height, we try to estimate the height as worked out by Highcharts
+    let rowHeight = hasDynamicHeight ?
+      heatmapRowHeight :
+      Math.round((chartHeight - 175) / totalNumberOfRows + ((clusterIds.length-1) * 8))
 
-    const yOffset = -numberOfRows * rowHeight/2
+    clusterIds.forEach((clusterId, idx, array) => {
+      let numberOfRows = Object.keys(_.groupBy(groupedData[clusterId], `y`)).length // how many marker genes per cluster
 
-    let color, zIndex
-    // don't show last plot line
-    if (idx === array.length-1) {
-      // removing the plot line altogether would remove the label, so we need to make it "invisible"
-      color = `#FFFFFF`
-      zIndex = 0
-    }
-    else {
-      color = `#000000`
-      zIndex = 5
-    }
+      plotLineAxisPosition = plotLineAxisPosition + numberOfRows
 
-    let plotLine = {
-      color: color,
-      width: 2,
-      value: plotLineAxisPosition,
-      zIndex: zIndex,
-      label: {
-        text: `Cluster ${clusterId}`,
-        align: `right`,
-        textAlign: `left`,
-        x: 15,
-        y: yOffset,
-        style: {
-          fontWeight: `bold`,
-          fontSize: `12px`
+      const yOffset = -numberOfRows * rowHeight/2
+
+      let color, zIndex
+      // don't show last plot line
+      if (idx === array.length-1) {
+        // removing the plot line altogether would remove the label, so we need to make it "invisible"
+        color = `#FFFFFF`
+        zIndex = 0
+      }
+      else {
+        color = `#000000`
+        zIndex = 5
+      }
+
+      let plotLine = {
+        color: color,
+        width: 2,
+        value: plotLineAxisPosition,
+        zIndex: zIndex,
+        label: {
+          text: `Cluster ${clusterId}`,
+          align: `right`,
+          textAlign: `left`,
+          x: 15,
+          y: yOffset,
+          style: {
+            fontWeight: `bold`,
+            fontSize: `12px`
+          }
         }
       }
-    }
-    plotLines.push(plotLine)
-  })
+      plotLines.push(plotLine)
+    })
+  }
 
   const options = {
     chart: {
@@ -224,6 +228,7 @@ MarkerGeneHeatmap.propTypes = {
     name: PropTypes.string,
     value: PropTypes.number
   })),
+  isDataFiltered: PropTypes.bool.isRequired,
   xAxisCategories: PropTypes.array.isRequired,
   yAxisCategories: PropTypes.array.isRequired,
   hasDynamicHeight: PropTypes.bool.isRequired,

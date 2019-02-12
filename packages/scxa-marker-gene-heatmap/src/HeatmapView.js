@@ -161,6 +161,7 @@ class HeatmapView extends React.Component {
                 !isLoading && <MarkerGeneHeatmap
                   key={`heatmap`}
                   data={filteredData}
+                  isDataFiltered={selectedClusterId && selectedClusterId.value !== `all`}
                   xAxisCategories={allClusterIds}
                   yAxisCategories={ _.uniq(data.map(x => x.name))}
                   chartHeight={defaultHeatmapHeight}
