@@ -103,23 +103,26 @@ class HeatmapView extends React.Component {
 
     const kOptions = ks.sort((a, b) => a-b).map((k) => ({
       value: k.toString(),
-      label: `k = ${k}`
+      label: `k = ${k}`,
+      isDisabled: !ksWithMarkers.includes(k)
     }))
 
     const allClusterIds = Array.from(Array(Number.parseInt(selectedK)+1).keys()).slice(1)
     const clusterIdsWithMarkers =_.uniq(data.map(x => x.clusterIdWhereMarker))
 
-    let clusterIdOptions = clusterIdsWithMarkers
+    let clusterIdOptions = allClusterIds
       .sort((a, b) => a-b)
       .map((clusterId) => ({
         value: clusterId.toString(),
-        label: `Cluster ${clusterId}`
+        label: `Cluster ${clusterId}`,
+        isDisabled: !clusterIdsWithMarkers.includes(clusterId)
       }))
 
     // Add default "All clusters" option at the start of the options array
     clusterIdOptions.unshift({
       value: `all`,
-      label: `All clusters`
+      label: `All clusters`,
+      isDisabled: false // always show this option
     })
 
     return (
@@ -133,7 +136,6 @@ class HeatmapView extends React.Component {
               options={kOptions}
               onSelect={(selectedOption) => onSelectK(selectedOption.value)}
               defaultValue={{value: selectedK, label: `k = ${selectedK}`}}
-              isOptionDisabled={(option) => !ksWithMarkers.includes(parseInt(option.value))}
             />
           </div>
           <div className={`small-12 medium-6 columns`}>
