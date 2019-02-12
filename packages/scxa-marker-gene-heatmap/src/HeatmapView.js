@@ -33,6 +33,8 @@ class HeatmapView extends React.Component {
 
     this.state = {
       data: [],
+      filteredData: [],
+      selectedClusterId: null,
       isLoading: true,
       hasError: null
     }
@@ -52,8 +54,10 @@ class HeatmapView extends React.Component {
         throw new Error(`${url} => ${response.status}`)
       }
 
+      const jsonData = await response.json()
       this.setState({
-        data: await response.json(),
+        data: await jsonData,
+        filteredData: await jsonData,
         isLoading: false,
         hasError: null
       })
@@ -91,9 +95,10 @@ class HeatmapView extends React.Component {
   }
 
   render() {
-    const { data, isLoading, hasError } = this.state
+    const { data, filteredData, selectedClusterId, isLoading, hasError } = this.state
 
-    const { ks, ksWithMarkers, selectedK, onSelectK, wrapperClassName, plotWrapperClassName } = this.props
+    const { wrapperClassName, plotWrapperClassName } = this.props
+    const { ks, ksWithMarkers, selectedK, onSelectK } = this.props
     const { hasDynamicHeight, defaultHeatmapHeight, heatmapRowHeight } = this.props
 
     const kOptions = ks.sort((a, b) => a-b).map((k) => ({
@@ -101,27 +106,63 @@ class HeatmapView extends React.Component {
       label: `k = ${k}`
     }))
 
+    const allClusterIds = Array.from(Array(Number.parseInt(selectedK)+1).keys()).slice(1)
+    const clusterIdsWithMarkers =_.uniq(data.map(x => x.clusterIdWhereMarker))
+
+    let clusterIdOptions = clusterIdsWithMarkers
+      .sort((a, b) => a-b)
+      .map((clusterId) => ({
+        value: clusterId.toString(),
+        label: `Cluster ${clusterId}`
+      }))
+
+    // Add default "All clusters" option at the start of the options array
+    clusterIdOptions.unshift({
+      value: `all`,
+      label: `All clusters`
+    })
+
     return (
       hasError ?
         <CalloutAlert error={hasError}/> :
         <div className={wrapperClassName}>
-          <div className={plotWrapperClassName}>
+          <div className={`small-12 medium-6 columns`}>
             <PlotSettingsDropdown
               key={`selectK`}
-              labelText={`View marker genes for:`}
+              labelText={`Show marker genes for:`}
               options={kOptions}
               onSelect={(selectedOption) => onSelectK(selectedOption.value)}
               defaultValue={{value: selectedK, label: `k = ${selectedK}`}}
               isOptionDisabled={(option) => !ksWithMarkers.includes(parseInt(option.value))}
             />
+          </div>
+          <div className={`small-12 medium-6 columns`}>
+            <PlotSettingsDropdown
+              key={`selectK`}
+              labelText={`Show marker genes for:`}
+              options={clusterIdOptions}
+              onSelect={(selectedOption) => {
+                this.setState((state, props) => ({
+                  data: _.cloneDeep(state.data),
+                  filteredData: selectedOption.value === `all` ?
+                    _.cloneDeep(state.data) :
+                    _.filter(state.data, {'clusterIdWhereMarker': parseInt(selectedOption.value)}),
+                  selectedClusterId: selectedOption
+                }))
+              }}
+              defaultValue={selectedClusterId || clusterIdOptions[0]}
+            />
+          </div>
+          <div className={plotWrapperClassName}>
             <div key={`heatmap`} style={{position: `relative`}} className={wrapperClassName}>
               {
                 !isLoading && <MarkerGeneHeatmap
                   key={`heatmap`}
-                  data={data}
-                  numberOfColumns={Number.parseInt(selectedK)}
+                  data={filteredData}
+                  xAxisCategories={allClusterIds}
+                  yAxisCategories={ _.uniq(data.map(x => x.name))}
                   chartHeight={defaultHeatmapHeight}
-                  hasDynamicHeight={data.length > 2 ? hasDynamicHeight : false} // don't want dynamic height if there is little or no data
+                  hasDynamicHeight={filteredData.length > 2 ? hasDynamicHeight : false} // don't want dynamic height if there is little or no data
                   heatmapRowHeight={heatmapRowHeight}
                 />
               }

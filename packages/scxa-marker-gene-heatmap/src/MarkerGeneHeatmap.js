@@ -15,10 +15,8 @@ async function addModules() {
 addModules()
 
 const MarkerGeneHeatmap = (props) => {
-  const {chartHeight, data, numberOfColumns, hasDynamicHeight, heatmapRowHeight} = props
-
-  const xAxisCategories = Array.from(Array(numberOfColumns+1).keys()).slice(1)
-  const yAxisCategories = _.uniq(data.map(x => x.name))
+  const { chartHeight, hasDynamicHeight, heatmapRowHeight } = props
+  const { data, xAxisCategories, yAxisCategories } = props
 
   const totalNumberOfRows = Object.keys(_.groupBy(data, `name`)).length
   const groupedData = _.groupBy(data, `clusterIdWhereMarker`)
@@ -117,7 +115,7 @@ const MarkerGeneHeatmap = (props) => {
       endOnTick: false,
       gridLineWidth: 0,
       minorGridLineWidth: 0,
-      max: numberOfColumns-1,
+      max: xAxisCategories.length-1,
       showEmpty: false
     },
 
@@ -167,6 +165,7 @@ const MarkerGeneHeatmap = (props) => {
     colorAxis: {
       type: `logarithmic`,
       min: 0.1,
+      max: 100000,
       stops: [
         [0, `#ffffff`],
         [0.67, `#6077bf`],
@@ -219,13 +218,14 @@ const MarkerGeneHeatmap = (props) => {
 
 MarkerGeneHeatmap.propTypes = {
   chartHeight: PropTypes.number.isRequired,
-  numberOfColumns: PropTypes.number.isRequired,
   data: PropTypes.arrayOf(PropTypes.shape({
     x: PropTypes.number,
     y: PropTypes.number,
     name: PropTypes.string,
     value: PropTypes.number
   })),
+  xAxisCategories: PropTypes.array.isRequired,
+  yAxisCategories: PropTypes.array.isRequired,
   hasDynamicHeight: PropTypes.bool.isRequired,
   heatmapRowHeight: PropTypes.number.isRequired
 }
