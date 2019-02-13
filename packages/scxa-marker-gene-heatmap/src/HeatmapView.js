@@ -165,7 +165,7 @@ class HeatmapView extends React.Component {
                   xAxisCategories={allClusterIds}
                   yAxisCategories={ _.uniq(data.map(x => x.name))}
                   chartHeight={defaultHeatmapHeight}
-                  hasDynamicHeight={filteredData.length > 2 ? hasDynamicHeight : false} // don't want dynamic height if there is little or no data
+                  hasDynamicHeight={_.uniq(filteredData.map(x => x.name)).length > 5 ? hasDynamicHeight : false} // don't want dynamic height if there is little or no data
                   heatmapRowHeight={heatmapRowHeight}
                 />
               }
