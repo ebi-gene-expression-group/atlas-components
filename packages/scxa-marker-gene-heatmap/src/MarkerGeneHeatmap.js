@@ -166,7 +166,7 @@ const MarkerGeneHeatmap = (props) => {
                   <b>Median expression:</b> ${+this.point.value.toFixed(3)} TPM`
 
           if(this.point.clusterIdWhereMarker === this.point.x+1) {
-            return text + `<br/><b>P-value:</b> ${this.point.pValue}`
+            return text + `<br/><b>P-value:</b> ${this.point.pValue.toExponential(3)}`
           }
           else {
             return text
