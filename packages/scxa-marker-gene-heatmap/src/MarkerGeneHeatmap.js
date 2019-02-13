@@ -114,7 +114,15 @@ const MarkerGeneHeatmap = (props) => {
       opposite: true,
       categories: xAxisCategories,
       labels: {
-        format: `Cluster {value}`
+        useHtml: true,
+        formatter: function () {
+          if (isDataFiltered && this.value === data[0].clusterIdWhereMarker) {
+            return '<span style="font-size: 12px; font-weight: bold; color: #e96b23;"> Cluster ' + this.value + '</span>';
+          }
+          else {
+            return 'Cluster ' + this.value
+          }
+        }
       },
       endOnTick: false,
       gridLineWidth: 0,
