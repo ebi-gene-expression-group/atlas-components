@@ -129,7 +129,8 @@ const MarkerGeneHeatmap = (props) => {
       minorGridLineWidth: 0,
       min: 0,
       max: xAxisCategories.length-1,
-      showEmpty: false
+      showEmpty: false,
+      visible: data.length !== 0
     },
 
     yAxis: [{
