@@ -128,47 +128,47 @@ class HeatmapView extends React.Component {
     return (
       hasError ?
         <CalloutAlert error={hasError}/> :
-        <div className={wrapperClassName}>
-          <div className={`small-12 medium-6 columns`}>
-            <PlotSettingsDropdown
-              key={`selectK`}
-              labelText={`Show marker genes for:`}
-              options={kOptions}
-              onSelect={(selectedOption) => onSelectK(selectedOption.value)}
-              defaultValue={{value: selectedK, label: `k = ${selectedK}`}}
-            />
+        <div>
+          <div className={wrapperClassName}>
+            <div className={`small-12 medium-6 columns`}>
+              <PlotSettingsDropdown
+                key={`selectK`}
+                labelText={`Show marker genes for:`}
+                options={kOptions}
+                onSelect={(selectedOption) => onSelectK(selectedOption.value)}
+                defaultValue={{value: selectedK, label: `k = ${selectedK}`}}
+              />
+            </div>
+            <div className={`small-12 medium-6 columns`}>
+              <PlotSettingsDropdown
+                key={`selectK`}
+                labelText={`Show marker genes for:`}
+                options={clusterIdOptions}
+                onSelect={(selectedOption) => {
+                  this.setState((state, props) => ({
+                    data: _.cloneDeep(state.data),
+                    filteredData: selectedOption.value === `all` ?
+                      _.cloneDeep(state.data) :
+                      _.filter(state.data, {'clusterIdWhereMarker': parseInt(selectedOption.value)}),
+                    selectedClusterId: selectedOption
+                  }))
+                }}
+                defaultValue={selectedClusterId || clusterIdOptions[0]}
+              />
+            </div>
           </div>
-          <div className={`small-12 medium-6 columns`}>
-            <PlotSettingsDropdown
-              key={`selectK`}
-              labelText={`Show marker genes for:`}
-              options={clusterIdOptions}
-              onSelect={(selectedOption) => {
-                this.setState((state, props) => ({
-                  data: _.cloneDeep(state.data),
-                  filteredData: selectedOption.value === `all` ?
-                    _.cloneDeep(state.data) :
-                    _.filter(state.data, {'clusterIdWhereMarker': parseInt(selectedOption.value)}),
-                  selectedClusterId: selectedOption
-                }))
-              }}
-              defaultValue={selectedClusterId || clusterIdOptions[0]}
-            />
-          </div>
-          <div className={plotWrapperClassName}>
-            <div key={`heatmap`} style={{position: `relative`}} className={wrapperClassName}>
-              {
-                !isLoading && <MarkerGeneHeatmap
-                  key={`heatmap`}
-                  data={filteredData}
-                  isDataFiltered={selectedClusterId && selectedClusterId.value !== `all`}
-                  xAxisCategories={allClusterIds}
-                  yAxisCategories={ _.uniq(data.map(x => x.name))}
-                  chartHeight={defaultHeatmapHeight}
-                  hasDynamicHeight={_.uniq(filteredData.map(x => x.name)).length > 5 ? hasDynamicHeight : false} // don't want dynamic height if there is little or no data
-                  heatmapRowHeight={heatmapRowHeight}
-                />
-              }
+          <div className={wrapperClassName}>
+            <div className={plotWrapperClassName} style={{position: `relative`}}>
+              <MarkerGeneHeatmap
+                key={`heatmap`}
+                data={filteredData}
+                isDataFiltered={selectedClusterId && selectedClusterId.value !== `all`}
+                xAxisCategories={allClusterIds}
+                yAxisCategories={ _.uniq(data.map(x => x.name))}
+                chartHeight={defaultHeatmapHeight}
+                hasDynamicHeight={_.uniq(filteredData.map(x => x.name)).length > 5 ? hasDynamicHeight : false} // don't want dynamic height if there is little or no data
+                heatmapRowHeight={heatmapRowHeight}
+              />
               <LoadingOverlay
                 show={isLoading}
               />
