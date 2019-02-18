@@ -96,7 +96,6 @@ class HeatmapView extends React.Component {
 
   render() {
     const { data, filteredData, selectedClusterId, isLoading, hasError } = this.state
-
     const { wrapperClassName, plotWrapperClassName } = this.props
     const { ks, ksWithMarkers, selectedK, onSelectK } = this.props
     const { hasDynamicHeight, defaultHeatmapHeight, heatmapRowHeight } = this.props
@@ -132,7 +131,6 @@ class HeatmapView extends React.Component {
           <div className={wrapperClassName}>
             <div className={`small-12 medium-6 columns`}>
               <PlotSettingsDropdown
-                key={`selectK`}
                 labelText={`Show marker genes for:`}
                 options={kOptions}
                 onSelect={(selectedOption) => onSelectK(selectedOption.value)}
@@ -141,7 +139,6 @@ class HeatmapView extends React.Component {
             </div>
             <div className={`small-12 medium-6 columns`}>
               <PlotSettingsDropdown
-                key={`selectK`}
                 labelText={`Show marker genes for:`}
                 options={clusterIdOptions}
                 onSelect={(selectedOption) => {
@@ -160,7 +157,6 @@ class HeatmapView extends React.Component {
           <div className={wrapperClassName}>
             <div className={plotWrapperClassName} style={{position: `relative`}}>
               <MarkerGeneHeatmap
-                key={`heatmap`}
                 data={filteredData}
                 isDataFiltered={selectedClusterId && selectedClusterId.value !== `all`}
                 xAxisCategories={allClusterIds}
