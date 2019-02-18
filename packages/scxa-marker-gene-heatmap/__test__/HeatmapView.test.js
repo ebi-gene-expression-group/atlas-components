@@ -8,25 +8,6 @@ import HeatmapView from '../src/HeatmapView.js'
 
 Enzyme.configure({ adapter: new Adapter() })
 
-describe(`MyComponent`, () => {
-  test(`should render without throwing an error`, () => {
-    expect(shallow(<HeatmapView />).contains(<div className="foo">Bar</div>)).toBe(true)
-  })
+describe(`HeatmapView`, () => {
 
-  test(`should be selectable by class "foo"`, () => {
-    expect(shallow(<HeatmapView />).is(`.foo`)).toBe(true)
-  })
-
-  test(`should mount in a full DOM`, () => {
-    expect(mount(<HeatmapView />).find(`.foo`)).toHaveLength(1)
-  })
-
-  test(`should render to static HTML`, () => {
-    expect(render(<HeatmapView />).text()).toEqual(`Bar`)
-  })
-
-  test(`matches snapshot`, () => {
-    const tree = renderer.create(<HeatmapView />).toJSON()
-    expect(tree).toMatchSnapshot()
-  })
 })
