@@ -6,6 +6,7 @@
   "scripts": {
     "prepack": "rm -rf lib && babel src -d lib --copy-files",
     "test": "jest --env=node --coverage --verbose",
+    "posttest": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
     "postversion": "npm publish",
     "postpublish": "git push && git push --tags"
   },
@@ -47,10 +48,12 @@
     "babel-loader": "^8.0.5",
     "babel-polyfill": "^6.26.0",
     "clean-webpack-plugin": "^0.1.19",
+    "coveralls": "^3.0.2",
     "enzyme": "^3.8.0",
     "enzyme-adapter-react-16": "^1.9.0",
     "eslint": "^5.13.0",
     "eslint-config-gene-expression": "^0.4.2",
+    "fetch-mock": "^7.3.0",
     "file-loader": "^2.0.0",
     "jest": "^23.6.0",
     "react-test-renderer": "^16.7.0",
