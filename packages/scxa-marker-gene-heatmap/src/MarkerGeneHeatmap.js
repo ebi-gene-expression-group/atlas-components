@@ -233,11 +233,13 @@ const MarkerGeneHeatmap = (props) => {
 MarkerGeneHeatmap.propTypes = {
   chartHeight: PropTypes.number.isRequired,
   data: PropTypes.arrayOf(PropTypes.shape({
-    x: PropTypes.number,
-    y: PropTypes.number,
-    name: PropTypes.string,
-    value: PropTypes.number
-  })),
+    x: PropTypes.number.isRequired,
+    y: PropTypes.number.isRequired,
+    name: PropTypes.string.isRequired,
+    value: PropTypes.number.isRequired,
+    clusterIdWhereMarker: PropTypes.number.isRequired,
+    pValue: PropTypes.number
+  })).isRequired,
   isDataFiltered: PropTypes.bool.isRequired,
   xAxisCategories: PropTypes.array.isRequired,
   yAxisCategories: PropTypes.array.isRequired,

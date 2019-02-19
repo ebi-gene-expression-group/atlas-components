@@ -7,16 +7,18 @@ import LoadingOverlay from './LoadingOverlay'
 import _ from 'lodash'
 
 const CalloutAlert = ({error}) =>
-  <div className={`row column`}>
-    <div className={`callout alert small`}>
-      <h5>Oops!</h5>
-      <p>
-        {error.description}<br/>
-        If the error persists, in order to help us debug the issue, please copy the URL and this message and
-        send it to us via <a href={`https://www.ebi.ac.uk/support/gxasc`}>the EBI Support & Feedback system</a>:
-      </p>
-      <code>{`${error.name}: ${error.message}`}</code>
-    </div>
+  <div className={`row`}>
+    <div className={`columns large-9 large-centered`}>
+      <div className={`callout alert small`}>
+        <h5>Oops!</h5>
+        <p>
+          {error.description}<br/>
+          If the error persists, in order to help us debug the issue, please copy the URL and this message and
+          send it to us via <a href={`https://www.ebi.ac.uk/support/gxasc`}>the EBI Support & Feedback system</a>:
+        </p>
+        <code>{`${error.name}: ${error.message}`}</code>
+      </div>
+      </div>
   </div>
 
 CalloutAlert.propTypes = {
@@ -103,18 +105,18 @@ class HeatmapView extends React.Component {
     const kOptions = ks.sort((a, b) => a-b).map((k) => ({
       value: k.toString(),
       label: `k = ${k}`,
-      isDisabled: !ksWithMarkers.includes(k)
+      isDisabled: ksWithMarkers ? !ksWithMarkers.includes(k) : false
     }))
 
     const allClusterIds = Array.from(Array(Number.parseInt(selectedK)+1).keys()).slice(1)
-    const clusterIdsWithMarkers =_.uniq(data.map(x => x.clusterIdWhereMarker))
+    const clusterIdsWithMarkers = data && _.uniq(data.map(x => x.clusterIdWhereMarker))
 
     let clusterIdOptions = allClusterIds
       .sort((a, b) => a-b)
       .map((clusterId) => ({
         value: clusterId.toString(),
         label: `Cluster ${clusterId}`,
-        isDisabled: !clusterIdsWithMarkers.includes(clusterId)
+        isDisabled: clusterIdsWithMarkers ? !clusterIdsWithMarkers.includes(clusterId) : false
       }))
 
     // Add default "All clusters" option at the start of the options array
