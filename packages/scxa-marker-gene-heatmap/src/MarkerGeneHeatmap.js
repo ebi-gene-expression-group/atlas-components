@@ -21,7 +21,7 @@ const MarkerGeneHeatmap = (props) => {
   const totalNumberOfRows = Object.keys(_.groupBy(data, `name`)).length
   const groupedData = _.groupBy(data, `clusterIdWhereMarker`)
 
-  let plotLines = []
+  const plotLines = []
 
   const clusterIds = Object.keys(groupedData)
 
@@ -56,7 +56,7 @@ const MarkerGeneHeatmap = (props) => {
         zIndex = 5
       }
 
-      let plotLine = {
+      plotLines.push({
         color: color,
         width: 2,
         value: plotLineAxisPosition,
@@ -72,8 +72,7 @@ const MarkerGeneHeatmap = (props) => {
             fontSize: `12px`
           }
         }
-      }
-      plotLines.push(plotLine)
+      })
     })
   }
 

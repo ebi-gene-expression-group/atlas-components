@@ -91,7 +91,7 @@ class HeatmapView extends React.Component {
     const allClusterIds = Array.from(Array(Number.parseInt(selectedK)+1).keys()).slice(1)
     const clusterIdsWithMarkers = data && _.uniq(data.map(x => x.clusterIdWhereMarker))
 
-    let clusterIdOptions = allClusterIds
+    const clusterIdOptions = allClusterIds
       .sort((a, b) => a-b)
       .map((clusterId) => ({
         value: clusterId.toString(),
