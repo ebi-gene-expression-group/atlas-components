@@ -39,6 +39,7 @@ class HeatmapView extends React.Component {
       this.setState({
         data: await jsonData,
         filteredData: await jsonData,
+        selectedClusterId: null,
         isLoading: false,
         hasError: null
       })
