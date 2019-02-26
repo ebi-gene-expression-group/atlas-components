@@ -1,6 +1,6 @@
 {
-  "name": "expression-atlas-my-package",
-  "version": "0.0.1",
+  "name": "atlas-feedback-form",
+  "version": "0.0.2",
   "description": "This feedback form is triggered by clicking a right-side button, which contains a mandatory five-scale smiley score bar and an optional comments textbox.",
   "main": "lib/index.js",
   "scripts": {
@@ -26,10 +26,9 @@
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/gxa/my-package.git"
+    "url": "https://github.com/ebi-gene-expression-group/atlas-smileys-feedback-form"
   },
   "dependencies": {
-    "emoji-mart": "^2.9.2",
     "prop-types": "^15.6.2",
     "react": "^16.6.1",
     "react-dom": "^16.6.3",
@@ -57,6 +56,6 @@
     "react-test-renderer": "^16.6.3",
     "webpack": "^4.27.1",
     "webpack-cli": "^3.1.2",
-    "webpack-dev-server": "^3.1.10"
+    "webpack-dev-server": "^3.1.14"
   }
 }

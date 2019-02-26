@@ -1,6 +1,7 @@
 import React from 'react'
-import { Emoji } from 'emoji-mart'
 import styled from 'styled-components'
+import PropTypes from 'prop-types'
+import Emoji from './Emoji'
 
 const SmileyFace = styled.div`
   transition: all 0.5s;
@@ -21,76 +22,53 @@ class Prompt extends React.Component {
     super(props)
 
     this.state = {
-      value: this.props.defaultValue,
       smileyDescription: ``,
-      chosenSmiley: ``,
-      required: this.props.required
+      chosenSmiley: ``
     }
-
-    this.onChange = (e) => this._onChange(e)
     this.onClick = this.onClick.bind(this)
   }
 
-  static getDerivedStateFromProps(props, state) {
-    if (props.required !== state.required) {
-      return {
-        required: props.required
-      }
-    }
-    // No state update necessary
-    return null
-  }
-
-  componentDidUpdate(prevProps, prevState) {
-    if (prevState.value !== this.state.value) {
-      this.props.onChange(this.state.value, this.state.chosenSmiley)
-    }
-  }
-
-  _onChange(e) {
-    let value = e.target.value
-    this.setState({value: value})
-  }
-
-  onClick(description){
+  onClick(description, value){
     this.setState({
       chosenSmiley: description
     })
-    this.props.onSelect(description)
+    this.props.onSelect(value+1)
   }
 
   render() {
-    const {smileyDescription, chosenSmiley, value} = this.state
+    const {smileyDescription, chosenSmiley} = this.state
     const smileyScale = [`Terrible`, `Bad`, `Okay`, `Good`, `Great`]
-    const smileyId = [`disappointed`, `slightly_frowning_face`, `neutral_face`, `grin`, `satisfied`]
+    const smileyId = [`disappointed`, `pensive`, `neutral_face`, `grin`, `satisfied`]
 
-    return[
-      <p>How satisfied are you ?</p>,
-      <br/>,
-      <SmileyContainer>
-        {
-          smileyScale.map((scale, idx) =>
-            <SmileyFace key={scale} status={chosenSmiley === scale}>
-              <Emoji emoji={{id: smileyId[idx], skin: 3}} size={40} set={`emojione`}
-                onLeave={() => this.setState({smileyDescription: ``})}
-                onOver={() => this.setState({smileyDescription: scale})}
-                onClick={() => this.onClick(scale, idx)}/>
-            </SmileyFace>
-          )
-        }
-      </SmileyContainer>,
-      <p id={`scale`} style={{visibility: chosenSmiley || smileyDescription ? `visible` : `hidden`, textAlign: `center`}}>
-        {chosenSmiley || smileyDescription ?
-          smileyDescription ? smileyDescription : chosenSmiley
-          :
-          `empty`}
-      </p>,
-      <p style={{visibility: value && !chosenSmiley ? `visible` : `hidden`, color: `red`}}>This is required field.</p>,
-      <br/>,
-      <p>Would you like to add a comment ?</p>,
-      <input type="text" placeholder={this.props.placeholder} className="mm-popup__input" value={this.state.value} onChange={this.onChange} />
-    ]
+    return(
+      <div>
+        <p>How satisfied are you ?</p>
+        <br/>
+        <SmileyContainer>
+          {
+            smileyScale.map((scale, idx) =>
+              <SmileyFace key={scale} status={chosenSmiley === scale}>
+                <Emoji emoji={smileyId[idx]}
+                  onLeave={() => this.setState({smileyDescription: ``})}
+                  onOver={() => this.setState({smileyDescription: scale})}
+                  onClick={() => this.onClick(scale,idx)}/>
+              </SmileyFace>
+            )
+          }
+        </SmileyContainer>
+        <p id={`scale`} style={{visibility: chosenSmiley || smileyDescription ? `visible` : `hidden`, textAlign: `center`}}>
+          { smileyDescription || chosenSmiley || `empty` }
+        </p>
+        <br/>
+        <a href={this.props.feedbackFormLink}>Click here to add a comment. </a>
+      </div>
+    )
   }
+}
+
+Prompt.propTypes = {
+  onSelect: PropTypes.func.isRequired,
+  feedbackFormLink: PropTypes.string.isRequired
 }
 
 export default Prompt
