@@ -15,7 +15,7 @@ describe(`SceaHomepageSpeciesContainer`, () => {
     cards: [ batmanFilmsSpeciesCardProps, findingNemoSpeciesCardProps ]
   }
 
-  test(`renders species cards using Foundation’s block grid`, async () => {
+  test(`renders species cards using Foundation’s block grid`, () => {
     const wrapper = shallow(<SceaHomepageSpeciesContainer {...props} />)
 
     expect(wrapper.find(SpeciesCard)).toHaveLength(props.cards.length)

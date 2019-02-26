@@ -3,6 +3,8 @@ import renderer from 'react-test-renderer'
 import Enzyme from 'enzyme'
 import { shallow } from 'enzyme'
 import Adapter from 'enzyme-adapter-react-16'
+
+import '@babel/polyfill'
 import fetchMock from 'fetch-mock'
 
 import { getRandomInt } from './TestUtils'
