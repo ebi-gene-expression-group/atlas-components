@@ -19,7 +19,7 @@ describe(`SceaHomepageSpeciesContainer`, () => {
     const wrapper = shallow(<SceaHomepageSpeciesContainer {...props} />)
 
     expect(wrapper.find(SpeciesCard)).toHaveLength(props.cards.length)
-    expect(wrapper.find(`.row.small-up-2.medium-up-3`).exists()).toBe(true)
+    expect(wrapper.find(`.row.small-up-2.medium-up-6`).exists()).toBe(true)
     expect(wrapper.find(`.column.column-block`)).toHaveLength(props.cards.length)
   })
 })

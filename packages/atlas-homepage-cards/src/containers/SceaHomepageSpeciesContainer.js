@@ -13,7 +13,7 @@ const CardContainer = styled.div`
 `
 
 const SceaHomepageSpeciesContainer = ({cards}) =>
-  <div className={`row small-up-2 medium-up-3`}>
+  <div className={`row small-up-2 medium-up-6`}>
     {
       Array.isArray(cards) &&
       cards.map((card, index) =>
