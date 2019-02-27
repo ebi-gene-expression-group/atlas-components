@@ -58,7 +58,7 @@ class FeedbackButton extends React.Component {
     Popup.registerPlugin(
       `prompt`,
       (smileyScore, smileyChange, callback) => {
-        this.create({
+        Popup.create({
           title: `Your feedback`,
           content: <Prompt feedbackFormLink={feedbackFormLink} onSelect={smileyChange}/>,
           buttons: {
