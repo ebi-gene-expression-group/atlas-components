@@ -83,8 +83,7 @@ class FeedbackButton extends React.Component{
 
   }
 
-  render(){
-    ReactGA.initialize(this.props.GAid)
+    ReactGA.initialize(this.props.gaId)
     ReactGA.pageview(window.location.pathname + window.location.search)
 
     return(
@@ -100,7 +99,7 @@ class FeedbackButton extends React.Component{
 
 FeedbackButton.propTypes = {
   feedbackFormLink: PropTypes.string.isRequired,
-  GAid: PropTypes.string.isRequired
+  gaId: PropTypes.string.isRequired
 }
 
 export default FeedbackButton
