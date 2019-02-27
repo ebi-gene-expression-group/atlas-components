@@ -10,24 +10,19 @@ import Prompt from './Prompt'
 const FeedbackButtonDiv = styled.button`
   position: fixed;
   bottom: 50%;
-  right: 0px;
+  right: 0;
   display: inline-block;
-  border-radius: 0px;
   background-color: #3497c5;
-  border: none;
   color: white;
-  text-align: center;
   font-size: 1.2rem;
-  padding: 0.25rem;
+  padding: 0.25rem 0.25rem 1rem 0.25rem;
   transition: all 0.2s;
-  margin: -40px;
-  &:hover {
+  margin: -45px;
+  :hover {
     background-color: #2f5767;
     cursor: pointer;
   }
   box-shadow: 2px 2px 3px #999;
-  -ms-transform: rotate(-90deg); /* IE 9 */
-  -webkit-transform: rotate(-90deg); /* Safari 3-8 */
   transform: rotate(-90deg);
 `
 
