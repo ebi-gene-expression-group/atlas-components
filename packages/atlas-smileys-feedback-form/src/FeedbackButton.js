@@ -65,7 +65,7 @@ class FeedbackButton extends React.Component {
             left: [`cancel`],
             right: smileyScore ?
               [{
-                text: `Save`,
+                text: `Submit`,
                 className: `success`,
                 action: () => {
                   callback()
