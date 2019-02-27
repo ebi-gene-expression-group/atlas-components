@@ -2,115 +2,62 @@
 
 exports[`Prompt matches snapshot 1`] = `
 <div>
-  <p>
-    How satisfied are you ?
+  <p
+    style={
+      Object {
+        "paddingBottom": "1rem",
+      }
+    }
+  >
+    How satisfied are you?
   </p>
-  <br />
   <div
     className="sc-bwzfXH jmOmbA"
   >
     <div
-      className="sc-bdVaJa eQqCNi"
-    >
-      <span
-        id="disappointed"
-        onClick={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-        style={
-          Object {
-            "fontSize": "40px",
-          }
-        }
-      >
-        😞
-      </span>
-    </div>
+      className="sc-bdVaJa jyeDiH"
+      label="Terrible"
+      onClick={[Function]}
+      selected={false}
+    />
     <div
-      className="sc-bdVaJa eQqCNi"
-    >
-      <span
-        id="pensive"
-        onClick={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-        style={
-          Object {
-            "fontSize": "40px",
-          }
-        }
-      >
-        😔
-      </span>
-    </div>
+      className="sc-bdVaJa dpPsPz"
+      label="Bad"
+      onClick={[Function]}
+      selected={false}
+    />
     <div
-      className="sc-bdVaJa eQqCNi"
-    >
-      <span
-        id="neutral_face"
-        onClick={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-        style={
-          Object {
-            "fontSize": "40px",
-          }
-        }
-      >
-        😐
-      </span>
-    </div>
+      className="sc-bdVaJa iTGzAl"
+      label="Okay"
+      onClick={[Function]}
+      selected={false}
+    />
     <div
-      className="sc-bdVaJa eQqCNi"
-    >
-      <span
-        id="grin"
-        onClick={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-        style={
-          Object {
-            "fontSize": "40px",
-          }
-        }
-      >
-        😁
-      </span>
-    </div>
+      className="sc-bdVaJa gNkLYR"
+      label="Good"
+      onClick={[Function]}
+      selected={false}
+    />
     <div
-      className="sc-bdVaJa eQqCNi"
-    >
-      <span
-        id="satisfied"
-        onClick={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-        style={
-          Object {
-            "fontSize": "40px",
-          }
-        }
-      >
-        😆
-      </span>
-    </div>
+      className="sc-bdVaJa fksfqK"
+      label="Great"
+      onClick={[Function]}
+      selected={false}
+    />
   </div>
   <p
-    id="scale"
     style={
       Object {
-        "textAlign": "center",
-        "visibility": "hidden",
+        "paddingTop": "1rem",
       }
     }
   >
-    empty
+    <a
+      href="https://www.ebi.ac.uk/support/gxasc"
+      target="_blank"
+    >
+      Click here if you need support.
+    </a>
   </p>
-  <br />
-  <a
-    href="linto"
-  >
-    Click here to add a comment. 
-  </a>
 </div>
 `;
