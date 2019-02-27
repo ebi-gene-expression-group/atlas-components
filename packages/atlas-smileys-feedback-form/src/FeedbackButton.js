@@ -41,26 +41,13 @@ class FeedbackButton extends React.Component {
 
     this.onClick = this.onClick.bind(this)
     this.smileyChange = this.smileyChange.bind(this)
-  }
-
-  smileyChange(smileyScore) {
-    this.setState(
-      { smileyScore: smileyScore },
-      () => {
-        Popup.close()
-        this.onClick()
-      })
-  }
-
-  onClick() {
-    const {feedbackFormLink} = this.props
 
     Popup.registerPlugin(
       `prompt`,
       (smileyScore, smileyChange, callback) => {
         Popup.create({
           title: `Your feedback`,
-          content: <Prompt feedbackFormLink={feedbackFormLink} onSelect={smileyChange}/>,
+          content: <Prompt feedbackFormLink={props.feedbackFormLink} onSelect={smileyChange}/>,
           buttons: {
             left: [`cancel`],
             right: smileyScore ?
@@ -81,6 +68,19 @@ class FeedbackButton extends React.Component {
         })
       }
     )
+  }
+
+  smileyChange(smileyScore) {
+    this.setState(
+      { smileyScore: smileyScore },
+      () => {
+        Popup.close()
+        this.onClick()
+      })
+  }
+
+  onClick() {
+    const {feedbackFormLink} = this.props
 
     Popup.plugins().prompt(
       this.state.smileyScore,
@@ -93,7 +93,7 @@ class FeedbackButton extends React.Component {
     ReactGA.initialize(this.props.gaId)
     ReactGA.pageview(window.location.pathname + window.location.search)
 
-    return(
+    return (
       <div>
         <Popup defaultOk={`Ok`} />
         <FeedbackButtonDiv onClick={this.onClick}>
