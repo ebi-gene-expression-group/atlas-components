@@ -1,16 +1,9 @@
 import React from 'react'
-import styled from 'styled-components'
 import PropTypes from 'prop-types'
-import Emoji from './Emoji'
+import styled from 'styled-components'
 
-const SmileyFace = styled.div`
-  transition: all 0.5s;
-  cursor: pointer;
-  opacity: ${props => props.status ? 1.0 : 0.2};
-  &:hover {
-    opacity: 1.0
-  };
-`
+import smileyData from './smileyData'
+import Smiley from './Smiley'
 
 const SmileyContainer = styled.div`
   display: flex;
@@ -22,45 +15,36 @@ class Prompt extends React.Component {
     super(props)
 
     this.state = {
-      smileyDescription: ``,
-      chosenSmiley: ``
+      selectedSmileyScore: 0
     }
+
     this.onClick = this.onClick.bind(this)
   }
 
-  onClick(description, value){
+  onClick(selectedSmileyScore) {
     this.setState({
-      chosenSmiley: description
+      selectedSmileyScore: selectedSmileyScore
     })
-    this.props.onSelect(value+1)
+    this.props.onSelect(selectedSmileyScore)
   }
 
   render() {
-    const {smileyDescription, chosenSmiley} = this.state
-    const smileyScale = [`Terrible`, `Bad`, `Okay`, `Good`, `Great`]
-    const smileyId = [`disappointed`, `pensive`, `neutral_face`, `grin`, `satisfied`]
-
     return(
       <div>
-        <p>How satisfied are you ?</p>
-        <br/>
+        <p style={{paddingBottom: `1rem`}}>How satisfied are you?</p>
         <SmileyContainer>
           {
-            smileyScale.map((scale, idx) =>
-              <SmileyFace key={scale} status={chosenSmiley === scale}>
-                <Emoji emoji={smileyId[idx]}
-                  onLeave={() => this.setState({smileyDescription: ``})}
-                  onOver={() => this.setState({smileyDescription: scale})}
-                  onClick={() => this.onClick(scale,idx)}/>
-              </SmileyFace>
+            smileyData.map((smiley, idx) =>
+              <Smiley key={idx} onClick={() => this.onClick(smiley.score)}
+                emoji={smiley.emoji}
+                label={smiley.label}
+                selected={smiley.score === this.state.selectedSmileyScore}/>
             )
           }
         </SmileyContainer>
-        <p id={`scale`} style={{visibility: chosenSmiley || smileyDescription ? `visible` : `hidden`, textAlign: `center`}}>
-          { smileyDescription || chosenSmiley || `empty` }
+        <p style={{paddingTop: `1rem`}}>
+          <a href={this.props.feedbackFormLink} target={`_blank`}>Click here if you need support.</a>
         </p>
-        <br/>
-        <a href={this.props.feedbackFormLink}>Click here to add a comment. </a>
       </div>
     )
   }
