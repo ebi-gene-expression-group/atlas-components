@@ -82,6 +82,11 @@ class FeedbackButton extends React.Component {
       }
     )
 
+    Popup.plugins().prompt(
+      this.state.smileyScore,
+      this.smileyChange,
+      () => { Popup.alert(`Thank you for submitting your feedback.`) }
+    )
   }
 
   render() {
