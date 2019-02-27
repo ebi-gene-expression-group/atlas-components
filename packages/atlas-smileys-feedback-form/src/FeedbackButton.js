@@ -80,8 +80,6 @@ class FeedbackButton extends React.Component {
   }
 
   onClick() {
-    const {feedbackFormLink} = this.props
-
     Popup.plugins().prompt(
       this.state.smileyScore,
       this.smileyChange,
@@ -105,7 +103,9 @@ class FeedbackButton extends React.Component {
 }
 
 FeedbackButton.propTypes = {
-  feedbackFormLink: PropTypes.string.isRequired,
+  feedbackFormLink: PropTypes.oneOf([
+    `https://www.ebi.ac.uk/support/gxa`,
+    `https://www.ebi.ac.uk/support/gxasc`]).isRequired,
   gaId: PropTypes.string.isRequired
 }
 
