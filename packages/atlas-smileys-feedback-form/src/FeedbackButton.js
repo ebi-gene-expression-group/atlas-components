@@ -95,7 +95,7 @@ class FeedbackButton extends React.Component {
 
     return (
       <div>
-        <Popup defaultOk={`Ok`} />
+        <Popup />
         <FeedbackButtonDiv onClick={this.onClick}>
           <i className={`icon icon-functional`} data-icon={`n`} style={{paddingRight: `0.5rem`}}></i>Feedback
         </FeedbackButtonDiv>
