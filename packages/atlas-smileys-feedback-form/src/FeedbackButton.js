@@ -8,19 +8,17 @@ import ReactGA from 'react-ga'
 import Prompt from './Prompt'
 
 const FeedbackButtonDiv = styled.button`
-  position:fixed;
-  bottom:40%;
-  right:0px;
+  position: fixed;
+  bottom: 50%;
+  right: 0px;
   display: inline-block;
   border-radius: 0px;
   background-color: #3497c5;
   border: none;
   color: white;
   text-align: center;
-  font-size: 18px;
-  padding: 2px;
-  width: 120px;
-  height: 30px;
+  font-size: 1.2rem;
+  padding: 0.25rem;
   transition: all 0.2s;
   margin: -40px;
   &:hover {
