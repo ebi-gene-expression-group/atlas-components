@@ -36,12 +36,15 @@ const highchartsBaseConfig = {
 
   chart: {
     type: `scatter`,
-    borderWidth: 1,
-    borderColor: `dark blue`,
+    spacingLeft: 0,
     height: `100%`,
     panning: true,
     spacingTop: 50,
-    zoomType: `xy`
+    zoomType: `xy`,
+    plotBackgroundColor: `transparent`, // This needs to be set to allow access to this.plotBackground
+    events: {
+      load: function() { this.plotBackground.htmlCss({ cursor: `crosshair` }) }
+    }
   },
 
   legend: {
@@ -86,6 +89,7 @@ const highchartsBaseConfig = {
     }
   },
   xAxis: {
+    lineColor: `#e6e6e6`,
     title: {
       text: null
     },
@@ -95,6 +99,7 @@ const highchartsBaseConfig = {
     tickWidth: 0
   },
   yAxis: {
+    lineColor: `#e6e6e6`,
     title: {
       text: null
     },
@@ -110,7 +115,7 @@ const highchartsBaseConfig = {
   plotOptions: {
     series: {
       turboThreshold: 0,
-      animation: false,
+      animation: false
     }
   }
 }
@@ -124,7 +129,8 @@ const ScatterPlot = (props) => {
       {
         plotOptions: {
           series: {
-            marker: {radius: 3}
+            marker: {radius: 3},
+            stickyTracking: false
           }
         }
       },
