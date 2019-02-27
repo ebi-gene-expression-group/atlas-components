@@ -1,10 +1,11 @@
 import React from 'react'
-import styled from 'styled-components'
-import Popup from 'react-popup'
 import PropTypes from 'prop-types'
 
-import Prompt from './Prompt'
+import styled from 'styled-components'
+import Popup from 'react-popup'
 import ReactGA from 'react-ga'
+
+import Prompt from './Prompt'
 
 const FeedbackButtonDiv = styled.button`
   position:fixed;
