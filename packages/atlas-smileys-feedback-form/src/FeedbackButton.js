@@ -84,14 +84,15 @@ class FeedbackButton extends React.Component {
 
   }
 
+  render() {
     ReactGA.initialize(this.props.gaId)
     ReactGA.pageview(window.location.pathname + window.location.search)
 
     return(
       <div>
-        <Popup defaultOk={`OK`} />
-        <FeedbackButtonDiv id={`feedback-button`} onClick={this.onClick}>
-          <i className={`icon icon-functional`} data-icon="n"> </i>Feedback
+        <Popup defaultOk={`Ok`} />
+        <FeedbackButtonDiv onClick={this.onClick}>
+          <i className={`icon icon-functional`} data-icon={`n`} style={{paddingRight: `0.5rem`}}></i>Feedback
         </FeedbackButtonDiv>
       </div>
     )
