@@ -31,55 +31,56 @@ const FeedbackButtonDiv = styled.button`
   transform: rotate(-90deg);
 `
 
-class FeedbackButton extends React.Component{
-
+class FeedbackButton extends React.Component {
   constructor(props) {
     super(props)
 
     this.state = {
-      smiley: 0
+      smileyScore: null
     }
+
     this.onClick = this.onClick.bind(this)
     this.smileyChange = this.smileyChange.bind(this)
   }
 
-  smileyChange(smileyValue){
+  smileyChange(smileyScore) {
     this.setState(
-      {smiley: smileyValue},
+      { smileyScore: smileyScore },
       () => {
-        Popup.close() 
+        Popup.close()
         this.onClick()
       })
   }
 
-  onClick(){
+  onClick() {
     const {feedbackFormLink} = this.props
 
-    Popup.registerPlugin(`prompt`, function (smiley, smileyChange, callback) {
-      this.create({
-        title: `Your feedback`,
-        content: <Prompt feedbackFormLink={feedbackFormLink} onSelect={smileyChange} />,
-        buttons: {
-          left: [`cancel`],
-          right: smiley ? [{
-            text: `Save`,
-            className: `success`,
-            action: function () {
-              callback()
-              smiley && ReactGA.event({
-                category: `Satisfaction`,
-                action: smiley.toString()
-              })
-              smiley && Popup.close()
-            }
-          }] : []
-        }
-      })
-    })
-
-    Popup.plugins().prompt(this.state.smiley, this.smileyChange, function () {
-      Popup.alert(`Thank you for submitting your feedback.`)
-    })
+    Popup.registerPlugin(
+      `prompt`,
+      (smileyScore, smileyChange, callback) => {
+        this.create({
+          title: `Your feedback`,
+          content: <Prompt feedbackFormLink={feedbackFormLink} onSelect={smileyChange}/>,
+          buttons: {
+            left: [`cancel`],
+            right: smileyScore ?
+              [{
+                text: `Save`,
+                className: `success`,
+                action: () => {
+                  callback()
+                  smileyScore && ReactGA.event({
+                    category: `Satisfaction`,
+                    action: smileyScore.toString()
+                  })
+                  smileyScore && Popup.close()
+                }
+              }] :
+              []
+          }
+        })
+      }
+    )
 
   }
 
