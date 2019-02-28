@@ -1,6 +1,6 @@
 {
   "name": "atlas-feedback-form",
-  "version": "1.0.0-beta",
+  "version": "1.0.0",
   "description": "This feedback form is triggered by clicking a right-side button, which contains a mandatory five-scale smiley score bar and an optional comments textbox.",
   "main": "lib/index.js",
   "scripts": {
