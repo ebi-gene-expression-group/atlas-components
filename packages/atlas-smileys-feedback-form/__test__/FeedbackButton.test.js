@@ -1,7 +1,7 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
 import Enzyme from 'enzyme'
-import {shallow, mount} from 'enzyme'
+import {mount} from 'enzyme'
 import Adapter from 'enzyme-adapter-react-16'
 
 import Prompt from '../src/Prompt'
@@ -25,7 +25,7 @@ describe(`FeedbackButton`, () => {
   test(`should display a a feedback form by clicking the button`, () => {
     const wrapper = mount(<FeedbackButton {...props}/>)
     expect(wrapper.find(Prompt)).toHaveLength(0)
-    wrapper.find(`button`).simulate('click')
+    wrapper.find(`button`).simulate(`click`)
     expect(wrapper.find(Prompt)).toHaveLength(1)
   })
 

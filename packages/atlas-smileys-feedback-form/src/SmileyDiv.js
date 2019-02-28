@@ -1,8 +1,7 @@
-import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
-const Smiley = styled.div`
+const SmileyDiv = styled.div`
   transition: all 0.5s;
   text-align: center;
   cursor: pointer;
@@ -28,10 +27,10 @@ const Smiley = styled.div`
 
 `
 
-Smiley.propTypes = {
+SmileyDiv.propTypes = {
   emoji: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
   selected: PropTypes.bool.isRequired
 }
 
-export default Smiley
+export default SmileyDiv

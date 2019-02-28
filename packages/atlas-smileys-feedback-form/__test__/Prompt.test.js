@@ -5,7 +5,7 @@ import {shallow, mount} from 'enzyme'
 import Adapter from 'enzyme-adapter-react-16'
 
 import Prompt from '../src/Prompt'
-import Smiley from '../src/Smiley'
+import SmileyDiv from '../src/SmileyDiv'
 
 Enzyme.configure({ adapter: new Adapter() })
 
@@ -19,7 +19,7 @@ describe(`Prompt`, () => {
 
   test(`should render 5 smiley faces and 1 link to EBI support`, () => {
     const wrapper = shallow(<Prompt {...props}/>)
-    expect(wrapper.find(Smiley)).toHaveLength(5)
+    expect(wrapper.find(SmileyDiv)).toHaveLength(5)
     expect(wrapper.find(`a`)).toHaveLength(1)
   })
 
@@ -27,10 +27,10 @@ describe(`Prompt`, () => {
     const wrapper = mount(<Prompt {...props}/>)
     expect(wrapper.state(`selectedSmileyScore`)).toBe(0)
 
-    wrapper.find(Smiley).first().simulate(`click`)
+    wrapper.find(SmileyDiv).first().simulate(`click`)
     expect(wrapper.state(`selectedSmileyScore`)).toBe(1)
 
-    wrapper.find(Smiley).last().simulate(`click`)
+    wrapper.find(SmileyDiv).last().simulate(`click`)
     expect(wrapper.state(`selectedSmileyScore`)).toBe(5)
   })
 

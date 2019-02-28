@@ -3,11 +3,11 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
 import smileyData from './smileyData'
-import Smiley from './Smiley'
+import SmileyDiv from './SmileyDiv'
 
 const SmileyContainer = styled.div`
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
 `
 
 class Prompt extends React.Component {
@@ -35,7 +35,7 @@ class Prompt extends React.Component {
         <SmileyContainer>
           {
             smileyData.map((smiley, idx) =>
-              <Smiley key={idx} onClick={() => this.onClick(smiley.score)}
+              <SmileyDiv key={idx} onClick={() => this.onClick(smiley.score)}
                 emoji={smiley.emoji}
                 label={smiley.label}
                 selected={smiley.score === this.state.selectedSmileyScore}/>
