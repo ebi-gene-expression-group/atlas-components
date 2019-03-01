@@ -175,7 +175,7 @@ HeatmapView.propTypes = {
 
 HeatmapView.defaultProps = {
   wrapperClassName: `row`,
-  plotWrapperClassName: `medium-12 columns`,
+  plotWrapperClassName: `small-12 columns`,
   defaultHeatmapHeight: 300,
   hasDynamicHeight: true,
   heatmapRowHeight: 20
