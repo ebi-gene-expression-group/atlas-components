@@ -120,10 +120,10 @@ const MarkerGeneHeatmap = (props) => {
         useHtml: true,
         formatter: function () {
           if (isDataFiltered && this.value === data[0].clusterIdWhereMarker) {
-            return '<span style="font-size: 12px; font-weight: bold; color: #e96b23;"> Cluster ' + this.value + '</span>';
+            return `<span style="font-size: 12px; font-weight: bold; color: #e96b23;">Cluster ${this.value}</span>`
           }
           else {
-            return 'Cluster ' + this.value
+            return `Cluster ${this.value}`
           }
         }
       },

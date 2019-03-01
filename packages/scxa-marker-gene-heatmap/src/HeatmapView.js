@@ -88,7 +88,7 @@ class HeatmapView extends React.Component {
         value: k.toString(),
         label: `k = ${k}`,
         isDisabled: ksWithMarkers ? !ksWithMarkers.includes(k) : false
-    }))
+      }))
 
     const allClusterIds = _.range(1, parseInt(selectedK) + 1)
     const clusterIdsWithMarkers = data && _.uniq(data.map(x => x.clusterIdWhereMarker))
@@ -126,7 +126,7 @@ class HeatmapView extends React.Component {
                 labelText={`Show marker genes for:`}
                 options={clusterIdOptions}
                 onSelect={(selectedOption) => {
-                  this.setState((state, props) => ({
+                  this.setState((state) => ({
                     data: _.cloneDeep(state.data),
                     filteredData: selectedOption.value === `all` ?
                       _.cloneDeep(state.data) :

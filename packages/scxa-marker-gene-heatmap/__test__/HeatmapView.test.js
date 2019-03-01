@@ -23,9 +23,6 @@ describe(`HeatmapView`, () => {
 
   test(`Renders error if API request is unsuccessful`, () => {
     const wrapper = shallow(<HeatmapView {...props} />)
-
-    console.log(wrapper.debug())
-
     expect(wrapper.exists(CalloutAlert)).toBe(true)
   })
 })
