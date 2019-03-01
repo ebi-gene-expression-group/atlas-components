@@ -61,7 +61,7 @@ const PlotSettingsDropdown = (props) => {
       components={{ DropdownIndicator, IndicatorSeparator: null }}
       options={options}
       onChange={onSelect}
-      value={defaultValue}
+      defaultValue={defaultValue}
       formatGroupLabel={formatGroupLabel}
       styles={ebiVfSelectStyles}
       isOptionDisabled={isOptionDisabled}
