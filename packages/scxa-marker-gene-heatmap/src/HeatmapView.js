@@ -82,10 +82,12 @@ class HeatmapView extends React.Component {
     const { ks, ksWithMarkers, selectedK, onSelectK } = this.props
     const { hasDynamicHeight, defaultHeatmapHeight, heatmapRowHeight } = this.props
 
-    const kOptions = ks.sort((a, b) => a-b).map((k) => ({
-      value: k.toString(),
-      label: `k = ${k}`,
-      isDisabled: ksWithMarkers ? !ksWithMarkers.includes(k) : false
+    const kOptions = ks
+      .sort((a, b) => a-b)
+      .map((k) => ({
+        value: k.toString(),
+        label: `k = ${k}`,
+        isDisabled: ksWithMarkers ? !ksWithMarkers.includes(k) : false
     }))
 
     const allClusterIds = Array.from(Array(Number.parseInt(selectedK)+1).keys()).slice(1)
@@ -116,7 +118,7 @@ class HeatmapView extends React.Component {
                 labelText={`Show marker genes for:`}
                 options={kOptions}
                 onSelect={(selectedOption) => onSelectK(selectedOption.value)}
-                defaultValue={{value: selectedK, label: `k = ${selectedK}`}}
+                value={{value: selectedK, label: `k = ${selectedK}`}}
               />
             </div>
             <div className={`small-12 medium-6 columns`}>
@@ -132,7 +134,7 @@ class HeatmapView extends React.Component {
                     selectedClusterId: selectedOption
                   }))
                 }}
-                defaultValue={selectedClusterId || clusterIdOptions[0]}
+                value={selectedClusterId || clusterIdOptions[0]}
               />
             </div>
           </div>

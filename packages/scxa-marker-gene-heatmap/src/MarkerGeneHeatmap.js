@@ -9,7 +9,7 @@ import HighchartsExporting from 'highcharts/modules/exporting'
 
 import _ from 'lodash'
 
-// init the module
+// initialise modules
 async function addModules() {
   HighchartsHeatmap(Highcharts)
   HighchartsNoData(Highcharts)
