@@ -1,15 +1,19 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+
 import Highcharts from 'highcharts'
 import HighchartsReact from 'highcharts-react-official'
-import HC_heatmap from 'highcharts/modules/heatmap'
-import HC_nodata from 'highcharts/modules/no-data-to-display'
+import HighchartsHeatmap from 'highcharts/modules/heatmap'
+import HighchartsNoData from 'highcharts/modules/no-data-to-display'
+import HighchartsExporting from 'highcharts/modules/exporting'
+
 import _ from 'lodash'
 
 // init the module
 async function addModules() {
-  HC_heatmap(Highcharts)
-  HC_nodata(Highcharts)
+  HighchartsHeatmap(Highcharts)
+  HighchartsNoData(Highcharts)
+  HighchartsExporting(Highcharts)
 }
 
 addModules()
