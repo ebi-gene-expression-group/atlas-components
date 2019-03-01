@@ -90,7 +90,7 @@ class HeatmapView extends React.Component {
         isDisabled: ksWithMarkers ? !ksWithMarkers.includes(k) : false
     }))
 
-    const allClusterIds = Array.from(Array(Number.parseInt(selectedK)+1).keys()).slice(1)
+    const allClusterIds = _.range(1, parseInt(selectedK) + 1)
     const clusterIdsWithMarkers = data && _.uniq(data.map(x => x.clusterIdWhereMarker))
 
     const clusterIdOptions = allClusterIds
@@ -115,7 +115,7 @@ class HeatmapView extends React.Component {
           <div className={wrapperClassName}>
             <div className={`small-12 medium-6 columns`}>
               <PlotSettingsDropdown
-                labelText={`Show marker genes for:`}
+                labelText={`Number of clusters:`}
                 options={kOptions}
                 onSelect={(selectedOption) => onSelectK(selectedOption.value)}
                 value={{value: selectedK, label: `k = ${selectedK}`}}
