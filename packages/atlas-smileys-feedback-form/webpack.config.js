@@ -6,7 +6,7 @@ const vendorsBundleName = `vendors`
 
 module.exports = {
   entry: {
-    feedbackForm: [`@babel/polyfill`, `./html/render.js`],
+    feedbackFormButton: [`@babel/polyfill`, `./src/index.js`],
   },
 
   plugins: [
