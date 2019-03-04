@@ -23,16 +23,18 @@ describe(`FilterSidebar`, () => {
   const props = {
     facets: uniqueFacets,
     checkboxFacetGroups: [`Season`],
+    results: episodes,
     onChange: () => {}
   }
 
   const noTooltipProps = {
     facets:[
-          {
-            group: `Guest character`,
-            value: `birdperson`,
-            label: `Birdperson`
-          }],
+      {
+        group: `Guest character`,
+        value: `birdperson`,
+        label: `Birdperson`
+      }],
+    results: episodes,
     checkboxFacetGroups: [`Season`],
     onChange: () => {}
   }
@@ -57,6 +59,11 @@ describe(`FilterSidebar`, () => {
     const randomCheckboxFacetGroup = groups[getRandomInt(0, groups.length)]
     const wrapper = mount(<FilterSidebar {...noTooltipProps} checkboxFacetGroups={[randomCheckboxFacetGroup]} />)
     expect(wrapper.find(`sup`).exists()).toEqual(false)
+  })
+
+  test(`hides checkbox if all results share the same facets`, () => {
+    const wrapper = mount(<FilterSidebar facets={uniqueFacets} checkboxFacetGroups={[`Show`, `Season`]} onChange={() => {}} />)
+    expect(wrapper.find({ type: `checkbox` }).length).toBeLessThan(uniqueFacets.length)
   })
 
   test(`matches snapshot`, () => {

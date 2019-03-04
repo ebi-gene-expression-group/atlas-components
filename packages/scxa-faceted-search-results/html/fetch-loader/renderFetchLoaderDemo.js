@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-import FetchLoader from '../src/FetchLoader'
+import FetchLoader from '../../src/FetchLoader'
 
 import ExperimentCard from './ExperimentCard'
 

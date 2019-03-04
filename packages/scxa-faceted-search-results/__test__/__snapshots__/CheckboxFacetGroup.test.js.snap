@@ -7,7 +7,6 @@ exports[`CheckboxFacetGroup matches snapshot 1`] = `
   <h4>
     Planet
     <sup>
-       
       <span
         className="icon icon-generic"
         data-html={true}

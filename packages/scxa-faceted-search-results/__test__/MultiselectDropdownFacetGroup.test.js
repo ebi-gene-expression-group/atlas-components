@@ -5,7 +5,7 @@ import { mount } from 'enzyme'
 import Adapter from 'enzyme-adapter-react-16'
 import _ from 'lodash'
 
-import { getRandomInt, episodes } from './TestUtils'
+import { episodes } from './TestUtils'
 
 import MultiselectDropdownFacetGroup from '../src/facetgroups/MultiselectDropdownFacetGroup'
 
@@ -38,11 +38,6 @@ describe(`MultiselectDropdownFacetGroup`, () => {
   }
 
   test(`displays tooltip if it exists`, () => {
-    const groups = [...new Set(uniqueFacets.map((facet) => facet.group))]
-    const descriptions = [...new Set(uniqueFacets.map((facet) => facet.description))]
-    const randomMultiselectFacetGroup = groups[getRandomInt(0, groups.length)]
-    const randomMultiselectFacetGroupDescription = descriptions[getRandomInt(0, descriptions.length)]
-
     const wrapper = mount(<MultiselectDropdownFacetGroup {...propsWithTooltip} />)
     expect(wrapper.find(`sup`).first().html()).toEqual(expect.stringMatching(`data-tip`))
   })

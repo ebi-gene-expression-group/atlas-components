@@ -2,7 +2,6 @@
 
 exports[`TooltipIcon matches snapshot 1`] = `
 <sup>
-   
   <span
     className="icon icon-generic"
     data-html={true}

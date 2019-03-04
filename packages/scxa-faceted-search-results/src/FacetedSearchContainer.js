@@ -12,18 +12,28 @@ class FacetedSearchContainer extends React.Component {
   constructor(props) {
     super(props)
 
+    const uniqueFacets = _(props.results)
+      .flatMap(`facets`)
+      .compact()   // lodash will emit undefined if `facets` doesn’t exist :/
+      .uniqWith(_.isEqual)
+      .map((facet) => ({...facet, disabled: false}))
+      .value()
+
+    const groupedResultFacets = props.results.map(result => _.groupBy(result.facets, `group`))
+    const groupedUniqueFacets = Object.keys(_.groupBy(uniqueFacets, `group`))
+
+    const sharedFacets =
+      groupedUniqueFacets.filter(group =>
+        !groupedResultFacets.every((result, idx, results) =>
+          _.isEqual(result[group], results[0][group])))
+
     this.state = {
-      facets:
-        _(props.results)
-          .flatMap(`facets`)
-          .compact()   // lodash will emit undefined if `facets` doesn’t exist :/
-          .uniqWith(_.isEqual)
-          .map((facet) => ({...facet, disabled: false}))
-          .value(),
-      selectedFacets: {}  // TODO (?) Build initial state of checked filters from props if wrapped in React Router
+      facets: uniqueFacets.filter(facet => sharedFacets.includes(facet.group)),
+      selectedFacets: {} // TODO (?) Build initial state of checked filters from props if wrapped in React Router,
     }
 
     this._handleChange = this._handleChange.bind(this)
+    this._filterResults = this._filterResults.bind(this)
   }
 
   _filterResults(facets) {
@@ -106,29 +116,27 @@ class FacetedSearchContainer extends React.Component {
     }
 
     this.setState({
-       facets: nextFacets,
-       selectedFacets: nextSelectedFacets
+      facets: nextFacets,
+      selectedFacets: nextSelectedFacets
     })
   }
 
   render() {
-    const {facets} = this.state
-
+    const {facets, selectedFacets} = this.state
     const {checkboxFacetGroups, ResultElementClass, ResultsHeaderClass, resultsMessage} = this.props
-    const {selectedFacets} = this.state
 
     return(
       <div className={`row expanded`}>
         {
           facets.length > 0 &&
           <div className={`small-12 medium-4 large-3 columns`}>
-            <FilterSidebar {...{facets, checkboxFacetGroups}} onChange={this._handleChange}/>
+            <FilterSidebar {...{checkboxFacetGroups, facets}} onChange={this._handleChange}/>
           </div>
         }
 
         <div className={`small-12 medium-8 large-9 columns`}>
           <FilterList {...{resultsMessage, ResultElementClass, ResultsHeaderClass}}
-                      filteredResults={this._filterResults(selectedFacets)}/>
+            filteredResults={this._filterResults(selectedFacets)}/>
         </div>
         <ReactTooltip effect={`solid`}/>
       </div>

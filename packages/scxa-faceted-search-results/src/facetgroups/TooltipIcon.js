@@ -18,11 +18,12 @@ const splitText = str => {
 }
 
 const TooltipIcon = ({tooltipText}) =>
-  <sup> <span
-          data-tip={`<span>${splitText(tooltipText)}</span>`}
-          data-html={true}
-          className={`icon icon-generic`} data-icon={`i`}
-          style={{color: `lightgrey`, fontSize: `smaller`}}/>
+  <sup>
+    <span
+      data-tip={`<span>${splitText(tooltipText)}</span>`}
+      data-html={true}
+      className={`icon icon-generic`} data-icon={`i`}
+      style={{color: `lightgrey`, fontSize: `smaller`}}/>
   </sup>
 
 TooltipIcon.propTypes = {

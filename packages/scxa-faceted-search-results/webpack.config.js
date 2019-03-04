@@ -6,7 +6,7 @@ const vendorsBundleName = `vendors`
 
 module.exports = {
   entry: {
-    fetchLoaderDemo: [`@babel/polyfill`, `./html/fetchLoaderDemo.js`],
+    fetchLoaderDemo: [`@babel/polyfill`, `./html/fetch-loader/renderFetchLoaderDemo.js`],
     facetedSearchContainerDemo: `./html/facetedSearchContainerDemo.js`
   },
 

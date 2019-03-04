@@ -39,8 +39,10 @@ const vindicators = [
 const episodes = [
   {
     element: {
-      title: `Raising Gazorpazorp`
+      title: `Raising Gazorpazorp`,
+      species: `animal`,
     },
+
     facets: [
       {
         group: `Planet`,
@@ -64,13 +66,20 @@ const episodes = [
         group: `Season`,
         value: `1`,
         label: `Season 1`
+      },
+      {
+        group: `Show`,
+        value: `rick-morty`,
+        label: `Rick & Morty`
       }
     ]
   },
   {
     element: {
-      title: `The wedding squanchers`
+      title: `The wedding squanchers`,
+      species: `animal`,
     },
+
     facets: [
       {
         group: `Planet`,
@@ -94,13 +103,20 @@ const episodes = [
         group: `Season`,
         value: `2`,
         label: `Season 2`
+      },
+      {
+        group: `Show`,
+        value: `rick-morty`,
+        label: `Rick & Morty`
       }
     ]
   },
   {
     element: {
-      title: `The Rickshank redemption`
+      title: `The Rickshank redemption`,
+      species: `animal`,
     },
+
     facets: [
       {
         group: `Guest character`,
@@ -118,13 +134,20 @@ const episodes = [
         group: `Season`,
         value: `3`,
         label: `Season 3`
+      },
+      {
+        group: `Show`,
+        value: `rick-morty`,
+        label: `Rick & Morty`
       }
     ]
   },
   {
     element: {
-      title: `Ricksy business`
+      title: `Ricksy business`,
+      species: `plants`
     },
+
     facets: [
       {
         group: `Guest character`,
@@ -142,12 +165,18 @@ const episodes = [
         group: `Season`,
         value: `1`,
         label: `Season 1`
+      },
+      {
+        group: `Show`,
+        value: `rick-morty`,
+        label: `Rick & Morty`
       }
     ]
   },
   {
     element: {
-      title: `Close Rick-counters of the Rick kind`
+      title: `Close Rick-counters of the Rick kind`,
+      species: `plants`
     },
     facets: [
       {
@@ -172,6 +201,11 @@ const episodes = [
         group: `Season`,
         value: `1`,
         label: `Season 1`
+      },
+      {
+        group: `Show`,
+        value: `rick-morty`,
+        label: `Rick & Morty`
       }
     ]
   }

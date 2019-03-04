@@ -16,15 +16,15 @@
 </div>
 </body>
 
-<script src="../dist/vendors.bundle.js"></script>
-<script src="../dist/facetedSearch.bundle.js"></script>
-<script src="../dist/fetchLoaderDemo.bundle.js"></script>
+<script src="../../dist/vendors.bundle.js"></script>
+<script src="../../dist/facetedSearch.bundle.js"></script>
+<script src="../../dist/fetchLoaderDemo.bundle.js"></script>
 
 <!-- Set to http://localhost:8080/gxa/ or http://localhost:8080/gxa/sc/ -- Remember the trailing slash! -->
 <script>
     fetchLoaderDemo.render({
       host: 'https://www.ebi.ac.uk/gxa/',
-      resource: 'foo'
+      resource: 'foobar'
       // This is an example in which the component will silently fail, since it receives a valid JSON response but it
       // hasn’t been supplied a React component with which to render the content of the payload:
       // resource: 'json/dbsolr/status'

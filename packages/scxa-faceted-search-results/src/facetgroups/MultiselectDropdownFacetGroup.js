@@ -57,13 +57,14 @@ const MultiselectDropdownFacetGroup = ({facetGroupName, facetGroupNameDescriptio
       { facetGroupName }
       { facetGroupNameDescription && <TooltipIcon tooltipText={facetGroupNameDescription} /> }
     </h4>
-    <Select inputId={`facetGroupMultiSelectDropdown`}
-            components={{ DropdownIndicator, IndicatorSeparator: null }}
-            styles={ebiVfSelectStyles}
-            closeMenuOnSelect={false}
-            isMulti={true}
-            onChange={(args) => onChange(facetGroupName, args)}
-            options={facets.filter((facet) => !facet.disabled)}/>
+    <Select
+      inputId={`facetGroupMultiSelectDropdown`}
+      components={{ DropdownIndicator, IndicatorSeparator: null }}
+      styles={ebiVfSelectStyles}
+      closeMenuOnSelect={false}
+      isMulti={true}
+      onChange={(args) => onChange(facetGroupName, args)}
+      options={facets.filter((facet) => !facet.disabled)}/>
   </div>
 
 MultiselectDropdownFacetGroup.propTypes = FacetGroupPropTypes

@@ -62,7 +62,6 @@ exports[`FacetedSearchContainer matches snapshot 1`] = `
       <h4>
         Guest character
         <sup>
-           
           <span
             className="icon icon-generic"
             data-html={true}
@@ -168,7 +167,6 @@ exports[`FacetedSearchContainer matches snapshot 1`] = `
       <h4>
         Planet
         <sup>
-           
           <span
             className="icon icon-generic"
             data-html={true}

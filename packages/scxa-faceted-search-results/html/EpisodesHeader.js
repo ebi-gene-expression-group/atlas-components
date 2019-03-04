@@ -1,6 +1,6 @@
 import React from 'react'
 
-const EpisodesHeader = ({title}) =>
+const EpisodesHeader = () =>
   <div style={{textAlign: `center`}}>
     <b>Episode Title</b>
   </div>

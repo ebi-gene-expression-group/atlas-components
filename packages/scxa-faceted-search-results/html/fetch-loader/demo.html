@@ -24,18 +24,19 @@
 </div>
 </body>
 
-<script src="../dist/vendors.bundle.js"></script>
-<script src="../dist/facetedSearch.bundle.js"></script>
-<script src="../dist/fetchLoaderDemo.bundle.js"></script>
+<script src="../../dist/vendors.bundle.js"></script>
+<script src="../../dist/facetedSearch.bundle.js"></script>
+<script src="../../dist/fetchLoaderDemo.bundle.js"></script>
 
 <!-- Set to http://localhost:8080/gxa/ or http://localhost:8080/gxa/sc/ -- Remember the trailing slash! -->
 <script>
-    const symbol = `foobar`;
+    const symbol = `Aspa`;
 
     fetchLoaderDemo.render({
       host: 'http://localhost:8080/gxa/sc/',
-      resource: 'json/search?symbol=' + symbol,
-      resultsMessageFormatter: function(data) { return symbol + ' ' + data.searchExplanation + ' is expressed in:'; },
+      resource: 'json/search?symbol=' + symbol, // Add species to see shared facets go away: + '&species=mus musculus',
+      // matchingGeneId will be populated for species-specific genes
+      resultsMessageFormatter: function(data) { return symbol + ' ' + data.matchingGeneId + ' is expressed in:'; },
       noResultsMessageFormatter: function(data) { return 'Your search for ' + symbol + ' yielded no results: ' + data.reason; }
     }, 'target');
 </script>
