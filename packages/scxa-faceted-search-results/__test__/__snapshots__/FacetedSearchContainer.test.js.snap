@@ -154,7 +154,7 @@ exports[`FacetedSearchContainer matches snapshot 1`] = `
             className="css-1wy0on6"
           >
             <span
-              className="sc-bdVaJa jcfyVD"
+              className="sc-bxivhb iCJrRm"
               cx={[Function]}
             />
           </div>
@@ -259,7 +259,7 @@ exports[`FacetedSearchContainer matches snapshot 1`] = `
             className="css-1wy0on6"
           >
             <span
-              className="sc-bdVaJa jcfyVD"
+              className="sc-bxivhb iCJrRm"
               cx={[Function]}
             />
           </div>
@@ -274,24 +274,26 @@ exports[`FacetedSearchContainer matches snapshot 1`] = `
       <h4>
         
       </h4>
-      <div>
-        <div>
-          <p>
-            Raising Gazorpazorp
-          </p>
+      <div
+        className="sc-htpNat jYhomY"
+      >
+        <div
+          className="sc-bdVaJa edgMnc"
+          onClick={[Function]}
+        >
+          Meow
+        </div>
+        <div
+          className="sc-bwzfXH laSsVf"
+          onClick={[Function]}
+        >
+          Wow wow
         </div>
       </div>
       <div>
         <div>
           <p>
-            The wedding squanchers
-          </p>
-        </div>
-      </div>
-      <div>
-        <div>
-          <p>
-            The Rickshank redemption
+            Close Rick-counters of the Rick kind
           </p>
         </div>
       </div>
@@ -305,7 +307,21 @@ exports[`FacetedSearchContainer matches snapshot 1`] = `
       <div>
         <div>
           <p>
-            Close Rick-counters of the Rick kind
+            The Rickshank redemption
+          </p>
+        </div>
+      </div>
+      <div>
+        <div>
+          <p>
+            The wedding squanchers
+          </p>
+        </div>
+      </div>
+      <div>
+        <div>
+          <p>
+            Raising Gazorpazorp
           </p>
         </div>
       </div>

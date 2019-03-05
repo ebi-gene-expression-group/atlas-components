@@ -4,7 +4,7 @@ import Enzyme from 'enzyme'
 import { mount } from 'enzyme'
 import Adapter from 'enzyme-adapter-react-16'
 
-import {episodes, EpisodeCard} from './TestUtils'
+import {episodes, ExperimentTableHeader, ExperimentTableCard} from './TestUtils'
 
 import FacetedSearchContainer from '../src/FacetedSearchContainer'
 import FilterSidebar from '../src/FilterSidebar'
@@ -16,7 +16,8 @@ Enzyme.configure({ adapter: new Adapter() })
 const props = {
   results: episodes,
   checkboxFacetGroups: [`Season`],
-  ResultElementClass: EpisodeCard
+  ResultsHeaderClass: ExperimentTableHeader,
+  ResultElementClass: ExperimentTableCard
 }
 
 describe(`FacetedSearchContainer`, () => {
@@ -30,17 +31,17 @@ describe(`FacetedSearchContainer`, () => {
   test(`clicking to select/unselect a single facet in a group works`, () => {
     const wrapper = mount(<FacetedSearchContainer {...props} />)
     wrapper.find(FilterSidebar).find({ type: `checkbox` }).first().simulate(`change`)
-    expect(wrapper.find(EpisodeCard).length).toBeLessThan(props.results.length)
+    expect(wrapper.find(ExperimentTableCard).length).toBeLessThan(props.results.length)
     wrapper.find(FilterSidebar).find({ type: `checkbox` }).first().simulate(`change`)
-    expect(wrapper.find(EpisodeCard).length).toBe(props.results.length)
+    expect(wrapper.find(ExperimentTableCard).length).toBe(props.results.length)
   })
 
   test(`clicking on a second facet works`, () => {
     const wrapper = mount(<FacetedSearchContainer {...props} />)
     wrapper.find(FilterSidebar).find({ type: `checkbox` }).first().simulate(`change`)
-    const numberOfResultsAfterFirstClick = wrapper.find(EpisodeCard).length
+    const numberOfResultsAfterFirstClick = wrapper.find(ExperimentTableCard).length
     wrapper.find(FilterSidebar).find({ type: `checkbox` }).at(1).simulate(`change`)
-    expect(wrapper.find(EpisodeCard).length).toBeGreaterThan(numberOfResultsAfterFirstClick)
+    expect(wrapper.find(ExperimentTableCard).length).toBeGreaterThan(numberOfResultsAfterFirstClick)
   })
 
   test(`doesn’t display duplicated facets`, () => {

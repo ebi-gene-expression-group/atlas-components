@@ -1,19 +1,44 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import styled from 'styled-components'
 
-const EpisodeCard = ({title}) =>
+const ExperimentTableCard = ({title}) =>
   <div>
     <p>{title}</p>
   </div>
 
-EpisodeCard.propTypes = {
+ExperimentTableCard.propTypes = {
   title: PropTypes.string.isRequired
 }
 
-const EpisodesHeader = () =>
-  <div>
-    <span>Episode title</span>
-  </div>
+const IconDiv = styled.div`
+  width: 15%;
+  text-align: center;
+`
+IconDiv.displayName = 'IconDiv'
+
+const BitDiv = styled.div`
+  width: 25%;
+  text-align: center;
+`
+const DoveDiv = styled.div`
+  width: 25%;
+  text-align: center;
+`
+
+const ExperimentTableHeader = ({onClick}) =>
+  <DoveDiv>
+    <IconDiv onClick={()=>onClick(`test`)}>
+      Meow
+    </IconDiv>
+    <BitDiv onClick={()=>onClick(`test`)}>
+      Wow wow
+    </BitDiv>
+  </DoveDiv>
+
+ExperimentTableHeader.propTypes = {
+	onClick: PropTypes.func.isRequired
+}
 
 // Stolen from https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
 const getRandomInt = (min, max) => {
@@ -40,7 +65,8 @@ const episodes = [
   {
     element: {
       title: `Raising Gazorpazorp`,
-      species: `animal`,
+      meow: `rasperry`,
+      wowWow: `blueberry`
     },
 
     facets: [
@@ -77,7 +103,8 @@ const episodes = [
   {
     element: {
       title: `The wedding squanchers`,
-      species: `animal`,
+      meow: `rasperry`,
+      wowWow: `blueberry`
     },
 
     facets: [
@@ -114,7 +141,8 @@ const episodes = [
   {
     element: {
       title: `The Rickshank redemption`,
-      species: `animal`,
+      meow: `rasperry`,
+      wowWow: `blueberry`
     },
 
     facets: [
@@ -145,7 +173,8 @@ const episodes = [
   {
     element: {
       title: `Ricksy business`,
-      species: `plants`
+      meow: `rasperry`,
+      wowWow: `blueberry`
     },
 
     facets: [
@@ -176,7 +205,8 @@ const episodes = [
   {
     element: {
       title: `Close Rick-counters of the Rick kind`,
-      species: `plants`
+      meow: `rasperry`,
+      wowWow: `blueberry`
     },
     facets: [
       {
@@ -211,4 +241,4 @@ const episodes = [
   }
 ]
 
-export {getRandomInt, vindicators, episodes, EpisodesHeader, EpisodeCard}
+export {getRandomInt, vindicators, episodes, ExperimentTableCard, ExperimentTableHeader}
