@@ -1,6 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
+import formatNumber from 'format-number'
+import EbiSpeciesIcon from 'react-ebi-species'
+
+const _formatNumber = formatNumber()
 
 const CardContainerDiv = styled.div`
   height: 100%;
@@ -44,7 +48,7 @@ const CountDiv = styled.div`
   text-align: center;
 `
 
-class ExperimentTableCard extends React.Component {
+class ExperimentCard extends React.Component {
   constructor(props) {
     super(props)
   }
@@ -65,6 +69,7 @@ class ExperimentTableCard extends React.Component {
     return (
       <CardContainerDiv onClick={this._goToExperiment.bind(this, url)}>
         <IconDiv>
+          <EbiSpeciesIcon species={species}/>
           <h6>{species}</h6>
         </IconDiv>
         {
@@ -89,13 +94,13 @@ class ExperimentTableCard extends React.Component {
             {factors.map(factor => <li key={`factor-${factor}`}> {factor} </li>)}
           </ul>
         </VariableDiv>
-        <CountDiv> {numberOfAssays} </CountDiv>
+        <CountDiv> {_formatNumber(numberOfAssays)} </CountDiv>
       </CardContainerDiv>
     )
   }
 }
 
-ExperimentTableCard.propTypes = {
+ExperimentCard.propTypes = {
   url: PropTypes.string.isRequired,
   species: PropTypes.string.isRequired,
   experimentDescription: PropTypes.string.isRequired,
@@ -108,4 +113,4 @@ ExperimentTableCard.propTypes = {
   factors: PropTypes.array.isRequired
 }
 
-export default ExperimentTableCard
+export default ExperimentCard
