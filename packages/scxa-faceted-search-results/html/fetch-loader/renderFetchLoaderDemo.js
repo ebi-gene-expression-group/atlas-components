@@ -9,6 +9,7 @@ const render = (options, target) => {
   ReactDOM.render(
     <FetchLoader
       {...options}
+      sortTitle={`markerGenes`}
       ResultElementClass={ExperimentCard}
       ResultsHeaderClass={ExperimentsHeader} />,
     document.getElementById(target))

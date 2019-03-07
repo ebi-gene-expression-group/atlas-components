@@ -123,7 +123,7 @@ class FacetedSearchContainer extends React.Component {
 
   render() {
     const {facets, selectedFacets} = this.state
-    const {checkboxFacetGroups, ResultElementClass, ResultsHeaderClass, resultsMessage} = this.props
+    const {checkboxFacetGroups, ResultElementClass, ResultsHeaderClass, resultsMessage, sortTitle} = this.props
 
     return(
       <div className={`row expanded`}>
@@ -135,7 +135,7 @@ class FacetedSearchContainer extends React.Component {
         }
 
         <div className={`small-12 medium-8 large-9 columns`}>
-          <FilterList {...{resultsMessage, ResultElementClass, ResultsHeaderClass}}
+          <FilterList {...{resultsMessage, ResultElementClass, ResultsHeaderClass, sortTitle}}
             filteredResults={this._filterResults(selectedFacets)}/>
         </div>
         <ReactTooltip effect={`solid`}/>
@@ -153,7 +153,8 @@ FacetedSearchContainer.propTypes = {
   // Must be classes that extends React.Component, sadly there’s no such prop type :(
   // See also https://stackoverflow.com/questions/45315918/react-proptypes-component-class
   ResultsHeaderClass: PropTypes.func,
-  ResultElementClass: PropTypes.func.isRequired
+  ResultElementClass: PropTypes.func.isRequired,
+	sortTitle: PropTypes.string
 }
 
 FacetedSearchContainer.defaultProps = {

@@ -8,7 +8,8 @@ class FilterList extends React.Component {
     super(props)
 
     this.state = {
-      ascending: false
+      ascending: false,
+	    sortTitle: props.sortTitle
     }
 
     this.sortEntries = this.sortEntries.bind(this)
@@ -41,7 +42,8 @@ FilterList.propTypes = {
   filteredResults: PropTypes.arrayOf(ResultPropTypes).isRequired,
   resultsMessage: PropTypes.string,
   ResultsHeaderClass: PropTypes.func,
-  ResultElementClass: PropTypes.func.isRequired
+  ResultElementClass: PropTypes.func.isRequired,
+	sortTitle: PropTypes.string
 }
 
 FilterList.defaultProps = {

@@ -34,7 +34,7 @@ class FetchLoader extends React.Component {
   }
 
   render() {
-    const { ResultsHeaderClass, ResultElementClass, noResultsMessageFormatter, resultsMessageFormatter } = this.props
+    const { ResultsHeaderClass, ResultElementClass, noResultsMessageFormatter, resultsMessageFormatter, sortTitle } = this.props
     const { data, loading, error } = this.state
 
     return(
@@ -48,9 +48,7 @@ class FetchLoader extends React.Component {
           </div> :
           data.results && data.results.length > 0 ?
             <FacetedSearchContainer
-              {...data}
-              ResultsHeaderClass={ResultsHeaderClass}
-              ResultElementClass={ResultElementClass}
+              {...{...data, sortTitle, ResultsHeaderClass, ResultElementClass}}
               resultsMessage={resultsMessageFormatter(data)}/> :
             <div className={`row expanded`}>
               <div className={`small-12 columns`}>
@@ -113,7 +111,8 @@ FetchLoader.propTypes = {
   ResultsHeaderClass: PropTypes.func,
   ResultElementClass: PropTypes.func.isRequired,
   noResultsMessageFormatter: PropTypes.func,
-  resultsMessageFormatter: PropTypes.func
+  resultsMessageFormatter: PropTypes.func,
+	sortTitle: PropTypes.string
 }
 
 FetchLoader.defaultProps = {
