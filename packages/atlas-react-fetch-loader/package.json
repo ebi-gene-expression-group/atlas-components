@@ -5,7 +5,7 @@
   "main": "lib/index.js",
   "scripts": {
     "prepack": "rm -rf lib && babel src -d lib --copy-files",
-    "test": "jest",
+    "test": "jest",
     "posttest": "jest --coverage --coverageReporters=text-lcov | coveralls",
     "postversion": "npm publish",
     "postpublish": "git push && git push --tags"
