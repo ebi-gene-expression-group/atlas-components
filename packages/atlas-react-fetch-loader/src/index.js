@@ -1,3 +1,3 @@
-import MyComponent from './MyComponent.js'
+import withFetchLoader from './FetchLoader'
 
-export default MyComponent
+export default withFetchLoader
