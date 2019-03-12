@@ -12,7 +12,7 @@ const MyComponentFoo = withFetchLoader(MyComponent)
 
 <MyComponentFoo
   host={`https://domain.tld/path/`}
-  resource={`json/endpoint`}
+  resource={`json/endpoint`}
   {...passThroughProps} />
 ```
 
