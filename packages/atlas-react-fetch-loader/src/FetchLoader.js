@@ -18,7 +18,7 @@ const withFetchLoader = (WrappedComponent) => {
 
     static getDerivedStateFromProps(props, state) {
       const url = URI(props.resource, props.host).toString()
-      // Store url in state so we can compare when props change.
+      // Store URL in state so we can compare when props change.
       // Clear out previously-loaded data (so we don't render stale stuff).
       if (url !== state.url) {
         return {
@@ -86,9 +86,9 @@ const withFetchLoader = (WrappedComponent) => {
         hasError ?
           <CalloutAlert error={hasError} /> :
           isLoading ?
-            <p className={`row column loading-message`} > Loading, please wait...</p> :
-          // Promise fulfilled
-            <WrappedComponent cards={data}/>
+            <p className={`row column loading-message`}>Loading, please wait…</p> :
+          // Promise fulfilled, merge passed props and merge-overwrite with retrieved data
+            <WrappedComponent {...{...this.props, ...data}}/>
       )
     }
   }
