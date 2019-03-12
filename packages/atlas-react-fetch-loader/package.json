@@ -64,7 +64,6 @@
     "react-test-renderer": "^16.8.4",
     "webpack": "^4.29.6",
     "webpack-cli": "^3.2.3",
-    "webpack-dev-server": "^3.2.1",
-    "whatwg-fetch": "^3.0.0"
+    "webpack-dev-server": "^3.2.1"
   }
 }
