@@ -26,5 +26,12 @@ module.exports = {
     eqeqeq: ['error', 'always'], // Enforce using === and !==
     indent: ['error', 2], // Enforce indentation using 2 spaces
     'no-console': ['warn', { allow: ['warn', 'error']}] // Allow console.warn and console.error statements
-  }
+  },
+  overrides: [{
+    files: [ '*.test.js' ],
+    rules: {
+      'react/react-in-jsx-scope': 0
+    }
+  }]
 }
+
