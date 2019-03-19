@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import EbiSpeciesIcon from 'react-ebi-species'
 
 import renderContentListItems from './renderContentListItems'
-import cardPropTypes from './cardPropTypes'
+import modelPropTypes from './modelPropTypes'
 import styled from 'styled-components'
 
 const MAX = 5
@@ -16,7 +16,7 @@ const CardContentList = styled.ul`
   margin-right: auto;
 `
 
-class ExtendableSpeciesCard extends React.Component {
+class ExtendableCard extends React.Component {
   constructor(props) {
     super(props)
 
@@ -33,14 +33,14 @@ class ExtendableSpeciesCard extends React.Component {
   }
 
   render() {
-    const { iconType, iconSrc, description, content } = this.props
+    const { speciesIconHeight, imageIconHeight, iconType, iconSrc, description, content } = this.props
     const visibleContent = Array.isArray(content) && renderContentListItems(content)
 
     const cardHero =
       iconType === `species` ?
-        <span style={{fontSize: `8rem`}}><EbiSpeciesIcon species={iconSrc} /></span> :
+        <span style={{fontSize: speciesIconHeight}}><EbiSpeciesIcon species={iconSrc} /></span> :
       // iconType === `image` ?  // Margin picked by trial and error to match EbiSpeciesIcon of size 8rem
-        <img src={iconSrc} style={{height: `8rem`, marginBottom: `2.35rem`, marginTop: `2.50rem`}}/>
+        <img src={iconSrc} style={{height: imageIconHeight, marginBottom: `2.35rem`, marginTop: `2.50rem`}}/>
 
     return (
       <div style={{marginBottom:0, paddingBottom: `2rem`, textAlign: `center`}}>
@@ -49,7 +49,7 @@ class ExtendableSpeciesCard extends React.Component {
             description.url ?
               <h4><a href={description.url}>{description.text}</a></h4> :
               <h4>{description.text}</h4>
-            )
+          )
         }
 
         {
@@ -57,15 +57,15 @@ class ExtendableSpeciesCard extends React.Component {
             description.url ?
               <a href={description.url} style={{borderBottom: 0}}>{cardHero}</a> :
               cardHero
-            )
+          )
         }
 
         <CardContentList className={`content`}>
-        {
-          this.state.isHidden ?
-            visibleContent.slice(0, MAX) :
-            visibleContent
-        }
+          {
+            this.state.isHidden ?
+              visibleContent.slice(0, MAX) :
+              visibleContent
+          }
         </CardContentList>
         {
           Array.isArray(content) && content.length > MAX &&
@@ -76,6 +76,15 @@ class ExtendableSpeciesCard extends React.Component {
   }
 }
 
-ExtendableSpeciesCard.propTypes = cardPropTypes
+ExtendableCard.propTypes = {
+  ...modelPropTypes,
+  speciesIconHeight: PropTypes.string,
+  imageIconHeight: PropTypes.string
+}
 
-export default ExtendableSpeciesCard
+ExtendableCard.defaultProps = {
+  speciesIconHeight: `8rem`,
+  imageIconHeight: `8rem`
+}
+
+export default ExtendableCard

@@ -4,7 +4,8 @@
 [![Coverage Status](https://coveralls.io/repos/github/ebi-gene-expression-group/atlas-homepage-cards/badge.svg?branch=master)](https://coveralls.io/github/ebi-gene-expression-group/atlas-homepage-cards?branch=master)
 
 ## About the component
-This repository contains a generic React component that renders grids of cards which adhere to the following JSON schema (defined using [JSONSchema draft-07](http://json-schema.org/specification.html)):
+This repository contains a generic React component that renders grids of cards which adhere to the following JSON
+schema (defined using [JSONSchema draft-07](http://json-schema.org/specification.html)):
 
 ```
 {
@@ -54,18 +55,19 @@ This repository contains a generic React component that renders grids of cards w
 }
 ```
 
-### React EBI species
-One of the supported card types is the `SpeciesCard`, which displays species icons using the [`react-ebi-species`](https://github.com/ebi-gene-expression-group/react-ebi-species) React component.
+## Types of cards
+The package export two different card components. A card component should be able to render both types of cards
+`species` and `image`. The generic `Card`, used by default in `ResponsiveCardsRow`, is laid out with the icon on top,
+the tile below and the list of items at the bottom. `ExtendableCard`, instead shows the title on top, followed by the
+card’s icon and a foldable list of items: five are shown plus a toggle button that expands the list and folds it.
 
 ## Getting started
-### Installing dependencies
-In order to run the application, you must first install the dependencies using `npm`:
+Install dependencies
 ```
 npm install
 ```
 
-### Try it out 
-Use [webpack-dev-server](https://github.com/webpack/webpack-dev-server) to run the application in your browser:
+Use [webpack-dev-server](https://github.com/webpack/webpack-dev-server) to see the demo page:
 ```
 npx webpack-dev-server -d
 ```

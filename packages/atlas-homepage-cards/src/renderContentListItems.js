@@ -9,7 +9,6 @@ const renderContentListItems = (content) =>
         <a href={item.url}>{item.text}</a>
       </li> :
       <li style={{marginBottom: `0.3rem`}} key={key}>{item.text}</li>
-    }
-  )
+  })
 
 export default renderContentListItems

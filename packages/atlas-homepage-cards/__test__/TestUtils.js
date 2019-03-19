@@ -1,5 +1,5 @@
 // Stolen from https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
-const getRandomInt = (min, max) => {
+const generateRandomInt = (min, max) => {
   min = Math.ceil(min)
   max = Math.floor(max)
   return Math.floor(Math.random() * (max - min)) + min //The maximum is exclusive and the minimum is inclusive
@@ -72,60 +72,60 @@ const batmanFilmsSpeciesCardProps = {
   },
   content: [
     {
-      url: 'https://en.wikipedia.org/wiki/Batman_(serial)',
-      text: 'Batman (1943)'
+      url: `https://en.wikipedia.org/wiki/Batman_(serial)`,
+      text: `Batman (1943)`
     },
     {
-      url: 'https://en.wikipedia.org/wiki/Batman_and_Robin_(serial)',
-      text: 'Batman and Robin (1949)'
+      url: `https://en.wikipedia.org/wiki/Batman_and_Robin_(serial)`,
+      text: `Batman and Robin (1949)`
     },
     {
-      url: 'https://en.wikipedia.org/wiki/Batman_(1966_film)',
-      text: 'Batman (1966)'
+      url: `https://en.wikipedia.org/wiki/Batman_(1966_film)`,
+      text: `Batman (1966)`
     },
     {
-      url: 'https://en.wikipedia.org/wiki/Batman_(1989_film)',
-      text: 'Batman (1989)'
+      url: `https://en.wikipedia.org/wiki/Batman_(1989_film)`,
+      text: `Batman (1989)`
     },
     {
-      url: 'https://en.wikipedia.org/wiki/Batman_Returns',
-      text: 'Batman Returns (1992)'
+      url: `https://en.wikipedia.org/wiki/Batman_Returns`,
+      text: `Batman Returns (1992)`
     },
     {
-      url: 'https://en.wikipedia.org/wiki/Batman_Forever',
-      text: 'Batman Forever (1995)'
+      url: `https://en.wikipedia.org/wiki/Batman_Forever`,
+      text: `Batman Forever (1995)`
     },
     {
-      url: 'https://en.wikipedia.org/wiki/Batman_%26_Robin_(film)',
-      text: 'Batman &amp; Robin (1997)'
+      url: `https://en.wikipedia.org/wiki/Batman_%26_Robin_(film)`,
+      text: `Batman &amp; Robin (1997)`
     },
     {
-      url: 'https://en.wikipedia.org/wiki/Batman_Begins',
-      text: 'Batman Begins (2005)'
+      url: `https://en.wikipedia.org/wiki/Batman_Begins`,
+      text: `Batman Begins (2005)`
     },
     {
-      url: 'https://en.wikipedia.org/wiki/The_Dark_Knight_(film)',
-      text: 'The Dark Knight (2008)'
+      url: `https://en.wikipedia.org/wiki/The_Dark_Knight_(film)`,
+      text: `The Dark Knight (2008)`
     },
     {
-      url: 'https://en.wikipedia.org/wiki/The_Dark_Knight_Rises',
-      text: 'The Dark Knight Rises (2012)'
+      url: `https://en.wikipedia.org/wiki/The_Dark_Knight_Rises`,
+      text: `The Dark Knight Rises (2012)`
     },
     {
-      url: 'https://en.wikipedia.org/wiki/Batman_v_Superman:_Dawn_of_Justice',
-      text: 'Batman v Superman: Dawn of Justice (2016)'
+      url: `https://en.wikipedia.org/wiki/Batman_v_Superman:_Dawn_of_Justice`,
+      text: `Batman v Superman: Dawn of Justice (2016)`
     },
     {
-      url: 'https://en.wikipedia.org/wiki/Suicide_Squad_(film)',
-      text: 'Suicide Squad (2016)'
+      url: `https://en.wikipedia.org/wiki/Suicide_Squad_(film)`,
+      text: `Suicide Squad (2016)`
     },
     {
-      url: 'https://en.wikipedia.org/wiki/Justice_League_(film)',
-      text: 'Justice League (2017)'
+      url: `https://en.wikipedia.org/wiki/Justice_League_(film)`,
+      text: `Justice League (2017)`
     },
     {
-      url: 'https://en.wikipedia.org/wiki/Joker_(2019_film)',
-      text: 'Joker (2019)'
+      url: `https://en.wikipedia.org/wiki/Joker_(2019_film)`,
+      text: `Joker (2019)`
     }
   ]
 }
@@ -151,7 +151,7 @@ const findingNemoSpeciesCardProps = {
 }
 
 export {
-  getRandomInt,
+  generateRandomInt,
   aRickleInTimeImageCardProps, theSmithHouseholdImageCardProps,
   batmanFilmsSpeciesCardProps, findingNemoSpeciesCardProps
 }

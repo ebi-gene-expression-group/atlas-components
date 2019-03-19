@@ -1,11 +1,11 @@
 import PropTypes from 'prop-types'
 
 // See JSON schema in README.md
-const cardPropTypes = {
+const modelPropTypes = {
   iconType: PropTypes.oneOf([`species`, `image`]).isRequired,
   iconSrc: PropTypes.string.isRequired,
   description: PropTypes.shape({
-    text: PropTypes.string.isRequired,
+    text: PropTypes.string,
     url: PropTypes.string
   }),
   content: PropTypes.arrayOf(PropTypes.shape({
@@ -14,4 +14,4 @@ const cardPropTypes = {
   }))
 }
 
-export default cardPropTypes
+export default modelPropTypes

@@ -1,32 +1,612 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ExtendableCard matches snapshot: A rickle in time 1`] = `
-<div
-  style={
+<ExtendableCard
+  content={
+    Array [
+      Object {
+        "text": "Morty Smith",
+      },
+      Object {
+        "text": "Summer Smith",
+      },
+      Object {
+        "text": "Rick Sanchez",
+      },
+      Object {
+        "text": "Rick Sanchez(split reality)",
+      },
+      Object {
+        "text": "Morty Smith (split reality)",
+      },
+      Object {
+        "text": "Summer Smith (split reality)",
+      },
+    ]
+  }
+  description={
     Object {
-      "marginBottom": 0,
-      "paddingBottom": "2rem",
-      "textAlign": "center",
+      "text": "A rickle in time",
+      "url": "http://rickandmorty.wikia.com/wiki/A_Rickle_in_Time",
     }
   }
+  iconSrc="https://upload.wikimedia.org/wikipedia/en/6/6b/A_Rickle_in_Time.jpg"
+  iconType="image"
+  imageIconHeight="8rem"
+  speciesIconHeight="8rem"
 >
-  <h4>
-    <a
-      href="http://rickandmorty.wikia.com/wiki/A_Rickle_in_Time"
-    >
-      A rickle in time
-    </a>
-  </h4>
-  <a
-    href="http://rickandmorty.wikia.com/wiki/A_Rickle_in_Time"
+  <div
     style={
       Object {
-        "borderBottom": 0,
+        "marginBottom": 0,
+        "paddingBottom": "2rem",
+        "textAlign": "center",
       }
     }
   >
+    <h4>
+      <a
+        href="http://rickandmorty.wikia.com/wiki/A_Rickle_in_Time"
+      >
+        A rickle in time
+      </a>
+    </h4>
+    <a
+      href="http://rickandmorty.wikia.com/wiki/A_Rickle_in_Time"
+      style={
+        Object {
+          "borderBottom": 0,
+        }
+      }
+    >
+      <img
+        src="https://upload.wikimedia.org/wikipedia/en/6/6b/A_Rickle_in_Time.jpg"
+        style={
+          Object {
+            "height": "8rem",
+            "marginBottom": "2.35rem",
+            "marginTop": "2.50rem",
+          }
+        }
+      />
+    </a>
+    <styled.ul
+      className="content"
+    >
+      <StyledComponent
+        className="content"
+        forwardedComponent={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "attrs": Array [],
+            "componentStyle": ComponentStyle {
+              "componentId": "sc-htpNat",
+              "isStatic": true,
+              "lastClassName": "dUITwr",
+              "rules": Array [
+                "
+  list-style: none;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+",
+              ],
+            },
+            "displayName": "styled.ul",
+            "foldedComponentIds": Array [],
+            "render": [Function],
+            "styledComponentId": "sc-htpNat",
+            "target": "ul",
+            "toString": [Function],
+            "warnTooManyClasses": [Function],
+            "withComponent": [Function],
+          }
+        }
+        forwardedRef={null}
+      >
+        <ul
+          className="content sc-htpNat dUITwr"
+        >
+          <li
+            key="Morty Smith-0"
+            style={
+              Object {
+                "marginBottom": "0.3rem",
+              }
+            }
+          >
+            Morty Smith
+          </li>
+          <li
+            key="Summer Smith-1"
+            style={
+              Object {
+                "marginBottom": "0.3rem",
+              }
+            }
+          >
+            Summer Smith
+          </li>
+          <li
+            key="Rick Sanchez-2"
+            style={
+              Object {
+                "marginBottom": "0.3rem",
+              }
+            }
+          >
+            Rick Sanchez
+          </li>
+          <li
+            key="Rick Sanchez(split reality)-3"
+            style={
+              Object {
+                "marginBottom": "0.3rem",
+              }
+            }
+          >
+            Rick Sanchez(split reality)
+          </li>
+          <li
+            key="Morty Smith (split reality)-4"
+            style={
+              Object {
+                "marginBottom": "0.3rem",
+              }
+            }
+          >
+            Morty Smith (split reality)
+          </li>
+        </ul>
+      </StyledComponent>
+    </styled.ul>
+    <button
+      className="button"
+      onClick={[Function]}
+    >
+      Show all
+    </button>
+  </div>
+</ExtendableCard>
+`;
+
+exports[`ExtendableCard matches snapshot: Batman films 1`] = `
+<ExtendableCard
+  content={
+    Array [
+      Object {
+        "text": "Batman (1943)",
+        "url": "https://en.wikipedia.org/wiki/Batman_(serial)",
+      },
+      Object {
+        "text": "Batman and Robin (1949)",
+        "url": "https://en.wikipedia.org/wiki/Batman_and_Robin_(serial)",
+      },
+      Object {
+        "text": "Batman (1966)",
+        "url": "https://en.wikipedia.org/wiki/Batman_(1966_film)",
+      },
+      Object {
+        "text": "Batman (1989)",
+        "url": "https://en.wikipedia.org/wiki/Batman_(1989_film)",
+      },
+      Object {
+        "text": "Batman Returns (1992)",
+        "url": "https://en.wikipedia.org/wiki/Batman_Returns",
+      },
+      Object {
+        "text": "Batman Forever (1995)",
+        "url": "https://en.wikipedia.org/wiki/Batman_Forever",
+      },
+      Object {
+        "text": "Batman &amp; Robin (1997)",
+        "url": "https://en.wikipedia.org/wiki/Batman_%26_Robin_(film)",
+      },
+      Object {
+        "text": "Batman Begins (2005)",
+        "url": "https://en.wikipedia.org/wiki/Batman_Begins",
+      },
+      Object {
+        "text": "The Dark Knight (2008)",
+        "url": "https://en.wikipedia.org/wiki/The_Dark_Knight_(film)",
+      },
+      Object {
+        "text": "The Dark Knight Rises (2012)",
+        "url": "https://en.wikipedia.org/wiki/The_Dark_Knight_Rises",
+      },
+      Object {
+        "text": "Batman v Superman: Dawn of Justice (2016)",
+        "url": "https://en.wikipedia.org/wiki/Batman_v_Superman:_Dawn_of_Justice",
+      },
+      Object {
+        "text": "Suicide Squad (2016)",
+        "url": "https://en.wikipedia.org/wiki/Suicide_Squad_(film)",
+      },
+      Object {
+        "text": "Justice League (2017)",
+        "url": "https://en.wikipedia.org/wiki/Justice_League_(film)",
+      },
+      Object {
+        "text": "Joker (2019)",
+        "url": "https://en.wikipedia.org/wiki/Joker_(2019_film)",
+      },
+    ]
+  }
+  description={
+    Object {
+      "text": "Batman films",
+    }
+  }
+  iconSrc="bat"
+  iconType="species"
+  imageIconHeight="8rem"
+  speciesIconHeight="8rem"
+>
+  <div
+    style={
+      Object {
+        "marginBottom": 0,
+        "paddingBottom": "2rem",
+        "textAlign": "center",
+      }
+    }
+  >
+    <h4>
+      Batman films
+    </h4>
+    <span
+      style={
+        Object {
+          "fontSize": "8rem",
+        }
+      }
+    >
+      <EbiSpeciesIcon
+        groupColors={
+          Object {
+            "other": "deepskyblue",
+            "plants": "mediumseagreen",
+            "warmBlooded": "indianred",
+          }
+        }
+        species="bat"
+      >
+        <span
+          className="icon icon-species"
+          data-icon="("
+          style={
+            Object {
+              "color": "indianred",
+            }
+          }
+          title="Bat"
+        />
+      </EbiSpeciesIcon>
+    </span>
+    <styled.ul
+      className="content"
+    >
+      <StyledComponent
+        className="content"
+        forwardedComponent={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "attrs": Array [],
+            "componentStyle": ComponentStyle {
+              "componentId": "sc-htpNat",
+              "isStatic": true,
+              "lastClassName": "dUITwr",
+              "rules": Array [
+                "
+  list-style: none;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+",
+              ],
+            },
+            "displayName": "styled.ul",
+            "foldedComponentIds": Array [],
+            "render": [Function],
+            "styledComponentId": "sc-htpNat",
+            "target": "ul",
+            "toString": [Function],
+            "warnTooManyClasses": [Function],
+            "withComponent": [Function],
+          }
+        }
+        forwardedRef={null}
+      >
+        <ul
+          className="content sc-htpNat dUITwr"
+        >
+          <li
+            key="Batman (1943)-0"
+            style={
+              Object {
+                "marginBottom": "0.3rem",
+              }
+            }
+          >
+            <a
+              href="https://en.wikipedia.org/wiki/Batman_(serial)"
+            >
+              Batman (1943)
+            </a>
+          </li>
+          <li
+            key="Batman and Robin (1949)-1"
+            style={
+              Object {
+                "marginBottom": "0.3rem",
+              }
+            }
+          >
+            <a
+              href="https://en.wikipedia.org/wiki/Batman_and_Robin_(serial)"
+            >
+              Batman and Robin (1949)
+            </a>
+          </li>
+          <li
+            key="Batman (1966)-2"
+            style={
+              Object {
+                "marginBottom": "0.3rem",
+              }
+            }
+          >
+            <a
+              href="https://en.wikipedia.org/wiki/Batman_(1966_film)"
+            >
+              Batman (1966)
+            </a>
+          </li>
+          <li
+            key="Batman (1989)-3"
+            style={
+              Object {
+                "marginBottom": "0.3rem",
+              }
+            }
+          >
+            <a
+              href="https://en.wikipedia.org/wiki/Batman_(1989_film)"
+            >
+              Batman (1989)
+            </a>
+          </li>
+          <li
+            key="Batman Returns (1992)-4"
+            style={
+              Object {
+                "marginBottom": "0.3rem",
+              }
+            }
+          >
+            <a
+              href="https://en.wikipedia.org/wiki/Batman_Returns"
+            >
+              Batman Returns (1992)
+            </a>
+          </li>
+        </ul>
+      </StyledComponent>
+    </styled.ul>
+    <button
+      className="button"
+      onClick={[Function]}
+    >
+      Show all
+    </button>
+  </div>
+</ExtendableCard>
+`;
+
+exports[`ExtendableCard matches snapshot: Finding Nemo 1`] = `
+<ExtendableCard
+  content={
+    Array [
+      Object {
+        "text": "Dory",
+      },
+      Object {
+        "text": "Nemo",
+      },
+      Object {
+        "text": "Gill",
+      },
+    ]
+  }
+  description={
+    Object {
+      "text": "Finding Nemo",
+      "url": "https://en.wikipedia.org/wiki/Finding_Nemo",
+    }
+  }
+  iconSrc="zebrafish"
+  iconType="species"
+  imageIconHeight="8rem"
+  speciesIconHeight="8rem"
+>
+  <div
+    style={
+      Object {
+        "marginBottom": 0,
+        "paddingBottom": "2rem",
+        "textAlign": "center",
+      }
+    }
+  >
+    <h4>
+      <a
+        href="https://en.wikipedia.org/wiki/Finding_Nemo"
+      >
+        Finding Nemo
+      </a>
+    </h4>
+    <a
+      href="https://en.wikipedia.org/wiki/Finding_Nemo"
+      style={
+        Object {
+          "borderBottom": 0,
+        }
+      }
+    >
+      <span
+        style={
+          Object {
+            "fontSize": "8rem",
+          }
+        }
+      >
+        <EbiSpeciesIcon
+          groupColors={
+            Object {
+              "other": "deepskyblue",
+              "plants": "mediumseagreen",
+              "warmBlooded": "indianred",
+            }
+          }
+          species="zebrafish"
+        >
+          <span
+            className="icon icon-species"
+            data-icon="Z"
+            style={
+              Object {
+                "color": "deepskyblue",
+              }
+            }
+            title="Zebrafish"
+          />
+        </EbiSpeciesIcon>
+      </span>
+    </a>
+    <styled.ul
+      className="content"
+    >
+      <StyledComponent
+        className="content"
+        forwardedComponent={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "attrs": Array [],
+            "componentStyle": ComponentStyle {
+              "componentId": "sc-htpNat",
+              "isStatic": true,
+              "lastClassName": "dUITwr",
+              "rules": Array [
+                "
+  list-style: none;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+",
+              ],
+            },
+            "displayName": "styled.ul",
+            "foldedComponentIds": Array [],
+            "render": [Function],
+            "styledComponentId": "sc-htpNat",
+            "target": "ul",
+            "toString": [Function],
+            "warnTooManyClasses": [Function],
+            "withComponent": [Function],
+          }
+        }
+        forwardedRef={null}
+      >
+        <ul
+          className="content sc-htpNat dUITwr"
+        >
+          <li
+            key="Dory-0"
+            style={
+              Object {
+                "marginBottom": "0.3rem",
+              }
+            }
+          >
+            Dory
+          </li>
+          <li
+            key="Nemo-1"
+            style={
+              Object {
+                "marginBottom": "0.3rem",
+              }
+            }
+          >
+            Nemo
+          </li>
+          <li
+            key="Gill-2"
+            style={
+              Object {
+                "marginBottom": "0.3rem",
+              }
+            }
+          >
+            Gill
+          </li>
+        </ul>
+      </StyledComponent>
+    </styled.ul>
+  </div>
+</ExtendableCard>
+`;
+
+exports[`ExtendableCard matches snapshot: The Smith household 1`] = `
+<ExtendableCard
+  content={
+    Array [
+      Object {
+        "text": "Jerry Smith",
+        "url": "https://en.wikipedia.org/wiki/List_of_Rick_and_Morty_characters#Jerry_Smith",
+      },
+      Object {
+        "text": "Beth Smith",
+        "url": "https://en.wikipedia.org/wiki/List_of_Rick_and_Morty_characters#Beth_Smith",
+      },
+      Object {
+        "text": "Summer Smith",
+        "url": "https://en.wikipedia.org/wiki/List_of_Rick_and_Morty_characters#Summer_Smith",
+      },
+      Object {
+        "text": "Morty Smith",
+        "url": "https://en.wikipedia.org/wiki/Morty_Smith",
+      },
+      Object {
+        "text": "Rick Sanchez",
+        "url": "https://en.wikipedia.org/wiki/Rick_Sanchez_(Rick_and_Morty)",
+      },
+    ]
+  }
+  description={
+    Object {
+      "text": "The Smith household",
+    }
+  }
+  iconSrc="https://upload.wikimedia.org/wikipedia/en/b/b0/Rick_and_Morty_characters.jpg"
+  iconType="image"
+  imageIconHeight="8rem"
+  speciesIconHeight="8rem"
+>
+  <div
+    style={
+      Object {
+        "marginBottom": 0,
+        "paddingBottom": "2rem",
+        "textAlign": "center",
+      }
+    }
+  >
+    <h4>
+      The Smith household
+    </h4>
     <img
-      src="https://upload.wikimedia.org/wikipedia/en/6/6b/A_Rickle_in_Time.jpg"
+      src="https://upload.wikimedia.org/wikipedia/en/b/b0/Rick_and_Morty_characters.jpg"
       style={
         Object {
           "height": "8rem",
@@ -35,343 +615,116 @@ exports[`ExtendableCard matches snapshot: A rickle in time 1`] = `
         }
       }
     />
-  </a>
-  <ul
-    className="content sc-htpNat dUITwr"
-  >
-    <li
-      style={
-        Object {
-          "marginBottom": "0.3rem",
-        }
-      }
+    <styled.ul
+      className="content"
     >
-      Morty Smith
-    </li>
-    <li
-      style={
-        Object {
-          "marginBottom": "0.3rem",
-        }
-      }
-    >
-      Summer Smith
-    </li>
-    <li
-      style={
-        Object {
-          "marginBottom": "0.3rem",
-        }
-      }
-    >
-      Rick Sanchez
-    </li>
-    <li
-      style={
-        Object {
-          "marginBottom": "0.3rem",
-        }
-      }
-    >
-      Rick Sanchez(split reality)
-    </li>
-    <li
-      style={
-        Object {
-          "marginBottom": "0.3rem",
-        }
-      }
-    >
-      Morty Smith (split reality)
-    </li>
-  </ul>
-  <button
-    className="button"
-    onClick={[Function]}
-  >
-    Show all
-  </button>
-</div>
-`;
-
-exports[`ExtendableCard matches snapshot: Batman films 1`] = `
-<div
-  style={
-    Object {
-      "marginBottom": 0,
-      "paddingBottom": "2rem",
-      "textAlign": "center",
-    }
-  }
->
-  <h4>
-    Batman films
-  </h4>
-  <span
-    style={
-      Object {
-        "fontSize": "8rem",
-      }
-    }
-  >
-    <span
-      className="icon icon-species"
-      data-icon="("
-      style={
-        Object {
-          "color": "indianred",
-        }
-      }
-      title="Bat"
-    />
-  </span>
-  <ul
-    className="content sc-htpNat dUITwr"
-  >
-    <li
-      style={
-        Object {
-          "marginBottom": "0.3rem",
-        }
-      }
-    >
-      <a
-        href="https://en.wikipedia.org/wiki/Batman_(serial)"
-      >
-        Batman (1943)
-      </a>
-    </li>
-    <li
-      style={
-        Object {
-          "marginBottom": "0.3rem",
-        }
-      }
-    >
-      <a
-        href="https://en.wikipedia.org/wiki/Batman_and_Robin_(serial)"
-      >
-        Batman and Robin (1949)
-      </a>
-    </li>
-    <li
-      style={
-        Object {
-          "marginBottom": "0.3rem",
-        }
-      }
-    >
-      <a
-        href="https://en.wikipedia.org/wiki/Batman_(1966_film)"
-      >
-        Batman (1966)
-      </a>
-    </li>
-    <li
-      style={
-        Object {
-          "marginBottom": "0.3rem",
-        }
-      }
-    >
-      <a
-        href="https://en.wikipedia.org/wiki/Batman_(1989_film)"
-      >
-        Batman (1989)
-      </a>
-    </li>
-    <li
-      style={
-        Object {
-          "marginBottom": "0.3rem",
-        }
-      }
-    >
-      <a
-        href="https://en.wikipedia.org/wiki/Batman_Returns"
-      >
-        Batman Returns (1992)
-      </a>
-    </li>
-  </ul>
-  <button
-    className="button"
-    onClick={[Function]}
-  >
-    Show all
-  </button>
-</div>
-`;
-
-exports[`ExtendableCard matches snapshot: Finding Nemo 1`] = `
-<div
-  style={
-    Object {
-      "marginBottom": 0,
-      "paddingBottom": "2rem",
-      "textAlign": "center",
-    }
-  }
->
-  <h4>
-    <a
-      href="https://en.wikipedia.org/wiki/Finding_Nemo"
-    >
-      Finding Nemo
-    </a>
-  </h4>
-  <a
-    href="https://en.wikipedia.org/wiki/Finding_Nemo"
-    style={
-      Object {
-        "borderBottom": 0,
-      }
-    }
-  >
-    <span
-      style={
-        Object {
-          "fontSize": "8rem",
-        }
-      }
-    >
-      <span
-        className="icon icon-species"
-        data-icon="Z"
-        style={
+      <StyledComponent
+        className="content"
+        forwardedComponent={
           Object {
-            "color": "deepskyblue",
+            "$$typeof": Symbol(react.forward_ref),
+            "attrs": Array [],
+            "componentStyle": ComponentStyle {
+              "componentId": "sc-htpNat",
+              "isStatic": true,
+              "lastClassName": "dUITwr",
+              "rules": Array [
+                "
+  list-style: none;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+",
+              ],
+            },
+            "displayName": "styled.ul",
+            "foldedComponentIds": Array [],
+            "render": [Function],
+            "styledComponentId": "sc-htpNat",
+            "target": "ul",
+            "toString": [Function],
+            "warnTooManyClasses": [Function],
+            "withComponent": [Function],
           }
         }
-        title="Zebrafish"
-      />
-    </span>
-  </a>
-  <ul
-    className="content sc-htpNat dUITwr"
-  >
-    <li
-      style={
-        Object {
-          "marginBottom": "0.3rem",
-        }
-      }
-    >
-      Dory
-    </li>
-    <li
-      style={
-        Object {
-          "marginBottom": "0.3rem",
-        }
-      }
-    >
-      Nemo
-    </li>
-    <li
-      style={
-        Object {
-          "marginBottom": "0.3rem",
-        }
-      }
-    >
-      Gill
-    </li>
-  </ul>
-</div>
-`;
-
-exports[`ExtendableCard matches snapshot: The Smith household 1`] = `
-<div
-  style={
-    Object {
-      "marginBottom": 0,
-      "paddingBottom": "2rem",
-      "textAlign": "center",
-    }
-  }
->
-  <h4>
-    The Smith household
-  </h4>
-  <img
-    src="https://upload.wikimedia.org/wikipedia/en/b/b0/Rick_and_Morty_characters.jpg"
-    style={
-      Object {
-        "height": "8rem",
-        "marginBottom": "2.35rem",
-        "marginTop": "2.50rem",
-      }
-    }
-  />
-  <ul
-    className="content sc-htpNat dUITwr"
-  >
-    <li
-      style={
-        Object {
-          "marginBottom": "0.3rem",
-        }
-      }
-    >
-      <a
-        href="https://en.wikipedia.org/wiki/List_of_Rick_and_Morty_characters#Jerry_Smith"
+        forwardedRef={null}
       >
-        Jerry Smith
-      </a>
-    </li>
-    <li
-      style={
-        Object {
-          "marginBottom": "0.3rem",
-        }
-      }
-    >
-      <a
-        href="https://en.wikipedia.org/wiki/List_of_Rick_and_Morty_characters#Beth_Smith"
-      >
-        Beth Smith
-      </a>
-    </li>
-    <li
-      style={
-        Object {
-          "marginBottom": "0.3rem",
-        }
-      }
-    >
-      <a
-        href="https://en.wikipedia.org/wiki/List_of_Rick_and_Morty_characters#Summer_Smith"
-      >
-        Summer Smith
-      </a>
-    </li>
-    <li
-      style={
-        Object {
-          "marginBottom": "0.3rem",
-        }
-      }
-    >
-      <a
-        href="https://en.wikipedia.org/wiki/Morty_Smith"
-      >
-        Morty Smith
-      </a>
-    </li>
-    <li
-      style={
-        Object {
-          "marginBottom": "0.3rem",
-        }
-      }
-    >
-      <a
-        href="https://en.wikipedia.org/wiki/Rick_Sanchez_(Rick_and_Morty)"
-      >
-        Rick Sanchez
-      </a>
-    </li>
-  </ul>
-</div>
+        <ul
+          className="content sc-htpNat dUITwr"
+        >
+          <li
+            key="Jerry Smith-0"
+            style={
+              Object {
+                "marginBottom": "0.3rem",
+              }
+            }
+          >
+            <a
+              href="https://en.wikipedia.org/wiki/List_of_Rick_and_Morty_characters#Jerry_Smith"
+            >
+              Jerry Smith
+            </a>
+          </li>
+          <li
+            key="Beth Smith-1"
+            style={
+              Object {
+                "marginBottom": "0.3rem",
+              }
+            }
+          >
+            <a
+              href="https://en.wikipedia.org/wiki/List_of_Rick_and_Morty_characters#Beth_Smith"
+            >
+              Beth Smith
+            </a>
+          </li>
+          <li
+            key="Summer Smith-2"
+            style={
+              Object {
+                "marginBottom": "0.3rem",
+              }
+            }
+          >
+            <a
+              href="https://en.wikipedia.org/wiki/List_of_Rick_and_Morty_characters#Summer_Smith"
+            >
+              Summer Smith
+            </a>
+          </li>
+          <li
+            key="Morty Smith-3"
+            style={
+              Object {
+                "marginBottom": "0.3rem",
+              }
+            }
+          >
+            <a
+              href="https://en.wikipedia.org/wiki/Morty_Smith"
+            >
+              Morty Smith
+            </a>
+          </li>
+          <li
+            key="Rick Sanchez-4"
+            style={
+              Object {
+                "marginBottom": "0.3rem",
+              }
+            }
+          >
+            <a
+              href="https://en.wikipedia.org/wiki/Rick_Sanchez_(Rick_and_Morty)"
+            >
+              Rick Sanchez
+            </a>
+          </li>
+        </ul>
+      </StyledComponent>
+    </styled.ul>
+  </div>
+</ExtendableCard>
 `;

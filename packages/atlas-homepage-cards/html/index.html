@@ -29,22 +29,30 @@
   </div>
 
   <div class="row column">
-    <h2 class="text-center">Species card container</h1>
+    <h2 class="text-center">Responsive card row with default <code>Card</code>, <code>iconType: `species`</code></h1>
     <div id="species-card-container"></div>
   </div>
 
   <div class="row column">
-    <h2 class="text-center">Image card container</h1>
+    <h2 class="text-center">Responsive card row with default <code>Card</code>, <code>iconType: `image`</code></h1>
+    <div id="experiments-container"></div>
+  </div>
+
+  <div class="row column">
+    <h2 class="text-center">Responsive card row with <code>ExtendableCard</code></h1>
     <div id="image-card-container"></div>
   </div>
 </body>
 
 <script src="../dist/vendors.bundle.js"></script>
-<script src="../dist/homepageCardsDemo.bundle.js"></script>
+<script src="../dist/animalSpeciesSummary.bundle.js"></script>
+<script src="../dist/extendableCardDemo.bundle.js"></script>
+<script src="../dist/experimentsPanelDemo.bundle.js"></script>
+<script src="../dist/responsiveCardsRowDemo.bundle.js"></script>
 
 <!-- Set to http://localhost:8080/gxa/ or http://localhost:8080/gxa/sc/ -- Remember the trailing slash! -->
 <script>
-  homepageCardsDemo.renderExtendableCard({
+  extendableCardDemo.render({
     iconType: 'image',
     iconSrc: 'https://upload.wikimedia.org/wikipedia/en/6/6b/A_Rickle_in_Time.jpg',
     description: {
@@ -73,7 +81,7 @@
     ]
   }, 'extendable-image-card-long');
 
-  homepageCardsDemo.renderExtendableCard({
+  extendableCardDemo.render({
     iconType: 'image',
     iconSrc: 'https://upload.wikimedia.org/wikipedia/en/b/b0/Rick_and_Morty_characters.jpg',
     description: {
@@ -103,7 +111,7 @@
     ]
   }, 'extendable-image-card-short');
 
-  homepageCardsDemo.renderExtendableCard({
+  extendableCardDemo.render({
     iconType: 'species',
     iconSrc: 'bat',
     description:{
@@ -169,7 +177,7 @@
     ]
   }, 'extendable-species-card-long');
 
-  homepageCardsDemo.renderExtendableCard({
+  extendableCardDemo.render({
     iconType: 'species',
     iconSrc: 'zebrafish',
     description: {
@@ -189,15 +197,31 @@
     ]
   }, 'extendable-species-card-short');
 
-  homepageCardsDemo.renderSceaHomepageSpeciesContainer({
+  animalSpeciesSummary.render({
     host: 'http://localhost:8080/gxa/sc/',
-    resource: 'json/experiments/popular-species'
+    resource: 'json/species-summary',
+    className: 'row small-up-2 medium-up-4 large-up-6',
+    cardContainerClassName: 'column'
   }, 'species-card-container');
 
-  homepageCardsDemo.renderHcaLandingPageContainer({
+  responsiveCardsRowDemo.render({
     host: 'http://localhost:8080/gxa/sc/',
-    resource: 'json/hca'
+    resource: 'json/hca',
+    className: 'row small-up-2',
+    cardContainerClassName: 'column',
+    speciesIconHeight: `8rem`,
+    imageIconHeight: `8rem`,
+    hoverColour: `none`
   }, 'image-card-container');
+
+  experimentsPanelDemo.render(
+    {
+      host: 'http://localhost:8080/gxa/',
+      imageIconHeight: '4rem',
+      className: 'row small-up-2 medium-up-3 large-up-4',
+      cardContainerClassName: 'column'
+    },
+    'experiments-container')
 </script>
 
 </html>
