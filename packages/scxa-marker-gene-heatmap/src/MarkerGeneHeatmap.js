@@ -7,6 +7,7 @@ import HighchartsHeatmap from 'highcharts/modules/heatmap'
 import HighchartsNoData from 'highcharts/modules/no-data-to-display'
 import HighchartsExporting from 'highcharts/modules/exporting'
 import HighchartsExportData from 'highcharts/modules/export-data'
+import HighchartsGetHeatmapData from './getHeatmapExportDataModule'
 
 import _ from 'lodash'
 
@@ -16,6 +17,7 @@ async function addModules() {
   HighchartsNoData(Highcharts)
   HighchartsExporting(Highcharts)
   HighchartsExportData(Highcharts)
+  HighchartsGetHeatmapData(Highcharts)
 }
 
 addModules()
