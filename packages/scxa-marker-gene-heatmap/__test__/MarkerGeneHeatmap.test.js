@@ -15,21 +15,21 @@ describe(`MarkerGeneHeatmap`, () => {
         {
           x: 0,
           y: 0,
-          name: `foo`,
+          geneName: `foo`,
           value: 13,
           clusterIdWhereMarker: 1
         },
         {
           x: 1,
           y: 1,
-          name: `bar`,
+          geneName: `bar`,
           value: 2,
           clusterIdWhereMarker: 2
         },
         {
           x: 2,
           y: 2,
-          name: `foobar`,
+          geneName: `foobar`,
           value: 1,
           clusterIdWhereMarker: 3
         }
@@ -52,7 +52,7 @@ describe(`MarkerGeneHeatmap`, () => {
         {
           x: 0,
           y: 0,
-          name: `foo`,
+          geneName: `foo`,
           value: 13,
           clusterIdWhereMarker: 1
         }

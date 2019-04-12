@@ -49,7 +49,7 @@ class HeatmapView extends React.Component {
         isLoading: false,
         hasError: {
           description: `There was a problem communicating with the server. Please try again later.`,
-          name: e.name,
+          name: e.geneName,
           message: e.message
         }
       })
@@ -70,7 +70,7 @@ class HeatmapView extends React.Component {
     this.setState({
       hasError: {
         description: `There was a problem rendering this component.`,
-        name: error.name,
+        name: error.geneName,
         message: `${error.message} – ${info}`
       }
     })
@@ -144,9 +144,9 @@ class HeatmapView extends React.Component {
                 data={filteredData}
                 isDataFiltered={selectedClusterId && selectedClusterId.value !== `all` || false}
                 xAxisCategories={allClusterIds}
-                yAxisCategories={ _.uniq(data.map(x => x.name))}
+                yAxisCategories={ _.uniq(data.map(x => x.geneName))}
                 chartHeight={defaultHeatmapHeight}
-                hasDynamicHeight={_.uniq(filteredData.map(x => x.name)).length > 5 ? hasDynamicHeight : false} // don't want dynamic height if there is little or no data
+                hasDynamicHeight={_.uniq(filteredData.map(x => x.geneName)).length > 5 ? hasDynamicHeight : false} // don't want dynamic height if there is little or no data
                 heatmapRowHeight={heatmapRowHeight}
               />
               <LoadingOverlay
