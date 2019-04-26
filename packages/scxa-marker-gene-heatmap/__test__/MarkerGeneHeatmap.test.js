@@ -68,4 +68,39 @@ describe(`MarkerGeneHeatmap`, () => {
 
     expect(chartOptions.yAxis[0].plotLines).toHaveLength(0)
   })
+
+  test(`does have data export options`, () => {
+    const wrapper = shallow(<MarkerGeneHeatmap
+      data={[
+        {
+          x: 0,
+          y: 0,
+          geneName: `foo`,
+          value: 13,
+          clusterIdWhereMarker: 1
+        }
+      ]}
+      xAxisCategories={[`1`, `2`, `3`]}
+      yAxisCategories={[`a`, `b`, `c`]}
+      chartHeight={200}
+      isDataFiltered={true}
+      heatmapRowHeight={20}
+      hasDynamicHeight={false} />)
+
+    const chartOptions = wrapper.find(`t`).props().options
+
+    expect(chartOptions.exporting.buttons.contextButton.menuItems).toEqual(
+      [
+        'printChart',
+        'separator',
+        'downloadPNG',
+        'downloadJPEG',
+        'downloadPDF',
+        'downloadSVG',
+        'separator',
+        'downloadCSV',
+        'downloadXLS'
+      ]
+    )
+  })
 })
