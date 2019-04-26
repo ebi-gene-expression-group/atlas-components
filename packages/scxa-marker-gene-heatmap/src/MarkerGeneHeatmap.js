@@ -7,7 +7,7 @@ import HighchartsHeatmap from 'highcharts/modules/heatmap'
 import HighchartsNoData from 'highcharts/modules/no-data-to-display'
 import HighchartsExporting from 'highcharts/modules/exporting'
 import HighchartsExportData from 'highcharts/modules/export-data'
-import HighchartsGetHeatmapData from './getHeatmapExportDataModule'
+import HighchartsGetHeatmapData from './highchartsHeatmapTableDataModule'
 
 import _ from 'lodash'
 
