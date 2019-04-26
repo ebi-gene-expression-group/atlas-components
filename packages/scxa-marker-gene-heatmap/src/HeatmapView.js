@@ -49,7 +49,7 @@ class HeatmapView extends React.Component {
         isLoading: false,
         hasError: {
           description: `There was a problem communicating with the server. Please try again later.`,
-          name: e.geneName,
+          name: e.name,
           message: e.message
         }
       })
@@ -70,7 +70,7 @@ class HeatmapView extends React.Component {
     this.setState({
       hasError: {
         description: `There was a problem rendering this component.`,
-        name: error.geneName,
+        name: error.name,
         message: `${error.message} – ${info}`
       }
     })
