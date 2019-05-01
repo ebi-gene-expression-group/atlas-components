@@ -92,10 +92,9 @@ const _colourizeExpressionLevel = (gradientColours, highlightSeries) => {
 const GeneExpressionScatterPlot = (props) => {
   const {atlasUrl, suggesterEndpoint, geneId, onSelectGeneId, speciesName} = props       // Suggester
   const {height, plotData, expressionGradientColours, highlightClusters} = props  // Chart
-  const {loading, resourcesUrl, errorMessage} = props                       // Overlay
+  const {loading, resourcesUrl, errorMessage, showControls} = props                       // Overlay
   const colourSchema = [`#d4e4fb`,`#95adde`,`#6077bf`,`#1151D1`,`#35419b`,`#0e0573`] // light blue to dark blue
   const colourSchemaLength = colourSchema.length
-
   const plotIsDisabled = !plotData.max
 
   const dataScale = plotIsDisabled ?
@@ -174,33 +173,39 @@ const GeneExpressionScatterPlot = (props) => {
     />
 
   return [
-    <AtlasAutocomplete
-      key={`expression-autocomplete`}
-      wrapperClassName={`row margin-bottom-large`}
-      atlasUrl={atlasUrl}
-      suggesterEndpoint={suggesterEndpoint}
-      initialValue={geneId}
-      defaultSpecies={speciesName}
-      onSelect={ (event) => { onSelectGeneId(event) } }
-    />,
+    showControls &&
+      <AtlasAutocomplete
+        key={`expression-autocomplete`}
+        wrapperClassName={`row margin-bottom-large`}
+        atlasUrl={atlasUrl}
+        suggesterEndpoint={suggesterEndpoint}
+        initialValue={geneId}
+        defaultSpecies={speciesName}
+        onSelect={(event) => {
+          onSelectGeneId(event)
+        }}
+      />,
     //react-responsive design
-    <Desktop key={`Desktop`}>
-      {responsiveComponent(1800/2.2)}
-    </Desktop>,
-    <Tablet key={`Tablet`}>
-      {responsiveComponent(1000/2.2)}
-    </Tablet>,
-    <Mobile key={`Mobile`}>
-      {responsiveComponent(750)}
-    </Mobile>,
-    <Default key={`Default`}>
-      {responsiveComponent(350)}
-    </Default>
+    <div key={`scatter-plot`} style={ showControls ? {} : {marginTop: `13%`}}>
+      <Desktop key={`Desktop`}>
+        {responsiveComponent(1800 / 2.2)}
+      </Desktop>
+      <Tablet key={`Tablet`}>
+        {responsiveComponent(1000 / 2.2)}
+      </Tablet>
+      <Mobile key={`Mobile`}>
+        {responsiveComponent(750)}
+      </Mobile>
+      <Default key={`Default`}>
+        {responsiveComponent(350)}
+      </Default>
+    </div>
   ]
 }
 
 GeneExpressionScatterPlot.propTypes = {
   height: PropTypes.number.isRequired,
+  showControls: PropTypes.bool.isRequired,
 
   plotData: PropTypes.shape({
     series: PropTypes.array.isRequired,
