@@ -41,7 +41,7 @@ describe(`MarkerGeneHeatmap`, () => {
       heatmapRowHeight={20}
       hasDynamicHeight={false} />)
 
-    const chartOptions = wrapper.find(`t`).props().options
+    const chartOptions = wrapper.find(`e`).props().options
 
     expect(chartOptions.yAxis[0].plotLines).toHaveLength(3)
   })
@@ -64,7 +64,7 @@ describe(`MarkerGeneHeatmap`, () => {
       heatmapRowHeight={20}
       hasDynamicHeight={false} />)
 
-    const chartOptions = wrapper.find(`t`).props().options
+    const chartOptions = wrapper.find(`e`).props().options
 
     expect(chartOptions.yAxis[0].plotLines).toHaveLength(0)
   })
@@ -87,19 +87,19 @@ describe(`MarkerGeneHeatmap`, () => {
       heatmapRowHeight={20}
       hasDynamicHeight={false} />)
 
-    const chartOptions = wrapper.find(`t`).props().options
+    const chartOptions = wrapper.find(`e`).props().options
 
     expect(chartOptions.exporting.buttons.contextButton.menuItems).toEqual(
       [
-        'printChart',
-        'separator',
-        'downloadPNG',
-        'downloadJPEG',
-        'downloadPDF',
-        'downloadSVG',
-        'separator',
-        'downloadCSV',
-        'downloadXLS'
+        `printChart`,
+        `separator`,
+        `downloadPNG`,
+        `downloadJPEG`,
+        `downloadPDF`,
+        `downloadSVG`,
+        `separator`,
+        `downloadCSV`,
+        `downloadXLS`
       ]
     )
   })
