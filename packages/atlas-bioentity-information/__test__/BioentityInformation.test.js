@@ -5,6 +5,7 @@ import Enzyme from 'enzyme'
 import {shallow, mount} from 'enzyme'
 import Adapter from 'enzyme-adapter-react-16'
 
+import '@babel/polyfill'
 import BioentityInformation from '../src/BioentityInformation'
 import Loading from '../src/Loading'
 import {mockBioentityProperties} from './Utils'

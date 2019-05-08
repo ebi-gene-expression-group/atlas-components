@@ -5,8 +5,8 @@
   "main": "lib/index.js",
   "scripts": {
     "prepack": "rm -rf lib && babel src -d lib --copy-files",
-    "test": "jest --coverage --verbose",
-    "posttest": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
+    "test": "jest",
+    "posttest": "jest --coverage --coverageReporters=text-lcov | coveralls",
     "postversion": "npm publish",
     "postpublish": "git push && git push --tags"
   },
@@ -45,7 +45,6 @@
     "@babel/polyfill": "^7.4.4",
     "@babel/preset-env": "^7.4.4",
     "@babel/preset-react": "^7.0.0",
-    "babel-core": "^7.0.0-bridge.0",
     "babel-jest": "^24.8.0",
     "babel-loader": "^8.0.5",
     "clean-webpack-plugin": "^2.0.2",
