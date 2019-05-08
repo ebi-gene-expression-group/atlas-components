@@ -15,6 +15,14 @@ module.exports = {
     publicPath: commonPublicPath
   },
 
+  resolve: {
+    alias: {
+      "react": path.resolve(`./node_modules/react`),
+      "react-dom": path.resolve(`./node_modules/react-dom`),
+      "styled-components": path.resolve(`./node_modules/styled-components`)
+    },
+  },
+
   optimization: {
     runtimeChunk: {
        name: vendorsBundleName
@@ -31,7 +39,10 @@ module.exports = {
   },
 
   plugins: [
-    new CleanWebpackPlugin([`dist`])
+    new CleanWebpackPlugin({
+      verbose: true,
+      cleanOnceBeforeBuildPatterns: `dist`
+    })
   ],
 
   module: {
