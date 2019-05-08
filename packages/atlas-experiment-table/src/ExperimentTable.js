@@ -155,6 +155,7 @@ class ExperimentTable extends React.Component {
             currentPage,
             entriesPerPage
           }}
+          currentPageDataLength={currentPageData.length}
           dataArrayLength={dataArray.length}
           dataLength={aaData.length} 
           onChange={i => this.setState({currentPage: i})}/>

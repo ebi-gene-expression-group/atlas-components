@@ -1,22 +1,25 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const TableFooter = ({dataArrayLength, currentPage, entriesPerPage, onChange, dataLength}) => {
+const TableFooter = ({dataArrayLength, currentPageDataLength, currentPage, entriesPerPage, onChange, dataLength}) => {
   const pageNumbers = []
   for (let i = 1; i <= Math.ceil(dataArrayLength / entriesPerPage); i++) {
     pageNumbers.push( i === currentPage ? <li className={`current`} key={`bottom${i}`}>{currentPage}</li> :
       <li key={`bottom${i}`}><a onClick={() => onChange(i)}>{i}</a></li>)
   }
 
+  const pageInfo = pageNumbers.length === 1 ? `` : ` (Page ${currentPage} of ${pageNumbers.length})`
+
   return (
     <div className="row expanded padding-top-medium">
       <div className={`small-6 columns`}>
         {
           dataLength === 0 ?
-            `No experiments are shown because a query doesn’t match.` :
+            `Nothing to see here. Move along!` :
             dataArrayLength === 0 ?
-              `Nothing to see here. Move along!` :
-              `Showing ${dataArrayLength} results from a total of ${dataLength} experiments.`
+              ` No experiments are shown because a query doesn’t match.` :
+              `Showing ${currentPageDataLength} result${currentPageDataLength ===1 ? ``: `s`}
+              ${dataArrayLength < dataLength ? ` out of ${dataArrayLength}` : ``} from a total of ${dataLength} experiments${pageInfo}.`
         }
       </div>
 
@@ -47,6 +50,7 @@ const TableFooter = ({dataArrayLength, currentPage, entriesPerPage, onChange, da
 
 TableFooter.propTypes = {
   dataArrayLength: PropTypes.number.isRequired,
+  currentPageDataLength: PropTypes.number.isRequired,
   currentPage: PropTypes.number.isRequired,
   entriesPerPage: PropTypes.oneOfType([
     PropTypes.string,
