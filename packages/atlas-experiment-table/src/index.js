@@ -1,3 +1,1 @@
-import MyComponent from './MyComponent.js'
-
-export default MyComponent
+export  { default } from './ExperimentTable'
