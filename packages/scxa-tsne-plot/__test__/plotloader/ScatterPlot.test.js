@@ -1,16 +1,13 @@
 import React from 'react'
 // Highcharts can only be shallow-rendered unless it’s mocked, see __mocks__/highcharts.js
-import Enzyme from 'enzyme'
 import {shallow, mount} from 'enzyme'
-import Adapter from 'enzyme-adapter-react-16'
 
+import '@babel/polyfill'
 import ScatterPlot from '../../src/plotloader/ScatterPlot'
 import {randomHighchartsSeriesWithSeed} from '../Utils'
 
 // *IMPORTANT*: Highcharts and React Highcharts aren’t the easiest components to inspect for testing. The mysterious
 //              `n` node was in earlier versions `HighchartsChart`. However the mock was also thinner, so who knows!
-
-Enzyme.configure({ adapter: new Adapter() })
 
 describe(`ScatterPlot`, () => {
 

@@ -2,15 +2,17 @@ const path = require(`path`)
 const CleanWebpackPlugin = require(`clean-webpack-plugin`)
 
 const commonPublicPath = `/dist/`
+const vendorsBundleName = `vendors`
 
 module.exports = {
   entry: {
-    tSnePlotViewDemo: [`babel-polyfill`, `./html/Demo.js`],
-    // dependencies: [`prop-types`, `react`, `react-dom`, `urijs`]
+    tSnePlotViewDemo: [`@babel/polyfill`, `./html/Demo.js`],
   },
 
   plugins: [
-    new CleanWebpackPlugin([`dist`])
+    new CleanWebpackPlugin({
+      cleanOnceBeforeBuildPatterns: `dist`
+    })
   ],
 
   output: {
@@ -19,20 +21,24 @@ module.exports = {
     publicPath: commonPublicPath
   },
 
+  resolve: {
+    alias: {
+      "react": path.resolve(`./node_modules/react`),
+      "react-dom": path.resolve(`./node_modules/react-dom`),
+      "styled-components": path.resolve(`./node_modules/styled-components`)
+    },
+  },
+
   optimization: {
+    runtimeChunk: {
+       name: vendorsBundleName
+    },
     splitChunks: {
-      chunks: `all`,
-      minSize: 1,
       cacheGroups: {
-        tSnePlotView: {
-          test: /[\\/]src[\\/]/,
-          name: `tSnePlotView`,
-          priority: -20
-        },
-        vendors: {
+        commons: {
           test: /[\\/]node_modules[\\/]/,
-          name: `vendors`,
-          priority: -10
+          name: vendorsBundleName,
+          chunks: 'all'
         }
       }
     }

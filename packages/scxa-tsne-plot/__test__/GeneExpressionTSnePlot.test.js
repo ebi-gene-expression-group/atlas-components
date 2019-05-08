@@ -2,10 +2,9 @@ import React from 'react'
 import renderer from 'react-test-renderer'
 import Color from 'color'
 
-import Enzyme from 'enzyme'
 import {mount} from 'enzyme'
-import Adapter from 'enzyme-adapter-react-16'
 
+import '@babel/polyfill'
 import {_colourizeExpressionLevel} from '../src/GeneExpressionTSnePlot'
 import GeneExpressionTSnePlot from '../src/GeneExpressionTSnePlot'
 import AtlasAutocomplete from 'expression-atlas-autocomplete'
@@ -18,8 +17,6 @@ import {
   plotData,
   randomHighchartsSeriesWithSeed
 } from './Utils'
-
-Enzyme.configure({adapter: new Adapter()})
 
 describe(`GeneExpressionTSnePlot colourize function`, () => {
 

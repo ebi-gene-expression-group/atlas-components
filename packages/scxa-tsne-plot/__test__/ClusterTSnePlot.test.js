@@ -2,10 +2,9 @@ import React from 'react'
 import renderer from 'react-test-renderer'
 import Color from 'color'
 
-import Enzyme from 'enzyme'
 import {mount} from 'enzyme'
-import Adapter from 'enzyme-adapter-react-16'
 
+import '@babel/polyfill'
 import {_colourizeClusters, tooltipHeader} from '../src/ClusterTSnePlot'
 import ClusterTSnePlot from '../src/ClusterTSnePlot'
 import ScatterPlotLoader from '../src/plotloader/PlotLoader'
@@ -13,8 +12,6 @@ import PlotSettingsDropdown from '../src/PlotSettingsDropdown'
 
 import '../src/util/MathRound'
 import {randomHighchartsSeriesWithNamesAndMaxPoints} from './Utils'
-
-Enzyme.configure({ adapter: new Adapter() })
 
 const seriesNames = [`Cluster 0`, `Cluster 1`, `Cluster 2`, `Cluster 3`, `Cluster 4`]
 const maxPointsPerSeries = 1000
