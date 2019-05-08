@@ -1,10 +1,6 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import Enzyme from 'enzyme'
 import {shallow, mount, render} from 'enzyme'
-import Adapter from 'enzyme-adapter-react-16'
-
-Enzyme.configure({ adapter: new Adapter() })
 
 import ScientificNotationNumber from '../src/ScientificNotationNumber.js'
 

@@ -2,6 +2,7 @@ const path = require(`path`)
 const CleanWebpackPlugin = require(`clean-webpack-plugin`)
 
 const commonPublicPath = `/dist/`
+const vendorsBundleName = `vendors`
 
 module.exports = {
   entry: {
@@ -9,7 +10,9 @@ module.exports = {
   },
 
   plugins: [
-    new CleanWebpackPlugin([`dist`])
+    new CleanWebpackPlugin({
+      cleanOnceBeforeBuildPatterns: `dist`
+    })
   ],
 
   output: {
@@ -18,12 +21,22 @@ module.exports = {
     publicPath: commonPublicPath
   },
 
+  resolve: {
+    alias: {
+      "react": path.resolve(`./node_modules/react`),
+      "react-dom": path.resolve(`./node_modules/react-dom`)
+    },
+  },
+
   optimization: {
+    runtimeChunk: {
+       name: vendorsBundleName
+    },
     splitChunks: {
       cacheGroups: {
         commons: {
           test: /[\\/]node_modules[\\/]/,
-          name: 'vendors',
+          name: vendorsBundleName,
           chunks: 'all'
         }
       }
