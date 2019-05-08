@@ -72,7 +72,7 @@ Array [
       </sup>
     </h4>
     <div
-      className="css-10nd86i"
+      className="css-1pcexqc-container"
       onKeyDown={[Function]}
     >
       <div
@@ -84,7 +84,7 @@ Array [
           className="css-1hwfws3"
         >
           <div
-            className="css-1492t68"
+            className="css-151xaom-placeholder"
           >
             Select...
           </div>
@@ -117,6 +117,7 @@ Array [
                     "boxSizing": "content-box",
                     "color": "inherit",
                     "fontSize": "inherit",
+                    "label": "input",
                     "opacity": 1,
                     "outline": 0,
                     "padding": 0,
@@ -177,7 +178,7 @@ Array [
       </sup>
     </h4>
     <div
-      className="css-10nd86i"
+      className="css-1pcexqc-container"
       onKeyDown={[Function]}
     >
       <div
@@ -189,7 +190,7 @@ Array [
           className="css-1hwfws3"
         >
           <div
-            className="css-1492t68"
+            className="css-151xaom-placeholder"
           >
             Select...
           </div>
@@ -222,6 +223,7 @@ Array [
                     "boxSizing": "content-box",
                     "color": "inherit",
                     "fontSize": "inherit",
+                    "label": "input",
                     "opacity": 1,
                     "outline": 0,
                     "padding": 0,
@@ -268,7 +270,7 @@ Array [
       Show
     </h4>
     <div
-      className="css-10nd86i"
+      className="css-1pcexqc-container"
       onKeyDown={[Function]}
     >
       <div
@@ -280,7 +282,7 @@ Array [
           className="css-1hwfws3"
         >
           <div
-            className="css-1492t68"
+            className="css-151xaom-placeholder"
           >
             Select...
           </div>
@@ -313,6 +315,7 @@ Array [
                     "boxSizing": "content-box",
                     "color": "inherit",
                     "fontSize": "inherit",
+                    "label": "input",
                     "opacity": 1,
                     "outline": 0,
                     "padding": 0,

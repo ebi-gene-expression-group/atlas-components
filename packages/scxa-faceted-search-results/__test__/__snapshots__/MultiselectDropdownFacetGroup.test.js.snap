@@ -22,7 +22,7 @@ exports[`MultiselectDropdownFacetGroup matches snapshot 1`] = `
     </sup>
   </h4>
   <div
-    className="css-10nd86i"
+    className="css-1pcexqc-container"
     onKeyDown={[Function]}
   >
     <div
@@ -34,7 +34,7 @@ exports[`MultiselectDropdownFacetGroup matches snapshot 1`] = `
         className="css-1hwfws3"
       >
         <div
-          className="css-1492t68"
+          className="css-151xaom-placeholder"
         >
           Select...
         </div>
@@ -67,6 +67,7 @@ exports[`MultiselectDropdownFacetGroup matches snapshot 1`] = `
                   "boxSizing": "content-box",
                   "color": "inherit",
                   "fontSize": "inherit",
+                  "label": "input",
                   "opacity": 1,
                   "outline": 0,
                   "padding": 0,

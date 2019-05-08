@@ -11,7 +11,10 @@ module.exports = {
   },
 
   plugins: [
-    new CleanWebpackPlugin([`dist`])
+    new CleanWebpackPlugin({
+      verbose: true,
+      cleanOnceBeforeBuildPatterns: `dist`
+    })
   ],
 
   output: {
