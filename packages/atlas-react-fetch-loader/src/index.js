@@ -1,3 +1,1 @@
-import withFetchLoader from './FetchLoader'
-
-export default withFetchLoader
+export { default as withFetchLoader } from './FetchLoader'
