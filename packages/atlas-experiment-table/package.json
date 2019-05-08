@@ -1,6 +1,6 @@
 {
   "name": "atlas-experiment-table",
-  "version": "0.0.1",
+  "version": "1.0.0-rc2",
   "description": "This package renders an experiment table with user interaction using Evergreen package",
   "main": "lib/index.js",
   "scripts": {
