@@ -1,15 +1,12 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import Enzyme from 'enzyme'
 import { shallow } from 'enzyme'
-import Adapter from 'enzyme-adapter-react-16'
 import fetchMock from 'fetch-mock'
 import URI from 'urijs'
 
+import '@babel/polyfill'
 import Autocomplete from '../src/Autocomplete'
 import AsyncCreatableSelect from 'react-select/lib/AsyncCreatable'
-
-Enzyme.configure({ adapter: new Adapter() })
 
 const getRandomInt = (max) => Math.floor(Math.random() * Math.floor(max))
 

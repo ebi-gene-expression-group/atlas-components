@@ -1,9 +1,8 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import Enzyme from 'enzyme'
 import { shallow } from 'enzyme'
-import Adapter from 'enzyme-adapter-react-16'
 
+import '@babel/polyfill'
 import GeneSearchForm from '../src/GeneSearchForm'
 import Autocomplete from '../src/Autocomplete'
 import LabelledSelect from '../src/LabelledSelect'
@@ -11,8 +10,6 @@ import SearchExamples from '../src/SearchExamples'
 
 import * as species from './utils/species'
 import searchExamples from './utils/searchExamples'
-
-Enzyme.configure({ adapter: new Adapter() })
 
 const props = {
   atlasUrl: `foo/`,

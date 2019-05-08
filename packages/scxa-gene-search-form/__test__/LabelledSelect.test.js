@@ -1,15 +1,11 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import Enzyme from 'enzyme'
 import { shallow } from 'enzyme'
-import Adapter from 'enzyme-adapter-react-16'
 
 import Select from 'react-select'
 import LabelledSelect from '../src/LabelledSelect'
 
 import * as species from './utils/species'
-
-Enzyme.configure({ adapter: new Adapter() })
 
 const props = {
   name: `Species`,

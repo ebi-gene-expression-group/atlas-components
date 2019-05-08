@@ -1,14 +1,9 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import Enzyme from 'enzyme'
 import { shallow } from 'enzyme'
-import Adapter from 'enzyme-adapter-react-16'
 
 import SearchExamples from '../src/SearchExamples'
-
 import searchExamples from './utils/searchExamples'
-
-Enzyme.configure({ adapter: new Adapter() })
 
 const props = {
   links: searchExamples.filter(() => Math.random() > 0.5)

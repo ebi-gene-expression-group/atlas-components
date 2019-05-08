@@ -8,7 +8,7 @@ exports[`LabelledSelect matches snapshot 1`] = `
     Species
   </label>
   <div
-    className="css-10nd86i"
+    className="css-1pcexqc-container"
     onKeyDown={[Function]}
   >
     <div
@@ -20,12 +20,13 @@ exports[`LabelledSelect matches snapshot 1`] = `
         className="css-1hwfws3"
       >
         <div
-          className="css-xp4uvy"
+          className="css-dvua67-singleValue"
         >
           Any
         </div>
         <input
-          className="css-14uuagi"
+          className="css-gj7qu5-dummyInput"
+          disabled={false}
           id="Species-input"
           onBlur={[Function]}
           onChange={[Function]}
