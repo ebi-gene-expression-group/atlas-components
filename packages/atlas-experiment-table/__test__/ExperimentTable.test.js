@@ -70,6 +70,12 @@ describe(`ExperimentTable`, () => {
     expect(wrapper.find(Table.Row).length).toBeLessThanOrEqual(data.length)
   })
 
+  test(`should filter data if species is predefined`, () => {
+    const wrapper = mount(<ExperimentTable {...props} species={`homo`}/>)
+    wrapper.update()
+    expect(wrapper.find(Table.Row).length).toBeLessThanOrEqual(data.length)
+  })
+
   test(`should change page by clicking buttons`, () => {
     const wrapper = mount(<ExperimentTable {...props}/>)
     const currentPage = wrapper.state().currentPage
