@@ -1,16 +1,12 @@
 import React from 'react'
-import Enzyme from 'enzyme'
-import {shallow, mount} from 'enzyme'
-import Adapter from 'enzyme-adapter-react-16'
-import {getRandomInt, TableCellDiv, data, tableHeader} from './TestUtils'
+import { shallow, mount } from 'enzyme'
+import { getRandomInt, TableCellDiv, data, tableHeader } from './TestUtils'
 import ExperimentTable from '../src/ExperimentTable'
 import TableFooter from '../src/TableFooter'
 import TableContent from '../src/TableContent'
 import TableSearchHeader from '../src/TableSearchHeader'
 import { Table } from 'evergreen-ui'
-import _ from "lodash"
-
-Enzyme.configure({ adapter: new Adapter() })
+import _ from 'lodash'
 
 describe(`ExperimentTable`, () => {
   const props = {
@@ -25,9 +21,9 @@ describe(`ExperimentTable`, () => {
 
   test(`should render three search general boxes and a table with head and body and two bottom info boxes`, () => {
     const wrapper = shallow(<ExperimentTable {...props}/>)
-    expect(wrapper.find(TableSearchHeader)).toHaveLength(1)
-    expect(wrapper.find(TableContent)).toHaveLength(1)
-    expect(wrapper.find(TableFooter)).toHaveLength(1)
+    expect(wrapper).toContainExactlyOneMatchingElement(TableSearchHeader)
+    expect(wrapper).toContainExactlyOneMatchingElement(TableContent)
+    expect(wrapper).toContainExactlyOneMatchingElement(TableFooter)
   })
 
 
@@ -36,16 +32,16 @@ describe(`ExperimentTable`, () => {
     props.tableHeader[randomColumnIndex].type=`sort`
     const wrapper = mount(<ExperimentTable {...props}/>)
 
-    expect(wrapper.find(`.icon.icon-common.icon-sort-up`)).toHaveLength(1)
-    expect(wrapper.find(`.icon.icon-common.icon-sort-down`)).toHaveLength(0)
+    expect(wrapper).toContainExactlyOneMatchingElement(`.icon.icon-common.icon-sort-up`)
+    expect(wrapper.find(`.icon.icon-common.icon-sort-down`)).not.toExist()
 
     const sortedHeader = wrapper.find(`.header${randomColumnIndex}`).at(0)
-    sortedHeader.simulate('click')
+    sortedHeader.simulate(`click`)
     wrapper.update()
-    expect(wrapper.find(`.icon.icon-common.icon-sort-up`)).toHaveLength(0)
-    sortedHeader.simulate('click')
+    expect(wrapper.find(`.icon.icon-common.icon-sort-up`)).not.toExist()
+    sortedHeader.simulate(`click`)
     wrapper.update()
-    expect(wrapper.find(`.icon.icon-common.icon-sort-up`)).toHaveLength(1)
+    expect(wrapper).toContainExactlyOneMatchingElement(`.icon.icon-common.icon-sort-up`)
   })
 
   test(`should filter based on kingdom selection`, () => {
@@ -64,7 +60,7 @@ describe(`ExperimentTable`, () => {
     props.tableHeader[randomColumn].type=`search`
 
     const wrapper = mount(<ExperimentTable {...props}/>)
-    expect(wrapper.find(`.searchheader${randomColumn}`).exists()).toBe(true)
+    expect(wrapper.find(`.searchheader${randomColumn}`)).toExist()
     wrapper.setState({searchQuery: randomValue})
     wrapper.update()
     expect(wrapper.find(Table.Row).length).toBeLessThanOrEqual(data.length)
@@ -82,12 +78,12 @@ describe(`ExperimentTable`, () => {
     wrapper.setState({entriesPerPage: 1, currentPage: 1})
     wrapper.update()
 
-    const nextButton = wrapper.find('.pagination li').last()
+    const nextButton = wrapper.find(`.pagination li`).last()
     nextButton.children().simulate(`click`)
     wrapper.update()
     expect(wrapper.state().currentPage).toEqual(currentPage + 1)
 
-    const prevButton = wrapper.find('.pagination li').first()
+    const prevButton = wrapper.find(`.pagination li`).first()
     prevButton.children().simulate(`click`)
     expect(wrapper.state().currentPage).toEqual(currentPage)
 

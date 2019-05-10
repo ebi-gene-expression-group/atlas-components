@@ -1,11 +1,7 @@
 import React from 'react'
-import Enzyme from 'enzyme'
 import {shallow} from 'enzyme'
-import Adapter from 'enzyme-adapter-react-16'
 import { data } from './TestUtils'
 import TableFooter from '../src/TableFooter'
-
-Enzyme.configure({ adapter: new Adapter() })
 
 describe(`TableFooter`, () => {
   const props = {
