@@ -33,7 +33,7 @@ const TableContent = ({tableHeader, searchedColumnIndex, searchQuery, orderedCol
           }
         </Table.Head>
 
-        <Table.Body>
+        <Table.Body style={{"overflow-y":`hidden`}}>
           {currentPageData.map((data, index) => {
             return (
               <Table.Row height={`auto`} backgroundColor={index % 2 === 0 ? `white`:`#F1F1F1`} paddingY={14} key={`row${index}`}>
