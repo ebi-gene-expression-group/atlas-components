@@ -1,0 +1,395 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CarousleCardsRow matches snapshot with displaying a part of cards in the slider 1`] = `
+<div
+  className=""
+>
+  <GlobalStyleComponent />
+  <Slider
+    slidesToShow={3}
+  >
+    <styled.div
+      className=""
+      key="0"
+    >
+      <CardClass
+        content={
+          Array [
+            Object {
+              "text": "Morty Smith",
+            },
+            Object {
+              "text": "Summer Smith",
+            },
+            Object {
+              "text": "Rick Sanchez",
+            },
+            Object {
+              "text": "Rick Sanchez(split reality)",
+            },
+            Object {
+              "text": "Morty Smith (split reality)",
+            },
+            Object {
+              "text": "Summer Smith (split reality)",
+            },
+          ]
+        }
+        description={
+          Object {
+            "text": "A rickle in time",
+            "url": "http://rickandmorty.wikia.com/wiki/A_Rickle_in_Time",
+          }
+        }
+        iconSrc="https://upload.wikimedia.org/wikipedia/en/6/6b/A_Rickle_in_Time.jpg"
+        iconType="image"
+        imageIconHeight="2rem"
+        speciesIconHeight="6rem"
+      />
+    </styled.div>
+    <styled.div
+      className=""
+      key="1"
+    >
+      <CardClass
+        content={
+          Array [
+            Object {
+              "text": "Batman (1943)",
+              "url": "https://en.wikipedia.org/wiki/Batman_(serial)",
+            },
+            Object {
+              "text": "Batman and Robin (1949)",
+              "url": "https://en.wikipedia.org/wiki/Batman_and_Robin_(serial)",
+            },
+            Object {
+              "text": "Batman (1966)",
+              "url": "https://en.wikipedia.org/wiki/Batman_(1966_film)",
+            },
+            Object {
+              "text": "Batman (1989)",
+              "url": "https://en.wikipedia.org/wiki/Batman_(1989_film)",
+            },
+            Object {
+              "text": "Batman Returns (1992)",
+              "url": "https://en.wikipedia.org/wiki/Batman_Returns",
+            },
+            Object {
+              "text": "Batman Forever (1995)",
+              "url": "https://en.wikipedia.org/wiki/Batman_Forever",
+            },
+            Object {
+              "text": "Batman &amp; Robin (1997)",
+              "url": "https://en.wikipedia.org/wiki/Batman_%26_Robin_(film)",
+            },
+            Object {
+              "text": "Batman Begins (2005)",
+              "url": "https://en.wikipedia.org/wiki/Batman_Begins",
+            },
+            Object {
+              "text": "The Dark Knight (2008)",
+              "url": "https://en.wikipedia.org/wiki/The_Dark_Knight_(film)",
+            },
+            Object {
+              "text": "The Dark Knight Rises (2012)",
+              "url": "https://en.wikipedia.org/wiki/The_Dark_Knight_Rises",
+            },
+            Object {
+              "text": "Batman v Superman: Dawn of Justice (2016)",
+              "url": "https://en.wikipedia.org/wiki/Batman_v_Superman:_Dawn_of_Justice",
+            },
+            Object {
+              "text": "Suicide Squad (2016)",
+              "url": "https://en.wikipedia.org/wiki/Suicide_Squad_(film)",
+            },
+            Object {
+              "text": "Justice League (2017)",
+              "url": "https://en.wikipedia.org/wiki/Justice_League_(film)",
+            },
+            Object {
+              "text": "Joker (2019)",
+              "url": "https://en.wikipedia.org/wiki/Joker_(2019_film)",
+            },
+          ]
+        }
+        description={
+          Object {
+            "text": "Batman films",
+          }
+        }
+        iconSrc="bat"
+        iconType="species"
+        imageIconHeight="2rem"
+        speciesIconHeight="6rem"
+      />
+    </styled.div>
+    <styled.div
+      className=""
+      key="2"
+    >
+      <CardClass
+        content={
+          Array [
+            Object {
+              "text": "Dory",
+            },
+            Object {
+              "text": "Nemo",
+            },
+            Object {
+              "text": "Gill",
+            },
+          ]
+        }
+        description={
+          Object {
+            "text": "Finding Nemo",
+            "url": "https://en.wikipedia.org/wiki/Finding_Nemo",
+          }
+        }
+        iconSrc="zebrafish"
+        iconType="species"
+        imageIconHeight="2rem"
+        speciesIconHeight="6rem"
+      />
+    </styled.div>
+    <styled.div
+      className=""
+      key="3"
+    >
+      <CardClass
+        content={
+          Array [
+            Object {
+              "text": "Jerry Smith",
+              "url": "https://en.wikipedia.org/wiki/List_of_Rick_and_Morty_characters#Jerry_Smith",
+            },
+            Object {
+              "text": "Beth Smith",
+              "url": "https://en.wikipedia.org/wiki/List_of_Rick_and_Morty_characters#Beth_Smith",
+            },
+            Object {
+              "text": "Summer Smith",
+              "url": "https://en.wikipedia.org/wiki/List_of_Rick_and_Morty_characters#Summer_Smith",
+            },
+            Object {
+              "text": "Morty Smith",
+              "url": "https://en.wikipedia.org/wiki/Morty_Smith",
+            },
+            Object {
+              "text": "Rick Sanchez",
+              "url": "https://en.wikipedia.org/wiki/Rick_Sanchez_(Rick_and_Morty)",
+            },
+          ]
+        }
+        description={
+          Object {
+            "text": "The Smith household",
+          }
+        }
+        iconSrc="https://upload.wikimedia.org/wikipedia/en/b/b0/Rick_and_Morty_characters.jpg"
+        iconType="image"
+        imageIconHeight="2rem"
+        speciesIconHeight="6rem"
+      />
+    </styled.div>
+  </Slider>
+</div>
+`;
+
+exports[`CarousleCardsRow matches snapshot with displaying all cards in the slider 1`] = `
+<div
+  className=""
+>
+  <GlobalStyleComponent />
+  <Slider
+    slidesToShow={4}
+  >
+    <styled.div
+      className=""
+      key="0"
+    >
+      <CardClass
+        content={
+          Array [
+            Object {
+              "text": "Morty Smith",
+            },
+            Object {
+              "text": "Summer Smith",
+            },
+            Object {
+              "text": "Rick Sanchez",
+            },
+            Object {
+              "text": "Rick Sanchez(split reality)",
+            },
+            Object {
+              "text": "Morty Smith (split reality)",
+            },
+            Object {
+              "text": "Summer Smith (split reality)",
+            },
+          ]
+        }
+        description={
+          Object {
+            "text": "A rickle in time",
+            "url": "http://rickandmorty.wikia.com/wiki/A_Rickle_in_Time",
+          }
+        }
+        iconSrc="https://upload.wikimedia.org/wikipedia/en/6/6b/A_Rickle_in_Time.jpg"
+        iconType="image"
+        imageIconHeight="2rem"
+        speciesIconHeight="6rem"
+      />
+    </styled.div>
+    <styled.div
+      className=""
+      key="1"
+    >
+      <CardClass
+        content={
+          Array [
+            Object {
+              "text": "Batman (1943)",
+              "url": "https://en.wikipedia.org/wiki/Batman_(serial)",
+            },
+            Object {
+              "text": "Batman and Robin (1949)",
+              "url": "https://en.wikipedia.org/wiki/Batman_and_Robin_(serial)",
+            },
+            Object {
+              "text": "Batman (1966)",
+              "url": "https://en.wikipedia.org/wiki/Batman_(1966_film)",
+            },
+            Object {
+              "text": "Batman (1989)",
+              "url": "https://en.wikipedia.org/wiki/Batman_(1989_film)",
+            },
+            Object {
+              "text": "Batman Returns (1992)",
+              "url": "https://en.wikipedia.org/wiki/Batman_Returns",
+            },
+            Object {
+              "text": "Batman Forever (1995)",
+              "url": "https://en.wikipedia.org/wiki/Batman_Forever",
+            },
+            Object {
+              "text": "Batman &amp; Robin (1997)",
+              "url": "https://en.wikipedia.org/wiki/Batman_%26_Robin_(film)",
+            },
+            Object {
+              "text": "Batman Begins (2005)",
+              "url": "https://en.wikipedia.org/wiki/Batman_Begins",
+            },
+            Object {
+              "text": "The Dark Knight (2008)",
+              "url": "https://en.wikipedia.org/wiki/The_Dark_Knight_(film)",
+            },
+            Object {
+              "text": "The Dark Knight Rises (2012)",
+              "url": "https://en.wikipedia.org/wiki/The_Dark_Knight_Rises",
+            },
+            Object {
+              "text": "Batman v Superman: Dawn of Justice (2016)",
+              "url": "https://en.wikipedia.org/wiki/Batman_v_Superman:_Dawn_of_Justice",
+            },
+            Object {
+              "text": "Suicide Squad (2016)",
+              "url": "https://en.wikipedia.org/wiki/Suicide_Squad_(film)",
+            },
+            Object {
+              "text": "Justice League (2017)",
+              "url": "https://en.wikipedia.org/wiki/Justice_League_(film)",
+            },
+            Object {
+              "text": "Joker (2019)",
+              "url": "https://en.wikipedia.org/wiki/Joker_(2019_film)",
+            },
+          ]
+        }
+        description={
+          Object {
+            "text": "Batman films",
+          }
+        }
+        iconSrc="bat"
+        iconType="species"
+        imageIconHeight="2rem"
+        speciesIconHeight="6rem"
+      />
+    </styled.div>
+    <styled.div
+      className=""
+      key="2"
+    >
+      <CardClass
+        content={
+          Array [
+            Object {
+              "text": "Dory",
+            },
+            Object {
+              "text": "Nemo",
+            },
+            Object {
+              "text": "Gill",
+            },
+          ]
+        }
+        description={
+          Object {
+            "text": "Finding Nemo",
+            "url": "https://en.wikipedia.org/wiki/Finding_Nemo",
+          }
+        }
+        iconSrc="zebrafish"
+        iconType="species"
+        imageIconHeight="2rem"
+        speciesIconHeight="6rem"
+      />
+    </styled.div>
+    <styled.div
+      className=""
+      key="3"
+    >
+      <CardClass
+        content={
+          Array [
+            Object {
+              "text": "Jerry Smith",
+              "url": "https://en.wikipedia.org/wiki/List_of_Rick_and_Morty_characters#Jerry_Smith",
+            },
+            Object {
+              "text": "Beth Smith",
+              "url": "https://en.wikipedia.org/wiki/List_of_Rick_and_Morty_characters#Beth_Smith",
+            },
+            Object {
+              "text": "Summer Smith",
+              "url": "https://en.wikipedia.org/wiki/List_of_Rick_and_Morty_characters#Summer_Smith",
+            },
+            Object {
+              "text": "Morty Smith",
+              "url": "https://en.wikipedia.org/wiki/Morty_Smith",
+            },
+            Object {
+              "text": "Rick Sanchez",
+              "url": "https://en.wikipedia.org/wiki/Rick_Sanchez_(Rick_and_Morty)",
+            },
+          ]
+        }
+        description={
+          Object {
+            "text": "The Smith household",
+          }
+        }
+        iconSrc="https://upload.wikimedia.org/wikipedia/en/b/b0/Rick_and_Morty_characters.jpg"
+        iconType="image"
+        imageIconHeight="2rem"
+        speciesIconHeight="6rem"
+      />
+    </styled.div>
+  </Slider>
+</div>
+`;

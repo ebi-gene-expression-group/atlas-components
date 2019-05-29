@@ -7,11 +7,14 @@
   <link rel="stylesheet" href="https://ebi.emblstatic.net/web_guidelines/EBI-Icon-fonts/v1.2/fonts.css" type="text/css" media="all" />
 
   <link rel="stylesheet" href="http://localhost:8080/gxa/sc/resources/css/theme-atlas.css" type="text/css" media="all">
+
+  <link rel="stylesheet" type="text/css" charset="UTF-8" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" />
+  <link rel="stylesheet" type="text/css" charset="UTF-8" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
 </head>
 
 <body>
   <div class="row">
-    <h2 class="text-center">Extendable cards, used in HCA landing page</h1>
+    <h2 class="text-center">Extendable cards, used in HCA landing page</h2>
     <div class="small-3 columns">
       <div id="extendable-image-card-long"></div>
     </div>
@@ -29,18 +32,23 @@
   </div>
 
   <div class="row column">
-    <h2 class="text-center">Responsive card row with default <code>Card</code>, <code>iconType: `species`</code></h1>
+    <h2 class="text-center">Responsive card row with default <code>Card</code>, <code>iconType: `species`</code></h2>
     <div id="species-card-container"></div>
   </div>
 
   <div class="row column">
-    <h2 class="text-center">Responsive card row with default <code>Card</code>, <code>iconType: `image`</code></h1>
+    <h2 class="text-center">Responsive card row with default <code>Card</code>, <code>iconType: `image`</code></h2>
     <div id="experiments-container"></div>
   </div>
 
   <div class="row column">
-    <h2 class="text-center">Responsive card row with <code>ExtendableCard</code></h1>
+    <h2 class="text-center">Responsive card row with <code>ExtendableCard</code></h2>
     <div id="image-card-container"></div>
+  </div>
+
+  <div class="row column">
+    <h2 class="text-center">Carousel card row with <code>ExtendableCard</code></h2>
+    <div id="carousel-card-container"></div>
   </div>
 </body>
 
@@ -49,7 +57,7 @@
 <script src="../dist/extendableCardDemo.bundle.js"></script>
 <script src="../dist/experimentsPanelDemo.bundle.js"></script>
 <script src="../dist/responsiveCardsRowDemo.bundle.js"></script>
-
+<script src="../dist/carouselCardsPanelDemo.bundle.js"></script>
 <!-- Set to http://localhost:8080/gxa/ or http://localhost:8080/gxa/sc/ -- Remember the trailing slash! -->
 <script>
   extendableCardDemo.render({
@@ -199,10 +207,19 @@
 
   animalSpeciesSummary.render({
     host: 'http://localhost:8080/gxa/sc/',
-    resource: 'json/species-summary',
+    resource: 'json/species-summary?100',
     className: 'row small-up-2 medium-up-4 large-up-6',
-    cardContainerClassName: 'column'
+    cardContainerClassName: 'column',
   }, 'species-card-container');
+
+  experimentsPanelDemo.render(
+    {
+      host: 'http://localhost:8080/gxa/',
+      imageIconHeight: '4rem',
+      className: 'row small-up-2 medium-up-3 large-up-4',
+      cardContainerClassName: 'column',
+    },
+    'experiments-container');
 
   responsiveCardsRowDemo.render({
     host: 'http://localhost:8080/gxa/sc/',
@@ -214,14 +231,14 @@
     hoverColour: `none`
   }, 'image-card-container');
 
-  experimentsPanelDemo.render(
-    {
-      host: 'http://localhost:8080/gxa/',
-      imageIconHeight: '4rem',
-      className: 'row small-up-2 medium-up-3 large-up-4',
-      cardContainerClassName: 'column'
-    },
-    'experiments-container')
+  carouselCardsPanelDemo.render({
+    host: 'http://localhost:8080/gxa/',
+    imageIconHeight: '4rem',
+    className: 'row small-up-2 medium-up-3 large-up-4',
+    cardContainerClassName: 'column',
+  }, 'carousel-card-container');
+
+
 </script>
 
 </html>

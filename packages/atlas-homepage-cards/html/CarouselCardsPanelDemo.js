@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import URI from 'urijs'
 
-import ResponsiveCardsRow from '../src/index'
+import { CarouselCardsRow } from '../src/index'
 
 const buildFeaturedExperimentsCards = (host) => {
   const linkToImage = (imgFileName) => URI(`resources/images/experiments-summary/${imgFileName}.png`, host).toString()
@@ -14,7 +14,7 @@ const buildFeaturedExperimentsCards = (host) => {
       iconType: `image`,
       iconSrc: linkToImage(`encode`),
       description: {
-      //   text: ``,
+        //   text: ``,
         url: linkToExperimentSet(`ENCODE`)
       },
       content: [
@@ -32,7 +32,7 @@ const buildFeaturedExperimentsCards = (host) => {
       iconType: `image`,
       iconSrc: linkToImage(`blueprint`),
       description: {
-      //   text: ``,
+        //   text: ``,
         url: linkToExperimentSet(`BLUEPRINT`)
       },
       content: [
@@ -54,7 +54,7 @@ const buildFeaturedExperimentsCards = (host) => {
       iconType: `image`,
       iconSrc: linkToImage(`fantom`),
       description: {
-      //   text: ``,
+        //   text: ``,
         url: linkToExperimentSet(`FANTOM5`)
       },
       content: [
@@ -76,7 +76,7 @@ const buildFeaturedExperimentsCards = (host) => {
       iconType: `image`,
       iconSrc: linkToImage(`human_protein_atlas`),
       description: {
-      //   text: ``,
+        //   text: ``,
         url: linkToExperiment(`E-PROT-3`)
       },
       content: [
@@ -90,7 +90,7 @@ const buildFeaturedExperimentsCards = (host) => {
       iconType: `image`,
       iconSrc: linkToImage(`ccle`),
       description: {
-      //   text: ``,
+        //   text: ``,
         url: linkToExperiment(`E-MTAB-2770`)
       },
       content: [
@@ -104,7 +104,7 @@ const buildFeaturedExperimentsCards = (host) => {
       iconType: `image`,
       iconSrc: linkToImage(`hipsci`),
       description: {
-      //   text: ``,
+        //   text: ``,
         url: linkToExperimentSet(`HipSci`)
       },
       content: [
@@ -122,7 +122,7 @@ const buildFeaturedExperimentsCards = (host) => {
       iconType: `image`,
       iconSrc: linkToImage(`gtex`),
       description: {
-      //   text: ``,
+        //   text: ``,
         url: linkToExperiment(`E-MTAB-5214`)
       },
       content: [
@@ -136,7 +136,7 @@ const buildFeaturedExperimentsCards = (host) => {
       iconType: `image`,
       iconSrc: linkToImage(`pcawg`),
       description: {
-      //   text: ``,
+        //   text: ``,
         url: linkToExperimentSet(`Pan-Cancer`)
       },
       content: [
@@ -154,7 +154,7 @@ const buildFeaturedExperimentsCards = (host) => {
       iconType: `image`,
       iconSrc: linkToImage(`wtsi_mgh_cancerrxgene`),
       description: {
-      //   text: ``,
+        //   text: ``,
         url: linkToExperiment(`E-MTAB-3983`)
       },
       content: [
@@ -168,7 +168,7 @@ const buildFeaturedExperimentsCards = (host) => {
       iconType: `image`,
       iconSrc: linkToImage(`hdbr`),
       description: {
-      //   text: ``,
+        //   text: ``,
         url: linkToExperiment(`E-MTAB-4840`)
       },
       content: [
@@ -182,7 +182,7 @@ const buildFeaturedExperimentsCards = (host) => {
       iconType: `image`,
       iconSrc: linkToImage(`baseline`),
       description: {
-      //   text: ``,
+        //   text: ``,
         url: URI(`baseline/experiments`, host).toString()
       },
       content: [
@@ -196,7 +196,7 @@ const buildFeaturedExperimentsCards = (host) => {
       iconType: `image`,
       iconSrc: linkToImage(`gramene`),
       description: {
-      //   text: ``,
+        //   text: ``,
         url: URI(`plant/experiments`, host).toString()
       },
       content: [
@@ -209,11 +209,47 @@ const buildFeaturedExperimentsCards = (host) => {
   ]
 }
 
+const slideSettings = {
+  dots: true,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 6,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 2000,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        infinite: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+  ]
+}
+
 const render = (options, target) => {
   ReactDOM.render(
-    <ResponsiveCardsRow
+    <CarouselCardsRow
       cards={buildFeaturedExperimentsCards(`https://www.ebi.ac.uk/gxa/`)} // Ideally options.host, but it may be down
       {...options}
+      slideSettings={slideSettings}
     />,
     document.getElementById(target))
 }

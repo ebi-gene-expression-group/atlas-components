@@ -10,12 +10,10 @@ const ResponsiveCardsRow = (props) => {
   const { className, cardContainerClassName, speciesIconHeight, imageIconHeight, hoverColour } = props
 
   const CardContainer = styled.div`
-    /* border-radius: 8px; */
     :hover {
       background: ${hoverColour};
     }
   `
-
   return (
     <div className={className}>
       {

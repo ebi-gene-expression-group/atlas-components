@@ -1,6 +1,6 @@
 {
   "name": "atlas-homepage-cards",
-  "version": "2.0.2",
+  "version": "2.0.1",
   "description": "A package that renders grids of cards.",
   "main": "lib/index.js",
   "scripts": {
@@ -23,7 +23,8 @@
       "\\.(css|less)$": "<rootDir>/__mocks__/styleMock.js"
     },
     "setupFiles": [
-      "<rootDir>/__mocks__/requestAnimationFrame.js"
+      "<rootDir>/__mocks__/requestAnimationFrame.js",
+      "<rootDir>/__mocks__/matchMedia.js"
     ],
     "coveragePathIgnorePatterns": [
       "__test__/TestUtils.js"
@@ -42,33 +43,34 @@
   },
   "dependencies": {
     "prop-types": "^15.7.2",
-    "react": "^16.8.6",
-    "react-ebi-species": "^2.2.1",
+    "react": "^16.8.5",
+    "react-ebi-species": "^2.2.0",
+    "react-slick": "^0.24.0",
     "styled-components": "^4.2.0",
     "urijs": "^1.19.1"
   },
   "devDependencies": {
-    "@babel/cli": "^7.4.4",
-    "@babel/core": "^7.4.4",
-    "@babel/polyfill": "^7.4.4",
-    "@babel/preset-env": "^7.4.4",
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.4.0",
+    "@babel/polyfill": "^7.4.0",
+    "@babel/preset-env": "^7.4.2",
     "@babel/preset-react": "^7.0.0",
-    "atlas-react-fetch-loader": "^1.0.1",
+    "atlas-react-fetch-loader": "^1.0.0",
     "babel-loader": "^8.0.5",
-    "clean-webpack-plugin": "^2.0.2",
+    "clean-webpack-plugin": "^2.0.1",
     "coveralls": "^3.0.3",
     "enzyme": "^3.9.0",
-    "enzyme-adapter-react-16": "^1.12.1",
-    "eslint": "^5.16.0",
+    "enzyme-adapter-react-16": "^1.11.2",
+    "eslint": "^5.15.3",
     "eslint-config-gene-expression": "^0.5.0",
-    "fetch-mock": "7.3.3",
-    "jest": "24.8.0",
+    "fetch-mock": "7.3.1",
+    "jest": "24.5.0",
     "jest-environment-enzyme": "^7.0.2",
     "jest-enzyme": "^7.0.2",
-    "node-fetch": "^2.5.0",
-    "react-dom": "^16.8.6",
+    "node-fetch": "^2.3.0",
+    "react-dom": "^16.8.5",
     "webpack": "^4.30.0",
-    "webpack-cli": "^3.3.2",
-    "webpack-dev-server": "^3.3.1"
+    "webpack-cli": "^3.3.0",
+    "webpack-dev-server": "^3.2.1"
   }
 }
