@@ -20,9 +20,18 @@ describe(`CarousleCardsRow`, () => {
     CardClass: () => `topClass`
   }
 
-  test(`displays cards in slider mode`, () => {
-    const wrapper = shallow(<CarouselCardsRow {...props} />)
+  test(`displays cards in slider mode if the number of cards is smaller than slides`, () => {
+    const slideSettings = {slidesToShow: props.cards.length - 1}
+
+    const wrapper = shallow(<CarouselCardsRow {...props} slideSettings={slideSettings}/>)
     expect(wrapper).toContainExactlyOneMatchingElement(Slide)
+  })
+
+  test(`displays cards in slider mode if the number of cards is larger than slides`, () => {
+    const slideSettings = {slidesToShow: props.cards.length + 1}
+
+    const wrapper = shallow(<CarouselCardsRow {...props} slideSettings={slideSettings}/>)
+    expect(wrapper).not.toContainMatchingElement(Slide)
   })
 
   test(`displays all cards`, () => {
