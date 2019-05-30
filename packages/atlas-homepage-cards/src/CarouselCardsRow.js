@@ -9,7 +9,8 @@ import Slide from 'react-slick'
 const CarouselCardsRow = (props) => {
   const { CardClass, cards, slideSettings } = props
   const { className, cardContainerClassName, speciesIconHeight, imageIconHeight, hoverColour } = props
-  slideSettings.slidesToShow = slideSettings.slidesToShow >= cards.length ? cards.length : slideSettings.slidesToShow
+  const disableSlide = slideSettings.slidesToShow >= cards.length
+  slideSettings.slidesToShow = disableSlide ? cards.length : slideSettings.slidesToShow
 
   const CardContainer = styled.div`
     :hover {
@@ -49,12 +50,14 @@ const CarouselCardsRow = (props) => {
 
   return (
     <div className={className}>
-      <SlideGlobalStyle />
-      {
-        <Slide
-          {...slideSettings}>
-          {cardsDisplay}
-        </Slide>
+      {disableSlide ? cardsDisplay :
+        [
+          <SlideGlobalStyle key={`slidestyle`}/>,
+          <Slide key={`slidecontent`}
+            {...slideSettings}>
+            {cardsDisplay}
+          </Slide>
+        ]
       }
     </div>
   )
