@@ -57,7 +57,7 @@ const CarouselCardsRow = (props) => {
     </CardContainer>)
 
   return (
-    <div className={className}>
+    <div className={className} style={{padding:`inherit`, height:`350px`}}>
       {disableSlide ? cardsDisplay :
         [
           <SlideGlobalStyle key={`slidestyle`}/>,
