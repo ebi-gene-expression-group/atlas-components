@@ -22,13 +22,21 @@ const CarouselCardsRow = (props) => {
     .slick-slide img {
       margin: auto;
     }
+    .slick-prev:before, .slick-next:before  {
+      font-size: 25px !important;
+    }
+    .slick-prev {
+      left: -24px;
+    }
+    .slick-next {
+      right: -20px;
+    }
     .slick-slider {
-      margin: 30px auto 50px;
+      height: 300px;
     }
     .slick-prev:before {
       color: #3497c5;
     }
-
     .slick-next:before{
       color: #3497c5;
     }
