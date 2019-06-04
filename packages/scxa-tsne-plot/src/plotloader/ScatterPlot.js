@@ -6,8 +6,9 @@ import HighchartsExporting from 'highcharts/modules/exporting'
 import HighchartsBoost from 'highcharts/modules/boost'
 import HighchartsHeatmap from 'highcharts/modules/heatmap'
 //import HighchartsMap from 'highcharts/modules/map'
-// import highchartsYAxisPanningModule from './highchartsYAxisPanningModule'
+//import highchartsYAxisPanningModule from './highchartsYAxisPanningModule'
 
+import HighchartsExportStyle from './highchartsExportStyle'
 import highchartsHeatmapLegendModule from './highchartsHeatmapLegendModule'
 import highchartsAdaptChartToLegendModule from 'highcharts-adapt-chart-to-legend'
 
@@ -23,8 +24,10 @@ async function addModules(){
   await HighchartsHeatmap(Highcharts)
   await highchartsHeatmapLegendModule(Highcharts)
   await highchartsAdaptChartToLegendModule(Highcharts)
+  await HighchartsExportStyle(Highcharts)
+
   //await HighchartsMap(Highcharts)
-  // await highchartsYAxisPanningModule(Highcharts)
+  //await highchartsYAxisPanningModule(Highcharts)
 }
 
 addModules()
@@ -116,6 +119,36 @@ const highchartsBaseConfig = {
     series: {
       turboThreshold: 0,
       animation: false
+    }
+  },
+
+  navigation: {
+    buttonOptions: {
+      theme: {
+        style: {
+          fontSize: `15px`
+        },
+        states: {
+          select: {
+            style: {
+              fontWeight: `normal`,
+              color: `black`
+            }
+          }
+        }
+      }
+    },
+    menuItemStyle: {
+      fontSize: `15px`
+    }
+  },
+
+  exporting: {
+    buttons: {
+      contextButton: {
+        text: `<i class="icon icon-functional" data-icon="="></i>&nbsp;Download`,
+        symbol: null
+      }
     }
   }
 }

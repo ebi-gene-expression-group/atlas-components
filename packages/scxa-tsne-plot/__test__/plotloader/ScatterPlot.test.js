@@ -24,6 +24,14 @@ describe(`ScatterPlot`, () => {
     expect(highchartsWrapper.prop(`config`)).toHaveProperty(`chart.width`, `50%`)
   })
 
+  test(`uses a styled download button`, () => {
+    const wrapper = mount(<ScatterPlot series={[]} />)
+    const highchartsWrapper = wrapper.find(`n`)
+    expect(highchartsWrapper.prop(`config`)).toHaveProperty(`exporting.buttons.contextButton.text`,
+      `<i class="icon icon-functional" data-icon="="></i>&nbsp;Download`)
+    expect(highchartsWrapper.prop(`config`)).toHaveProperty(`exporting.buttons.contextButton.symbol`, null)
+  })
+
   test(`with no series matches snapshot`, () => {
     const tree = shallow(<ScatterPlot series={[]}/>)
     expect(tree).toMatchSnapshot()
