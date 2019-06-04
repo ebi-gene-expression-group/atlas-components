@@ -69,7 +69,7 @@ describe(`MarkerGeneHeatmap`, () => {
     expect(chartOptions.yAxis[0].plotLines).toHaveLength(0)
   })
 
-  test(`does have data export options`, () => {
+  test(`does have data export options and a styled button`, () => {
     const wrapper = shallow(<MarkerGeneHeatmap
       data={[
         {
@@ -88,6 +88,11 @@ describe(`MarkerGeneHeatmap`, () => {
       hasDynamicHeight={false} />)
 
     const chartOptions = wrapper.find(`e`).props().options
+
+    expect(chartOptions.exporting.buttons.contextButton.text).toEqual(
+      `<i class="icon icon-functional" data-icon="="></i>&nbsp;Download`)
+
+    expect(chartOptions.exporting.buttons.contextButton.symbol).toEqual(null)
 
     expect(chartOptions.exporting.buttons.contextButton.menuItems).toEqual(
       [

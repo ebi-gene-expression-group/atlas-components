@@ -16,7 +16,8 @@
       "\\.(css|less)$": "<rootDir>/__mocks__/styleMock.js"
     },
     "coveragePathIgnorePatterns": [
-      "src/highchartsHeatmapTableDataModule.js"
+      "src/highchartsHeatmapTableDataModule.js",
+      "src/highchartsExportStyle.js"
     ],
     "setupFiles": [
       "<rootDir>/__mocks__/requestAnimationFrame.js"
