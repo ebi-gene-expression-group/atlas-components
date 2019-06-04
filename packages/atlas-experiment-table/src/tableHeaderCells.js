@@ -9,7 +9,7 @@ const TableSortHeaderCell = ({columnNumber, headerText, width, orderedColumnInde
     onClick={() => onClick(columnNumber)}>
     <div style={{display: `ruby`}}>
       {headerText}
-      { columnNumber===orderedColumnIndex ?
+      { columnNumber === orderedColumnIndex ?
         ascendingOrder ?
           <i className={`icon icon-common icon-sort-up`} style={{paddingLeft: `1em`}}/> :
           <i className={`icon icon-common icon-sort-down`} style={{paddingLeft: `1em`}}/> :

@@ -11,7 +11,8 @@ describe(`TableSearchHeader`, () => {
     searchAllOnChange: () => {},
     numberOfEntriesPerPageOnChange: () => {},
     kingdomOnChange: () => {},
-    totalNumberOfRows: 2
+    totalNumberOfRows: 2,
+    onChange: (value, column)=>{console.log(value, column)}
   }
 
   test(`should render two dropdown menues and a search box`, () => {

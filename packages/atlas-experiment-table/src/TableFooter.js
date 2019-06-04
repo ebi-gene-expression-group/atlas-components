@@ -4,8 +4,11 @@ import PropTypes from 'prop-types'
 const TableFooter = ({dataArrayLength, currentPageDataLength, currentPage, entriesPerPage, onChange, dataLength}) => {
   const pageNumbers = []
   for (let i = 1; i <= Math.ceil(dataArrayLength / entriesPerPage); i++) {
-    pageNumbers.push( i === currentPage ? <li className={`current`} key={`bottom${i}`}>{currentPage}</li> :
-      <li key={`bottom${i}`}><a onClick={() => onChange(i)}>{i}</a></li>)
+    pageNumbers.push(
+      i === currentPage ?
+        <li className={`current`} key={`bottom${i}`}>{currentPage}</li> :
+        <li key={`bottom${i}`}><a onClick={() => onChange(i)}>{i}</a></li>
+    )
   }
 
   const pageInfo = pageNumbers.length === 1 ? `` : ` (Page ${currentPage} of ${pageNumbers.length})`

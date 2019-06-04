@@ -16,7 +16,8 @@ describe(`ExperimentTable`, () => {
     resource: `bool`,
     enableDownload: true,
     enableIndex: true,
-    TableCellDiv: TableCellDiv
+    TableCellDiv: TableCellDiv,
+    downloadTooltip: `<t>A random test tooltip text</t>`
   }
 
   test(`should render three search general boxes and a table with head and body and two bottom info boxes`, () => {
@@ -47,12 +48,33 @@ describe(`ExperimentTable`, () => {
   test(`should filter based on kingdom selection`, () => {
     const event = {target: {name: `pollName`, value: `animals`}}
     const wrapper = mount(<ExperimentTable {...props}/>)
-    const kingdomSearch = wrapper.find(`select`).first().at(0)
-    kingdomSearch.simulate(`change`, event)
+    const kingdomSelect = wrapper.find(`select`).first().at(0)
+    kingdomSelect.simulate(`change`, event)
 
     expect(wrapper.state(`selectedKingdom`)).toEqual(`animals`)
     expect(wrapper.find(Table.Row).length).toBeLessThanOrEqual(data.length)
   })
+
+  test(`should filter based on numbers of entries per page selection`, () => {
+    const event = {target: {name: `pollName`, value: 1}}
+    const wrapper = mount(<ExperimentTable {...props}/>)
+    const entriesSelect = wrapper.find(`select`).at(1)
+    entriesSelect.simulate(`change`, event)
+
+    expect(wrapper.state(`entriesPerPage`)).toEqual(1)
+    expect(wrapper.find(Table.Row).length).toEqual(1)
+  })
+
+  test(`should filter based on search box above the table`, () => {
+    const event = {target: {name: `hello`, value: `single`}}
+    const wrapper = mount(<ExperimentTable {...props}/>)
+    const overallSearch = wrapper.find(`input`).first().at(0)
+    overallSearch.simulate(`change`, event)
+
+    expect(wrapper.state(`selectedSearch`)).toEqual(`single`)
+    expect(wrapper.find(Table.Row).length).toBeLessThanOrEqual(data.length)
+  })
+
 
   test(`should filter based on table header search`, () => {
     const randomValue = `si`

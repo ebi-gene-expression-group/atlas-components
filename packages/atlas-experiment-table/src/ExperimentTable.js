@@ -100,7 +100,7 @@ class ExperimentTable extends React.Component {
     const { searchQuery, searchedColumnIndex, selectedSearch, selectedKingdom, checkedRows } = this.state
     const { orderedColumnIndex, ascendingOrder } = this.state
     const { entriesPerPage, currentPage } = this.state
-    const { host, aaData, tableHeader, enableDownload } = this.props
+    const { host, aaData, tableHeader, enableDownload, downloadTooltip } = this.props
 
     const displayedFields = tableHeader.map(header => header.dataParam)
     const displayedData = aaData.map(data => {
@@ -144,7 +144,8 @@ class ExperimentTable extends React.Component {
             ascendingOrder,
             host,
             enableDownload,
-            currentPageData
+            currentPageData,
+            downloadTooltip
           }}
           tableHeaderOnChange={this.tableHeaderOnChange}
           tableHeaderOnClick={this.tableHeaderOnClick}
@@ -178,7 +179,8 @@ ExperimentTable.propTypes = {
       dataParam: PropTypes.string.isRequired
     })
   ),
-  enableDownload: PropTypes.bool.isRequired
+  enableDownload: PropTypes.bool.isRequired,
+  downloadTooltip: PropTypes.string.isRequired
 }
 
 ExperimentTable.defaultProps = {

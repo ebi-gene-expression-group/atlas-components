@@ -2,12 +2,14 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Table } from 'evergreen-ui'
 import URI from 'urijs'
+import ReactTooltip from 'react-tooltip'
 
 import tableHeaderCells from './tableHeaderCells'
+import TooltipIcon from './TooltipIcon'
 
 const TableContent = ({tableHeader, searchedColumnIndex, searchQuery, orderedColumnIndex,
   ascendingOrder, enableDownload, checkedRows, currentPageData, host,
-  tableHeaderOnClick, tableHeaderOnChange, downloadOnChange}) =>
+  tableHeaderOnClick, tableHeaderOnChange, downloadOnChange, downloadTooltip}) =>
   <div className={`row expanded`}>
     <div className={`small-12 columns`} >
       <Table border>
@@ -23,17 +25,22 @@ const TableContent = ({tableHeader, searchedColumnIndex, searchQuery, orderedCol
           {
             enableDownload && <Table.TextHeaderCell className={`downloadHeader`} flexBasis={100} flexShrink={100} flexGrow={100}>
               {
-                checkedRows.length > 0 ?
-                  <a href={URI(`experiments/download/zip`, host).search({accession: checkedRows}).toString()}>
-                    Download {checkedRows.length} {checkedRows.length === 1 ? `entry` : `entries`}
-                  </a> :
-                  `Download`
+                <div>
+                  {
+                    checkedRows.length > 0 ?
+                      <a href={URI(`experiments/download/zip`, host).search({accession: checkedRows}).toString()}>
+                      Download {checkedRows.length} {checkedRows.length === 1 ? `entry` : `entries`}
+                      </a> :
+                      `Download`
+                  }
+                  <TooltipIcon tooltipText={downloadTooltip}/>
+                </div>
               }
             </Table.TextHeaderCell>
           }
         </Table.Head>
-
-        <Table.Body style={{"overflow-y":`hidden`}}>
+        <ReactTooltip effect={`solid`}/>
+        <Table.Body style={{"overflowY":`hidden`}}>
           {currentPageData.map((data, index) => {
             return (
               <Table.Row height={`auto`} backgroundColor={index % 2 === 0 ? `white`:`#F1F1F1`} paddingY={14} key={`row${index}`}>
@@ -46,7 +53,7 @@ const TableContent = ({tableHeader, searchedColumnIndex, searchQuery, orderedCol
                     return <Table.Cell key={`${cellItem}`} flexBasis={header.width} flexShrink={100} flexGrow={100}>
                       {
                         header.link ?
-                          <a href={URI(`${header.resource}/${data[header.link]}/${header.endpoint}`, host)}>{cellItem}</a> :
+                          <div><a href={URI(`${header.resource}/${data[header.link]}/${header.endpoint}`, host)}>{cellItem}</a></div>:
                           cellItem
                       }
                     </Table.Cell>
@@ -80,7 +87,7 @@ TableContent.propTypes = {
   orderedColumnIndex: PropTypes.number.isRequired,
   ascendingOrder: PropTypes.bool.isRequired,
   enableDownload: PropTypes.bool.isRequired,
-  checkedRows: PropTypes.arrayOf(PropTypes.number).isRequired,
+  checkedRows: PropTypes.arrayOf(PropTypes.string).isRequired,
   currentPageData: PropTypes.arrayOf(PropTypes.object).isRequired,
   host: PropTypes.string.isRequired,
   entriesPerPage: PropTypes.oneOfType([
@@ -90,7 +97,8 @@ TableContent.propTypes = {
   currentPage: PropTypes.number.isRequired,
   tableHeaderOnClick: PropTypes.func.isRequired,
   tableHeaderOnChange: PropTypes.func.isRequired,
-  downloadOnChange: PropTypes.func.isRequired
+  downloadOnChange: PropTypes.func.isRequired,
+  downloadTooltip: PropTypes.string.isRequired
 }
 
 export default TableContent

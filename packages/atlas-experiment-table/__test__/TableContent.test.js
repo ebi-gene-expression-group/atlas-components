@@ -1,9 +1,9 @@
 import React from 'react'
-import {shallow} from 'enzyme'
-import Adapter from 'enzyme-adapter-react-16'
+import { shallow } from 'enzyme'
 import { data } from './TestUtils'
 
 import TableContent from '../src/TableContent'
+import TooltipIcon from '../src/TooltipIcon'
 import { Table } from 'evergreen-ui'
 
 describe(`TableContent`, () => {
@@ -26,14 +26,15 @@ describe(`TableContent`, () => {
     orderedColumnIndex: 1,
     ascendingOrder: true,
     enableDownload: true,
-    checkedRows: [1, 2],
+    checkedRows: [`E-EHCA-2`, `E-EHCA-1`],
     currentPageData: data,
     host: `boo`,
     entriesPerPage: 2,
     currentPage: 1,
     tableHeaderOnClick: () => {},
     tableHeaderOnChange: () => {},
-    downloadOnChange: () => {}
+    downloadOnChange: () => {},
+    downloadTooltip: `<t>A random test tooltip text</t>`
   }
 
   test(`should render a previous button, a next button and information text`, () => {
@@ -50,4 +51,12 @@ describe(`TableContent`, () => {
     const wrapperNoDownload= shallow(<TableContent {...props} enableDownload={false}/>)
     expect(wrapperNoDownload.find(`.downloadHeader`)).not.toExist()
   })
+
+  test(`should display a HTML component in download button's tooltip`, () => {
+    const wrapper = shallow(<TableContent {...props} enableDownload={true}/>)
+    const tooltip = wrapper.find(TooltipIcon)
+    expect(wrapper).toContainExactlyOneMatchingElement(TooltipIcon)
+    expect(tooltip.props().tooltipText).toEqual(props.downloadTooltip)
+  })
+
 })

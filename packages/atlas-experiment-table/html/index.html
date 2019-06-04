@@ -27,6 +27,12 @@
     resource: 'json/experiments',
     //link to `${host}/${header.resource}/${data[header.link]}/${header.endpoint}`
       species: `homo sapiens`,
+     downloadTooltip: `<ul>
+          <li>Raw filtered count matrix after quantification</li>
+          <li>Normalised filtered count matrix after quantification</li>
+          <li>TPM (transcripts per million RNA molecules - only available for SmartSeq)</li>
+          <li>SDRF file with the experimental design metadata</li>
+        </ul>`,
       tableHeader:
         [
           //{title: `index`, width: 60, dataParam: null, link: null},

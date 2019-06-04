@@ -10,7 +10,8 @@ describe(`TableFooter`, () => {
     selectedNumber: 2,
     dataLength:  data.length,
     currentPage: 1,
-    onChange: () => {}
+    onChange: () => {},
+    currentPageDataLength: 1
   }
 
   test(`should render a previous button, a next button and information text`, () => {
