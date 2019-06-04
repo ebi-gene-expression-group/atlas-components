@@ -1,4 +1,4 @@
-const CleanWebpackPlugin = require(`clean-webpack-plugin`)
+const { CleanWebpackPlugin } = require(`clean-webpack-plugin`)
 const path = require(`path`)
 
 const commonPublicPath = `/dist/`
@@ -14,9 +14,7 @@ module.exports = {
   },
 
   plugins: [
-    new CleanWebpackPlugin({
-      cleanOnceBeforeBuildPatterns: `dist`
-    })
+    new CleanWebpackPlugin()
   ],
 
   output: {
