@@ -1,6 +1,6 @@
 {
   "name": "atlas-homepage-cards",
-  "version": "2.1.3",
+  "version": "2.1.4",
   "description": "A package that renders grids of cards.",
   "main": "lib/index.js",
   "scripts": {
