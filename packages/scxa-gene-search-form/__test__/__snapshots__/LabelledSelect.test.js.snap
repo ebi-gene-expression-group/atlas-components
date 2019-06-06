@@ -8,24 +8,24 @@ exports[`LabelledSelect matches snapshot 1`] = `
     Species
   </label>
   <div
-    className="css-1pcexqc-container"
+    className=" css-2b097c-container"
     onKeyDown={[Function]}
   >
     <div
-      className="css-12emboz"
+      className=" css-tinoic"
       onMouseDown={[Function]}
       onTouchEnd={[Function]}
     >
       <div
-        className="css-1hwfws3"
+        className=" css-1hwfws3"
       >
         <div
-          className="css-dvua67-singleValue"
+          className=" css-1uccc91-singleValue"
         >
           Any
         </div>
         <input
-          className="css-gj7qu5-dummyInput"
+          className="css-62g3xt-dummyInput"
           disabled={false}
           id="Species-input"
           onBlur={[Function]}
@@ -37,7 +37,7 @@ exports[`LabelledSelect matches snapshot 1`] = `
         />
       </div>
       <div
-        className="css-1wy0on6"
+        className=" css-1wy0on6"
       >
         <span
           className="sc-bdVaJa jcfyVD"

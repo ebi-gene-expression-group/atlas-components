@@ -6,7 +6,7 @@ import URI from 'urijs'
 
 import '@babel/polyfill'
 import Autocomplete from '../src/Autocomplete'
-import AsyncCreatableSelect from 'react-select/lib/AsyncCreatable'
+import AsyncCreatableSelect from 'react-select/async-creatable'
 
 const getRandomInt = (max) => Math.floor(Math.random() * Math.floor(max))
 

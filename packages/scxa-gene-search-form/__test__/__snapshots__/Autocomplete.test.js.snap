@@ -8,19 +8,19 @@ exports[`Autocomplete matches snapshot 1`] = `
     Gene ID or gene symbol
   </label>
   <div
-    className="css-1pcexqc-container"
+    className=" css-2b097c-container"
     onKeyDown={[Function]}
   >
     <div
-      className="css-12emboz"
+      className=" css-tinoic"
       onMouseDown={[Function]}
       onTouchEnd={[Function]}
     >
       <div
-        className="css-1hwfws3"
+        className=" css-1hwfws3"
       >
         <div
-          className="css-dvua67-singleValue"
+          className=" css-1uccc91-singleValue"
         >
           foo
         </div>
@@ -83,11 +83,11 @@ exports[`Autocomplete matches snapshot 1`] = `
         </div>
       </div>
       <div
-        className="css-1wy0on6"
+        className=" css-1wy0on6"
       >
         <div
           aria-hidden="true"
-          className="css-16pqwjk-indicatorContainer"
+          className=" css-tlfecz-indicatorContainer"
           onMouseDown={[Function]}
           onTouchEnd={[Function]}
         >
