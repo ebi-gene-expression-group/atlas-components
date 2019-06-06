@@ -1,5 +1,5 @@
 const path = require(`path`)
-const CleanWebpackPlugin = require(`clean-webpack-plugin`)
+const { CleanWebpackPlugin } = require(`clean-webpack-plugin`)
 
 const vendorsBundleName = `vendors`
 const commonPublicPath = `/dist/`
@@ -39,10 +39,7 @@ module.exports = {
   },
 
   plugins: [
-    new CleanWebpackPlugin({
-      verbose: true,
-      cleanOnceBeforeBuildPatterns: `dist`
-    })
+    new CleanWebpackPlugin()
   ],
 
   module: {
