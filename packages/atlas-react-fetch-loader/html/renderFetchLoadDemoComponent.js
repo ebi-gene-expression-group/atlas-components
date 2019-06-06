@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 
 import DemoComponent from './DemoComponent'
-import withFetchLoader from '../src/index'
+import { withFetchLoader } from '../src/index'
 
 import '@babel/polyfill'
 import fetchMock from 'fetch-mock'
