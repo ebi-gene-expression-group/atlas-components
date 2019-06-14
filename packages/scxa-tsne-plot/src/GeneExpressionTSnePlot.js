@@ -150,7 +150,7 @@ const GeneExpressionScatterPlot = (props) => {
       } :
       {
         title: {
-          text: `Expression level (TPM)`
+          text: `Expression level (CPM)`
         },
         floating: false,
         align: `center`,
