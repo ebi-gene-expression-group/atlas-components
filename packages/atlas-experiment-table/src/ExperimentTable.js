@@ -36,9 +36,15 @@ class ExperimentTable extends React.Component {
   }
 
   sort(data) {
+    const reverseDateRepresentation = date => {
+      let parts = date.split(`-`)
+      return `${parts[2]}-${parts[1]}-${parts[0]}`
+    }
     const {ascendingOrder, orderedColumnIndex} = this.state
     const propKey = this.props.tableHeader[orderedColumnIndex].dataParam
-    const sortedAscendingElements = _.sortBy(data, propKey)
+    const sortedAscendingElements = propKey === `lastUpdate` ?
+      _.sortBy(data, (o) => reverseDateRepresentation(o[propKey])) :
+      _.sortBy(data, propKey)
     return ascendingOrder ? sortedAscendingElements :  sortedAscendingElements.reverse()
   }
 
