@@ -90,9 +90,9 @@ describe(`MarkerGeneHeatmap`, () => {
     const chartOptions = wrapper.find(`e`).props().options
 
     expect(chartOptions.exporting.buttons.contextButton.text).toEqual(
-      `<i class="icon icon-functional" data-icon="="></i>&nbsp;Download`)
+      `Download`)
 
-    expect(chartOptions.exporting.buttons.contextButton.symbol).toEqual(null)
+    expect(chartOptions.exporting.buttons.contextButton.symbol).toEqual(`download`)
 
     expect(chartOptions.exporting.buttons.contextButton.menuItems).toEqual(
       [

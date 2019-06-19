@@ -8,7 +8,6 @@ import HighchartsNoData from 'highcharts/modules/no-data-to-display'
 import HighchartsExporting from 'highcharts/modules/exporting'
 import HighchartsExportData from 'highcharts/modules/export-data'
 import HighchartsGetHeatmapData from './highchartsHeatmapTableDataModule'
-import HighchartsExportStyle from './highchartsExportStyle'
 
 import _ from 'lodash'
 
@@ -19,10 +18,24 @@ async function addModules() {
   HighchartsExporting(Highcharts)
   HighchartsExportData(Highcharts)
   HighchartsGetHeatmapData(Highcharts)
-  HighchartsExportStyle(Highcharts)
 }
 
 addModules()
+
+Highcharts.SVGRenderer.prototype.symbols.download = (x, y, w, h) => [
+  // Arrow stem
+  `M`, x + w * 0.5, y,
+  `L`, x + w * 0.5, y + h * 0.7,
+  // Arrow head
+  `M`, x + w * 0.3, y + h * 0.5,
+  `L`, x + w * 0.5, y + h * 0.7,
+  `L`, x + w * 0.7, y + h * 0.5,
+  // Box
+  `M`, x, y + h * 0.9,
+  `L`, x, y + h,
+  `L`, x + w, y + h,
+  `L`, x + w, y + h * 0.9
+]
 
 const MarkerGeneHeatmap = (props) => {
   const { chartHeight, hasDynamicHeight, heatmapRowHeight } = props
@@ -250,8 +263,8 @@ const MarkerGeneHeatmap = (props) => {
     exporting: {
       buttons: {
         contextButton: {
-          text: `<i class="icon icon-functional" data-icon="="></i>&nbsp;Download`,
-          symbol: null,
+          text: `Download`,
+          symbol: `download`,
           menuItems: [
             `printChart`,
             `separator`,
