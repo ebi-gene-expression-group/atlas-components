@@ -13,10 +13,27 @@ import HighchartsBoost from './modules/boost'
 import HighchartsExportStyle from './modules/export-style'
 import highchartsHeatmapLegendModule from './modules/heatmap-legend'
 
+
 import deepmerge from 'deepmerge'
 import SeriesPropTypes from './SeriesPropTypes'
 
 const Highcharts = ReactHighcharts.Highcharts
+
+Highcharts.SVGRenderer.prototype.symbols.download = (x, y, w, h) => [
+  // Arrow stem
+  `M`, x + w * 0.5, y,
+  `L`, x + w * 0.5, y + h * 0.7,
+  // Arrow head
+  `M`, x + w * 0.3, y + h * 0.5,
+  `L`, x + w * 0.5, y + h * 0.7,
+  `L`, x + w * 0.7, y + h * 0.5,
+  // Box
+  `M`, x, y + h * 0.9,
+  `L`, x, y + h,
+  `L`, x + w, y + h,
+  `L`, x + w, y + h * 0.9
+]
+
 // Only include modules if Highcharts isn’t a *good* mock -- Boost/Exporting can break tests
 // if (Highcharts.getOptions()) {...}
 HighchartsExporting(Highcharts)
@@ -151,8 +168,8 @@ const highchartsBaseConfig = {
   exporting: {
     buttons: {
       contextButton: {
-        text: `<i class="icon icon-functional" data-icon="="></i>&nbsp;Download`,
-        symbol: null
+        text: `Download`,
+        symbol: `download`
       }
     }
   }

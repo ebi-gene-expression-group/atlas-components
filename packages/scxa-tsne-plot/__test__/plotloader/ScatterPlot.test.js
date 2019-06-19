@@ -28,8 +28,8 @@ describe(`ScatterPlot`, () => {
     const wrapper = mount(<ScatterPlot series={[]} />)
     const highchartsWrapper = wrapper.find(`n`)
     expect(highchartsWrapper.prop(`config`)).toHaveProperty(`exporting.buttons.contextButton.text`,
-      `<i class="icon icon-functional" data-icon="="></i>&nbsp;Download`)
-    expect(highchartsWrapper.prop(`config`)).toHaveProperty(`exporting.buttons.contextButton.symbol`, null)
+      `Download`)
+    expect(highchartsWrapper.prop(`config`)).toHaveProperty(`exporting.buttons.contextButton.symbol`, `download`)
   })
 
   test(`with no series matches snapshot`, () => {
