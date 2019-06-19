@@ -3,34 +3,43 @@ import PropTypes from 'prop-types'
 import ReactHighcharts from 'react-highcharts'
 
 import HighchartsExporting from 'highcharts/modules/exporting'
-import HighchartsBoost from 'highcharts/modules/boost'
 import HighchartsHeatmap from 'highcharts/modules/heatmap'
-//import HighchartsMap from 'highcharts/modules/map'
-//import highchartsYAxisPanningModule from './highchartsYAxisPanningModule'
-
-import HighchartsExportStyle from './highchartsExportStyle'
-import highchartsHeatmapLegendModule from './highchartsHeatmapLegendModule'
 import highchartsAdaptChartToLegendModule from 'highcharts-adapt-chart-to-legend'
+
+//import HighchartsMap from 'highcharts/modules/map'
+//import highchartsYAxisPanningModule from './modules/y-axis-panning'
+
+import HighchartsBoost from './modules/boost'
+import HighchartsExportStyle from './modules/export-style'
+import highchartsHeatmapLegendModule from './modules/heatmap-legend'
 
 import deepmerge from 'deepmerge'
 import SeriesPropTypes from './SeriesPropTypes'
 
 const Highcharts = ReactHighcharts.Highcharts
-// Only apply modules if Highcharts isn’t a *good* mock -- Boost/Exporting can break tests
-// if (Highcharts.getOptions()) {
-async function addModules(){
-  await HighchartsExporting(Highcharts)
-  await HighchartsBoost(Highcharts)
-  await HighchartsHeatmap(Highcharts)
-  await highchartsHeatmapLegendModule(Highcharts)
-  await highchartsAdaptChartToLegendModule(Highcharts)
-  await HighchartsExportStyle(Highcharts)
+// Only include modules if Highcharts isn’t a *good* mock -- Boost/Exporting can break tests
+// if (Highcharts.getOptions()) {...}
+HighchartsExporting(Highcharts)
+HighchartsBoost(Highcharts)
+HighchartsHeatmap(Highcharts)
+highchartsHeatmapLegendModule(Highcharts, `expressionLevel`)
+highchartsAdaptChartToLegendModule(Highcharts)
+HighchartsExportStyle(Highcharts)
 
-  //await HighchartsMap(Highcharts)
-  //await highchartsYAxisPanningModule(Highcharts)
+// To add drag-to-pan functionality:
+// HighchartsMap(Highcharts)
+// highchartsYAxisPanningModule(Highcharts)
+
+const getRadiusSize = (totalNumberOfPoints) => {
+  if (totalNumberOfPoints >= 40000) {
+    return 1
+  } else if (totalNumberOfPoints >= 10000) {
+    return 2
+  } else if (totalNumberOfPoints >= 5000) {
+    return 3
+  }
+  return 4
 }
-
-addModules()
 
 const highchartsBaseConfig = {
   credits: {
@@ -79,11 +88,7 @@ const highchartsBaseConfig = {
   //     verticalAlign: `bottom`
   //   }
   // },
-  boost: {
-    useGPUTranslations: true,
-    usePreAllocated: true,
-    seriesThreshold: 5000
-  },
+
   title: {
     text: null,
     style: {
@@ -154,27 +159,46 @@ const highchartsBaseConfig = {
 }
 
 const ScatterPlot = (props) => {
-  const {chartClassName, series, highchartsConfig, legendWidth} = props
+  const { chartClassName, series, highchartsConfig, legendWidth } = props
+  const boostThreshold = 10000
+  const totalNumberOfPoints = series.reduce((acc, cur) => acc + cur.data.length, 0)
 
   const config =
     deepmerge.all([
       highchartsBaseConfig,
       {
+        boost: {
+          useGPUTranslations: true,
+          usePreAllocated: true,
+          seriesThreshold: totalNumberOfPoints >= boostThreshold ? 1 : null
+        }
+      },
+      {
         plotOptions: {
           series: {
-            marker: {radius: 3},
+            boostThreshold: boostThreshold,
+            marker: {
+              radius: getRadiusSize(totalNumberOfPoints)
+            },
             stickyTracking: false
           }
         }
       },
-      {series: series},
+      {
+        series: series
+      },
       highchartsConfig,
       {
-        legend: {symbolWidth: legendWidth}
+        legend: {
+          symbolWidth: legendWidth
+        }
       }
-    ], {arrayMerge: (destination, source) => source}) // Don’t merge
+    ], {
+      arrayMerge: (destination, source) => source // Don’t merge, overwrite instead
+    })
+
   return (
-    <div key={`chart`} className={chartClassName}>
+    <div className={chartClassName}>
       <ReactHighcharts config={config}/>
     </div>
   )

@@ -39,7 +39,7 @@ describe(`GeneExpressionTSnePlot colourize function`, () => {
 
     _colourizeExpressionLevel(gradientColourRanges(), [])(plotData(randomSeries)).forEach((series) => {
       series.data.forEach((point) => {
-        expect(point).toHaveProperty(`colorValue`)
+        expect(point).toHaveProperty(`expressionLevel`)
       })
     })
   })
@@ -66,7 +66,7 @@ describe(`GeneExpressionTSnePlot colourize function`, () => {
 
     expect(maxExpressionLevelPoints.length).toBeGreaterThanOrEqual(1)
     maxExpressionLevelPoints.forEach((point) => {
-      expect(point).toHaveProperty(`colorValue`, maximum)
+      expect(point).toHaveProperty(`expressionLevel`, maximum)
     })
   })
 

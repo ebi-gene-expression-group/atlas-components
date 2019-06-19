@@ -37,7 +37,7 @@ describe(`ScatterPlot`, () => {
     expect(tree).toMatchSnapshot()
   })
 
-  test(`marker radius does not change depending on number of total points`, () => {
+  test(`marker radius changes depending on number of total points`, () => {
     const wrapper = mount(<ScatterPlot series={[]}/>)
 
     const longSeriesName = `Series with 5,000 points`
@@ -74,7 +74,7 @@ describe(`ScatterPlot`, () => {
     wrapper.setProps({ series: [shortSeries] }).mount()
     const markerRadiusShortSeries = wrapper.find(`n`).prop(`config`).plotOptions.series.marker.radius
 
-    expect(markerRadiusLongSeries).toBe(markerRadiusShortSeries)
+    expect(markerRadiusLongSeries).not.toBe(markerRadiusShortSeries)
   })
 
   test(`matches snapshot with randomized series`, () => {

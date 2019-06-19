@@ -2,21 +2,63 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import TsnePlotView from '../src/index'
 
-const perplexities = [1, 5, 10, 15, 20]
-const ks = [8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18]
-const metadata = [
-  {
-    value: `characteristic_inferred_cell_type`,
-    label: `Inferred cell type`
-  },
-  {
-    value: `factor_sampling_site`,
-    label: `Sampling site`
-  },
-  {
-    value: `factor_time`,
-    label: `Time`
-  }]
+// Tabula Muris: 53 759 cells
+const experiment1 = {
+  accession: `E-ENAD-15`,
+  species: `Mus musculus`,
+  perplexities: [1, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50],
+  ks: [36, 47, 54, 71, 119],
+  metadata: [
+    {
+      value: `characteristic_inferred_cell_type`,
+      label: `Inferred cell type`
+    }
+  ]
+}
+
+// 48 001 cells
+const experiment2 = {
+  accession: `E-MTAB-6701`,
+  species: `Homo sapiens`,
+  perplexities: [1, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50],
+  ks: [55, 82, 99],
+  metadata: [
+    {
+      value: `characteristic_inferred_cell_type`,
+      label: `Inferred cell type`
+    }
+  ]
+}
+
+// 12 362 cells
+const experiment3 = {
+  accession: `E-MTAB-7376`,
+  species: `Mus musculus`,
+  perplexities: [1, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50],
+  ks: [5, 12, 16, 21, 27, 39, 50, 63, 76],
+  metadata: [
+    {
+      value: `characteristic_inferred_cell_type`,
+      label: `Inferred cell type`
+    }
+  ]
+}
+
+// 8 740 cells, Boost off
+const experiment4 = {
+  accession: `E-MTAB-7324`,
+  species: `Mus musculus`,
+  perplexities: [1, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50],
+  ks: [5, 10, 14, 15, 19, 27, 39, 47, 53],
+  metadata: [
+    {
+      value: `characteristic_inferred_cell_type`,
+      label: `Inferred cell type`
+    }
+  ]
+}
+
+const { accession, perplexities, ks, metadata, species } = experiment4
 
 class Demo extends React.Component {
   constructor(props) {
@@ -28,7 +70,7 @@ class Demo extends React.Component {
       selectedColourBy: ks[Math.round((ks.length -1) / 2)].toString(),
       selectedColourByCategory: `clusters`,
       highlightClusters: [],
-      experimentAccession: `E-MTAB-5061`
+      experimentAccession: accession
     }
 
     this.experimentAccessionInput = React.createRef()
@@ -68,41 +110,40 @@ class Demo extends React.Component {
           </form>
         </div>
 
-        <TsnePlotView atlasUrl={`http://localhost:8080/gxa/sc/`}
-                      suggesterEndpoint={`json/suggestions`}
-                      experimentAccession={this.state.experimentAccession}
-                      wrapperClassName={`row expanded`}
-                      clusterPlotClassName={`small-12 large-6 columns`}
-                      expressionPlotClassName={`small-12 large-6 columns`}
-                      perplexities={perplexities}
-                      selectedPerplexity={this.state.perplexity}
-                      ks={ks}
-                      metadata={metadata}
-                      selectedColourBy={this.state.selectedColourBy}
-                      selectedColourByCategory={this.state.selectedColourByCategory} // Is the plot coloured by clusters or metadata
-                      highlightClusters={this.state.highlightClusters}
-                      geneId={this.state.geneId}
-                      speciesName={'Homo sapiens'}
-                      onChangePerplexity={
-                        (perplexity) => { this.setState({perplexity: perplexity}) }
-                      }
-                      onChangeColourBy={
-                        (colourByCategory, colourByValue) => {
-                          this.setState({
-                            selectedColourBy : colourByValue,
-                            selectedColourByCategory : colourByCategory,
-                          })
-                          this._resetHighlightClusters()
-                        }
-                      }
-                      onSelectGeneId={
-                        (geneId) => {
-                          this.setState({
-                            geneId: geneId,
-                          })
-                          this._resetHighlightClusters()
-                        }
-                      }
+        <TsnePlotView
+          atlasUrl={`http://ves-hx-76:8080/gxa/sc/`}
+          suggesterEndpoint={`json/suggestions`}
+          experimentAccession={this.state.experimentAccession}
+          wrapperClassName={`row expanded`}
+          clusterPlotClassName={`small-12 large-6 columns`}
+          expressionPlotClassName={`small-12 large-6 columns`}
+          perplexities={perplexities}
+          selectedPerplexity={this.state.perplexity}
+          ks={ks}
+          metadata={metadata}
+          selectedColourBy={this.state.selectedColourBy}
+          selectedColourByCategory={this.state.selectedColourByCategory} // Is the plot coloured by clusters or metadata
+          highlightClusters={this.state.highlightClusters}
+          geneId={this.state.geneId}
+          speciesName={species}
+          onChangePerplexity={
+            (perplexity) => { this.setState({perplexity: perplexity}) }
+          }
+          onChangeColourBy={
+            (colourByCategory, colourByValue) => {
+              this.setState({
+                selectedColourBy : colourByValue,
+                selectedColourByCategory : colourByCategory,
+              })
+              this._resetHighlightClusters()
+            }
+          }
+          onSelectGeneId={
+            (geneId) => {
+              this.setState({ geneId: geneId })
+              this._resetHighlightClusters()
+            }
+          }
         />
       </div>
     )

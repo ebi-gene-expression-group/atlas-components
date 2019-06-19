@@ -1,15 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ScatterPlot doesn’t check for unique names in the same series or among different series 1`] = `
-<div
-  key="chart"
->
+<div>
   <n
     callback={[Function]}
     config={
       Object {
         "boost": Object {
-          "seriesThreshold": 5000,
+          "seriesThreshold": null,
           "useGPUTranslations": true,
           "usePreAllocated": true,
         },
@@ -76,8 +74,9 @@ exports[`ScatterPlot doesn’t check for unique names in the same series or amon
         "plotOptions": Object {
           "series": Object {
             "animation": false,
+            "boostThreshold": 10000,
             "marker": Object {
-              "radius": 3,
+              "radius": 4,
             },
             "stickyTracking": false,
             "turboThreshold": 0,
@@ -174,15 +173,13 @@ exports[`ScatterPlot doesn’t check for unique names in the same series or amon
 `;
 
 exports[`ScatterPlot matches snapshot with randomized series 1`] = `
-<div
-  key="chart"
->
+<div>
   <n
     callback={[Function]}
     config={
       Object {
         "boost": Object {
-          "seriesThreshold": 5000,
+          "seriesThreshold": null,
           "useGPUTranslations": true,
           "usePreAllocated": true,
         },
@@ -249,8 +246,9 @@ exports[`ScatterPlot matches snapshot with randomized series 1`] = `
         "plotOptions": Object {
           "series": Object {
             "animation": false,
+            "boostThreshold": 10000,
             "marker": Object {
-              "radius": 3,
+              "radius": 4,
             },
             "stickyTracking": false,
             "turboThreshold": 0,
@@ -19623,15 +19621,13 @@ exports[`ScatterPlot matches snapshot with randomized series 1`] = `
 `;
 
 exports[`ScatterPlot with no series matches snapshot 1`] = `
-<div
-  key="chart"
->
+<div>
   <n
     callback={[Function]}
     config={
       Object {
         "boost": Object {
-          "seriesThreshold": 5000,
+          "seriesThreshold": null,
           "useGPUTranslations": true,
           "usePreAllocated": true,
         },
@@ -19698,8 +19694,9 @@ exports[`ScatterPlot with no series matches snapshot 1`] = `
         "plotOptions": Object {
           "series": Object {
             "animation": false,
+            "boostThreshold": 10000,
             "marker": Object {
-              "radius": 3,
+              "radius": 4,
             },
             "stickyTracking": false,
             "turboThreshold": 0,
