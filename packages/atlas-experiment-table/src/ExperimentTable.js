@@ -109,23 +109,17 @@ class ExperimentTable extends React.Component {
     const { host, aaData, tableHeader, enableDownload, downloadTooltip } = this.props
 
     const displayedFields = tableHeader.map(header => header.dataParam)
-    const displayedData = aaData.map(data => {
-      let obj = {}
-      Object.keys(data).map(key => displayedFields.includes(key) ?
-        Object.assign(obj, {[key]: data[key]}): null)
-      return obj
-    })
 
     const dataArray = selectedSearch.trim() ?
-      this.sort(displayedData).filter(data => data && Object.values(data)
-        .some(value => value.toString().toLowerCase()
-          .includes(selectedSearch.trim().toLowerCase()))) :
+
+      this.sort(aaData).filter(data => data &&
+        Object.keys(data).map(key => displayedFields.includes(key) ? data[key] : null)
+          .some(value => value && value.toString().includes(selectedSearch))) :
       this.filter(this.sort(aaData), tableHeader)
         .filter(data => selectedKingdom ? data.kingdom === selectedKingdom : true)
 
     const currentPageData = entriesPerPage ?
       dataArray.slice(entriesPerPage * (currentPage - 1), entriesPerPage * currentPage) : dataArray
-
     const kingdomOptions = [...new Set(aaData.map(data => data.kingdom ))]
 
     return (
