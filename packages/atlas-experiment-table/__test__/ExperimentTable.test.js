@@ -33,16 +33,16 @@ describe(`ExperimentTable`, () => {
     props.tableHeader[randomColumnIndex].type=`sort`
     const wrapper = mount(<ExperimentTable {...props}/>)
 
-    expect(wrapper).toContainExactlyOneMatchingElement(`.icon.icon-common.icon-sort-up`)
-    expect(wrapper.find(`.icon.icon-common.icon-sort-down`)).not.toExist()
+    expect(wrapper).toContainExactlyOneMatchingElement(`.icon.icon-common.icon-sort-down`)
+    expect(wrapper.find(`.icon.icon-common.icon-sort-up`)).not.toExist()
 
     const sortedHeader = wrapper.find(`.header${randomColumnIndex}`).at(0)
     sortedHeader.simulate(`click`)
     wrapper.update()
-    expect(wrapper.find(`.icon.icon-common.icon-sort-up`)).not.toExist()
+    expect(wrapper.find(`.icon.icon-common.icon-sort-down`)).not.toExist()
     sortedHeader.simulate(`click`)
     wrapper.update()
-    expect(wrapper).toContainExactlyOneMatchingElement(`.icon.icon-common.icon-sort-up`)
+    expect(wrapper).toContainExactlyOneMatchingElement(`.icon.icon-common.icon-sort-down`)
   })
 
   test(`should filter based on kingdom selection`, () => {
@@ -118,7 +118,7 @@ describe(`ExperimentTable`, () => {
 
     const wrapper = mount(<ExperimentTable {...props} enableDownload={true}/>)
     const propKey = tableHeader[wrapper.state(`orderedColumnIndex`)].dataParam
-    const sortedElements = _.sortBy(data, propKey)
+    const sortedElements = _.sortBy(data, propKey).reverse()
 
     expect(wrapper.state(`checkedRows`)).toEqual([])
     const checkbox = wrapper.find(`.checkbox`).at(randomRow)
