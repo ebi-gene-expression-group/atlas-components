@@ -96,8 +96,6 @@ describe(`MarkerGeneHeatmap`, () => {
 
     expect(chartOptions.exporting.buttons.contextButton.menuItems).toEqual(
       [
-        `printChart`,
-        `separator`,
         `downloadPNG`,
         `downloadJPEG`,
         `downloadPDF`,

@@ -266,8 +266,6 @@ const MarkerGeneHeatmap = (props) => {
           text: `Download`,
           symbol: `download`,
           menuItems: [
-            `printChart`,
-            `separator`,
             `downloadPNG`,
             `downloadJPEG`,
             `downloadPDF`,
