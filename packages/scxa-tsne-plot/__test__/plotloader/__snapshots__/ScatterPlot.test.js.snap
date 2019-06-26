@@ -39,6 +39,12 @@ exports[`ScatterPlot doesn’t check for unique names in the same series or amon
         "exporting": Object {
           "buttons": Object {
             "contextButton": Object {
+              "menuItems": Array [
+                "downloadPNG",
+                "downloadJPEG",
+                "downloadPDF",
+                "downloadSVG",
+              ],
               "symbol": "download",
               "text": "Download",
             },
@@ -211,6 +217,12 @@ exports[`ScatterPlot matches snapshot with randomized series 1`] = `
         "exporting": Object {
           "buttons": Object {
             "contextButton": Object {
+              "menuItems": Array [
+                "downloadPNG",
+                "downloadJPEG",
+                "downloadPDF",
+                "downloadSVG",
+              ],
               "symbol": "download",
               "text": "Download",
             },
@@ -19659,6 +19671,12 @@ exports[`ScatterPlot with no series matches snapshot 1`] = `
         "exporting": Object {
           "buttons": Object {
             "contextButton": Object {
+              "menuItems": Array [
+                "downloadPNG",
+                "downloadJPEG",
+                "downloadPDF",
+                "downloadSVG",
+              ],
               "symbol": "download",
               "text": "Download",
             },

@@ -169,7 +169,8 @@ const highchartsBaseConfig = {
     buttons: {
       contextButton: {
         text: `Download`,
-        symbol: `download`
+        symbol: `download`,
+        menuItems: [`downloadPNG`, `downloadJPEG`, `downloadPDF`, `downloadSVG`]
       }
     }
   }
