@@ -1,6 +1,6 @@
 {
   "name": "scxa-gene-search-form",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "description": "Single Cell Expression Atlas homepage gene search form",
   "main": "lib/index.js",
   "scripts": {
