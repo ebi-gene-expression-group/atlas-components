@@ -1,6 +1,6 @@
 {
   "name": "scxa-marker-gene-heatmap",
-  "version": "1.3.1",
+  "version": "1.4.0",
   "description": "Highcharts heatmap used to visualize marker genes for an experiment in the Single Cell Expression Atlas",
   "main": "lib/index.js",
   "scripts": {
