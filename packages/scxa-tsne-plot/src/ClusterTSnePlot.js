@@ -150,6 +150,17 @@ const ClusterTSnePlot = (props) => {
     {value: selectedColourBy}
   )
 
+  const afterRender = (chart) => {
+    chart.series.forEach(series => {
+      const legendSymbolSize = 10
+      series.legendSymbol.translate(
+        (series.legendSymbol.width / 2) - legendSymbolSize / 2,
+        (series.legendSymbol.height / 2) - legendSymbolSize / 2)
+      series.legendSymbol.attr(`width`, legendSymbolSize)
+      series.legendSymbol.attr(`height`, legendSymbolSize)
+    })
+  }
+
   return [
     <div key={`perplexity-k-select`} className={`row`}>
       {showControls &&
@@ -182,6 +193,7 @@ const ClusterTSnePlot = (props) => {
       loading={loading}
       resourcesUrl={resourcesUrl}
       errorMessage={errorMessage}
+      afterRender={afterRender}
     />
   ]
 }

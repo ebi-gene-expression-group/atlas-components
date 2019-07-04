@@ -217,7 +217,7 @@ const ScatterPlot = (props) => {
 
   return (
     <div className={chartClassName}>
-      <ReactHighcharts config={config}/>
+      <ReactHighcharts config={config} callback={props.afterRender} />
     </div>
   )
 }
@@ -226,7 +226,8 @@ ScatterPlot.propTypes = {
   chartClassName: PropTypes.string,
   series: SeriesPropTypes,
   highchartsConfig: PropTypes.object,
-  legendWidth: PropTypes.number
+  legendWidth: PropTypes.number,
+  afterRender: PropTypes.func.isRequired
 }
 
 ScatterPlot.defaultProps = {

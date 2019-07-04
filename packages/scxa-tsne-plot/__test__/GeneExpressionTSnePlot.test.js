@@ -1,8 +1,11 @@
+// fetch polyfill
+import 'whatwg-fetch'
+
 import React from 'react'
 import renderer from 'react-test-renderer'
 import Color from 'color'
 
-import {mount} from 'enzyme'
+import { mount } from 'enzyme'
 
 import '@babel/polyfill'
 import {_colourizeExpressionLevel} from '../src/GeneExpressionTSnePlot'

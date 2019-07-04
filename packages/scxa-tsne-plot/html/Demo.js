@@ -7,7 +7,7 @@ const experiment1 = {
   accession: `E-ENAD-15`,
   species: `Mus musculus`,
   perplexities: [1, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50],
-  ks: [36, 47, 54, 71, 119],
+  ks: [16, 28, 35, 50, 65, 73],
   metadata: [
     {
       value: `characteristic_inferred_cell_type`,
@@ -21,7 +21,7 @@ const experiment2 = {
   accession: `E-MTAB-6701`,
   species: `Homo sapiens`,
   perplexities: [1, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50],
-  ks: [55, 82, 99],
+  ks: [8, 21, 43, 53, 63],
   metadata: [
     {
       value: `characteristic_inferred_cell_type`,
@@ -35,7 +35,7 @@ const experiment3 = {
   accession: `E-MTAB-7376`,
   species: `Mus musculus`,
   perplexities: [1, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50],
-  ks: [5, 12, 16, 21, 27, 39, 50, 63, 76],
+  ks: [3, 7, 8, 9, 14, 24, 35, 48, 59],
   metadata: [
     {
       value: `characteristic_inferred_cell_type`,
@@ -49,7 +49,7 @@ const experiment4 = {
   accession: `E-MTAB-7324`,
   species: `Mus musculus`,
   perplexities: [1, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50],
-  ks: [5, 10, 14, 15, 19, 27, 39, 47, 53],
+  ks: [8, 12, 15, 18, 29, 37, 48, 50],
   metadata: [
     {
       value: `characteristic_inferred_cell_type`,
@@ -58,7 +58,7 @@ const experiment4 = {
   ]
 }
 
-const { accession, perplexities, ks, metadata, species } = experiment4
+const { accession, perplexities, ks, metadata, species } = experiment1
 
 class Demo extends React.Component {
   constructor(props) {
