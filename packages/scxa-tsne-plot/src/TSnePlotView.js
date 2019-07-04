@@ -95,7 +95,8 @@ class TSnePlotView extends React.Component {
   render() {
     const {height, atlasUrl, resourcesUrl, suggesterEndpoint, showControls} = this.props
     const {wrapperClassName, clusterPlotClassName, expressionPlotClassName} = this.props
-    const {geneId, speciesName, highlightClusters} = this.props
+    const {geneId, speciesName} = this.props
+    const highlightClusters = []
     const {ks, perplexities, selectedPerplexity, metadata, selectedColourBy, selectedColourByCategory} = this.props
     const {onChangePerplexity, onSelectGeneId, onChangeColourBy} = this.props
     const {loadingGeneExpression, geneExpressionData, geneExpressionErrorMessage} = this.state
