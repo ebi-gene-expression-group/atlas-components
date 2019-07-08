@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom'
 import HeatmapView from '../src/index.js'
 
 // K values for E-MTAB-5061
-const ks = [7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17]
+const ks = [3, 7, 8, 9, 11, 19, 25, 26, 30]
 
 // K values for E-EHCA-2
 // const ks = [8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18]
@@ -21,16 +21,16 @@ class Demo extends React.Component {
     super(props)
 
     this.state = {
-      experimentAccession: `E-MTAB-5061`,
+      experimentAccession: `E-ENAD-27`,
       // experimentAccession: `E-EHCA-2`,
       // experimentAccession: `E-ENAD-19`,
       // experimentAccession: `E-GEOD-93593`,
       ks: ks,
-      ksWithMarkers: [7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17],
+      ksWithMarkers: [3, 7, 8, 9, 11, 19, 25, 26, 30],
       // ksWithMarkers: [8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18],
       // ksWithMarkers: [4, 7, 9],
       // ksWithMarkers: [36, 37, 38, 39, 40, 41, 42, 42, 43, 44, 45, 46],
-      selectedK: ks[0].toString()
+      selectedK: ks[3].toString()
       // selectedK: 17
     }
   }

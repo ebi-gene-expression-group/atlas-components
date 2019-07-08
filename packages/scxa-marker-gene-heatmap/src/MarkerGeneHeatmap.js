@@ -54,12 +54,12 @@ const MarkerGeneHeatmap = (props) => {
     let plotLineAxisPosition = -0.5
 
     // If we don't have a set row height, we try to estimate the height as worked out by Highcharts
-    let rowHeight = hasDynamicHeight ?
+    const rowHeight = hasDynamicHeight ?
       heatmapRowHeight :
       Math.round((chartHeight - 175) / totalNumberOfRows + ((clusterIds.length-1) * 8))
 
     clusterIds.forEach((clusterId, idx, array) => {
-      let numberOfRows = Object.keys(_.groupBy(groupedData[clusterId], `y`)).length // how many marker genes per cluster
+      const numberOfRows = Object.keys(_.groupBy(groupedData[clusterId], `y`)).length // how many marker genes per cluster
 
       plotLineAxisPosition = plotLineAxisPosition + numberOfRows
 
@@ -153,7 +153,7 @@ const MarkerGeneHeatmap = (props) => {
       visible: data.length !== 0
     },
 
-    yAxis: [{
+    yAxis: {
       categories: yAxisCategories,
       title: {
         text: `Gene ID`,
@@ -170,21 +170,20 @@ const MarkerGeneHeatmap = (props) => {
       showEmpty: false,
       visible: data.length !== 0
     },
-    ],
 
     tooltip: {
       // followPointer: true,
       formatter: function () {
         if(this.point.value === null) {
-          return `<b>Cluster ID:</b> ${this.point.x+1} <br/>
-                <b>Gene ID:</b> ${this.point.geneName} <br/>
-                <b>Median expression:</b> Not expressed <br/>`
+          return `<b>Cluster ID:</b> ${this.point.x+1}<br/>` +
+                 `<b>Gene ID:</b> ${this.point.geneName}<br/>` +
+                 `<b>Median expression:</b> Not expressed<br/>`
         }
         else {
-          const text = `<b>Cluster ID:</b> ${this.point.x+1} <br/> 
-                  <b>Cluster ID where marker:</b> ${this.point.clusterIdWhereMarker} <br/>
-                  <b>Gene ID:</b> ${this.point.geneName} <br/>
-                  <b>Median expression:</b> ${+this.point.value.toFixed(3)} CPM`
+          const text = `<b>Cluster ID:</b> ${this.point.x+1}<br/>` +
+                       `<b>Cluster ID where marker:</b> ${this.point.clusterIdWhereMarker}<br/>` +
+                       `<b>Gene ID:</b> ${this.point.geneName}<br/>` +
+                       `<b>Median expression:</b> ${+this.point.value.toFixed(3)} CPM`
 
           if(this.point.clusterIdWhereMarker === this.point.x+1) {
             return text + `<br/><b>P-value:</b> ${this.point.pValue.toExponential(3)}`
@@ -199,11 +198,16 @@ const MarkerGeneHeatmap = (props) => {
     colorAxis: {
       type: `logarithmic`,
       min: 0.1,
-      max: 100000,
+      max: 1000000,
       stops: [
-        [0, `#ffffff`],
-        [0.67, `#6077bf`],
-        [1, `#0e0573`]
+        [0, `#d7ffff`],
+        [1/7 * 1, `#d4e4fb`],
+        [1/7 * 2, `#95adde`],
+        [1/7 * 3, `#6077bf`],
+        [1/7 * 4, `#1151d1`],
+        [1/7 * 5, `#35419b`],
+        [1/7 * 6, `#0e0573`],
+        [1, `#07004c`]
       ],
       marker: {
         color: `#e96b23`

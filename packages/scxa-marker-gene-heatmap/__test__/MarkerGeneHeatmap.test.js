@@ -43,7 +43,7 @@ describe(`MarkerGeneHeatmap`, () => {
 
     const chartOptions = wrapper.find(`t`).props().options
 
-    expect(chartOptions.yAxis[0].plotLines).toHaveLength(3)
+    expect(chartOptions.yAxis.plotLines).toHaveLength(3)
   })
 
   test(`doesn't create plotlines if data is filtered`, () => {
@@ -66,7 +66,7 @@ describe(`MarkerGeneHeatmap`, () => {
 
     const chartOptions = wrapper.find(`t`).props().options
 
-    expect(chartOptions.yAxis[0].plotLines).toHaveLength(0)
+    expect(chartOptions.yAxis.plotLines).toHaveLength(0)
   })
 
   test(`does have data export options and a styled button`, () => {

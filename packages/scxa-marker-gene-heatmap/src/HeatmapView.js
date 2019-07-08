@@ -144,9 +144,9 @@ class HeatmapView extends React.Component {
                 data={filteredData}
                 isDataFiltered={selectedClusterId && selectedClusterId.value !== `all` || false}
                 xAxisCategories={allClusterIds}
-                yAxisCategories={ _.uniq(data.map(x => x.geneName))}
+                yAxisCategories={_.chain(data).map(cell => _.pick(cell, `geneName`, `clusterIdWhereMarker`)).uniqWith(_.isEqual).map(`geneName`).value()}
                 chartHeight={defaultHeatmapHeight}
-                hasDynamicHeight={_.uniq(filteredData.map(x => x.geneName)).length > 5 ? hasDynamicHeight : false} // don't want dynamic height if there is little or no data
+                hasDynamicHeight={_.chain(filteredData).map(`geneName`).uniq().value().length > 5 ? hasDynamicHeight : false}
                 heatmapRowHeight={heatmapRowHeight}
               />
               <LoadingOverlay
