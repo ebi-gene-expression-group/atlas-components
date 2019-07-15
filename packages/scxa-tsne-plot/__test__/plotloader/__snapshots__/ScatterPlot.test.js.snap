@@ -55,7 +55,6 @@ exports[`ScatterPlot doesn’t check for unique names in the same series or amon
           "navigation": Object {
             "enabled": false,
           },
-          "symbolWidth": undefined,
         },
         "navigation": Object {
           "buttonOptions": Object {
@@ -233,7 +232,6 @@ exports[`ScatterPlot matches snapshot with randomized series 1`] = `
           "navigation": Object {
             "enabled": false,
           },
-          "symbolWidth": undefined,
         },
         "navigation": Object {
           "buttonOptions": Object {
@@ -19687,7 +19685,6 @@ exports[`ScatterPlot with no series matches snapshot 1`] = `
           "navigation": Object {
             "enabled": false,
           },
-          "symbolWidth": undefined,
         },
         "navigation": Object {
           "buttonOptions": Object {

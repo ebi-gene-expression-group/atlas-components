@@ -165,7 +165,6 @@ describe(`GeneExpressionTSnePlot`, () => {
 
 
   test(`with random data matches snapshot`, () => {
-
     const tree = renderer
       .create(<GeneExpressionTSnePlot {...props} showControls={true}/>)
       .toJSON()
@@ -173,18 +172,13 @@ describe(`GeneExpressionTSnePlot`, () => {
     expect(tree).toMatchSnapshot()
   })
 
-  test(`contains no atlas autocomplete control when showControls is false`, () => {
-
+  test(`wraps the autocomplete control in a hidden div when showControls is false`, () => {
     const wrapper = mount(<GeneExpressionTSnePlot {...props} showControls={false}/>)
-
-    expect(wrapper.find(AtlasAutocomplete).length).toBe(0)
+    expect(wrapper.find(AtlasAutocomplete).parent()).toHaveStyle({visibility: `hidden`})
   })
 
-  test(`contains atlas autocomplete control when showControls is true`, () => {
-
+  test(`wraps the autocomplete control in a visible div when showControls is true`, () => {
     const wrapper = mount(<GeneExpressionTSnePlot {...props} showControls={true}/>)
-
-    expect(wrapper.find(AtlasAutocomplete).length).toBe(1)
+    expect(wrapper.find(AtlasAutocomplete).parent()).toHaveStyle({visibility: `visible`})
   })
-
 })

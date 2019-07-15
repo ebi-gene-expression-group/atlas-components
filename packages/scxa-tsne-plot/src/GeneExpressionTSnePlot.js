@@ -8,16 +8,8 @@ import ScatterPlotLoader from './plotloader/PlotLoader'
 import AtlasAutocomplete from 'expression-atlas-autocomplete'
 
 import './util/MathRound'
-import Responsive from 'react-responsive'
-
-
-const Desktop = props => <Responsive {...props} minWidth={1800} />
-const Tablet = props => <Responsive {...props} minWidth={1000} maxWidth={1799} />
-const Mobile = props => <Responsive {...props} minWidth={767} maxWidth={999} />
-const Default = props => <Responsive {...props} maxWidth={766} />
 
 const stops = [
-  // The last stop acts as a
   {
     cutoff: 0.1,
     color: `#d7ffff`
@@ -159,48 +151,32 @@ const GeneExpressionScatterPlot = (props) => {
       }
   }
 
-  const responsiveComponent = width =>
-    <ScatterPlotLoader
-      key={`expression-plot`}
-      wrapperClassName={`row`}
-      chartClassName={`small-12 columns`}
-      series={_colourizeExpressionLevel(highlightClusters)(plotData)}
-      highchartsConfig={highchartsConfig}
-      loading={loading}
-      legendWidth={width}
-      resourcesUrl={resourcesUrl}
-      errorMessage={errorMessage}
-    />
-
-  return [
-    showControls &&
-      <AtlasAutocomplete
-        key={`expression-autocomplete`}
-        wrapperClassName={`row margin-bottom-large`}
-        atlasUrl={atlasUrl}
-        suggesterEndpoint={suggesterEndpoint}
-        initialValue={geneId}
-        defaultSpecies={speciesName}
-        onSelect={(event) => {
-          onSelectGeneId(event)
-        }}
-      />,
-    //react-responsive design
-    <div key={`scatter-plot`} style={ showControls ? {} : {marginTop: `13%`}}>
-      <Desktop key={`Desktop`}>
-        {responsiveComponent(1800 / 2.2)}
-      </Desktop>
-      <Tablet key={`Tablet`}>
-        {responsiveComponent(1000 / 2.2)}
-      </Tablet>
-      <Mobile key={`Mobile`}>
-        {responsiveComponent(750)}
-      </Mobile>
-      <Default key={`Default`}>
-        {responsiveComponent(350)}
-      </Default>
-    </div>
-  ]
+  return (
+    <React.Fragment>
+      <div style={{visibility: `${showControls ? `visible` : `hidden`}`}}>
+        <AtlasAutocomplete
+          wrapperClassName={`row margin-bottom-large`}
+          atlasUrl={atlasUrl}
+          suggesterEndpoint={suggesterEndpoint}
+          initialValue={geneId}
+          defaultSpecies={speciesName}
+          onSelect={(event) => {
+            onSelectGeneId(event)
+          }}
+          show={showControls}
+        />
+      </div>
+      <ScatterPlotLoader
+        wrapperClassName={`row`}
+        chartClassName={`small-12 columns`}
+        series={_colourizeExpressionLevel(highlightClusters)(plotData)}
+        highchartsConfig={highchartsConfig}
+        loading={loading}
+        resourcesUrl={resourcesUrl}
+        errorMessage={errorMessage}
+      />
+    </React.Fragment>
+  )
 }
 
 GeneExpressionScatterPlot.propTypes = {
@@ -218,6 +194,7 @@ GeneExpressionScatterPlot.propTypes = {
   atlasUrl: PropTypes.string.isRequired,
   suggesterEndpoint: PropTypes.string.isRequired,
   speciesName: PropTypes.string.isRequired,
+  geneId: PropTypes.string.isRequired,
   onSelectGeneId: PropTypes.func.isRequired,
 
   loading: PropTypes.bool.isRequired,

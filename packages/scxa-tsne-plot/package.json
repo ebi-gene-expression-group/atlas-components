@@ -1,6 +1,6 @@
 {
   "name": "expression-atlas-experiment-page-tsne-plot",
-  "version": "4.2.0",
+  "version": "4.3.0-beta",
   "description": "t-SNE plot view tab for Single Cell Expression Atlas experiment page",
   "main": "lib/index.js",
   "scripts": {
@@ -52,7 +52,6 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-highcharts": "^16.0.2",
-    "react-responsive": "^7.0.0",
     "react-select": "^3.0.4",
     "seedrandom": "^3.0.1",
     "styled-components": "^4.3.2"

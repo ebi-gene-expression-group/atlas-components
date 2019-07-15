@@ -177,7 +177,7 @@ const highchartsBaseConfig = {
 }
 
 const ScatterPlot = (props) => {
-  const { chartClassName, series, highchartsConfig, legendWidth } = props
+  const { chartClassName, series, highchartsConfig } = props
   const boostThreshold = 10000
   const totalNumberOfPoints = series.reduce((acc, cur) => acc + cur.data.length, 0)
 
@@ -205,12 +205,7 @@ const ScatterPlot = (props) => {
       {
         series: series
       },
-      highchartsConfig,
-      {
-        legend: {
-          symbolWidth: legendWidth
-        }
-      }
+      highchartsConfig
     ], {
       arrayMerge: (destination, source) => source // Don’t merge, overwrite instead
     })
