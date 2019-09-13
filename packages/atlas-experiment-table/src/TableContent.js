@@ -47,10 +47,13 @@ const TableContent = ({tableHeader, searchedColumnIndex, searchQuery, orderedCol
 
                 {[
                   tableHeader.map((header, index) => {
-                    const cellItem = Array.isArray(data[header.dataParam]) ?
-                      <ul key={`cell${index}`}>{data[header.dataParam].map(element => <li key={element}>{element}</li>)}</ul> :
-                      data[header.dataParam]
-                    return <Table.Cell key={`${cellItem}`} flexBasis={header.width} flexShrink={100} flexGrow={100}>
+                    const cellItem = header.image ?
+                      <img src={header.image[data[header.dataParam]].src} alt={header.image[data[header.dataParam]].alt}/> :
+                      Array.isArray(data[header.dataParam]) ?
+                        <ul key={`cell${index}`}>{data[header.dataParam].map(element => <li key={`${element}`}>{element}</li>)}</ul> :
+                        data[header.dataParam]
+
+                    return <Table.Cell key={`${cellItem}${index}`} flexBasis={header.width} flexShrink={100} flexGrow={100}>
                       {
                         header.link ?
                           <div><a href={URI(`${header.resource}/${data[header.link]}/${header.endpoint}`, host)}>{cellItem}</a></div>:
@@ -76,10 +79,16 @@ const TableContent = ({tableHeader, searchedColumnIndex, searchQuery, orderedCol
 TableContent.propTypes = {
   tableHeader: PropTypes.arrayOf(
     PropTypes.shape({
-      type: PropTypes.string.isRequired,
+      type: PropTypes.oneOf([`sort`, `search`, ``]).isRequired,
       title: PropTypes.string.isRequired,
       width: PropTypes.number.isRequired,
-      dataParam: PropTypes.string.isRequired
+      dataParam: PropTypes.string.isRequired,
+      image: PropTypes.objectOf(
+        PropTypes.shape({
+          src: PropTypes.string,
+          alt: PropTypes.string
+        })
+      )
     })
   ),
   searchedColumnIndex: PropTypes.number.isRequired,

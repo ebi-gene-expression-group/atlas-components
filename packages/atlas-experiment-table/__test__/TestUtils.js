@@ -17,7 +17,7 @@ const tableHeader = [
   { type: `sort`, title: `Loaded date`, width: 140, dataParam: `lastUpdate` },
   { type: `search`, title: `species`, width: 200, dataParam: `species` },
   { type: ``, title: `experiment description`, width: 360, dataParam: `experimentDescription`, link: `experimentAccession`, resource: `experiments`, endpoint: `Results` },
-  { type: `plain`, title: `experiment factors`, width: 260, dataParam: `experimentalFactors` },
+  { type: ``, title: `experiment factors`, width: 260, dataParam: `experimentalFactors` },
   { type: `sort`, title: `Number of assays`, width: 160, dataParam: `numberOfAssays`, link: `experimentAccession`, resource: `experiments`, endpoint: `Experiment Design` },
 ]
 
@@ -34,7 +34,7 @@ const data = [
     experimentalFactors: [`single cell identifier`, `sampling site`,`time`],
   },
   {
-    experimentType: `SINGLE`,
+    experimentType: `DOUBLE`,
     experimentAccession: `E-GEOD-99058`,
     experimentDescription: `Single cell`,
     lastUpdate: `11-10-2018`,

@@ -10,6 +10,16 @@ describe(`TableContent`, () => {
   const props = {
     enableIndex: true,
     tableHeader: [{
+      type: `sort`,
+      title: `type`,
+      width: 3,
+      dataParam: `experimentType`,
+      image: {
+        SINGLE: {src: `www.foo.com`, alt: `foo`},
+        DOUBLE: {src: `www.bar.cn`, alt: `bar`}
+      }
+    },
+    {
       type: `search`,
       title: `title1`,
       width: 12,
@@ -59,4 +69,8 @@ describe(`TableContent`, () => {
     expect(tooltip.props().tooltipText).toEqual(props.downloadTooltip)
   })
 
+  test(`should display the images in the table content if the header has image field`, () => {
+    const wrapper = shallow(<TableContent {...props}/>)
+    expect(wrapper.find(`img`)).toHaveLength(props.tableHeader.length)
+  })
 })

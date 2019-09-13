@@ -77,7 +77,7 @@ class ExperimentTable extends React.Component {
 
   searchAllOnChange(e) {
     this.setState({
-      selectedSearch: e.target.value,
+      selectedSearch: e.target.value.toLowerCase(),
       currentPage: 1
     })
   }
@@ -114,14 +114,13 @@ class ExperimentTable extends React.Component {
 
       this.sort(aaData).filter(data => data &&
         Object.keys(data).map(key => displayedFields.includes(key) ? data[key] : null)
-          .some(value => value && value.toString().includes(selectedSearch))) :
+          .some(value => value && value.toString().toLowerCase().includes(selectedSearch))) :
       this.filter(this.sort(aaData), tableHeader)
         .filter(data => selectedKingdom ? data.kingdom === selectedKingdom : true)
 
     const currentPageData = entriesPerPage ?
       dataArray.slice(entriesPerPage * (currentPage - 1), entriesPerPage * currentPage) : dataArray
     const kingdomOptions = [...new Set(aaData.map(data => data.kingdom ))]
-
     return (
       <div className={`row expanded`}>
         <TableSearchHeader
