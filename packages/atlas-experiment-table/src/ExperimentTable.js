@@ -179,7 +179,7 @@ ExperimentTable.propTypes = {
     })
   ),
   enableDownload: PropTypes.bool.isRequired,
-  downloadTooltip: PropTypes.string.isRequired
+  downloadTooltip: PropTypes.string
 }
 
 ExperimentTable.defaultProps = {

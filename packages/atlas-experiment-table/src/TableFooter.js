@@ -1,17 +1,48 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import paginate from 'jw-paginate'
 
 const TableFooter = ({dataArrayLength, currentPageDataLength, currentPage, entriesPerPage, onChange, dataLength}) => {
-  const pageNumbers = []
-  for (let i = 1; i <= Math.ceil(dataArrayLength / entriesPerPage); i++) {
-    pageNumbers.push(
-      i === currentPage ?
-        <li className={`current`} key={`bottom${i}`}>{currentPage}</li> :
-        <li key={`bottom${i}`}><a onClick={() => onChange(i)}>{i}</a></li>
-    )
+
+  const pageNumbersLength = Math.ceil(dataArrayLength / entriesPerPage)
+  const paginationOutput = paginate(dataArrayLength, currentPage, entriesPerPage, 3).pages
+
+  const restylePagination = (pages, totalPages) => {
+    let restyledPages = [...pages]
+    if (restyledPages[0] !== 1 && totalPages > 6) {
+      restyledPages.unshift(1)
+      restyledPages[1] !== 2 && restyledPages.splice(1, 0, `...`)
+    }
+
+    if (restyledPages[restyledPages.length - 1] !== totalPages && totalPages > 6)  {
+      restyledPages.push(totalPages)
+      restyledPages[restyledPages.length - 2] !== (totalPages - 1) && restyledPages.splice(restyledPages.length - 1 , 0 , `...`)
+    }
+
+    if (currentPage <= 4 && totalPages > 6){
+      restyledPages = [1, 2, 3, 4, 5, `...`, totalPages]
+    }
+
+    if(currentPage >= (totalPages - 4) && totalPages > 6){
+      restyledPages = [1, `...`, totalPages - 4, totalPages - 3, totalPages - 2, totalPages - 1, totalPages]
+    }
+
+    if(totalPages === 6) {
+      restyledPages = [1, 2, 3, 4, 5, 6]
+    }
+
+    return restyledPages
   }
 
-  const pageInfo = pageNumbers.length === 1 ? `` : ` (Page ${currentPage} of ${pageNumbers.length})`
+  const pageNumbers = restylePagination(paginationOutput, pageNumbersLength).map((pageIndicator,i) => {
+    return pageIndicator === `...` ?
+      <li key={`bottom${i}`} className={`disabled`}>{pageIndicator}</li> :
+      pageIndicator === currentPage ?
+        <li className={`current`} key={`bottom${i}`}>{currentPage}</li> :
+        <li key={`bottom${i}`}><a onClick={() => onChange(pageIndicator)}>{pageIndicator}</a></li>
+  })
+
+  const pageInfo = pageNumbers.length === 1 ? `` : ` (Page ${currentPage} of ${pageNumbersLength})`
 
   return (
     <div className="row expanded padding-top-medium">
