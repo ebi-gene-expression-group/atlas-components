@@ -1,5 +1,5 @@
 {
-  "name": "expression-atlas-number-format",
+  "name": "@ebi-gene-expression-group/expression-atlas-number-format",
   "version": "3.1.0",
   "description": "Format numbers nicely",
   "main": "lib/index.js",
@@ -33,7 +33,7 @@
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ebi-gene-expression-group/atlas-number-format.git"
+    "url": "git+https://github.com/ebi-gene-expression-group/atlas-number-format.git"
   },
   "dependencies": {
     "prop-types": "^15.7.2",
@@ -60,5 +60,12 @@
     "webpack": "^4.30.0",
     "webpack-cli": "^3.3.2",
     "webpack-dev-server": "^3.3.1"
+  },
+  "bugs": {
+    "url": "https://github.com/ebi-gene-expression-group/atlas-number-format/issues"
+  },
+  "homepage": "https://github.com/ebi-gene-expression-group/atlas-number-format#readme",
+  "directories": {
+    "lib": "lib"
   }
 }
