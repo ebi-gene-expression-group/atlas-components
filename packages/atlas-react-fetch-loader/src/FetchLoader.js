@@ -80,22 +80,30 @@ const withFetchLoader = (WrappedComponent) => {
     }
 
     render() {
+      const { errorPayloadInsteadOfCallout, ...passThroughProps } = this.props
       const { data, isLoading, hasError } = this.state
 
       return (
         hasError ?
-          <CalloutAlert error={hasError} /> :
+          errorPayloadInsteadOfCallout ?
+            <WrappedComponent {...{...passThroughProps, ...errorPayloadInsteadOfCallout}}/> :
+            <CalloutAlert error={hasError} /> :
           isLoading ?
             <p className={`row column loading-message`}>Loading, please wait…</p> :
-          // Promise fulfilled, merge passed props and merge-overwrite with retrieved data
-            <WrappedComponent {...{...this.props, ...data}}/>
+            // Promise fulfilled, merge passed props and merge-overwrite with retrieved data
+            <WrappedComponent {...{...passThroughProps, ...data}}/>
       )
     }
   }
 
   FetchLoader.propTypes = {
     host: PropTypes.string.isRequired,
-    resource: PropTypes.string.isRequired
+    resource: PropTypes.string.isRequired,
+    errorPayloadInsteadOfCallout: PropTypes.object
+  }
+
+  FetchLoader.defaultProps = {
+    errorPayloadInsteadOfCallout: null
   }
 
   return FetchLoader

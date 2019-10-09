@@ -14,7 +14,8 @@ const getRandomInt = (min, max) => {
 }
 const getRandomHttpErrorCode = () => getRandomInt(400, 600)
 
-const ComponentWithFetchLoader = withFetchLoader(() => <div></div>)
+const MyComponent = () => <div></div>
+const ComponentWithFetchLoader = withFetchLoader(MyComponent)
 
 describe(`FetchLoader`, () => {
   beforeEach(() => {
@@ -22,7 +23,7 @@ describe(`FetchLoader`, () => {
   })
 
   const props = {
-    host: `foo`,
+    host: `foo/`,
     resource: `bar`
   }
 
@@ -85,6 +86,29 @@ describe(`FetchLoader`, () => {
     await wrapper.instance().componentDidUpdate()
     wrapper.update()
     expect(wrapper.find(CalloutAlert)).toHaveLength(0)
+  })
+
+  test(`additional pass-through are added to the JSON payload`, async () => {
+    fetchMock.get(`/foo/bar`, `{"results":[]}`)
+    const wrapper = shallow(<ComponentWithFetchLoader {...props} />)
+
+    await wrapper.instance().componentDidMount()
+    wrapper.update()
+
+    expect(wrapper.find(MyComponent)).toHaveProp(props)
+    expect(wrapper.find(MyComponent)).toHaveProp(`results`, [])
+  })
+
+  test(`can inject a supplied error payload instead of rendering the callout alert component`, async () => {
+    fetchMock.get(`/foo/bar`, getRandomHttpErrorCode)
+    const wrapper = shallow(<ComponentWithFetchLoader {...props} errorPayloadInsteadOfCallout={{foo: `bar`}} />)
+
+    await wrapper.instance().componentDidMount()
+    wrapper.update()
+
+    expect(wrapper.find(CalloutAlert)).toHaveLength(0)
+    expect(wrapper.find(MyComponent)).toHaveProp(props)
+    expect(wrapper.find(MyComponent)).toHaveProp(`foo`, `bar`)
   })
 
 })
