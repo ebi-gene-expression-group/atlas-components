@@ -5,7 +5,7 @@ A HOC React component that enables other components to remotely fetch data from 
 
 ## Usage
 ```js
-import withFetchLoader from 'atlas-react-fetch-loader'
+import withFetchLoader from '@ebi-gene-expression-group/atlas-react-fetch-loader'
 import MyComponent from 'my-component'
 
 const MyComponentFoo = withFetchLoader(MyComponent)
@@ -17,3 +17,4 @@ const MyComponentFoo = withFetchLoader(MyComponent)
 ```
 
 Be aware that fields in the JSON data overwrite values passed in as props.
+
