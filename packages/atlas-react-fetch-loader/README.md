@@ -18,3 +18,9 @@ const MyComponentFoo = withFetchLoader(MyComponent)
 
 Be aware that fields in the JSON data overwrite values passed in as props.
 
+By default, if there’s an error fetching the remote data, instead of the wrapped component an
+[alert Callout](https://foundation.zurb.com/sites/docs/callout.html) will be rendered with a brief description of the
+underlying error. If you want to handle the error yourself you can pass an arbitrary object in the prop
+`errorPayloadInsteadOfCallout`, which will be then added to the pass-through props instead of the data retrieved from
+the failing endpoint. This is especially useful if e.g. you’d like to render an error message within your wrapped
+component.
