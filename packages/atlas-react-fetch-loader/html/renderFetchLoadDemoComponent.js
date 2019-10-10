@@ -7,9 +7,11 @@ import { withFetchLoader } from '../src/index'
 import '@babel/polyfill'
 import fetchMock from 'fetch-mock'
 
+const delay = (response, after=500) => () => new Promise(resolve => setTimeout(resolve, after)).then(() => response)
+
 fetchMock.get(
   `http://foo.bar/path/yolo/1337`,
-  `{"message": "Foobar", "footer": "Overwritten prop retrieved from data"}`)
+  delay(`{"message": "Foobar", "footer": "Overwritten prop retrieved from data"}`, 5000))
 
 const FetchLoadDemoComponent = withFetchLoader(DemoComponent)
 
