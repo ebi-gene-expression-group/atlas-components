@@ -1,8 +1,23 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import styled, { keyframes } from 'styled-components'
 import URI from 'urijs'
 
 import CalloutAlert from './CalloutAlert'
+
+const loadingMessage = keyframes`
+  0%   { content: "Loading, please wait"; }
+  33%  { content: "Loading, please wait."; }
+  66%  { content: "Loading, please wait.."; }
+  100% { content: "Loading, please wait..."; }
+`
+
+const AnimatedLoadingMessage = styled.p`
+  ::before {
+    content: "Loading, please wait";
+    animation: ${loadingMessage} 1s linear infinite alternate;
+  }
+`
 
 const withFetchLoader = (WrappedComponent) => {
   class FetchLoader extends React.Component {
@@ -89,7 +104,7 @@ const withFetchLoader = (WrappedComponent) => {
             <WrappedComponent {...{...passThroughProps, ...errorPayloadInsteadOfCallout}}/> :
             <CalloutAlert error={hasError} /> :
           isLoading ?
-            <p className={`row column loading-message`}>Loading, please wait…</p> :
+            <AnimatedLoadingMessage/> :
             // Promise fulfilled, merge passed props and merge-overwrite with retrieved data
             <WrappedComponent {...{...passThroughProps, ...data}}/>
       )
@@ -109,4 +124,4 @@ const withFetchLoader = (WrappedComponent) => {
   return FetchLoader
 }
 
-export default withFetchLoader
+export { withFetchLoader as default, AnimatedLoadingMessage }

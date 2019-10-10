@@ -4,7 +4,7 @@ import '@babel/polyfill'
 import fetchMock from 'fetch-mock'
 
 import CalloutAlert from '../src/CalloutAlert'
-import withFetchLoader from '../src/FetchLoader'
+import withFetchLoader, { AnimatedLoadingMessage } from '../src/FetchLoader'
 
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
 const getRandomInt = (min, max) => {
@@ -31,13 +31,13 @@ describe(`FetchLoader`, () => {
     fetchMock.get(`*`, `[]`)
     const wrapper = shallow(<ComponentWithFetchLoader {...props} />)
 
-    expect(wrapper.find(`.loading-message`)).toHaveLength(1)
+    expect(wrapper.find(AnimatedLoadingMessage)).toHaveLength(1)
     expect(wrapper.find(CalloutAlert)).toHaveLength(0)
 
     await wrapper.instance().componentDidMount()
     wrapper.update()
 
-    expect(wrapper.find(`.loading-message`)).toHaveLength(0)
+    expect(wrapper.find(AnimatedLoadingMessage)).toHaveLength(0)
     expect(wrapper.find(CalloutAlert)).toHaveLength(0)
   })
 
