@@ -95,16 +95,18 @@ const withFetchLoader = (WrappedComponent) => {
     }
 
     render() {
-      const { errorPayloadInsteadOfCallout, ...passThroughProps } = this.props
+      const { errorPayloadProvider, loadingPayloadProvider, ...passThroughProps } = this.props
       const { data, isLoading, hasError } = this.state
 
       return (
         hasError ?
-          errorPayloadInsteadOfCallout ?
-            <WrappedComponent {...{...passThroughProps, ...errorPayloadInsteadOfCallout}}/> :
+          errorPayloadProvider ?
+            <WrappedComponent {...{...passThroughProps, ...errorPayloadProvider(hasError)}}/> :
             <CalloutAlert error={hasError} /> :
           isLoading ?
-            <AnimatedLoadingMessage/> :
+            loadingPayloadProvider ?
+              <WrappedComponent {...{...passThroughProps, ...loadingPayloadProvider()}}/> :
+              <AnimatedLoadingMessage/> :
             // Promise fulfilled, merge passed props and merge-overwrite with retrieved data
             <WrappedComponent {...{...passThroughProps, ...data}}/>
       )
@@ -114,14 +116,16 @@ const withFetchLoader = (WrappedComponent) => {
   FetchLoader.propTypes = {
     host: PropTypes.string.isRequired,
     resource: PropTypes.string.isRequired,
-    errorPayloadInsteadOfCallout: PropTypes.object
+    loadingPayloadProvider: PropTypes.func,
+    errorPayloadProvider: PropTypes.func
   }
 
   FetchLoader.defaultProps = {
-    errorPayloadInsteadOfCallout: null
+    loadingPayloadProvider: null,
+    errorPayloadProvider: null
   }
 
   return FetchLoader
 }
 
-export { withFetchLoader as default, AnimatedLoadingMessage }
+export {withFetchLoader as default, AnimatedLoadingMessage }
