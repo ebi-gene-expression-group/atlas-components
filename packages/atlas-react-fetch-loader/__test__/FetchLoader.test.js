@@ -35,8 +35,6 @@ describe(`FetchLoader`, () => {
     expect(wrapper.find(CalloutAlert)).toHaveLength(0)
 
     await wrapper.instance().componentDidMount()
-    wrapper.update()
-
     expect(wrapper.find(AnimatedLoadingMessage)).toHaveLength(0)
     expect(wrapper.find(CalloutAlert)).toHaveLength(0)
   })
@@ -47,7 +45,6 @@ describe(`FetchLoader`, () => {
 
     const e = new Error(`They’re inside you building a monument to compromise!`)
     wrapper.instance().componentDidCatch(e, `Ruben’s seen some rough years, Morty.`)
-    wrapper.update()
     expect(wrapper.find(CalloutAlert)).toHaveLength(1)
   })
 
@@ -56,7 +53,6 @@ describe(`FetchLoader`, () => {
     const wrapper = shallow(<ComponentWithFetchLoader {...props} />)
 
     await wrapper.instance().componentDidMount()
-    wrapper.update()
     expect(wrapper.find(CalloutAlert)).toHaveLength(1)
   })
 
@@ -65,7 +61,6 @@ describe(`FetchLoader`, () => {
     const wrapper = shallow(<ComponentWithFetchLoader {...props} />)
 
     await wrapper.instance().componentDidMount()
-    wrapper.update()
     expect(wrapper.find(CalloutAlert)).toHaveLength(1)
   })
 
@@ -74,7 +69,6 @@ describe(`FetchLoader`, () => {
     const wrapper = shallow(<ComponentWithFetchLoader {...props} />)
 
     await wrapper.instance().componentDidMount()
-    wrapper.update()
     expect(wrapper.find(CalloutAlert)).toHaveLength(1)
 
     fetchMock.get(`/pea/lentil`, `{"results":[]}`)
@@ -84,7 +78,6 @@ describe(`FetchLoader`, () => {
     })
 
     await wrapper.instance().componentDidUpdate()
-    wrapper.update()
     expect(wrapper.find(CalloutAlert)).toHaveLength(0)
   })
 
@@ -93,8 +86,6 @@ describe(`FetchLoader`, () => {
     const wrapper = shallow(<ComponentWithFetchLoader {...props} />)
 
     await wrapper.instance().componentDidMount()
-    wrapper.update()
-
     expect(wrapper.find(MyComponent)).toHaveProp(props)
     expect(wrapper.find(MyComponent)).toHaveProp(`results`, [])
   })
