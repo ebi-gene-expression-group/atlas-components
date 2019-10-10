@@ -90,16 +90,35 @@ describe(`FetchLoader`, () => {
     expect(wrapper.find(MyComponent)).toHaveProp(`results`, [])
   })
 
-  test(`can inject a supplied error payload instead of rendering the callout alert component`, async () => {
-    fetchMock.get(`/foo/bar`, getRandomHttpErrorCode)
-    const wrapper = shallow(<ComponentWithFetchLoader {...props} errorPayloadInsteadOfCallout={{foo: `bar`}} />)
+  test(`can inject a loading payload provided instead of rendering the loading message`, () => {
+    // We need to return a callback from the request to simulate a pending promise
+    fetchMock.get(`/foo/bar`, () => {})
+    const wrapper =
+     shallow(
+       <ComponentWithFetchLoader
+         {...props}
+         loadingPayloadProvider={() => ({foo: `bar`})} />)
 
-    await wrapper.instance().componentDidMount()
-    wrapper.update()
-
-    expect(wrapper.find(CalloutAlert)).toHaveLength(0)
+    expect(wrapper.find(AnimatedLoadingMessage)).toHaveLength(0)
     expect(wrapper.find(MyComponent)).toHaveProp(props)
     expect(wrapper.find(MyComponent)).toHaveProp(`foo`, `bar`)
   })
 
+  test(`can inject an error payload provider instead of rendering the callout alert component`, async () => {
+    fetchMock.get(`/foo/bar`, getRandomHttpErrorCode)
+    const wrapper =
+     shallow(
+       <ComponentWithFetchLoader
+         {...props}
+         errorPayloadProvider={(error) => ({...error, foo: `bar`})} />)
+
+    await wrapper.instance().componentDidMount()
+    expect(wrapper.find(CalloutAlert)).toHaveLength(0)
+    expect(wrapper.find(MyComponent)).toHaveProp(props)
+    expect(wrapper.find(MyComponent)).toHaveProp(`foo`, `bar`)
+    // Props after destructuring the error object
+    expect(wrapper.find(MyComponent)).toHaveProp(`description`)
+    expect(wrapper.find(MyComponent)).toHaveProp(`name`)
+    expect(wrapper.find(MyComponent)).toHaveProp(`message`)
+  })
 })
