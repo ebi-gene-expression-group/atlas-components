@@ -14,6 +14,7 @@ const TableCellDiv = styled.div`
 `
 
 const tableHeader = [
+  {type: `sort`, title: `Technology type`, width: 240, dataParam: `technologyType`},
   { type: `sort`, title: `Loaded date`, width: 140, dataParam: `lastUpdate` },
   { type: `search`, title: `species`, width: 200, dataParam: `species` },
   { type: ``, title: `experiment description`, width: 360, dataParam: `experimentDescription`, link: `experimentAccession`, resource: `experiments`, endpoint: `Results` },
@@ -32,6 +33,9 @@ const data = [
     species: `Mus musculus`,
     kingdom: `animals`,
     experimentalFactors: [`single cell identifier`, `sampling site`,`time`],
+    technologyType: [
+      "smart-seq2"
+    ]
   },
   {
     experimentType: `DOUBLE`,
@@ -42,7 +46,11 @@ const data = [
     numberOfContrasts: 0,
     species: `Mus musculus`,
     kingdom: `animals`,
-    experimentalFactors: [`single cell identifier`]
+    experimentalFactors: [`single cell identifier`],
+    technologyType: [
+      "10xV3",
+      "10xV2"
+    ]
   },
   {
     experimentType: `SINGLE`,
@@ -54,6 +62,9 @@ const data = [
     species: `Homo sapiens`,
     kingdom: `plants`,
     experimentalFactors: [`single cell identifier`, `disease`],
+    technologyType: [
+      "10xV3"
+    ]
   }
 ]
 
