@@ -3,9 +3,33 @@ import PropTypes from 'prop-types'
 import { Table } from 'evergreen-ui'
 import URI from 'urijs'
 import ReactTooltip from 'react-tooltip'
+import _ from 'lodash'
 
 import tableHeaderCells from './tableHeaderCells'
 import TooltipIcon from './TooltipIcon'
+
+const fetchJson = async (endpoint, host, queryParams) => {
+  const url = URI(endpoint, host).search(queryParams).toString()
+  const response = await fetch(url)
+  return await response.json()
+}
+
+const alertInvalidFiles = async (host, checkedRows) => {
+  const endpoint = `json/experiments/download/zip/check`
+  try {
+    const response = await fetchJson(endpoint, host, {accession: checkedRows})
+    const data = response.invalidFiles
+    const invalidFiles = !_.isEmpty(data) && Object.keys(data).map((experiment) => `${data[experiment].join(`\n`)}`)
+    const downloadUrl = URI(`experiments/download/zip`, host).search({accession: checkedRows}).toString()
+    if (_.isEmpty(Object.values(data)[0])) {
+      window.location.replace(downloadUrl)
+    } else if (window.confirm(`The following files are not available.\n${invalidFiles.join(`\n`)}\nWould you like to continue?`)) {
+      window.location.replace(downloadUrl)
+    }
+  } catch (e) {
+    console.log(`error`, e)
+  }
+}
 
 const TableContent = ({tableHeader, searchedColumnIndex, searchQuery, orderedColumnIndex,
   ascendingOrder, enableDownload, checkedRows, currentPageData, host,
@@ -28,9 +52,11 @@ const TableContent = ({tableHeader, searchedColumnIndex, searchQuery, orderedCol
                 <div>
                   {
                     checkedRows.length > 0 ?
-                      <a href={URI(`experiments/download/zip`, host).search({accession: checkedRows}).toString()}>
-                      Download {checkedRows.length} {checkedRows.length === 1 ? `entry` : `entries`}
-                      </a> :
+
+                      <a className={`downloadButton`} onClick={() => alertInvalidFiles(host, checkedRows)}>
+                        Download {checkedRows.length} {checkedRows.length === 1 ? `entry` : `entries`}
+                      </a>
+                      :
                       `Download`
                   }
                   <TooltipIcon tooltipText={downloadTooltip}/>
@@ -110,4 +136,4 @@ TableContent.propTypes = {
   downloadTooltip: PropTypes.string
 }
 
-export default TableContent
+export {TableContent as default, alertInvalidFiles}

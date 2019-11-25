@@ -59,7 +59,7 @@
     "enzyme-adapter-react-16": "^1.14.0",
     "eslint": "^5.16.0",
     "eslint-config-gene-expression": "^0.5.0",
-    "fetch-mock": "^7.3.3",
+    "fetch-mock": "^7.3.9",
     "jest": "^24.8.0",
     "jest-environment-enzyme": "^7.0.2",
     "jest-enzyme": "^7.0.2",

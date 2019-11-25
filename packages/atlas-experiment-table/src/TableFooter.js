@@ -45,7 +45,7 @@ const TableFooter = ({dataArrayLength, currentPageDataLength, currentPage, entri
   const pageInfo = pageNumbers.length === 1 ? `` : ` (Page ${currentPage} of ${pageNumbersLength})`
 
   return (
-    <div className="row expanded padding-top-medium">
+    <div className={`row expanded padding-top-medium`}>
       <div className={`small-6 columns`}>
         {
           dataLength === 0 ?

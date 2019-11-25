@@ -3,10 +3,21 @@ import { shallow } from 'enzyme'
 import { data } from './TestUtils'
 
 import TableContent from '../src/TableContent'
+import {alertInvalidFiles} from '../src/TableContent'
 import TooltipIcon from '../src/TooltipIcon'
+
 import { Table } from 'evergreen-ui'
 
+import '@babel/polyfill'
+import fetchMock from 'fetch-mock'
+
+
 describe(`TableContent`, () => {
+
+  beforeEach(() => {
+    fetchMock.restore()
+  })
+
   const props = {
     enableIndex: true,
     tableHeader: [{
@@ -38,7 +49,7 @@ describe(`TableContent`, () => {
     enableDownload: true,
     checkedRows: [`E-EHCA-2`, `E-EHCA-1`],
     currentPageData: data,
-    host: `boo`,
+    host: `http://boo`,
     entriesPerPage: 2,
     currentPage: 1,
     tableHeaderOnClick: () => {},
@@ -73,4 +84,27 @@ describe(`TableContent`, () => {
     const wrapper = shallow(<TableContent {...props}/>)
     expect(wrapper.find(`img`)).toHaveLength(props.tableHeader.length)
   })
-})
+
+  test(`should direct to download window without popping a confirm window if all download files are valid`, async (done) => {
+    const checkFileEndpoint = `json/experiments/download/zip/check`
+    const response = `{"invalidFiles":{"E-EHCA-2": [], "E-EHCA-1": []}}`
+    fetchMock.get(`${props.host}/${checkFileEndpoint}?accession=${props.checkedRows[0]}&accession=${props.checkedRows[1]}`, response)
+
+    global.window.location.replace = jest.fn(() => done())
+
+    await alertInvalidFiles(props.host, props.checkedRows)
+
+    await expect(global.window.location.replace).toBeCalledWith(`http://boo/experiments/download/zip?accession=E-EHCA-2&accession=E-EHCA-1`)
+  })
+
+  test(`should pop a confirm window if any download files are invalid`, async (done) => {
+    const checkFileEndpoint = `json/experiments/download/zip/check`
+    const response = `{"invalidFiles":{"E-EHCA-2": ["file1", "file2"]}, "E-EHCA-1":[]}`
+    fetchMock.get(`${props.host}/${checkFileEndpoint}?accession=${props.checkedRows[0]}&accession=${props.checkedRows[1]}`, response)
+
+    global.window.confirm = jest.fn(() => done())
+
+    await alertInvalidFiles(props.host, props.checkedRows)
+
+    await expect(global.window.confirm).toHaveBeenCalled()
+  })})
