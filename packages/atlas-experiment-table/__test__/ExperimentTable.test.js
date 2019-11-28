@@ -1,6 +1,6 @@
 import React from 'react'
 import { shallow, mount } from 'enzyme'
-import { getRandomInt, TableCellDiv, data, tableHeader } from './TestUtils'
+import { getRandomInt, TableCellDiv, data, tableHeader, tableFilters } from './TestUtils'
 import ExperimentTable from '../src/ExperimentTable'
 import TableFooter from '../src/TableFooter'
 import TableContent from '../src/TableContent'
@@ -12,6 +12,7 @@ describe(`ExperimentTable`, () => {
   const props = {
     aaData: data,
     tableHeader: tableHeader,
+    tableFilters: tableFilters,
     host: `fool`,
     resource: `bool`,
     enableDownload: true,
@@ -29,8 +30,8 @@ describe(`ExperimentTable`, () => {
 
 
   test(`should sort table content and change header text icon`, () => {
-    const randomColumnIndex =  getRandomInt(1, tableHeader.length)
-    props.tableHeader[randomColumnIndex].type=`sort`
+    const randomColumnIndex = getRandomInt(1, tableHeader.length)
+    props.tableHeader[randomColumnIndex].type = `sort`
     const wrapper = mount(<ExperimentTable {...props}/>)
 
     expect(wrapper).toContainExactlyOneMatchingElement(`.icon.icon-common.icon-sort-down`)
@@ -45,20 +46,38 @@ describe(`ExperimentTable`, () => {
     expect(wrapper).toContainExactlyOneMatchingElement(`.icon.icon-common.icon-sort-down`)
   })
 
-  test(`should filter based on kingdom selection`, () => {
+  test(`should filter based on filter value selection`, () => {
     const event = {target: {name: `pollName`, value: `animals`}}
     const wrapper = mount(<ExperimentTable {...props}/>)
-    const kingdomSelect = wrapper.find(`select`).first().at(0)
-    kingdomSelect.simulate(`change`, event)
+    const filterSelect = wrapper.find(`select`).at(0)
+    filterSelect.simulate(`change`, event)
 
-    expect(wrapper.state(`selectedKingdom`)).toEqual(`animals`)
+    expect(wrapper.state(`selectedDropdownFilters`).some(filter => filter.value === `animals`)).toEqual(true)
     expect(wrapper.find(Table.Row).length).toBeLessThanOrEqual(data.length)
+  })
+
+  test(`should remove filter from if no filter value selected`, () => {
+    const event = {target: {name: `pollName`, value: ``}}
+    const wrapper = mount(<ExperimentTable {...props}/>)
+    const selectedFilter = {label: `Kingdom`, value: ``}
+    wrapper.state(`selectedDropdownFilters`).push(selectedFilter)
+    const filterSelect = wrapper.find(`select`).at(0)
+    filterSelect.simulate(`change`, event)
+
+    expect(wrapper.state(`selectedDropdownFilters`).some(filter => filter.value === `` && filter.label === `Kingdom`)).toEqual(false)
+  })
+
+  test(`should not filter if no filter selected`, () => {
+    const wrapper = mount(<ExperimentTable {...props}/>)
+
+    expect(wrapper.state(`selectedDropdownFilters`).length).toEqual(0)
+    expect(wrapper.find(Table.Row).length).toEqual(data.length)
   })
 
   test(`should filter based on numbers of entries per page selection`, () => {
     const event = {target: {name: `pollName`, value: 1}}
     const wrapper = mount(<ExperimentTable {...props}/>)
-    const entriesSelect = wrapper.find(`select`).at(1)
+    const entriesSelect = wrapper.find(`select`).at(3)
     entriesSelect.simulate(`change`, event)
 
     expect(wrapper.state(`entriesPerPage`)).toEqual(1)
@@ -79,7 +98,7 @@ describe(`ExperimentTable`, () => {
   test(`should filter based on table header search`, () => {
     const randomValue = `si`
     const randomColumn = getRandomInt(1, tableHeader.length)
-    props.tableHeader[randomColumn].type=`search`
+    props.tableHeader[randomColumn].type = `search`
 
     const wrapper = mount(<ExperimentTable {...props}/>)
     expect(wrapper.find(`.searchheader${randomColumn}`)).toExist()

@@ -11,22 +11,28 @@ class ExperimentTable extends React.Component {
     super(props)
     this.entriesPerPageOptions = [10, 25, 50]
     this.state = {
-      searchQuery: this.props.species.trim(),
+      searchQuery: props.species.trim(),
       orderedColumnIndex: 0,
-      searchedColumnIndex: this.props.species.trim() ?
-        this.props.tableHeader.findIndex(header => header.dataParam === `species`) : 1,
+      searchedColumnIndex: props.species.trim() ?
+        props.tableHeader.findIndex(header => header.dataParam === `species`) : 1,
       ascendingOrder: false,
       checkedRows: [],
       currentPage: 1,
       entriesPerPage: this.entriesPerPageOptions[0],
       selectedSearch: ``,
-      selectedKingdom: ``
+      selectedDropdownFilters: [],
+      experimentTableFilters: props.tableFilters.map(filter => {
+        return {
+          label: filter.label,
+          options: _.chain(props.aaData).flatMap(filter.dataParam).uniq().value()
+        }
+      })
     }
 
     this.sort = this.sort.bind(this)
     this.filter = this.filter.bind(this)
-
-    this.kingdomOnChange = this.kingdomOnChange.bind(this)
+    this.containsValue = this.containsValue.bind(this)
+    this.dropdownFilterOnChange = this.dropdownFilterOnChange.bind(this)
     this.searchAllOnChange = this.searchAllOnChange.bind(this)
     this.numberOfEntriesPerPageOnChange = this.numberOfEntriesPerPageOnChange.bind(this)
 
@@ -45,7 +51,7 @@ class ExperimentTable extends React.Component {
     const sortedAscendingElements = propKey === `lastUpdate` ?
       _.sortBy(data, (o) => reverseDateRepresentation(o[propKey])) :
       _.sortBy(data, propKey)
-    return ascendingOrder ? sortedAscendingElements :  sortedAscendingElements.reverse()
+    return ascendingOrder ? sortedAscendingElements : sortedAscendingElements.reverse()
   }
 
   filter(data, tableHeader) {
@@ -59,6 +65,28 @@ class ExperimentTable extends React.Component {
           .includes(searchQuery.toLowerCase())
       )
   }
+  /* this function searches deeply if value exists in json object e.g.
+  jsonObject = {a: 1, b: 2} then containsValue(jsonObject, 1) will return true
+  jsonObject = {a: 1, b: 2} then containsValue(jsonObject, 3) will return false
+  jsonObject = {a: [
+                 b: {
+                  c: "foo",
+                  d: [
+                    da: 1,
+                    db: 2,
+                    dc: 3
+                     ]
+                  e: "bar"
+                    }
+                   ]
+                }
+   then constainsValue(jsonObject, 2) will return true */
+  containsValue(jsonObject, value) {
+    return Object.keys(jsonObject).some(key =>
+      typeof jsonObject[key] === `object` ?
+        this.containsValue(jsonObject[key], value) : jsonObject[key] === value
+    )
+  }
 
   handleCheckbox(accession) {
     const checkedArray = this.state.checkedRows.includes(accession) ?
@@ -68,11 +96,29 @@ class ExperimentTable extends React.Component {
     this.setState({checkedRows: checkedArray})
   }
 
-  kingdomOnChange(e) {
-    this.setState({
-      selectedKingdom: e.target.value,
-      currentPage: 1
-    })
+  dropdownFilterOnChange(e, label) {
+    const selectedDropdown = {
+      label: label,
+      value: e.target.value
+    }
+    const {selectedDropdownFilters} = this.state
+    const index = selectedDropdownFilters.findIndex(dropdown => dropdown.label === label)
+    if(index !== -1) {
+      selectedDropdown.value !== `` ?
+        selectedDropdownFilters[index].value = e.target.value : selectedDropdownFilters.splice(index,1)
+      this.setState({
+        selectedDropdownFilters: selectedDropdownFilters,
+        currentPage: 1,
+        searchQuery: ``
+      })
+    } else {
+      selectedDropdownFilters.push(selectedDropdown)
+      this.setState({
+        selectedDropdownFilters: selectedDropdownFilters,
+        currentPage: 1,
+        searchQuery: ``
+      })
+    }
   }
 
   searchAllOnChange(e) {
@@ -92,7 +138,8 @@ class ExperimentTable extends React.Component {
   tableHeaderOnClick(columnNumber) {
     this.setState({
       orderedColumnIndex: columnNumber,
-      ascendingOrder: !this.state.ascendingOrder})
+      ascendingOrder: !this.state.ascendingOrder
+    })
   }
 
   tableHeaderOnChange(value, columnNumber) {
@@ -103,33 +150,48 @@ class ExperimentTable extends React.Component {
   }
 
   render() {
-    const { searchQuery, searchedColumnIndex, selectedSearch, selectedKingdom, checkedRows } = this.state
+    const { searchQuery, searchedColumnIndex, selectedSearch, checkedRows } = this.state
+    const { selectedDropdownFilters, experimentTableFilters } = this.state
     const { orderedColumnIndex, ascendingOrder } = this.state
     const { entriesPerPage, currentPage } = this.state
     const { host, aaData, tableHeader, enableDownload, downloadTooltip } = this.props
 
     const displayedFields = tableHeader.map(header => header.dataParam)
 
-    const dataArray = selectedSearch.trim() ?
-
-      this.sort(aaData).filter(data => data &&
-        Object.keys(data).map(key => displayedFields.includes(key) ? data[key] : null)
-          .some(value => value && value.toString().toLowerCase().includes(selectedSearch))) :
+    const filteredExperiments =
+      //first we filter experiments according to table headers
       this.filter(this.sort(aaData), tableHeader)
-        .filter(data => selectedKingdom ? data.kingdom === selectedKingdom : true)
+      //...then we further filter them according to search box text
+        .filter(experiment =>
+          experiment &&
+          Object
+            .keys(experiment)
+            .map(key =>
+              displayedFields.includes(key) ? experiment[key] : null)
+            .some(value =>
+              value &&
+              value
+                .toString()
+                .toLowerCase()
+                .includes(selectedSearch.toLowerCase())))
+        //...and finally we filter according to selected dropdowns
+        .filter(experiment =>
+          selectedDropdownFilters
+            .every(filter =>
+              filter ? this.containsValue(experiment, filter.value) : true))
 
     const currentPageData = entriesPerPage ?
-      dataArray.slice(entriesPerPage * (currentPage - 1), entriesPerPage * currentPage) : dataArray
-    const kingdomOptions = [...new Set(aaData.map(data => data.kingdom ))]
+      filteredExperiments.slice(entriesPerPage * (currentPage - 1), entriesPerPage * currentPage) : filteredExperiments
+
     return (
       <div className={`row expanded`}>
         <TableSearchHeader
-          kingdomOptions={kingdomOptions}
+          dropdownFilters={experimentTableFilters}
           totalNumberOfRows={aaData.length}
           entriesPerPageOptions={this.entriesPerPageOptions}
           searchAllOnChange={this.searchAllOnChange}
           numberOfEntriesPerPageOnChange={this.numberOfEntriesPerPageOnChange}
-          kingdomOnChange={this.kingdomOnChange}/>
+          dropdownFiltersOnChange={this.dropdownFilterOnChange}/>
 
         <TableContent
           {...{
@@ -157,8 +219,8 @@ class ExperimentTable extends React.Component {
             entriesPerPage
           }}
           currentPageDataLength={currentPageData.length}
-          dataArrayLength={dataArray.length}
-          dataLength={aaData.length} 
+          dataArrayLength={filteredExperiments.length}
+          dataLength={aaData.length}
           onChange={i => this.setState({currentPage: i})}/>
       </div>
     )
@@ -179,7 +241,13 @@ ExperimentTable.propTypes = {
     })
   ),
   enableDownload: PropTypes.bool.isRequired,
-  downloadTooltip: PropTypes.string
+  downloadTooltip: PropTypes.string.isRequired,
+  tableFilters: PropTypes.arrayOf(
+    PropTypes.shape({
+      label: PropTypes.string.isRequired,
+      dataParam: PropTypes.string.isRequired
+    })
+  ).isRequired
 }
 
 ExperimentTable.defaultProps = {

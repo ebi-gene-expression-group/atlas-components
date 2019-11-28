@@ -22,6 +22,21 @@ const tableHeader = [
   { type: `sort`, title: `Number of assays`, width: 160, dataParam: `numberOfAssays`, link: `experimentAccession`, resource: `experiments`, endpoint: `Experiment Design` },
 ]
 
+const tableFilters = [
+  {
+    label: `Kingdom`,
+    dataParam: `kingdom`
+  },
+  {
+    label: `Experiment Project`,
+    dataParam: `experimentProjects`
+  },
+  {
+    label: `Technology Type`,
+    dataParam: `technologyType`
+  }
+]
+
 const data = [
   {
     experimentType: `SINGLE`,
@@ -33,9 +48,8 @@ const data = [
     species: `Mus musculus`,
     kingdom: `animals`,
     experimentalFactors: [`single cell identifier`, `sampling site`,`time`],
-    technologyType: [
-      "smart-seq2"
-    ]
+    experimentProjects: [`Human Cell Atlas`],
+    technologyType: [`smart-seq2`]
   },
   {
     experimentType: `DOUBLE`,
@@ -47,10 +61,8 @@ const data = [
     species: `Mus musculus`,
     kingdom: `animals`,
     experimentalFactors: [`single cell identifier`],
-    technologyType: [
-      "10xV3",
-      "10xV2"
-    ]
+    experimentProjects:[],
+    technologyType: [`smart-seq2`]
   },
   {
     experimentType: `SINGLE`,
@@ -62,10 +74,9 @@ const data = [
     species: `Homo sapiens`,
     kingdom: `plants`,
     experimentalFactors: [`single cell identifier`, `disease`],
-    technologyType: [
-      "10xV3"
-    ]
+    experimentProjects: [`Human Cell Atlas`, `Chan-Zuckerberg Biohub`],
+    technologyType: [`smart-seq2`, `10xV1`]
   }
 ]
 
-export {getRandomInt, TableCellDiv, tableHeader, data}
+export {getRandomInt, TableCellDiv, tableHeader, data, tableFilters}
