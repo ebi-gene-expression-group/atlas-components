@@ -1,3 +1,3 @@
 {
-  "extends": "eslint-config-gene-expression"
+  "extends": "@ebi-gene-expression-config/eslint-config-gene-expression"
 }
