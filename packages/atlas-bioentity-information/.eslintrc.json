@@ -1,0 +1,3 @@
+{
+  "extends": "@ebi-gene-expression-group/eslint-config-gene-expression"
+}
