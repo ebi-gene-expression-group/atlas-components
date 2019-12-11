@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 
 import ResponsiveCardsRow, { ExtendableCard } from '../src/index'
-import { withFetchLoader } from 'atlas-react-fetch-loader'
+import { withFetchLoader } from '@ebi-gene-expression-group/atlas-react-fetch-loader'
 
 const FetchLoadResponsiveCardsRow = withFetchLoader(ResponsiveCardsRow)
 

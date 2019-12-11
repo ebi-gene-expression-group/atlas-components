@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import EbiSpeciesIcon from 'react-ebi-species'
+import EbiSpeciesIcon from '@ebi-gene-expression-group/react-ebi-species'
 
 import renderContentListItems from './renderContentListItems'
 import modelPropTypes from './modelPropTypes'

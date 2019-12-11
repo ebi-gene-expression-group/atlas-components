@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'
 import PropTypes from 'prop-types'
 
 import ResponsiveCardsRow from '../src/index'
-import { withFetchLoader } from 'atlas-react-fetch-loader'
+import { withFetchLoader } from '@ebi-gene-expression-group/atlas-react-fetch-loader'
 
 // Component to “unfold” species-summary payload to conform to ResponsiveCardsRow props
 const AnimalSpeciesSummary = ({speciesSummary, ...options}) =>
