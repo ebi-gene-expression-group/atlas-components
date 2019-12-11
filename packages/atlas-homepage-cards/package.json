@@ -1,6 +1,6 @@
 {
   "name": "@ebi-gene-expression-group/atlas-homepage-cards",
-  "version": "2.1.4",
+  "version": "2.2.0",
   "description": "A package that renders grids of cards.",
   "main": "lib/index.js",
   "scripts": {
