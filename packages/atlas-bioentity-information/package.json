@@ -1,5 +1,5 @@
 {
-  "name": "sc-atlas-bioentity-information",
+  "name": "@ebi-gene-expression-group/atlas-bioentity-information",
   "version": "1.8.1",
   "description": "Bioentity information",
   "main": "lib/index.js",
