@@ -24,7 +24,7 @@ class ExperimentTable extends React.Component {
       experimentTableFilters: props.tableFilters.map(filter => {
         return {
           label: filter.label,
-          options: _.chain(props.aaData).flatMap(filter.dataParam).uniq().value()
+          options: _.chain(props.experiments).flatMap(filter.dataParam).uniq().value()
         }
       })
     }
@@ -154,14 +154,14 @@ class ExperimentTable extends React.Component {
     const { selectedDropdownFilters, experimentTableFilters } = this.state
     const { orderedColumnIndex, ascendingOrder } = this.state
     const { entriesPerPage, currentPage } = this.state
-    const { host, aaData, tableHeader, enableDownload, downloadTooltip } = this.props
+    const { host, experiments, tableHeader, enableDownload, downloadTooltip } = this.props
 
     const displayedFields = tableHeader.map(header => header.dataParam)
 
     const filteredExperiments =
-      //first we filter experiments according to table headers
-      this.filter(this.sort(aaData), tableHeader)
-      //...then we further filter them according to search box text
+      // First we filter experiments according to table headers...
+      this.filter(this.sort(experiments), tableHeader)
+      // ... then we further filter them according to search box text...
         .filter(experiment =>
           experiment &&
           Object
@@ -174,7 +174,7 @@ class ExperimentTable extends React.Component {
                 .toString()
                 .toLowerCase()
                 .includes(selectedSearch.toLowerCase())))
-        //...and finally we filter according to selected dropdowns
+        // ... and finally we filter according to selected dropdowns
         .filter(experiment =>
           selectedDropdownFilters
             .every(filter =>
@@ -187,7 +187,7 @@ class ExperimentTable extends React.Component {
       <div className={`row expanded`}>
         <TableSearchHeader
           dropdownFilters={experimentTableFilters}
-          totalNumberOfRows={aaData.length}
+          totalNumberOfRows={experiments.length}
           entriesPerPageOptions={this.entriesPerPageOptions}
           searchAllOnChange={this.searchAllOnChange}
           numberOfEntriesPerPageOnChange={this.numberOfEntriesPerPageOnChange}
@@ -220,7 +220,7 @@ class ExperimentTable extends React.Component {
           }}
           currentPageDataLength={currentPageData.length}
           dataArrayLength={filteredExperiments.length}
-          dataLength={aaData.length}
+          dataLength={experiments.length}
           onChange={i => this.setState({currentPage: i})}/>
       </div>
     )
@@ -228,7 +228,7 @@ class ExperimentTable extends React.Component {
 }
 
 ExperimentTable.propTypes = {
-  aaData: PropTypes.array.isRequired,
+  experiments: PropTypes.array.isRequired,
   host: PropTypes.string.isRequired,
   species: PropTypes.string,
   resource: PropTypes.string.isRequired,

@@ -82,7 +82,13 @@ describe(`TableContent`, () => {
 
   test(`should display the images in the table content if the header has image field`, () => {
     const wrapper = shallow(<TableContent {...props}/>)
-    expect(wrapper.find(`img`)).toHaveLength(props.tableHeader.length)
+    expect(wrapper.find(`img`)).toHaveLength(data.length - 1)
+  })
+
+  test(`if an image field has a value with an unknown value it displays a fallback symbol`, () => {
+    const wrapper = shallow(<TableContent {...props}/>)
+    expect(wrapper.find(`span.unknown`)).toHaveLength(1)
+    expect(wrapper.find(`span.unknown`)).toHaveText(`❔`)
   })
 
   test(`should direct to download window without popping a confirm window if all download files are valid`, async (done) => {
@@ -107,4 +113,5 @@ describe(`TableContent`, () => {
     await alertInvalidFiles(props.host, props.checkedRows)
 
     await expect(global.window.confirm).toHaveBeenCalled()
-  })})
+  })
+})

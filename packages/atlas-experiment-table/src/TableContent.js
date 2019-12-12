@@ -66,7 +66,7 @@ const TableContent = ({tableHeader, searchedColumnIndex, searchQuery, orderedCol
           }
         </Table.Head>
         <ReactTooltip effect={`solid`}/>
-        <Table.Body style={{"overflowY":`hidden`}}>
+        <Table.Body style={{ overflowY:`hidden` }}>
           {currentPageData.map((data, index) => {
             return (
               <Table.Row height={`auto`} backgroundColor={index % 2 === 0 ? `white`:`#F1F1F1`} paddingY={14} key={`row${index}`}>
@@ -74,7 +74,9 @@ const TableContent = ({tableHeader, searchedColumnIndex, searchQuery, orderedCol
                 {[
                   tableHeader.map((header, index) => {
                     const cellItem = header.image ?
-                      <img src={header.image[data[header.dataParam]].src} alt={header.image[data[header.dataParam]].alt}/> :
+                      header.image[data[header.dataParam]] ?
+                        <img src={header.image[data[header.dataParam]].src} alt={header.image[data[header.dataParam]].alt}/> :
+                        <span className={`unknown`}>❔</span> :
                       Array.isArray(data[header.dataParam]) ?
                         <ul key={`cell${index}`}>{data[header.dataParam].map(element => <li key={`${element}`}>{element}</li>)}</ul> :
                         data[header.dataParam]

@@ -1,6 +1,6 @@
 {
-  "name": "atlas-experiment-table",
-  "version": "1.4.0",
+  "name": "@ebi-gene-expression-group/atlas-experiment-table",
+  "version": "1.5.1-beta",
   "description": "This package renders an experiment table with user interaction using Evergreen package",
   "main": "lib/index.js",
   "scripts": {
@@ -37,36 +37,36 @@
     "url": "https://github.com/ebi-gene-expression-group/scxa-experiment-table"
   },
   "dependencies": {
-    "evergreen-ui": "^4.17.0",
+    "evergreen-ui": "^4.21.5",
     "jw-paginate": "^1.0.4",
     "lodash": "^4.17.15",
     "prop-types": "^15.7.2",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "react-tooltip": "^3.10.0",
-    "styled-components": "^4.3.0",
-    "urijs": "^1.19.1"
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-tooltip": "^3.11.1",
+    "styled-components": "^4.4.1",
+    "urijs": "^1.19.2"
   },
   "devDependencies": {
-    "@babel/cli": "^7.4.4",
-    "@babel/core": "^7.4.5",
-    "@babel/polyfill": "^7.4.4",
-    "@babel/preset-env": "^7.4.5",
-    "@babel/preset-react": "^7.0.0",
+    "@babel/cli": "^7.7.5",
+    "@babel/core": "^7.7.5",
+    "@babel/polyfill": "^7.7.0",
+    "@babel/preset-env": "^7.7.6",
+    "@babel/preset-react": "^7.7.4",
     "babel-loader": "^8.0.6",
     "clean-webpack-plugin": "^3.0.0",
-    "coveralls": "^3.0.4",
+    "coveralls": "^3.0.9",
     "enzyme": "^3.10.0",
-    "enzyme-adapter-react-16": "^1.14.0",
-    "eslint": "^5.16.0",
+    "enzyme-adapter-react-16": "^1.15.1",
+    "eslint": "^6.7.2",
     "eslint-config-gene-expression": "^0.5.0",
-    "fetch-mock": "^7.3.9",
-    "jest": "^24.8.0",
-    "jest-environment-enzyme": "^7.0.2",
-    "jest-enzyme": "^7.0.2",
-    "react-test-renderer": "^16.8.6",
-    "webpack": "^4.33.0",
-    "webpack-cli": "^3.3.2",
-    "webpack-dev-server": "^3.6.0"
+    "fetch-mock": "^8.0.1",
+    "jest": "^24.9.0",
+    "jest-environment-enzyme": "^7.1.2",
+    "jest-enzyme": "^7.1.2",
+    "react-test-renderer": "^16.12.0",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.9.0"
   }
 }

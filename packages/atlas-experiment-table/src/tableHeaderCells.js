@@ -7,7 +7,7 @@ const TableSortHeaderCell = ({columnNumber, headerText, width, orderedColumnInde
     className={`header${columnNumber}`}
     flexBasis={width} flexShrink={100} flexGrow={100}
     onClick={() => onClick(columnNumber)}>
-    <div style={{display: `ruby`}}>
+    <div>
       {headerText}
       { columnNumber === orderedColumnIndex ?
         ascendingOrder ?

@@ -76,6 +76,19 @@ const data = [
     experimentalFactors: [`single cell identifier`, `disease`],
     experimentProjects: [`Human Cell Atlas`, `Chan-Zuckerberg Biohub`],
     technologyType: [`smart-seq2`, `10xV1`]
+  },
+  {
+    experimentType: `UNKNOWN`,
+    experimentAccession: `E-MTAB-5061`,
+    experimentDescription: `healthy individuals and type 2 diabetes patients`,
+    lastUpdate: `11-10-2018`,
+    numberOfAssays: 3514,
+    numberOfContrasts: 0,
+    species: `Homo sapiens`,
+    kingdom: `plants`,
+    experimentalFactors: [`single cell identifier`, `disease`],
+    experimentProjects: [`Human Cell Atlas`, `Chan-Zuckerberg Biohub`],
+    technologyType: [`smart-seq2`, `10xV1`]
   }
 ]
 
