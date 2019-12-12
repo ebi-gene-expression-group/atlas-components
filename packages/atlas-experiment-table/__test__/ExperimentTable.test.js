@@ -10,7 +10,7 @@ import _ from 'lodash'
 
 describe(`ExperimentTable`, () => {
   const props = {
-    aaData: data,
+    experiments: data,
     tableHeader: tableHeader,
     tableFilters: tableFilters,
     host: `fool`,

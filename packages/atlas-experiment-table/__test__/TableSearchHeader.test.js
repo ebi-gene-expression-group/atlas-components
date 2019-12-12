@@ -16,7 +16,7 @@ describe(`TableSearchHeader`, () => {
       }
     ],
     entriesPerPageOptions: [1, 4, 5, 100],
-    aaData: data,
+    experiments: data,
     searchAllOnChange: () => {},
     numberOfEntriesPerPageOnChange: () => {},
     totalNumberOfRows: 2,
