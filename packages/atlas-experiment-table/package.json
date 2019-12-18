@@ -1,6 +1,6 @@
 {
   "name": "@ebi-gene-expression-group/atlas-experiment-table",
-  "version": "1.5.1",
+  "version": "1.5.2",
   "description": "This package renders an experiment table with user interaction using Evergreen package",
   "main": "lib/index.js",
   "scripts": {
@@ -52,7 +52,7 @@
     "@babel/polyfill": "^7.7.0",
     "@babel/preset-env": "^7.7.6",
     "@babel/preset-react": "^7.7.4",
-    "@ebi-gene-expression-group/eslint-config": "^1.0.0",
+    "@ebi-gene-expression-group/eslint-config": "^1.0.1",
     "babel-loader": "^8.0.6",
     "clean-webpack-plugin": "^3.0.0",
     "coveralls": "^3.0.9",

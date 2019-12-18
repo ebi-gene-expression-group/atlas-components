@@ -1,10 +1,9 @@
 {
   "name": "@ebi-gene-expression-group/eslint-config",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
-  "scripts": {
-  },
+  "scripts": {},
   "author": "Expression Atlas developers <atlas-developers@ebi.ac.uk>",
   "collaborators": [
     "Monica Jianu <monica@ebi.ac.uk>",
@@ -14,12 +13,12 @@
   "dependencies": {
     "eslint": "^5.3.0",
     "eslint-import-resolver-webpack": "^0.12.0",
-    "eslint-plugin-react": "^7.11.1",
-    "eslint-plugin-import": "^2.14.0"
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-react": "^7.11.1"
   },
   "peerDependencies": {
     "eslint": ">=6",
-    "eslint-plugin-react": ">= 7",
-    "eslint-plugin-import": ">= 2"
+    "eslint-plugin-import": ">= 2",
+    "eslint-plugin-react": ">= 7"
   }
 }
