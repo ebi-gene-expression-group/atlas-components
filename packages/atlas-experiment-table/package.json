@@ -59,13 +59,13 @@
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.15.1",
     "eslint": "^6.7.2",
-    "fetch-mock": "^8.0.1",
+    "fetch-mock": "^8.1.0",
     "jest": "^24.9.0",
     "jest-environment-enzyme": "^7.1.2",
     "jest-enzyme": "^7.1.2",
     "react-test-renderer": "^16.12.0",
-    "webpack": "^4.41.2",
+    "webpack": "^4.41.3",
     "webpack-cli": "^3.3.10",
-    "webpack-dev-server": "^3.9.0"
+    "webpack-dev-server": "^3.10.0"
   }
 }
