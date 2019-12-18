@@ -1,12 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Demo</title>
+    <title>Experiment table: bulk demo</title>
 
-    <link rel="stylesheet"
-          href="https://www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/libraries/foundation-6/css/foundation.css"
-          type="text/css" media="all"/>
-    <link rel="stylesheet" href="https://www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/css/ebi-global.css"
+    <link rel="stylesheet" href="https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/css/ebi-global.css"
           type="text/css" media="all"/>
     <link rel="stylesheet" href="https://ebi.emblstatic.net/web_guidelines/EBI-Icon-fonts/v1.3/fonts.css"
           type="text/css" media="all"/>
@@ -25,89 +22,119 @@
 
 <script src="../dist/vendors.bundle.js"></script>
 <script src="../dist/experimentTable.bundle.js"></script>
-<!-- Set to http://localhost:8080/gxa/ or http://localhost:8080/gxa_sc/ -- Remember the trailing slash! -->
 <script>
-  experimentTable.render({
-      host: 'http://localhost:8080/',
-      resource: 'gxa/json/experiments',
-      //link to `${host}/${header.resource}/${data[header.link]}/${header.endpoint}`
-      species: ``,
-      downloadTooltip: `<ul>
-          <li>Raw filtered count matrix after quantification</li>
-          <li>Normalised filtered count matrix after quantification</li>
-          <li>TPM (transcripts per million RNA molecules - only available for SmartSeq)</li>
-          <li>SDRF file with the experimental design metadata</li>
-        </ul>`,
+  experimentTable.render(
+    {
+      // Set to http://localhost:8080/gxa/ or http://localhost:8080/gxa_sc/ -- Remember the trailing slash!
+      host: 'http://localhost:8080/gxa/',
+      resource: 'json/experiments',
+      species: '',
       tableFilters: [
         {
-          label: `Kingdom`,
-          dataParam: `kingdom`
+          label: 'Kingdom',
+          dataParam: 'kingdom'
         },
         {
-          label: `Experiment Type`,
-          dataParam: `experimentType`
+          label: 'Experiment Type',
+          dataParam: 'experimentType'
         }
       ],
-      tableHeader:
-        [
-          //{title: `index`, width: 60, dataParam: null, link: null},
-          {
-            type: `sort`, title: `Type`, width: 50, dataParam: `experimentType`,
-            image: {
-              MICROARRAY_1COLOUR_MICRORNA_DIFFERENTIAL: {
-                src: "http://localhost:8080/gxa/resources/images/experiments-table/differential.png",
-                alt: "Microarray 1-colour miRNA"
-              },
-              PROTEOMICS_BASELINE: {
-                src: "http://localhost:8080/gxa/resources/images/experiments-table/baseline.png",
-                alt: "Proteomics baseline"
-              },
-              RNASEQ_MRNA_BASELINE: {
-                src: "http://localhost:8080/gxa/resources/images/experiments-table/baseline.png",
-                alt: "RNA-Seq mRNA baseline"
-              },
-              MICROARRAY_2COLOUR_MRNA_DIFFERENTIAL: {
-                src: "http://localhost:8080/gxa/resources/images/experiments-table/differential.png",
-                alt: "Microarray 2-colour mRNA"
-              },
-              MICROARRAY_1COLOUR_MRNA_DIFFERENTIAL: {
-                src: "http://localhost:8080/gxa/resources/images/experiments-table/differential.png",
-                alt: "Microarray 1-colour mRNA"
-              },
-              RNASEQ_MRNA_DIFFERENTIAL: {
-                src: "http://localhost:8080/gxa/resources/images/experiments-table/differential.png",
-                alt: "RNA-Seq mRNA differential"
-              }
+      tableHeader: [
+        {
+          type: 'sort',
+          title: 'Type',
+          width: 50,
+          dataParam: 'experimentType',
+          image: {
+            MICROARRAY_1COLOUR_MICRORNA_DIFFERENTIAL: {
+              src: 'http://localhost:8080/gxa/resources/images/experiments-table/differential.png',
+              alt: 'Microarray 1-colour miRNA'
+            },
+            PROTEOMICS_BASELINE: {
+              src: 'http://localhost:8080/gxa/resources/images/experiments-table/baseline.png',
+              alt: 'Proteomics baseline'
+            },
+            RNASEQ_MRNA_BASELINE: {
+              src: 'http://localhost:8080/gxa/resources/images/experiments-table/baseline.png',
+              alt: 'RNA-Seq mRNA baseline'
+            },
+            MICROARRAY_2COLOUR_MRNA_DIFFERENTIAL: {
+              src: 'http://localhost:8080/gxa/resources/images/experiments-table/differential.png',
+              alt: 'Microarray 2-colour mRNA'
+            },
+            MICROARRAY_1COLOUR_MRNA_DIFFERENTIAL: {
+              src: 'http://localhost:8080/gxa/resources/images/experiments-table/differential.png',
+              alt: 'Microarray 1-colour mRNA'
+            },
+            RNASEQ_MRNA_DIFFERENTIAL: {
+              src: 'http://localhost:8080/gxa/resources/images/experiments-table/differential.png',
+              alt: 'RNA-Seq mRNA differential'
             }
-          },
-          {type: `sort`, title: `Loaded date`, width: 120, dataParam: `lastUpdate`},
-          {type: `search`, title: `species`, width: 200, dataParam: `species`},
-          {
-            type: `search`, title: `experiment description`, width: 400, dataParam: `experimentDescription`,
-            link: `experimentAccession`, resource: `experiments`, endpoint: `Results`
-          },
-          {
-            type: `sort`, title: `Number of assays`, width: 120, dataParam: `numberOfAssays`,
-            link: `experimentAccession`, resource: `experiments`, endpoint: `Experiment%20Design`
-          },
-          {
-            type: `sort`, title: `Comparisons`, width: 100, dataParam: `numberOfContrasts`,
-            link: `experimentAccession`, resource: `experiments`, endpoint: `Experiment%20Design`
-          },
-          {type: `search`, title: `experiment factors`, width: 200, dataParam: `experimentalFactors`},
-          {
-            type: `search`, title: `array designs`, width: 220, dataParam: `arrayDesignNames`,
-            link: `arrayDesigns`, resource: `arrayexpress/arrays`, endpoint: ``
           }
-          //{type: ``, title: `ArrayExpress`, width: 100, dataParam: `numberOfContrasts`,
-          //   image: `<span class="icon icon-generic" data-icon="L" title="View in Array Express"></span>`,
-          //   link: `experimentAccession`, resource: `arrayexpress/experiments`, endpoint: ``},
-          //{ title: `Download`, width: null,  dataParam: null}
-        ],
+        },
+        {
+          type: 'sort',
+          title: 'Loaded date',
+          width: 120,
+          dataParam: 'lastUpdate'
+        },
+        {
+          type: 'search',
+          title: 'species',
+          width: 200,
+          dataParam: 'species'
+        },
+        {
+          type: 'search',
+          title: 'experiment description',
+          width: 400,
+          dataParam: 'experimentDescription',
+          link: 'experimentAccession',
+          resource: 'experiments',
+          endpoint: 'Results'
+        },
+        {
+          type: 'sort',
+          title: 'Number of assays',
+          width: 120, dataParam: 'numberOfAssays',
+          link: 'experimentAccession',
+          resource: 'experiments',
+          endpoint: 'Experiment%20Design'
+        },
+        {
+          type: 'sort',
+          title: 'Comparisons',
+          width: 100,
+          dataParam: 'numberOfContrasts',
+          link: 'experimentAccession',
+          resource: 'experiments',
+          endpoint: 'Experiment%20Design'
+        },
+        {
+          type: 'search',
+          title: 'experiment factors',
+          width: 200,
+          dataParam: 'experimentalFactors'
+        },
+        {
+          type: 'search',
+          title: 'array designs',
+          width: 220,
+          dataParam: 'arrayDesignNames',
+          link: 'arrayDesigns',
+          resource: 'arrayexpress/arrays',
+          endpoint: ''
+        }
+      ],
       noResultsMessageFormatter: function (data) {
         return 'Your search yielded no results: ' + data.reason
       },
-      enableDownload: false,
+      enableDownload: true,
+      downloadTooltip:
+        '<ul>' +
+          '<li>Expression matrices in TPMs or log<sub>2</sub>fold-change</li>' +
+          '<li>Experiment design file with experimental metadata</li>' +
+        '</ul>',
       experiments: [
         {
           "experimentType": "RNASEQ_MRNA_BASELINE",
@@ -530,8 +557,8 @@
           ]
         }
       ]
-    }
-    , 'target')
+    },
+    'target');
 </script>
 
 </html>
