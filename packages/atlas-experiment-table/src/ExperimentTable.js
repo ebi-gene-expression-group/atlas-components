@@ -11,17 +11,16 @@ class ExperimentTable extends React.Component {
     super(props)
     this.entriesPerPageOptions = [10, 25, 50]
     this.state = {
-      searchQuery: props.species.trim(),
+      searchQuery: ``,
       orderedColumnIndex: 0,
-      searchedColumnIndex: props.species.trim() ?
-        props.tableHeader.findIndex(header => header.dataParam === `species`) : 1,
+      searchedColumnIndex: 1,
       ascendingOrder: false,
       checkedRows: [],
       currentPage: 1,
       entriesPerPage: this.entriesPerPageOptions[0],
       selectedSearch: ``,
       selectedDropdownFilters: [],
-      experimentTableFilters: props.tableFilters.map(filter => {
+      dropdownFilters: props.dropdownFilters.map(filter => {
         return {
           label: filter.label,
           options: _.chain(props.experiments).flatMap(filter.dataParam).uniq().value()
@@ -151,7 +150,7 @@ class ExperimentTable extends React.Component {
 
   render() {
     const { searchQuery, searchedColumnIndex, selectedSearch, checkedRows } = this.state
-    const { selectedDropdownFilters, experimentTableFilters } = this.state
+    const { selectedDropdownFilters, dropdownFilters } = this.state
     const { orderedColumnIndex, ascendingOrder } = this.state
     const { entriesPerPage, currentPage } = this.state
     const { host, experiments, tableHeader, enableDownload, downloadTooltip } = this.props
@@ -186,7 +185,7 @@ class ExperimentTable extends React.Component {
     return (
       <div className={`row expanded`}>
         <TableSearchHeader
-          dropdownFilters={experimentTableFilters}
+          dropdownFilters={dropdownFilters}
           totalNumberOfRows={experiments.length}
           entriesPerPageOptions={this.entriesPerPageOptions}
           searchAllOnChange={this.searchAllOnChange}
@@ -230,7 +229,6 @@ class ExperimentTable extends React.Component {
 ExperimentTable.propTypes = {
   experiments: PropTypes.array.isRequired,
   host: PropTypes.string.isRequired,
-  species: PropTypes.string,
   resource: PropTypes.string.isRequired,
   tableHeader: PropTypes.arrayOf(
     PropTypes.shape({
@@ -242,12 +240,17 @@ ExperimentTable.propTypes = {
   ),
   enableDownload: PropTypes.bool.isRequired,
   downloadTooltip: PropTypes.string.isRequired,
-  tableFilters: PropTypes.arrayOf(
+  dropdownFilters: PropTypes.arrayOf(
     PropTypes.shape({
       label: PropTypes.string.isRequired,
       dataParam: PropTypes.string.isRequired
+    })).isRequired,
+  selectedFilters: PropTypes.arrayOf(
+    PropTypes.shape({
+      dataParam: PropTypes.string.isRequired,
+      value: PropTypes.string.isRequired
     })
-  ).isRequired
+  )
 }
 
 ExperimentTable.defaultProps = {
