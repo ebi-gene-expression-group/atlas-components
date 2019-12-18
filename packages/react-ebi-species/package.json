@@ -6,9 +6,7 @@
   "scripts": {
     "prepack": "rm -rf lib && babel src -d lib --copy-files",
     "test": "jest",
-    "posttest": "jest --coverage --coverageReporters=text-lcov | coveralls",
-    "postversion": "npm publish",
-    "postpublish": "git push && git push --tags"
+    "posttest": "jest --coverage --coverageReporters=text-lcov | coveralls"
   },
   "jest": {
     "setupFilesAfterEnv": [
@@ -23,14 +21,17 @@
       "\\.(css|less)$": "<rootDir>/__mocks__/styleMock.js"
     }
   },
-  "author": "Alfonso Muñoz-Pomer Fuentes <amunoz@ebi.ac.uk>",
+  "author": "Expression Atlas developers <arrayexpress-atlas@ebi.ac.uk>",
   "contributors": [
+    "Lingyun Zhao<lingyun@ebi.ac.uk>",
+    "Haider Iqbal<haideri@ebi.ac.uk>",
+    "Alfonso Muñoz-Pomer Fuentes <amunoz@ebi.ac.uk>",
     "Wojciech Bazant <wbazant@ebi.ac.uk>"
   ],
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ebi-gene-expression-group/react-ebi-species.git"
+    "url": "git+https://github.com/ebi-gene-expression-group/atlas-components.git"
   },
   "keywords": [
     "react",
