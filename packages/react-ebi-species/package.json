@@ -23,8 +23,11 @@
       "\\.(css|less)$": "<rootDir>/__mocks__/styleMock.js"
     }
   },
-  "author": "Alfonso Muñoz-Pomer Fuentes <amunoz@ebi.ac.uk>",
+  "author": "Expression Atlas developers <arrayexpress-atlas@ebi.ac.uk>",
   "contributors": [
+    "Lingyun Zhao<lingyun@ebi.ac.uk>",
+    "Haider Iqbal<haideri@ebi.ac.uk>",
+    "Alfonso Muñoz-Pomer Fuentes <amunoz@ebi.ac.uk>",
     "Wojciech Bazant <wbazant@ebi.ac.uk>"
   ],
   "license": "MIT",
