@@ -4,8 +4,6 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "postversion": "npm publish",
-    "postpublish": "git push && git push --tags"
   },
   "author": "Expression Atlas developers <atlas-developers@ebi.ac.uk>",
   "collaborators": [
