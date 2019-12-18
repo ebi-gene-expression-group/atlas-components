@@ -1,5 +1,5 @@
 {
-  "name": "@ebi-gene-expression-group/eslint-config-gene-expression",
+  "name": "@ebi-gene-expression-group/eslint-config",
   "version": "0.6.0",
   "description": "",
   "main": "index.js",
