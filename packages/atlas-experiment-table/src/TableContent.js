@@ -27,7 +27,7 @@ const alertInvalidFiles = async (host, checkedRows) => {
       window.location.replace(downloadUrl)
     }
   } catch (e) {
-    console.log(`error`, e)
+    console.error(`error`, e)
   }
 }
 
