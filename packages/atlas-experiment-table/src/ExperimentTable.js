@@ -227,8 +227,6 @@ ExperimentTable.propTypes = {
       dataParam: PropTypes.string.isRequired
     })
   ),
-  enableDownload: PropTypes.bool.isRequired,
-  downloadTooltip: PropTypes.string.isRequired,
   dropdownFilters: PropTypes.arrayOf(
     PropTypes.shape({
       label: PropTypes.string.isRequired,
@@ -239,11 +237,14 @@ ExperimentTable.propTypes = {
       dataParam: PropTypes.string.isRequired,
       value: PropTypes.string.isRequired
     })
-  )
+  ),
+  enableDownload: PropTypes.bool,
+  downloadTooltip: PropTypes.string,
 }
 
 ExperimentTable.defaultProps = {
-  species: ``
+  enableDownload: false,
+  downloadTooltip: ``
 }
 
 export default ExperimentTable
