@@ -20,12 +20,10 @@ class ExperimentTable extends React.Component {
       entriesPerPage: this.entriesPerPageOptions[0],
       selectedSearch: ``,
       selectedDropdownFilters: [],
-      dropdownFilters: props.dropdownFilters.map(filter => {
-        return {
-          label: filter.label,
-          options: _.chain(props.experiments).flatMap(filter.dataParam).uniq().value()
-        }
-      })
+      dropdownFilters: props.dropdownFilters.map(filter => ({
+        label: filter.label,
+        options: _.chain(props.experiments).flatMap(filter.dataParam.trim()).uniq().value()
+      }))
     }
 
     this.sort = this.sort.bind(this)
