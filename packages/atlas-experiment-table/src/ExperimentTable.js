@@ -62,12 +62,12 @@ class ExperimentTable extends React.Component {
           .includes(searchQuery.toLowerCase())
       )
   }
-  /* Deep-search enumerable property values in object
-  > containsValue({a: 1, b: 2}, 1)
-  true
-  > containsValue({a: { b: { c: `foo`, d: { x: 1, y: 2, z: 3 }, e: `bar` } } }, 3)
-  true
-  */
+
+  // Deep-search enumerable property values in object
+  // > containsValue({a: 1, b: 2}, 1)
+  // true
+  // > containsValue({a: { b: { c: `foo`, d: { x: 1, y: 2, z: 3 }, e: `bar` } } }, 3)
+  // true
   containsValue(jsonObject, value) {
     return Object.keys(jsonObject).some(key =>
       typeof jsonObject[key] === `object` ?
