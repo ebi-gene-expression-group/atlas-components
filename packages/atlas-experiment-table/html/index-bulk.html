@@ -27,17 +27,6 @@
     {
       // Set to http://localhost:8080/gxa/ or http://localhost:8080/gxa_sc/ -- Remember the trailing slash!
       host: 'http://localhost:8080/gxa/',
-      species: '',
-      dropdownFilters: [
-        {
-          label: 'Kingdom',
-          dataParam: 'kingdom'
-        },
-        {
-          label: 'Experiment Type',
-          dataParam: 'experimentType'
-        }
-      ],
       tableHeader: [
         {
           type: 'sort',
@@ -45,29 +34,13 @@
           width: 50,
           dataParam: 'experimentType',
           image: {
-            MICROARRAY_1COLOUR_MICRORNA_DIFFERENTIAL: {
+            Differential: {
               src: 'http://localhost:8080/gxa/resources/images/experiments-table/differential.png',
-              alt: 'Microarray 1-colour miRNA'
+              alt: 'Differential experiment'
             },
-            PROTEOMICS_BASELINE: {
+            Baseline: {
               src: 'http://localhost:8080/gxa/resources/images/experiments-table/baseline.png',
-              alt: 'Proteomics baseline'
-            },
-            RNASEQ_MRNA_BASELINE: {
-              src: 'http://localhost:8080/gxa/resources/images/experiments-table/baseline.png',
-              alt: 'RNA-Seq mRNA baseline'
-            },
-            MICROARRAY_2COLOUR_MRNA_DIFFERENTIAL: {
-              src: 'http://localhost:8080/gxa/resources/images/experiments-table/differential.png',
-              alt: 'Microarray 2-colour mRNA'
-            },
-            MICROARRAY_1COLOUR_MRNA_DIFFERENTIAL: {
-              src: 'http://localhost:8080/gxa/resources/images/experiments-table/differential.png',
-              alt: 'Microarray 1-colour mRNA'
-            },
-            RNASEQ_MRNA_DIFFERENTIAL: {
-              src: 'http://localhost:8080/gxa/resources/images/experiments-table/differential.png',
-              alt: 'RNA-Seq mRNA differential'
+              alt: 'Baseline experiment'
             }
           }
         },
@@ -95,7 +68,8 @@
         {
           type: 'sort',
           title: 'Number of assays',
-          width: 120, dataParam: 'numberOfAssays',
+          width: 120,
+          dataParam: 'numberOfAssays',
           link: 'experimentAccession',
           resource: 'experiments',
           endpoint: 'Experiment%20Design'
@@ -116,25 +90,28 @@
           dataParam: 'experimentalFactors'
         },
         {
-          type: 'search',
-          title: 'array designs',
+          type: 'sort',
+          title: 'Technology',
           width: 220,
-          dataParam: 'arrayDesignNames',
-          link: 'arrayDesigns',
-          resource: 'arrayexpress/arrays',
-          endpoint: ''
+          dataParam: 'technologyType'
         }
       ],
-      noResultsMessageFormatter: function (data) {
-        return 'Your search yielded no results: ' + data.reason
-      },
-      enableDownload: true,
+      dropdownFilters: [
+        {
+          label: 'Kingdom',
+          dataParam: 'kingdom'
+        },
+        {
+          label: 'Experiment Type',
+          dataParam: 'experimentType'
+        }
+      ],
       downloadTooltip:
         '<ul>' +
           '<li>Expression matrices in TPMs or log<sub>2</sub>fold-change</li>' +
           '<li>Experiment design file with experimental metadata</li>' +
         '</ul>',
-      experiments: [
+      enableDownload: true,
         {
           "experimentType": "RNASEQ_MRNA_BASELINE",
           "experimentAccession": "E-ERAD-475",
