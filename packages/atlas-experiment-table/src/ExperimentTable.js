@@ -218,7 +218,6 @@ class ExperimentTable extends React.Component {
 ExperimentTable.propTypes = {
   experiments: PropTypes.array.isRequired,
   host: PropTypes.string.isRequired,
-  resource: PropTypes.string.isRequired,
   tableHeader: PropTypes.arrayOf(
     PropTypes.shape({
       type: PropTypes.string.isRequired,
