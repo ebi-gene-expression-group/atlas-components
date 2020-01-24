@@ -216,7 +216,6 @@ class ExperimentTable extends React.Component {
 }
 
 ExperimentTable.propTypes = {
-  experiments: PropTypes.array.isRequired,
   host: PropTypes.string.isRequired,
   tableHeader: PropTypes.arrayOf(
     PropTypes.shape({
@@ -228,8 +227,8 @@ ExperimentTable.propTypes = {
   ),
   dropdownFilters: PropTypes.arrayOf(
     PropTypes.shape({
-      label: PropTypes.string.isRequired,
-      dataParam: PropTypes.string.isRequired
+      dataParam: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired
     })).isRequired,
   selectedFilters: PropTypes.arrayOf(
     PropTypes.shape({
@@ -239,6 +238,7 @@ ExperimentTable.propTypes = {
   ),
   enableDownload: PropTypes.bool,
   downloadTooltip: PropTypes.string,
+  experiments: PropTypes.array.isRequired
 }
 
 ExperimentTable.defaultProps = {
