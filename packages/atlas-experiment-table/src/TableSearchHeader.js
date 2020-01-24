@@ -7,7 +7,7 @@ const TableSearchHeader = ({dropdownFilters, entriesPerPageOptions, totalNumberO
       dropdownFilters.map(dropdownFilter =>
         <div key={dropdownFilter.label} className={`small-12 medium-4 large-2 columns`}>
           <label> {dropdownFilter.label}:
-            <select defaultValue={``} onChange={e => dropdownFiltersOnChange(e, dropdownFilter.label)}>
+            <select defaultValue={``} onChange={e => dropdownFiltersOnChange(e, dropdownFilter.dataParam, dropdownFilter.label)}>
               <option value={``}>All</option>
               {
                 dropdownFilter.options.map(option =>
@@ -46,6 +46,7 @@ TableSearchHeader.propTypes = {
   numberOfEntriesPerPageOnChange: PropTypes.func.isRequired,
   dropdownFilters: PropTypes.arrayOf(
     PropTypes.shape({
+      dataParam: PropTypes.string.isRequired,
       label: PropTypes.string.isRequired,
       options: PropTypes.arrayOf(PropTypes.string).isRequired,
     })

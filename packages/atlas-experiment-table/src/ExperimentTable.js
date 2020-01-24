@@ -19,17 +19,21 @@ class ExperimentTable extends React.Component {
       currentPage: 1,
       entriesPerPage: this.entriesPerPageOptions[0],
       selectedSearch: ``,
-      selectedDropdownFilters: [],
       dropdownFilters: props.dropdownFilters.map(filter => ({
+        dataParam: filter.dataParam,
         label: filter.label,
         options: _.chain(props.experiments).flatMap(filter.dataParam.trim()).uniq().value()
+      })),
+      selectedFilters: props.selectedFilters.map(selectedFilter => ({
+        dataParam: selectedFilter.dataParam,
+        value: selectedFilter.value
       }))
     }
 
     this.sort = this.sort.bind(this)
     this.filter = this.filter.bind(this)
     this.containsValue = this.containsValue.bind(this)
-    this.dropdownFilterOnChange = this.dropdownFilterOnChange.bind(this)
+    this.filterOnChange = this.filterOnChange.bind(this)
     this.searchAllOnChange = this.searchAllOnChange.bind(this)
     this.numberOfEntriesPerPageOnChange = this.numberOfEntriesPerPageOnChange.bind(this)
 
@@ -84,29 +88,25 @@ class ExperimentTable extends React.Component {
     this.setState({checkedRows: checkedArray})
   }
 
-  dropdownFilterOnChange(e, label) {
-    const selectedDropdown = {
-      label: label,
-      value: e.target.value
-    }
-    const {selectedDropdownFilters} = this.state
-    const index = selectedDropdownFilters.findIndex(dropdown => dropdown.label === label)
-    if(index !== -1) {
-      selectedDropdown.value !== `` ?
-        selectedDropdownFilters[index].value = e.target.value : selectedDropdownFilters.splice(index,1)
-      this.setState({
-        selectedDropdownFilters: selectedDropdownFilters,
-        currentPage: 1,
-        searchQuery: ``
-      })
-    } else {
-      selectedDropdownFilters.push(selectedDropdown)
-      this.setState({
-        selectedDropdownFilters: selectedDropdownFilters,
-        currentPage: 1,
-        searchQuery: ``
-      })
-    }
+  // Filters are pairs of key-value that are searched for in the experiments prop
+  filterOnChange(e, dataParam, label) {
+    this.setState({
+      selectedFilters:
+        _.chain(this.state.selectedFilters)
+          .cloneDeep()
+          .reject({ dataParam: dataParam })
+          .concat(
+            e.target.value === `` ?
+              // An empty string means the filter has been deleted from the table header or All has been selected in a
+              // dropdown, so we remove it by leaving the cloned array without the dataParam unmodified
+              [] :
+              [{
+                dataParam: dataParam,
+                label: label,
+                value: e.target.value
+              }])
+          .value()
+    })
   }
 
   searchAllOnChange(e) {
@@ -139,7 +139,7 @@ class ExperimentTable extends React.Component {
 
   render() {
     const { searchQuery, searchedColumnIndex, selectedSearch, checkedRows } = this.state
-    const { selectedDropdownFilters, dropdownFilters } = this.state
+    const { selectedFilters, dropdownFilters } = this.state
     const { orderedColumnIndex, ascendingOrder } = this.state
     const { entriesPerPage, currentPage } = this.state
     const { host, experiments, tableHeader, enableDownload, downloadTooltip } = this.props
@@ -164,9 +164,7 @@ class ExperimentTable extends React.Component {
                 .includes(selectedSearch.toLowerCase())))
         // ... and finally we filter according to selected dropdowns
         .filter(experiment =>
-          selectedDropdownFilters
-            .every(filter =>
-              filter ? this.containsValue(experiment, filter.value) : true))
+          selectedFilters.every(filter => filter ? this.containsValue(experiment, filter.value) : true))
 
     const currentPageData = entriesPerPage ?
       filteredExperiments.slice(entriesPerPage * (currentPage - 1), entriesPerPage * currentPage) : filteredExperiments
@@ -179,7 +177,7 @@ class ExperimentTable extends React.Component {
           entriesPerPageOptions={this.entriesPerPageOptions}
           searchAllOnChange={this.searchAllOnChange}
           numberOfEntriesPerPageOnChange={this.numberOfEntriesPerPageOnChange}
-          dropdownFiltersOnChange={this.dropdownFilterOnChange}/>
+          dropdownFiltersOnChange={this.filterOnChange}/>
 
         <TableContent
           {...{
