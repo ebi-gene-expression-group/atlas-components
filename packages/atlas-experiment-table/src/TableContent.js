@@ -38,7 +38,6 @@ const TableContent = ({tableHeader, searchedColumnIndex, searchQuery, orderedCol
     <div className={`small-12 columns`} >
       <Table border>
         <Table.Head>
-
           {
             tableHeaderCells(tableHeader, searchedColumnIndex, searchQuery, orderedColumnIndex, ascendingOrder,
               columnNumber => tableHeaderOnClick(columnNumber),
