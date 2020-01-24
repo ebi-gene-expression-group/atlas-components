@@ -243,7 +243,8 @@ ExperimentTable.propTypes = {
 
 ExperimentTable.defaultProps = {
   enableDownload: false,
-  downloadTooltip: ``
+  downloadTooltip: ``,
+  selectedFilters: []
 }
 
 export default ExperimentTable
