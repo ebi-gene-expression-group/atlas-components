@@ -5,6 +5,7 @@ import URI from 'urijs'
 import ReactTooltip from 'react-tooltip'
 import _ from 'lodash'
 
+import { tableHeaderPropTypes } from './TableHeaderPropTypes'
 import tableHeaderCells from './tableHeaderCells'
 import TooltipIcon from './TooltipIcon'
 
@@ -104,20 +105,7 @@ const TableContent = ({tableHeader, searchedColumnIndex, searchQuery, orderedCol
   </div>
 
 TableContent.propTypes = {
-  tableHeader: PropTypes.arrayOf(
-    PropTypes.shape({
-      type: PropTypes.oneOf([`sort`, `search`, ``]).isRequired,
-      title: PropTypes.string.isRequired,
-      width: PropTypes.number.isRequired,
-      dataParam: PropTypes.string.isRequired,
-      image: PropTypes.objectOf(
-        PropTypes.shape({
-          src: PropTypes.string,
-          alt: PropTypes.string
-        })
-      )
-    })
-  ),
+  tableHeader: tableHeaderPropTypes,
   searchedColumnIndex: PropTypes.number.isRequired,
   searchQuery: PropTypes.string.isRequired,
   orderedColumnIndex: PropTypes.number.isRequired,

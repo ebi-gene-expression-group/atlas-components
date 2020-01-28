@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import _ from 'lodash'
 
+import { tableHeaderPropTypes } from './TableHeaderPropTypes'
 import TableFooter from './TableFooter'
 import TableSearchHeader from './TableSearchHeader'
 import TableContent from './TableContent'
@@ -215,14 +216,7 @@ class ExperimentTable extends React.Component {
 
 ExperimentTable.propTypes = {
   host: PropTypes.string.isRequired,
-  tableHeader: PropTypes.arrayOf(
-    PropTypes.shape({
-      type: PropTypes.string.isRequired,
-      title: PropTypes.string.isRequired,
-      width: PropTypes.number.isRequired,
-      dataParam: PropTypes.string.isRequired
-    })
-  ),
+  tableHeader: tableHeaderPropTypes,
   dropdownFilters: PropTypes.arrayOf(
     PropTypes.shape({
       dataParam: PropTypes.string.isRequired,
