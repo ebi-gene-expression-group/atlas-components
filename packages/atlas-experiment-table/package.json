@@ -22,6 +22,9 @@
     },
     "setupFiles": [
       "<rootDir>/__mocks__/requestAnimationFrame.js"
+    ],
+    "coveragePathIgnorePatterns": [
+      "TestUtils.js"
     ]
   },
   "author": "Expression Atlas developers <arrayexpress-atlas@ebi.ac.uk>",
