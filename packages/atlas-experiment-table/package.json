@@ -39,7 +39,7 @@
     "url": "git+https://github.com/ebi-gene-expression-group/atlas-components.git"
   },
   "dependencies": {
-    "evergreen-ui": "^4.21.5",
+    "evergreen-ui": "^4.22.1",
     "jw-paginate": "^1.0.4",
     "lodash": "^4.17.15",
     "prop-types": "^15.7.2",
@@ -59,16 +59,17 @@
     "babel-loader": "^8.0.6",
     "clean-webpack-plugin": "^3.0.0",
     "coveralls": "^3.0.9",
-    "enzyme": "^3.10.0",
-    "enzyme-adapter-react-16": "^1.15.1",
-    "eslint": "^6.7.2",
-    "fetch-mock": "^8.1.0",
-    "jest": "^24.9.0",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
+    "eslint": "^6.8.0",
+    "fetch-mock": "^8.3.2",
+    "jest": "^25.1.0",
     "jest-environment-enzyme": "^7.1.2",
     "jest-enzyme": "^7.1.2",
+    "random-string": "^0.2.0",
     "react-test-renderer": "^16.12.0",
-    "webpack": "^4.41.3",
+    "webpack": "^4.41.5",
     "webpack-cli": "^3.3.10",
-    "webpack-dev-server": "^3.10.0"
+    "webpack-dev-server": "^3.10.2"
   }
 }
