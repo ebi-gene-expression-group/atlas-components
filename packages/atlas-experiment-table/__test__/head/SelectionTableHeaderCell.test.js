@@ -8,8 +8,6 @@ import SelectionTableHeaderCell from '../../src/head/SelectionTableHeaderCell'
 
 import { getRandomInt, generateRandomExperimentAccession } from '../TestUtils'
 
-
-//import { getRandomInt } from '../TestUtils'
 import randomString from 'random-string'
 
 describe(`SelectionTableHeaderCell`, () => {
