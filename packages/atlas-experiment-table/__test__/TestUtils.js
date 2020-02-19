@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import randomString from 'random-string'
 
 // Stolen from https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
 const getRandomInt = (min, max) => {
@@ -12,6 +13,26 @@ const TableCellDiv = styled.div`
   font-size: 13px;
   font-family: Helvetica, Arial, FreeSans, "Liberation Sans", sans-serif;
 `
+const generateRandomExperimentAccession = () => {
+  return `E-${randomString({length: 4, numeric: false}).toUpperCase()}-${getRandomInt(1, 9999)}`
+}
+
+const generateRandomHost = () =>
+  `http${Math.random() < 0.5 ? `s` : ``}://` +
+  `${Math.random() < 0.5 ? `www` : randomString({length: getRandomInt(2, 6)}).toLowerCase()}.` +
+  `${randomString({length: getRandomInt(3, 15)}).toLowerCase()}.` +
+   [`com`, `org`, `co.uk`, `ac.uk`, `net`, `es`][getRandomInt(0, 6)]
+
+const getSingleCellExperimentFiles = (experimentAccession) =>
+  [
+    `${experimentAccession}.aggregated_filtered_counts.mtx`,
+    `${experimentAccession}.aggregated_filtered_counts.mtx_cols`,
+    `${experimentAccession}.aggregated_filtered_counts.mtx_rows`,
+    `${experimentAccession}.aggregated_filtered_normalised_counts.mtx`,
+    `${experimentAccession}.aggregated_filtered_normalised_counts.mtx_cols`,
+    `${experimentAccession}.aggregated_filtered_normalised_counts.mtx_rows`,
+    `ExpDesign-${experimentAccession}.tsv`
+  ]
 
 const tableHeader = [
   {type: `sort`, title: `Technology type`, width: 240, dataParam: `technologyType`},
@@ -92,4 +113,4 @@ const data = [
   }
 ]
 
-export {getRandomInt, TableCellDiv, tableHeader, data, tableFilters}
+export { getRandomInt, generateRandomExperimentAccession, generateRandomHost, getSingleCellExperimentFiles, TableCellDiv, tableHeader, data, tableFilters }
