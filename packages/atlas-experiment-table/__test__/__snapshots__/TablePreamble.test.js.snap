@@ -1,0 +1,285 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TablePreamble matches snapshot (basic) 1`] = `
+<TablePreamble
+  dropdownOnChange={[MockFunction]}
+  dropdowns={Array []}
+  rowsCount={1000}
+  rowsPerPage={10}
+  rowsPerPageOnChange={[MockFunction]}
+  rowsPerPageOptions={
+    Array [
+      10,
+      25,
+      50,
+    ]
+  }
+  searchAll=""
+  searchAllOnChange={[MockFunction]}
+>
+  <div
+    className="row expanded"
+  >
+    <div
+      className="small-12 medium-4 large-2 columns"
+    >
+      <label>
+        Entries per page:
+        <select
+          defaultValue={10}
+          onChange={[Function]}
+        >
+          <option
+            key="0"
+            value={10}
+          >
+            10
+          </option>
+          <option
+            key="1"
+            value={25}
+          >
+            25
+          </option>
+          <option
+            key="2"
+            value={50}
+          >
+            50
+          </option>
+          <option
+            value={0}
+          >
+            All
+          </option>
+        </select>
+      </label>
+    </div>
+    <div
+      className="small-12 medium-4 large-2 columns"
+    >
+      <label>
+        Search all columns:
+        <input
+          onChange={[Function]}
+          type="search"
+          value=""
+        />
+      </label>
+    </div>
+  </div>
+</TablePreamble>
+`;
+
+exports[`TablePreamble matches snapshot (with dropdowns) 1`] = `
+<TablePreamble
+  dropdownOnChange={[MockFunction]}
+  dropdowns={
+    Array [
+      Object {
+        "dataKey": "experimentType",
+        "label": "Experiment type",
+        "options": Array [
+          "Baseline",
+          "Differential",
+        ],
+      },
+      Object {
+        "dataKey": "kingdom",
+        "label": "Kingdom",
+        "options": Array [
+          "Animals",
+          "Plants",
+          "Fungi",
+        ],
+        "value": "Dorne",
+      },
+      Object {
+        "dataKey": "technologyType",
+        "label": "Technology type",
+        "options": Array [
+          "Smart-Seq",
+          "10x",
+          "Droplet-based",
+        ],
+        "value": "Smart-Seq",
+      },
+    ]
+  }
+  rowsCount={1000}
+  rowsPerPage={10}
+  rowsPerPageOnChange={[MockFunction]}
+  rowsPerPageOptions={
+    Array [
+      10,
+      25,
+      50,
+    ]
+  }
+  searchAll=""
+  searchAllOnChange={[MockFunction]}
+>
+  <div
+    className="row expanded"
+  >
+    <div
+      className="small-12 medium-4 large-2 columns"
+      key="0"
+    >
+      <label>
+        Experiment type
+        :
+        <select
+          defaultValue=""
+          onChange={[Function]}
+        >
+          <option
+            value=""
+          >
+            All
+          </option>
+          <option
+            key="0"
+            value="Baseline"
+          >
+            Baseline
+          </option>
+          <option
+            key="1"
+            value="Differential"
+          >
+            Differential
+          </option>
+        </select>
+      </label>
+    </div>
+    <div
+      className="small-12 medium-4 large-2 columns"
+      key="1"
+    >
+      <label>
+        Kingdom
+        :
+        <select
+          defaultValue="Dorne"
+          onChange={[Function]}
+        >
+          <option
+            value=""
+          >
+            All
+          </option>
+          <option
+            key="0"
+            value="Animals"
+          >
+            Animals
+          </option>
+          <option
+            key="1"
+            value="Plants"
+          >
+            Plants
+          </option>
+          <option
+            key="2"
+            value="Fungi"
+          >
+            Fungi
+          </option>
+          <option
+            key="3"
+            value="Dorne"
+          >
+            Dorne
+          </option>
+        </select>
+      </label>
+    </div>
+    <div
+      className="small-12 medium-4 large-2 columns"
+      key="2"
+    >
+      <label>
+        Technology type
+        :
+        <select
+          defaultValue="Smart-Seq"
+          onChange={[Function]}
+        >
+          <option
+            value=""
+          >
+            All
+          </option>
+          <option
+            key="0"
+            value="Smart-Seq"
+          >
+            Smart-Seq
+          </option>
+          <option
+            key="1"
+            value="10x"
+          >
+            10x
+          </option>
+          <option
+            key="2"
+            value="Droplet-based"
+          >
+            Droplet-based
+          </option>
+        </select>
+      </label>
+    </div>
+    <div
+      className="small-12 medium-4 large-2 columns"
+    >
+      <label>
+        Entries per page:
+        <select
+          defaultValue={10}
+          onChange={[Function]}
+        >
+          <option
+            key="0"
+            value={10}
+          >
+            10
+          </option>
+          <option
+            key="1"
+            value={25}
+          >
+            25
+          </option>
+          <option
+            key="2"
+            value={50}
+          >
+            50
+          </option>
+          <option
+            value={0}
+          >
+            All
+          </option>
+        </select>
+      </label>
+    </div>
+    <div
+      className="small-12 medium-4 large-2 columns"
+    >
+      <label>
+        Search all columns:
+        <input
+          onChange={[Function]}
+          type="search"
+          value=""
+        />
+      </label>
+    </div>
+  </div>
+</TablePreamble>
+`;
