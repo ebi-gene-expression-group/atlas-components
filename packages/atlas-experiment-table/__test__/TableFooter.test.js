@@ -1,64 +1,213 @@
 import React from 'react'
-import {shallow} from 'enzyme'
-import { data, getRandomInt } from './TestUtils'
+import { shallow, mount } from 'enzyme'
+
 import TableFooter from '../src/TableFooter'
 
+import { getRandomInt } from './TestUtils'
+
 describe(`TableFooter`, () => {
+  // This value depends on the actual implementation of TableFooter; can be exporeted if we don’t want to declare it
+  const MAX_PAGE_ITEMS_COUNT = 7
+
   const props = {
-    dataArrayLength: getRandomInt(1, 7),
-    entriesPerPage: 1,
-    selectedNumber: 2,
-    dataLength:  data.length,
+    dataRowsLength: 0,
+    filteredDataRowsLength: 0,
+    rowsPerPage: 10,
     currentPage: 1,
-    onChange: () => {},
-    currentPageDataLength: 1
+    onChange: jest.fn()
   }
 
-  test(`should render a previous button, a next button and information text`, () => {
+  afterEach(() => {
+    props.onChange.mockReset()
+  })
+
+  test(`shows nothing if the number of filtered rows is greater than the total number of rows`, () => {
+    const wrapper = shallow(<TableFooter {...props} filteredDataRowsLength={props.dataRowsLength + 1}/>)
+    expect(wrapper).toBeEmptyRender()
+  })
+
+  test(`displays only two disabled links, Previous and Next, if no rows are shown in the table`, () => {
     const wrapper = shallow(<TableFooter {...props}/>)
-    expect(wrapper.find(`li`).first().key()).toBe(`previous`)
-    expect(wrapper.find(`li`).last().key()).toBe(`next`)
+
+    expect(wrapper.find(`li`)).toHaveLength(2)
+    expect(wrapper.find(`li`).first()).toHaveText(`Previous`)
+    expect(wrapper.find(`li`).first().find(`span`)).toHaveClassName(`disabled`)
+    expect(wrapper.find(`li`).last()).toHaveText(`Next`)
+    expect(wrapper.find(`li`).last().find(`span`)).toHaveClassName(`disabled`)
   })
 
-  //pagination with front and back dots
-  test(`should have dots inserted if current page is a middle one among more than 6 pages`, () => {
-    const largeTableProps = {
-      dataArrayLength: 23,
-      entriesPerPage: 1,
-      selectedNumber: 1,
-      dataLength:  16,
-      currentPage: 18,
-      onChange: () => {},
-      currentPageDataLength: 1
-    }
-    const wrapper = shallow(<TableFooter {...largeTableProps}/>)
-    //pages should be: previous, 1, ..., 17, 18(current), 19, ..., 23, next
-    expect(wrapper.find(`li`).length).toBe(9)
-    //buttons: previous, 1, 17, 19, 23, next
-    expect(wrapper.find(`li a`).length).toBe(6)
+  test(`shows all page items if the number of data rows spans ${MAX_PAGE_ITEMS_COUNT} or fewer pages`, () => {
+    const filteredDataRowsLength = getRandomInt(1, props.rowsPerPage * MAX_PAGE_ITEMS_COUNT + 1)
+    const wrapper =
+    shallow(
+      <TableFooter
+        {...props}
+        dataRowsLength={filteredDataRowsLength}
+        filteredDataRowsLength={filteredDataRowsLength}/>)
 
-    const wrapper2 = shallow(<TableFooter {...largeTableProps} currentPage={2}/>)
-    //pages: previous, 1 ,2(current), 3, 4, 5, ..., 23, next
-    expect(wrapper2.find(`li`).length).toBe(9)
-    //buttons: previous, 1, 3, 4, 5, 23, next
-    expect(wrapper2.find(`li a`).length).toBe(7)
-
-    const wrapper3= shallow(<TableFooter {...largeTableProps} currentPage={22}/>)
-    //pages: previous, 1 ,19, 20, 21, 22(current), 23, next
-    expect(wrapper3.find(`li`).length).toBe(9)
-    //buttons: previous, 1, 19, 20, 21, 23, next
-    expect(wrapper3.find(`li a`).length).toBe(7)
+    expect(wrapper.find(`li`)).toHaveLength(Math.ceil(filteredDataRowsLength / props.rowsPerPage) + 2)
   })
 
+  test(`shows the first page itemes anchored at 1 if data rows spans ${MAX_PAGE_ITEMS_COUNT} or more pages`, () => {
+    const filteredDataRowsLength = getRandomInt(props.rowsPerPage * MAX_PAGE_ITEMS_COUNT + 1, props.rowsPerPage * 20)
+    const wrapper =
+      shallow(
+        <TableFooter
+          {...props}
+          dataRowsLength={filteredDataRowsLength}
+          filteredDataRowsLength={filteredDataRowsLength}/>)
 
-  test(`should not have dots if pages are less than or equal to 6`, () => {
-    const wrapper = shallow(<TableFooter {...props}/>)
-    //maximum pages: previous, 1, 2, 3, 4, 5, 6, next
-    expect(wrapper.find(`li a`).length).toBeLessThanOrEqual(props.dataArrayLength + 1)
-    const wrapper2 = shallow(<TableFooter {...props} dataArrayLength={6} currentPage={3}/>)
-    expect(wrapper2.find(`li a`).length).toBe(7)
-    const wrapper3 = shallow(<TableFooter {...props} dataArrayLength={6} currentPage={1}/>)
-    expect(wrapper3.find(`li a`).length).toBe(6)
+    expect(wrapper.find(`li`)).toHaveLength(MAX_PAGE_ITEMS_COUNT + 2)
+    expect(wrapper.find(`li`).at(0)).toHaveText(`Previous`)
+    expect(wrapper.find(`li`).at(1)).toHaveText(`1`)
+    expect(wrapper.find(`li`).at(2)).toHaveText(`2`)
+    expect(wrapper.find(`li`).at(3)).toHaveText(`3`)
+    expect(wrapper.find(`li`).at(4)).toHaveText(`4`)
+    expect(wrapper.find(`li`).at(5)).toHaveText(`5`)
+    expect(wrapper.find(`li`).at(6)).toHaveText(`…`)
+    expect(wrapper.find(`li`).at(7)).toHaveText(`${Math.ceil(filteredDataRowsLength / props.rowsPerPage)}`)
+    expect(wrapper.find(`li`).at(8)).toHaveText(`Next`)
   })
 
+  test(`shows the first page itemes anchored at N if data rows spans ${MAX_PAGE_ITEMS_COUNT} or more pages`, () => {
+    const filteredDataRowsLength = getRandomInt(props.rowsPerPage * MAX_PAGE_ITEMS_COUNT + 1, props.rowsPerPage * 20)
+    const wrapper =
+      shallow(
+        <TableFooter
+          {...props}
+          currentPage={Math.ceil(filteredDataRowsLength / props.rowsPerPage)}
+          dataRowsLength={filteredDataRowsLength}
+          filteredDataRowsLength={filteredDataRowsLength}/>)
+
+    expect(wrapper.find(`li`)).toHaveLength(MAX_PAGE_ITEMS_COUNT + 2)
+    expect(wrapper.find(`li`).at(0)).toHaveText(`Previous`)
+    expect(wrapper.find(`li`).at(1)).toHaveText(`1`)
+    expect(wrapper.find(`li`).at(2)).toHaveText(`…`)
+    expect(wrapper.find(`li`).at(3)).toHaveText(`${Math.ceil(filteredDataRowsLength / props.rowsPerPage) - 4}`)
+    expect(wrapper.find(`li`).at(4)).toHaveText(`${Math.ceil(filteredDataRowsLength / props.rowsPerPage) - 3}`)
+    expect(wrapper.find(`li`).at(5)).toHaveText(`${Math.ceil(filteredDataRowsLength / props.rowsPerPage) - 2}`)
+    expect(wrapper.find(`li`).at(6)).toHaveText(`${Math.ceil(filteredDataRowsLength / props.rowsPerPage) - 1}`)
+    expect(wrapper.find(`li`).at(7)).toHaveText(`${Math.ceil(filteredDataRowsLength / props.rowsPerPage)}`)
+    expect(wrapper.find(`li`).at(8)).toHaveText(`Next`)
+  })
+
+  test(`shows the first, last and middle page items if data rows spans ${MAX_PAGE_ITEMS_COUNT} or more pages`, () => {
+    const filteredDataRowsLength = getRandomInt(props.rowsPerPage * 8 + 1, props.rowsPerPage * 20)
+    const currentPage = getRandomInt(5, Math.ceil(filteredDataRowsLength / props.rowsPerPage) - 4)
+    const wrapper =
+      shallow(
+        <TableFooter
+          {...props}
+          currentPage={currentPage}
+          dataRowsLength={filteredDataRowsLength}
+          filteredDataRowsLength={filteredDataRowsLength}/>)
+
+    expect(wrapper.find(`li`)).toHaveLength(MAX_PAGE_ITEMS_COUNT + 2)
+    expect(wrapper.find(`li`).at(0)).toHaveText(`Previous`)
+    expect(wrapper.find(`li`).at(1)).toHaveText(`1`)
+    expect(wrapper.find(`li`).at(2)).toHaveText(`…`)
+    expect(wrapper.find(`li`).at(3)).toHaveText(`${currentPage - 1}`)
+    expect(wrapper.find(`li`).at(4)).toHaveText(`${currentPage}`)
+    expect(wrapper.find(`li`).at(5)).toHaveText(`${currentPage + 1}`)
+    expect(wrapper.find(`li`).at(6)).toHaveText(`…`)
+    expect(wrapper.find(`li`).at(7)).toHaveText(`${Math.ceil(filteredDataRowsLength / props.rowsPerPage)}`)
+    expect(wrapper.find(`li`).at(8)).toHaveText(`Next`)
+  })
+
+  test(`calls onClick with the next page index as argument when “Next” is clicked`, () => {
+    const filteredDataRowsLength = getRandomInt(props.rowsPerPage + 1, props.rowsPerPage * 20)
+    const currentPage = getRandomInt(1, Math.ceil(filteredDataRowsLength / props.rowsPerPage) - 1)
+    const wrapper =
+      shallow(
+        <TableFooter
+          {...props}
+          currentPage={currentPage}
+          dataRowsLength={filteredDataRowsLength}
+          filteredDataRowsLength={filteredDataRowsLength}/>)
+
+    wrapper.find(`li`).last().find(`a`).simulate(`click`)
+    expect(props.onChange).toHaveBeenCalled()
+    expect(props.onChange.mock.calls).toContainEqual([currentPage + 1])
+  })
+
+  test(`calls onClick with the previous page index as argument when “Previous” is clicked`, () => {
+    const filteredDataRowsLength = getRandomInt(props.rowsPerPage + 1, props.rowsPerPage * 20)
+    const currentPage = getRandomInt(2, Math.ceil(filteredDataRowsLength / props.rowsPerPage))
+    const wrapper =
+      shallow(
+        <TableFooter
+          {...props}
+          currentPage={currentPage}
+          dataRowsLength={filteredDataRowsLength}
+          filteredDataRowsLength={filteredDataRowsLength}/>)
+
+    wrapper.find(`li`).first().find(`a`).simulate(`click`)
+    expect(props.onChange).toHaveBeenCalled()
+    expect(props.onChange.mock.calls).toContainEqual([currentPage - 1])
+  })
+
+  test(`calls onClick with the displayed page index as argument when a page number is clicked`, () => {
+    const filteredDataRowsLength = getRandomInt(props.rowsPerPage + 1, props.rowsPerPage * 20)
+    const currentPage = getRandomInt(1, Math.ceil(filteredDataRowsLength / props.rowsPerPage))
+    const wrapper =
+      shallow(
+        <TableFooter
+          {...props}
+          currentPage={currentPage}
+          dataRowsLength={filteredDataRowsLength}
+          filteredDataRowsLength={filteredDataRowsLength}/>)
+
+    const activePageLinks =
+      wrapper.find(`a`).filterWhere(e => !e.hasClass(`disabled`) && e.text() !== `Previous` && e.text() !== `Next`)
+
+    const randomPageLinkIndex = getRandomInt(0, activePageLinks.length)
+
+    activePageLinks.at(randomPageLinkIndex).simulate(`click`)
+    expect(props.onChange).toHaveBeenCalled()
+    expect(props.onChange.mock.calls).toContainEqual([Number.parseInt(activePageLinks.at(randomPageLinkIndex).text())])
+  })
+
+  test(`matches snapshot (more than ${MAX_PAGE_ITEMS_COUNT} pages filtered from a superset of rows)`, () => {
+    //const filteredDataRowsLength = getRandomInt(props.rowsPerPage * MAX_PAGE_ITEMS_COUNT + 1, props.rowsPerPage * 20)
+    const filteredDataRowsLength = 197
+    const wrapper =
+      mount(
+        <TableFooter
+          {...props}
+          currentPage={Math.ceil(filteredDataRowsLength / props.rowsPerPage)}
+          dataRowsLength={filteredDataRowsLength * 3}
+          filteredDataRowsLength={filteredDataRowsLength}/>)
+    expect(wrapper).toMatchSnapshot()
+  })
+
+  test(`matches snapshot (fewer than ${MAX_PAGE_ITEMS_COUNT} pages in total)`, () => {
+    // const filteredDataRowsLength = getRandomInt(1, props.rowsPerPage * MAX_PAGE_ITEMS_COUNT + 1)
+    const filteredDataRowsLength = 34
+    const wrapper =
+      mount(
+        <TableFooter
+          {...props}
+          currentPage={Math.ceil(filteredDataRowsLength / props.rowsPerPage)}
+          dataRowsLength={filteredDataRowsLength}
+          filteredDataRowsLength={filteredDataRowsLength}/>)
+    expect(wrapper).toMatchSnapshot()
+  })
+
+  test(`matches snapshot (one page)`, () => {
+    // const filteredDataRowsLength = getRandomInt(1, props.rowsPerPage * MAX_PAGE_ITEMS_COUNT + 1)
+    const filteredDataRowsLength = 1
+    const wrapper =
+      mount(
+        <TableFooter
+          {...props}
+          currentPage={Math.ceil(filteredDataRowsLength / props.rowsPerPage)}
+          dataRowsLength={filteredDataRowsLength}
+          filteredDataRowsLength={filteredDataRowsLength}/>)
+    expect(wrapper).toMatchSnapshot()
+  })
+
+  test(`matches snapshot (no data)`, () => {
+    const wrapper = mount(<TableFooter {...props} dataRowsLength={5}/>)
+    expect(wrapper).toMatchSnapshot()
+  })
 })
