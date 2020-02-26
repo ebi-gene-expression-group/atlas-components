@@ -26,6 +26,11 @@ describe(`TableFooter`, () => {
     expect(wrapper).toBeEmptyRender()
   })
 
+  test(`displays only two disabled links, Previous and Next, if no rows are shown in the table and we want all items`, () => {
+    const wrapper = shallow(<TableFooter {...props} dataRowsLength={1000} filteredDataRowsLength={0} rowsPerPage={0}/>)
+    expect(wrapper.find(`li`)).toHaveLength(2)
+  })
+
   test(`displays only two disabled links, Previous and Next, if no rows are shown in the table`, () => {
     const wrapper = shallow(<TableFooter {...props}/>)
 

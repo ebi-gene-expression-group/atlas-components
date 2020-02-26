@@ -18,6 +18,12 @@ const TableFooter =
   const pagination = paginate(filteredDataRowsLength, currentPage, rowsPerPage, 7)
 
   let restyledPages = pagination.pages
+
+  // An edge case where paginate gets all wonky
+  if (filteredDataRowsLength === 0) {
+    restyledPages = []
+  }
+
   // Replace first and last pages with 1 and n if they’re not visible in the default 7 items
   if (restyledPages[0] > 1) {
     restyledPages[0] = 1
