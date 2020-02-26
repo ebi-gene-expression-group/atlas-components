@@ -1,117 +1,126 @@
 import React from 'react'
-import { shallow } from 'enzyme'
-import { data } from './TestUtils'
-
-import TableContent from '../src/TableContent'
-import {alertInvalidFiles} from '../src/TableContent'
-import TooltipIcon from '../src/TooltipIcon'
+import { shallow, mount } from 'enzyme'
 
 import { Table } from 'evergreen-ui'
 
 import '@babel/polyfill'
-import fetchMock from 'fetch-mock'
+import TableContent from '../src/TableContent'
+import TableHeaderCell from '../src/head/TableHeaderCell'
+import TableCell from '../src/TableCell'
+import SelectionTableHeaderCell from '../src/head/SelectionTableHeaderCell'
 
+import randomString from 'random-string'
+
+import { getRandomInt, bulkTableHeaders } from './TestUtils'
+import bulkExperiments from './experiments-bulk.json'
 
 describe(`TableContent`, () => {
-
-  beforeEach(() => {
-    fetchMock.restore()
-  })
-
   const props = {
-    enableIndex: true,
-    tableHeader: [{
-      type: `sort`,
-      title: `type`,
-      width: 3,
-      dataParam: `experimentType`,
-      image: {
-        SINGLE: {src: `www.foo.com`, alt: `foo`},
-        DOUBLE: {src: `www.bar.cn`, alt: `bar`}
-      }
-    },
-    {
-      type: `search`,
-      title: `title1`,
-      width: 12,
-      dataParam: `hello`
-    },
-    {
-      type: `search`,
-      title: `title2`,
-      width: 3,
-      dataParam: `hi`
-    }],
-    searchedColumnIndex: 2,
-    searchQuery: `search`,
-    orderedColumnIndex: 1,
-    ascendingOrder: true,
-    enableDownload: true,
-    checkedRows: [`E-EHCA-2`, `E-EHCA-1`],
-    currentPageData: data,
-    host: `http://boo`,
-    entriesPerPage: 2,
-    currentPage: 1,
-    tableHeaderOnClick: () => {},
-    tableHeaderOnChange: () => {},
-    downloadOnChange: () => {},
-    downloadTooltip: `<t>A random test tooltip text</t>`
+    dataRows: [],
+    tableHeaders: [],
+    // Filter handling
+    filters: {},
+    tableHeaderCellOnChange: jest.fn(),
+    // Ordering
+    sortColumnIndex: 0,
+    ascendingOrder: false,
+    tableHeaderCellOnClick: jest.fn(),
+    selectedRows: [],
+    host: ``,
+    selectOnChange: jest.fn()
   }
 
-  test(`should render a previous button, a next button and information text`, () => {
+  test(`renders a table with head and body`, () => {
     const wrapper = shallow(<TableContent {...props}/>)
+
     expect(wrapper).toContainExactlyOneMatchingElement(Table)
-    expect(wrapper).toContainExactlyOneMatchingElement(Table.Head)
-    expect(wrapper).toContainExactlyOneMatchingElement(Table.Body)
+    expect(wrapper.find(Table).find(Table.Head)).toHaveLength(1)
+    expect(wrapper.find(Table).find(Table.Body)).toHaveLength(1)
   })
 
-  test(`should show/hide download based on props`, () => {
-    const wrapper = shallow(<TableContent {...props} enableDownload={true}/>)
-    expect(wrapper).toContainExactlyOneMatchingElement(`.downloadHeader`)
+  test(`displays as many table header cells as there are in prop tableHeaders`, () => {
+    const tableHeaders = bulkTableHeaders.filter(() => Math.random() < 0.5)
+    const wrapper = shallow(<TableContent {...props} tableHeaders={tableHeaders}/>)
 
-    const wrapperNoDownload= shallow(<TableContent {...props} enableDownload={false}/>)
-    expect(wrapperNoDownload.find(`.downloadHeader`)).not.toExist()
+    expect(wrapper.find(Table).find(Table.Head).find(TableHeaderCell)).toHaveLength(tableHeaders.length)
   })
 
-  test(`should display a HTML component in download button's tooltip`, () => {
-    const wrapper = shallow(<TableContent {...props} enableDownload={true}/>)
-    const tooltip = wrapper.find(TooltipIcon)
-    expect(wrapper).toContainExactlyOneMatchingElement(TooltipIcon)
-    expect(tooltip.props().tooltipText).toEqual(props.downloadTooltip)
+  test(`displays as many rows as there are in prop dataRows`, () => {
+    const tableHeaders = bulkTableHeaders.filter(() => Math.random() < 0.5)
+    const dataRows = bulkExperiments.filter(() => Math.random() < 0.5)
+    const wrapper = shallow(<TableContent {...props} dataRows={dataRows} tableHeaders={tableHeaders}/>)
+
+    expect(wrapper.find(Table).find(Table.Body).find(Table.Row)).toHaveLength(dataRows.length)
   })
 
-  test(`should display the images in the table content if the header has image field`, () => {
-    const wrapper = shallow(<TableContent {...props}/>)
-    expect(wrapper.find(`img`)).toHaveLength(data.length - 1)
+  test(`displays as many columns as there are in prop tableHeaders`, () => {
+    const tableHeaders = bulkTableHeaders.filter(() => Math.random() < 0.5)
+    const dataRows = bulkExperiments.filter(() => Math.random() < 0.5)
+    const wrapper = shallow(<TableContent {...props} dataRows={dataRows} tableHeaders={tableHeaders}/>)
+
+    expect(wrapper.find(Table).find(Table.Body).find(Table.Row).first().find(TableCell))
+      .toHaveLength(tableHeaders.length)
+    expect(wrapper.find(Table).find(Table.Body).find(Table.Row).last().find(TableCell))
+      .toHaveLength(tableHeaders.length)
   })
 
-  test(`if an image field has a value with an unknown value it displays a fallback symbol`, () => {
-    const wrapper = shallow(<TableContent {...props}/>)
-    expect(wrapper.find(`span.unknown`)).toHaveLength(1)
-    expect(wrapper.find(`span.unknown`)).toHaveText(`❔`)
+  test(`wires functions correctly to the table header cells`, () => {
+    const tableHeaders = bulkTableHeaders.filter(() => Math.random() < 0.5)
+    const dataRows = bulkExperiments.filter(() => Math.random() < 0.5)
+    const wrapper = shallow(<TableContent {...props} dataRows={dataRows} tableHeaders={tableHeaders}/>)
+
+    wrapper.find(Table).find(Table.Head).find(TableHeaderCell).first().simulate(`click`)
+    wrapper.find(Table).find(Table.Head).find(TableHeaderCell).last().simulate(`click`)
+    expect(props.tableHeaderCellOnClick).toHaveBeenCalledTimes(2)
+
+    wrapper.find(Table).find(Table.Head).find(TableHeaderCell).first().simulate(`change`)
+    wrapper.find(Table).find(Table.Head).find(TableHeaderCell).last().simulate(`change`)
+    expect(props.tableHeaderCellOnChange).toHaveBeenCalledTimes(2)
   })
 
-  test(`should direct to download window without popping a confirm window if all download files are valid`, async (done) => {
-    const checkFileEndpoint = `json/experiments/download/zip/check`
-    const response = `{"invalidFiles":{"E-EHCA-2": [], "E-EHCA-1": []}}`
-    fetchMock.get(`${props.host}/${checkFileEndpoint}?accession=${props.checkedRows[0]}&accession=${props.checkedRows[1]}`, response)
+  test(`wires function correctly to the selection table header cell`, () => {
+    const tableHeaders = bulkTableHeaders.filter(() => Math.random() < 0.5)
+    const dataRows = bulkExperiments.filter(() => Math.random() < 0.5)
+    const rowSelectionColumn = {
+      label: randomString(),
+      dataKey: tableHeaders[getRandomInt(0, tableHeaders.length)].dataKey,
+      tooltipContent: randomString(),
+      tableHeaderCellOnClick: jest.fn()
+    }
+    const wrapper =
+      shallow(
+        <TableContent
+          {...props}
+          dataRows={dataRows}
+          tableHeaders={tableHeaders}
+          rowSelectionColumn={rowSelectionColumn}/>)
 
-    global.window.location.replace = jest.fn(() => done())
-
-    await alertInvalidFiles(props.host, props.checkedRows)
-
-    await expect(global.window.location.replace).toBeCalledWith(`http://boo/experiments/download/zip?accession=E-EHCA-2&accession=E-EHCA-1`)
+    expect(wrapper.find(Table).find(Table.Head).find(SelectionTableHeaderCell)).toHaveLength(1)
+    wrapper.find(Table).find(Table.Head).find(SelectionTableHeaderCell).simulate(`click`)
+    expect(rowSelectionColumn.tableHeaderCellOnClick).toHaveBeenCalled()
   })
 
-  test(`should pop a confirm window if any download files are invalid`, async (done) => {
-    const checkFileEndpoint = `json/experiments/download/zip/check`
-    const response = `{"invalidFiles":{"E-EHCA-2": ["file1", "file2"]}, "E-EHCA-1":[]}`
-    fetchMock.get(`${props.host}/${checkFileEndpoint}?accession=${props.checkedRows[0]}&accession=${props.checkedRows[1]}`, response)
+  test(`matches snapshot (without selection)`, () => {
+    const wrapper =
+      mount(<TableContent {...props} dataRows={bulkExperiments.slice(100, 150)} tableHeaders={bulkTableHeaders}/>)
+    expect(wrapper).toMatchSnapshot()
+  })
 
-    global.window.confirm = jest.fn(() => done())
+  test(`matches snapshot (with selection)`, () => {
+    const rowSelectionColumn = {
+      label: `Download`,
+      dataKey: `experimentAccession`,
+      tooltipContent: `Download experiment and stuff`
+    }
+    const wrapper =
+      mount(
+        <TableContent
+          {...props}
+          dataRows={bulkExperiments.slice(100, 150)}
+          tableHeaders={bulkTableHeaders}
+          rowSelectionColumn={rowSelectionColumn}
+          selectedRows={bulkExperiments.slice(110, 120).map(dataRow => dataRow.experimentAccession)}/>)
 
-    await alertInvalidFiles(props.host, props.checkedRows)
-
-    await expect(global.window.confirm).toHaveBeenCalled()
+    expect(wrapper).toMatchSnapshot()
   })
 })

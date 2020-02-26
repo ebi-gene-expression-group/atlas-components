@@ -34,16 +34,113 @@ const getSingleCellExperimentFiles = (experimentAccession) =>
     `ExpDesign-${experimentAccession}.tsv`
   ]
 
-const tableHeader = [
-  {type: `sort`, title: `Technology type`, width: 240, dataParam: `technologyType`},
-  { type: `sort`, title: `Loaded date`, width: 140, dataParam: `lastUpdate` },
-  { type: `search`, title: `species`, width: 200, dataParam: `species` },
-  { type: ``, title: `experiment description`, width: 360, dataParam: `experimentDescription`, link: `experimentAccession`, resource: `experiments`, endpoint: `Results` },
-  { type: ``, title: `experiment factors`, width: 260, dataParam: `experimentalFactors` },
-  { type: `sort`, title: `Number of assays`, width: 160, dataParam: `numberOfAssays`, link: `experimentAccession`, resource: `experiments`, endpoint: `Experiment Design` },
+const bulkTableHeaders = [
+  {
+    label: `Type`,
+    dataKey: `experimentType`,
+    sortable: true,
+    width: 0.5,
+    image: {
+      Differential: {
+        src: `https://www.ebi.ac.uk/gxa/resources/images/experiments-table/differential.png`,
+        alt: `Differential experiment`,
+        title: `Differential experiment`
+      },
+      Baseline: {
+        src: `https://www.ebi.ac.uk/gxa/resources/images/experiments-table/baseline.png`,
+        alt: `Baseline experiment`,
+        title: `Baseline experiment`
+      }
+    },
+    linkTo: dataRow => `https://www.ebi.ac.uk/gxa/experiments?experimentType=${dataRow.experimentType.toLowerCase()}`
+  },
+  {
+    label: `Load date`,
+    dataKey: `loadDate`,
+    sortable: true,
+    width: 0.5
+  },
+  {
+    label: `Species`,
+    dataKey: `species`,
+    searchable: true,
+    sortable: true
+  },
+  {
+    label: `Title`,
+    dataKey: `experimentDescription`,
+    searchable: true,
+    sortable: true,
+    linkTo: dataRow => `experiments/${dataRow.experimentAccession}/Results`,
+    width: 2
+  },
+  {
+    label: `Assays`,
+    dataKey: `numberOfAssays`,
+    sortable: true,
+    linkTo: dataRow => `experiments/${dataRow.experimentAccession}/Experiment%20Design`,
+    width: 0.5
+  },
+  {
+    label: `Experimental factors`,
+    dataKey: `experimentalFactors`,
+    searchable: true,
+    linkTo: dataRow => `experiments/${dataRow.experimentAccession}/Experiment%20Design`
+  },
+  {
+    label: `Technology`,
+    dataKey: `technologyType`,
+    sortable: false
+  }
 ]
 
-const tableFilters = [
+
+const tableHeader = [
+  {
+    type: `sort`,
+    title: `Technology type`,
+    width: 1.5,
+    dataParam: `technologyType`
+  },
+  {
+    type: `sort`,
+    title: `Loaded date`,
+    width: 1.25,
+    dataParam: `lastUpdate`
+  },
+  {
+    type: `search`,
+    title: `species`,
+    width: 1.5,
+    dataParam: `species`
+  },
+  {
+    type: ``,
+    title: `experiment description`,
+    width: 6,
+    dataParam: `experimentDescription`,
+    link: `experimentAccession`,
+    resource: `experiments`,
+    endpoint: `Results`
+  },
+  {
+    type: ``,
+    title: `experiment factors`,
+    width: 2,
+    dataParam: `experimentalFactors`
+  },
+  {
+    type: `sort`,
+    title: `Number of assays`,
+    width: 1.25,
+    dataParam: `numberOfAssays`,
+    link: `experimentAccession`,
+    resource: `experiments`,
+    endpoint: `Experiment Design`
+  },
+]
+
+const dropdownFilters = [
   {
     label: `Kingdom`,
     dataParam: `kingdom`
@@ -113,4 +210,4 @@ const data = [
   }
 ]
 
-export { getRandomInt, generateRandomExperimentAccession, generateRandomHost, getSingleCellExperimentFiles, TableCellDiv, tableHeader, data, tableFilters }
+export { getRandomInt, generateRandomHost, generateRandomExperimentAccession, getSingleCellExperimentFiles, bulkTableHeaders, tableHeader, data, dropdownFilters }
