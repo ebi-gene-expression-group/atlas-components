@@ -9,18 +9,21 @@ import randomString from 'random-string'
 import { getRandomInt } from './TestUtils'
 
 describe(`TableCell`, () => {
-  const MAX = 20
+  const MAX_DATA_ROW_ARRAY_LENGTH = 20
 
   const props = {
     dataRow: {
       string: randomString(),
       number: getRandomInt(0, 9001),
       arrayOfStrings:
-        Array.apply(0, Array(getRandomInt(1, MAX))).map(() => randomString()),
+        Array.apply(0, Array(getRandomInt(1, MAX_DATA_ROW_ARRAY_LENGTH)))
+          .map(() => randomString()),
       arrayOfNumbers:
-        Array.apply(0, Array(getRandomInt(1, MAX))).map(() => getRandomInt(0, 9001)),
+        Array.apply(0, Array(getRandomInt(1, MAX_DATA_ROW_ARRAY_LENGTH)))
+          .map(() => getRandomInt(0, 9001)),
       arrayOfStringsAndNumbers:
-        Array.apply(0, Array(getRandomInt(1, MAX))).map(() => Math.random() < 0.5 ? randomString() : getRandomInt(0, 9001))
+        Array.apply(0, Array(getRandomInt(1, MAX_DATA_ROW_ARRAY_LENGTH)))
+          .map(() => Math.random() < 0.5 ? randomString() : getRandomInt(0, 9001))
     }
   }
 
@@ -36,12 +39,15 @@ describe(`TableCell`, () => {
     expect(wrapper.find(Table.Cell).find(Text).children()).toHaveText(props.dataRow.number.toString())
   })
 
-  test.each([`arrayOfStrings`, `arrayOfNumbers`, `arrayOfStringsAndNumbers`])(`is an unordered-list if keyed row value is an array`, (arrayDataKey) => {
+  test.each(
+    [`arrayOfStrings`, `arrayOfNumbers`, `arrayOfStringsAndNumbers`]
+  )(`is an unordered-list if keyed row value is an array`, (arrayDataKey) => {
     const wrapper = shallow(<TableCell {...props} dataKey={arrayDataKey}/>)
 
     expect(wrapper.find(Table.Cell).find(`li`)).toHaveLength(props.dataRow[arrayDataKey].length)
     expect(wrapper.find(Table.Cell).find(`li`).first()).toHaveText(props.dataRow[arrayDataKey][0].toString())
-    expect(wrapper.find(Table.Cell).find(`li`).last()).toHaveText(props.dataRow[arrayDataKey][props.dataRow[arrayDataKey].length - 1].toString())
+    expect(wrapper.find(Table.Cell).find(`li`).last())
+      .toHaveText(props.dataRow[arrayDataKey][props.dataRow[arrayDataKey].length - 1].toString())
   })
 
   test(`is an image if a dictionary of images is passed as prop`, () => {
