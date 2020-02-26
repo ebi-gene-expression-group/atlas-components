@@ -19,8 +19,9 @@ TooltipIcon.propTypes = {
   tooltipText: PropTypes.string.isRequired
 }
 
-const SelectionTableHeaderCell = ({ label, selectedRowIds, onClick, tooltipContent }) =>
+const SelectionTableHeaderCell = ({ label, selectedRowIds, onClick, tooltipContent, width }) =>
   <Table.HeaderCell
+    flexGrow={width}
     justifyContent={`center`}>
     <Heading size={500}>
       {
@@ -44,6 +45,11 @@ SelectionTableHeaderCell.propTypes = {
   selectedRowIds: PropTypes.arrayOf(PropTypes.string).isRequired,
   onClick: PropTypes.func.isRequired,
   tooltipContent: PropTypes.string,
+  width: PropTypes.number.isRequired
+}
+
+SelectionTableHeaderCell.defaultProps = {
+  width: 1
 }
 
 export default SelectionTableHeaderCell

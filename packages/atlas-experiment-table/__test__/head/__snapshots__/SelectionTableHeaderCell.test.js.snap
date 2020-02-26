@@ -5,18 +5,22 @@ exports[`SelectionTableHeaderCell matches snapshot (basic) 1`] = `
   label="Action"
   onClick={[Function]}
   selectedRowIds={Array []}
+  width={1}
 >
   <TableHeaderCell
+    flexGrow={1}
     justifyContent="center"
   >
     <withTheme(TableCell)
       borderBottom={null}
+      flexGrow={1}
       justifyContent="center"
       overflow="visible"
     >
       <TableCell
         appearance="default"
         borderBottom={null}
+        flexGrow={1}
         justifyContent="center"
         overflow="visible"
         theme={
@@ -458,6 +462,7 @@ exports[`SelectionTableHeaderCell matches snapshot (basic) 1`] = `
           className="css-saeo60"
           display="flex"
           flex={1}
+          flexGrow={1}
           flexShrink={0}
           innerRef={[Function]}
           justifyContent="center"
@@ -472,6 +477,7 @@ exports[`SelectionTableHeaderCell matches snapshot (basic) 1`] = `
             className="css-saeo60"
             display="flex"
             flex={1}
+            flexGrow={1}
             flexShrink={0}
             innerRef={[Function]}
             justifyContent="center"
@@ -917,6 +923,7 @@ exports[`SelectionTableHeaderCell matches snapshot (basic) 1`] = `
               className="css-saeo60 css-nil"
               display="flex"
               flex={1}
+              flexGrow={1}
               flexShrink={0}
               innerRef={[Function]}
               is="div"
@@ -926,7 +933,7 @@ exports[`SelectionTableHeaderCell matches snapshot (basic) 1`] = `
               paddingX={12}
             >
               <div
-                className="css-saeo60 css-nil 📦pl_12px 📦pr_12px 📦box-szg_border-box 📦flx_1 📦dspl_flex 📦algn-itms_center 📦flx-srnk_0 📦ovflw-x_visible 📦ovflw-y_visible 📦just-cnt_center"
+                className="css-saeo60 css-nil 📦pl_12px 📦pr_12px 📦box-szg_border-box 📦flx_1 📦dspl_flex 📦algn-itms_center 📦flx-srnk_0 📦ovflw-x_visible 📦ovflw-y_visible 📦flx-grow_1 📦just-cnt_center"
                 onKeyDown={[Function]}
               >
                 <withTheme(Heading)
@@ -1408,18 +1415,22 @@ exports[`SelectionTableHeaderCell matches snapshot (with a selection and a toolt
     ]
   }
   tooltipContent="Detailed description of the action performed on the rows when the header cell link is clicked"
+  width={1}
 >
   <TableHeaderCell
+    flexGrow={1}
     justifyContent="center"
   >
     <withTheme(TableCell)
       borderBottom={null}
+      flexGrow={1}
       justifyContent="center"
       overflow="visible"
     >
       <TableCell
         appearance="default"
         borderBottom={null}
+        flexGrow={1}
         justifyContent="center"
         overflow="visible"
         theme={
@@ -1861,6 +1872,7 @@ exports[`SelectionTableHeaderCell matches snapshot (with a selection and a toolt
           className="css-saeo60"
           display="flex"
           flex={1}
+          flexGrow={1}
           flexShrink={0}
           innerRef={[Function]}
           justifyContent="center"
@@ -1875,6 +1887,7 @@ exports[`SelectionTableHeaderCell matches snapshot (with a selection and a toolt
             className="css-saeo60"
             display="flex"
             flex={1}
+            flexGrow={1}
             flexShrink={0}
             innerRef={[Function]}
             justifyContent="center"
@@ -2320,6 +2333,7 @@ exports[`SelectionTableHeaderCell matches snapshot (with a selection and a toolt
               className="css-saeo60 css-nil"
               display="flex"
               flex={1}
+              flexGrow={1}
               flexShrink={0}
               innerRef={[Function]}
               is="div"
@@ -2329,7 +2343,7 @@ exports[`SelectionTableHeaderCell matches snapshot (with a selection and a toolt
               paddingX={12}
             >
               <div
-                className="css-saeo60 css-nil 📦pl_12px 📦pr_12px 📦box-szg_border-box 📦flx_1 📦dspl_flex 📦algn-itms_center 📦flx-srnk_0 📦ovflw-x_visible 📦ovflw-y_visible 📦just-cnt_center"
+                className="css-saeo60 css-nil 📦pl_12px 📦pr_12px 📦box-szg_border-box 📦flx_1 📦dspl_flex 📦algn-itms_center 📦flx-srnk_0 📦ovflw-x_visible 📦ovflw-y_visible 📦flx-grow_1 📦just-cnt_center"
                 onKeyDown={[Function]}
               >
                 <withTheme(Heading)
@@ -3295,18 +3309,22 @@ exports[`SelectionTableHeaderCell matches snapshot (with a selection) 1`] = `
       "E-MTAB-5200",
     ]
   }
+  width={1}
 >
   <TableHeaderCell
+    flexGrow={1}
     justifyContent="center"
   >
     <withTheme(TableCell)
       borderBottom={null}
+      flexGrow={1}
       justifyContent="center"
       overflow="visible"
     >
       <TableCell
         appearance="default"
         borderBottom={null}
+        flexGrow={1}
         justifyContent="center"
         overflow="visible"
         theme={
@@ -3748,6 +3766,7 @@ exports[`SelectionTableHeaderCell matches snapshot (with a selection) 1`] = `
           className="css-saeo60"
           display="flex"
           flex={1}
+          flexGrow={1}
           flexShrink={0}
           innerRef={[Function]}
           justifyContent="center"
@@ -3762,6 +3781,7 @@ exports[`SelectionTableHeaderCell matches snapshot (with a selection) 1`] = `
             className="css-saeo60"
             display="flex"
             flex={1}
+            flexGrow={1}
             flexShrink={0}
             innerRef={[Function]}
             justifyContent="center"
@@ -4207,6 +4227,7 @@ exports[`SelectionTableHeaderCell matches snapshot (with a selection) 1`] = `
               className="css-saeo60 css-nil"
               display="flex"
               flex={1}
+              flexGrow={1}
               flexShrink={0}
               innerRef={[Function]}
               is="div"
@@ -4216,7 +4237,7 @@ exports[`SelectionTableHeaderCell matches snapshot (with a selection) 1`] = `
               paddingX={12}
             >
               <div
-                className="css-saeo60 css-nil 📦pl_12px 📦pr_12px 📦box-szg_border-box 📦flx_1 📦dspl_flex 📦algn-itms_center 📦flx-srnk_0 📦ovflw-x_visible 📦ovflw-y_visible 📦just-cnt_center"
+                className="css-saeo60 css-nil 📦pl_12px 📦pr_12px 📦box-szg_border-box 📦flx_1 📦dspl_flex 📦algn-itms_center 📦flx-srnk_0 📦ovflw-x_visible 📦ovflw-y_visible 📦flx-grow_1 📦just-cnt_center"
                 onKeyDown={[Function]}
               >
                 <withTheme(Heading)
