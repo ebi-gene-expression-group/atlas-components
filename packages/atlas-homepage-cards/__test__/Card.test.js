@@ -1,5 +1,5 @@
 import { shallow, mount } from 'enzyme'
-import EbiSpeciesIcon from 'react-ebi-species'
+import EbiSpeciesIcon from '@ebi-gene-expression-group/react-ebi-species'
 
 import { generateRandomInt } from './TestUtils'
 import {
