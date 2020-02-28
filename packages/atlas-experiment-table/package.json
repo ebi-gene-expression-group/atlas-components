@@ -39,22 +39,23 @@
     "url": "git+https://github.com/ebi-gene-expression-group/atlas-components.git"
   },
   "dependencies": {
-    "evergreen-ui": "^4.22.1",
+    "evergreen-ui": "^4.23.0",
     "jw-paginate": "^1.0.4",
     "lodash": "^4.17.15",
+    "memoize-one": "^5.1.1",
     "prop-types": "^15.7.2",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
-    "react-tooltip": "^3.11.1",
-    "styled-components": "^4.4.1",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0",
+    "react-tooltip": "^4.0.3",
     "urijs": "^1.19.2"
   },
   "devDependencies": {
-    "@babel/cli": "^7.7.5",
-    "@babel/core": "^7.7.5",
-    "@babel/polyfill": "^7.7.0",
-    "@babel/preset-env": "^7.7.6",
-    "@babel/preset-react": "^7.7.4",
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.8.6",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/polyfill": "^7.8.3",
+    "@babel/preset-env": "^7.8.6",
+    "@babel/preset-react": "^7.8.3",
     "@ebi-gene-expression-group/eslint-config": "^1.1.0",
     "babel-loader": "^8.0.6",
     "clean-webpack-plugin": "^3.0.0",
@@ -67,9 +68,9 @@
     "jest-environment-enzyme": "^7.1.2",
     "jest-enzyme": "^7.1.2",
     "random-string": "^0.2.0",
-    "react-test-renderer": "^16.12.0",
-    "webpack": "^4.41.5",
-    "webpack-cli": "^3.3.10",
-    "webpack-dev-server": "^3.10.2"
+    "react-test-renderer": "^16.13.0",
+    "webpack": "^4.41.6",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
   }
 }
