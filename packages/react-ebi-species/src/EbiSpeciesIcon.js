@@ -19,11 +19,11 @@ const EbiSpeciesIcon = ({species, groupColors, color}) => {
 }
 
 EbiSpeciesIcon.propTypes = {
-  species: PropTypes.string.isRequired,
+  species: PropTypes.string,
   groupColors: PropTypes.shape({
-    warmBlooded: PropTypes.string.isRequired,
-    plants: PropTypes.string.isRequired,
-    other: PropTypes.string.isRequired
+    warmBlooded: PropTypes.string,
+    plants: PropTypes.string,
+    other: PropTypes.string
   }),
   color: PropTypes.string
 }
