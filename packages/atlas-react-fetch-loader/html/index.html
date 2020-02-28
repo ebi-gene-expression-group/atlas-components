@@ -26,6 +26,9 @@
   fetchLoaderDemo.render({
     host: 'http://foo.bar/path/',
     resource: 'yolo/1337',
+    renameDataFields: {
+      somethingElse: 'renamedProp'
+    },
     title: 'Passed-in prop',
     footer: 'This footer will be overwritten'
   }, 'target')
