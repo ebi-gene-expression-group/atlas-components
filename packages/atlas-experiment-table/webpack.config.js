@@ -16,7 +16,9 @@ module.exports = {
   output: {
     library: `[name]`,
     filename: `[name].bundle.js`,
-    publicPath: commonPublicPath
+    publicPath: commonPublicPath,
+    // This setting fixes source maps in Firefox, the string can be anything you’d like
+    devtoolNamespace: `firefox`
   },
 
   resolve: {
