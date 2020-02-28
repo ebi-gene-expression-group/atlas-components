@@ -82,7 +82,7 @@ const TableContent =
                       dataRow={dataRow}
                       dataKey={rowSelectionColumn.dataKey}
                       selectedRowIds={selectedRows}
-                      selectOnChange={selectOnChange}
+                      onChange={selectOnChange}
                       width={rowSelectionColumn.width}/>
                   ]}
                 </Table.Row>

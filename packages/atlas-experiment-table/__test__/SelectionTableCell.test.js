@@ -14,7 +14,7 @@ describe(`SelectionTableCell`, () => {
     },
     dataKey: `string`,
     selectedRowIds: [],
-    selectOnChange: jest.fn(),
+    onChange: jest.fn(),
   }
 
   test(`renders a table cell with a checkbox`, () => {
@@ -39,8 +39,8 @@ describe(`SelectionTableCell`, () => {
     const wrapper = shallow(<SelectionTableCell {...props}/>)
     wrapper.find(Checkbox).simulate(`change`)
 
-    expect(props.selectOnChange).toHaveBeenCalled()
-    expect(props.selectOnChange.mock.calls).toContainEqual([props.dataRow[props.dataKey]])
+    expect(props.onChange).toHaveBeenCalled()
+    expect(props.onChange.mock.calls).toContainEqual([props.dataRow[props.dataKey]])
   })
 
   test(`matches snapshot (unchecked)`, () => {
