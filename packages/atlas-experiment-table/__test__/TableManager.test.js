@@ -16,7 +16,7 @@ import {
   singleCellTableHeaders, singleCellDropdownFilters, singleCellRowSelectionColumn } from './TestUtils'
 import bulkExperiments from './experiments-bulk.json'
 
-const yolo = (dataRows, dataKey) =>
+const getRandomValueFromKeyedRows = (dataRows, dataKey) =>
   _.chain(dataRows)
     .map(dataRow => _.pick(dataRow, dataKey))
     .flatMapDeep(_.values)
@@ -48,7 +48,7 @@ describe(`TableManager`, () => {
           dropdownFilters={bulkDropdownFilters}/>)
 
     const randomDropdownFilter = _.sample(bulkDropdownFilters)
-    const randomDropdownValue = yolo(bulkExperiments, randomDropdownFilter.dataKey)
+    const randomDropdownValue = getRandomValueFromKeyedRows(bulkExperiments, randomDropdownFilter.dataKey)
     wrapper.find(TablePreamble).invoke(`dropdownOnChange`)(randomDropdownFilter.dataKey, randomDropdownValue)
 
     expect(wrapper).toHaveState({ filters: { [randomDropdownFilter.dataKey]: randomDropdownValue } })
@@ -109,7 +109,7 @@ describe(`TableManager`, () => {
     expect(wrapper.find(TableContent).prop(`dataRows`)).toHaveLength(0)
 
     const randomMatchingSubstring =
-      yolo(bulkExperiments, _.sample([ ...bulkTableHeaders, ...bulkDropdownFilters ]).dataKey)
+      getRandomValueFromKeyedRows(bulkExperiments, _.sample([ ...bulkTableHeaders, ...bulkDropdownFilters ]).dataKey)
     wrapper.find(TablePreamble).invoke(`searchAllOnChange`)(randomMatchingSubstring)
     expect(wrapper.find(TableContent).prop(`dataRows`).length).toBeGreaterThan(0)
   })
@@ -125,7 +125,7 @@ describe(`TableManager`, () => {
 
     const randomTableHeaderCellFilter = _.sample(bulkTableHeaders.filter(header => header.searchable))
     const randomTableHeaderCellValueSubstring =
-      randomSubstring(yolo(bulkExperiments, randomTableHeaderCellFilter.dataKey))
+      randomSubstring(getRandomValueFromKeyedRows(bulkExperiments, randomTableHeaderCellFilter.dataKey))
     wrapper.find(TableContent).invoke(`tableHeaderCellOnChange`)(randomTableHeaderCellFilter.dataKey, randomTableHeaderCellValueSubstring)
 
     expect(wrapper).toHaveState({ filters: { [randomTableHeaderCellFilter.dataKey]: randomTableHeaderCellValueSubstring } })
