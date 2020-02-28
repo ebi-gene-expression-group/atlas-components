@@ -1,5 +1,3 @@
-import React from 'react'
-import styled from 'styled-components'
 import randomString from 'random-string'
 
 // Stolen from https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
@@ -9,10 +7,6 @@ const getRandomInt = (min, max) => {
   return Math.floor(Math.random() * (max - min)) + min //The maximum is exclusive and the minimum is inclusive
 }
 
-const TableCellDiv = styled.div`
-  font-size: 13px;
-  font-family: Helvetica, Arial, FreeSans, "Liberation Sans", sans-serif;
-`
 const generateRandomExperimentAccession = () => {
   return `E-${randomString({length: 4, numeric: false}).toUpperCase()}-${getRandomInt(1, 9999)}`
 }
@@ -33,6 +27,16 @@ const getSingleCellExperimentFiles = (experimentAccession) =>
     `${experimentAccession}.aggregated_filtered_normalised_counts.mtx_rows`,
     `ExpDesign-${experimentAccession}.tsv`
   ]
+
+const randomSubstring = (str, minLength = 1) => {
+  if (str.length <= minLength) {
+    return str
+  }
+
+  const substringLength = getRandomInt(minLength, str.length + 1)
+  const startIndex = getRandomInt(0, str.length - substringLength + 1)
+  return str.substring(startIndex, startIndex + substringLength).trim()
+}
 
 const bulkTableHeaders = [
   {
@@ -94,120 +98,93 @@ const bulkTableHeaders = [
   }
 ]
 
-
-const tableHeader = [
-  {
-    type: `sort`,
-    title: `Technology type`,
-    width: 1.5,
-    dataParam: `technologyType`
-  },
-  {
-    type: `sort`,
-    title: `Loaded date`,
-    width: 1.25,
-    dataParam: `lastUpdate`
-  },
-  {
-    type: `search`,
-    title: `species`,
-    width: 1.5,
-    dataParam: `species`
-  },
-  {
-    type: ``,
-    title: `experiment description`,
-    width: 6,
-    dataParam: `experimentDescription`,
-    link: `experimentAccession`,
-    resource: `experiments`,
-    endpoint: `Results`
-  },
-  {
-    type: ``,
-    title: `experiment factors`,
-    width: 2,
-    dataParam: `experimentalFactors`
-  },
-  {
-    type: `sort`,
-    title: `Number of assays`,
-    width: 1.25,
-    dataParam: `numberOfAssays`,
-    link: `experimentAccession`,
-    resource: `experiments`,
-    endpoint: `Experiment Design`
-  },
-]
-
-const dropdownFilters = [
+const bulkDropdownFilters = [
   {
     label: `Kingdom`,
-    dataParam: `kingdom`
+    dataKey: `kingdom`
+  },
+  {
+    label: `Experiment Type`,
+    dataKey: `experimentType`
+  }
+]
+
+const bulkRowSelectionColumn = {
+  label: `Download`,
+  dataKey: `experimentAccession`,
+  tooltipContent:
+    `<ul>` +
+      `<li>Expression matrices in TPMs or log<sub>2</sub>fold-change</li>` +
+      `<li>Experiment design file with experimental metadata</li>` +
+    `</ul>`,
+  width: 0.75
+}
+
+const singleCellTableHeaders = [
+  {
+    label: `Load date`,
+    dataKey: `loadDate`,
+    sortable: true,
+    width: 0.5
+  },
+  {
+    label: `Species`,
+    dataKey: `species`,
+    searchable: true,
+    sortable: true
+  },
+  {
+    label: `Title`,
+    dataKey: `experimentDescription`,
+    searchable: true,
+    sortable: true,
+    linkTo: function(dataRow) { return `experiments/` + dataRow.experimentAccession + `/results` },
+    width: 2
+  },
+  {
+    label: `Experimental factors`,
+    dataKey: `experimentalFactors`,
+    searchable: true
+  },
+  {
+    label: `Number of cells`,
+    dataKey: `numberOfAssays`,
+    sortable: true,
+    linkTo: function(dataRow) { return `experiments/` + dataRow.experimentAccession + `/experiment-design` },
+    width: 0.5
+  }
+]
+
+const singleCellDropdownFilters = [
+  {
+    label: `Kingdom`,
+    dataKey: `kingdom`
   },
   {
     label: `Experiment Project`,
-    dataParam: `experimentProjects`
+    dataKey: `experimentProjects`
   },
   {
     label: `Technology Type`,
-    dataParam: `technologyType`
+    dataKey: `technologyType`
   }
 ]
 
-const data = [
-  {
-    experimentType: `SINGLE`,
-    experimentAccession: `E-EHCA-2`,
-    experimentDescription: `Melanoma infiltration`,
-    lastUpdate: `16-11-2018`,
-    numberOfAssays: 6638,
-    numberOfContrasts: 0,
-    species: `Mus musculus`,
-    kingdom: `animals`,
-    experimentalFactors: [`single cell identifier`, `sampling site`,`time`],
-    experimentProjects: [`Human Cell Atlas`],
-    technologyType: [`smart-seq2`]
-  },
-  {
-    experimentType: `DOUBLE`,
-    experimentAccession: `E-GEOD-99058`,
-    experimentDescription: `Single cell`,
-    lastUpdate: `11-10-2018`,
-    numberOfAssays: 250,
-    numberOfContrasts: 0,
-    species: `Mus musculus`,
-    kingdom: `animals`,
-    experimentalFactors: [`single cell identifier`],
-    experimentProjects:[],
-    technologyType: [`smart-seq2`]
-  },
-  {
-    experimentType: `SINGLE`,
-    experimentAccession: `E-MTAB-5061`,
-    experimentDescription: `healthy individuals and type 2 diabetes patients`,
-    lastUpdate: `11-10-2018`,
-    numberOfAssays: 3514,
-    numberOfContrasts: 0,
-    species: `Homo sapiens`,
-    kingdom: `plants`,
-    experimentalFactors: [`single cell identifier`, `disease`],
-    experimentProjects: [`Human Cell Atlas`, `Chan-Zuckerberg Biohub`],
-    technologyType: [`smart-seq2`, `10xV1`]
-  },
-  {
-    experimentType: `UNKNOWN`,
-    experimentAccession: `E-MTAB-5061`,
-    experimentDescription: `healthy individuals and type 2 diabetes patients`,
-    lastUpdate: `11-10-2018`,
-    numberOfAssays: 3514,
-    numberOfContrasts: 0,
-    species: `Homo sapiens`,
-    kingdom: `plants`,
-    experimentalFactors: [`single cell identifier`, `disease`],
-    experimentProjects: [`Human Cell Atlas`, `Chan-Zuckerberg Biohub`],
-    technologyType: [`smart-seq2`, `10xV1`]
-  }
-]
+const singleCellRowSelectionColumn = {
+  label: `Download`,
+  dataKey: `experimentAccession`,
+  tooltipContent:
+    `<ul>` +
+      `<li>Raw filtered count matrix after quantification</li>` +
+      `<li>Normalised filtered count matrix after quantification</li>` +
+      `<li>Experiment design file with experimental metadata</li>` +
+    `</ul>`,
+  width: 0.5
+}
 
-export { getRandomInt, generateRandomHost, generateRandomExperimentAccession, getSingleCellExperimentFiles, bulkTableHeaders, tableHeader, data, dropdownFilters }
+export {
+  getRandomInt, generateRandomHost, generateRandomExperimentAccession, randomSubstring,
+  getSingleCellExperimentFiles,
+  bulkTableHeaders, bulkDropdownFilters, bulkRowSelectionColumn,
+  singleCellTableHeaders, singleCellDropdownFilters, singleCellRowSelectionColumn
+}
