@@ -28,85 +28,87 @@
     function(data) {
       experimentTable.render(
         {
-          // Set to http://localhost:8080/gxa/ or http://localhost:8080/gxa_sc/ -- Remember the trailing slash!
-          host: 'http://localhost:8080/gxa/',
-          tableHeader: [
+          tableHeaders: [
             {
-              type: 'sort',
-              title: 'Type',
-              width: 1,
-              dataParam: 'experimentType',
+              label: 'Type',
+              dataKey: 'experimentType',
+              sortable: true,
+              width: 0.5,
               image: {
                 Differential: {
-                  src: 'http://localhost:8080/gxa/resources/images/experiments-table/differential.png',
-                  alt: 'Differential experiment'
+                  src: 'https://www.ebi.ac.uk/gxa/resources/images/experiments-table/differential.png',
+                  alt: 'Differential experiment',
+                  title: 'Differential experiment'
                 },
                 Baseline: {
-                  src: 'http://localhost:8080/gxa/resources/images/experiments-table/baseline.png',
-                  alt: 'Baseline experiment'
+                  src: 'https://www.ebi.ac.uk/gxa/resources/images/experiments-table/baseline.png',
+                  alt: 'Baseline experiment',
+                  title: 'Baseline experiment'
                 }
-              }
+              },
+              linkTo: function(dataRow) { return 'https://www.ebi.ac.uk/gxa/experiments?experimentType=' + dataRow.experimentType.toLowerCase(); }
             },
             {
-              type: 'sort',
-              title: 'Load date',
-              width: 1,
-              dataParam: 'lastUpdate'
+              label: 'Load date',
+              dataKey: 'loadDate',
+              sortable: true,
+              width: 0.5
             },
             {
-              type: 'search',
-              title: 'Species',
-              width: 1,
-              dataParam: 'species'
+              label: 'Species',
+              dataKey: 'species',
+              searchable: true,
+              sortable: true
             },
             {
-              type: 'search',
-              title: 'Description',
-              width: 2,
-              dataParam: 'experimentDescription',
-              link: 'experimentAccession',
-              resource: 'experiments',
-              endpoint: 'Results'
+              label: 'Title',
+              dataKey: 'experimentDescription',
+              searchable: true,
+              sortable: true,
+              linkTo: function(dataRow) { return 'experiments/' + dataRow.experimentAccession + '/Results'; },
+              width: 2
             },
             {
-              type: 'sort',
-              title: 'Assays',
-              width: 1,
-              dataParam: 'numberOfAssays',
-              link: 'experimentAccession',
-              resource: 'experiments',
-              endpoint: 'Experiment%20Design'
+              label: 'Assays',
+              dataKey: 'numberOfAssays',
+              sortable: true,
+              linkTo: function(dataRow) { return 'experiments/' + dataRow.experimentAccession + '/Experiment%20Design'; },
+              width: 0.5
             },
             {
-              type: 'search',
-              title: 'Factors',
-              width: 1.25,
-              dataParam: 'experimentalFactors'
+              label: 'Experimental factors',
+              dataKey: 'experimentalFactors',
+              searchable: true,
+              linkTo: function(dataRow) { return 'experiments/' + dataRow.experimentAccession + '/Experiment%20Design'; }
             },
             {
-              type: 'sort',
-              title: 'Technology',
-              width: 1.5,
-              dataParam: 'technologyType'
+              label: 'Technology',
+              dataKey: 'technologyType',
+              sortable: false
             }
           ],
           dropdownFilters: [
             {
               label: 'Kingdom',
-              dataParam: 'kingdom'
+              dataKey: 'kingdom'
             },
             {
               label: 'Experiment Type',
-              dataParam: 'experimentType'
+              dataKey: 'experimentType'
             }
           ],
-          downloadTooltip:
-            '<ul>' +
-              '<li>Expression matrices in TPMs or log<sub>2</sub>fold-change</li>' +
-              '<li>Experiment design file with experimental metadata</li>' +
-            '</ul>',
-          enableDownload: true,
-          experiments: data
+          rowSelectionColumn: {
+            label: 'Download',
+            dataKey: 'experimentAccession',
+            tooltipContent:
+              '<ul>' +
+                '<li>Expression matrices in TPMs or log<sub>2</sub>fold-change</li>' +
+                '<li>Experiment design file with experimental metadata</li>' +
+              '</ul>',
+            width: 0.75
+          },
+          dataRows: data,
+          host: 'https://www.ebi.ac.uk/gxa/'
         },
         'target'
       );
