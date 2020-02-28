@@ -1,1 +1,1 @@
-export  { default } from './ExperimentTable'
+export  { default } from './TableManager'
