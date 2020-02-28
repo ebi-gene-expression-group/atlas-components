@@ -109,8 +109,8 @@ TableContent.propTypes = {
   rowSelectionColumn: PropTypes.shape({
     label: PropTypes.string.isRequired,
     dataKey: PropTypes.string.isRequired,
-    tooltipContent: PropTypes.string.isRequired,
     tableHeaderCellOnClick: PropTypes.func,
+    tooltipContent: PropTypes.string,
     width: PropTypes.number
   }),
   selectedRows: PropTypes.arrayOf(PropTypes.string).isRequired,

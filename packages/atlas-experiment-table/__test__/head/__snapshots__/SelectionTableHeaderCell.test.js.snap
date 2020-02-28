@@ -5,6 +5,7 @@ exports[`SelectionTableHeaderCell matches snapshot (basic) 1`] = `
   label="Action"
   onClick={[Function]}
   selectedRowIds={Array []}
+  tooltipContent=""
   width={1}
 >
   <TableHeaderCell
@@ -3309,6 +3310,7 @@ exports[`SelectionTableHeaderCell matches snapshot (with a selection) 1`] = `
       "E-MTAB-5200",
     ]
   }
+  tooltipContent=""
   width={1}
 >
   <TableHeaderCell

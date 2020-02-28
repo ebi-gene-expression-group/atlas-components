@@ -49,6 +49,7 @@ SelectionTableHeaderCell.propTypes = {
 }
 
 SelectionTableHeaderCell.defaultProps = {
+  tooltipContent: ``,
   width: 1
 }
 
