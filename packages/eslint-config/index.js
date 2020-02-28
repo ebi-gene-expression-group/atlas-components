@@ -1,4 +1,6 @@
 module.exports = {
+  "parser": "babel-eslint",
+
   "extends": [
     "eslint:recommended",
     "plugin:react/recommended"
@@ -30,7 +32,7 @@ module.exports = {
     "indent": ["error", 2], // Enforce indentation using 2 spaces
     "no-console": ["warn", { "allow": ["warn", "error"] }] // Allow console.warn and console.error statements
   },
-  
+
   "overrides": [{
     "files": ["*.test.js"],
     "rules": {
