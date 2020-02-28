@@ -5,7 +5,7 @@ import styled from 'styled-components'
 import { lookUpIcon } from './mapping'
 
 const capitalizeFirstLetter = (string) => {
-    return string.charAt(0).toUpperCase() + string.slice(1).toLowerCase()
+  return string.charAt(0).toUpperCase() + string.slice(1).toLowerCase()
 }
 
 const StyledEbiIcon = styled.span`
@@ -48,11 +48,11 @@ const EbiSpeciesIconBare = ({species, groupColors, color}) => {
 }
 
 EbiSpeciesIconBare.propTypes = {
-  species: PropTypes.string.isRequired,
+  species: PropTypes.string,
   groupColors: PropTypes.shape({
-    warmBlooded: PropTypes.string.isRequired,
-    plants: PropTypes.string.isRequired,
-    other: PropTypes.string.isRequired
+    warmBlooded: PropTypes.string,
+    plants: PropTypes.string,
+    other: PropTypes.string
   }),
   color: PropTypes.string
 }
