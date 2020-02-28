@@ -9,6 +9,12 @@ import Card from '../Card'
 
 import { SlickStyle, SlickThemeStyle } from './SlickGlobalStyles'
 
+const CardContainer = styled.div`
+  :hover {
+    background: ${props => props.hoverColour};
+  }
+`
+
 const CarouselCardsRow = (props) => {
   const { CardClass, cards, sliderSettings, containerHeight, sliderHeight } = props
   const { className, cardContainerClassName, speciesIconHeight, imageIconHeight, hoverColour} = props
@@ -16,14 +22,8 @@ const CarouselCardsRow = (props) => {
   const disableSlider = sliderSettings.slidesToShow >= cards.length
   sliderSettings.slidesToShow = disableSlider ? cards.length : sliderSettings.slidesToShow
 
-  const CardContainer = styled.div`
-    :hover {
-      background: ${hoverColour};
-    }
-  `
-
   const cardsDisplay = Array.isArray(cards) && cards.map((card, index) =>
-    <CardContainer className={cardContainerClassName} key={index}>
+    <CardContainer hoverColour={hoverColour} className={cardContainerClassName} key={index}>
       <CardClass
         {...card}
         imageIconHeight={imageIconHeight}
