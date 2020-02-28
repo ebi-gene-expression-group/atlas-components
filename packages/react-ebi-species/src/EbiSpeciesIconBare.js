@@ -5,7 +5,7 @@ import styled from 'styled-components'
 import { lookUpIcon } from './mapping'
 
 const capitalizeFirstLetter = (string) => {
-    return string.charAt(0).toUpperCase() + string.slice(1).toLowerCase()
+  return string.charAt(0).toUpperCase() + string.slice(1).toLowerCase()
 }
 
 const StyledEbiIcon = styled.span`

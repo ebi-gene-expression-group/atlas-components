@@ -4,17 +4,17 @@ import PropTypes from 'prop-types'
 import { lookUpIcon } from './mapping'
 
 const capitalizeFirstLetter = (string) => {
-    return string.charAt(0).toUpperCase() + string.slice(1).toLowerCase()
+  return string.charAt(0).toUpperCase() + string.slice(1).toLowerCase()
 }
 
 const EbiSpeciesIcon = ({species, groupColors, color}) => {
-  const [group, icon] = lookUpIcon(species)
+  const [ group, icon ] = lookUpIcon(species)
   return (
     <span
       className={`icon icon-species`}
       style={{color: color || groupColors[group] || `black`}}
       data-icon={icon || `❔`}
-      title={capitalizeFirstLetter(species)} />
+      title={capitalizeFirstLetter(species)}/>
   )
 }
 
