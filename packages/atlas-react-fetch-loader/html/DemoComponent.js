@@ -17,7 +17,7 @@ DemoComponent.propTypes = {
 }
 
 DemoComponent.defaultProps = {
-  renamedProp: `If you can read this, an error happened: this message should be overwrittern with a renamed prop`
+  renamedProp: `If you can read this, an error happened: this message should be overwritten with a renamed prop`
 }
 
 export default DemoComponent
