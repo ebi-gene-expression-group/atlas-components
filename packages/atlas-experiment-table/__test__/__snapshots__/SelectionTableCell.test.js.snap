@@ -1,0 +1,2891 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SelectionTableCell matches snapshot (checked) 1`] = `
+<SelectionTableCell
+  dataKey="string"
+  dataRow={
+    Object {
+      "string": "foobar",
+    }
+  }
+  selectOnChange={[MockFunction]}
+  selectedRowIds={
+    Array [
+      "foobar",
+    ]
+  }
+  width={1}
+>
+  <withTheme(TableCell)
+    flexGrow={1}
+    justifyContent="center"
+  >
+    <TableCell
+      appearance="default"
+      flexGrow={1}
+      justifyContent="center"
+      theme={
+        Object {
+          "avatarColors": Array [
+            "neutral",
+            "blue",
+            "red",
+            "orange",
+            "yellow",
+            "green",
+            "teal",
+            "purple",
+          ],
+          "badgeColors": Array [
+            "neutral",
+            "blue",
+            "red",
+            "orange",
+            "yellow",
+            "green",
+            "teal",
+            "purple",
+          ],
+          "colors": Object {
+            "background": Object {
+              "blueTint": "#f7f9fd",
+              "greenTint": "#f1faf5",
+              "orangeTint": "#fdf8f3",
+              "overlay": "rgba(67, 90, 111, 0.7)",
+              "purpleTint": "#f8f7fc",
+              "redTint": "#fef6f6",
+              "tealTint": "#f1fbfc",
+              "tint1": "#F9F9FB",
+              "tint2": "#F5F6F7",
+              "yellowTint": "#fef8e7",
+            },
+            "border": Object {
+              "default": "#E4E7EB",
+              "muted": "#EDF0F2",
+            },
+            "icon": Object {
+              "danger": "#ec4c47",
+              "default": "#66788A",
+              "disabled": "rgba(67, 90, 111, 0.3)",
+              "info": "#1070ca",
+              "muted": "#7B8B9A",
+              "selected": "#1070ca",
+              "success": "#47b881",
+              "warning": "#d9822b",
+            },
+            "intent": Object {
+              "danger": "#ec4c47",
+              "none": "#1070ca",
+              "success": "#47b881",
+              "warning": "#d9822b",
+            },
+            "text": Object {
+              "danger": "#bf0e08",
+              "dark": "#234361",
+              "default": "#425A70",
+              "info": "#084b8a",
+              "muted": "#66788A",
+              "selected": "#1070ca",
+              "success": "#00783e",
+              "warning": "#95591e",
+            },
+          },
+          "elevations": Array [
+            "0 0 1px rgba(67, 90, 111, 0.3)",
+            "0 0 1px rgba(67, 90, 111, 0.3), 0 2px 4px -2px rgba(67, 90, 111, 0.47)",
+            "0 0 1px rgba(67, 90, 111, 0.3), 0 5px 8px -4px rgba(67, 90, 111, 0.47)",
+            "0 0 1px rgba(67, 90, 111, 0.3), 0 8px 10px -4px rgba(67, 90, 111, 0.47)",
+            "0 0 1px rgba(67, 90, 111, 0.3), 0 16px 24px -8px rgba(67, 90, 111, 0.47)",
+          ],
+          "fills": Object {
+            "options": Array [
+              "neutral",
+              "blue",
+              "red",
+              "orange",
+              "yellow",
+              "green",
+              "teal",
+              "purple",
+            ],
+            "solid": Object {
+              "blue": Object {
+                "backgroundColor": "#1070ca",
+                "color": "white",
+              },
+              "green": Object {
+                "backgroundColor": "#47b881",
+                "color": "white",
+              },
+              "neutral": Object {
+                "backgroundColor": "#425A70",
+                "color": "white",
+              },
+              "orange": Object {
+                "backgroundColor": "#d9822b",
+                "color": "white",
+              },
+              "purple": Object {
+                "backgroundColor": "#735dd0",
+                "color": "white",
+              },
+              "red": Object {
+                "backgroundColor": "#ec4c47",
+                "color": "white",
+              },
+              "teal": Object {
+                "backgroundColor": "#14b5d0",
+                "color": "white",
+              },
+              "yellow": Object {
+                "backgroundColor": "#f7d154",
+                "color": "#7e6514",
+              },
+            },
+            "subtle": Object {
+              "blue": Object {
+                "backgroundColor": "#ddebf7",
+                "color": "#084b8a",
+              },
+              "green": Object {
+                "backgroundColor": "#d4eee2",
+                "color": "#00783e",
+              },
+              "neutral": Object {
+                "backgroundColor": "#E4E7EB",
+                "color": "#425A70",
+              },
+              "orange": Object {
+                "backgroundColor": "#fae3cd",
+                "color": "#95591e",
+              },
+              "purple": Object {
+                "backgroundColor": "#eae7f8",
+                "color": "#37248f",
+              },
+              "red": Object {
+                "backgroundColor": "#fae2e2",
+                "color": "#bf0e08",
+              },
+              "teal": Object {
+                "backgroundColor": "#d2eef3",
+                "color": "#007489",
+              },
+              "yellow": Object {
+                "backgroundColor": "#fbe6a2",
+                "color": "#7e6514",
+              },
+            },
+          },
+          "getAlertProps": [Function],
+          "getAvatarInitialsFontSize": [Function],
+          "getAvatarProps": [Function],
+          "getBackground": [Function],
+          "getBadgeClassName": [Function],
+          "getBadgeProps": [Function],
+          "getBorderRadiusForControlHeight": [Function],
+          "getButtonClassName": [Function],
+          "getCheckboxClassName": [Function],
+          "getCodeProps": [Function],
+          "getElevation": [Function],
+          "getFontFamily": [Function],
+          "getHeadingStyle": [Function],
+          "getIconColor": [Function],
+          "getIconForIntent": [Function],
+          "getIconSizeForButton": [Function],
+          "getIconSizeForIconButton": [Function],
+          "getIconSizeForInput": [Function],
+          "getIconSizeForSelect": [Function],
+          "getLinkClassName": [Function],
+          "getMenuItemClassName": [Function],
+          "getParagraphStyle": [Function],
+          "getRadioClassName": [Function],
+          "getRowClassName": [Function],
+          "getSegmentedControlRadioClassName": [Function],
+          "getSelectClassName": [Function],
+          "getSwitchClassName": [Function],
+          "getTabClassName": [Function],
+          "getTableCellClassName": [Function],
+          "getTagInputClassName": [Function],
+          "getTextColor": [Function],
+          "getTextDropdownButtonClassName": [Function],
+          "getTextInputClassName": [Function],
+          "getTextSizeForControlHeight": [Function],
+          "getTextStyle": [Function],
+          "getTextareaClassName": [Function],
+          "getTooltipProps": [Function],
+          "overlayBackgroundColor": "rgba(67, 90, 111, 0.7)",
+          "palette": Object {
+            "blue": Object {
+              "base": "#1070ca",
+              "dark": "#084b8a",
+              "light": "#ddebf7",
+              "lightest": "#f7f9fd",
+            },
+            "green": Object {
+              "base": "#47b881",
+              "dark": "#00783e",
+              "light": "#d4eee2",
+              "lightest": "#f1faf5",
+            },
+            "neutral": Object {
+              "base": "#425A70",
+              "dark": "#234361",
+              "light": "#E4E7EB",
+              "lightest": "#F9F9FB",
+            },
+            "orange": Object {
+              "base": "#d9822b",
+              "dark": "#95591e",
+              "light": "#fae3cd",
+              "lightest": "#fdf8f3",
+            },
+            "purple": Object {
+              "base": "#735dd0",
+              "dark": "#37248f",
+              "light": "#eae7f8",
+              "lightest": "#f8f7fc",
+            },
+            "red": Object {
+              "base": "#ec4c47",
+              "dark": "#bf0e08",
+              "light": "#fae2e2",
+              "lightest": "#fef6f6",
+            },
+            "teal": Object {
+              "base": "#14b5d0",
+              "dark": "#007489",
+              "light": "#d2eef3",
+              "lightest": "#f1fbfc",
+            },
+            "yellow": Object {
+              "base": "#f7d154",
+              "dark": "#7e6514",
+              "light": "#fbe6a2",
+              "lightest": "#fef8e7",
+            },
+          },
+          "scales": Object {
+            "blue": Object {
+              "B1": "#f7f9fd",
+              "B10": "#084b8a",
+              "B1A": "rgba(16, 112, 202, 0.04)",
+              "B2": "#f1f7fc",
+              "B2A": "rgba(16, 112, 202, 0.06)",
+              "B3": "#e9f2fa",
+              "B3A": "rgba(16, 112, 202, 0.09)",
+              "B4": "#ddebf7",
+              "B4A": "rgba(16, 112, 202, 0.14)",
+              "B5": "#b7d4ef",
+              "B5A": "rgba(16, 112, 202, 0.3)",
+              "B6": "#8fbce6",
+              "B6A": "rgba(16, 112, 202, 0.47)",
+              "B7": "#579ad9",
+              "B7A": "rgba(16, 112, 202, 0.7)",
+              "B8": "#3d8bd4",
+              "B8A": "rgba(16, 112, 202, 0.81)",
+              "B9": "#1070ca",
+            },
+            "neutral": Object {
+              "N1": "#F9F9FB",
+              "N10": "#234361",
+              "N1A": "rgba(67, 90, 111, 0.04)",
+              "N2": "#F5F6F7",
+              "N2A": "rgba(67, 90, 111, 0.06)",
+              "N3": "#EDF0F2",
+              "N3A": "rgba(67, 90, 111, 0.09)",
+              "N4": "#E4E7EB",
+              "N4A": "rgba(67, 90, 111, 0.14)",
+              "N5": "#C7CED4",
+              "N5A": "rgba(67, 90, 111, 0.3)",
+              "N6": "#A6B1BB",
+              "N6A": "rgba(67, 90, 111, 0.47)",
+              "N7": "#7B8B9A",
+              "N7A": "rgba(67, 90, 111, 0.7)",
+              "N8": "#66788A",
+              "N8A": "rgba(67, 90, 111, 0.81)",
+              "N9": "#425A70",
+            },
+          },
+          "spinnerColor": "rgba(67, 90, 111, 0.47)",
+          "typography": Object {
+            "fontFamilies": Object {
+              "display": "\\"SF UI Display\\", -apple-system, BlinkMacSystemFont, \\"Segoe UI\\", Roboto, Helvetica, Arial, sans-serif, \\"Apple Color Emoji\\", \\"Segoe UI Emoji\\", \\"Segoe UI Symbol\\"",
+              "mono": "\\"SF Mono\\", \\"Monaco\\", \\"Inconsolata\\", \\"Fira Mono\\", \\"Droid Sans Mono\\", \\"Source Code Pro\\", monospace",
+              "ui": "\\"SF UI Text\\", -apple-system, BlinkMacSystemFont, \\"Segoe UI\\", Roboto, Helvetica, Arial, sans-serif, \\"Apple Color Emoji\\", \\"Segoe UI Emoji\\", \\"Segoe UI Symbol\\"",
+            },
+            "headings": Object {
+              "100": Object {
+                "color": "#66788A",
+                "fontFamily": "\\"SF UI Text\\", -apple-system, BlinkMacSystemFont, \\"Segoe UI\\", Roboto, Helvetica, Arial, sans-serif, \\"Apple Color Emoji\\", \\"Segoe UI Emoji\\", \\"Segoe UI Symbol\\"",
+                "fontSize": "11px",
+                "fontWeight": 400,
+                "letterSpacing": "0.6px",
+                "lineHeight": "16px",
+                "marginTop": 16,
+                "textTransform": "uppercase",
+              },
+              "200": Object {
+                "color": "#66788A",
+                "fontFamily": "\\"SF UI Text\\", -apple-system, BlinkMacSystemFont, \\"Segoe UI\\", Roboto, Helvetica, Arial, sans-serif, \\"Apple Color Emoji\\", \\"Segoe UI Emoji\\", \\"Segoe UI Symbol\\"",
+                "fontSize": "12px",
+                "fontWeight": 600,
+                "letterSpacing": "0",
+                "lineHeight": "16px",
+                "marginTop": 16,
+              },
+              "300": Object {
+                "color": "#234361",
+                "fontFamily": "\\"SF UI Text\\", -apple-system, BlinkMacSystemFont, \\"Segoe UI\\", Roboto, Helvetica, Arial, sans-serif, \\"Apple Color Emoji\\", \\"Segoe UI Emoji\\", \\"Segoe UI Symbol\\"",
+                "fontSize": "12px",
+                "fontWeight": 600,
+                "letterSpacing": "0",
+                "lineHeight": "16px",
+                "marginTop": 16,
+              },
+              "400": Object {
+                "color": "#234361",
+                "fontFamily": "\\"SF UI Text\\", -apple-system, BlinkMacSystemFont, \\"Segoe UI\\", Roboto, Helvetica, Arial, sans-serif, \\"Apple Color Emoji\\", \\"Segoe UI Emoji\\", \\"Segoe UI Symbol\\"",
+                "fontSize": "14px",
+                "fontWeight": 600,
+                "letterSpacing": "-0.05px",
+                "lineHeight": "20px",
+                "marginTop": 16,
+              },
+              "500": Object {
+                "color": "#234361",
+                "fontFamily": "\\"SF UI Text\\", -apple-system, BlinkMacSystemFont, \\"Segoe UI\\", Roboto, Helvetica, Arial, sans-serif, \\"Apple Color Emoji\\", \\"Segoe UI Emoji\\", \\"Segoe UI Symbol\\"",
+                "fontSize": "16px",
+                "fontWeight": 500,
+                "letterSpacing": "-0.05px",
+                "lineHeight": "20px",
+                "marginTop": 24,
+              },
+              "600": Object {
+                "color": "#234361",
+                "fontFamily": "\\"SF UI Display\\", -apple-system, BlinkMacSystemFont, \\"Segoe UI\\", Roboto, Helvetica, Arial, sans-serif, \\"Apple Color Emoji\\", \\"Segoe UI Emoji\\", \\"Segoe UI Symbol\\"",
+                "fontSize": "20px",
+                "fontWeight": 500,
+                "letterSpacing": "-0.07px",
+                "lineHeight": "24px",
+                "marginTop": 28,
+              },
+              "700": Object {
+                "color": "#234361",
+                "fontFamily": "\\"SF UI Display\\", -apple-system, BlinkMacSystemFont, \\"Segoe UI\\", Roboto, Helvetica, Arial, sans-serif, \\"Apple Color Emoji\\", \\"Segoe UI Emoji\\", \\"Segoe UI Symbol\\"",
+                "fontSize": "24px",
+                "fontWeight": 500,
+                "letterSpacing": "-0.07px",
+                "lineHeight": "28px",
+                "marginTop": 40,
+              },
+              "800": Object {
+                "color": "#234361",
+                "fontFamily": "\\"SF UI Display\\", -apple-system, BlinkMacSystemFont, \\"Segoe UI\\", Roboto, Helvetica, Arial, sans-serif, \\"Apple Color Emoji\\", \\"Segoe UI Emoji\\", \\"Segoe UI Symbol\\"",
+                "fontSize": "29px",
+                "fontWeight": 500,
+                "letterSpacing": "-0.2px",
+                "lineHeight": "32px",
+                "marginTop": 40,
+              },
+              "900": Object {
+                "color": "#234361",
+                "fontFamily": "\\"SF UI Display\\", -apple-system, BlinkMacSystemFont, \\"Segoe UI\\", Roboto, Helvetica, Arial, sans-serif, \\"Apple Color Emoji\\", \\"Segoe UI Emoji\\", \\"Segoe UI Symbol\\"",
+                "fontSize": "35px",
+                "fontWeight": 500,
+                "letterSpacing": "-0.2px",
+                "lineHeight": "40px",
+                "marginTop": 52,
+              },
+            },
+            "paragraph": Object {
+              "300": Object {
+                "fontSize": "12px",
+                "fontWeight": 400,
+                "letterSpacing": "0",
+                "lineHeight": "18px",
+                "marginTop": 12,
+              },
+              "400": Object {
+                "fontSize": "14px",
+                "fontWeight": 400,
+                "letterSpacing": "-0.05px",
+                "lineHeight": "21px",
+                "marginTop": 12,
+              },
+              "500": Object {
+                "fontSize": "16px",
+                "fontWeight": 400,
+                "letterSpacing": "-0.05px",
+                "lineHeight": "24px",
+                "marginTop": 16,
+              },
+            },
+            "text": Object {
+              "300": Object {
+                "fontSize": "12px",
+                "fontWeight": 400,
+                "letterSpacing": "0",
+                "lineHeight": "16px",
+                "marginTop": 12,
+              },
+              "400": Object {
+                "fontSize": "14px",
+                "fontWeight": 400,
+                "letterSpacing": "-0.05px",
+                "lineHeight": "20px",
+                "marginTop": 12,
+              },
+              "500": Object {
+                "fontSize": "16px",
+                "fontWeight": 400,
+                "letterSpacing": "-0.05px",
+                "lineHeight": "20px",
+                "marginTop": 16,
+              },
+              "600": Object {
+                "fontFamily": "\\"SF UI Display\\", -apple-system, BlinkMacSystemFont, \\"Segoe UI\\", Roboto, Helvetica, Arial, sans-serif, \\"Apple Color Emoji\\", \\"Segoe UI Emoji\\", \\"Segoe UI Symbol\\"",
+                "fontSize": "20px",
+                "fontWeight": 400,
+                "letterSpacing": "-0.07px",
+                "lineHeight": "24px",
+                "marginTop": 28,
+              },
+            },
+          },
+        }
+      }
+    >
+      <withTheme(Pane)
+        alignItems="center"
+        boxSizing="border-box"
+        className="css-saeo60"
+        display="flex"
+        flex={1}
+        flexGrow={1}
+        flexShrink={0}
+        innerRef={[Function]}
+        justifyContent="center"
+        onKeyDown={[Function]}
+        overflow="hidden"
+        paddingX={12}
+      >
+        <Pane
+          alignItems="center"
+          boxSizing="border-box"
+          className="css-saeo60"
+          display="flex"
+          flex={1}
+          flexGrow={1}
+          flexShrink={0}
+          innerRef={[Function]}
+          justifyContent="center"
+          onKeyDown={[Function]}
+          overflow="hidden"
+          paddingX={12}
+          theme={
+            Object {
+              "avatarColors": Array [
+                "neutral",
+                "blue",
+                "red",
+                "orange",
+                "yellow",
+                "green",
+                "teal",
+                "purple",
+              ],
+              "badgeColors": Array [
+                "neutral",
+                "blue",
+                "red",
+                "orange",
+                "yellow",
+                "green",
+                "teal",
+                "purple",
+              ],
+              "colors": Object {
+                "background": Object {
+                  "blueTint": "#f7f9fd",
+                  "greenTint": "#f1faf5",
+                  "orangeTint": "#fdf8f3",
+                  "overlay": "rgba(67, 90, 111, 0.7)",
+                  "purpleTint": "#f8f7fc",
+                  "redTint": "#fef6f6",
+                  "tealTint": "#f1fbfc",
+                  "tint1": "#F9F9FB",
+                  "tint2": "#F5F6F7",
+                  "yellowTint": "#fef8e7",
+                },
+                "border": Object {
+                  "default": "#E4E7EB",
+                  "muted": "#EDF0F2",
+                },
+                "icon": Object {
+                  "danger": "#ec4c47",
+                  "default": "#66788A",
+                  "disabled": "rgba(67, 90, 111, 0.3)",
+                  "info": "#1070ca",
+                  "muted": "#7B8B9A",
+                  "selected": "#1070ca",
+                  "success": "#47b881",
+                  "warning": "#d9822b",
+                },
+                "intent": Object {
+                  "danger": "#ec4c47",
+                  "none": "#1070ca",
+                  "success": "#47b881",
+                  "warning": "#d9822b",
+                },
+                "text": Object {
+                  "danger": "#bf0e08",
+                  "dark": "#234361",
+                  "default": "#425A70",
+                  "info": "#084b8a",
+                  "muted": "#66788A",
+                  "selected": "#1070ca",
+                  "success": "#00783e",
+                  "warning": "#95591e",
+                },
+              },
+              "elevations": Array [
+                "0 0 1px rgba(67, 90, 111, 0.3)",
+                "0 0 1px rgba(67, 90, 111, 0.3), 0 2px 4px -2px rgba(67, 90, 111, 0.47)",
+                "0 0 1px rgba(67, 90, 111, 0.3), 0 5px 8px -4px rgba(67, 90, 111, 0.47)",
+                "0 0 1px rgba(67, 90, 111, 0.3), 0 8px 10px -4px rgba(67, 90, 111, 0.47)",
+                "0 0 1px rgba(67, 90, 111, 0.3), 0 16px 24px -8px rgba(67, 90, 111, 0.47)",
+              ],
+              "fills": Object {
+                "options": Array [
+                  "neutral",
+                  "blue",
+                  "red",
+                  "orange",
+                  "yellow",
+                  "green",
+                  "teal",
+                  "purple",
+                ],
+                "solid": Object {
+                  "blue": Object {
+                    "backgroundColor": "#1070ca",
+                    "color": "white",
+                  },
+                  "green": Object {
+                    "backgroundColor": "#47b881",
+                    "color": "white",
+                  },
+                  "neutral": Object {
+                    "backgroundColor": "#425A70",
+                    "color": "white",
+                  },
+                  "orange": Object {
+                    "backgroundColor": "#d9822b",
+                    "color": "white",
+                  },
+                  "purple": Object {
+                    "backgroundColor": "#735dd0",
+                    "color": "white",
+                  },
+                  "red": Object {
+                    "backgroundColor": "#ec4c47",
+                    "color": "white",
+                  },
+                  "teal": Object {
+                    "backgroundColor": "#14b5d0",
+                    "color": "white",
+                  },
+                  "yellow": Object {
+                    "backgroundColor": "#f7d154",
+                    "color": "#7e6514",
+                  },
+                },
+                "subtle": Object {
+                  "blue": Object {
+                    "backgroundColor": "#ddebf7",
+                    "color": "#084b8a",
+                  },
+                  "green": Object {
+                    "backgroundColor": "#d4eee2",
+                    "color": "#00783e",
+                  },
+                  "neutral": Object {
+                    "backgroundColor": "#E4E7EB",
+                    "color": "#425A70",
+                  },
+                  "orange": Object {
+                    "backgroundColor": "#fae3cd",
+                    "color": "#95591e",
+                  },
+                  "purple": Object {
+                    "backgroundColor": "#eae7f8",
+                    "color": "#37248f",
+                  },
+                  "red": Object {
+                    "backgroundColor": "#fae2e2",
+                    "color": "#bf0e08",
+                  },
+                  "teal": Object {
+                    "backgroundColor": "#d2eef3",
+                    "color": "#007489",
+                  },
+                  "yellow": Object {
+                    "backgroundColor": "#fbe6a2",
+                    "color": "#7e6514",
+                  },
+                },
+              },
+              "getAlertProps": [Function],
+              "getAvatarInitialsFontSize": [Function],
+              "getAvatarProps": [Function],
+              "getBackground": [Function],
+              "getBadgeClassName": [Function],
+              "getBadgeProps": [Function],
+              "getBorderRadiusForControlHeight": [Function],
+              "getButtonClassName": [Function],
+              "getCheckboxClassName": [Function],
+              "getCodeProps": [Function],
+              "getElevation": [Function],
+              "getFontFamily": [Function],
+              "getHeadingStyle": [Function],
+              "getIconColor": [Function],
+              "getIconForIntent": [Function],
+              "getIconSizeForButton": [Function],
+              "getIconSizeForIconButton": [Function],
+              "getIconSizeForInput": [Function],
+              "getIconSizeForSelect": [Function],
+              "getLinkClassName": [Function],
+              "getMenuItemClassName": [Function],
+              "getParagraphStyle": [Function],
+              "getRadioClassName": [Function],
+              "getRowClassName": [Function],
+              "getSegmentedControlRadioClassName": [Function],
+              "getSelectClassName": [Function],
+              "getSwitchClassName": [Function],
+              "getTabClassName": [Function],
+              "getTableCellClassName": [Function],
+              "getTagInputClassName": [Function],
+              "getTextColor": [Function],
+              "getTextDropdownButtonClassName": [Function],
+              "getTextInputClassName": [Function],
+              "getTextSizeForControlHeight": [Function],
+              "getTextStyle": [Function],
+              "getTextareaClassName": [Function],
+              "getTooltipProps": [Function],
+              "overlayBackgroundColor": "rgba(67, 90, 111, 0.7)",
+              "palette": Object {
+                "blue": Object {
+                  "base": "#1070ca",
+                  "dark": "#084b8a",
+                  "light": "#ddebf7",
+                  "lightest": "#f7f9fd",
+                },
+                "green": Object {
+                  "base": "#47b881",
+                  "dark": "#00783e",
+                  "light": "#d4eee2",
+                  "lightest": "#f1faf5",
+                },
+                "neutral": Object {
+                  "base": "#425A70",
+                  "dark": "#234361",
+                  "light": "#E4E7EB",
+                  "lightest": "#F9F9FB",
+                },
+                "orange": Object {
+                  "base": "#d9822b",
+                  "dark": "#95591e",
+                  "light": "#fae3cd",
+                  "lightest": "#fdf8f3",
+                },
+                "purple": Object {
+                  "base": "#735dd0",
+                  "dark": "#37248f",
+                  "light": "#eae7f8",
+                  "lightest": "#f8f7fc",
+                },
+                "red": Object {
+                  "base": "#ec4c47",
+                  "dark": "#bf0e08",
+                  "light": "#fae2e2",
+                  "lightest": "#fef6f6",
+                },
+                "teal": Object {
+                  "base": "#14b5d0",
+                  "dark": "#007489",
+                  "light": "#d2eef3",
+                  "lightest": "#f1fbfc",
+                },
+                "yellow": Object {
+                  "base": "#f7d154",
+                  "dark": "#7e6514",
+                  "light": "#fbe6a2",
+                  "lightest": "#fef8e7",
+                },
+              },
+              "scales": Object {
+                "blue": Object {
+                  "B1": "#f7f9fd",
+                  "B10": "#084b8a",
+                  "B1A": "rgba(16, 112, 202, 0.04)",
+                  "B2": "#f1f7fc",
+                  "B2A": "rgba(16, 112, 202, 0.06)",
+                  "B3": "#e9f2fa",
+                  "B3A": "rgba(16, 112, 202, 0.09)",
+                  "B4": "#ddebf7",
+                  "B4A": "rgba(16, 112, 202, 0.14)",
+                  "B5": "#b7d4ef",
+                  "B5A": "rgba(16, 112, 202, 0.3)",
+                  "B6": "#8fbce6",
+                  "B6A": "rgba(16, 112, 202, 0.47)",
+                  "B7": "#579ad9",
+                  "B7A": "rgba(16, 112, 202, 0.7)",
+                  "B8": "#3d8bd4",
+                  "B8A": "rgba(16, 112, 202, 0.81)",
+                  "B9": "#1070ca",
+                },
+                "neutral": Object {
+                  "N1": "#F9F9FB",
+                  "N10": "#234361",
+                  "N1A": "rgba(67, 90, 111, 0.04)",
+                  "N2": "#F5F6F7",
+                  "N2A": "rgba(67, 90, 111, 0.06)",
+                  "N3": "#EDF0F2",
+                  "N3A": "rgba(67, 90, 111, 0.09)",
+                  "N4": "#E4E7EB",
+                  "N4A": "rgba(67, 90, 111, 0.14)",
+                  "N5": "#C7CED4",
+                  "N5A": "rgba(67, 90, 111, 0.3)",
+                  "N6": "#A6B1BB",
+                  "N6A": "rgba(67, 90, 111, 0.47)",
+                  "N7": "#7B8B9A",
+                  "N7A": "rgba(67, 90, 111, 0.7)",
+                  "N8": "#66788A",
+                  "N8A": "rgba(67, 90, 111, 0.81)",
+                  "N9": "#425A70",
+                },
+              },
+              "spinnerColor": "rgba(67, 90, 111, 0.47)",
+              "typography": Object {
+                "fontFamilies": Object {
+                  "display": "\\"SF UI Display\\", -apple-system, BlinkMacSystemFont, \\"Segoe UI\\", Roboto, Helvetica, Arial, sans-serif, \\"Apple Color Emoji\\", \\"Segoe UI Emoji\\", \\"Segoe UI Symbol\\"",
+                  "mono": "\\"SF Mono\\", \\"Monaco\\", \\"Inconsolata\\", \\"Fira Mono\\", \\"Droid Sans Mono\\", \\"Source Code Pro\\", monospace",
+                  "ui": "\\"SF UI Text\\", -apple-system, BlinkMacSystemFont, \\"Segoe UI\\", Roboto, Helvetica, Arial, sans-serif, \\"Apple Color Emoji\\", \\"Segoe UI Emoji\\", \\"Segoe UI Symbol\\"",
+                },
+                "headings": Object {
+                  "100": Object {
+                    "color": "#66788A",
+                    "fontFamily": "\\"SF UI Text\\", -apple-system, BlinkMacSystemFont, \\"Segoe UI\\", Roboto, Helvetica, Arial, sans-serif, \\"Apple Color Emoji\\", \\"Segoe UI Emoji\\", \\"Segoe UI Symbol\\"",
+                    "fontSize": "11px",
+                    "fontWeight": 400,
+                    "letterSpacing": "0.6px",
+                    "lineHeight": "16px",
+                    "marginTop": 16,
+                    "textTransform": "uppercase",
+                  },
+                  "200": Object {
+                    "color": "#66788A",
+                    "fontFamily": "\\"SF UI Text\\", -apple-system, BlinkMacSystemFont, \\"Segoe UI\\", Roboto, Helvetica, Arial, sans-serif, \\"Apple Color Emoji\\", \\"Segoe UI Emoji\\", \\"Segoe UI Symbol\\"",
+                    "fontSize": "12px",
+                    "fontWeight": 600,
+                    "letterSpacing": "0",
+                    "lineHeight": "16px",
+                    "marginTop": 16,
+                  },
+                  "300": Object {
+                    "color": "#234361",
+                    "fontFamily": "\\"SF UI Text\\", -apple-system, BlinkMacSystemFont, \\"Segoe UI\\", Roboto, Helvetica, Arial, sans-serif, \\"Apple Color Emoji\\", \\"Segoe UI Emoji\\", \\"Segoe UI Symbol\\"",
+                    "fontSize": "12px",
+                    "fontWeight": 600,
+                    "letterSpacing": "0",
+                    "lineHeight": "16px",
+                    "marginTop": 16,
+                  },
+                  "400": Object {
+                    "color": "#234361",
+                    "fontFamily": "\\"SF UI Text\\", -apple-system, BlinkMacSystemFont, \\"Segoe UI\\", Roboto, Helvetica, Arial, sans-serif, \\"Apple Color Emoji\\", \\"Segoe UI Emoji\\", \\"Segoe UI Symbol\\"",
+                    "fontSize": "14px",
+                    "fontWeight": 600,
+                    "letterSpacing": "-0.05px",
+                    "lineHeight": "20px",
+                    "marginTop": 16,
+                  },
+                  "500": Object {
+                    "color": "#234361",
+                    "fontFamily": "\\"SF UI Text\\", -apple-system, BlinkMacSystemFont, \\"Segoe UI\\", Roboto, Helvetica, Arial, sans-serif, \\"Apple Color Emoji\\", \\"Segoe UI Emoji\\", \\"Segoe UI Symbol\\"",
+                    "fontSize": "16px",
+                    "fontWeight": 500,
+                    "letterSpacing": "-0.05px",
+                    "lineHeight": "20px",
+                    "marginTop": 24,
+                  },
+                  "600": Object {
+                    "color": "#234361",
+                    "fontFamily": "\\"SF UI Display\\", -apple-system, BlinkMacSystemFont, \\"Segoe UI\\", Roboto, Helvetica, Arial, sans-serif, \\"Apple Color Emoji\\", \\"Segoe UI Emoji\\", \\"Segoe UI Symbol\\"",
+                    "fontSize": "20px",
+                    "fontWeight": 500,
+                    "letterSpacing": "-0.07px",
+                    "lineHeight": "24px",
+                    "marginTop": 28,
+                  },
+                  "700": Object {
+                    "color": "#234361",
+                    "fontFamily": "\\"SF UI Display\\", -apple-system, BlinkMacSystemFont, \\"Segoe UI\\", Roboto, Helvetica, Arial, sans-serif, \\"Apple Color Emoji\\", \\"Segoe UI Emoji\\", \\"Segoe UI Symbol\\"",
+                    "fontSize": "24px",
+                    "fontWeight": 500,
+                    "letterSpacing": "-0.07px",
+                    "lineHeight": "28px",
+                    "marginTop": 40,
+                  },
+                  "800": Object {
+                    "color": "#234361",
+                    "fontFamily": "\\"SF UI Display\\", -apple-system, BlinkMacSystemFont, \\"Segoe UI\\", Roboto, Helvetica, Arial, sans-serif, \\"Apple Color Emoji\\", \\"Segoe UI Emoji\\", \\"Segoe UI Symbol\\"",
+                    "fontSize": "29px",
+                    "fontWeight": 500,
+                    "letterSpacing": "-0.2px",
+                    "lineHeight": "32px",
+                    "marginTop": 40,
+                  },
+                  "900": Object {
+                    "color": "#234361",
+                    "fontFamily": "\\"SF UI Display\\", -apple-system, BlinkMacSystemFont, \\"Segoe UI\\", Roboto, Helvetica, Arial, sans-serif, \\"Apple Color Emoji\\", \\"Segoe UI Emoji\\", \\"Segoe UI Symbol\\"",
+                    "fontSize": "35px",
+                    "fontWeight": 500,
+                    "letterSpacing": "-0.2px",
+                    "lineHeight": "40px",
+                    "marginTop": 52,
+                  },
+                },
+                "paragraph": Object {
+                  "300": Object {
+                    "fontSize": "12px",
+                    "fontWeight": 400,
+                    "letterSpacing": "0",
+                    "lineHeight": "18px",
+                    "marginTop": 12,
+                  },
+                  "400": Object {
+                    "fontSize": "14px",
+                    "fontWeight": 400,
+                    "letterSpacing": "-0.05px",
+                    "lineHeight": "21px",
+                    "marginTop": 12,
+                  },
+                  "500": Object {
+                    "fontSize": "16px",
+                    "fontWeight": 400,
+                    "letterSpacing": "-0.05px",
+                    "lineHeight": "24px",
+                    "marginTop": 16,
+                  },
+                },
+                "text": Object {
+                  "300": Object {
+                    "fontSize": "12px",
+                    "fontWeight": 400,
+                    "letterSpacing": "0",
+                    "lineHeight": "16px",
+                    "marginTop": 12,
+                  },
+                  "400": Object {
+                    "fontSize": "14px",
+                    "fontWeight": 400,
+                    "letterSpacing": "-0.05px",
+                    "lineHeight": "20px",
+                    "marginTop": 12,
+                  },
+                  "500": Object {
+                    "fontSize": "16px",
+                    "fontWeight": 400,
+                    "letterSpacing": "-0.05px",
+                    "lineHeight": "20px",
+                    "marginTop": 16,
+                  },
+                  "600": Object {
+                    "fontFamily": "\\"SF UI Display\\", -apple-system, BlinkMacSystemFont, \\"Segoe UI\\", Roboto, Helvetica, Arial, sans-serif, \\"Apple Color Emoji\\", \\"Segoe UI Emoji\\", \\"Segoe UI Symbol\\"",
+                    "fontSize": "20px",
+                    "fontWeight": 400,
+                    "letterSpacing": "-0.07px",
+                    "lineHeight": "24px",
+                    "marginTop": 28,
+                  },
+                },
+              },
+            }
+          }
+        >
+          <Box
+            alignItems="center"
+            boxSizing="border-box"
+            className="css-saeo60 css-nil"
+            display="flex"
+            flex={1}
+            flexGrow={1}
+            flexShrink={0}
+            innerRef={[Function]}
+            is="div"
+            justifyContent="center"
+            onKeyDown={[Function]}
+            overflow="hidden"
+            paddingX={12}
+          >
+            <div
+              className="css-saeo60 css-nil 📦pl_12px 📦pr_12px 📦box-szg_border-box 📦flx_1 📦dspl_flex 📦algn-itms_center 📦flx-srnk_0 📦ovflw-x_hidden 📦ovflw-y_hidden 📦just-cnt_center 📦flx-grow_1"
+              onKeyDown={[Function]}
+            >
+              <withTheme(Checkbox)
+                checked={true}
+                onChange={[Function]}
+              >
+                <Checkbox
+                  appearance="default"
+                  checked={true}
+                  indeterminate={false}
+                  innerRef={[Function]}
+                  onChange={[Function]}
+                  theme={
+                    Object {
+                      "avatarColors": Array [
+                        "neutral",
+                        "blue",
+                        "red",
+                        "orange",
+                        "yellow",
+                        "green",
+                        "teal",
+                        "purple",
+                      ],
+                      "badgeColors": Array [
+                        "neutral",
+                        "blue",
+                        "red",
+                        "orange",
+                        "yellow",
+                        "green",
+                        "teal",
+                        "purple",
+                      ],
+                      "colors": Object {
+                        "background": Object {
+                          "blueTint": "#f7f9fd",
+                          "greenTint": "#f1faf5",
+                          "orangeTint": "#fdf8f3",
+                          "overlay": "rgba(67, 90, 111, 0.7)",
+                          "purpleTint": "#f8f7fc",
+                          "redTint": "#fef6f6",
+                          "tealTint": "#f1fbfc",
+                          "tint1": "#F9F9FB",
+                          "tint2": "#F5F6F7",
+                          "yellowTint": "#fef8e7",
+                        },
+                        "border": Object {
+                          "default": "#E4E7EB",
+                          "muted": "#EDF0F2",
+                        },
+                        "icon": Object {
+                          "danger": "#ec4c47",
+                          "default": "#66788A",
+                          "disabled": "rgba(67, 90, 111, 0.3)",
+                          "info": "#1070ca",
+                          "muted": "#7B8B9A",
+                          "selected": "#1070ca",
+                          "success": "#47b881",
+                          "warning": "#d9822b",
+                        },
+                        "intent": Object {
+                          "danger": "#ec4c47",
+                          "none": "#1070ca",
+                          "success": "#47b881",
+                          "warning": "#d9822b",
+                        },
+                        "text": Object {
+                          "danger": "#bf0e08",
+                          "dark": "#234361",
+                          "default": "#425A70",
+                          "info": "#084b8a",
+                          "muted": "#66788A",
+                          "selected": "#1070ca",
+                          "success": "#00783e",
+                          "warning": "#95591e",
+                        },
+                      },
+                      "elevations": Array [
+                        "0 0 1px rgba(67, 90, 111, 0.3)",
+                        "0 0 1px rgba(67, 90, 111, 0.3), 0 2px 4px -2px rgba(67, 90, 111, 0.47)",
+                        "0 0 1px rgba(67, 90, 111, 0.3), 0 5px 8px -4px rgba(67, 90, 111, 0.47)",
+                        "0 0 1px rgba(67, 90, 111, 0.3), 0 8px 10px -4px rgba(67, 90, 111, 0.47)",
+                        "0 0 1px rgba(67, 90, 111, 0.3), 0 16px 24px -8px rgba(67, 90, 111, 0.47)",
+                      ],
+                      "fills": Object {
+                        "options": Array [
+                          "neutral",
+                          "blue",
+                          "red",
+                          "orange",
+                          "yellow",
+                          "green",
+                          "teal",
+                          "purple",
+                        ],
+                        "solid": Object {
+                          "blue": Object {
+                            "backgroundColor": "#1070ca",
+                            "color": "white",
+                          },
+                          "green": Object {
+                            "backgroundColor": "#47b881",
+                            "color": "white",
+                          },
+                          "neutral": Object {
+                            "backgroundColor": "#425A70",
+                            "color": "white",
+                          },
+                          "orange": Object {
+                            "backgroundColor": "#d9822b",
+                            "color": "white",
+                          },
+                          "purple": Object {
+                            "backgroundColor": "#735dd0",
+                            "color": "white",
+                          },
+                          "red": Object {
+                            "backgroundColor": "#ec4c47",
+                            "color": "white",
+                          },
+                          "teal": Object {
+                            "backgroundColor": "#14b5d0",
+                            "color": "white",
+                          },
+                          "yellow": Object {
+                            "backgroundColor": "#f7d154",
+                            "color": "#7e6514",
+                          },
+                        },
+                        "subtle": Object {
+                          "blue": Object {
+                            "backgroundColor": "#ddebf7",
+                            "color": "#084b8a",
+                          },
+                          "green": Object {
+                            "backgroundColor": "#d4eee2",
+                            "color": "#00783e",
+                          },
+                          "neutral": Object {
+                            "backgroundColor": "#E4E7EB",
+                            "color": "#425A70",
+                          },
+                          "orange": Object {
+                            "backgroundColor": "#fae3cd",
+                            "color": "#95591e",
+                          },
+                          "purple": Object {
+                            "backgroundColor": "#eae7f8",
+                            "color": "#37248f",
+                          },
+                          "red": Object {
+                            "backgroundColor": "#fae2e2",
+                            "color": "#bf0e08",
+                          },
+                          "teal": Object {
+                            "backgroundColor": "#d2eef3",
+                            "color": "#007489",
+                          },
+                          "yellow": Object {
+                            "backgroundColor": "#fbe6a2",
+                            "color": "#7e6514",
+                          },
+                        },
+                      },
+                      "getAlertProps": [Function],
+                      "getAvatarInitialsFontSize": [Function],
+                      "getAvatarProps": [Function],
+                      "getBackground": [Function],
+                      "getBadgeClassName": [Function],
+                      "getBadgeProps": [Function],
+                      "getBorderRadiusForControlHeight": [Function],
+                      "getButtonClassName": [Function],
+                      "getCheckboxClassName": [Function],
+                      "getCodeProps": [Function],
+                      "getElevation": [Function],
+                      "getFontFamily": [Function],
+                      "getHeadingStyle": [Function],
+                      "getIconColor": [Function],
+                      "getIconForIntent": [Function],
+                      "getIconSizeForButton": [Function],
+                      "getIconSizeForIconButton": [Function],
+                      "getIconSizeForInput": [Function],
+                      "getIconSizeForSelect": [Function],
+                      "getLinkClassName": [Function],
+                      "getMenuItemClassName": [Function],
+                      "getParagraphStyle": [Function],
+                      "getRadioClassName": [Function],
+                      "getRowClassName": [Function],
+                      "getSegmentedControlRadioClassName": [Function],
+                      "getSelectClassName": [Function],
+                      "getSwitchClassName": [Function],
+                      "getTabClassName": [Function],
+                      "getTableCellClassName": [Function],
+                      "getTagInputClassName": [Function],
+                      "getTextColor": [Function],
+                      "getTextDropdownButtonClassName": [Function],
+                      "getTextInputClassName": [Function],
+                      "getTextSizeForControlHeight": [Function],
+                      "getTextStyle": [Function],
+                      "getTextareaClassName": [Function],
+                      "getTooltipProps": [Function],
+                      "overlayBackgroundColor": "rgba(67, 90, 111, 0.7)",
+                      "palette": Object {
+                        "blue": Object {
+                          "base": "#1070ca",
+                          "dark": "#084b8a",
+                          "light": "#ddebf7",
+                          "lightest": "#f7f9fd",
+                        },
+                        "green": Object {
+                          "base": "#47b881",
+                          "dark": "#00783e",
+                          "light": "#d4eee2",
+                          "lightest": "#f1faf5",
+                        },
+                        "neutral": Object {
+                          "base": "#425A70",
+                          "dark": "#234361",
+                          "light": "#E4E7EB",
+                          "lightest": "#F9F9FB",
+                        },
+                        "orange": Object {
+                          "base": "#d9822b",
+                          "dark": "#95591e",
+                          "light": "#fae3cd",
+                          "lightest": "#fdf8f3",
+                        },
+                        "purple": Object {
+                          "base": "#735dd0",
+                          "dark": "#37248f",
+                          "light": "#eae7f8",
+                          "lightest": "#f8f7fc",
+                        },
+                        "red": Object {
+                          "base": "#ec4c47",
+                          "dark": "#bf0e08",
+                          "light": "#fae2e2",
+                          "lightest": "#fef6f6",
+                        },
+                        "teal": Object {
+                          "base": "#14b5d0",
+                          "dark": "#007489",
+                          "light": "#d2eef3",
+                          "lightest": "#f1fbfc",
+                        },
+                        "yellow": Object {
+                          "base": "#f7d154",
+                          "dark": "#7e6514",
+                          "light": "#fbe6a2",
+                          "lightest": "#fef8e7",
+                        },
+                      },
+                      "scales": Object {
+                        "blue": Object {
+                          "B1": "#f7f9fd",
+                          "B10": "#084b8a",
+                          "B1A": "rgba(16, 112, 202, 0.04)",
+                          "B2": "#f1f7fc",
+                          "B2A": "rgba(16, 112, 202, 0.06)",
+                          "B3": "#e9f2fa",
+                          "B3A": "rgba(16, 112, 202, 0.09)",
+                          "B4": "#ddebf7",
+                          "B4A": "rgba(16, 112, 202, 0.14)",
+                          "B5": "#b7d4ef",
+                          "B5A": "rgba(16, 112, 202, 0.3)",
+                          "B6": "#8fbce6",
+                          "B6A": "rgba(16, 112, 202, 0.47)",
+                          "B7": "#579ad9",
+                          "B7A": "rgba(16, 112, 202, 0.7)",
+                          "B8": "#3d8bd4",
+                          "B8A": "rgba(16, 112, 202, 0.81)",
+                          "B9": "#1070ca",
+                        },
+                        "neutral": Object {
+                          "N1": "#F9F9FB",
+                          "N10": "#234361",
+                          "N1A": "rgba(67, 90, 111, 0.04)",
+                          "N2": "#F5F6F7",
+                          "N2A": "rgba(67, 90, 111, 0.06)",
+                          "N3": "#EDF0F2",
+                          "N3A": "rgba(67, 90, 111, 0.09)",
+                          "N4": "#E4E7EB",
+                          "N4A": "rgba(67, 90, 111, 0.14)",
+                          "N5": "#C7CED4",
+                          "N5A": "rgba(67, 90, 111, 0.3)",
+                          "N6": "#A6B1BB",
+                          "N6A": "rgba(67, 90, 111, 0.47)",
+                          "N7": "#7B8B9A",
+                          "N7A": "rgba(67, 90, 111, 0.7)",
+                          "N8": "#66788A",
+                          "N8A": "rgba(67, 90, 111, 0.81)",
+                          "N9": "#425A70",
+                        },
+                      },
+                      "spinnerColor": "rgba(67, 90, 111, 0.47)",
+                      "typography": Object {
+                        "fontFamilies": Object {
+                          "display": "\\"SF UI Display\\", -apple-system, BlinkMacSystemFont, \\"Segoe UI\\", Roboto, Helvetica, Arial, sans-serif, \\"Apple Color Emoji\\", \\"Segoe UI Emoji\\", \\"Segoe UI Symbol\\"",
+                          "mono": "\\"SF Mono\\", \\"Monaco\\", \\"Inconsolata\\", \\"Fira Mono\\", \\"Droid Sans Mono\\", \\"Source Code Pro\\", monospace",
+                          "ui": "\\"SF UI Text\\", -apple-system, BlinkMacSystemFont, \\"Segoe UI\\", Roboto, Helvetica, Arial, sans-serif, \\"Apple Color Emoji\\", \\"Segoe UI Emoji\\", \\"Segoe UI Symbol\\"",
+                        },
+                        "headings": Object {
+                          "100": Object {
+                            "color": "#66788A",
+                            "fontFamily": "\\"SF UI Text\\", -apple-system, BlinkMacSystemFont, \\"Segoe UI\\", Roboto, Helvetica, Arial, sans-serif, \\"Apple Color Emoji\\", \\"Segoe UI Emoji\\", \\"Segoe UI Symbol\\"",
+                            "fontSize": "11px",
+                            "fontWeight": 400,
+                            "letterSpacing": "0.6px",
+                            "lineHeight": "16px",
+                            "marginTop": 16,
+                            "textTransform": "uppercase",
+                          },
+                          "200": Object {
+                            "color": "#66788A",
+                            "fontFamily": "\\"SF UI Text\\", -apple-system, BlinkMacSystemFont, \\"Segoe UI\\", Roboto, Helvetica, Arial, sans-serif, \\"Apple Color Emoji\\", \\"Segoe UI Emoji\\", \\"Segoe UI Symbol\\"",
+                            "fontSize": "12px",
+                            "fontWeight": 600,
+                            "letterSpacing": "0",
+                            "lineHeight": "16px",
+                            "marginTop": 16,
+                          },
+                          "300": Object {
+                            "color": "#234361",
+                            "fontFamily": "\\"SF UI Text\\", -apple-system, BlinkMacSystemFont, \\"Segoe UI\\", Roboto, Helvetica, Arial, sans-serif, \\"Apple Color Emoji\\", \\"Segoe UI Emoji\\", \\"Segoe UI Symbol\\"",
+                            "fontSize": "12px",
+                            "fontWeight": 600,
+                            "letterSpacing": "0",
+                            "lineHeight": "16px",
+                            "marginTop": 16,
+                          },
+                          "400": Object {
+                            "color": "#234361",
+                            "fontFamily": "\\"SF UI Text\\", -apple-system, BlinkMacSystemFont, \\"Segoe UI\\", Roboto, Helvetica, Arial, sans-serif, \\"Apple Color Emoji\\", \\"Segoe UI Emoji\\", \\"Segoe UI Symbol\\"",
+                            "fontSize": "14px",
+                            "fontWeight": 600,
+                            "letterSpacing": "-0.05px",
+                            "lineHeight": "20px",
+                            "marginTop": 16,
+                          },
+                          "500": Object {
+                            "color": "#234361",
+                            "fontFamily": "\\"SF UI Text\\", -apple-system, BlinkMacSystemFont, \\"Segoe UI\\", Roboto, Helvetica, Arial, sans-serif, \\"Apple Color Emoji\\", \\"Segoe UI Emoji\\", \\"Segoe UI Symbol\\"",
+                            "fontSize": "16px",
+                            "fontWeight": 500,
+                            "letterSpacing": "-0.05px",
+                            "lineHeight": "20px",
+                            "marginTop": 24,
+                          },
+                          "600": Object {
+                            "color": "#234361",
+                            "fontFamily": "\\"SF UI Display\\", -apple-system, BlinkMacSystemFont, \\"Segoe UI\\", Roboto, Helvetica, Arial, sans-serif, \\"Apple Color Emoji\\", \\"Segoe UI Emoji\\", \\"Segoe UI Symbol\\"",
+                            "fontSize": "20px",
+                            "fontWeight": 500,
+                            "letterSpacing": "-0.07px",
+                            "lineHeight": "24px",
+                            "marginTop": 28,
+                          },
+                          "700": Object {
+                            "color": "#234361",
+                            "fontFamily": "\\"SF UI Display\\", -apple-system, BlinkMacSystemFont, \\"Segoe UI\\", Roboto, Helvetica, Arial, sans-serif, \\"Apple Color Emoji\\", \\"Segoe UI Emoji\\", \\"Segoe UI Symbol\\"",
+                            "fontSize": "24px",
+                            "fontWeight": 500,
+                            "letterSpacing": "-0.07px",
+                            "lineHeight": "28px",
+                            "marginTop": 40,
+                          },
+                          "800": Object {
+                            "color": "#234361",
+                            "fontFamily": "\\"SF UI Display\\", -apple-system, BlinkMacSystemFont, \\"Segoe UI\\", Roboto, Helvetica, Arial, sans-serif, \\"Apple Color Emoji\\", \\"Segoe UI Emoji\\", \\"Segoe UI Symbol\\"",
+                            "fontSize": "29px",
+                            "fontWeight": 500,
+                            "letterSpacing": "-0.2px",
+                            "lineHeight": "32px",
+                            "marginTop": 40,
+                          },
+                          "900": Object {
+                            "color": "#234361",
+                            "fontFamily": "\\"SF UI Display\\", -apple-system, BlinkMacSystemFont, \\"Segoe UI\\", Roboto, Helvetica, Arial, sans-serif, \\"Apple Color Emoji\\", \\"Segoe UI Emoji\\", \\"Segoe UI Symbol\\"",
+                            "fontSize": "35px",
+                            "fontWeight": 500,
+                            "letterSpacing": "-0.2px",
+                            "lineHeight": "40px",
+                            "marginTop": 52,
+                          },
+                        },
+                        "paragraph": Object {
+                          "300": Object {
+                            "fontSize": "12px",
+                            "fontWeight": 400,
+                            "letterSpacing": "0",
+                            "lineHeight": "18px",
+                            "marginTop": 12,
+                          },
+                          "400": Object {
+                            "fontSize": "14px",
+                            "fontWeight": 400,
+                            "letterSpacing": "-0.05px",
+                            "lineHeight": "21px",
+                            "marginTop": 12,
+                          },
+                          "500": Object {
+                            "fontSize": "16px",
+                            "fontWeight": 400,
+                            "letterSpacing": "-0.05px",
+                            "lineHeight": "24px",
+                            "marginTop": 16,
+                          },
+                        },
+                        "text": Object {
+                          "300": Object {
+                            "fontSize": "12px",
+                            "fontWeight": 400,
+                            "letterSpacing": "0",
+                            "lineHeight": "16px",
+                            "marginTop": 12,
+                          },
+                          "400": Object {
+                            "fontSize": "14px",
+                            "fontWeight": 400,
+                            "letterSpacing": "-0.05px",
+                            "lineHeight": "20px",
+                            "marginTop": 12,
+                          },
+                          "500": Object {
+                            "fontSize": "16px",
+                            "fontWeight": 400,
+                            "letterSpacing": "-0.05px",
+                            "lineHeight": "20px",
+                            "marginTop": 16,
+                          },
+                          "600": Object {
+                            "fontFamily": "\\"SF UI Display\\", -apple-system, BlinkMacSystemFont, \\"Segoe UI\\", Roboto, Helvetica, Arial, sans-serif, \\"Apple Color Emoji\\", \\"Segoe UI Emoji\\", \\"Segoe UI Symbol\\"",
+                            "fontSize": "20px",
+                            "fontWeight": 400,
+                            "letterSpacing": "-0.07px",
+                            "lineHeight": "24px",
+                            "marginTop": 28,
+                          },
+                        },
+                      },
+                    }
+                  }
+                >
+                  <Box
+                    boxSizing="border-box"
+                    cursor="pointer"
+                    display="flex"
+                    innerRef={null}
+                    is="label"
+                    marginY={16}
+                    position="relative"
+                  >
+                    <label
+                      className="📦crsr_pointer 📦pst_relative 📦dspl_flex 📦mb_16px 📦mt_16px 📦box-szg_border-box"
+                    >
+                      <Box
+                        boxSizing="border-box"
+                        checked={true}
+                        className="css-1bkiqpw"
+                        innerRef={[Function]}
+                        is="input"
+                        onChange={[Function]}
+                        type="checkbox"
+                      >
+                        <input
+                          checked={true}
+                          className="css-1bkiqpw 📦box-szg_border-box"
+                          onChange={[Function]}
+                          type="checkbox"
+                        />
+                      </Box>
+                      <Box
+                        alignItems="center"
+                        borderRadius={3}
+                        boxSizing="border-box"
+                        display="flex"
+                        flex="none"
+                        height={16}
+                        innerRef={null}
+                        is="div"
+                        justifyContent="center"
+                        width={16}
+                      >
+                        <div
+                          className="📦box-szg_border-box 📦bblr_3px 📦bbrr_3px 📦btlr_3px 📦btrr_3px 📦dspl_flex 📦flx_none 📦algn-itms_center 📦just-cnt_center 📦w_16px 📦h_16px"
+                        >
+                          <CheckIcon>
+                            <svg
+                              height={7}
+                              viewBox="0 0 10 7"
+                              width={10}
+                            >
+                              <path
+                                d="M4 4.586L1.707 2.293A1 1 0 1 0 .293 3.707l3 3a.997.997 0 0 0 1.414 0l5-5A1 1 0 1 0 8.293.293L4 4.586z"
+                                fill="currentColor"
+                                fillRule="evenodd"
+                              />
+                            </svg>
+                          </CheckIcon>
+                        </div>
+                      </Box>
+                    </label>
+                  </Box>
+                </Checkbox>
+              </withTheme(Checkbox)>
+            </div>
+          </Box>
+        </Pane>
+      </withTheme(Pane)>
+    </TableCell>
+  </withTheme(TableCell)>
+</SelectionTableCell>
+`;
+
+exports[`SelectionTableCell matches snapshot (unchecked) 1`] = `
+<SelectionTableCell
+  dataKey="string"
+  dataRow={
+    Object {
+      "string": "foobar",
+    }
+  }
+  selectOnChange={[MockFunction]}
+  selectedRowIds={Array []}
+  width={1}
+>
+  <withTheme(TableCell)
+    flexGrow={1}
+    justifyContent="center"
+  >
+    <TableCell
+      appearance="default"
+      flexGrow={1}
+      justifyContent="center"
+      theme={
+        Object {
+          "avatarColors": Array [
+            "neutral",
+            "blue",
+            "red",
+            "orange",
+            "yellow",
+            "green",
+            "teal",
+            "purple",
+          ],
+          "badgeColors": Array [
+            "neutral",
+            "blue",
+            "red",
+            "orange",
+            "yellow",
+            "green",
+            "teal",
+            "purple",
+          ],
+          "colors": Object {
+            "background": Object {
+              "blueTint": "#f7f9fd",
+              "greenTint": "#f1faf5",
+              "orangeTint": "#fdf8f3",
+              "overlay": "rgba(67, 90, 111, 0.7)",
+              "purpleTint": "#f8f7fc",
+              "redTint": "#fef6f6",
+              "tealTint": "#f1fbfc",
+              "tint1": "#F9F9FB",
+              "tint2": "#F5F6F7",
+              "yellowTint": "#fef8e7",
+            },
+            "border": Object {
+              "default": "#E4E7EB",
+              "muted": "#EDF0F2",
+            },
+            "icon": Object {
+              "danger": "#ec4c47",
+              "default": "#66788A",
+              "disabled": "rgba(67, 90, 111, 0.3)",
+              "info": "#1070ca",
+              "muted": "#7B8B9A",
+              "selected": "#1070ca",
+              "success": "#47b881",
+              "warning": "#d9822b",
+            },
+            "intent": Object {
+              "danger": "#ec4c47",
+              "none": "#1070ca",
+              "success": "#47b881",
+              "warning": "#d9822b",
+            },
+            "text": Object {
+              "danger": "#bf0e08",
+              "dark": "#234361",
+              "default": "#425A70",
+              "info": "#084b8a",
+              "muted": "#66788A",
+              "selected": "#1070ca",
+              "success": "#00783e",
+              "warning": "#95591e",
+            },
+          },
+          "elevations": Array [
+            "0 0 1px rgba(67, 90, 111, 0.3)",
+            "0 0 1px rgba(67, 90, 111, 0.3), 0 2px 4px -2px rgba(67, 90, 111, 0.47)",
+            "0 0 1px rgba(67, 90, 111, 0.3), 0 5px 8px -4px rgba(67, 90, 111, 0.47)",
+            "0 0 1px rgba(67, 90, 111, 0.3), 0 8px 10px -4px rgba(67, 90, 111, 0.47)",
+            "0 0 1px rgba(67, 90, 111, 0.3), 0 16px 24px -8px rgba(67, 90, 111, 0.47)",
+          ],
+          "fills": Object {
+            "options": Array [
+              "neutral",
+              "blue",
+              "red",
+              "orange",
+              "yellow",
+              "green",
+              "teal",
+              "purple",
+            ],
+            "solid": Object {
+              "blue": Object {
+                "backgroundColor": "#1070ca",
+                "color": "white",
+              },
+              "green": Object {
+                "backgroundColor": "#47b881",
+                "color": "white",
+              },
+              "neutral": Object {
+                "backgroundColor": "#425A70",
+                "color": "white",
+              },
+              "orange": Object {
+                "backgroundColor": "#d9822b",
+                "color": "white",
+              },
+              "purple": Object {
+                "backgroundColor": "#735dd0",
+                "color": "white",
+              },
+              "red": Object {
+                "backgroundColor": "#ec4c47",
+                "color": "white",
+              },
+              "teal": Object {
+                "backgroundColor": "#14b5d0",
+                "color": "white",
+              },
+              "yellow": Object {
+                "backgroundColor": "#f7d154",
+                "color": "#7e6514",
+              },
+            },
+            "subtle": Object {
+              "blue": Object {
+                "backgroundColor": "#ddebf7",
+                "color": "#084b8a",
+              },
+              "green": Object {
+                "backgroundColor": "#d4eee2",
+                "color": "#00783e",
+              },
+              "neutral": Object {
+                "backgroundColor": "#E4E7EB",
+                "color": "#425A70",
+              },
+              "orange": Object {
+                "backgroundColor": "#fae3cd",
+                "color": "#95591e",
+              },
+              "purple": Object {
+                "backgroundColor": "#eae7f8",
+                "color": "#37248f",
+              },
+              "red": Object {
+                "backgroundColor": "#fae2e2",
+                "color": "#bf0e08",
+              },
+              "teal": Object {
+                "backgroundColor": "#d2eef3",
+                "color": "#007489",
+              },
+              "yellow": Object {
+                "backgroundColor": "#fbe6a2",
+                "color": "#7e6514",
+              },
+            },
+          },
+          "getAlertProps": [Function],
+          "getAvatarInitialsFontSize": [Function],
+          "getAvatarProps": [Function],
+          "getBackground": [Function],
+          "getBadgeClassName": [Function],
+          "getBadgeProps": [Function],
+          "getBorderRadiusForControlHeight": [Function],
+          "getButtonClassName": [Function],
+          "getCheckboxClassName": [Function],
+          "getCodeProps": [Function],
+          "getElevation": [Function],
+          "getFontFamily": [Function],
+          "getHeadingStyle": [Function],
+          "getIconColor": [Function],
+          "getIconForIntent": [Function],
+          "getIconSizeForButton": [Function],
+          "getIconSizeForIconButton": [Function],
+          "getIconSizeForInput": [Function],
+          "getIconSizeForSelect": [Function],
+          "getLinkClassName": [Function],
+          "getMenuItemClassName": [Function],
+          "getParagraphStyle": [Function],
+          "getRadioClassName": [Function],
+          "getRowClassName": [Function],
+          "getSegmentedControlRadioClassName": [Function],
+          "getSelectClassName": [Function],
+          "getSwitchClassName": [Function],
+          "getTabClassName": [Function],
+          "getTableCellClassName": [Function],
+          "getTagInputClassName": [Function],
+          "getTextColor": [Function],
+          "getTextDropdownButtonClassName": [Function],
+          "getTextInputClassName": [Function],
+          "getTextSizeForControlHeight": [Function],
+          "getTextStyle": [Function],
+          "getTextareaClassName": [Function],
+          "getTooltipProps": [Function],
+          "overlayBackgroundColor": "rgba(67, 90, 111, 0.7)",
+          "palette": Object {
+            "blue": Object {
+              "base": "#1070ca",
+              "dark": "#084b8a",
+              "light": "#ddebf7",
+              "lightest": "#f7f9fd",
+            },
+            "green": Object {
+              "base": "#47b881",
+              "dark": "#00783e",
+              "light": "#d4eee2",
+              "lightest": "#f1faf5",
+            },
+            "neutral": Object {
+              "base": "#425A70",
+              "dark": "#234361",
+              "light": "#E4E7EB",
+              "lightest": "#F9F9FB",
+            },
+            "orange": Object {
+              "base": "#d9822b",
+              "dark": "#95591e",
+              "light": "#fae3cd",
+              "lightest": "#fdf8f3",
+            },
+            "purple": Object {
+              "base": "#735dd0",
+              "dark": "#37248f",
+              "light": "#eae7f8",
+              "lightest": "#f8f7fc",
+            },
+            "red": Object {
+              "base": "#ec4c47",
+              "dark": "#bf0e08",
+              "light": "#fae2e2",
+              "lightest": "#fef6f6",
+            },
+            "teal": Object {
+              "base": "#14b5d0",
+              "dark": "#007489",
+              "light": "#d2eef3",
+              "lightest": "#f1fbfc",
+            },
+            "yellow": Object {
+              "base": "#f7d154",
+              "dark": "#7e6514",
+              "light": "#fbe6a2",
+              "lightest": "#fef8e7",
+            },
+          },
+          "scales": Object {
+            "blue": Object {
+              "B1": "#f7f9fd",
+              "B10": "#084b8a",
+              "B1A": "rgba(16, 112, 202, 0.04)",
+              "B2": "#f1f7fc",
+              "B2A": "rgba(16, 112, 202, 0.06)",
+              "B3": "#e9f2fa",
+              "B3A": "rgba(16, 112, 202, 0.09)",
+              "B4": "#ddebf7",
+              "B4A": "rgba(16, 112, 202, 0.14)",
+              "B5": "#b7d4ef",
+              "B5A": "rgba(16, 112, 202, 0.3)",
+              "B6": "#8fbce6",
+              "B6A": "rgba(16, 112, 202, 0.47)",
+              "B7": "#579ad9",
+              "B7A": "rgba(16, 112, 202, 0.7)",
+              "B8": "#3d8bd4",
+              "B8A": "rgba(16, 112, 202, 0.81)",
+              "B9": "#1070ca",
+            },
+            "neutral": Object {
+              "N1": "#F9F9FB",
+              "N10": "#234361",
+              "N1A": "rgba(67, 90, 111, 0.04)",
+              "N2": "#F5F6F7",
+              "N2A": "rgba(67, 90, 111, 0.06)",
+              "N3": "#EDF0F2",
+              "N3A": "rgba(67, 90, 111, 0.09)",
+              "N4": "#E4E7EB",
+              "N4A": "rgba(67, 90, 111, 0.14)",
+              "N5": "#C7CED4",
+              "N5A": "rgba(67, 90, 111, 0.3)",
+              "N6": "#A6B1BB",
+              "N6A": "rgba(67, 90, 111, 0.47)",
+              "N7": "#7B8B9A",
+              "N7A": "rgba(67, 90, 111, 0.7)",
+              "N8": "#66788A",
+              "N8A": "rgba(67, 90, 111, 0.81)",
+              "N9": "#425A70",
+            },
+          },
+          "spinnerColor": "rgba(67, 90, 111, 0.47)",
+          "typography": Object {
+            "fontFamilies": Object {
+              "display": "\\"SF UI Display\\", -apple-system, BlinkMacSystemFont, \\"Segoe UI\\", Roboto, Helvetica, Arial, sans-serif, \\"Apple Color Emoji\\", \\"Segoe UI Emoji\\", \\"Segoe UI Symbol\\"",
+              "mono": "\\"SF Mono\\", \\"Monaco\\", \\"Inconsolata\\", \\"Fira Mono\\", \\"Droid Sans Mono\\", \\"Source Code Pro\\", monospace",
+              "ui": "\\"SF UI Text\\", -apple-system, BlinkMacSystemFont, \\"Segoe UI\\", Roboto, Helvetica, Arial, sans-serif, \\"Apple Color Emoji\\", \\"Segoe UI Emoji\\", \\"Segoe UI Symbol\\"",
+            },
+            "headings": Object {
+              "100": Object {
+                "color": "#66788A",
+                "fontFamily": "\\"SF UI Text\\", -apple-system, BlinkMacSystemFont, \\"Segoe UI\\", Roboto, Helvetica, Arial, sans-serif, \\"Apple Color Emoji\\", \\"Segoe UI Emoji\\", \\"Segoe UI Symbol\\"",
+                "fontSize": "11px",
+                "fontWeight": 400,
+                "letterSpacing": "0.6px",
+                "lineHeight": "16px",
+                "marginTop": 16,
+                "textTransform": "uppercase",
+              },
+              "200": Object {
+                "color": "#66788A",
+                "fontFamily": "\\"SF UI Text\\", -apple-system, BlinkMacSystemFont, \\"Segoe UI\\", Roboto, Helvetica, Arial, sans-serif, \\"Apple Color Emoji\\", \\"Segoe UI Emoji\\", \\"Segoe UI Symbol\\"",
+                "fontSize": "12px",
+                "fontWeight": 600,
+                "letterSpacing": "0",
+                "lineHeight": "16px",
+                "marginTop": 16,
+              },
+              "300": Object {
+                "color": "#234361",
+                "fontFamily": "\\"SF UI Text\\", -apple-system, BlinkMacSystemFont, \\"Segoe UI\\", Roboto, Helvetica, Arial, sans-serif, \\"Apple Color Emoji\\", \\"Segoe UI Emoji\\", \\"Segoe UI Symbol\\"",
+                "fontSize": "12px",
+                "fontWeight": 600,
+                "letterSpacing": "0",
+                "lineHeight": "16px",
+                "marginTop": 16,
+              },
+              "400": Object {
+                "color": "#234361",
+                "fontFamily": "\\"SF UI Text\\", -apple-system, BlinkMacSystemFont, \\"Segoe UI\\", Roboto, Helvetica, Arial, sans-serif, \\"Apple Color Emoji\\", \\"Segoe UI Emoji\\", \\"Segoe UI Symbol\\"",
+                "fontSize": "14px",
+                "fontWeight": 600,
+                "letterSpacing": "-0.05px",
+                "lineHeight": "20px",
+                "marginTop": 16,
+              },
+              "500": Object {
+                "color": "#234361",
+                "fontFamily": "\\"SF UI Text\\", -apple-system, BlinkMacSystemFont, \\"Segoe UI\\", Roboto, Helvetica, Arial, sans-serif, \\"Apple Color Emoji\\", \\"Segoe UI Emoji\\", \\"Segoe UI Symbol\\"",
+                "fontSize": "16px",
+                "fontWeight": 500,
+                "letterSpacing": "-0.05px",
+                "lineHeight": "20px",
+                "marginTop": 24,
+              },
+              "600": Object {
+                "color": "#234361",
+                "fontFamily": "\\"SF UI Display\\", -apple-system, BlinkMacSystemFont, \\"Segoe UI\\", Roboto, Helvetica, Arial, sans-serif, \\"Apple Color Emoji\\", \\"Segoe UI Emoji\\", \\"Segoe UI Symbol\\"",
+                "fontSize": "20px",
+                "fontWeight": 500,
+                "letterSpacing": "-0.07px",
+                "lineHeight": "24px",
+                "marginTop": 28,
+              },
+              "700": Object {
+                "color": "#234361",
+                "fontFamily": "\\"SF UI Display\\", -apple-system, BlinkMacSystemFont, \\"Segoe UI\\", Roboto, Helvetica, Arial, sans-serif, \\"Apple Color Emoji\\", \\"Segoe UI Emoji\\", \\"Segoe UI Symbol\\"",
+                "fontSize": "24px",
+                "fontWeight": 500,
+                "letterSpacing": "-0.07px",
+                "lineHeight": "28px",
+                "marginTop": 40,
+              },
+              "800": Object {
+                "color": "#234361",
+                "fontFamily": "\\"SF UI Display\\", -apple-system, BlinkMacSystemFont, \\"Segoe UI\\", Roboto, Helvetica, Arial, sans-serif, \\"Apple Color Emoji\\", \\"Segoe UI Emoji\\", \\"Segoe UI Symbol\\"",
+                "fontSize": "29px",
+                "fontWeight": 500,
+                "letterSpacing": "-0.2px",
+                "lineHeight": "32px",
+                "marginTop": 40,
+              },
+              "900": Object {
+                "color": "#234361",
+                "fontFamily": "\\"SF UI Display\\", -apple-system, BlinkMacSystemFont, \\"Segoe UI\\", Roboto, Helvetica, Arial, sans-serif, \\"Apple Color Emoji\\", \\"Segoe UI Emoji\\", \\"Segoe UI Symbol\\"",
+                "fontSize": "35px",
+                "fontWeight": 500,
+                "letterSpacing": "-0.2px",
+                "lineHeight": "40px",
+                "marginTop": 52,
+              },
+            },
+            "paragraph": Object {
+              "300": Object {
+                "fontSize": "12px",
+                "fontWeight": 400,
+                "letterSpacing": "0",
+                "lineHeight": "18px",
+                "marginTop": 12,
+              },
+              "400": Object {
+                "fontSize": "14px",
+                "fontWeight": 400,
+                "letterSpacing": "-0.05px",
+                "lineHeight": "21px",
+                "marginTop": 12,
+              },
+              "500": Object {
+                "fontSize": "16px",
+                "fontWeight": 400,
+                "letterSpacing": "-0.05px",
+                "lineHeight": "24px",
+                "marginTop": 16,
+              },
+            },
+            "text": Object {
+              "300": Object {
+                "fontSize": "12px",
+                "fontWeight": 400,
+                "letterSpacing": "0",
+                "lineHeight": "16px",
+                "marginTop": 12,
+              },
+              "400": Object {
+                "fontSize": "14px",
+                "fontWeight": 400,
+                "letterSpacing": "-0.05px",
+                "lineHeight": "20px",
+                "marginTop": 12,
+              },
+              "500": Object {
+                "fontSize": "16px",
+                "fontWeight": 400,
+                "letterSpacing": "-0.05px",
+                "lineHeight": "20px",
+                "marginTop": 16,
+              },
+              "600": Object {
+                "fontFamily": "\\"SF UI Display\\", -apple-system, BlinkMacSystemFont, \\"Segoe UI\\", Roboto, Helvetica, Arial, sans-serif, \\"Apple Color Emoji\\", \\"Segoe UI Emoji\\", \\"Segoe UI Symbol\\"",
+                "fontSize": "20px",
+                "fontWeight": 400,
+                "letterSpacing": "-0.07px",
+                "lineHeight": "24px",
+                "marginTop": 28,
+              },
+            },
+          },
+        }
+      }
+    >
+      <withTheme(Pane)
+        alignItems="center"
+        boxSizing="border-box"
+        className="css-saeo60"
+        display="flex"
+        flex={1}
+        flexGrow={1}
+        flexShrink={0}
+        innerRef={[Function]}
+        justifyContent="center"
+        onKeyDown={[Function]}
+        overflow="hidden"
+        paddingX={12}
+      >
+        <Pane
+          alignItems="center"
+          boxSizing="border-box"
+          className="css-saeo60"
+          display="flex"
+          flex={1}
+          flexGrow={1}
+          flexShrink={0}
+          innerRef={[Function]}
+          justifyContent="center"
+          onKeyDown={[Function]}
+          overflow="hidden"
+          paddingX={12}
+          theme={
+            Object {
+              "avatarColors": Array [
+                "neutral",
+                "blue",
+                "red",
+                "orange",
+                "yellow",
+                "green",
+                "teal",
+                "purple",
+              ],
+              "badgeColors": Array [
+                "neutral",
+                "blue",
+                "red",
+                "orange",
+                "yellow",
+                "green",
+                "teal",
+                "purple",
+              ],
+              "colors": Object {
+                "background": Object {
+                  "blueTint": "#f7f9fd",
+                  "greenTint": "#f1faf5",
+                  "orangeTint": "#fdf8f3",
+                  "overlay": "rgba(67, 90, 111, 0.7)",
+                  "purpleTint": "#f8f7fc",
+                  "redTint": "#fef6f6",
+                  "tealTint": "#f1fbfc",
+                  "tint1": "#F9F9FB",
+                  "tint2": "#F5F6F7",
+                  "yellowTint": "#fef8e7",
+                },
+                "border": Object {
+                  "default": "#E4E7EB",
+                  "muted": "#EDF0F2",
+                },
+                "icon": Object {
+                  "danger": "#ec4c47",
+                  "default": "#66788A",
+                  "disabled": "rgba(67, 90, 111, 0.3)",
+                  "info": "#1070ca",
+                  "muted": "#7B8B9A",
+                  "selected": "#1070ca",
+                  "success": "#47b881",
+                  "warning": "#d9822b",
+                },
+                "intent": Object {
+                  "danger": "#ec4c47",
+                  "none": "#1070ca",
+                  "success": "#47b881",
+                  "warning": "#d9822b",
+                },
+                "text": Object {
+                  "danger": "#bf0e08",
+                  "dark": "#234361",
+                  "default": "#425A70",
+                  "info": "#084b8a",
+                  "muted": "#66788A",
+                  "selected": "#1070ca",
+                  "success": "#00783e",
+                  "warning": "#95591e",
+                },
+              },
+              "elevations": Array [
+                "0 0 1px rgba(67, 90, 111, 0.3)",
+                "0 0 1px rgba(67, 90, 111, 0.3), 0 2px 4px -2px rgba(67, 90, 111, 0.47)",
+                "0 0 1px rgba(67, 90, 111, 0.3), 0 5px 8px -4px rgba(67, 90, 111, 0.47)",
+                "0 0 1px rgba(67, 90, 111, 0.3), 0 8px 10px -4px rgba(67, 90, 111, 0.47)",
+                "0 0 1px rgba(67, 90, 111, 0.3), 0 16px 24px -8px rgba(67, 90, 111, 0.47)",
+              ],
+              "fills": Object {
+                "options": Array [
+                  "neutral",
+                  "blue",
+                  "red",
+                  "orange",
+                  "yellow",
+                  "green",
+                  "teal",
+                  "purple",
+                ],
+                "solid": Object {
+                  "blue": Object {
+                    "backgroundColor": "#1070ca",
+                    "color": "white",
+                  },
+                  "green": Object {
+                    "backgroundColor": "#47b881",
+                    "color": "white",
+                  },
+                  "neutral": Object {
+                    "backgroundColor": "#425A70",
+                    "color": "white",
+                  },
+                  "orange": Object {
+                    "backgroundColor": "#d9822b",
+                    "color": "white",
+                  },
+                  "purple": Object {
+                    "backgroundColor": "#735dd0",
+                    "color": "white",
+                  },
+                  "red": Object {
+                    "backgroundColor": "#ec4c47",
+                    "color": "white",
+                  },
+                  "teal": Object {
+                    "backgroundColor": "#14b5d0",
+                    "color": "white",
+                  },
+                  "yellow": Object {
+                    "backgroundColor": "#f7d154",
+                    "color": "#7e6514",
+                  },
+                },
+                "subtle": Object {
+                  "blue": Object {
+                    "backgroundColor": "#ddebf7",
+                    "color": "#084b8a",
+                  },
+                  "green": Object {
+                    "backgroundColor": "#d4eee2",
+                    "color": "#00783e",
+                  },
+                  "neutral": Object {
+                    "backgroundColor": "#E4E7EB",
+                    "color": "#425A70",
+                  },
+                  "orange": Object {
+                    "backgroundColor": "#fae3cd",
+                    "color": "#95591e",
+                  },
+                  "purple": Object {
+                    "backgroundColor": "#eae7f8",
+                    "color": "#37248f",
+                  },
+                  "red": Object {
+                    "backgroundColor": "#fae2e2",
+                    "color": "#bf0e08",
+                  },
+                  "teal": Object {
+                    "backgroundColor": "#d2eef3",
+                    "color": "#007489",
+                  },
+                  "yellow": Object {
+                    "backgroundColor": "#fbe6a2",
+                    "color": "#7e6514",
+                  },
+                },
+              },
+              "getAlertProps": [Function],
+              "getAvatarInitialsFontSize": [Function],
+              "getAvatarProps": [Function],
+              "getBackground": [Function],
+              "getBadgeClassName": [Function],
+              "getBadgeProps": [Function],
+              "getBorderRadiusForControlHeight": [Function],
+              "getButtonClassName": [Function],
+              "getCheckboxClassName": [Function],
+              "getCodeProps": [Function],
+              "getElevation": [Function],
+              "getFontFamily": [Function],
+              "getHeadingStyle": [Function],
+              "getIconColor": [Function],
+              "getIconForIntent": [Function],
+              "getIconSizeForButton": [Function],
+              "getIconSizeForIconButton": [Function],
+              "getIconSizeForInput": [Function],
+              "getIconSizeForSelect": [Function],
+              "getLinkClassName": [Function],
+              "getMenuItemClassName": [Function],
+              "getParagraphStyle": [Function],
+              "getRadioClassName": [Function],
+              "getRowClassName": [Function],
+              "getSegmentedControlRadioClassName": [Function],
+              "getSelectClassName": [Function],
+              "getSwitchClassName": [Function],
+              "getTabClassName": [Function],
+              "getTableCellClassName": [Function],
+              "getTagInputClassName": [Function],
+              "getTextColor": [Function],
+              "getTextDropdownButtonClassName": [Function],
+              "getTextInputClassName": [Function],
+              "getTextSizeForControlHeight": [Function],
+              "getTextStyle": [Function],
+              "getTextareaClassName": [Function],
+              "getTooltipProps": [Function],
+              "overlayBackgroundColor": "rgba(67, 90, 111, 0.7)",
+              "palette": Object {
+                "blue": Object {
+                  "base": "#1070ca",
+                  "dark": "#084b8a",
+                  "light": "#ddebf7",
+                  "lightest": "#f7f9fd",
+                },
+                "green": Object {
+                  "base": "#47b881",
+                  "dark": "#00783e",
+                  "light": "#d4eee2",
+                  "lightest": "#f1faf5",
+                },
+                "neutral": Object {
+                  "base": "#425A70",
+                  "dark": "#234361",
+                  "light": "#E4E7EB",
+                  "lightest": "#F9F9FB",
+                },
+                "orange": Object {
+                  "base": "#d9822b",
+                  "dark": "#95591e",
+                  "light": "#fae3cd",
+                  "lightest": "#fdf8f3",
+                },
+                "purple": Object {
+                  "base": "#735dd0",
+                  "dark": "#37248f",
+                  "light": "#eae7f8",
+                  "lightest": "#f8f7fc",
+                },
+                "red": Object {
+                  "base": "#ec4c47",
+                  "dark": "#bf0e08",
+                  "light": "#fae2e2",
+                  "lightest": "#fef6f6",
+                },
+                "teal": Object {
+                  "base": "#14b5d0",
+                  "dark": "#007489",
+                  "light": "#d2eef3",
+                  "lightest": "#f1fbfc",
+                },
+                "yellow": Object {
+                  "base": "#f7d154",
+                  "dark": "#7e6514",
+                  "light": "#fbe6a2",
+                  "lightest": "#fef8e7",
+                },
+              },
+              "scales": Object {
+                "blue": Object {
+                  "B1": "#f7f9fd",
+                  "B10": "#084b8a",
+                  "B1A": "rgba(16, 112, 202, 0.04)",
+                  "B2": "#f1f7fc",
+                  "B2A": "rgba(16, 112, 202, 0.06)",
+                  "B3": "#e9f2fa",
+                  "B3A": "rgba(16, 112, 202, 0.09)",
+                  "B4": "#ddebf7",
+                  "B4A": "rgba(16, 112, 202, 0.14)",
+                  "B5": "#b7d4ef",
+                  "B5A": "rgba(16, 112, 202, 0.3)",
+                  "B6": "#8fbce6",
+                  "B6A": "rgba(16, 112, 202, 0.47)",
+                  "B7": "#579ad9",
+                  "B7A": "rgba(16, 112, 202, 0.7)",
+                  "B8": "#3d8bd4",
+                  "B8A": "rgba(16, 112, 202, 0.81)",
+                  "B9": "#1070ca",
+                },
+                "neutral": Object {
+                  "N1": "#F9F9FB",
+                  "N10": "#234361",
+                  "N1A": "rgba(67, 90, 111, 0.04)",
+                  "N2": "#F5F6F7",
+                  "N2A": "rgba(67, 90, 111, 0.06)",
+                  "N3": "#EDF0F2",
+                  "N3A": "rgba(67, 90, 111, 0.09)",
+                  "N4": "#E4E7EB",
+                  "N4A": "rgba(67, 90, 111, 0.14)",
+                  "N5": "#C7CED4",
+                  "N5A": "rgba(67, 90, 111, 0.3)",
+                  "N6": "#A6B1BB",
+                  "N6A": "rgba(67, 90, 111, 0.47)",
+                  "N7": "#7B8B9A",
+                  "N7A": "rgba(67, 90, 111, 0.7)",
+                  "N8": "#66788A",
+                  "N8A": "rgba(67, 90, 111, 0.81)",
+                  "N9": "#425A70",
+                },
+              },
+              "spinnerColor": "rgba(67, 90, 111, 0.47)",
+              "typography": Object {
+                "fontFamilies": Object {
+                  "display": "\\"SF UI Display\\", -apple-system, BlinkMacSystemFont, \\"Segoe UI\\", Roboto, Helvetica, Arial, sans-serif, \\"Apple Color Emoji\\", \\"Segoe UI Emoji\\", \\"Segoe UI Symbol\\"",
+                  "mono": "\\"SF Mono\\", \\"Monaco\\", \\"Inconsolata\\", \\"Fira Mono\\", \\"Droid Sans Mono\\", \\"Source Code Pro\\", monospace",
+                  "ui": "\\"SF UI Text\\", -apple-system, BlinkMacSystemFont, \\"Segoe UI\\", Roboto, Helvetica, Arial, sans-serif, \\"Apple Color Emoji\\", \\"Segoe UI Emoji\\", \\"Segoe UI Symbol\\"",
+                },
+                "headings": Object {
+                  "100": Object {
+                    "color": "#66788A",
+                    "fontFamily": "\\"SF UI Text\\", -apple-system, BlinkMacSystemFont, \\"Segoe UI\\", Roboto, Helvetica, Arial, sans-serif, \\"Apple Color Emoji\\", \\"Segoe UI Emoji\\", \\"Segoe UI Symbol\\"",
+                    "fontSize": "11px",
+                    "fontWeight": 400,
+                    "letterSpacing": "0.6px",
+                    "lineHeight": "16px",
+                    "marginTop": 16,
+                    "textTransform": "uppercase",
+                  },
+                  "200": Object {
+                    "color": "#66788A",
+                    "fontFamily": "\\"SF UI Text\\", -apple-system, BlinkMacSystemFont, \\"Segoe UI\\", Roboto, Helvetica, Arial, sans-serif, \\"Apple Color Emoji\\", \\"Segoe UI Emoji\\", \\"Segoe UI Symbol\\"",
+                    "fontSize": "12px",
+                    "fontWeight": 600,
+                    "letterSpacing": "0",
+                    "lineHeight": "16px",
+                    "marginTop": 16,
+                  },
+                  "300": Object {
+                    "color": "#234361",
+                    "fontFamily": "\\"SF UI Text\\", -apple-system, BlinkMacSystemFont, \\"Segoe UI\\", Roboto, Helvetica, Arial, sans-serif, \\"Apple Color Emoji\\", \\"Segoe UI Emoji\\", \\"Segoe UI Symbol\\"",
+                    "fontSize": "12px",
+                    "fontWeight": 600,
+                    "letterSpacing": "0",
+                    "lineHeight": "16px",
+                    "marginTop": 16,
+                  },
+                  "400": Object {
+                    "color": "#234361",
+                    "fontFamily": "\\"SF UI Text\\", -apple-system, BlinkMacSystemFont, \\"Segoe UI\\", Roboto, Helvetica, Arial, sans-serif, \\"Apple Color Emoji\\", \\"Segoe UI Emoji\\", \\"Segoe UI Symbol\\"",
+                    "fontSize": "14px",
+                    "fontWeight": 600,
+                    "letterSpacing": "-0.05px",
+                    "lineHeight": "20px",
+                    "marginTop": 16,
+                  },
+                  "500": Object {
+                    "color": "#234361",
+                    "fontFamily": "\\"SF UI Text\\", -apple-system, BlinkMacSystemFont, \\"Segoe UI\\", Roboto, Helvetica, Arial, sans-serif, \\"Apple Color Emoji\\", \\"Segoe UI Emoji\\", \\"Segoe UI Symbol\\"",
+                    "fontSize": "16px",
+                    "fontWeight": 500,
+                    "letterSpacing": "-0.05px",
+                    "lineHeight": "20px",
+                    "marginTop": 24,
+                  },
+                  "600": Object {
+                    "color": "#234361",
+                    "fontFamily": "\\"SF UI Display\\", -apple-system, BlinkMacSystemFont, \\"Segoe UI\\", Roboto, Helvetica, Arial, sans-serif, \\"Apple Color Emoji\\", \\"Segoe UI Emoji\\", \\"Segoe UI Symbol\\"",
+                    "fontSize": "20px",
+                    "fontWeight": 500,
+                    "letterSpacing": "-0.07px",
+                    "lineHeight": "24px",
+                    "marginTop": 28,
+                  },
+                  "700": Object {
+                    "color": "#234361",
+                    "fontFamily": "\\"SF UI Display\\", -apple-system, BlinkMacSystemFont, \\"Segoe UI\\", Roboto, Helvetica, Arial, sans-serif, \\"Apple Color Emoji\\", \\"Segoe UI Emoji\\", \\"Segoe UI Symbol\\"",
+                    "fontSize": "24px",
+                    "fontWeight": 500,
+                    "letterSpacing": "-0.07px",
+                    "lineHeight": "28px",
+                    "marginTop": 40,
+                  },
+                  "800": Object {
+                    "color": "#234361",
+                    "fontFamily": "\\"SF UI Display\\", -apple-system, BlinkMacSystemFont, \\"Segoe UI\\", Roboto, Helvetica, Arial, sans-serif, \\"Apple Color Emoji\\", \\"Segoe UI Emoji\\", \\"Segoe UI Symbol\\"",
+                    "fontSize": "29px",
+                    "fontWeight": 500,
+                    "letterSpacing": "-0.2px",
+                    "lineHeight": "32px",
+                    "marginTop": 40,
+                  },
+                  "900": Object {
+                    "color": "#234361",
+                    "fontFamily": "\\"SF UI Display\\", -apple-system, BlinkMacSystemFont, \\"Segoe UI\\", Roboto, Helvetica, Arial, sans-serif, \\"Apple Color Emoji\\", \\"Segoe UI Emoji\\", \\"Segoe UI Symbol\\"",
+                    "fontSize": "35px",
+                    "fontWeight": 500,
+                    "letterSpacing": "-0.2px",
+                    "lineHeight": "40px",
+                    "marginTop": 52,
+                  },
+                },
+                "paragraph": Object {
+                  "300": Object {
+                    "fontSize": "12px",
+                    "fontWeight": 400,
+                    "letterSpacing": "0",
+                    "lineHeight": "18px",
+                    "marginTop": 12,
+                  },
+                  "400": Object {
+                    "fontSize": "14px",
+                    "fontWeight": 400,
+                    "letterSpacing": "-0.05px",
+                    "lineHeight": "21px",
+                    "marginTop": 12,
+                  },
+                  "500": Object {
+                    "fontSize": "16px",
+                    "fontWeight": 400,
+                    "letterSpacing": "-0.05px",
+                    "lineHeight": "24px",
+                    "marginTop": 16,
+                  },
+                },
+                "text": Object {
+                  "300": Object {
+                    "fontSize": "12px",
+                    "fontWeight": 400,
+                    "letterSpacing": "0",
+                    "lineHeight": "16px",
+                    "marginTop": 12,
+                  },
+                  "400": Object {
+                    "fontSize": "14px",
+                    "fontWeight": 400,
+                    "letterSpacing": "-0.05px",
+                    "lineHeight": "20px",
+                    "marginTop": 12,
+                  },
+                  "500": Object {
+                    "fontSize": "16px",
+                    "fontWeight": 400,
+                    "letterSpacing": "-0.05px",
+                    "lineHeight": "20px",
+                    "marginTop": 16,
+                  },
+                  "600": Object {
+                    "fontFamily": "\\"SF UI Display\\", -apple-system, BlinkMacSystemFont, \\"Segoe UI\\", Roboto, Helvetica, Arial, sans-serif, \\"Apple Color Emoji\\", \\"Segoe UI Emoji\\", \\"Segoe UI Symbol\\"",
+                    "fontSize": "20px",
+                    "fontWeight": 400,
+                    "letterSpacing": "-0.07px",
+                    "lineHeight": "24px",
+                    "marginTop": 28,
+                  },
+                },
+              },
+            }
+          }
+        >
+          <Box
+            alignItems="center"
+            boxSizing="border-box"
+            className="css-saeo60 css-nil"
+            display="flex"
+            flex={1}
+            flexGrow={1}
+            flexShrink={0}
+            innerRef={[Function]}
+            is="div"
+            justifyContent="center"
+            onKeyDown={[Function]}
+            overflow="hidden"
+            paddingX={12}
+          >
+            <div
+              className="css-saeo60 css-nil 📦pl_12px 📦pr_12px 📦box-szg_border-box 📦flx_1 📦dspl_flex 📦algn-itms_center 📦flx-srnk_0 📦ovflw-x_hidden 📦ovflw-y_hidden 📦just-cnt_center 📦flx-grow_1"
+              onKeyDown={[Function]}
+            >
+              <withTheme(Checkbox)
+                checked={false}
+                onChange={[Function]}
+              >
+                <Checkbox
+                  appearance="default"
+                  checked={false}
+                  indeterminate={false}
+                  innerRef={[Function]}
+                  onChange={[Function]}
+                  theme={
+                    Object {
+                      "avatarColors": Array [
+                        "neutral",
+                        "blue",
+                        "red",
+                        "orange",
+                        "yellow",
+                        "green",
+                        "teal",
+                        "purple",
+                      ],
+                      "badgeColors": Array [
+                        "neutral",
+                        "blue",
+                        "red",
+                        "orange",
+                        "yellow",
+                        "green",
+                        "teal",
+                        "purple",
+                      ],
+                      "colors": Object {
+                        "background": Object {
+                          "blueTint": "#f7f9fd",
+                          "greenTint": "#f1faf5",
+                          "orangeTint": "#fdf8f3",
+                          "overlay": "rgba(67, 90, 111, 0.7)",
+                          "purpleTint": "#f8f7fc",
+                          "redTint": "#fef6f6",
+                          "tealTint": "#f1fbfc",
+                          "tint1": "#F9F9FB",
+                          "tint2": "#F5F6F7",
+                          "yellowTint": "#fef8e7",
+                        },
+                        "border": Object {
+                          "default": "#E4E7EB",
+                          "muted": "#EDF0F2",
+                        },
+                        "icon": Object {
+                          "danger": "#ec4c47",
+                          "default": "#66788A",
+                          "disabled": "rgba(67, 90, 111, 0.3)",
+                          "info": "#1070ca",
+                          "muted": "#7B8B9A",
+                          "selected": "#1070ca",
+                          "success": "#47b881",
+                          "warning": "#d9822b",
+                        },
+                        "intent": Object {
+                          "danger": "#ec4c47",
+                          "none": "#1070ca",
+                          "success": "#47b881",
+                          "warning": "#d9822b",
+                        },
+                        "text": Object {
+                          "danger": "#bf0e08",
+                          "dark": "#234361",
+                          "default": "#425A70",
+                          "info": "#084b8a",
+                          "muted": "#66788A",
+                          "selected": "#1070ca",
+                          "success": "#00783e",
+                          "warning": "#95591e",
+                        },
+                      },
+                      "elevations": Array [
+                        "0 0 1px rgba(67, 90, 111, 0.3)",
+                        "0 0 1px rgba(67, 90, 111, 0.3), 0 2px 4px -2px rgba(67, 90, 111, 0.47)",
+                        "0 0 1px rgba(67, 90, 111, 0.3), 0 5px 8px -4px rgba(67, 90, 111, 0.47)",
+                        "0 0 1px rgba(67, 90, 111, 0.3), 0 8px 10px -4px rgba(67, 90, 111, 0.47)",
+                        "0 0 1px rgba(67, 90, 111, 0.3), 0 16px 24px -8px rgba(67, 90, 111, 0.47)",
+                      ],
+                      "fills": Object {
+                        "options": Array [
+                          "neutral",
+                          "blue",
+                          "red",
+                          "orange",
+                          "yellow",
+                          "green",
+                          "teal",
+                          "purple",
+                        ],
+                        "solid": Object {
+                          "blue": Object {
+                            "backgroundColor": "#1070ca",
+                            "color": "white",
+                          },
+                          "green": Object {
+                            "backgroundColor": "#47b881",
+                            "color": "white",
+                          },
+                          "neutral": Object {
+                            "backgroundColor": "#425A70",
+                            "color": "white",
+                          },
+                          "orange": Object {
+                            "backgroundColor": "#d9822b",
+                            "color": "white",
+                          },
+                          "purple": Object {
+                            "backgroundColor": "#735dd0",
+                            "color": "white",
+                          },
+                          "red": Object {
+                            "backgroundColor": "#ec4c47",
+                            "color": "white",
+                          },
+                          "teal": Object {
+                            "backgroundColor": "#14b5d0",
+                            "color": "white",
+                          },
+                          "yellow": Object {
+                            "backgroundColor": "#f7d154",
+                            "color": "#7e6514",
+                          },
+                        },
+                        "subtle": Object {
+                          "blue": Object {
+                            "backgroundColor": "#ddebf7",
+                            "color": "#084b8a",
+                          },
+                          "green": Object {
+                            "backgroundColor": "#d4eee2",
+                            "color": "#00783e",
+                          },
+                          "neutral": Object {
+                            "backgroundColor": "#E4E7EB",
+                            "color": "#425A70",
+                          },
+                          "orange": Object {
+                            "backgroundColor": "#fae3cd",
+                            "color": "#95591e",
+                          },
+                          "purple": Object {
+                            "backgroundColor": "#eae7f8",
+                            "color": "#37248f",
+                          },
+                          "red": Object {
+                            "backgroundColor": "#fae2e2",
+                            "color": "#bf0e08",
+                          },
+                          "teal": Object {
+                            "backgroundColor": "#d2eef3",
+                            "color": "#007489",
+                          },
+                          "yellow": Object {
+                            "backgroundColor": "#fbe6a2",
+                            "color": "#7e6514",
+                          },
+                        },
+                      },
+                      "getAlertProps": [Function],
+                      "getAvatarInitialsFontSize": [Function],
+                      "getAvatarProps": [Function],
+                      "getBackground": [Function],
+                      "getBadgeClassName": [Function],
+                      "getBadgeProps": [Function],
+                      "getBorderRadiusForControlHeight": [Function],
+                      "getButtonClassName": [Function],
+                      "getCheckboxClassName": [Function],
+                      "getCodeProps": [Function],
+                      "getElevation": [Function],
+                      "getFontFamily": [Function],
+                      "getHeadingStyle": [Function],
+                      "getIconColor": [Function],
+                      "getIconForIntent": [Function],
+                      "getIconSizeForButton": [Function],
+                      "getIconSizeForIconButton": [Function],
+                      "getIconSizeForInput": [Function],
+                      "getIconSizeForSelect": [Function],
+                      "getLinkClassName": [Function],
+                      "getMenuItemClassName": [Function],
+                      "getParagraphStyle": [Function],
+                      "getRadioClassName": [Function],
+                      "getRowClassName": [Function],
+                      "getSegmentedControlRadioClassName": [Function],
+                      "getSelectClassName": [Function],
+                      "getSwitchClassName": [Function],
+                      "getTabClassName": [Function],
+                      "getTableCellClassName": [Function],
+                      "getTagInputClassName": [Function],
+                      "getTextColor": [Function],
+                      "getTextDropdownButtonClassName": [Function],
+                      "getTextInputClassName": [Function],
+                      "getTextSizeForControlHeight": [Function],
+                      "getTextStyle": [Function],
+                      "getTextareaClassName": [Function],
+                      "getTooltipProps": [Function],
+                      "overlayBackgroundColor": "rgba(67, 90, 111, 0.7)",
+                      "palette": Object {
+                        "blue": Object {
+                          "base": "#1070ca",
+                          "dark": "#084b8a",
+                          "light": "#ddebf7",
+                          "lightest": "#f7f9fd",
+                        },
+                        "green": Object {
+                          "base": "#47b881",
+                          "dark": "#00783e",
+                          "light": "#d4eee2",
+                          "lightest": "#f1faf5",
+                        },
+                        "neutral": Object {
+                          "base": "#425A70",
+                          "dark": "#234361",
+                          "light": "#E4E7EB",
+                          "lightest": "#F9F9FB",
+                        },
+                        "orange": Object {
+                          "base": "#d9822b",
+                          "dark": "#95591e",
+                          "light": "#fae3cd",
+                          "lightest": "#fdf8f3",
+                        },
+                        "purple": Object {
+                          "base": "#735dd0",
+                          "dark": "#37248f",
+                          "light": "#eae7f8",
+                          "lightest": "#f8f7fc",
+                        },
+                        "red": Object {
+                          "base": "#ec4c47",
+                          "dark": "#bf0e08",
+                          "light": "#fae2e2",
+                          "lightest": "#fef6f6",
+                        },
+                        "teal": Object {
+                          "base": "#14b5d0",
+                          "dark": "#007489",
+                          "light": "#d2eef3",
+                          "lightest": "#f1fbfc",
+                        },
+                        "yellow": Object {
+                          "base": "#f7d154",
+                          "dark": "#7e6514",
+                          "light": "#fbe6a2",
+                          "lightest": "#fef8e7",
+                        },
+                      },
+                      "scales": Object {
+                        "blue": Object {
+                          "B1": "#f7f9fd",
+                          "B10": "#084b8a",
+                          "B1A": "rgba(16, 112, 202, 0.04)",
+                          "B2": "#f1f7fc",
+                          "B2A": "rgba(16, 112, 202, 0.06)",
+                          "B3": "#e9f2fa",
+                          "B3A": "rgba(16, 112, 202, 0.09)",
+                          "B4": "#ddebf7",
+                          "B4A": "rgba(16, 112, 202, 0.14)",
+                          "B5": "#b7d4ef",
+                          "B5A": "rgba(16, 112, 202, 0.3)",
+                          "B6": "#8fbce6",
+                          "B6A": "rgba(16, 112, 202, 0.47)",
+                          "B7": "#579ad9",
+                          "B7A": "rgba(16, 112, 202, 0.7)",
+                          "B8": "#3d8bd4",
+                          "B8A": "rgba(16, 112, 202, 0.81)",
+                          "B9": "#1070ca",
+                        },
+                        "neutral": Object {
+                          "N1": "#F9F9FB",
+                          "N10": "#234361",
+                          "N1A": "rgba(67, 90, 111, 0.04)",
+                          "N2": "#F5F6F7",
+                          "N2A": "rgba(67, 90, 111, 0.06)",
+                          "N3": "#EDF0F2",
+                          "N3A": "rgba(67, 90, 111, 0.09)",
+                          "N4": "#E4E7EB",
+                          "N4A": "rgba(67, 90, 111, 0.14)",
+                          "N5": "#C7CED4",
+                          "N5A": "rgba(67, 90, 111, 0.3)",
+                          "N6": "#A6B1BB",
+                          "N6A": "rgba(67, 90, 111, 0.47)",
+                          "N7": "#7B8B9A",
+                          "N7A": "rgba(67, 90, 111, 0.7)",
+                          "N8": "#66788A",
+                          "N8A": "rgba(67, 90, 111, 0.81)",
+                          "N9": "#425A70",
+                        },
+                      },
+                      "spinnerColor": "rgba(67, 90, 111, 0.47)",
+                      "typography": Object {
+                        "fontFamilies": Object {
+                          "display": "\\"SF UI Display\\", -apple-system, BlinkMacSystemFont, \\"Segoe UI\\", Roboto, Helvetica, Arial, sans-serif, \\"Apple Color Emoji\\", \\"Segoe UI Emoji\\", \\"Segoe UI Symbol\\"",
+                          "mono": "\\"SF Mono\\", \\"Monaco\\", \\"Inconsolata\\", \\"Fira Mono\\", \\"Droid Sans Mono\\", \\"Source Code Pro\\", monospace",
+                          "ui": "\\"SF UI Text\\", -apple-system, BlinkMacSystemFont, \\"Segoe UI\\", Roboto, Helvetica, Arial, sans-serif, \\"Apple Color Emoji\\", \\"Segoe UI Emoji\\", \\"Segoe UI Symbol\\"",
+                        },
+                        "headings": Object {
+                          "100": Object {
+                            "color": "#66788A",
+                            "fontFamily": "\\"SF UI Text\\", -apple-system, BlinkMacSystemFont, \\"Segoe UI\\", Roboto, Helvetica, Arial, sans-serif, \\"Apple Color Emoji\\", \\"Segoe UI Emoji\\", \\"Segoe UI Symbol\\"",
+                            "fontSize": "11px",
+                            "fontWeight": 400,
+                            "letterSpacing": "0.6px",
+                            "lineHeight": "16px",
+                            "marginTop": 16,
+                            "textTransform": "uppercase",
+                          },
+                          "200": Object {
+                            "color": "#66788A",
+                            "fontFamily": "\\"SF UI Text\\", -apple-system, BlinkMacSystemFont, \\"Segoe UI\\", Roboto, Helvetica, Arial, sans-serif, \\"Apple Color Emoji\\", \\"Segoe UI Emoji\\", \\"Segoe UI Symbol\\"",
+                            "fontSize": "12px",
+                            "fontWeight": 600,
+                            "letterSpacing": "0",
+                            "lineHeight": "16px",
+                            "marginTop": 16,
+                          },
+                          "300": Object {
+                            "color": "#234361",
+                            "fontFamily": "\\"SF UI Text\\", -apple-system, BlinkMacSystemFont, \\"Segoe UI\\", Roboto, Helvetica, Arial, sans-serif, \\"Apple Color Emoji\\", \\"Segoe UI Emoji\\", \\"Segoe UI Symbol\\"",
+                            "fontSize": "12px",
+                            "fontWeight": 600,
+                            "letterSpacing": "0",
+                            "lineHeight": "16px",
+                            "marginTop": 16,
+                          },
+                          "400": Object {
+                            "color": "#234361",
+                            "fontFamily": "\\"SF UI Text\\", -apple-system, BlinkMacSystemFont, \\"Segoe UI\\", Roboto, Helvetica, Arial, sans-serif, \\"Apple Color Emoji\\", \\"Segoe UI Emoji\\", \\"Segoe UI Symbol\\"",
+                            "fontSize": "14px",
+                            "fontWeight": 600,
+                            "letterSpacing": "-0.05px",
+                            "lineHeight": "20px",
+                            "marginTop": 16,
+                          },
+                          "500": Object {
+                            "color": "#234361",
+                            "fontFamily": "\\"SF UI Text\\", -apple-system, BlinkMacSystemFont, \\"Segoe UI\\", Roboto, Helvetica, Arial, sans-serif, \\"Apple Color Emoji\\", \\"Segoe UI Emoji\\", \\"Segoe UI Symbol\\"",
+                            "fontSize": "16px",
+                            "fontWeight": 500,
+                            "letterSpacing": "-0.05px",
+                            "lineHeight": "20px",
+                            "marginTop": 24,
+                          },
+                          "600": Object {
+                            "color": "#234361",
+                            "fontFamily": "\\"SF UI Display\\", -apple-system, BlinkMacSystemFont, \\"Segoe UI\\", Roboto, Helvetica, Arial, sans-serif, \\"Apple Color Emoji\\", \\"Segoe UI Emoji\\", \\"Segoe UI Symbol\\"",
+                            "fontSize": "20px",
+                            "fontWeight": 500,
+                            "letterSpacing": "-0.07px",
+                            "lineHeight": "24px",
+                            "marginTop": 28,
+                          },
+                          "700": Object {
+                            "color": "#234361",
+                            "fontFamily": "\\"SF UI Display\\", -apple-system, BlinkMacSystemFont, \\"Segoe UI\\", Roboto, Helvetica, Arial, sans-serif, \\"Apple Color Emoji\\", \\"Segoe UI Emoji\\", \\"Segoe UI Symbol\\"",
+                            "fontSize": "24px",
+                            "fontWeight": 500,
+                            "letterSpacing": "-0.07px",
+                            "lineHeight": "28px",
+                            "marginTop": 40,
+                          },
+                          "800": Object {
+                            "color": "#234361",
+                            "fontFamily": "\\"SF UI Display\\", -apple-system, BlinkMacSystemFont, \\"Segoe UI\\", Roboto, Helvetica, Arial, sans-serif, \\"Apple Color Emoji\\", \\"Segoe UI Emoji\\", \\"Segoe UI Symbol\\"",
+                            "fontSize": "29px",
+                            "fontWeight": 500,
+                            "letterSpacing": "-0.2px",
+                            "lineHeight": "32px",
+                            "marginTop": 40,
+                          },
+                          "900": Object {
+                            "color": "#234361",
+                            "fontFamily": "\\"SF UI Display\\", -apple-system, BlinkMacSystemFont, \\"Segoe UI\\", Roboto, Helvetica, Arial, sans-serif, \\"Apple Color Emoji\\", \\"Segoe UI Emoji\\", \\"Segoe UI Symbol\\"",
+                            "fontSize": "35px",
+                            "fontWeight": 500,
+                            "letterSpacing": "-0.2px",
+                            "lineHeight": "40px",
+                            "marginTop": 52,
+                          },
+                        },
+                        "paragraph": Object {
+                          "300": Object {
+                            "fontSize": "12px",
+                            "fontWeight": 400,
+                            "letterSpacing": "0",
+                            "lineHeight": "18px",
+                            "marginTop": 12,
+                          },
+                          "400": Object {
+                            "fontSize": "14px",
+                            "fontWeight": 400,
+                            "letterSpacing": "-0.05px",
+                            "lineHeight": "21px",
+                            "marginTop": 12,
+                          },
+                          "500": Object {
+                            "fontSize": "16px",
+                            "fontWeight": 400,
+                            "letterSpacing": "-0.05px",
+                            "lineHeight": "24px",
+                            "marginTop": 16,
+                          },
+                        },
+                        "text": Object {
+                          "300": Object {
+                            "fontSize": "12px",
+                            "fontWeight": 400,
+                            "letterSpacing": "0",
+                            "lineHeight": "16px",
+                            "marginTop": 12,
+                          },
+                          "400": Object {
+                            "fontSize": "14px",
+                            "fontWeight": 400,
+                            "letterSpacing": "-0.05px",
+                            "lineHeight": "20px",
+                            "marginTop": 12,
+                          },
+                          "500": Object {
+                            "fontSize": "16px",
+                            "fontWeight": 400,
+                            "letterSpacing": "-0.05px",
+                            "lineHeight": "20px",
+                            "marginTop": 16,
+                          },
+                          "600": Object {
+                            "fontFamily": "\\"SF UI Display\\", -apple-system, BlinkMacSystemFont, \\"Segoe UI\\", Roboto, Helvetica, Arial, sans-serif, \\"Apple Color Emoji\\", \\"Segoe UI Emoji\\", \\"Segoe UI Symbol\\"",
+                            "fontSize": "20px",
+                            "fontWeight": 400,
+                            "letterSpacing": "-0.07px",
+                            "lineHeight": "24px",
+                            "marginTop": 28,
+                          },
+                        },
+                      },
+                    }
+                  }
+                >
+                  <Box
+                    boxSizing="border-box"
+                    cursor="pointer"
+                    display="flex"
+                    innerRef={null}
+                    is="label"
+                    marginY={16}
+                    position="relative"
+                  >
+                    <label
+                      className="📦crsr_pointer 📦pst_relative 📦dspl_flex 📦mb_16px 📦mt_16px 📦box-szg_border-box"
+                    >
+                      <Box
+                        boxSizing="border-box"
+                        checked={false}
+                        className="css-1bkiqpw"
+                        innerRef={[Function]}
+                        is="input"
+                        onChange={[Function]}
+                        type="checkbox"
+                      >
+                        <input
+                          checked={false}
+                          className="css-1bkiqpw 📦box-szg_border-box"
+                          onChange={[Function]}
+                          type="checkbox"
+                        />
+                      </Box>
+                      <Box
+                        alignItems="center"
+                        borderRadius={3}
+                        boxSizing="border-box"
+                        display="flex"
+                        flex="none"
+                        height={16}
+                        innerRef={null}
+                        is="div"
+                        justifyContent="center"
+                        width={16}
+                      >
+                        <div
+                          className="📦box-szg_border-box 📦bblr_3px 📦bbrr_3px 📦btlr_3px 📦btrr_3px 📦dspl_flex 📦flx_none 📦algn-itms_center 📦just-cnt_center 📦w_16px 📦h_16px"
+                        >
+                          <CheckIcon>
+                            <svg
+                              height={7}
+                              viewBox="0 0 10 7"
+                              width={10}
+                            >
+                              <path
+                                d="M4 4.586L1.707 2.293A1 1 0 1 0 .293 3.707l3 3a.997.997 0 0 0 1.414 0l5-5A1 1 0 1 0 8.293.293L4 4.586z"
+                                fill="currentColor"
+                                fillRule="evenodd"
+                              />
+                            </svg>
+                          </CheckIcon>
+                        </div>
+                      </Box>
+                    </label>
+                  </Box>
+                </Checkbox>
+              </withTheme(Checkbox)>
+            </div>
+          </Box>
+        </Pane>
+      </withTheme(Pane)>
+    </TableCell>
+  </withTheme(TableCell)>
+</SelectionTableCell>
+`;

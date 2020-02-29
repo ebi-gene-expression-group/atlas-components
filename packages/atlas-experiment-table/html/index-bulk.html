@@ -1,12 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Demo</title>
+    <title>Experiment table: bulk demo</title>
 
-    <link rel="stylesheet"
-          href="https://www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/libraries/foundation-6/css/foundation.css"
-          type="text/css" media="all"/>
-    <link rel="stylesheet" href="https://www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/css/ebi-global.css"
+    <link rel="stylesheet" href="https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/css/ebi-global.css"
           type="text/css" media="all"/>
     <link rel="stylesheet" href="https://ebi.emblstatic.net/web_guidelines/EBI-Icon-fonts/v1.3/fonts.css"
           type="text/css" media="all"/>
@@ -23,515 +20,100 @@
 </div>
 </body>
 
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 <script src="../dist/vendors.bundle.js"></script>
 <script src="../dist/experimentTable.bundle.js"></script>
-<!-- Set to http://localhost:8080/gxa/ or http://localhost:8080/gxa_sc/ -- Remember the trailing slash! -->
 <script>
-  experimentTable.render({
-      host: 'http://localhost:8080/',
-      resource: 'gxa/json/experiments',
-      //link to `${host}/${header.resource}/${data[header.link]}/${header.endpoint}`
-      species: ``,
-      downloadTooltip: `<ul>
-          <li>Raw filtered count matrix after quantification</li>
-          <li>Normalised filtered count matrix after quantification</li>
-          <li>TPM (transcripts per million RNA molecules - only available for SmartSeq)</li>
-          <li>SDRF file with the experimental design metadata</li>
-        </ul>`,
-      tableFilters: [
+  $.getJSON('./experiments-bulk.json').done(
+    function(data) {
+      experimentTable.render(
         {
-          label: `Kingdom`,
-          dataParam: `kingdom`
-        },
-        {
-          label: `Experiment Type`,
-          dataParam: `experimentType`
-        }
-      ],
-      tableHeader:
-        [
-          //{title: `index`, width: 60, dataParam: null, link: null},
-          {
-            type: `sort`, title: `Type`, width: 50, dataParam: `experimentType`,
-            image: {
-              MICROARRAY_1COLOUR_MICRORNA_DIFFERENTIAL: {
-                src: "http://localhost:8080/gxa/resources/images/experiments-table/differential.png",
-                alt: "Microarray 1-colour miRNA"
+          tableHeaders: [
+            {
+              label: 'Type',
+              dataKey: 'experimentType',
+              sortable: true,
+              width: 0.5,
+              image: {
+                Differential: {
+                  src: 'https://www.ebi.ac.uk/gxa/resources/images/experiments-table/differential.png',
+                  alt: 'Differential experiment',
+                  title: 'Differential experiment'
+                },
+                Baseline: {
+                  src: 'https://www.ebi.ac.uk/gxa/resources/images/experiments-table/baseline.png',
+                  alt: 'Baseline experiment',
+                  title: 'Baseline experiment'
+                }
               },
-              PROTEOMICS_BASELINE: {
-                src: "http://localhost:8080/gxa/resources/images/experiments-table/baseline.png",
-                alt: "Proteomics baseline"
-              },
-              RNASEQ_MRNA_BASELINE: {
-                src: "http://localhost:8080/gxa/resources/images/experiments-table/baseline.png",
-                alt: "RNA-Seq mRNA baseline"
-              },
-              MICROARRAY_2COLOUR_MRNA_DIFFERENTIAL: {
-                src: "http://localhost:8080/gxa/resources/images/experiments-table/differential.png",
-                alt: "Microarray 2-colour mRNA"
-              },
-              MICROARRAY_1COLOUR_MRNA_DIFFERENTIAL: {
-                src: "http://localhost:8080/gxa/resources/images/experiments-table/differential.png",
-                alt: "Microarray 1-colour mRNA"
-              },
-              RNASEQ_MRNA_DIFFERENTIAL: {
-                src: "http://localhost:8080/gxa/resources/images/experiments-table/differential.png",
-                alt: "RNA-Seq mRNA differential"
-              }
+              linkTo: function(dataRow) { return 'https://www.ebi.ac.uk/gxa/experiments?experimentType=' + dataRow.experimentType.toLowerCase(); }
+            },
+            {
+              label: 'Load date',
+              dataKey: 'loadDate',
+              sortable: true,
+              width: 0.5
+            },
+            {
+              label: 'Species',
+              dataKey: 'species',
+              searchable: true,
+              sortable: true
+            },
+            {
+              label: 'Title',
+              dataKey: 'experimentDescription',
+              searchable: true,
+              sortable: true,
+              linkTo: function(dataRow) { return 'experiments/' + dataRow.experimentAccession + '/Results'; },
+              width: 2
+            },
+            {
+              label: 'Assays',
+              dataKey: 'numberOfAssays',
+              sortable: true,
+              linkTo: function(dataRow) { return 'experiments/' + dataRow.experimentAccession + '/Experiment%20Design'; },
+              width: 0.5
+            },
+            {
+              label: 'Experimental factors',
+              dataKey: 'experimentalFactors',
+              searchable: true,
+              linkTo: function(dataRow) { return 'experiments/' + dataRow.experimentAccession + '/Experiment%20Design'; }
+            },
+            {
+              label: 'Technology',
+              dataKey: 'technologyType',
+              sortable: false
             }
+          ],
+          dropdownFilters: [
+            {
+              label: 'Kingdom',
+              dataKey: 'kingdom'
+            },
+            {
+              label: 'Experiment Type',
+              dataKey: 'experimentType'
+            }
+          ],
+          rowSelectionColumn: {
+            label: 'Download',
+            dataKey: 'experimentAccession',
+            tooltipContent:
+              '<ul>' +
+                '<li>Expression matrices in TPMs or log<sub>2</sub>fold-change</li>' +
+                '<li>Experiment design file with experimental metadata</li>' +
+              '</ul>',
+            width: 0.75
           },
-          {type: `sort`, title: `Loaded date`, width: 120, dataParam: `lastUpdate`},
-          {type: `search`, title: `species`, width: 200, dataParam: `species`},
-          {
-            type: `search`, title: `experiment description`, width: 400, dataParam: `experimentDescription`,
-            link: `experimentAccession`, resource: `experiments`, endpoint: `Results`
-          },
-          {
-            type: `sort`, title: `Number of assays`, width: 120, dataParam: `numberOfAssays`,
-            link: `experimentAccession`, resource: `experiments`, endpoint: `Experiment%20Design`
-          },
-          {
-            type: `sort`, title: `Comparisons`, width: 100, dataParam: `numberOfContrasts`,
-            link: `experimentAccession`, resource: `experiments`, endpoint: `Experiment%20Design`
-          },
-          {type: `search`, title: `experiment factors`, width: 200, dataParam: `experimentalFactors`},
-          {
-            type: `search`, title: `array designs`, width: 220, dataParam: `arrayDesignNames`,
-            link: `arrayDesigns`, resource: `arrayexpress/arrays`, endpoint: ``
-          }
-          //{type: ``, title: `ArrayExpress`, width: 100, dataParam: `numberOfContrasts`,
-          //   image: `<span class="icon icon-generic" data-icon="L" title="View in Array Express"></span>`,
-          //   link: `experimentAccession`, resource: `arrayexpress/experiments`, endpoint: ``},
-          //{ title: `Download`, width: null,  dataParam: null}
-        ],
-      noResultsMessageFormatter: function (data) {
-        return 'Your search yielded no results: ' + data.reason
-      },
-      enableDownload: false,
-      experiments: [
-        {
-          "experimentType": "RNASEQ_MRNA_BASELINE",
-          "experimentAccession": "E-ERAD-475",
-          "experimentDescription": "Baseline expression from transcriptional profiling of zebrafish developmental stages",
-          "lastUpdate": "25-09-2018",
-          "numberOfAssays": 360,
-          "numberOfContrasts": 0,
-          "species": "Danio rerio",
-          "kingdom": "animals",
-          "experimentalFactors": [
-            "developmental stage"
-          ],
-          "experimentProjects": [
-            "Human Cell Atlas"
-          ],
-          "arrayDesigns": [],
-          "arrayDesignNames": []
+          dataRows: data,
+          host: 'https://www.ebi.ac.uk/gxa/'
         },
-        {
-          "experimentType": "MICROARRAY_2COLOUR_MRNA_DIFFERENTIAL",
-          "experimentAccession": "E-GEOD-43049",
-          "experimentDescription": "Caco-2 cells: cultured in conventional vs apical anaerobic conditions",
-          "lastUpdate": "25-09-2018",
-          "numberOfAssays": 12,
-          "numberOfContrasts": 1,
-          "species": "Homo sapiens",
-          "kingdom": "animals",
-          "experimentalFactors": [
-            "growth condition"
-          ],
-          "experimentProjects": [
-            "Human Cell Atlas"
-          ],
-          "arrayDesigns": [
-            "A-AGIL-28"
-          ],
-          "arrayDesignNames": [
-            "Agilent Whole Human Genome Microarray 4x44K 014850 G4112F (85 cols x 532 rows)"
-          ]
-        },
-        {
-          "experimentType": "MICROARRAY_1COLOUR_MRNA_DIFFERENTIAL",
-          "experimentAccession": "E-MAXD-6",
-          "experimentDescription": "Transcription profiling by array of Drosophila larvae after parasitoid attack",
-          "lastUpdate": "04-10-2018",
-          "numberOfAssays": 89,
-          "numberOfContrasts": 9,
-          "species": "Drosophila melanogaster",
-          "kingdom": "animals",
-          "experimentalFactors": [
-            "infect",
-            "time"
-          ],
-          "experimentProjects": [],
-          "arrayDesigns": [
-            "A-AFFY-17"
-          ],
-          "arrayDesignNames": [
-            "Affymetrix GeneChip Drosophila Genome [DrosGenome1]"
-          ]
-        },
-        {
-          "experimentType": "MICROARRAY_1COLOUR_MRNA_DIFFERENTIAL",
-          "experimentAccession": "E-MEXP-1810",
-          "experimentDescription": "Transcription profiling by array of C. elegans isolates treated with dauer larva-inducing pheromone",
-          "lastUpdate": "25-09-2018",
-          "numberOfAssays": 12,
-          "numberOfContrasts": 2,
-          "species": "Caenorhabditis elegans",
-          "kingdom": "animals",
-          "experimentalFactors": [
-            "compound",
-            "strain"
-          ],
-          "experimentProjects": [],
-          "arrayDesigns": [
-            "A-AFFY-60"
-          ],
-          "arrayDesignNames": [
-            "Affymetrix GeneChip C. elegans Genome Array [Celegans]"
-          ]
-        },
-        {
-          "experimentType": "MICROARRAY_1COLOUR_MRNA_DIFFERENTIAL",
-          "experimentAccession": "E-MEXP-1968",
-          "experimentDescription": "Transcription profiling by array of mouse wild type and DNA-repair-deficient primary dermal fibroblasts after treatment with ultraviolet radiation",
-          "lastUpdate": "25-09-2018",
-          "numberOfAssays": 36,
-          "numberOfContrasts": 5,
-          "species": "Mus musculus",
-          "kingdom": "animals",
-          "experimentalFactors": [
-            "genotype",
-            "irradiate"
-          ],
-          "experimentProjects": [
-            "Human Cell Atlas",
-            "Chan-Zuckerberg Biohub"
-          ],
-          "arrayDesigns": [
-            "A-AFFY-45"
-          ],
-          "arrayDesignNames": [
-            "Affymetrix GeneChip Mouse Genome 430 2.0 [Mouse430_2]"
-          ]
-        },
-        {
-          "experimentType": "RNASEQ_MRNA_DIFFERENTIAL",
-          "experimentAccession": "E-MTAB-1913",
-          "experimentDescription": "Salt stress in salt sensitive Oryza sativa Indica group IR29 ",
-          "lastUpdate": "04-10-2018",
-          "numberOfAssays": 30,
-          "numberOfContrasts": 15,
-          "species": "Oryza sativa Indica group",
-          "kingdom": "plants",
-          "experimentalFactors": [
-            "growth condition",
-            "time"
-          ],
-          "experimentProjects": [],
-          "arrayDesigns": [],
-          "arrayDesignNames": []
-        },
-        {
-          "experimentType": "RNASEQ_MRNA_BASELINE",
-          "experimentAccession": "E-MTAB-2770",
-          "experimentDescription": "RNA-seq of 934 human cancer cell lines from the Cancer Cell Line Encyclopedia",
-          "lastUpdate": "25-09-2018",
-          "numberOfAssays": 934,
-          "numberOfContrasts": 0,
-          "species": "Homo sapiens",
-          "kingdom": "animals",
-          "experimentalFactors": [
-            "cell line",
-            "disease"
-          ],
-          "experimentProjects": [],
-          "arrayDesigns": [],
-          "arrayDesignNames": []
-        },
-        {
-          "experimentType": "RNASEQ_MRNA_BASELINE",
-          "experimentAccession": "E-MTAB-2836",
-          "experimentDescription": "RNA-seq of coding RNA from tissue samples of 122 human individuals representing 32 different tissues",
-          "lastUpdate": "05-10-2018",
-          "numberOfAssays": 200,
-          "numberOfContrasts": 0,
-          "species": "Homo sapiens",
-          "kingdom": "animals",
-          "experimentalFactors": [
-            "organism part"
-          ],
-          "experimentProjects": [
-            "Human Cell Atlas"
-          ],
-          "arrayDesigns": [],
-          "arrayDesignNames": []
-        },
-        {
-          "experimentType": "RNASEQ_MRNA_DIFFERENTIAL",
-          "experimentAccession": "E-MTAB-2909",
-          "experimentDescription": "RNA-seq of lung and ileum samples at 1 and 3 days post infection (dpi) from ducks infected with either low pathogenic (H5N2) or highly pathogenic (H5N1) avian influenza",
-          "lastUpdate": "25-09-2018",
-          "numberOfAssays": 36,
-          "numberOfContrasts": 8,
-          "species": "Anas platyrhynchos",
-          "kingdom": "animals",
-          "experimentalFactors": [
-            "infect",
-            "organism part",
-            "time"
-          ],
-          "experimentProjects": [],
-          "arrayDesigns": [],
-          "arrayDesignNames": []
-        },
-        {
-          "experimentType": "RNASEQ_MRNA_BASELINE",
-          "experimentAccession": "E-MTAB-3827",
-          "experimentDescription": "Strand-specific RNA-Seq of rRNA-depleted total RNA from common types of cultured or uncultured primary cells of different haemopoetic lineages from healthy individuals in the BLUEPRINT epigenome project",
-          "lastUpdate": "25-09-2018",
-          "numberOfAssays": 66,
-          "numberOfContrasts": 0,
-          "species": "Homo sapiens",
-          "kingdom": "animals",
-          "experimentalFactors": [
-            "cell type"
-          ],
-          "experimentProjects": [],
-          "arrayDesigns": [],
-          "arrayDesignNames": []
-        },
-        {
-          "experimentType": "RNASEQ_MRNA_DIFFERENTIAL",
-          "experimentAccession": "E-MTAB-3834",
-          "experimentDescription": "Transcriptome profiling of contrasting rice genotypes in response to submergence during seed germination",
-          "lastUpdate": "25-09-2018",
-          "numberOfAssays": 12,
-          "numberOfContrasts": 1,
-          "species": "Oryza sativa",
-          "kingdom": "plants",
-          "experimentalFactors": [
-            "growth condition"
-          ],
-          "experimentProjects": [],
-          "arrayDesigns": [],
-          "arrayDesignNames": []
-        },
-        {
-          "experimentType": "RNASEQ_MRNA_BASELINE",
-          "experimentAccession": "E-MTAB-4401",
-          "experimentDescription": "Transcription profiling by high throughput sequencing of different tissues from Brachypodium distachyon (Bd21 inbred line)",
-          "lastUpdate": "05-10-2018",
-          "numberOfAssays": 11,
-          "numberOfContrasts": 0,
-          "species": "Brachypodium distachyon",
-          "kingdom": "plants",
-          "experimentalFactors": [
-            "organism part"
-          ],
-          "experimentProjects": [],
-          "arrayDesigns": [],
-          "arrayDesignNames": []
-        },
-        {
-          "experimentType": "RNASEQ_MRNA_BASELINE",
-          "experimentAccession": "E-MTAB-451",
-          "experimentDescription": "RNA-Seq of Schistosoma mansoni (flatworms) larva and adult individuals at different life-stages",
-          "lastUpdate": "06-10-2018",
-          "numberOfAssays": 11,
-          "numberOfContrasts": 0,
-          "species": "Schistosoma mansoni",
-          "kingdom": "animals",
-          "experimentalFactors": [
-            "developmental stage"
-          ],
-          "experimentProjects": [],
-          "arrayDesigns": [],
-          "arrayDesignNames": []
-        },
-        {
-          "experimentType": "RNASEQ_MRNA_DIFFERENTIAL",
-          "experimentAccession": "E-MTAB-4559",
-          "experimentDescription": "Genetic response of maize silk to pollen tubes growth in comparison to fungal invasion.",
-          "lastUpdate": "25-09-2018",
-          "numberOfAssays": 12,
-          "numberOfContrasts": 3,
-          "species": "Zea mays subsp. mays",
-          "kingdom": "plants",
-          "experimentalFactors": [
-            "organism part",
-            "stimulus"
-          ],
-          "experimentProjects": [],
-          "arrayDesigns": [],
-          "arrayDesignNames": []
-        },
-        {
-          "experimentType": "MICROARRAY_1COLOUR_MRNA_DIFFERENTIAL",
-          "experimentAccession": "E-MTAB-5128",
-          "experimentDescription": "Microarray analysis of the effect of ppGpp, cdiAMP, and cdiGMP on Saccharomyces cerevisiae",
-          "lastUpdate": "25-09-2018",
-          "numberOfAssays": 24,
-          "numberOfContrasts": 4,
-          "species": "Saccharomyces cerevisiae",
-          "kingdom": "fungi",
-          "experimentalFactors": [
-            "compound",
-            "genotype",
-            "phenotype"
-          ],
-          "experimentProjects": [],
-          "arrayDesigns": [
-            "A-AFFY-47"
-          ],
-          "arrayDesignNames": [
-            "Affymetrix GeneChip Yeast Genome 2.0 Array [Yeast_2]"
-          ]
-        },
-        {
-          "experimentType": "RNASEQ_MRNA_BASELINE",
-          "experimentAccession": "E-MTAB-5200",
-          "experimentDescription": "The International Cancer Genome project: Pan-Cancer Analysis of Whole Genomes (PCAWG)",
-          "lastUpdate": "25-09-2018",
-          "numberOfAssays": 3372,
-          "numberOfContrasts": 0,
-          "species": "Homo sapiens",
-          "kingdom": "animals",
-          "experimentalFactors": [
-            "disease",
-            "organism part"
-          ],
-          "experimentProjects": [],
-          "arrayDesigns": [],
-          "arrayDesignNames": []
-        },
-        {
-          "experimentType": "RNASEQ_MRNA_BASELINE",
-          "experimentAccession": "E-MTAB-5214",
-          "experimentDescription": "RNA-seq from 53 human tissue samples from the Genotype-Tissue Expression (GTEx) Project",
-          "lastUpdate": "25-09-2018",
-          "numberOfAssays": 18736,
-          "numberOfContrasts": 0,
-          "species": "Homo sapiens",
-          "kingdom": "animals",
-          "experimentalFactors": [
-            "organism part"
-          ],
-          "experimentProjects": [],
-          "arrayDesigns": [],
-          "arrayDesignNames": []
-        },
-        {
-          "experimentType": "RNASEQ_MRNA_DIFFERENTIAL",
-          "experimentAccession": "E-MTAB-5422",
-          "experimentDescription": "Altered expression of maize PLASTOCHRON1 enhances biomass and seed yield by extending cell division duration",
-          "lastUpdate": "25-09-2018",
-          "numberOfAssays": 12,
-          "numberOfContrasts": 2,
-          "species": "Zea mays",
-          "kingdom": "plants",
-          "experimentalFactors": [
-            "age",
-            "genotype"
-          ],
-          "experimentProjects": [],
-          "arrayDesigns": [],
-          "arrayDesignNames": []
-        },
-        {
-          "experimentType": "RNASEQ_MRNA_BASELINE",
-          "experimentAccession": "E-MTAB-5423",
-          "experimentDescription": "The International Cancer Genome project: Pan-Cancer Analysis of Whole Genomes (PCAWG)- Alternative view by individual",
-          "lastUpdate": "25-09-2018",
-          "numberOfAssays": 1359,
-          "numberOfContrasts": 0,
-          "species": "Homo sapiens",
-          "kingdom": "animals",
-          "experimentalFactors": [
-            "organism part",
-            "disease",
-            "individual"
-          ],
-          "experimentProjects": [],
-          "arrayDesigns": [],
-          "arrayDesignNames": []
-        },
-        {
-          "experimentType": "RNASEQ_MRNA_DIFFERENTIAL",
-          "experimentAccession": "E-MTAB-5633",
-          "experimentDescription": "Changes in the coding/non-coding transcriptome and DNA methylome that define the Schwann cell repair phenotype after nerve injury",
-          "lastUpdate": "25-09-2018",
-          "numberOfAssays": 6,
-          "numberOfContrasts": 1,
-          "species": "Mus musculus domesticus",
-          "kingdom": "animals",
-          "experimentalFactors": [
-            "injury",
-            "protocol",
-            "time"
-          ],
-          "experimentProjects": [],
-          "arrayDesigns": [],
-          "arrayDesignNames": []
-        },
-        {
-          "experimentType": "RNASEQ_MRNA_DIFFERENTIAL",
-          "experimentAccession": "E-MTAB-5941",
-          "experimentDescription": "Transcriptome profiling of short-term response to chilling stress in resistant and susceptible rice seedlings",
-          "lastUpdate": "25-09-2018",
-          "numberOfAssays": 18,
-          "numberOfContrasts": 7,
-          "species": "Oryza sativa Japonica Group",
-          "kingdom": "plants",
-          "experimentalFactors": [
-            "cultivar",
-            "environmental stress",
-            "time"
-          ],
-          "experimentProjects": [],
-          "arrayDesigns": [],
-          "arrayDesignNames": []
-        },
-        {
-          "experimentType": "PROTEOMICS_BASELINE",
-          "experimentAccession": "E-PROT-1",
-          "experimentDescription": "Reanalysis of Pandey lab\u0027s draft of the human proteome",
-          "lastUpdate": "25-09-2018",
-          "numberOfAssays": 30,
-          "numberOfContrasts": 0,
-          "species": "Homo sapiens",
-          "kingdom": "animals",
-          "experimentalFactors": [
-            "developmental stage",
-            "organism part"
-          ],
-          "experimentProjects": [],
-          "arrayDesigns": [],
-          "arrayDesignNames": []
-        },
-        {
-          "experimentType": "MICROARRAY_1COLOUR_MICRORNA_DIFFERENTIAL",
-          "experimentAccession": "E-TABM-713",
-          "experimentDescription": "MicroRNA profiling by array of human sepsis patients after surgery identifies miR-150 as a plasma prognostic marker",
-          "lastUpdate": "25-09-2018",
-          "numberOfAssays": 16,
-          "numberOfContrasts": 1,
-          "species": "Homo sapiens",
-          "kingdom": "animals",
-          "experimentalFactors": [
-            "disease"
-          ],
-          "experimentProjects": [],
-          "arrayDesigns": [
-            "A-MEXP-1551"
-          ],
-          "arrayDesignNames": [
-            "Agilent Human miRNA Microarray 8 X 15K 016436 G4470A 96 cols x 164 rows"
-          ]
-        }
-      ]
+        'target'
+      );
     }
-    , 'target')
+  );
 </script>
 
 </html>

@@ -1,4 +1,3 @@
-serve.config.js
 webpack.config.js
 coverage/
 __mocks__/
