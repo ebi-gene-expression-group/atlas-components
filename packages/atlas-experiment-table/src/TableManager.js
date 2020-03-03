@@ -24,14 +24,16 @@ export default class TableManager extends React.Component {
       tooltipContent: PropTypes.string,
       tableHeaderCellOnClick: PropTypes.func,
       width: PropTypes.number
-    })
+    }),
+    className: PropTypes.string
   }
 
   static defaultProps = {
-    rowSelectionColumn: null,
     sortColumnIndex: 0,
     ascendingOrder: true,
-    host: ``
+    host: ``,
+    rowSelectionColumn: null,
+    className: `row expanded`
   }
 
   constructor(props) {
@@ -183,7 +185,7 @@ export default class TableManager extends React.Component {
       filteredSortedDataRows
 
     return (
-      <React.Fragment>
+      <div className={this.props.className}>
         <TablePreamble
           dropdowns={this.props.dropdownFilters.map(dropdownFilter => ({
             ...dropdownFilter,
@@ -216,7 +218,7 @@ export default class TableManager extends React.Component {
           currentPage={this.state.currentPage}
           rowsPerPage={this.state.rowsPerPage}
           onChange={i => this.setState({ currentPage: i })}/>
-      </React.Fragment>
+      </div>
     )
   }
 }

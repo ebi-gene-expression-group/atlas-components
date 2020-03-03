@@ -10,14 +10,15 @@ const TablePreamble =
   rowsPerPage,
   rowsPerPageOnChange,
   searchAll,
-  searchAllOnChange
+  searchAllOnChange,
+  className
 }) =>
-  <div className={`row expanded`}>
+  <React.Fragment>
     {
       dropdowns.map((dropdown, index) =>
         <div
           key={index}
-          className={`small-12 medium-4 large-2 columns`}>
+          className={className}>
           <label>{dropdown.label}:
             <select
               defaultValue={dropdown.value || ``}
@@ -33,7 +34,7 @@ const TablePreamble =
         </div>)
     }
 
-    <div className={`small-12 medium-4 large-2 columns`}>
+    <div className={className}>
       <label>Entries per page:
         <select
           defaultValue={rowsPerPage}
@@ -49,7 +50,7 @@ const TablePreamble =
       </label>
     </div>
 
-    <div className={`small-12 medium-4 large-2 columns`}>
+    <div className={className}>
       <label>Search all columns:
         <input
           type={`search`}
@@ -57,7 +58,7 @@ const TablePreamble =
           onChange={e => searchAllOnChange(e.target.value)}/>
       </label>
     </div>
-  </div>
+  </React.Fragment>
 
 TablePreamble.propTypes = {
   dropdowns: PropTypes.arrayOf(PropTypes.shape({
@@ -72,7 +73,12 @@ TablePreamble.propTypes = {
   rowsPerPage: PropTypes.number.isRequired,
   rowsPerPageOnChange: PropTypes.func.isRequired,
   searchAll: PropTypes.string.isRequired,
-  searchAllOnChange: PropTypes.func.isRequired
+  searchAllOnChange: PropTypes.func.isRequired,
+  className: PropTypes.string
+}
+
+TablePreamble.defaultProps = {
+  className: `small-12 medium-4 large-2 columns`
 }
 
 export default TablePreamble

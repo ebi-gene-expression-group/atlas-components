@@ -24,10 +24,11 @@ const TableContent =
     // Ordering
     sortColumnIndex, ascendingOrder, tableHeaderCellOnClick,
     // Row selection and action on selected rows
-    rowSelectionColumn, selectedRows, host, selectOnChange
+    rowSelectionColumn, selectedRows, host, selectOnChange,
+    className
   }) =>
-    <div className={`row expanded`}>
-      <div className={`small-12 columns`}>
+    <React.Fragment>
+      <div className={className}>
         <Table
           minWidth={ebiVfLargeMinWidth}
           border>
@@ -92,7 +93,7 @@ const TableContent =
 
         </Table>
       </div>
-    </div>
+    </React.Fragment>
 
 TableContent.propTypes = {
   // Presentational props
@@ -115,11 +116,13 @@ TableContent.propTypes = {
   }),
   selectedRows: PropTypes.arrayOf(PropTypes.string).isRequired,
   host: PropTypes.string,
-  selectOnChange: PropTypes.func.isRequired
+  selectOnChange: PropTypes.func.isRequired,
+  className: PropTypes.string
 }
 
 TableContent.defaultProps = {
-  host: ``
+  host: ``,
+  className: `small-12 columns`
 }
 
 export default TableContent

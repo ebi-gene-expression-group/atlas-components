@@ -8,7 +8,8 @@ const TableFooter =
   filteredDataRowsLength,
   rowsPerPage,
   currentPage,
-  onChange
+  onChange,
+  className
 }) => {
   // Poor man’s error boundary
   if (filteredDataRowsLength > dataRowsLength ) {
@@ -37,8 +38,8 @@ const TableFooter =
   const currentPageDataRowsLength = pagination.endIndex - pagination.startIndex + 1
 
   return (
-    <div className={`row expanded padding-top-medium`}>
-      <div className={`small-6 columns`}>
+    <React.Fragment>
+      <div className={className}>
         {
           dataRowsLength === 0 ?
             `Nothing to see here. Move along!` :
@@ -51,7 +52,7 @@ const TableFooter =
         }
       </div>
 
-      <div className={`small-6 columns`}>
+      <div className={className}>
         <ul className={`pagination`} style={{ textAlign: `right`}}>
           <li>
             {
@@ -88,7 +89,7 @@ const TableFooter =
           </li>
         </ul>
       </div>
-    </div>
+    </React.Fragment>
   )
 }
 
@@ -97,7 +98,12 @@ TableFooter.propTypes = {
   filteredDataRowsLength: PropTypes.number.isRequired,
   rowsPerPage: PropTypes.number.isRequired,
   currentPage: PropTypes.number.isRequired,
-  onChange: PropTypes.func.isRequired
+  onChange: PropTypes.func.isRequired,
+  className: PropTypes.string
+}
+
+TableFooter.defaultProps = {
+  className: `small-6 columns padding-top-medium`
 }
 
 export default TableFooter
