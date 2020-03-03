@@ -5,14 +5,18 @@ import URI from 'urijs'
 import { Table, Text } from 'evergreen-ui'
 
 const TableCell = ({ dataRow, dataKey, image, linkTo, host, width }) => {
-  // If the column is an image put the image in the cell (or an unknown icon if the type is undefined)
-  const cellItem = image ?
-    image[dataRow[dataKey]] ?
-      <img {...image[dataRow[dataKey]]}/> :
-      `❔` :
-
+  let cellItem = null
+  if (image) {
+    // If the column is an image put the image in the cell (or an unknown icon if the type is undefined)
+    if (image[dataRow[dataKey]]) {
+      cellItem = <img {...image[dataRow[dataKey]]}/>
+    }
+    else {
+      cellItem = `❔`
+    }
+  } else if (Array.isArray(dataRow[dataKey])) {
     // If the contents of the cell is an array expand it to a list
-    Array.isArray(dataRow[dataKey]) ?
+    cellItem =
       <ul>
         {dataRow[dataKey].map(
           (element, index) =>
@@ -20,10 +24,12 @@ const TableCell = ({ dataRow, dataKey, image, linkTo, host, width }) => {
               {element}
             </li>
         )}
-      </ul> :
-      // Any other type (i.e. string, number) put it as-is in the cell
-      dataRow[dataKey]
-
+      </ul>
+  } else {
+    // Any other type (i.e. string, number) put it as-is in the cell
+    cellItem = dataRow[dataKey]
+  }
+  
   // Evergreen’s Table.TextCell ellipsifies content by default and we don’t want that
   return (
     <Table.Cell flexGrow={width}>
