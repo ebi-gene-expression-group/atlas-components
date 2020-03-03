@@ -1,6 +1,6 @@
 {
   "name": "@ebi-gene-expression-group/atlas-homepage-cards",
-  "version": "2.2.2",
+  "version": "2.3.0",
   "description": "A package that renders grids of cards.",
   "main": "lib/index.js",
   "scripts": {
@@ -40,35 +40,35 @@
     "url": "git+https://github.com/ebi-gene-expression-group/atlas-components.git"
   },
   "dependencies": {
-    "@ebi-gene-expression-group/react-ebi-species": "^2.4.0",
+    "@ebi-gene-expression-group/react-ebi-species": "^2.4.1",
     "prop-types": "^15.7.2",
-    "react": "^16.12.0",
+    "react": "^16.13.0",
     "react-slick": "^0.25.2",
-    "styled-components": "^4.4.1",
+    "styled-components": "^5.0.1",
     "urijs": "^1.19.2"
   },
   "devDependencies": {
-    "@babel/cli": "^7.7.5",
-    "@babel/core": "^7.7.5",
-    "@babel/polyfill": "^7.7.0",
-    "@babel/preset-env": "^7.7.6",
-    "@babel/preset-react": "^7.7.4",
-    "@ebi-gene-expression-group/atlas-react-fetch-loader": "^3.1.1",
-    "@ebi-gene-expression-group/eslint-config": "^1.1.0",
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.8.6",
+    "@babel/polyfill": "^7.8.3",
+    "@babel/preset-env": "^7.8.6",
+    "@babel/preset-react": "^7.8.3",
+    "@ebi-gene-expression-group/atlas-react-fetch-loader": "^3.1.2",
+    "@ebi-gene-expression-group/eslint-config": "^2.0.0",
     "babel-loader": "^8.0.6",
     "clean-webpack-plugin": "^3.0.0",
     "coveralls": "^3.0.9",
-    "enzyme": "^3.10.0",
-    "enzyme-adapter-react-16": "^1.15.1",
-    "eslint": "^6.7.2",
-    "fetch-mock": "8.0.1",
-    "jest": "24.9.0",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
+    "eslint": "^6.8.0",
+    "fetch-mock": "8.3.2",
+    "jest": "25.1.0",
     "jest-environment-enzyme": "^7.1.2",
     "jest-enzyme": "^7.1.2",
     "node-fetch": "^2.6.0",
-    "react-dom": "^16.12.0",
-    "webpack": "^4.41.2",
-    "webpack-cli": "^3.3.10",
-    "webpack-dev-server": "^3.9.0"
+    "react-dom": "^16.13.0",
+    "webpack": "^4.41.6",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
   }
 }

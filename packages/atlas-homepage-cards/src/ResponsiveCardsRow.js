@@ -5,21 +5,23 @@ import styled from 'styled-components'
 import cardPropTypes from './modelPropTypes'
 import Card from './Card'
 
+const CardContainer = styled.div`
+  :hover {
+    background: ${props => props.hoverColour};
+  }
+`
+
 const ResponsiveCardsRow = (props) => {
   const { CardClass, cards } = props
   const { className, cardContainerClassName, speciesIconHeight, imageIconHeight, hoverColour } = props
 
-  const CardContainer = styled.div`
-    :hover {
-      background: ${hoverColour};
-    }
-  `
+
   return (
     <div className={className}>
       {
         Array.isArray(cards) &&
         cards.map((card, index) =>
-          <CardContainer className={cardContainerClassName} key={index}>
+          <CardContainer hoverColour={hoverColour} className={cardContainerClassName} key={index}>
             <CardClass
               {...card}
               imageIconHeight={imageIconHeight}
