@@ -35,7 +35,7 @@ const SelectionTableHeaderCell = ({ label, selectedRowIds, onClick, tooltipConte
     { tooltipContent &&
       <Pane paddingLeft={majorScale(1)}>
         <TooltipIcon tooltipText={tooltipContent}/>
-        <ReactTooltip place={`bottom`}/>
+        <ReactTooltip place={`left`}/>
       </Pane>
     }
   </Table.HeaderCell>

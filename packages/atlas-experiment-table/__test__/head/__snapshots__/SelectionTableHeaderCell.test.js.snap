@@ -3277,12 +3277,12 @@ exports[`SelectionTableHeaderCell matches snapshot (with a selection and a toolt
                         <ReactTooltip
                           clickable={false}
                           insecure={true}
-                          place="bottom"
+                          place="left"
                           resizeHide={true}
                           wrapper="div"
                         >
                           <div
-                            className="__react_component_tooltip place-bottom type-dark"
+                            className="__react_component_tooltip place-left type-dark"
                             data-id="tooltip"
                           />
                         </ReactTooltip>
