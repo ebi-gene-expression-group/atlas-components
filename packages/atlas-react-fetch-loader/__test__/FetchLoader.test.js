@@ -121,4 +121,14 @@ describe(`FetchLoader`, () => {
     expect(wrapper.find(MyComponent)).toHaveProp(`name`)
     expect(wrapper.find(MyComponent)).toHaveProp(`message`)
   })
+
+  test(`can rename data keys before injecting the payload to the wrapped component`, async () => {
+    fetchMock.get(`/foo/bar`, `{"results":[]}`)
+    const wrapper = shallow(<ComponentWithFetchLoader {...props} renameDataKeys={{ results: `foobarius` }}/>)
+
+    await wrapper.instance().componentDidMount()
+    expect(wrapper.find(MyComponent)).toHaveProp(props)
+    expect(wrapper.find(MyComponent)).not.toHaveProp(`results`)
+    expect(wrapper.find(MyComponent)).toHaveProp(`foobarius`, [])
+  })
 })

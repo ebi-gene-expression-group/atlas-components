@@ -66,8 +66,12 @@ const withFetchLoader = (WrappedComponent) => {
           throw new Error(`${url} => ${response.status}`)
         }
 
+        const data = await response.json()
+        Object.keys(this.props.renameDataKeys)
+          .forEach(key => delete Object.assign(data, {[this.props.renameDataKeys[key]]: data[key] })[key])
+
         this.setState({
-          data: await response.json(),
+          data: data,
           isLoading: false,
           hasError: null
         })
@@ -117,12 +121,14 @@ const withFetchLoader = (WrappedComponent) => {
     host: PropTypes.string.isRequired,
     resource: PropTypes.string.isRequired,
     loadingPayloadProvider: PropTypes.func,
-    errorPayloadProvider: PropTypes.func
+    errorPayloadProvider: PropTypes.func,
+    renameDataKeys: PropTypes.objectOf(PropTypes.string)
   }
 
   FetchLoader.defaultProps = {
     loadingPayloadProvider: null,
-    errorPayloadProvider: null
+    errorPayloadProvider: null,
+    renameDataKeys: {}
   }
 
   return FetchLoader
