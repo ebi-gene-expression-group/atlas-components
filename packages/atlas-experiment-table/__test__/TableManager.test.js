@@ -108,9 +108,11 @@ describe(`TableManager`, () => {
     wrapper.find(TablePreamble).invoke(`searchAllOnChange`)(`foobar`)
     expect(wrapper.find(TableContent).prop(`dataRows`)).toHaveLength(0)
 
-    const randomMatchingSubstring =
-      getRandomValueFromKeyedRows(bulkExperiments, _.sample([ ...bulkTableHeaders, ...bulkDropdownFilters ]).dataKey)
-    wrapper.find(TablePreamble).invoke(`searchAllOnChange`)(randomMatchingSubstring)
+    const randomMatchingValue =
+      _.toString(
+        getRandomValueFromKeyedRows(
+          bulkExperiments, _.sample([ ...bulkTableHeaders, ...bulkDropdownFilters ]).dataKey))
+    wrapper.find(TablePreamble).invoke(`searchAllOnChange`)(randomMatchingValue)
     expect(wrapper.find(TableContent).prop(`dataRows`).length).toBeGreaterThan(0)
   })
 
