@@ -161,7 +161,7 @@ exports[`TablePreamble matches snapshot (with dropdowns) 1`] = `
         Kingdom
         :
         <select
-          defaultValue="Dorne"
+          defaultValue=""
           onChange={[Function]}
         >
           <option
@@ -186,12 +186,6 @@ exports[`TablePreamble matches snapshot (with dropdowns) 1`] = `
             value="Fungi"
           >
             Fungi
-          </option>
-          <option
-            key="3"
-            value="Dorne"
-          >
-            Dorne
           </option>
         </select>
       </label>

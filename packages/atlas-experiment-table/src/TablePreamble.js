@@ -14,23 +14,33 @@ const TablePreamble =
 }) =>
   <div className={`row expanded`}>
     {
-      dropdowns.map((dropdown, index) =>
-        <div
-          key={index}
-          className={`small-12 medium-4 large-2 columns`}>
-          <label>{dropdown.label}:
-            <select
-              defaultValue={dropdown.value || ``}
-              onChange={e => dropdownOnChange(dropdown.dataKey, e.target.value)}>
-              <option value={``}>All</option>
-              {
-                dropdown.options
-                  .concat(dropdown.value && !dropdown.options.includes(dropdown.value) ? dropdown.value : [])
-                  .map((option, index) => <option key={index} value={option}>{option}</option>)
-              }
-            </select>
-          </label>
-        </div>)
+      dropdowns.map((dropdown, index) =>  {
+        let defaultValue = ``
+        if (dropdown.value) {
+          const valueIndex =
+            dropdown.options.findIndex(option => option.toLowerCase().match(dropdown.value.trim().toLowerCase()))
+          if (valueIndex >= 0) {
+            defaultValue = dropdown.options[valueIndex]
+          }
+        }
+
+        return (
+          <div
+            key={index}
+            className={`small-12 medium-4 large-2 columns`}>
+            <label>{dropdown.label}:
+              <select
+                defaultValue={defaultValue}
+                onChange={e => dropdownOnChange(dropdown.dataKey, e.target.value, false)}>
+                <option value={``}>All</option>
+                {
+                  dropdown.options.map((option, index) => <option key={index} value={option}>{option}</option>)
+                }
+              </select>
+            </label>
+          </div>
+        )
+      })
     }
 
     <div className={`small-12 medium-4 large-2 columns`}>
