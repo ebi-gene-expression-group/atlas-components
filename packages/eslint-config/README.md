@@ -1,1 +1,0 @@
-# ESLint Configuration for Atlas Javascript projects
