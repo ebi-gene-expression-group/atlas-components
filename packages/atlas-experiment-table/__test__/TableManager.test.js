@@ -96,7 +96,7 @@ describe(`TableManager`, () => {
     expect(wrapper.find(TableContent).prop(`dataRows`)).toHaveLength(bulkExperiments.length)
   })
 
-  test(`can search all fields using the top-right text input`, () => {
+  test(`can search all fields using the top-right text input, filtering is debounced 600ms (no results)`, (done) => {
     const wrapper =
       shallow(
         <TableManager
@@ -105,16 +105,82 @@ describe(`TableManager`, () => {
           tableHeaders={bulkTableHeaders}
           dropdownFilters={bulkDropdownFilters}/>)
 
-    wrapper.find(TablePreamble).invoke(`searchAllOnChange`)(`foobar`)
-    expect(wrapper.find(TableContent).prop(`dataRows`)).toHaveLength(0)
+    const randomQuery = randomString()
+    wrapper.find(TablePreamble).invoke(`searchAllOnChange`)(randomQuery)
 
-    const randomMatchingSubstring =
-      getRandomValueFromKeyedRows(bulkExperiments, _.sample([ ...bulkTableHeaders, ...bulkDropdownFilters ]).dataKey)
-    wrapper.find(TablePreamble).invoke(`searchAllOnChange`)(randomMatchingSubstring)
-    expect(wrapper.find(TableContent).prop(`dataRows`).length).toBeGreaterThan(0)
+    expect(wrapper).toHaveState({ searchAll: randomQuery })
+    // Results not yet updated
+    expect(wrapper.find(TableContent).prop(`dataRows`)).toHaveLength(10)
+
+    setTimeout(() => {
+      expect(wrapper.find(TableContent).prop(`dataRows`)).toHaveLength(0)
+      done()
+    }, 600)
   })
 
-  test(`can filter using a randomly picked searchable header`, () => {
+  test(`can search all fields using the top-right text input, filtering is debounced 600ms (results found)`, (done) => {
+    const wrapper =
+      shallow(
+        <TableManager
+          {...props}
+          dataRows={bulkExperiments}
+          tableHeaders={bulkTableHeaders}
+          dropdownFilters={bulkDropdownFilters}/>)
+
+    const randomMatchingSubstring =
+       getRandomValueFromKeyedRows(bulkExperiments, _.sample([ ...bulkTableHeaders, ...bulkDropdownFilters ]).dataKey)
+    wrapper.find(TablePreamble).invoke(`searchAllOnChange`)(randomMatchingSubstring)
+    expect(wrapper).toHaveState({ searchAll: randomMatchingSubstring })
+    // Results not yet updated
+    expect(wrapper.find(TableContent).prop(`dataRows`)).toHaveLength(10)
+
+    setTimeout(() => {
+      expect(wrapper.find(TableContent).prop(`dataRows`).length).toBeGreaterThan(0)
+      done()
+    }, 600)
+  })
+
+  test(`can filter using a randomly picked searchable header, filtering is debounced 600ms (no results)`, (done) => {
+    const wrapper =
+      shallow(
+        <TableManager
+          {...props}
+          dataRows={bulkExperiments}
+          tableHeaders={bulkTableHeaders}
+          dropdownFilters={bulkDropdownFilters}/>)
+
+    const randomTableHeaderCellFilter = _.sample(bulkTableHeaders.filter(header => header.searchable))
+    const randomQuery = randomString()
+    wrapper.find(TableContent).invoke(`tableHeaderCellOnChange`)(randomTableHeaderCellFilter.dataKey, randomQuery)
+
+    expect(wrapper).toHaveState({ filters: { [randomTableHeaderCellFilter.dataKey]: randomQuery } })
+    // Results not yet updated
+    expect(wrapper.find(TableContent).prop(`dataRows`)).toHaveLength(10)
+
+    setTimeout(() => {
+      expect(wrapper.find(TableContent).prop(`dataRows`)).toHaveLength(0)
+      done()
+    }, 600)
+  })
+
+  test(`can filter using a randomly picked searchable header immediately passing a Boolean flag (no results)`, () => {
+    const wrapper =
+      shallow(
+        <TableManager
+          {...props}
+          dataRows={bulkExperiments}
+          tableHeaders={bulkTableHeaders}
+          dropdownFilters={bulkDropdownFilters}/>)
+
+    const randomTableHeaderCellFilter = _.sample(bulkTableHeaders.filter(header => header.searchable))
+    const randomQuery = randomString()
+    wrapper.find(TableContent).invoke(`tableHeaderCellOnChange`)(randomTableHeaderCellFilter.dataKey, randomQuery, false)
+
+    expect(wrapper).toHaveState({ filters: { [randomTableHeaderCellFilter.dataKey]: randomQuery } })
+    expect(wrapper.find(TableContent).prop(`dataRows`)).toHaveLength(0)
+  })
+
+  test(`can filter using a randomly picked searchable header, filtering is debounced 600ms (results found)`, (done) => {
     const wrapper =
       shallow(
         <TableManager
@@ -129,19 +195,24 @@ describe(`TableManager`, () => {
     wrapper.find(TableContent).invoke(`tableHeaderCellOnChange`)(randomTableHeaderCellFilter.dataKey, randomTableHeaderCellValueSubstring)
 
     expect(wrapper).toHaveState({ filters: { [randomTableHeaderCellFilter.dataKey]: randomTableHeaderCellValueSubstring } })
+    // Results not yet updated
+    expect(wrapper.find(TableContent).prop(`dataRows`)).toHaveLength(10)
 
-    _.chain(wrapper.find(TableContent).prop(`dataRows`))
-      .map(randomTableHeaderCellFilter.dataKey)
-      // Fields can be multi-valued (i.e. arrays), so we convert all types to arrays and validate below
-      .map(dataRowValue => [].concat(dataRowValue))
-      .forEach(
-        dataRowValueArray =>
-          expect(dataRowValueArray)
-            .toEqual(
-              expect.arrayContaining(
-                [expect.stringMatching(
-                  // Some descriptions contain parentheses (!)
-                  new RegExp(randomTableHeaderCellValueSubstring.replace(`(`, `\\(`).replace(`)`, `\\)`), `i`))])))
+    setTimeout(() => {
+      _.chain(wrapper.find(TableContent).prop(`dataRows`))
+        .map(randomTableHeaderCellFilter.dataKey)
+        // Fields can be multi-valued (i.e. arrays), so we convert all types to arrays and validate below
+        .map(dataRowValue => [].concat(dataRowValue))
+        .forEach(
+          dataRowValueArray =>
+            expect(dataRowValueArray)
+              .toEqual(
+                expect.arrayContaining(
+                  [expect.stringMatching(
+                    // Some descriptions contain parentheses (!)
+                    new RegExp(randomTableHeaderCellValueSubstring.replace(`(`, `\\(`).replace(`)`, `\\)`), `i`))])))
+      done()
+    }, 600)
   })
 
   test(`removes empty strings from filters`, () => {
