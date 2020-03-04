@@ -21,7 +21,8 @@ module.exports = {
     library: `[name]`,
     path: path.resolve(__dirname, `dist`),
     filename: `[name].bundle.js`,
-    publicPath: `/html/`
+    publicPath: `/html/`,
+    devtoolNamespace: `firefox`
   },
   optimization: {
     runtimeChunk: {

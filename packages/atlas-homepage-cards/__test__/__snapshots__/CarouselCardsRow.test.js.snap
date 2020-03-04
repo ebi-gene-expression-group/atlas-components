@@ -9,15 +9,16 @@ exports[`CarousleCardsRow matches snapshot with displaying a part of cards in th
     }
   }
 >
-  <GlobalStyleComponent
+  <Memo(GlobalStyleComponent)
     sliderHeight=""
   />
-  <GlobalStyleComponent />
+  <Memo(GlobalStyleComponent) />
   <Slider
     slidesToShow={3}
   >
     <styled.div
       className=""
+      hoverColour="AliceBlue"
       key="0"
     >
       <CardClass
@@ -57,6 +58,7 @@ exports[`CarousleCardsRow matches snapshot with displaying a part of cards in th
     </styled.div>
     <styled.div
       className=""
+      hoverColour="AliceBlue"
       key="1"
     >
       <CardClass
@@ -133,6 +135,7 @@ exports[`CarousleCardsRow matches snapshot with displaying a part of cards in th
     </styled.div>
     <styled.div
       className=""
+      hoverColour="AliceBlue"
       key="2"
     >
       <CardClass
@@ -163,6 +166,7 @@ exports[`CarousleCardsRow matches snapshot with displaying a part of cards in th
     </styled.div>
     <styled.div
       className=""
+      hoverColour="AliceBlue"
       key="3"
     >
       <CardClass
@@ -216,6 +220,7 @@ exports[`CarousleCardsRow matches snapshot with displaying all cards in the slid
 >
   <styled.div
     className=""
+    hoverColour="AliceBlue"
     key="0"
   >
     <CardClass
@@ -255,6 +260,7 @@ exports[`CarousleCardsRow matches snapshot with displaying all cards in the slid
   </styled.div>
   <styled.div
     className=""
+    hoverColour="AliceBlue"
     key="1"
   >
     <CardClass
@@ -331,6 +337,7 @@ exports[`CarousleCardsRow matches snapshot with displaying all cards in the slid
   </styled.div>
   <styled.div
     className=""
+    hoverColour="AliceBlue"
     key="2"
   >
     <CardClass
@@ -361,6 +368,7 @@ exports[`CarousleCardsRow matches snapshot with displaying all cards in the slid
   </styled.div>
   <styled.div
     className=""
+    hoverColour="AliceBlue"
     key="3"
   >
     <CardClass
