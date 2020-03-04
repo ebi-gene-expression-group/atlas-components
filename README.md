@@ -5,7 +5,12 @@ A collection of React components used in the front end of [Expression Atlas](htt
 
 This is a [Lerna](https://github.com/lerna/lerna)-managed monorepo. Read Lerna’s documentation for more details.
 
-In short, remember to run `npx lerna bootstrap` from the top level directory after you install or remove packages in
+```bash
+npm install
+npx lerna bootstrap --hoist
+```
+
+In short, remember to run `npx lerna bootstrap --hoist` from the top level directory after you install or remove packages in
 each `package.json` to ensure the dependencies have been correctly symlinked. We have noticed that sometimes NPM, as
 usual, has some unexpected behaviour.
 
