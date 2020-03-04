@@ -15,6 +15,7 @@ import {
   bulkTableHeaders, bulkDropdownFilters, bulkRowSelectionColumn,
   singleCellTableHeaders, singleCellDropdownFilters, singleCellRowSelectionColumn } from './TestUtils'
 import bulkExperiments from './experiments-bulk.json'
+import singleCellExperiments from './experiments-sc.json'
 
 const getRandomValueFromKeyedRows = (dataRows, dataKey) =>
   _.chain(dataRows)
@@ -412,7 +413,7 @@ describe(`TableManager`, () => {
       mount(
         <TableManager
           {...props}
-          dataRows={bulkExperiments}
+          dataRows={singleCellExperiments}
           tableHeaders={singleCellTableHeaders}
           dropdownFilters={singleCellDropdownFilters}
           rowSelectionColumn={singleCellRowSelectionColumn}/>)
