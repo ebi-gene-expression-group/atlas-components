@@ -1,0 +1,273 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TableFooter matches snapshot (fewer than 7 pages in total) 1`] = `
+<TableFooter
+  className="small-6 columns padding-top-medium"
+  currentPage={4}
+  dataRowsLength={34}
+  filteredDataRowsLength={34}
+  onChange={[MockFunction]}
+  rowsPerPage={10}
+>
+  <div
+    className="small-6 columns padding-top-medium"
+  >
+    Showing 4 results from a total of 34 experiments (page 4 of 4).
+  </div>
+  <div
+    className="small-6 columns padding-top-medium"
+  >
+    <ul
+      className="pagination"
+      style={
+        Object {
+          "textAlign": "right",
+        }
+      }
+    >
+      <li>
+        <a
+          onClick={[Function]}
+        >
+          Previous
+        </a>
+      </li>
+      <li
+        key="0"
+      >
+        <a
+          onClick={[Function]}
+        >
+          1
+        </a>
+      </li>
+      <li
+        key="1"
+      >
+        <a
+          onClick={[Function]}
+        >
+          2
+        </a>
+      </li>
+      <li
+        key="2"
+      >
+        <a
+          onClick={[Function]}
+        >
+          3
+        </a>
+      </li>
+      <li
+        className="current"
+        key="3"
+      >
+        4
+      </li>
+      <li>
+        <span
+          className="disabled"
+        >
+          Next
+        </span>
+      </li>
+    </ul>
+  </div>
+</TableFooter>
+`;
+
+exports[`TableFooter matches snapshot (more than 7 pages filtered from a superset of rows) 1`] = `
+<TableFooter
+  className="small-6 columns padding-top-medium"
+  currentPage={20}
+  dataRowsLength={591}
+  filteredDataRowsLength={197}
+  onChange={[MockFunction]}
+  rowsPerPage={10}
+>
+  <div
+    className="small-6 columns padding-top-medium"
+  >
+    Showing 7 results  out of 197 from a total of 591 experiments (page 20 of 20).
+  </div>
+  <div
+    className="small-6 columns padding-top-medium"
+  >
+    <ul
+      className="pagination"
+      style={
+        Object {
+          "textAlign": "right",
+        }
+      }
+    >
+      <li>
+        <a
+          onClick={[Function]}
+        >
+          Previous
+        </a>
+      </li>
+      <li
+        key="0"
+      >
+        <a
+          onClick={[Function]}
+        >
+          1
+        </a>
+      </li>
+      <li
+        className="disabled"
+        key="1"
+      >
+        …
+      </li>
+      <li
+        key="2"
+      >
+        <a
+          onClick={[Function]}
+        >
+          16
+        </a>
+      </li>
+      <li
+        key="3"
+      >
+        <a
+          onClick={[Function]}
+        >
+          17
+        </a>
+      </li>
+      <li
+        key="4"
+      >
+        <a
+          onClick={[Function]}
+        >
+          18
+        </a>
+      </li>
+      <li
+        key="5"
+      >
+        <a
+          onClick={[Function]}
+        >
+          19
+        </a>
+      </li>
+      <li
+        className="current"
+        key="6"
+      >
+        20
+      </li>
+      <li>
+        <span
+          className="disabled"
+        >
+          Next
+        </span>
+      </li>
+    </ul>
+  </div>
+</TableFooter>
+`;
+
+exports[`TableFooter matches snapshot (no data) 1`] = `
+<TableFooter
+  className="small-6 columns padding-top-medium"
+  currentPage={1}
+  dataRowsLength={5}
+  filteredDataRowsLength={0}
+  onChange={[MockFunction]}
+  rowsPerPage={10}
+>
+  <div
+    className="small-6 columns padding-top-medium"
+  >
+    Your query didn’t match any experiments.
+  </div>
+  <div
+    className="small-6 columns padding-top-medium"
+  >
+    <ul
+      className="pagination"
+      style={
+        Object {
+          "textAlign": "right",
+        }
+      }
+    >
+      <li>
+        <span
+          className="disabled"
+        >
+          Previous
+        </span>
+      </li>
+      <li>
+        <span
+          className="disabled"
+        >
+          Next
+        </span>
+      </li>
+    </ul>
+  </div>
+</TableFooter>
+`;
+
+exports[`TableFooter matches snapshot (one page) 1`] = `
+<TableFooter
+  className="small-6 columns padding-top-medium"
+  currentPage={1}
+  dataRowsLength={1}
+  filteredDataRowsLength={1}
+  onChange={[MockFunction]}
+  rowsPerPage={10}
+>
+  <div
+    className="small-6 columns padding-top-medium"
+  >
+    Showing 1 result from a total of 1 experiments.
+  </div>
+  <div
+    className="small-6 columns padding-top-medium"
+  >
+    <ul
+      className="pagination"
+      style={
+        Object {
+          "textAlign": "right",
+        }
+      }
+    >
+      <li>
+        <span
+          className="disabled"
+        >
+          Previous
+        </span>
+      </li>
+      <li
+        className="current"
+        key="0"
+      >
+        1
+      </li>
+      <li>
+        <span
+          className="disabled"
+        >
+          Next
+        </span>
+      </li>
+    </ul>
+  </div>
+</TableFooter>
+`;
