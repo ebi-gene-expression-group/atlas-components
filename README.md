@@ -7,6 +7,7 @@ This is a [Lerna](https://github.com/lerna/lerna)-managed monorepo. Read Lerna�
 
 ```bash
 npm install
+npm install eslint-plugin-react --no-save --no-save-dev   # See section about linting below
 npx lerna bootstrap --hoist
 ```
 
@@ -14,14 +15,11 @@ In short, remember to run `npx lerna bootstrap --hoist` from the top level direc
 each `package.json` to ensure the dependencies have been correctly symlinked. We have noticed that sometimes NPM, as
 usual, has some unexpected behaviour.
 
-## About linting
+## Linting
 
 Even though NPM no longer installs `peerDependencies`, we follow
 [ESLint’s recommendation on shareable configs](https://eslint.org/docs/developer-guide/shareable-configs#publishing-a-shareable-config).
-For this reason, you should install `eslint-plugin-react` in each individual package like this:
-```bash
-npm install eslint-plugin-react --no-save --no-save-dev
-```
+You can install `eslint-plugin-react` in the root package like detailed in the instructions above.
 
 And if you’re using Atom, because it won’t bother to use your package’s settings (you know, it’s better to reinvent
 the wheel every single time), this might be useful:
