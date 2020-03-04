@@ -60,7 +60,7 @@ export default class TableManager extends React.Component {
       tableHeaderCellOnClick: PropTypes.func,
       width: PropTypes.number
     }),
-    onSubmit: PropTypes.func
+    afterStateUpdate: PropTypes.func
   }
 
   static defaultProps = {
@@ -68,7 +68,7 @@ export default class TableManager extends React.Component {
     ascendingOrder: true,
     host: ``,
     rowSelectionColumn: null,
-    onSubmit: () => {}
+    afterStateUpdate: () => {}
   }
 
   constructor(props) {
@@ -124,7 +124,9 @@ export default class TableManager extends React.Component {
     this.state.filteredSortedDataRows = doFilterAndSort()
 
     this.immediateFilterAndSort = () =>
-      this.setState({ filteredSortedDataRows: doFilterAndSort() }, () => this.props.onSubmit(this.state.filters))
+      this.setState(
+        { filteredSortedDataRows: doFilterAndSort() },
+        () => this.props.afterStateUpdate(this.state.filters))
     this.debouncedFilterAndSort = _.debounce(this.immediateFilterAndSort, 600)
 
     this.updateSelectedRows = this.updateSelectedRows.bind(this)
