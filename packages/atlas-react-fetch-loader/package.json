@@ -71,5 +71,6 @@
   "homepage": "https://github.com/ebi-gene-expression-group/atlas-react-fetch-loader#readme",
   "directories": {
     "lib": "lib"
-  }
+  },
+  "gitHead": "0d49cd1ea8ef6b1d0bc336d9f44f770b02ee3a4e"
 }
