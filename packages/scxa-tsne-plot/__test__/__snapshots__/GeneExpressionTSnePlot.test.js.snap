@@ -1,0 +1,87 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GeneExpressionTSnePlot with random data matches snapshot 1`] = `
+Array [
+  <div
+    style={
+      Object {
+        "visibility": "visible",
+      }
+    }
+  >
+    <div
+      className="row margin-bottom-large"
+    >
+      <label>
+        Gene ID, gene name or gene feature
+      </label>
+      <div
+        style={
+          Object {
+            "display": "",
+          }
+        }
+      >
+        <input
+          aria-autocomplete="list"
+          aria-expanded={false}
+          autoComplete="off"
+          name="geneId"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onClick={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          role="combobox"
+          type="text"
+          value=""
+        />
+      </div>
+    </div>
+  </div>,
+  <div
+    className="row"
+    style={
+      Object {
+        "position": "relative",
+      }
+    }
+  >
+    <div
+      className="small-12 columns"
+    >
+      <div />
+    </div>
+    <div
+      style={
+        Object {
+          "alignItems": "center",
+          "background": "rgba(255,255,255,0.8)",
+          "bottom": 0,
+          "display": "flex",
+          "justifyContent": "center",
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        }
+      }
+    >
+      <div
+        style={
+          Object {
+            "textAlign": "center",
+          }
+        }
+      >
+        <p>
+          Loading, please wait...
+        </p>
+        <img
+          src="test-file-stub"
+        />
+      </div>
+    </div>
+  </div>,
+]
+`;
