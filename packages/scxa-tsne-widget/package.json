@@ -1,5 +1,5 @@
 {
-  "name": "scxa-tsne-widget",
+  "name": "@ebi-gene-expression-group/scxa-tsne-widget",
   "version": "1.0.0-rc2",
   "description": "tSNE widget visualizes Single Cell Expression Atlas data",
   "main": "lib/index.js",
