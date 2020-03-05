@@ -16,7 +16,7 @@ const generateRandomSeriesData = (pointsCount) => {
       x: getRandomArbitrary(0, 100),
       y: getRandomArbitrary(0, 100),
       expressionLevel: getRandomArbitrary(0, 10000),
-      name: String(`cell_` + i)
+      name: String(`cell_${i}`)
     })
   }
 
