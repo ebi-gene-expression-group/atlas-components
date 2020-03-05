@@ -1,3 +1,1 @@
-import HighchartsSeriesGenerator from './HighchartsSeriesGenerator.js'
-
-export default HighchartsSeriesGenerator
+export { default } from './HighchartsSeriesGenerator.js'
