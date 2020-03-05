@@ -552,6 +552,30 @@ exports[`EbiSpeciesIcon with classes Icon of mapped species caenorhabditis elega
 </EbiSpeciesIcon>
 `;
 
+exports[`EbiSpeciesIcon with classes Icon of mapped species callithrix jacchus matches snapshot 1`] = `
+<EbiSpeciesIcon
+  groupColors={
+    Object {
+      "other": "deepskyblue",
+      "plants": "mediumseagreen",
+      "warmBlooded": "indianred",
+    }
+  }
+  species="callithrix jacchus"
+>
+  <span
+    className="icon icon-species"
+    data-icon="q"
+    style={
+      Object {
+        "color": "indianred",
+      }
+    }
+    title="Callithrix jacchus"
+  />
+</EbiSpeciesIcon>
+`;
+
 exports[`EbiSpeciesIcon with classes Icon of mapped species canis lupus familiaris matches snapshot 1`] = `
 <EbiSpeciesIcon
   groupColors={
