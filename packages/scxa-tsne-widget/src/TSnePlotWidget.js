@@ -82,6 +82,12 @@ class TSnePlotWidget extends React.Component {
 
     const perplexitiesOrdered = perplexities.sort((a, b) => a - b)
 
+    // ks -> for future use
+    // selectedColourBy -> used default k value as we are not showing widget controls for now
+    // selectedColourByCategory -> Is the plot coloured by clusters or metadata (as we not showing controls so used 'clusters' as default selected category
+    // selectedPerplexity -> //default value given for now
+    // showControls ->  flag to control weather controls over t-SNE plots are shown or not
+
     return (
       loadingMetadata ?
         <p className={`row column loading-message`}>Loading, please wait…</p> :
@@ -94,18 +100,18 @@ class TSnePlotWidget extends React.Component {
             expressionPlotClassName={expressionPlotClassName}
             speciesName={speciesName}
             experimentAccession={experimentAccession}
-            ks={ks} // for future use
+            ks={ks}
             metadata={metadata}
-            selectedColourBy={selectedColourBy} // used default k value as we are not showing widget controls for now
-            selectedColourByCategory={selectedColourByCategory} // Is the plot coloured by clusters or metadata (as we not showing controls so used 'clusters' as default selected category
+            selectedColourBy={selectedColourBy}
+            selectedColourByCategory={selectedColourByCategory}
             perplexities={perplexities}
-            selectedPerplexity={perplexitiesOrdered[Math.round((perplexitiesOrdered.length - 1) / 2)]} //default value given for now
+            selectedPerplexity={perplexitiesOrdered[Math.round((perplexitiesOrdered.length - 1) / 2)]}
             geneId={geneId}
             height={height}
             onChangeColourBy={(colourByCategory, colourByValue) =>
               this._onChangeColourBy(colourByCategory, colourByValue)
             }
-            showControls={false} // flag to control weather controls over tsne plots are shown or not
+            showControls={false}
           />
           <p>
             To know more about this experiment please go to <a target={`_blank`} href={`https://www.ebi.ac.uk/gxa/sc/experiments/${experimentAccession}`}>Single Cell Expression Atlas </a>.
