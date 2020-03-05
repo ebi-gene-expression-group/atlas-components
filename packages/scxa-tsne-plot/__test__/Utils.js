@@ -1,4 +1,4 @@
-import HighchartsSeriesGenerator from 'highcharts-series-generator'
+import HighchartsSeriesGenerator from '@ebi-gene-expression-group/highcharts-series-generator'
 
 const seriesNames = [`0`, `1`, `2`, `3`, `4`]
 const maxPointsPerSeries = 1000
