@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 import URI from 'urijs'
 
-import TSnePlotView from 'expression-atlas-experiment-page-tsne-plot'
+import TSnePlotView from '@ebi-gene-expression-group/scxa-tsne-plot'
 
 class TSnePlotWidget extends React.Component {
   constructor(props) {
