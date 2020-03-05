@@ -16,7 +16,7 @@ Array [
         onKeyDown={[Function]}
       >
         <div
-          className=" css-tinoic"
+          className=" css-15r8ym2-Control"
           onMouseDown={[Function]}
           onTouchEnd={[Function]}
         >
@@ -29,7 +29,7 @@ Array [
               0
             </div>
             <div
-              className="css-1g6gooi"
+              className="css-b8ldur-Input"
             >
               <div
                 className=""
@@ -87,10 +87,10 @@ Array [
             </div>
           </div>
           <div
-            className=" css-1wy0on6"
+            className=" css-1hb7zxy-IndicatorsContainer"
           >
             <span
-              className="sc-bdVaJa hUYIaS"
+              className="sc-AxirZ eHnaPO"
               cx={[Function]}
             />
           </div>
@@ -108,7 +108,7 @@ Array [
         onKeyDown={[Function]}
       >
         <div
-          className=" css-tinoic"
+          className=" css-15r8ym2-Control"
           onMouseDown={[Function]}
           onTouchEnd={[Function]}
         >
@@ -121,7 +121,7 @@ Array [
               Select...
             </div>
             <div
-              className="css-1g6gooi"
+              className="css-b8ldur-Input"
             >
               <div
                 className=""
@@ -179,10 +179,10 @@ Array [
             </div>
           </div>
           <div
-            className=" css-1wy0on6"
+            className=" css-1hb7zxy-IndicatorsContainer"
           >
             <span
-              className="sc-bdVaJa hUYIaS"
+              className="sc-AxirZ eHnaPO"
               cx={[Function]}
             />
           </div>
@@ -204,34 +204,14 @@ Array [
       <div />
     </div>
     <div
-      style={
-        Object {
-          "alignItems": "center",
-          "background": "rgba(255,255,255,0.8)",
-          "bottom": 0,
-          "display": "flex",
-          "justifyContent": "center",
-          "left": 0,
-          "position": "absolute",
-          "right": 0,
-          "top": 0,
-        }
-      }
+      className="sc-AxjAm boPAjy"
     >
-      <div
-        style={
-          Object {
-            "textAlign": "center",
-          }
-        }
-      >
-        <p>
-          Loading, please wait...
-        </p>
-        <img
-          src="test-file-stub"
-        />
-      </div>
+      <p>
+        Loading, please wait...
+      </p>
+      <img
+        src="test-file-stub"
+      />
     </div>
   </div>,
 ]

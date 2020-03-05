@@ -53,34 +53,14 @@ Array [
       <div />
     </div>
     <div
-      style={
-        Object {
-          "alignItems": "center",
-          "background": "rgba(255,255,255,0.8)",
-          "bottom": 0,
-          "display": "flex",
-          "justifyContent": "center",
-          "left": 0,
-          "position": "absolute",
-          "right": 0,
-          "top": 0,
-        }
-      }
+      className="sc-AxjAm boPAjy"
     >
-      <div
-        style={
-          Object {
-            "textAlign": "center",
-          }
-        }
-      >
-        <p>
-          Loading, please wait...
-        </p>
-        <img
-          src="test-file-stub"
-        />
-      </div>
+      <p>
+        Loading, please wait...
+      </p>
+      <img
+        src="test-file-stub"
+      />
     </div>
   </div>,
 ]

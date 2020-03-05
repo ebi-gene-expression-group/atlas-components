@@ -1,5 +1,5 @@
 {
-  "name": "@ebi-gene-expression/highcharts-series-generator",
+  "name": "@ebi-gene-expression-group/highcharts-series-generator",
   "version": "1.0.1",
   "description": "Utility package to generate seedable random series for Highcharts scatter plots",
   "main": "lib/index.js",
