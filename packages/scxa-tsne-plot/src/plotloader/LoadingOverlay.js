@@ -3,6 +3,8 @@ import PropTypes from 'prop-types'
 
 import URI from 'urijs'
 
+import flaskLoaderSvg from './svg/flask-loader.svg'
+
 const LoadingOverlay = (props) =>
   <div style={{
     display: props.show ? `flex` : `none`,
@@ -14,7 +16,7 @@ const LoadingOverlay = (props) =>
   }}>
     <div style={{textAlign: `center`}}>
       <p>Loading, please wait...</p>
-      <img src={URI(require(`./svg/flask-loader.svg`), props.resourcesUrl).toString()}/>
+      <img src={URI(flaskLoaderSvg, props.resourcesUrl).toString()}/>
     </div>
   </div>
 
