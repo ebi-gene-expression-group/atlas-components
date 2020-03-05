@@ -1,6 +1,6 @@
 {
   "name": "@ebi-gene-expression-group/atlas-experiment-table",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "This package renders an experiment table with user interaction using Evergreen package",
   "main": "lib/index.js",
   "scripts": {
@@ -72,5 +72,5 @@
     "webpack-cli": "^3.3.11",
     "webpack-dev-server": "^3.10.3"
   },
-  "gitHead": "de0dbcc680bb1ea03c150431e27d57f21f43ce2c"
+  "gitHead": "7e03f78b4db84dbcf8247a040490afe00d57d105"
 }
