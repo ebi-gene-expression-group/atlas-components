@@ -42,10 +42,10 @@
     "evergreen-ui": "^4.23.0",
     "jw-paginate": "^1.0.4",
     "lodash": "^4.17.15",
-    "memoize-one": "^5.1.1",
     "prop-types": "^15.7.2",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
+    "react-router-dom": "^5.1.2",
     "react-tooltip": "^4.0.3",
     "urijs": "^1.19.2"
   },
