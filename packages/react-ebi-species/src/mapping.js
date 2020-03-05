@@ -21,7 +21,7 @@ const mapping = {
     "3": [`kangaroo rat`],
     "r": [`monkey`, `macaca mulatta`],
     "9": [`monodelphis`, `monodelphis domestica`],
-    "q": [`marmoset`],
+    "q": [`marmoset`, `callithrix jacchus`],
     "M": [`mouse`, `mus musculus`],
     "N": [`mouse lemur`],
     "*": [`orangutan`, `pongo abelii`, `pongo pygmaeus`],
