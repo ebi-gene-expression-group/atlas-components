@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LoadingOverlay matches snapshot when hidden 1`] = `
+<LoadingOverlay
+  resourcesUrl=""
+  show={false}
+>
+  <styled.div
+    show={false}
+  >
+    <div
+      className="sc-AxjAm gdhldL"
+    >
+      <p>
+        Loading, please wait...
+      </p>
+      <img
+        src="test-file-stub"
+      />
+    </div>
+  </styled.div>
+</LoadingOverlay>
+`;
+
+exports[`LoadingOverlay matches snapshot when shown 1`] = `
+<LoadingOverlay
+  resourcesUrl=""
+  show={true}
+>
+  <styled.div
+    show={true}
+  >
+    <div
+      className="sc-AxjAm boPAjy"
+    >
+      <p>
+        Loading, please wait...
+      </p>
+      <img
+        src="test-file-stub"
+      />
+    </div>
+  </styled.div>
+</LoadingOverlay>
+`;
