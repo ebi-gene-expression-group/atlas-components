@@ -41,7 +41,7 @@ class Demo extends React.Component {
         <HeatmapView
           wrapperClassName={`row expanded`}
           resource={`json/experiments/${this.state.experimentAccession}/marker-genes/${this.state.selectedK}`}
-          host={`http://localhost:8080/gxa/sc/`}
+          host={`http://ves-hx-76:8080/gxa/sc/`}
           ks={this.state.ks}
           ksWithMarkers={this.state.ksWithMarkers}
           selectedK={this.state.selectedK}

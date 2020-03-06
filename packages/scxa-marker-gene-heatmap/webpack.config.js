@@ -5,7 +5,7 @@ const commonPublicPath = `/dist/`
 
 module.exports = {
   entry: {
-    markerGeneHeatmapDemo: [`babel-polyfill`, `./html/Demo.js`],
+    markerGeneHeatmapDemo: [`@babel/polyfill`, `./html/Demo.js`],
   },
 
   plugins: [
@@ -15,7 +15,8 @@ module.exports = {
   output: {
     library: `[name]`,
     filename: `[name].bundle.js`,
-    publicPath: commonPublicPath
+    publicPath: commonPublicPath,
+    devtoolNamespace: `firefox`
   },
 
   optimization: {

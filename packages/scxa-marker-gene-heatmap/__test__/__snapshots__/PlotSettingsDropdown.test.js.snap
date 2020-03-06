@@ -6,7 +6,7 @@ exports[`PlotSettingsDropdown with no data matches snapshot 1`] = `
   onKeyDown={[Function]}
 >
   <div
-    className=" css-tinoic"
+    className=" css-15r8ym2-Control"
     onMouseDown={[Function]}
     onTouchEnd={[Function]}
   >
@@ -19,7 +19,7 @@ exports[`PlotSettingsDropdown with no data matches snapshot 1`] = `
         Select...
       </div>
       <div
-        className="css-1g6gooi"
+        className="css-b8ldur-Input"
       >
         <div
           className=""
@@ -77,10 +77,10 @@ exports[`PlotSettingsDropdown with no data matches snapshot 1`] = `
       </div>
     </div>
     <div
-      className=" css-1wy0on6"
+      className=" css-1hb7zxy-IndicatorsContainer"
     >
       <span
-        className="sc-bdVaJa kmLRfz"
+        className="sc-AxjAm fUCeMz"
         cx={[Function]}
       />
     </div>
