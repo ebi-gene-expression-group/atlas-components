@@ -12,7 +12,8 @@ module.exports = {
   output: {
     library: `[name]`,
     filename: `[name].bundle.js`,
-    publicPath: commonPublicPath
+    publicPath: commonPublicPath,
+    devtoolNamespace: `firefox`
   },
 
   resolve: {
@@ -48,21 +49,6 @@ module.exports = {
         test: /\.js$/i,
         exclude: /node_modules\//,
         use: `babel-loader`
-      },
-      {
-        test: /\.svg$/i,
-        use: [
-          {
-            loader: `file-loader`,
-            options: {
-              query: {
-                name: `[hash].[ext]`,
-                hash: `sha512`,
-                digest: `hex`
-              }
-            }
-          }
-        ]
       }
     ]
   },
