@@ -1,53 +1,70 @@
 import React from 'react'
+import { shallow, mount } from 'enzyme'
 import renderer from 'react-test-renderer'
-import Enzyme from 'enzyme'
-import {shallow, mount} from 'enzyme'
-import Adapter from 'enzyme-adapter-react-16'
 
-import BioentityProperty from '../src/BioentityProperty'
-import {mockBioentityProperties} from './Utils'
+import randomString from 'random-string'
 
-Enzyme.configure({ adapter: new Adapter() })
+import BioentityProperty, { PropertyValue } from '../src/BioentityProperty'
+
+import { bioentityProperties } from './brca2-bioentity-information.json'
+
 
 describe(`BioentityProperty`, () => {
-  test(`with data matches snapshot`, () => {
-    const bioentityProperty = mockBioentityProperties()[0]
-    const tree = renderer.create(<BioentityProperty type={bioentityProperty.type} name={bioentityProperty.name} values={bioentityProperty.values}/>).toJSON()
+  test(`only shows the 3 most relevant Gene Ontology terms with a button to show more`, () => {
+    const goTerms = bioentityProperties[2]
+    const wrapper = shallow(<BioentityProperty {...goTerms}/>)
 
-    expect(tree).toMatchSnapshot()
+    expect(wrapper.find(PropertyValue)).toHaveLength(3)
+    expect(wrapper.find(`a`)).toHaveProp({ role: `button` })
   })
 
-  test(`showMore button is not shown for other properties except gene ontology`, () => {
-    const bioentityPropertyWithShowMore = mockBioentityProperties()[0]
-    const bioentityPropertyWithoutShowMore = mockBioentityProperties()[1]
+  test(`only shows the 3 most relevant Plant Ontology terms with a button to show more`, () => {
+    const goTerms = bioentityProperties[2]
+    const wrapper = shallow(<BioentityProperty {...goTerms} type={`po`}/>)
 
-    const wrapperWithButton = mount(<BioentityProperty type={bioentityPropertyWithShowMore.type} name={bioentityPropertyWithShowMore.name} values={bioentityPropertyWithShowMore.values}/>)
-    expect(wrapperWithButton.find(`a`).find({role: `button`}).exists()).toBe(true)
-
-    const wrapperWithouButton = mount(<BioentityProperty type={bioentityPropertyWithoutShowMore.type} name={bioentityPropertyWithoutShowMore.name} values={bioentityPropertyWithoutShowMore.values}/>)
-    expect(wrapperWithouButton.find(`a`).find({role: `button`}).exists()).toBe(false)
+    expect(wrapper.find(PropertyValue)).toHaveLength(3)
+    expect(wrapper.find(`a`)).toHaveProp({ role: `button` })
   })
 
-  test(`the number of links increases when showMore is clicked`, () => {
-    const bioentityProperty = mockBioentityProperties()[0]
+  test(`shows all values if they’re not Gene Ontology or Plant Ontology terms`, () => {
+    const goTerms = bioentityProperties[2]
+    const wrapper = shallow(<BioentityProperty {...goTerms} type={randomString()}/>)
 
-    const wrapper = mount(<BioentityProperty type={bioentityProperty.type} name={bioentityProperty.name} values={bioentityProperty.values}/>)
-
-    // Dummy data has more than 3 values so maximum 3 should always be displayed
-    expect(wrapper.find(`.bioEntityCardLink`)).toHaveLength(3)
-
-    // Simulate button click
-    wrapper.find(`a`).find({role: `button`}).simulate('click')
-
-    expect(wrapper.find(`.bioEntityCardLink`)).toHaveLength(bioentityProperty.values.length)
+    expect(wrapper.find(PropertyValue).length).toBeGreaterThan(3)
+    expect(wrapper.find(`a`)).not.toExist()
   })
 
-  test(`properties without URLs are displayed as text`, () => {
-    const bioentityProperty = mockBioentityProperties()[1]
+  test(`shows more/fewer GO and PO terms by clicking on the button to show more/fewer`, () => {
+    const goTerms = bioentityProperties[2]
+    const wrapper = shallow(<BioentityProperty {...goTerms}/>)
 
-    const wrapper = mount(<BioentityProperty type={bioentityProperty.type} name={bioentityProperty.name} values={bioentityProperty.values}/>)
+    expect(wrapper.find(PropertyValue)).toHaveLength(3)
 
-    expect(wrapper.find(`.bioentityCardLink`).exists()).toBe(false)
+    wrapper.find(`a`).simulate(`click`)
+    expect(wrapper.find(PropertyValue).length).toBeGreaterThan(3)
+
+    wrapper.find(`a`).simulate(`click`)
+    expect(wrapper.find(PropertyValue)).toHaveLength(3)
   })
 
+  test(`properties without URLs are displayed as text (i.e. no links)`, () => {
+    const synonyms = bioentityProperties[0]
+    const wrapper = mount(<BioentityProperty {...synonyms}/>)
+
+    expect(wrapper).not.toContainMatchingElement(`a`)
+  })
+
+  test(`properties with URLs contain links`, () => {
+    const orthologs = bioentityProperties[1]
+    const wrapper = mount(<BioentityProperty {...orthologs}/>)
+
+    expect(wrapper).toContainMatchingElement(`a`)
+  })
+
+  test(`matches snapshot`, () => {
+    bioentityProperties.forEach(bioentityProperty => {
+      const tree = renderer.create(<BioentityProperty {...bioentityProperty}/>).toJSON()
+      expect(tree).toMatchSnapshot()
+    })
+  })
 })

@@ -2,79 +2,84 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 
-const PropertyValue = ({hasUrl, isLast, text, url}) =>
-   hasUrl ?
-      <span>
-        <a className={"bioEntityCardLink"} href={url} target="_blank">{text}</a>{!isLast ? `, ` : ``}
-      </span> :
-      <span>
-        {text + (!isLast ? `, ` : ``)}
-      </span>
+const PropertyValue = ({ isLast, text, url }) =>
+  url ?
+    <span>
+      <a
+        href={url}
+        target={`_blank`}>
+        {text}
+      </a>{!isLast ? `, ` : ``}
+    </span> :
+    <span>
+      {text + (!isLast ? `, ` : ``)}
+    </span>
+
+PropertyValue.propTypes = {
+  isLast: PropTypes.bool.isRequired,
+  text: PropTypes.string.isRequired,
+  url: PropTypes.string
+}
 
 const TOP_RELEVANT_VALUES = 3
 
 class BioentityProperty extends React.Component {
-
   constructor(props) {
     super(props)
     this.state = {
       showAll: false
     }
-
-    this.handleShowMoreClick = this.handleClick.bind(this)
-  }
-
-  handleClick() {
-    this.setState(previousState => ({
-      showAll: !previousState.showAll
-    }))
-  }
-
-  // Return three most relevant links
-  _getMostRelevant(properties) {
-    // The properties are sorted in descending order by relevance in the backend
-    return properties.slice(0,TOP_RELEVANT_VALUES)
   }
 
   _renderPropertyValues(values) {
     return values.map((value, index) =>
-      <PropertyValue key={value.text}
-                     isLast={index >= values.length - 1}
-                     hasUrl={!!value.url}
-                     text={value.text} url={value.url}/>
+      <PropertyValue
+        key={value.text}
+        isLast={index >= values.length - 1}
+        text={value.text}
+        url={value.url}/>
     )
   }
 
   render() {
     const numberOfHiddenLinks = this.props.values.length - TOP_RELEVANT_VALUES
-    const hasOptionalLinks = ["go","po"].indexOf(this.props.type) > -1 && numberOfHiddenLinks > 0
+    const hasOptionalLinks = [ `go`, `po` ].includes(this.props.type) && numberOfHiddenLinks > 0
+
     const showMoreLessButton =
-      <a key="showButton"
-         role="button"
-         style={{cursor:`pointer`}}
-         onClick={this.handleShowMoreClick}>
-          {this.state.showAll ? ` (show less)` : ` … and ${numberOfHiddenLinks} more`}
-        </a>
+      <a
+        key={`showButton`}
+        role={`button`}
+        style={{ cursor: `pointer` }}
+        onClick={() => this.setState(previousState => ({ showAll: !previousState.showAll }) )}>
+        {this.state.showAll ? ` (show fewer)` : ` … and ${numberOfHiddenLinks} more`}
+      </a>
 
     const allValuesWithOptionalLinks = this._renderPropertyValues(this.props.values)
-    const topThreeValuesWithOptionalLinks = this._renderPropertyValues(this._getMostRelevant(this.props.values))
+    // Three most relevant links: the properties are sorted in descending order by relevance in the backend
+    const topThreeValuesWithOptionalLinks = this._renderPropertyValues(this.props.values.slice(0, TOP_RELEVANT_VALUES))
 
     return (
       <div>
-        {!hasOptionalLinks && allValuesWithOptionalLinks}
+        {
+          !hasOptionalLinks &&
+          allValuesWithOptionalLinks
+        }
 
-        {(hasOptionalLinks && !this.state.showAll) &&
-        [
-          topThreeValuesWithOptionalLinks,
-          showMoreLessButton
-        ]}
+        {
+          (hasOptionalLinks && !this.state.showAll) &&
+          [
+            topThreeValuesWithOptionalLinks,
+            showMoreLessButton
+          ]
+        }
 
-        {(hasOptionalLinks && this.state.showAll) &&
-        [
-          allValuesWithOptionalLinks,
-          showMoreLessButton
-        ]}
-
+        {
+          (hasOptionalLinks && this.state.showAll) &&
+          [
+            allValuesWithOptionalLinks,
+            showMoreLessButton
+          ]
+        }
       </div>
     )
   }
@@ -89,4 +94,4 @@ BioentityProperty.propTypes = {
   }))
 }
 
-export default BioentityProperty
+export { BioentityProperty as default, PropertyValue }
