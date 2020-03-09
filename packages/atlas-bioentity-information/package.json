@@ -32,6 +32,7 @@
     "url": "git+https://github.com/ebi-gene-expression-group/atlas-components.git"
   },
   "dependencies": {
+    "@ebi-gene-expression-group/atlas-react-fetch-loader": "^3.3.2",
     "prop-types": "^15.7.2",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
@@ -50,7 +51,6 @@
     "fetch-mock": "^8.0.1",
     "file-loader": "^5.0.2",
     "identity-obj-proxy": "^3.0.0",
-    "node-fetch": "^2.6.0",
     "scxa-gene-search-form": "^1.4.1",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.2",

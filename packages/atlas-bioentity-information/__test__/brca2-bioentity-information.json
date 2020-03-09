@@ -1,0 +1,1684 @@
+{
+  "comment": "Pulled from https://www.ebi.ac.uk/gxa/sc/json/bioentity-information/ENSG00000012048",
+  "bioentityProperties": [
+    {
+      "type": "synonym",
+      "name": "Synonym",
+      "values": [
+        {
+          "text": "RNF53",
+          "url": "",
+          "relevance": 0
+        },
+        {
+          "text": "BRCC1",
+          "url": "",
+          "relevance": 0
+        },
+        {
+          "text": "FANCS",
+          "url": "",
+          "relevance": 0
+        },
+        {
+          "text": "PPP1R53",
+          "url": "",
+          "relevance": 0
+        }
+      ]
+    },
+    {
+      "type": "ortholog",
+      "name": "Ortholog",
+      "values": [
+        {
+          "text": "ENSOANG00000029258 (Chlorocebus sabaeus)",
+          "url": "/gxa/genes/ENSOANG00000029258",
+          "relevance": 0
+        },
+        {
+          "text": "BRCA1 (Macaca mulatta)",
+          "url": "/gxa/genes/ENSMMUG00000001329",
+          "relevance": 0
+        },
+        {
+          "text": "BRCA1 (Ovis aries)",
+          "url": "/gxa/genes/ENSOARG00000004835",
+          "relevance": 0
+        },
+        {
+          "text": "BRCA1 (Dasypus novemcinctus)",
+          "url": "/gxa/genes/ENSDNOG00000016069",
+          "relevance": 0
+        },
+        {
+          "text": "BRCA1 (Pongo abelii)",
+          "url": "/gxa/genes/ENSPPYG00000008363",
+          "relevance": 0
+        },
+        {
+          "text": "BRCA1 (Oryctolagus cuniculus)",
+          "url": "/gxa/genes/ENSOCUG00000003883",
+          "relevance": 0
+        },
+        {
+          "text": "F42A6.5 (Caenorhabditis elegans)",
+          "url": "/gxa/genes/WBGene00018327",
+          "relevance": 0
+        },
+        {
+          "text": "ENSCSAVG00000006382 (Ciona savignyi)",
+          "url": "/gxa/genes/ENSCSAVG00000006382",
+          "relevance": 0
+        },
+        {
+          "text": "Brca1 (Rattus norvegicus)",
+          "url": "/gxa/genes/ENSRNOG00000020701",
+          "relevance": 0
+        },
+        {
+          "text": "ENSCSAG00000003399 (Chlorocebus sabaeus)",
+          "url": "/gxa/genes/ENSCSAG00000003399",
+          "relevance": 0
+        },
+        {
+          "text": "Brca1 (Mus musculus)",
+          "url": "/gxa/genes/ENSMUSG00000017146",
+          "relevance": 0
+        },
+        {
+          "text": "BRCA1 (Gallus gallus)",
+          "url": "/gxa/genes/ENSGALG00000002781",
+          "relevance": 0
+        },
+        {
+          "text": "ENSACAG00000013415 (Anolis carolinensis)",
+          "url": "/gxa/genes/ENSACAG00000013415",
+          "relevance": 0
+        },
+        {
+          "text": "ENSOANG00000028571 (Homo sapiens)",
+          "url": "/gxa/genes/ENSOANG00000028571",
+          "relevance": 0
+        },
+        {
+          "text": "BRCA1 (Gorilla gorilla)",
+          "url": "/gxa/genes/ENSGGOG00000009827",
+          "relevance": 0
+        },
+        {
+          "text": "BRCA1 (Equus caballus)",
+          "url": "/gxa/genes/ENSECAG00000016974",
+          "relevance": 0
+        },
+        {
+          "text": "BRCA1 (Papio anubis)",
+          "url": "/gxa/genes/ENSPANG00000021372",
+          "relevance": 0
+        },
+        {
+          "text": "BRCA1 (Canis familiaris)",
+          "url": "/gxa/genes/ENSCAFG00000014600",
+          "relevance": 0
+        },
+        {
+          "text": "BRCA1 (Monodelphis domestica)",
+          "url": "/gxa/genes/ENSMODG00000015150",
+          "relevance": 0
+        },
+        {
+          "text": "BRCA1 (Bos taurus)",
+          "url": "/gxa/genes/ENSBTAG00000022520",
+          "relevance": 0
+        },
+        {
+          "text": "ENSTNIG00000010246 (Tetraodon nigroviridis)",
+          "url": "/gxa/genes/ENSTNIG00000010246",
+          "relevance": 0
+        },
+        {
+          "text": "BRCA1 (Pan troglodytes)",
+          "url": "/gxa/genes/ENSPTRG00000009236",
+          "relevance": 0
+        },
+        {
+          "text": "BRCA1 (Anas platyrhynchos)",
+          "url": "/gxa/genes/ENSAPLG00000003524",
+          "relevance": 0
+        },
+        {
+          "text": "ENSCSAVG00000006376 (Ciona savignyi)",
+          "url": "/gxa/genes/ENSCSAVG00000006376",
+          "relevance": 0
+        },
+        {
+          "text": "ENSCING00000021698 (Ciona intestinalis)",
+          "url": "/gxa/genes/ENSCING00000021698",
+          "relevance": 0
+        },
+        {
+          "text": "lrrc18 (Xenopus tropicalis)",
+          "url": "/gxa/genes/ENSXETG00000007146",
+          "relevance": 0
+        },
+        {
+          "text": "BRCA1 (Sus scrofa)",
+          "url": "/gxa/genes/ENSSSCG00000022101",
+          "relevance": 0
+        }
+      ]
+    },
+    {
+      "type": "go",
+      "name": "Gene ontology",
+      "values": [
+        {
+          "text": "positive regulation of protein ubiquitination",
+          "url": "https://www.ebi.ac.uk/ols/ontologies/go/terms?iri=http://purl.obolibrary.org/obo/GO_0031398",
+          "relevance": 10
+        },
+        {
+          "text": "positive regulation of histone H3-K9 methylation",
+          "url": "https://www.ebi.ac.uk/ols/ontologies/go/terms?iri=http://purl.obolibrary.org/obo/GO_0051574",
+          "relevance": 10
+        },
+        {
+          "text": "negative regulation of histone H3-K4 methylation",
+          "url": "https://www.ebi.ac.uk/ols/ontologies/go/terms?iri=http://purl.obolibrary.org/obo/GO_0051572",
+          "relevance": 10
+        },
+        {
+          "text": "negative regulation of histone H3-K9 methylation",
+          "url": "https://www.ebi.ac.uk/ols/ontologies/go/terms?iri=http://purl.obolibrary.org/obo/GO_0051573",
+          "relevance": 10
+        },
+        {
+          "text": "positive regulation of histone H3-K4 methylation",
+          "url": "https://www.ebi.ac.uk/ols/ontologies/go/terms?iri=http://purl.obolibrary.org/obo/GO_0051571",
+          "relevance": 10
+        },
+        {
+          "text": "positive regulation of histone H4-K20 methylation",
+          "url": "https://www.ebi.ac.uk/ols/ontologies/go/terms?iri=http://purl.obolibrary.org/obo/GO_0070512",
+          "relevance": 10
+        },
+        {
+          "text": "positive regulation of histone acetylation",
+          "url": "https://www.ebi.ac.uk/ols/ontologies/go/terms?iri=http://purl.obolibrary.org/obo/GO_0035066",
+          "relevance": 10
+        },
+        {
+          "text": "negative regulation of histone acetylation",
+          "url": "https://www.ebi.ac.uk/ols/ontologies/go/terms?iri=http://purl.obolibrary.org/obo/GO_0035067",
+          "relevance": 10
+        },
+        {
+          "text": "positive regulation of histone H3-K9 acetylation",
+          "url": "https://www.ebi.ac.uk/ols/ontologies/go/terms?iri=http://purl.obolibrary.org/obo/GO_2000617",
+          "relevance": 10
+        },
+        {
+          "text": "protein autoubiquitination",
+          "url": "https://www.ebi.ac.uk/ols/ontologies/go/terms?iri=http://purl.obolibrary.org/obo/GO_0051865",
+          "relevance": 10
+        },
+        {
+          "text": "positive regulation of histone H4-K16 acetylation",
+          "url": "https://www.ebi.ac.uk/ols/ontologies/go/terms?iri=http://purl.obolibrary.org/obo/GO_2000620",
+          "relevance": 10
+        },
+        {
+          "text": "protein K6-linked ubiquitination",
+          "url": "https://www.ebi.ac.uk/ols/ontologies/go/terms?iri=http://purl.obolibrary.org/obo/GO_0085020",
+          "relevance": 10
+        },
+        {
+          "text": "negative regulation of extrinsic apoptotic signaling pathway via death domain receptors",
+          "url": "https://www.ebi.ac.uk/ols/ontologies/go/terms?iri=http://purl.obolibrary.org/obo/GO_1902042",
+          "relevance": 9
+        },
+        {
+          "text": "dosage compensation by inactivation of X chromosome",
+          "url": "https://www.ebi.ac.uk/ols/ontologies/go/terms?iri=http://purl.obolibrary.org/obo/GO_0009048",
+          "relevance": 9
+        },
+        {
+          "text": "protein ubiquitination",
+          "url": "https://www.ebi.ac.uk/ols/ontologies/go/terms?iri=http://purl.obolibrary.org/obo/GO_0016567",
+          "relevance": 9
+        },
+        {
+          "text": "positive regulation of transcription by RNA polymerase II",
+          "url": "https://www.ebi.ac.uk/ols/ontologies/go/terms?iri=http://purl.obolibrary.org/obo/GO_0045944",
+          "relevance": 9
+        },
+        {
+          "text": "negative regulation of transcription, DNA-templated",
+          "url": "https://www.ebi.ac.uk/ols/ontologies/go/terms?iri=http://purl.obolibrary.org/obo/GO_0045892",
+          "relevance": 8
+        },
+        {
+          "text": "positive regulation of transcription, DNA-templated",
+          "url": "https://www.ebi.ac.uk/ols/ontologies/go/terms?iri=http://purl.obolibrary.org/obo/GO_0045893",
+          "relevance": 8
+        },
+        {
+          "text": "signal transduction involved in G2 DNA damage checkpoint",
+          "url": "https://www.ebi.ac.uk/ols/ontologies/go/terms?iri=http://purl.obolibrary.org/obo/GO_0072425",
+          "relevance": 8
+        },
+        {
+          "text": "negative regulation of G0 to G1 transition",
+          "url": "https://www.ebi.ac.uk/ols/ontologies/go/terms?iri=http://purl.obolibrary.org/obo/GO_0070317",
+          "relevance": 8
+        },
+        {
+          "text": "mitotic G2/M transition checkpoint",
+          "url": "https://www.ebi.ac.uk/ols/ontologies/go/terms?iri=http://purl.obolibrary.org/obo/GO_0044818",
+          "relevance": 8
+        },
+        {
+          "text": "double-strand break repair via nonhomologous end joining",
+          "url": "https://www.ebi.ac.uk/ols/ontologies/go/terms?iri=http://purl.obolibrary.org/obo/GO_0006303",
+          "relevance": 8
+        },
+        {
+          "text": "DNA damage response, signal transduction by p53 class mediator resulting in transcription of p21 class mediator",
+          "url": "https://www.ebi.ac.uk/ols/ontologies/go/terms?iri=http://purl.obolibrary.org/obo/GO_0006978",
+          "relevance": 8
+        },
+        {
+          "text": "positive regulation of cell cycle arrest",
+          "url": "https://www.ebi.ac.uk/ols/ontologies/go/terms?iri=http://purl.obolibrary.org/obo/GO_0071158",
+          "relevance": 8
+        },
+        {
+          "text": "protein deubiquitination",
+          "url": "https://www.ebi.ac.uk/ols/ontologies/go/terms?iri=http://purl.obolibrary.org/obo/GO_0016579",
+          "relevance": 8
+        },
+        {
+          "text": "negative regulation of fatty acid biosynthetic process",
+          "url": "https://www.ebi.ac.uk/ols/ontologies/go/terms?iri=http://purl.obolibrary.org/obo/GO_0045717",
+          "relevance": 8
+        },
+        {
+          "text": "double-strand break repair via homologous recombination",
+          "url": "https://www.ebi.ac.uk/ols/ontologies/go/terms?iri=http://purl.obolibrary.org/obo/GO_0000724",
+          "relevance": 8
+        },
+        {
+          "text": "regulation of transcription by RNA polymerase III",
+          "url": "https://www.ebi.ac.uk/ols/ontologies/go/terms?iri=http://purl.obolibrary.org/obo/GO_0006359",
+          "relevance": 8
+        },
+        {
+          "text": "regulation of transcription by RNA polymerase II",
+          "url": "https://www.ebi.ac.uk/ols/ontologies/go/terms?iri=http://purl.obolibrary.org/obo/GO_0006357",
+          "relevance": 8
+        },
+        {
+          "text": "negative regulation of intracellular estrogen receptor signaling pathway",
+          "url": "https://www.ebi.ac.uk/ols/ontologies/go/terms?iri=http://purl.obolibrary.org/obo/GO_0033147",
+          "relevance": 8
+        },
+        {
+          "text": "positive regulation of angiogenesis",
+          "url": "https://www.ebi.ac.uk/ols/ontologies/go/terms?iri=http://purl.obolibrary.org/obo/GO_0045766",
+          "relevance": 7
+        },
+        {
+          "text": "positive regulation of vascular endothelial growth factor production",
+          "url": "https://www.ebi.ac.uk/ols/ontologies/go/terms?iri=http://purl.obolibrary.org/obo/GO_0010575",
+          "relevance": 7
+        },
+        {
+          "text": "positive regulation of DNA repair",
+          "url": "https://www.ebi.ac.uk/ols/ontologies/go/terms?iri=http://purl.obolibrary.org/obo/GO_0045739",
+          "relevance": 7
+        },
+        {
+          "text": "zinc ion binding",
+          "url": "https://www.ebi.ac.uk/ols/ontologies/go/terms?iri=http://purl.obolibrary.org/obo/GO_0008270",
+          "relevance": 7
+        },
+        {
+          "text": "gamma-tubulin ring complex",
+          "url": "https://www.ebi.ac.uk/ols/ontologies/go/terms?iri=http://purl.obolibrary.org/obo/GO_0008274",
+          "relevance": 7
+        },
+        {
+          "text": "regulation of signal transduction by p53 class mediator",
+          "url": "https://www.ebi.ac.uk/ols/ontologies/go/terms?iri=http://purl.obolibrary.org/obo/GO_1901796",
+          "relevance": 7
+        },
+        {
+          "text": "intrinsic apoptotic signaling pathway in response to DNA damage",
+          "url": "https://www.ebi.ac.uk/ols/ontologies/go/terms?iri=http://purl.obolibrary.org/obo/GO_0008630",
+          "relevance": 7
+        },
+        {
+          "text": "regulation of apoptotic process",
+          "url": "https://www.ebi.ac.uk/ols/ontologies/go/terms?iri=http://purl.obolibrary.org/obo/GO_0042981",
+          "relevance": 7
+        },
+        {
+          "text": "androgen receptor binding",
+          "url": "https://www.ebi.ac.uk/ols/ontologies/go/terms?iri=http://purl.obolibrary.org/obo/GO_0050681",
+          "relevance": 7
+        },
+        {
+          "text": "positive regulation of gene expression",
+          "url": "https://www.ebi.ac.uk/ols/ontologies/go/terms?iri=http://purl.obolibrary.org/obo/GO_0010628",
+          "relevance": 7
+        },
+        {
+          "text": "postreplication repair",
+          "url": "https://www.ebi.ac.uk/ols/ontologies/go/terms?iri=http://purl.obolibrary.org/obo/GO_0006301",
+          "relevance": 7
+        },
+        {
+          "text": "double-strand break repair",
+          "url": "https://www.ebi.ac.uk/ols/ontologies/go/terms?iri=http://purl.obolibrary.org/obo/GO_0006302",
+          "relevance": 7
+        },
+        {
+          "text": "cellular response to tumor necrosis factor",
+          "url": "https://www.ebi.ac.uk/ols/ontologies/go/terms?iri=http://purl.obolibrary.org/obo/GO_0071356",
+          "relevance": 7
+        },
+        {
+          "text": "androgen receptor signaling pathway",
+          "url": "https://www.ebi.ac.uk/ols/ontologies/go/terms?iri=http://purl.obolibrary.org/obo/GO_0030521",
+          "relevance": 7
+        },
+        {
+          "text": "negative regulation of reactive oxygen species metabolic process",
+          "url": "https://www.ebi.ac.uk/ols/ontologies/go/terms?iri=http://purl.obolibrary.org/obo/GO_2000378",
+          "relevance": 7
+        },
+        {
+          "text": "negative regulation of centriole replication",
+          "url": "https://www.ebi.ac.uk/ols/ontologies/go/terms?iri=http://purl.obolibrary.org/obo/GO_0046600",
+          "relevance": 7
+        },
+        {
+          "text": "regulation of DNA methylation",
+          "url": "https://www.ebi.ac.uk/ols/ontologies/go/terms?iri=http://purl.obolibrary.org/obo/GO_0044030",
+          "relevance": 7
+        },
+        {
+          "text": "DNA repair",
+          "url": "https://www.ebi.ac.uk/ols/ontologies/go/terms?iri=http://purl.obolibrary.org/obo/GO_0006281",
+          "relevance": 6
+        },
+        {
+          "text": "BRCA1-BARD1 complex",
+          "url": "https://www.ebi.ac.uk/ols/ontologies/go/terms?iri=http://purl.obolibrary.org/obo/GO_0031436",
+          "relevance": 6
+        },
+        {
+          "text": "condensed chromosome",
+          "url": "https://www.ebi.ac.uk/ols/ontologies/go/terms?iri=http://purl.obolibrary.org/obo/GO_0000793",
+          "relevance": 6
+        },
+        {
+          "text": "cellular response to indole-3-methanol",
+          "url": "https://www.ebi.ac.uk/ols/ontologies/go/terms?iri=http://purl.obolibrary.org/obo/GO_0071681",
+          "relevance": 6
+        },
+        {
+          "text": "ubiquitin protein ligase binding",
+          "url": "https://www.ebi.ac.uk/ols/ontologies/go/terms?iri=http://purl.obolibrary.org/obo/GO_0031625",
+          "relevance": 6
+        },
+        {
+          "text": "chordate embryonic development",
+          "url": "https://www.ebi.ac.uk/ols/ontologies/go/terms?iri=http://purl.obolibrary.org/obo/GO_0043009",
+          "relevance": 6
+        },
+        {
+          "text": "DNA replication",
+          "url": "https://www.ebi.ac.uk/ols/ontologies/go/terms?iri=http://purl.obolibrary.org/obo/GO_0006260",
+          "relevance": 6
+        },
+        {
+          "text": "transcription regulatory region DNA binding",
+          "url": "https://www.ebi.ac.uk/ols/ontologies/go/terms?iri=http://purl.obolibrary.org/obo/GO_0044212",
+          "relevance": 6
+        },
+        {
+          "text": "condensed nuclear chromosome",
+          "url": "https://www.ebi.ac.uk/ols/ontologies/go/terms?iri=http://purl.obolibrary.org/obo/GO_0000794",
+          "relevance": 6
+        },
+        {
+          "text": "DNA double-strand break processing",
+          "url": "https://www.ebi.ac.uk/ols/ontologies/go/terms?iri=http://purl.obolibrary.org/obo/GO_0000729",
+          "relevance": 6
+        },
+        {
+          "text": "DNA recombination",
+          "url": "https://www.ebi.ac.uk/ols/ontologies/go/terms?iri=http://purl.obolibrary.org/obo/GO_0006310",
+          "relevance": 6
+        },
+        {
+          "text": "lateral element",
+          "url": "https://www.ebi.ac.uk/ols/ontologies/go/terms?iri=http://purl.obolibrary.org/obo/GO_0000800",
+          "relevance": 6
+        },
+        {
+          "text": "fatty acid biosynthetic process",
+          "url": "https://www.ebi.ac.uk/ols/ontologies/go/terms?iri=http://purl.obolibrary.org/obo/GO_0006633",
+          "relevance": 6
+        },
+        {
+          "text": "damaged DNA binding",
+          "url": "https://www.ebi.ac.uk/ols/ontologies/go/terms?iri=http://purl.obolibrary.org/obo/GO_0003684",
+          "relevance": 6
+        },
+        {
+          "text": "fatty acid metabolic process",
+          "url": "https://www.ebi.ac.uk/ols/ontologies/go/terms?iri=http://purl.obolibrary.org/obo/GO_0006631",
+          "relevance": 6
+        },
+        {
+          "text": "regulation of gene expression by genetic imprinting",
+          "url": "https://www.ebi.ac.uk/ols/ontologies/go/terms?iri=http://purl.obolibrary.org/obo/GO_0006349",
+          "relevance": 6
+        },
+        {
+          "text": "tubulin binding",
+          "url": "https://www.ebi.ac.uk/ols/ontologies/go/terms?iri=http://purl.obolibrary.org/obo/GO_0015631",
+          "relevance": 5
+        },
+        {
+          "text": "RNA binding",
+          "url": "https://www.ebi.ac.uk/ols/ontologies/go/terms?iri=http://purl.obolibrary.org/obo/GO_0003723",
+          "relevance": 5
+        },
+        {
+          "text": "apoptotic process",
+          "url": "https://www.ebi.ac.uk/ols/ontologies/go/terms?iri=http://purl.obolibrary.org/obo/GO_0006915",
+          "relevance": 5
+        },
+        {
+          "text": "response to ionizing radiation",
+          "url": "https://www.ebi.ac.uk/ols/ontologies/go/terms?iri=http://purl.obolibrary.org/obo/GO_0010212",
+          "relevance": 5
+        },
+        {
+          "text": "cellular response to DNA damage stimulus",
+          "url": "https://www.ebi.ac.uk/ols/ontologies/go/terms?iri=http://purl.obolibrary.org/obo/GO_0006974",
+          "relevance": 5
+        },
+        {
+          "text": "nucleus",
+          "url": "https://www.ebi.ac.uk/ols/ontologies/go/terms?iri=http://purl.obolibrary.org/obo/GO_0005634",
+          "relevance": 5
+        },
+        {
+          "text": "metal ion binding",
+          "url": "https://www.ebi.ac.uk/ols/ontologies/go/terms?iri=http://purl.obolibrary.org/obo/GO_0046872",
+          "relevance": 5
+        },
+        {
+          "text": "chromosome",
+          "url": "https://www.ebi.ac.uk/ols/ontologies/go/terms?iri=http://purl.obolibrary.org/obo/GO_0005694",
+          "relevance": 5
+        },
+        {
+          "text": "nucleoplasm",
+          "url": "https://www.ebi.ac.uk/ols/ontologies/go/terms?iri=http://purl.obolibrary.org/obo/GO_0005654",
+          "relevance": 5
+        },
+        {
+          "text": "RNA polymerase binding",
+          "url": "https://www.ebi.ac.uk/ols/ontologies/go/terms?iri=http://purl.obolibrary.org/obo/GO_0070063",
+          "relevance": 5
+        },
+        {
+          "text": "regulation of cell proliferation",
+          "url": "https://www.ebi.ac.uk/ols/ontologies/go/terms?iri=http://purl.obolibrary.org/obo/GO_0042127",
+          "relevance": 5
+        },
+        {
+          "text": "DNA binding",
+          "url": "https://www.ebi.ac.uk/ols/ontologies/go/terms?iri=http://purl.obolibrary.org/obo/GO_0003677",
+          "relevance": 5
+        },
+        {
+          "text": "ubiquitin-protein transferase activity",
+          "url": "https://www.ebi.ac.uk/ols/ontologies/go/terms?iri=http://purl.obolibrary.org/obo/GO_0004842",
+          "relevance": 5
+        },
+        {
+          "text": "BRCA1-A complex",
+          "url": "https://www.ebi.ac.uk/ols/ontologies/go/terms?iri=http://purl.obolibrary.org/obo/GO_0070531",
+          "relevance": 5
+        },
+        {
+          "text": "centrosome cycle",
+          "url": "https://www.ebi.ac.uk/ols/ontologies/go/terms?iri=http://purl.obolibrary.org/obo/GO_0007098",
+          "relevance": 4
+        },
+        {
+          "text": "ubiquitin ligase complex",
+          "url": "https://www.ebi.ac.uk/ols/ontologies/go/terms?iri=http://purl.obolibrary.org/obo/GO_0000151",
+          "relevance": 4
+        },
+        {
+          "text": "identical protein binding",
+          "url": "https://www.ebi.ac.uk/ols/ontologies/go/terms?iri=http://purl.obolibrary.org/obo/GO_0042802",
+          "relevance": 4
+        },
+        {
+          "text": "transcription coactivator activity",
+          "url": "https://www.ebi.ac.uk/ols/ontologies/go/terms?iri=http://purl.obolibrary.org/obo/GO_0003713",
+          "relevance": 4
+        },
+        {
+          "text": "cytoplasm",
+          "url": "https://www.ebi.ac.uk/ols/ontologies/go/terms?iri=http://purl.obolibrary.org/obo/GO_0005737",
+          "relevance": 4
+        },
+        {
+          "text": "lipid metabolic process",
+          "url": "https://www.ebi.ac.uk/ols/ontologies/go/terms?iri=http://purl.obolibrary.org/obo/GO_0006629",
+          "relevance": 4
+        },
+        {
+          "text": "integral component of membrane",
+          "url": "https://www.ebi.ac.uk/ols/ontologies/go/terms?iri=http://purl.obolibrary.org/obo/GO_0016021",
+          "relevance": 4
+        },
+        {
+          "text": "enzyme binding",
+          "url": "https://www.ebi.ac.uk/ols/ontologies/go/terms?iri=http://purl.obolibrary.org/obo/GO_0019899",
+          "relevance": 4
+        },
+        {
+          "text": "response to estrogen",
+          "url": "https://www.ebi.ac.uk/ols/ontologies/go/terms?iri=http://purl.obolibrary.org/obo/GO_0043627",
+          "relevance": 3
+        },
+        {
+          "text": "chromosome segregation",
+          "url": "https://www.ebi.ac.uk/ols/ontologies/go/terms?iri=http://purl.obolibrary.org/obo/GO_0007059",
+          "relevance": 3
+        },
+        {
+          "text": "plasma membrane",
+          "url": "https://www.ebi.ac.uk/ols/ontologies/go/terms?iri=http://purl.obolibrary.org/obo/GO_0005886",
+          "relevance": 3
+        },
+        {
+          "text": "protein binding",
+          "url": "https://www.ebi.ac.uk/ols/ontologies/go/terms?iri=http://purl.obolibrary.org/obo/GO_0005515",
+          "relevance": 3
+        },
+        {
+          "text": "ribonucleoprotein complex",
+          "url": "https://www.ebi.ac.uk/ols/ontologies/go/terms?iri=http://purl.obolibrary.org/obo/GO_1990904",
+          "relevance": 3
+        },
+        {
+          "text": "cell cycle",
+          "url": "https://www.ebi.ac.uk/ols/ontologies/go/terms?iri=http://purl.obolibrary.org/obo/GO_0007049",
+          "relevance": 3
+        },
+        {
+          "text": "transferase activity",
+          "url": "https://www.ebi.ac.uk/ols/ontologies/go/terms?iri=http://purl.obolibrary.org/obo/GO_0016740",
+          "relevance": 3
+        },
+        {
+          "text": "protein-containing complex",
+          "url": "https://www.ebi.ac.uk/ols/ontologies/go/terms?iri=http://purl.obolibrary.org/obo/GO_0032991",
+          "relevance": 2
+        },
+        {
+          "text": "membrane",
+          "url": "https://www.ebi.ac.uk/ols/ontologies/go/terms?iri=http://purl.obolibrary.org/obo/GO_0016020",
+          "relevance": 2
+        }
+      ]
+    },
+    {
+      "type": "interpro",
+      "name": "InterPro",
+      "values": [
+        {
+          "text": "Zinc finger, RING-type, conserved site (conserved_site)",
+          "url": "https://www.ebi.ac.uk/interpro/entry/IPR017907",
+          "relevance": 0
+        },
+        {
+          "text": "RING-type zinc-finger, LisH dimerisation motif (domain)",
+          "url": "https://www.ebi.ac.uk/interpro/entry/IPR027370",
+          "relevance": 0
+        },
+        {
+          "text": "BRCA1-associated (family)",
+          "url": "https://www.ebi.ac.uk/interpro/entry/IPR031099",
+          "relevance": 0
+        },
+        {
+          "text": "Zinc finger, RING/FYVE/PHD-type (domain)",
+          "url": "https://www.ebi.ac.uk/interpro/entry/IPR013083",
+          "relevance": 0
+        },
+        {
+          "text": "Zinc finger, C3HC4 RING-type (domain)",
+          "url": "https://www.ebi.ac.uk/interpro/entry/IPR018957",
+          "relevance": 0
+        },
+        {
+          "text": "Zinc finger, RING-type (domain)",
+          "url": "https://www.ebi.ac.uk/interpro/entry/IPR001841",
+          "relevance": 0
+        },
+        {
+          "text": "BRCT domain (domain)",
+          "url": "https://www.ebi.ac.uk/interpro/entry/IPR001357",
+          "relevance": 0
+        },
+        {
+          "text": "IPR036420",
+          "url": "https://www.ebi.ac.uk/interpro/entry/IPR036420",
+          "relevance": 0
+        },
+        {
+          "text": "BRCA1, serine-rich domain (domain)",
+          "url": "https://www.ebi.ac.uk/interpro/entry/IPR025994",
+          "relevance": 0
+        },
+        {
+          "text": "Breast cancer type 1 susceptibility protein (BRCA1) (family)",
+          "url": "https://www.ebi.ac.uk/interpro/entry/IPR011364",
+          "relevance": 0
+        }
+      ]
+    },
+    {
+      "type": "ensfamily_description",
+      "name": "Ensembl family",
+      "values": [
+        {
+          "text": "BREAST CANCER TYPE 1 SUSCEPTIBILITY HOMOLOG EC_2.3.2.27 RING TYPE E3 UBIQUITIN TRANSFERASE BRCA1",
+          "url": "https://www.ensembl.org/Homo_sapiens/Gene/Family?g=ENSG00000012048",
+          "relevance": 0
+        }
+      ]
+    },
+    {
+      "type": "ensgene",
+      "name": "Ensembl gene",
+      "values": [
+        {
+          "text": "ENSG00000012048",
+          "url": "https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000012048",
+          "relevance": 0
+        }
+      ]
+    },
+    {
+      "type": "enstranscript",
+      "name": "Ensembl transcript",
+      "values": [
+        {
+          "text": "ENST00000491747",
+          "url": "https://www.ensembl.org/Homo_sapiens/Transcript/Summary?t=ENST00000491747",
+          "relevance": 0
+        },
+        {
+          "text": "ENST00000652672",
+          "url": "https://www.ensembl.org/Homo_sapiens/Transcript/Summary?t=ENST00000652672",
+          "relevance": 0
+        },
+        {
+          "text": "ENST00000492859",
+          "url": "https://www.ensembl.org/Homo_sapiens/Transcript/Summary?t=ENST00000492859",
+          "relevance": 0
+        },
+        {
+          "text": "ENST00000487825",
+          "url": "https://www.ensembl.org/Homo_sapiens/Transcript/Summary?t=ENST00000487825",
+          "relevance": 0
+        },
+        {
+          "text": "ENST00000468300",
+          "url": "https://www.ensembl.org/Homo_sapiens/Transcript/Summary?t=ENST00000468300",
+          "relevance": 0
+        },
+        {
+          "text": "ENST00000591534",
+          "url": "https://www.ensembl.org/Homo_sapiens/Transcript/Summary?t=ENST00000591534",
+          "relevance": 0
+        },
+        {
+          "text": "ENST00000461798",
+          "url": "https://www.ensembl.org/Homo_sapiens/Transcript/Summary?t=ENST00000461798",
+          "relevance": 0
+        },
+        {
+          "text": "ENST00000352993",
+          "url": "https://www.ensembl.org/Homo_sapiens/Transcript/Summary?t=ENST00000352993",
+          "relevance": 0
+        },
+        {
+          "text": "ENST00000461574",
+          "url": "https://www.ensembl.org/Homo_sapiens/Transcript/Summary?t=ENST00000461574",
+          "relevance": 0
+        },
+        {
+          "text": "ENST00000470026",
+          "url": "https://www.ensembl.org/Homo_sapiens/Transcript/Summary?t=ENST00000470026",
+          "relevance": 0
+        },
+        {
+          "text": "ENST00000477152",
+          "url": "https://www.ensembl.org/Homo_sapiens/Transcript/Summary?t=ENST00000477152",
+          "relevance": 0
+        },
+        {
+          "text": "ENST00000642945",
+          "url": "https://www.ensembl.org/Homo_sapiens/Transcript/Summary?t=ENST00000642945",
+          "relevance": 0
+        },
+        {
+          "text": "ENST00000497488",
+          "url": "https://www.ensembl.org/Homo_sapiens/Transcript/Summary?t=ENST00000497488",
+          "relevance": 0
+        },
+        {
+          "text": "ENST00000484087",
+          "url": "https://www.ensembl.org/Homo_sapiens/Transcript/Summary?t=ENST00000484087",
+          "relevance": 0
+        },
+        {
+          "text": "ENST00000357654",
+          "url": "https://www.ensembl.org/Homo_sapiens/Transcript/Summary?t=ENST00000357654",
+          "relevance": 0
+        },
+        {
+          "text": "ENST00000489037",
+          "url": "https://www.ensembl.org/Homo_sapiens/Transcript/Summary?t=ENST00000489037",
+          "relevance": 0
+        },
+        {
+          "text": "ENST00000493919",
+          "url": "https://www.ensembl.org/Homo_sapiens/Transcript/Summary?t=ENST00000493919",
+          "relevance": 0
+        },
+        {
+          "text": "ENST00000634433",
+          "url": "https://www.ensembl.org/Homo_sapiens/Transcript/Summary?t=ENST00000634433",
+          "relevance": 0
+        },
+        {
+          "text": "ENST00000618469",
+          "url": "https://www.ensembl.org/Homo_sapiens/Transcript/Summary?t=ENST00000618469",
+          "relevance": 0
+        },
+        {
+          "text": "ENST00000461221",
+          "url": "https://www.ensembl.org/Homo_sapiens/Transcript/Summary?t=ENST00000461221",
+          "relevance": 0
+        },
+        {
+          "text": "ENST00000591849",
+          "url": "https://www.ensembl.org/Homo_sapiens/Transcript/Summary?t=ENST00000591849",
+          "relevance": 0
+        },
+        {
+          "text": "ENST00000644555",
+          "url": "https://www.ensembl.org/Homo_sapiens/Transcript/Summary?t=ENST00000644555",
+          "relevance": 0
+        },
+        {
+          "text": "ENST00000644379",
+          "url": "https://www.ensembl.org/Homo_sapiens/Transcript/Summary?t=ENST00000644379",
+          "relevance": 0
+        },
+        {
+          "text": "ENST00000472490",
+          "url": "https://www.ensembl.org/Homo_sapiens/Transcript/Summary?t=ENST00000472490",
+          "relevance": 0
+        },
+        {
+          "text": "ENST00000471181",
+          "url": "https://www.ensembl.org/Homo_sapiens/Transcript/Summary?t=ENST00000471181",
+          "relevance": 0
+        },
+        {
+          "text": "ENST00000493795",
+          "url": "https://www.ensembl.org/Homo_sapiens/Transcript/Summary?t=ENST00000493795",
+          "relevance": 0
+        },
+        {
+          "text": "ENST00000586385",
+          "url": "https://www.ensembl.org/Homo_sapiens/Transcript/Summary?t=ENST00000586385",
+          "relevance": 0
+        },
+        {
+          "text": "ENST00000494123",
+          "url": "https://www.ensembl.org/Homo_sapiens/Transcript/Summary?t=ENST00000494123",
+          "relevance": 0
+        },
+        {
+          "text": "ENST00000354071",
+          "url": "https://www.ensembl.org/Homo_sapiens/Transcript/Summary?t=ENST00000354071",
+          "relevance": 0
+        },
+        {
+          "text": "ENST00000473961",
+          "url": "https://www.ensembl.org/Homo_sapiens/Transcript/Summary?t=ENST00000473961",
+          "relevance": 0
+        },
+        {
+          "text": "ENST00000478531",
+          "url": "https://www.ensembl.org/Homo_sapiens/Transcript/Summary?t=ENST00000478531",
+          "relevance": 0
+        },
+        {
+          "text": "ENST00000412061",
+          "url": "https://www.ensembl.org/Homo_sapiens/Transcript/Summary?t=ENST00000412061",
+          "relevance": 0
+        },
+        {
+          "text": "ENST00000476777",
+          "url": "https://www.ensembl.org/Homo_sapiens/Transcript/Summary?t=ENST00000476777",
+          "relevance": 0
+        },
+        {
+          "text": "ENST00000621897",
+          "url": "https://www.ensembl.org/Homo_sapiens/Transcript/Summary?t=ENST00000621897",
+          "relevance": 0
+        }
+      ]
+    },
+    {
+      "type": "ensprotein",
+      "name": "Ensembl protein",
+      "values": [
+        {
+          "text": "ENSP00000420781",
+          "url": "https://www.ensembl.org/Homo_sapiens/Transcript/ProteinSummary?t=ENSP00000420781",
+          "relevance": 0
+        },
+        {
+          "text": "ENSP00000420201",
+          "url": "https://www.ensembl.org/Homo_sapiens/Transcript/ProteinSummary?t=ENSP00000420201",
+          "relevance": 0
+        },
+        {
+          "text": "ENSP00000419274",
+          "url": "https://www.ensembl.org/Homo_sapiens/Transcript/ProteinSummary?t=ENSP00000419274",
+          "relevance": 0
+        },
+        {
+          "text": "ENSP00000496570",
+          "url": "https://www.ensembl.org/Homo_sapiens/Transcript/ProteinSummary?t=ENSP00000496570",
+          "relevance": 0
+        },
+        {
+          "text": "ENSP00000312236",
+          "url": "https://www.ensembl.org/Homo_sapiens/Transcript/ProteinSummary?t=ENSP00000312236",
+          "relevance": 0
+        },
+        {
+          "text": "ENSP00000418819",
+          "url": "https://www.ensembl.org/Homo_sapiens/Transcript/ProteinSummary?t=ENSP00000418819",
+          "relevance": 0
+        },
+        {
+          "text": "ENSP00000465818",
+          "url": "https://www.ensembl.org/Homo_sapiens/Transcript/ProteinSummary?t=ENSP00000465818",
+          "relevance": 0
+        },
+        {
+          "text": "ENSP00000350283",
+          "url": "https://www.ensembl.org/Homo_sapiens/Transcript/ProteinSummary?t=ENSP00000350283",
+          "relevance": 0
+        },
+        {
+          "text": "ENSP00000417988",
+          "url": "https://www.ensembl.org/Homo_sapiens/Transcript/ProteinSummary?t=ENSP00000417988",
+          "relevance": 0
+        },
+        {
+          "text": "ENSP00000417148",
+          "url": "https://www.ensembl.org/Homo_sapiens/Transcript/ProteinSummary?t=ENSP00000417148",
+          "relevance": 0
+        },
+        {
+          "text": "ENSP00000494614",
+          "url": "https://www.ensembl.org/Homo_sapiens/Transcript/ProteinSummary?t=ENSP00000494614",
+          "relevance": 0
+        },
+        {
+          "text": "ENSP00000418775",
+          "url": "https://www.ensembl.org/Homo_sapiens/Transcript/ProteinSummary?t=ENSP00000418775",
+          "relevance": 0
+        },
+        {
+          "text": "ENSP00000419988",
+          "url": "https://www.ensembl.org/Homo_sapiens/Transcript/ProteinSummary?t=ENSP00000419988",
+          "relevance": 0
+        },
+        {
+          "text": "ENSP00000419103",
+          "url": "https://www.ensembl.org/Homo_sapiens/Transcript/ProteinSummary?t=ENSP00000419103",
+          "relevance": 0
+        },
+        {
+          "text": "ENSP00000420705",
+          "url": "https://www.ensembl.org/Homo_sapiens/Transcript/ProteinSummary?t=ENSP00000420705",
+          "relevance": 0
+        },
+        {
+          "text": "ENSP00000418212",
+          "url": "https://www.ensembl.org/Homo_sapiens/Transcript/ProteinSummary?t=ENSP00000418212",
+          "relevance": 0
+        },
+        {
+          "text": "ENSP00000420253",
+          "url": "https://www.ensembl.org/Homo_sapiens/Transcript/ProteinSummary?t=ENSP00000420253",
+          "relevance": 0
+        },
+        {
+          "text": "ENSP00000417241",
+          "url": "https://www.ensembl.org/Homo_sapiens/Transcript/ProteinSummary?t=ENSP00000417241",
+          "relevance": 0
+        },
+        {
+          "text": "ENSP00000419481",
+          "url": "https://www.ensembl.org/Homo_sapiens/Transcript/ProteinSummary?t=ENSP00000419481",
+          "relevance": 0
+        },
+        {
+          "text": "ENSP00000420412",
+          "url": "https://www.ensembl.org/Homo_sapiens/Transcript/ProteinSummary?t=ENSP00000420412",
+          "relevance": 0
+        },
+        {
+          "text": "ENSP00000489431",
+          "url": "https://www.ensembl.org/Homo_sapiens/Transcript/ProteinSummary?t=ENSP00000489431",
+          "relevance": 0
+        },
+        {
+          "text": "ENSP00000467329",
+          "url": "https://www.ensembl.org/Homo_sapiens/Transcript/ProteinSummary?t=ENSP00000467329",
+          "relevance": 0
+        },
+        {
+          "text": "ENSP00000465347",
+          "url": "https://www.ensembl.org/Homo_sapiens/Transcript/ProteinSummary?t=ENSP00000465347",
+          "relevance": 0
+        },
+        {
+          "text": "ENSP00000326002",
+          "url": "https://www.ensembl.org/Homo_sapiens/Transcript/ProteinSummary?t=ENSP00000326002",
+          "relevance": 0
+        },
+        {
+          "text": "ENSP00000397145",
+          "url": "https://www.ensembl.org/Homo_sapiens/Transcript/ProteinSummary?t=ENSP00000397145",
+          "relevance": 0
+        },
+        {
+          "text": "ENSP00000418548",
+          "url": "https://www.ensembl.org/Homo_sapiens/Transcript/ProteinSummary?t=ENSP00000418548",
+          "relevance": 0
+        },
+        {
+          "text": "ENSP00000498906",
+          "url": "https://www.ensembl.org/Homo_sapiens/Transcript/ProteinSummary?t=ENSP00000498906",
+          "relevance": 0
+        },
+        {
+          "text": "ENSP00000417554",
+          "url": "https://www.ensembl.org/Homo_sapiens/Transcript/ProteinSummary?t=ENSP00000417554",
+          "relevance": 0
+        },
+        {
+          "text": "ENSP00000418986",
+          "url": "https://www.ensembl.org/Homo_sapiens/Transcript/ProteinSummary?t=ENSP00000418986",
+          "relevance": 0
+        },
+        {
+          "text": "ENSP00000478114",
+          "url": "https://www.ensembl.org/Homo_sapiens/Transcript/ProteinSummary?t=ENSP00000478114",
+          "relevance": 0
+        },
+        {
+          "text": "ENSP00000495897",
+          "url": "https://www.ensembl.org/Homo_sapiens/Transcript/ProteinSummary?t=ENSP00000495897",
+          "relevance": 0
+        },
+        {
+          "text": "ENSP00000418960",
+          "url": "https://www.ensembl.org/Homo_sapiens/Transcript/ProteinSummary?t=ENSP00000418960",
+          "relevance": 0
+        }
+      ]
+    },
+    {
+      "type": "entrezgene",
+      "name": "Entrez",
+      "values": [
+        {
+          "text": "672",
+          "url": "https://www.ncbi.nlm.nih.gov/gene?term=672",
+          "relevance": 0
+        }
+      ]
+    },
+    {
+      "type": "uniprot",
+      "name": "UniProt",
+      "values": [
+        {
+          "text": "G1UI37",
+          "url": "https://www.uniprot.org/uniprot/G1UI37",
+          "relevance": 0
+        },
+        {
+          "text": "E9PC22",
+          "url": "https://www.uniprot.org/uniprot/E9PC22",
+          "relevance": 0
+        },
+        {
+          "text": "A0A0U1RRA9",
+          "url": "https://www.uniprot.org/uniprot/A0A0U1RRA9",
+          "relevance": 0
+        },
+        {
+          "text": "E9PH68",
+          "url": "https://www.uniprot.org/uniprot/E9PH68",
+          "relevance": 0
+        },
+        {
+          "text": "A0A2R8Y6Y9",
+          "url": "https://www.uniprot.org/uniprot/A0A2R8Y6Y9",
+          "relevance": 0
+        },
+        {
+          "text": "B7ZA85",
+          "url": "https://www.uniprot.org/uniprot/B7ZA85",
+          "relevance": 0
+        },
+        {
+          "text": "Q5YLB2",
+          "url": "https://www.uniprot.org/uniprot/Q5YLB2",
+          "relevance": 0
+        },
+        {
+          "text": "H0Y881",
+          "url": "https://www.uniprot.org/uniprot/H0Y881",
+          "relevance": 0
+        },
+        {
+          "text": "A0A2R8Y587",
+          "url": "https://www.uniprot.org/uniprot/A0A2R8Y587",
+          "relevance": 0
+        },
+        {
+          "text": "E7EWN5",
+          "url": "https://www.uniprot.org/uniprot/E7EWN5",
+          "relevance": 0
+        },
+        {
+          "text": "K7EJW3",
+          "url": "https://www.uniprot.org/uniprot/K7EJW3",
+          "relevance": 0
+        },
+        {
+          "text": "P38398",
+          "url": "https://www.uniprot.org/uniprot/P38398",
+          "relevance": 0
+        },
+        {
+          "text": "E7ENB7",
+          "url": "https://www.uniprot.org/uniprot/E7ENB7",
+          "relevance": 0
+        },
+        {
+          "text": "E7EQW4",
+          "url": "https://www.uniprot.org/uniprot/E7EQW4",
+          "relevance": 0
+        },
+        {
+          "text": "C9IZW4",
+          "url": "https://www.uniprot.org/uniprot/C9IZW4",
+          "relevance": 0
+        },
+        {
+          "text": "E7EUM2",
+          "url": "https://www.uniprot.org/uniprot/E7EUM2",
+          "relevance": 0
+        },
+        {
+          "text": "K7EPC7",
+          "url": "https://www.uniprot.org/uniprot/K7EPC7",
+          "relevance": 0
+        },
+        {
+          "text": "H0Y850",
+          "url": "https://www.uniprot.org/uniprot/H0Y850",
+          "relevance": 0
+        },
+        {
+          "text": "A0A2R8Y7V5",
+          "url": "https://www.uniprot.org/uniprot/A0A2R8Y7V5",
+          "relevance": 0
+        },
+        {
+          "text": "C6YB45",
+          "url": "https://www.uniprot.org/uniprot/C6YB45",
+          "relevance": 0
+        },
+        {
+          "text": "A0A494C182",
+          "url": "https://www.uniprot.org/uniprot/A0A494C182",
+          "relevance": 0
+        },
+        {
+          "text": "H0Y8D8",
+          "url": "https://www.uniprot.org/uniprot/H0Y8D8",
+          "relevance": 0
+        },
+        {
+          "text": "A0A0A0MSN1",
+          "url": "https://www.uniprot.org/uniprot/A0A0A0MSN1",
+          "relevance": 0
+        },
+        {
+          "text": "Q3B891",
+          "url": "https://www.uniprot.org/uniprot/Q3B891",
+          "relevance": 0
+        },
+        {
+          "text": "H0Y8B8",
+          "url": "https://www.uniprot.org/uniprot/H0Y8B8",
+          "relevance": 0
+        },
+        {
+          "text": "A0A024R1Z8",
+          "url": "https://www.uniprot.org/uniprot/A0A024R1Z8",
+          "relevance": 0
+        },
+        {
+          "text": "A0A024R1V0",
+          "url": "https://www.uniprot.org/uniprot/A0A024R1V0",
+          "relevance": 0
+        }
+      ]
+    },
+    {
+      "type": "gene_biotype",
+      "name": "Gene biotype",
+      "values": [
+        {
+          "text": "protein_coding",
+          "url": "http://www.ensembl.org/Help/Glossary?id=275",
+          "relevance": 0
+        }
+      ]
+    },
+    {
+      "type": "design_element",
+      "name": "Design element",
+      "values": [
+        {
+          "text": "204531_s_at",
+          "url": "",
+          "relevance": 0
+        },
+        {
+          "text": "3758319",
+          "url": "",
+          "relevance": 0
+        },
+        {
+          "text": "3758337",
+          "url": "",
+          "relevance": 0
+        },
+        {
+          "text": "3758359",
+          "url": "",
+          "relevance": 0
+        },
+        {
+          "text": "3758318",
+          "url": "",
+          "relevance": 0
+        },
+        {
+          "text": "3758339",
+          "url": "",
+          "relevance": 0
+        },
+        {
+          "text": "3758334",
+          "url": "",
+          "relevance": 0
+        },
+        {
+          "text": "3758356",
+          "url": "",
+          "relevance": 0
+        },
+        {
+          "text": "g6552300_3p_a_at",
+          "url": "",
+          "relevance": 0
+        },
+        {
+          "text": "3758355",
+          "url": "",
+          "relevance": 0
+        },
+        {
+          "text": "3758358",
+          "url": "",
+          "relevance": 0
+        },
+        {
+          "text": "3758335",
+          "url": "",
+          "relevance": 0
+        },
+        {
+          "text": "3758357",
+          "url": "",
+          "relevance": 0
+        },
+        {
+          "text": "3758374",
+          "url": "",
+          "relevance": 0
+        },
+        {
+          "text": "3758351",
+          "url": "",
+          "relevance": 0
+        },
+        {
+          "text": "3758373",
+          "url": "",
+          "relevance": 0
+        },
+        {
+          "text": "3758375",
+          "url": "",
+          "relevance": 0
+        },
+        {
+          "text": "3758370",
+          "url": "",
+          "relevance": 0
+        },
+        {
+          "text": "3758350",
+          "url": "",
+          "relevance": 0
+        },
+        {
+          "text": "3758372",
+          "url": "",
+          "relevance": 0
+        },
+        {
+          "text": "3758371",
+          "url": "",
+          "relevance": 0
+        },
+        {
+          "text": "16845349",
+          "url": "",
+          "relevance": 0
+        },
+        {
+          "text": "g2218153_3p_a_at",
+          "url": "",
+          "relevance": 0
+        },
+        {
+          "text": "1993_s_at",
+          "url": "",
+          "relevance": 0
+        },
+        {
+          "text": "A_23_P207400",
+          "url": "",
+          "relevance": 0
+        },
+        {
+          "text": "2395433",
+          "url": "",
+          "relevance": 0
+        },
+        {
+          "text": "3758323",
+          "url": "",
+          "relevance": 0
+        },
+        {
+          "text": "3758345",
+          "url": "",
+          "relevance": 0
+        },
+        {
+          "text": "3758367",
+          "url": "",
+          "relevance": 0
+        },
+        {
+          "text": "3758344",
+          "url": "",
+          "relevance": 0
+        },
+        {
+          "text": "3758366",
+          "url": "",
+          "relevance": 0
+        },
+        {
+          "text": "L78833_cds1_at",
+          "url": "",
+          "relevance": 0
+        },
+        {
+          "text": "3758369",
+          "url": "",
+          "relevance": 0
+        },
+        {
+          "text": "3758324",
+          "url": "",
+          "relevance": 0
+        },
+        {
+          "text": "3758368",
+          "url": "",
+          "relevance": 0
+        },
+        {
+          "text": "3758341",
+          "url": "",
+          "relevance": 0
+        },
+        {
+          "text": "3758363",
+          "url": "",
+          "relevance": 0
+        },
+        {
+          "text": "33724_at",
+          "url": "",
+          "relevance": 0
+        },
+        {
+          "text": "3758340",
+          "url": "",
+          "relevance": 0
+        },
+        {
+          "text": "3758362",
+          "url": "",
+          "relevance": 0
+        },
+        {
+          "text": "U64805_s_at",
+          "url": "",
+          "relevance": 0
+        },
+        {
+          "text": "3758321",
+          "url": "",
+          "relevance": 0
+        },
+        {
+          "text": "3758342",
+          "url": "",
+          "relevance": 0
+        },
+        {
+          "text": "3758364",
+          "url": "",
+          "relevance": 0
+        },
+        {
+          "text": "211851_x_at",
+          "url": "",
+          "relevance": 0
+        },
+        {
+          "text": "3758361",
+          "url": "",
+          "relevance": 0
+        },
+        {
+          "text": "3758360",
+          "url": "",
+          "relevance": 0
+        },
+        {
+          "text": "604_at",
+          "url": "",
+          "relevance": 0
+        }
+      ]
+    },
+    {
+      "type": "pathwayid",
+      "name": "Reactome pathway ID",
+      "values": [
+        {
+          "text": "HDR through Single Strand Annealing (SSA)",
+          "url": "https://reactome.org/content/detail/R-HSA-5685938",
+          "relevance": 0
+        },
+        {
+          "text": "Post-translational protein modification",
+          "url": "https://reactome.org/content/detail/R-HSA-597592",
+          "relevance": 0
+        },
+        {
+          "text": "DNA Repair",
+          "url": "https://reactome.org/content/detail/R-HSA-73894",
+          "relevance": 0
+        },
+        {
+          "text": "SUMOylation",
+          "url": "https://reactome.org/content/detail/R-HSA-2990846",
+          "relevance": 0
+        },
+        {
+          "text": "Transcriptional Regulation by E2F6",
+          "url": "https://reactome.org/content/detail/R-HSA-8953750",
+          "relevance": 0
+        },
+        {
+          "text": "TP53 Regulates Transcription of DNA Repair Genes",
+          "url": "https://reactome.org/content/detail/R-HSA-6796648",
+          "relevance": 0
+        },
+        {
+          "text": "Transcriptional Regulation by TP53",
+          "url": "https://reactome.org/content/detail/R-HSA-3700989",
+          "relevance": 0
+        },
+        {
+          "text": "Homology Directed Repair",
+          "url": "https://reactome.org/content/detail/R-HSA-5693538",
+          "relevance": 0
+        },
+        {
+          "text": "Resolution of D-loop Structures through Synthesis-Dependent Strand Annealing (SDSA)",
+          "url": "https://reactome.org/content/detail/R-HSA-5693554",
+          "relevance": 0
+        },
+        {
+          "text": "Meiotic synapsis",
+          "url": "https://reactome.org/content/detail/R-HSA-1221632",
+          "relevance": 0
+        },
+        {
+          "text": "DNA Double-Strand Break Repair",
+          "url": "https://reactome.org/content/detail/R-HSA-5693532",
+          "relevance": 0
+        },
+        {
+          "text": "RNA Polymerase II Transcription",
+          "url": "https://reactome.org/content/detail/R-HSA-73857",
+          "relevance": 0
+        },
+        {
+          "text": "Presynaptic phase of homologous DNA pairing and strand exchange",
+          "url": "https://reactome.org/content/detail/R-HSA-5693616",
+          "relevance": 0
+        },
+        {
+          "text": "Reproduction",
+          "url": "https://reactome.org/content/detail/R-HSA-1474165",
+          "relevance": 0
+        },
+        {
+          "text": "Deubiquitination",
+          "url": "https://reactome.org/content/detail/R-HSA-5688426",
+          "relevance": 0
+        },
+        {
+          "text": "Resolution of D-Loop Structures",
+          "url": "https://reactome.org/content/detail/R-HSA-5693537",
+          "relevance": 0
+        },
+        {
+          "text": "Nonhomologous End-Joining (NHEJ)",
+          "url": "https://reactome.org/content/detail/R-HSA-5693571",
+          "relevance": 0
+        },
+        {
+          "text": "G2/M DNA damage checkpoint",
+          "url": "https://reactome.org/content/detail/R-HSA-69473",
+          "relevance": 0
+        },
+        {
+          "text": "Regulation of TP53 Activity through Phosphorylation",
+          "url": "https://reactome.org/content/detail/R-HSA-6804756",
+          "relevance": 0
+        },
+        {
+          "text": "Meiosis",
+          "url": "https://reactome.org/content/detail/R-HSA-1500620",
+          "relevance": 0
+        },
+        {
+          "text": "G2/M Checkpoints",
+          "url": "https://reactome.org/content/detail/R-HSA-69481",
+          "relevance": 0
+        },
+        {
+          "text": "Metabolism of proteins",
+          "url": "https://reactome.org/content/detail/R-HSA-392499",
+          "relevance": 0
+        },
+        {
+          "text": "Homologous DNA Pairing and Strand Exchange",
+          "url": "https://reactome.org/content/detail/R-HSA-5693579",
+          "relevance": 0
+        },
+        {
+          "text": "Generic Transcription Pathway",
+          "url": "https://reactome.org/content/detail/R-HSA-212436",
+          "relevance": 0
+        },
+        {
+          "text": "Metalloprotease DUBs",
+          "url": "https://reactome.org/content/detail/R-HSA-5689901",
+          "relevance": 0
+        },
+        {
+          "text": "DNA Double Strand Break Response",
+          "url": "https://reactome.org/content/detail/R-HSA-5693606",
+          "relevance": 0
+        },
+        {
+          "text": "Recruitment and ATM-mediated phosphorylation of repair and signaling proteins at DNA double strand breaks",
+          "url": "https://reactome.org/content/detail/R-HSA-5693565",
+          "relevance": 0
+        },
+        {
+          "text": "SUMOylation of DNA damage response and repair proteins",
+          "url": "https://reactome.org/content/detail/R-HSA-3108214",
+          "relevance": 0
+        },
+        {
+          "text": "Regulation of TP53 Activity",
+          "url": "https://reactome.org/content/detail/R-HSA-5633007",
+          "relevance": 0
+        },
+        {
+          "text": "Processing of DNA double-strand break ends",
+          "url": "https://reactome.org/content/detail/R-HSA-5693607",
+          "relevance": 0
+        },
+        {
+          "text": "Cell Cycle",
+          "url": "https://reactome.org/content/detail/R-HSA-1640170",
+          "relevance": 0
+        },
+        {
+          "text": "Meiotic recombination",
+          "url": "https://reactome.org/content/detail/R-HSA-912446",
+          "relevance": 0
+        },
+        {
+          "text": "HDR through Homologous Recombination (HRR)",
+          "url": "https://reactome.org/content/detail/R-HSA-5685942",
+          "relevance": 0
+        },
+        {
+          "text": "HDR through Homologous Recombination (HRR) or Single Strand Annealing (SSA)",
+          "url": "https://reactome.org/content/detail/R-HSA-5693567",
+          "relevance": 0
+        },
+        {
+          "text": "SUMO E3 ligases SUMOylate target proteins",
+          "url": "https://reactome.org/content/detail/R-HSA-3108232",
+          "relevance": 0
+        },
+        {
+          "text": "Resolution of D-loop Structures through Holliday Junction Intermediates",
+          "url": "https://reactome.org/content/detail/R-HSA-5693568",
+          "relevance": 0
+        },
+        {
+          "text": "Cell Cycle Checkpoints",
+          "url": "https://reactome.org/content/detail/R-HSA-69620",
+          "relevance": 0
+        },
+        {
+          "text": "Gene expression (Transcription)",
+          "url": "https://reactome.org/content/detail/R-HSA-74160",
+          "relevance": 0
+        }
+      ]
+    },
+    {
+      "type": "expression_atlas",
+      "name": "Expression Atlas",
+      "values": [
+        {
+          "text": "ENSG00000012048",
+          "url": "https://www.ebi.ac.uk/gxa/genes/ENSG00000012048",
+          "relevance": 0
+        }
+      ]
+    }
+  ]
+}
