@@ -1,39 +1,17 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import BioentityInformation from '../src/BioentityInformation'
-import AtlasAutocomplete from 'expression-atlas-autocomplete'
-import GeneSearchForm from 'scxa-gene-search-form'
+import BioentityInformation from '../src/index'
 
-class Demo extends React.Component {
-  constructor(props) {
-    super(props)
-
-    this.state = {
-      geneId: ``
-    }
-  }
-
-  render() {
-    return (
-      <div>
-        <AtlasAutocomplete
-          atlasUrl={`http://localhost:8080/gxa/sc/`}
-          wrapperClassName={`row column expanded`}
-          suggesterEndpoint={`json/suggestions`}
-          initialValue={this.state.geneId}
-          onSelect={ (geneId) => { this.setState({geneId: geneId}) }} />
-
-        <BioentityInformation
-          atlasUrl={`http://localhost:8080/gxa/sc/`}
-          geneId={this.state.geneId} />
-      </div>
-
-    )
-  }
-}
+import { withFetchLoader } from '@ebi-gene-expression-group/atlas-react-fetch-loader'
+const BioentityInformationWithFetchLoader = withFetchLoader(BioentityInformation)
 
 const render = (options, target) => {
-  ReactDOM.render(<Demo {...options} />, document.getElementById(target))
+  ReactDOM.render(
+    <BioentityInformationWithFetchLoader
+      {...options}
+      host={`http://localhost:8080/gxa/sc/`}
+      resource={`json/bioentity-information/${options.geneId}`}/>,
+    document.getElementById(target))
 }
 
-export {render}
+export { render }
