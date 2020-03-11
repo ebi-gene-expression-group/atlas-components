@@ -15,15 +15,15 @@ const TableManagerRoute = (props) => {
   const history = useHistory()
 
   const searchObject = URI.parseQuery(location.search)
+  
   const populatedTableHeaders = props.tableHeaders.map(
-    tableHeader => ({ ...tableHeader, value: searchObject[tableHeader.dataKey] })
-  )
+    tableHeader => ({ ...tableHeader, value: searchObject[tableHeader.dataKey] }))
+
   const populatedDropdownFilters = props.dropdownFilters.map(
-    dropdownFilter => ({ ...dropdownFilter, value: searchObject[dropdownFilter.dataKey] })
-  )
+    dropdownFilter => ({ ...dropdownFilter, value: searchObject[dropdownFilter.dataKey] }))
 
   return (
-    <Route exact path={this.props.path}>
+    <Route exact path={props.path}>
       <TableManager
         {...props}
         tableHeaders={populatedTableHeaders}
