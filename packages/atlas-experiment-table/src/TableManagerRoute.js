@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { Route, useLocation, useHistory } from 'react-router-dom'
 
 import URI from 'urijs'
@@ -22,7 +23,7 @@ const TableManagerRoute = (props) => {
   )
 
   return (
-    <Route exact path={`/experiments`}>
+    <Route exact path={this.props.path}>
       <TableManager
         {...props}
         tableHeaders={populatedTableHeaders}
@@ -32,6 +33,13 @@ const TableManagerRoute = (props) => {
   )
 }
 
-TableManagerRoute.propTypes = TableManager.propTypes
+TableManagerRoute.propTypes = {
+  ...TableManager.propTypes,
+  path: PropTypes.string
+}
+
+TableManagerRoute.defaultProps = {
+  path: `/experiments`
+}
 
 export default TableManagerRoute
