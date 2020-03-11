@@ -1,0 +1,218 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ClusterTSnePlot with no data matches snapshot 1`] = `
+Array [
+  <div
+    className="row"
+  >
+    <div
+      className="small-12 medium-6 columns"
+    >
+      <label>
+        t-SNE Perplexity
+      </label>
+      <div
+        className=" css-2b097c-container"
+        onKeyDown={[Function]}
+      >
+        <div
+          className=" css-15r8ym2-Control"
+          onMouseDown={[Function]}
+          onTouchEnd={[Function]}
+        >
+          <div
+            className=" css-1hwfws3"
+          >
+            <div
+              className=" css-1uccc91-singleValue"
+            >
+              0
+            </div>
+            <div
+              className="css-b8ldur-Input"
+            >
+              <div
+                className=""
+                style={
+                  Object {
+                    "display": "inline-block",
+                  }
+                }
+              >
+                <input
+                  aria-autocomplete="list"
+                  autoCapitalize="none"
+                  autoComplete="off"
+                  autoCorrect="off"
+                  disabled={false}
+                  id="react-select-2-input"
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  onFocus={[Function]}
+                  spellCheck="false"
+                  style={
+                    Object {
+                      "background": 0,
+                      "border": 0,
+                      "boxSizing": "content-box",
+                      "color": "inherit",
+                      "fontSize": "inherit",
+                      "label": "input",
+                      "opacity": 1,
+                      "outline": 0,
+                      "padding": 0,
+                      "width": "1px",
+                    }
+                  }
+                  tabIndex="0"
+                  type="text"
+                  value=""
+                />
+                <div
+                  style={
+                    Object {
+                      "height": 0,
+                      "left": 0,
+                      "overflow": "scroll",
+                      "position": "absolute",
+                      "top": 0,
+                      "visibility": "hidden",
+                      "whiteSpace": "pre",
+                    }
+                  }
+                >
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className=" css-1hb7zxy-IndicatorsContainer"
+          >
+            <span
+              className="sc-AxirZ eHnaPO"
+              cx={[Function]}
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="small-12 medium-6 columns"
+    >
+      <label>
+        Colour plot by:
+      </label>
+      <div
+        className=" css-2b097c-container"
+        onKeyDown={[Function]}
+      >
+        <div
+          className=" css-15r8ym2-Control"
+          onMouseDown={[Function]}
+          onTouchEnd={[Function]}
+        >
+          <div
+            className=" css-1hwfws3"
+          >
+            <div
+              className=" css-1wa3eu0-placeholder"
+            >
+              Select...
+            </div>
+            <div
+              className="css-b8ldur-Input"
+            >
+              <div
+                className=""
+                style={
+                  Object {
+                    "display": "inline-block",
+                  }
+                }
+              >
+                <input
+                  aria-autocomplete="list"
+                  autoCapitalize="none"
+                  autoComplete="off"
+                  autoCorrect="off"
+                  disabled={false}
+                  id="react-select-3-input"
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  onFocus={[Function]}
+                  spellCheck="false"
+                  style={
+                    Object {
+                      "background": 0,
+                      "border": 0,
+                      "boxSizing": "content-box",
+                      "color": "inherit",
+                      "fontSize": "inherit",
+                      "label": "input",
+                      "opacity": 1,
+                      "outline": 0,
+                      "padding": 0,
+                      "width": "1px",
+                    }
+                  }
+                  tabIndex="0"
+                  type="text"
+                  value=""
+                />
+                <div
+                  style={
+                    Object {
+                      "height": 0,
+                      "left": 0,
+                      "overflow": "scroll",
+                      "position": "absolute",
+                      "top": 0,
+                      "visibility": "hidden",
+                      "whiteSpace": "pre",
+                    }
+                  }
+                >
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className=" css-1hb7zxy-IndicatorsContainer"
+          >
+            <span
+              className="sc-AxirZ eHnaPO"
+              cx={[Function]}
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+  <div
+    className="row"
+    style={
+      Object {
+        "position": "relative",
+      }
+    }
+  >
+    <div
+      className="small-12 columns"
+    >
+      <div />
+    </div>
+    <div
+      className="sc-AxjAm boPAjy"
+    >
+      <p>
+        Loading, please wait...
+      </p>
+      <img
+        src="test-file-stub"
+      />
+    </div>
+  </div>,
+]
+`;

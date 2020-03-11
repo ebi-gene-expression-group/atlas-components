@@ -1,6 +1,6 @@
 {
   "name": "@ebi-gene-expression-group/atlas-homepage-cards",
-  "version": "2.3.2",
+  "version": "2.4.3",
   "description": "A package that renders grids of cards.",
   "main": "lib/index.js",
   "scripts": {
@@ -40,7 +40,7 @@
     "url": "git+https://github.com/ebi-gene-expression-group/atlas-components.git"
   },
   "dependencies": {
-    "@ebi-gene-expression-group/react-ebi-species": "^2.4.2",
+    "@ebi-gene-expression-group/react-ebi-species": "^2.5.3",
     "prop-types": "^15.7.2",
     "react": "^16.13.0",
     "react-slick": "^0.25.2",
@@ -69,5 +69,5 @@
     "webpack-cli": "^3.3.11",
     "webpack-dev-server": "^3.10.3"
   },
-  "gitHead": "0d49cd1ea8ef6b1d0bc336d9f44f770b02ee3a4e"
+  "gitHead": "7e03f78b4db84dbcf8247a040490afe00d57d105"
 }

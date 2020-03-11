@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Demo</title>
+
+    <link rel="stylesheet" href="foundation.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="ebi-global.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="fonts.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/css/ebi-global.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="https://ebi.emblstatic.net/web_guidelines/EBI-Icon-fonts/v1.3/fonts.css"
+          type="text/css" media="all" />
+    <link rel="stylesheet" href="https://www.ebi.ac.uk/gxa/resources/css/foundation/atlas.css" type="text/css" media="all">
+
+    <style type="text/css">
+        #target input {
+            height: unset;
+            box-shadow: none;
+            margin: 0;
+        }
+
+        #target .highcharts-container { overflow: visible !important; }
+        #target svg { overflow: visible !important;
+        }
+
+        /* Make gene ID input box look like React select input */
+        input[name="geneId"] {
+            border: 1px solid #777;
+            border-radius: 0;
+            min-height: 2.4375rem;
+        }
+
+        div.highcharts-button span {
+            pointer-events: none;
+        }
+    </style>
+
+</head>
+
+<body>
+<div id="wrapper" class="row column expanded">
+    <div id="target">
+    </div>
+</div>
+</body>
+
+<script defer src="../dist/vendors.bundle.js"></script>
+<script defer src="../dist/tSnePlotViewDemo.bundle.js"></script>
+
+<!-- Set to http://localhost:8080/gxa/ or http://localhost:8080/gxa/sc/ -- Remember the trailing slash! -->
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+    tSnePlotViewDemo.render({}, 'target')
+  })
+</script>
+
+</html>
