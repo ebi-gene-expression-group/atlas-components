@@ -57,8 +57,8 @@ module.exports = {
   devServer: {
     port: 9000,
     contentBase: path.resolve(__dirname, `html`),
-    publicPath: commonPublicPath
+    publicPath: commonPublicPath,
     // Add if developing a SPA to redirect non-matching routes known by WDS (i.e. no document in /html) to the router
-    // historyApiFallback: true
+    historyApiFallback: true
   }
 }

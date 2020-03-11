@@ -102,7 +102,7 @@ describe(`TablePreamble`, () => {
   })
 
 
-  test(`adds an extra option to a dropdown if the initial value isn’t one of the options`, () => {
+  test(`defaults to ‘All’  if the initial value in a dropdown filter isn’t one of the options `, () => {
     const options =
       // https://stackoverflow.com/questions/3751520/how-to-generate-sequence-of-numbers-chars-in-javascript
       Array.apply(0, Array(getRandomInt(1, MAX_OPTIONS_COUNT)))
@@ -119,7 +119,8 @@ describe(`TablePreamble`, () => {
 
     const wrapper = shallow(<TablePreamble {...props} dropdowns={dropdowns}/>)
 
-    expect(wrapper.find(`select`).first().find(`option`)).toHaveLength(options.length + 2) // `All` and value
+    expect(wrapper.find(`select`).first().find(`option`)).toHaveLength(options.length + 1)
+    expect(wrapper.find(`select`).first()).toHaveProp({defaultValue: ``})
   })
 
   test(`renders as many dropdowns as specified in the dropdowns prop`, () => {
@@ -139,7 +140,7 @@ describe(`TablePreamble`, () => {
     expect(wrapper.find(`select`)).toHaveLength(dropdowns.length + 1)
   })
 
-  test(`calls dropdownOnChange`, () => {
+  test(`calls dropdownOnChange with an explicit flag not to debounce filtering`, () => {
     const dropdowns =
       // https://stackoverflow.com/questions/3751520/how-to-generate-sequence-of-numbers-chars-in-javascript
       Array.apply(0, Array(getRandomInt(1, MAX_DROPDOWN_COUNT)))
@@ -160,7 +161,8 @@ describe(`TablePreamble`, () => {
     wrapper.find(`select`).at(randomDropdownIndex).simulate(`change`, event)
 
     expect(props.dropdownOnChange).toHaveBeenCalled()
-    expect(props.dropdownOnChange.mock.calls).toContainEqual([dropdowns[randomDropdownIndex].dataKey, event.target.value])
+    expect(props.dropdownOnChange.mock.calls)
+      .toContainEqual([dropdowns[randomDropdownIndex].dataKey, event.target.value, false])
   })
 
   test(`matches snapshot (basic)`, () => {

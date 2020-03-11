@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import _ from 'lodash'
-import memoizeOne from 'memoize-one'
 
 import { tableHeaderPropTypes, filterPropTypes } from './filterPropTypes'
 import TablePreamble from './TablePreamble'
@@ -9,6 +8,42 @@ import TableContent from './TableContent'
 import TableFooter from './TableFooter'
 
 const capitalizeEachWord = str => str.replace(/\w+([\s-])*/g, _.capitalize)
+
+const deepIncludesCaseInsensitive = (object, keys, value) =>
+  _.chain(object)
+    .pick(keys)
+    .values()
+    .flatten()
+    .map(_.toString)
+    .map(_.toLower)
+    .some(valueToLower => valueToLower.includes(_.toString(value).toLowerCase()))
+    .value()
+
+const filterSortDataRows = (dataRows, filters, displayedKeys, searchAll, sortColumnDataKey, ascendingOrder) => {
+  const filterSortedDataRows = _.chain(dataRows)
+    .filter(
+      // Keep the rows whose displayed columns match searchAll
+      dataRow => deepIncludesCaseInsensitive(dataRow, displayedKeys, searchAll)
+      // Keep the rows that have matching values defined in the filters (i.e. table headers and drop-downs)
+      &&
+      _.chain(filters)
+        .keys()
+        .every(filterKey => deepIncludesCaseInsensitive(dataRow, filterKey, filters[filterKey]))
+        .value())
+    // Sort by sortColumnDataKey
+    .sortBy(
+      // TODO Add a data type key to the header props to indicate if column values are strings, numbers, dates...
+      sortColumnDataKey.toLowerCase().includes(`date`) ?
+        dataRow => dataRow[sortColumnDataKey].split(`-`).reverse().join(``) :  // DD-MM-YYYY -> YYYYMMDD
+        sortColumnDataKey)
+    .value()
+
+  if (!ascendingOrder) {
+    filterSortedDataRows.reverse()
+  }
+
+  return filterSortedDataRows
+}
 
 export default class TableManager extends React.Component {
   static propTypes = {
@@ -25,7 +60,8 @@ export default class TableManager extends React.Component {
       tableHeaderCellOnClick: PropTypes.func,
       width: PropTypes.number
     }),
-    className: PropTypes.string
+    className: PropTypes.string,
+    afterStateUpdate: PropTypes.func
   }
 
   static defaultProps = {
@@ -33,13 +69,25 @@ export default class TableManager extends React.Component {
     ascendingOrder: true,
     host: ``,
     rowSelectionColumn: null,
-    className: `row expanded`
+    className: `row expanded`,
+    afterStateUpdate: () => {}
   }
 
   constructor(props) {
     super(props)
 
     this.rowsPerPageOptions = [10, 50, 100]
+
+    // Build filters from dropdowns and table headers value fields
+    const filters =
+      _.chain([ ...props.tableHeaders, ...props.dropdownFilters ])
+        .map(doh => ({ ...doh, value: _.chain(doh.value).trim().value() }))
+        .filter(`value`)
+        .reduce((acc, doh) => {
+          acc[doh.dataKey]= doh.value
+          return acc
+        }, {})
+        .value()
 
     this.state = {
       sortColumnIndex: props.sortColumnIndex,
@@ -62,19 +110,26 @@ export default class TableManager extends React.Component {
         },
         {}),
       searchAll: ``,
-      filters:
-        props.dropdownFilters.concat(props.tableHeaders).reduce((acc, filter) => {
-          const trimmedValue = _.chain(filter.value).toString().trim().value()
-          if (trimmedValue.length > 0) {
-            acc[filter.dataKey] = trimmedValue
-          }
-          return acc
-        },
-        {}),
+      filters: filters,
       selectedRows: []
     }
 
-    this.filterSortDataRows = this.filterSortDataRows.bind(this)
+    const doFilterAndSort = () =>
+      filterSortDataRows(
+        this.props.dataRows,
+        this.state.filters,
+        this.props.tableHeaders.map(tableHeader => tableHeader.dataKey),
+        this.state.searchAll,
+        this.props.tableHeaders.length > 0 ? this.props.tableHeaders[this.state.sortColumnIndex].dataKey : ``,
+        this.state.ascendingOrder)
+
+    this.state.filteredSortedDataRows = doFilterAndSort()
+
+    this.immediateFilterAndSort = () =>
+      this.setState(
+        { filteredSortedDataRows: doFilterAndSort() },
+        () => this.props.afterStateUpdate(this.state.filters))
+    this.debouncedFilterAndSort = _.debounce(this.immediateFilterAndSort, 600)
 
     this.updateSelectedRows = this.updateSelectedRows.bind(this)
     this.updateFilters = this.updateFilters.bind(this)
@@ -82,44 +137,6 @@ export default class TableManager extends React.Component {
     this.updateRowsPerPage = this.updateRowsPerPage.bind(this)
     this.updateSortColumn = this.updateSortColumn.bind(this)
   }
-
-  deepIncludesCaseInsensitive = (object, keys, value) =>
-    _.chain(object)
-      .pick(keys)
-      .values()
-      .flatten()
-      .map(_.toString)
-      .map(_.toLower)
-      .some(valueToLower => valueToLower.includes(_.toString(value).toLowerCase()))
-      .value()
-
-  filterSortDataRows =
-    memoizeOne((dataRows, filters, displayedKeys, searchAll, sortColumnDataKey, ascendingOrder) => {
-      const filterSortedDataRows = _.chain(dataRows)
-        .filter(
-          // Keep the rows whose displayed columns match searchAll
-          dataRow => this.deepIncludesCaseInsensitive(dataRow, displayedKeys, searchAll)
-          // Keep the rows that have matching values defined in the filters (i.e. table headers and drop-downs)
-          &&
-          _.chain(filters)
-            .keys()
-            .every(filterKey => this.deepIncludesCaseInsensitive(dataRow, filterKey, filters[filterKey]))
-            .value())
-        // Sort by sortColumnDataKey
-        .sortBy(
-          // TODO Add a data type key to the header props to indicate if column values are strings, numbers, dates...
-          sortColumnDataKey.toLowerCase().includes(`date`) ?
-            dataRow => dataRow[sortColumnDataKey].split(`-`).reverse().join(``) :  // DD-MM-YYYY -> YYYYMMDD
-            sortColumnDataKey)
-        .value()
-
-      if (!ascendingOrder) {
-        filterSortedDataRows.reverse()
-      }
-
-      return filterSortedDataRows
-    },
-    _.isEqual)
 
   updateSelectedRows(rowId) {
     this.setState({
@@ -132,25 +149,32 @@ export default class TableManager extends React.Component {
   }
 
   // Filters are pairs of key-value that are searched for in the dataRows prop
-  updateFilters(dataKey, value) {
-    this.setState({
-      filters:
-        _.chain(this.state.filters)
-          .omit(dataKey)  // Returns new object, this.state.filters isn’t mutated, can _.cloneDeep if needed though
-          .assign(
-            // An empty string means the filter has been deleted from the table header or All has been selected in a
-            // dropdown, so we add no keys to the filters object
-            value.trim() === `` ? {} : { [dataKey]: value })
-          .value(),
-      currentPage: 1
-    })
+  updateFilters(dataKey, value, debounce = true) {
+    const newFilters = _.chain(this.state.filters)
+      .omit(dataKey)  // Returns new object, this.state.filters isn’t mutated, can _.cloneDeep if needed though
+      .assign(
+        // An empty string means the filter has been deleted from the table header or All has been selected in a
+        // dropdown, so we add no keys to the filters object
+        value.trim() === `` ? {} : { [dataKey]: value })
+      .value()
+
+    this.setState(
+      {
+        filters: newFilters,
+        currentPage: 1
+      },
+      debounce ? this.debouncedFilterAndSort : this.immediateFilterAndSort
+    )
   }
 
   updateSearchAll(searchString) {
-    this.setState({
-      searchAll: searchString,
-      currentPage: 1
-    })
+    this.setState(
+      {
+        searchAll: searchString,
+        currentPage: 1
+      },
+      this.debouncedFilterAndSort
+    )
   }
 
   // Setting rowsPerPage to 0 shows all rows, see render below
@@ -163,23 +187,17 @@ export default class TableManager extends React.Component {
 
   // If the columnIndex is the same we flip the order between ascending/descending
   updateSortColumn(columnIndex) {
-    this.setState({
-      sortColumnIndex: columnIndex,
-      ascendingOrder: this.state.sortColumnIndex === columnIndex ? !this.state.ascendingOrder : true
-    })
+    this.setState(
+      {
+        sortColumnIndex: columnIndex,
+        ascendingOrder: this.state.sortColumnIndex === columnIndex ? !this.state.ascendingOrder : true
+      },
+      () => this.immediateFilterAndSort()
+    )
   }
 
   render() {
-    const filteredSortedDataRows =
-      this.filterSortDataRows(
-        this.props.dataRows,
-        this.state.filters,
-        this.props.tableHeaders.map(tableHeader => tableHeader.dataKey),
-        this.state.searchAll,
-        this.props.tableHeaders.length > 0 ? this.props.tableHeaders[this.state.sortColumnIndex].dataKey : ``,
-        this.state.ascendingOrder)
-
-    const { rowsPerPage, currentPage } = this.state
+    const { rowsPerPage, currentPage, filteredSortedDataRows } = this.state
     const currentPageDataRows = rowsPerPage ?
       filteredSortedDataRows.slice(rowsPerPage * (currentPage - 1), rowsPerPage * currentPage) :
       filteredSortedDataRows
