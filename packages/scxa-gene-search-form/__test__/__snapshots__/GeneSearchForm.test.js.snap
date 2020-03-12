@@ -1,0 +1,233 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GeneSearchForm matches snapshot 1`] = `
+<form
+  action="foo/bar"
+  method="post"
+>
+  <div
+    className=""
+  >
+    <div
+      className=""
+    >
+      <div>
+        <label
+          htmlFor="geneQuery"
+        >
+          Gene ID or gene symbol
+        </label>
+        <div
+          className=" css-2b097c-container"
+          onKeyDown={[Function]}
+        >
+          <div
+            className=" css-15r8ym2-Control"
+            onMouseDown={[Function]}
+            onTouchEnd={[Function]}
+          >
+            <div
+              className=" css-1hwfws3"
+            >
+              <div
+                className=" css-1wa3eu0-placeholder"
+              >
+                
+              </div>
+              <div
+                className="css-b8ldur-Input"
+              >
+                <div
+                  className=""
+                  style={
+                    Object {
+                      "display": "inline-block",
+                    }
+                  }
+                >
+                  <input
+                    aria-autocomplete="list"
+                    autoCapitalize="none"
+                    autoComplete="off"
+                    autoCorrect="off"
+                    disabled={false}
+                    id="gene-input"
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    onFocus={[Function]}
+                    spellCheck="false"
+                    style={
+                      Object {
+                        "background": 0,
+                        "border": 0,
+                        "boxSizing": "content-box",
+                        "color": "inherit",
+                        "fontSize": "inherit",
+                        "label": "input",
+                        "opacity": 1,
+                        "outline": 0,
+                        "padding": 0,
+                        "width": "1px",
+                      }
+                    }
+                    tabIndex="0"
+                    type="text"
+                    value=""
+                  />
+                  <div
+                    style={
+                      Object {
+                        "height": 0,
+                        "left": 0,
+                        "overflow": "scroll",
+                        "position": "absolute",
+                        "top": 0,
+                        "visibility": "hidden",
+                        "whiteSpace": "pre",
+                      }
+                    }
+                  >
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              className=" css-1hb7zxy-IndicatorsContainer"
+            />
+          </div>
+          <input
+            name="geneQuery"
+            type="hidden"
+            value=""
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      className=""
+    >
+      <div>
+        <label
+          htmlFor="species"
+        >
+          Species
+        </label>
+        <div
+          className=" css-2b097c-container"
+          onKeyDown={[Function]}
+        >
+          <div
+            className=" css-15r8ym2-Control"
+            onMouseDown={[Function]}
+            onTouchEnd={[Function]}
+          >
+            <div
+              className=" css-1hwfws3"
+            >
+              <div
+                className=" css-1uccc91-singleValue"
+              >
+                Any
+              </div>
+              <input
+                className="css-62g3xt-dummyInput"
+                disabled={false}
+                id="species-input"
+                onBlur={[Function]}
+                onChange={[Function]}
+                onFocus={[Function]}
+                readOnly={true}
+                tabIndex="0"
+                value=""
+              />
+            </div>
+            <div
+              className=" css-1hb7zxy-IndicatorsContainer"
+            >
+              <span
+                className="sc-AxjAm bxcukt"
+                cx={[Function]}
+              />
+            </div>
+          </div>
+          <input
+            name="species"
+            type="hidden"
+            value=""
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      className="small-12 columns"
+    >
+      <p
+        style={
+          Object {
+            "fontSize": "smaller",
+          }
+        }
+      >
+        Examples:
+        <span>
+           
+          <a
+            href="http://rickandmorty.wikia.com/wiki/Special:Search?query=Rick+Sanchez"
+          >
+            Rick Sanchez
+          </a>
+          , 
+        </span>
+        <span>
+          <a
+            href="http://rickandmorty.wikia.com/wiki/Special:Search?query=Unity"
+          >
+            Unity
+          </a>
+          , 
+        </span>
+        <span>
+          <a
+            href="http://rickandmorty.wikia.com/wiki/Special:Search?query=Galactic+Federation"
+          >
+            Galactic Federation
+          </a>
+          , 
+        </span>
+        <span>
+          <a
+            href="http://rickandmorty.wikia.com/wiki/Special:Search?query=Blemflarck"
+          >
+            Blemflarck
+          </a>
+          , 
+        </span>
+        <span>
+          <a
+            href="http://rickandmorty.wikia.com/wiki/Special:Search?query=anatomy"
+          >
+            anatomy
+          </a>
+        </span>
+      </p>
+    </div>
+  </div>
+  <div
+    className=""
+  >
+    <div
+      className="small-12 columns"
+    >
+      <button
+        className="button"
+        disabled={true}
+        onClick={null}
+        type="Submit"
+      >
+        Search
+      </button>
+    </div>
+  </div>
+</form>
+`;
