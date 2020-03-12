@@ -207,17 +207,17 @@ export default class TableManager extends React.Component {
   }
 
   render() {
-    const { rowsPerPage, currentPage, filteredSortedDataRows } = this.state
+    const { rowsPerPage, currentPage } = this.state
     const currentPageDataRows = rowsPerPage ?
-      filteredSortedDataRows.slice(rowsPerPage * (currentPage - 1), rowsPerPage * currentPage) :
-      filteredSortedDataRows
+      this.state.filteredSortedDataRows.slice(rowsPerPage * (currentPage - 1), rowsPerPage * currentPage) :
+      this.state.filteredSortedDataRows
 
     return (
       <div className={this.props.className}>
         <TablePreamble
           dropdowns={this.state.dropdownFilters}
           dropdownOnChange={this.updateFilters}
-          rowsCount={this.props.dataRows.length}
+          rowsCount={this.state.filteredSortedDataRows.length}
           rowsPerPageOptions={this.rowsPerPageOptions}
           rowsPerPage={this.state.rowsPerPage}
           rowsPerPageOnChange={this.updateRowsPerPage}
@@ -239,7 +239,7 @@ export default class TableManager extends React.Component {
 
         <TableFooter
           dataRowsLength={this.props.dataRows.length}
-          filteredDataRowsLength={filteredSortedDataRows.length}
+          filteredDataRowsLength={this.state.filteredSortedDataRows.length}
           currentPage={this.state.currentPage}
           rowsPerPage={this.state.rowsPerPage}
           onChange={i => this.setState({ currentPage: i })}/>
