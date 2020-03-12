@@ -74,6 +74,22 @@ describe(`TableFooter`, () => {
     expect(wrapper.find(`li`).at(8)).toHaveText(`Next`)
   })
 
+  test(`shows only 1 when all rows`, () => {
+    const filteredDataRowsLength = getRandomInt(props.rowsPerPage * MAX_PAGE_ITEMS_COUNT + 1, props.rowsPerPage * 20)
+    const wrapper =
+      shallow(
+        <TableFooter
+          {...props}
+          dataRowsLength={filteredDataRowsLength}
+          filteredDataRowsLength={filteredDataRowsLength}
+          rowsPerPage={0}/>)
+
+    expect(wrapper.find(`li`)).toHaveLength(3)
+    expect(wrapper.find(`li`).at(0)).toHaveText(`Previous`)
+    expect(wrapper.find(`li`).at(1)).toHaveText(`1`)
+    expect(wrapper.find(`li`).at(2)).toHaveText(`Next`)
+  })
+
   test(`shows the first page itemes anchored at N if data rows spans ${MAX_PAGE_ITEMS_COUNT} or more pages`, () => {
     const filteredDataRowsLength = getRandomInt(props.rowsPerPage * MAX_PAGE_ITEMS_COUNT + 1, props.rowsPerPage * 20)
     const wrapper =

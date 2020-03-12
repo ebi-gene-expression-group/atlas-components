@@ -20,9 +20,12 @@ const TableFooter =
 
   let restyledPages = pagination.pages
 
-  // An edge case where paginate gets all wonky
+  // A couple of edge cases where jw-paginate gets all wonky
   if (filteredDataRowsLength === 0) {
     restyledPages = []
+  } else if (rowsPerPage === 0) {
+    restyledPages = [1]
+    pagination.totalPages = 1
   }
 
   // Replace first and last pages with 1 and n if they’re not visible in the default 7 items
@@ -56,7 +59,7 @@ const TableFooter =
         <ul className={`pagination`} style={{ textAlign: `right`}}>
           <li>
             {
-              currentPage === 1 ?
+              filteredDataRowsLength === 0 || currentPage === 1 ?
                 <span className={`disabled`}>Previous</span> :
                 <a onClick={() => onChange(currentPage - 1)}>Previous</a>
             }
@@ -82,7 +85,7 @@ const TableFooter =
           }
           <li>
             {
-              filteredDataRowsLength <= currentPage * rowsPerPage ?
+              filteredDataRowsLength === 0 || currentPage === pagination.totalPages ?
                 <span className={`disabled`}>Next</span> :
                 <a onClick={() => onChange(currentPage + 1)}>Next</a>
             }
