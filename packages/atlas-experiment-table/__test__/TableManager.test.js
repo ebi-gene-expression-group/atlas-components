@@ -249,6 +249,57 @@ describe(`TableManager`, () => {
     expect(wrapper.state(`filters`)).toHaveProperty(randomFilter.dataKey, randomFilter.value)
   })
 
+  test(`can handle initial dropdown values`, () => {
+    const dropdownFilters = _.cloneDeep(bulkDropdownFilters)
+    // Pick a random dropdown filter...
+    const randomDropdownFilterIndex =
+      getRandomInt(0, dropdownFilters.length)
+    const randomDropdownFilterValue =
+      getRandomValueFromKeyedRows(bulkExperiments, dropdownFilters[randomDropdownFilterIndex].dataKey)
+    // ... and set an initial value
+    dropdownFilters[randomDropdownFilterIndex].value = randomDropdownFilterValue
+
+    const wrapper =
+      shallow(
+        <TableManager
+          {...props}
+          dataRows={bulkExperiments}
+          tableHeaders={bulkTableHeaders}
+          dropdownFilters={dropdownFilters}/>)
+    expect(wrapper.state(`filters`))
+      .toHaveProperty(
+        dropdownFilters[randomDropdownFilterIndex].dataKey,
+        dropdownFilters[randomDropdownFilterIndex].value)
+
+    // Find the index in the select option menu that corresponds to the random value
+    const randomDropdownOptions = wrapper.state(`dropdownFilters`)[randomDropdownFilterIndex].options
+    const randomDropdownOptionIndex =
+      randomDropdownOptions.findIndex(option => option.toLowerCase() === randomDropdownFilterValue.toLowerCase())
+
+    // Choose the index of the next option, so that it’s a different one
+    const nextOptionIndex =
+      randomDropdownOptionIndex === randomDropdownOptions.length - 1 ?
+        randomDropdownOptionIndex - 1 :
+        randomDropdownOptionIndex + 1
+
+    // Run the synthetic event
+    wrapper.find(TablePreamble).invoke(`dropdownOnChange`)(
+      dropdownFilters[randomDropdownFilterIndex].dataKey,
+      randomDropdownOptions[nextOptionIndex],
+      false)
+
+    // The new value is set in the filters and in the dropdowns
+    expect(wrapper.state(`filters`))
+      .toHaveProperty(
+        dropdownFilters[randomDropdownFilterIndex].dataKey,
+        randomDropdownOptions[nextOptionIndex])
+
+    expect(wrapper.find(TablePreamble).dive().find(`select`).at(randomDropdownFilterIndex))
+      .toHaveProp(
+        `value`,
+        randomDropdownOptions[nextOptionIndex])
+  })
+
   test(`can sort using a randomly picked sortable header`, () => {
     const wrapper =
       shallow(
