@@ -102,7 +102,7 @@ describe(`TablePreamble`, () => {
   })
 
 
-  test(`defaults to ‘All’  if the initial value in a dropdown filter isn’t one of the options `, () => {
+  test(`defaults to ‘All’  if the initial value in a dropdown filter isn’t one of the options`, () => {
     const options =
       // https://stackoverflow.com/questions/3751520/how-to-generate-sequence-of-numbers-chars-in-javascript
       Array.apply(0, Array(getRandomInt(1, MAX_OPTIONS_COUNT)))
@@ -120,7 +120,7 @@ describe(`TablePreamble`, () => {
     const wrapper = shallow(<TablePreamble {...props} dropdowns={dropdowns}/>)
 
     expect(wrapper.find(`select`).first().find(`option`)).toHaveLength(options.length + 1)
-    expect(wrapper.find(`select`).first()).toHaveProp({defaultValue: ``})
+    expect(wrapper.find(`select`).first()).toHaveProp({value: ``})
   })
 
   test(`renders as many dropdowns as specified in the dropdowns prop`, () => {
