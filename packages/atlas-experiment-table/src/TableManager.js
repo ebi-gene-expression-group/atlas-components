@@ -95,9 +95,10 @@ export default class TableManager extends React.Component {
       currentPage: 1,
       rowsPerPage: this.rowsPerPageOptions[0],
       // Fields in the filters/headers *must not be* arrays or objects, so the spread creates good clones
-      dropdownFiltersOptions:
-        props.dropdownFilters.reduce((acc, dropdownFilter) => {
-          acc[dropdownFilter.dataKey] =
+      dropdownFilters:
+        props.dropdownFilters.map(dropdownFilter => ({
+          ...dropdownFilter,
+          options:
             _.chain(props.dataRows)
               .flatMap(dropdownFilter.dataKey)
               .map(_.toString)
@@ -105,10 +106,8 @@ export default class TableManager extends React.Component {
               .map(capitalizeEachWord)
               .uniq()
               .value()
-
-          return acc
-        },
-        {}),
+        }))
+      ,
       searchAll: ``,
       filters: filters,
       selectedRows: []
@@ -150,17 +149,28 @@ export default class TableManager extends React.Component {
 
   // Filters are pairs of key-value that are searched for in the dataRows prop
   updateFilters(dataKey, value, debounce = true) {
-    const newFilters = _.chain(this.state.filters)
-      .omit(dataKey)  // Returns new object, this.state.filters isn’t mutated, can _.cloneDeep if needed though
-      .assign(
-        // An empty string means the filter has been deleted from the table header or All has been selected in a
-        // dropdown, so we add no keys to the filters object
-        value.trim() === `` ? {} : { [dataKey]: value })
-      .value()
+    const newFilters =
+      _.chain(this.state.filters)
+        .omit(dataKey)  // Returns new object, this.state.filters isn’t mutated, can _.cloneDeep if needed though
+        .assign(
+          // An empty string means the filter has been deleted from the table header or All has been selected in a
+          // dropdown, so we add no keys to the filters object
+          value.trim() === `` ? {} : { [dataKey]: value })
+        .value()
+
+    const newDropdownFilters =
+      _.chain(this.state.dropdownFilters)
+        .cloneDeep()
+        .map(dropdownFilter => ({
+          ...dropdownFilter,
+          value: dropdownFilter.dataKey === dataKey ? value : ``
+        }))
+        .value()
 
     this.setState(
       {
         filters: newFilters,
+        dropdownFilters: newDropdownFilters,
         currentPage: 1
       },
       debounce ? this.debouncedFilterAndSort : this.immediateFilterAndSort
@@ -205,10 +215,7 @@ export default class TableManager extends React.Component {
     return (
       <div className={this.props.className}>
         <TablePreamble
-          dropdowns={this.props.dropdownFilters.map(dropdownFilter => ({
-            ...dropdownFilter,
-            options: this.state.dropdownFiltersOptions[dropdownFilter.dataKey]
-          }))}
+          dropdowns={this.state.dropdownFilters}
           dropdownOnChange={this.updateFilters}
           rowsCount={this.props.dataRows.length}
           rowsPerPageOptions={this.rowsPerPageOptions}

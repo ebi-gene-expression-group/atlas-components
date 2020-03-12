@@ -24,8 +24,8 @@ exports[`TablePreamble matches snapshot (basic) 1`] = `
     <label>
       Entries per page:
       <select
-        defaultValue={10}
         onChange={[Function]}
+        value={10}
       >
         <option
           key="0"
@@ -90,7 +90,7 @@ exports[`TablePreamble matches snapshot (with dropdowns) 1`] = `
           "Plants",
           "Fungi",
         ],
-        "value": "Dorne",
+        "value": "",
       },
       Object {
         "dataKey": "technologyType",
@@ -125,8 +125,8 @@ exports[`TablePreamble matches snapshot (with dropdowns) 1`] = `
       Experiment type
       :
       <select
-        defaultValue=""
         onChange={[Function]}
+        value=""
       >
         <option
           value=""
@@ -156,8 +156,8 @@ exports[`TablePreamble matches snapshot (with dropdowns) 1`] = `
       Kingdom
       :
       <select
-        defaultValue=""
         onChange={[Function]}
+        value=""
       >
         <option
           value=""
@@ -193,8 +193,8 @@ exports[`TablePreamble matches snapshot (with dropdowns) 1`] = `
       Technology type
       :
       <select
-        defaultValue="Smart-Seq"
         onChange={[Function]}
+        value="Smart-Seq"
       >
         <option
           value=""
@@ -228,8 +228,8 @@ exports[`TablePreamble matches snapshot (with dropdowns) 1`] = `
     <label>
       Entries per page:
       <select
-        defaultValue={10}
         onChange={[Function]}
+        value={10}
       >
         <option
           key="0"

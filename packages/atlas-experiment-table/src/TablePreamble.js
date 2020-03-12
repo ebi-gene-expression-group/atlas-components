@@ -16,13 +16,11 @@ const TablePreamble =
   <React.Fragment>
     {
       dropdowns.map((dropdown, index) =>  {
-        let defaultValue = ``
         if (dropdown.value) {
           const valueIndex =
+            // Fuzzy-match the value in the select, in case an initial value in props was passed
             dropdown.options.findIndex(option => option.toLowerCase().match(dropdown.value.trim().toLowerCase()))
-          if (valueIndex >= 0) {
-            defaultValue = dropdown.options[valueIndex]
-          }
+          dropdown.value = valueIndex >= 0 ? dropdown.options[valueIndex] : ``
         }
 
         return (
@@ -31,7 +29,7 @@ const TablePreamble =
             className={`small-12 medium-4 large-2 columns`}>
             <label>{dropdown.label}:
               <select
-                defaultValue={defaultValue}
+                value={dropdown.value || ``}
                 onChange={e => dropdownOnChange(dropdown.dataKey, e.target.value, false)}>
                 <option value={``}>All</option>
                 {
@@ -47,7 +45,7 @@ const TablePreamble =
     <div className={className}>
       <label>Entries per page:
         <select
-          defaultValue={rowsPerPage}
+          value={rowsPerPage}
           onChange={e => rowsPerPageOnChange(Number.parseInt(e.target.value))}>
           {
             rowsPerPageOptions
