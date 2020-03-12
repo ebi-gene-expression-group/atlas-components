@@ -448,6 +448,10 @@ describe(`TableManager`, () => {
   })
 
   test(`matches snapshot (bulk)`, () => {
+    // Unfortunately ReactTooltip injects dynamically generated class names, and the rowSelectionColumn will cause the
+    // snapshots not to match
+    delete bulkRowSelectionColumn.tooltipContent
+
     const wrapper =
       mount(
         <TableManager
@@ -460,6 +464,10 @@ describe(`TableManager`, () => {
   })
 
   test(`matches snapshot (single cell)`, () => {
+    // Unfortunately ReactTooltip injects dynamically generated class names, and the rowSelectionColumn will cause the
+    // snapshots not to match
+    delete singleCellRowSelectionColumn.tooltipContent
+
     const wrapper =
       mount(
         <TableManager

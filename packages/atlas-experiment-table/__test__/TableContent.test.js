@@ -109,8 +109,10 @@ describe(`TableContent`, () => {
   test(`matches snapshot (with selection)`, () => {
     const rowSelectionColumn = {
       label: `Download`,
-      dataKey: `experimentAccession`,
-      tooltipContent: `Download experiment and stuff`
+      dataKey: `experimentAccession`
+      // Unfortunately ReactTooltip injects dynamically generated class names, and the rowSelectionColumn will cause the
+      // snapshots not to match
+      // tooltipContent: `Download experiment and stuff`
     }
     const wrapper =
       mount(
