@@ -12,7 +12,7 @@ exports[`Autocomplete matches snapshot 1`] = `
     onKeyDown={[Function]}
   >
     <div
-      className=" css-tinoic"
+      className=" css-15r8ym2-Control"
       onMouseDown={[Function]}
       onTouchEnd={[Function]}
     >
@@ -25,7 +25,7 @@ exports[`Autocomplete matches snapshot 1`] = `
           foo
         </div>
         <div
-          className="css-1g6gooi"
+          className="css-b8ldur-Input"
         >
           <div
             className=""
@@ -83,7 +83,7 @@ exports[`Autocomplete matches snapshot 1`] = `
         </div>
       </div>
       <div
-        className=" css-1wy0on6"
+        className=" css-1hb7zxy-IndicatorsContainer"
       >
         <div
           aria-hidden="true"
@@ -93,7 +93,7 @@ exports[`Autocomplete matches snapshot 1`] = `
         >
           <svg
             aria-hidden="true"
-            className="css-19bqh2r"
+            className="css-6q0nyr-Svg"
             focusable="false"
             height={20}
             viewBox="0 0 20 20"

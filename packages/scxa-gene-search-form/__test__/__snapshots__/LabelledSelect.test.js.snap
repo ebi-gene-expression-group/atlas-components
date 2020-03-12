@@ -12,7 +12,7 @@ exports[`LabelledSelect matches snapshot 1`] = `
     onKeyDown={[Function]}
   >
     <div
-      className=" css-tinoic"
+      className=" css-15r8ym2-Control"
       onMouseDown={[Function]}
       onTouchEnd={[Function]}
     >
@@ -37,10 +37,10 @@ exports[`LabelledSelect matches snapshot 1`] = `
         />
       </div>
       <div
-        className=" css-1wy0on6"
+        className=" css-1hb7zxy-IndicatorsContainer"
       >
         <span
-          className="sc-bdVaJa jcfyVD"
+          className="sc-AxjAm bxcukt"
           cx={[Function]}
         />
       </div>
