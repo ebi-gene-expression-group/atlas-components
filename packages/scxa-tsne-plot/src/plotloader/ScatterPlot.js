@@ -1,23 +1,22 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import ReactHighcharts from 'react-highcharts'
+import Highcharts from 'highcharts'
+import HighchartsReact from 'highcharts-react-official'
 
 import HighchartsExporting from 'highcharts/modules/exporting'
-import HighchartsHeatmap from 'highcharts/modules/heatmap'
-import highchartsAdaptChartToLegendModule from 'highcharts-adapt-chart-to-legend'
+import HighchartsColorAxis from 'highcharts/modules/coloraxis'
 
 //import HighchartsMap from 'highcharts/modules/map'
 //import highchartsYAxisPanningModule from './modules/y-axis-panning'
 
-import HighchartsBoost from './modules/boost'
-import HighchartsExportStyle from './modules/export-style'
-import highchartsHeatmapLegendModule from './modules/heatmap-legend'
+import highchartsBoost from './modules/boost'
+import highchartsExportStyle from './modules/export-style'
+import highchartsAdaptChartToLegendModule from './modules/adapt-chart-to-legend'
+import highchartsColorAxisLogWithNegativeValues from './modules/coloraxis-logarithmic-with-negative-values'
 
 
 import deepmerge from 'deepmerge'
 import SeriesPropTypes from './SeriesPropTypes'
-
-const Highcharts = ReactHighcharts.Highcharts
 
 Highcharts.SVGRenderer.prototype.symbols.download = (x, y, w, h) => [
   // Arrow stem
@@ -34,14 +33,21 @@ Highcharts.SVGRenderer.prototype.symbols.download = (x, y, w, h) => [
   `L`, x + w, y + h * 0.9
 ]
 
-// Only include modules if Highcharts isn’t a *good* mock -- Boost/Exporting can break tests
-// if (Highcharts.getOptions()) {...}
-HighchartsExporting(Highcharts)
-HighchartsBoost(Highcharts)
-HighchartsHeatmap(Highcharts)
-highchartsHeatmapLegendModule(Highcharts, `expressionLevel`)
-highchartsAdaptChartToLegendModule(Highcharts)
-HighchartsExportStyle(Highcharts)
+async function addModules() {
+  // Only include modules if Highcharts isn’t a *good* mock -- Boost/Exporting can break tests
+  // if (Highcharts.getOptions()) {...}
+  HighchartsExporting(Highcharts)
+  highchartsExportStyle(Highcharts)
+
+  highchartsBoost(Highcharts)
+
+  HighchartsColorAxis(Highcharts)
+  highchartsColorAxisLogWithNegativeValues(Highcharts)
+
+  highchartsAdaptChartToLegendModule(Highcharts)
+}
+
+addModules()
 
 // To add drag-to-pan functionality:
 // HighchartsMap(Highcharts)
@@ -212,7 +218,10 @@ const ScatterPlot = (props) => {
 
   return (
     <div className={chartClassName}>
-      <ReactHighcharts config={config} callback={props.afterRender} />
+      <HighchartsReact
+        highcharts={Highcharts}
+        options={config}
+        callback={props.afterRender} />
     </div>
   )
 }

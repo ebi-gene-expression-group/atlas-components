@@ -58,7 +58,28 @@ const experiment4 = {
   ]
 }
 
-const { accession, perplexities, ks, metadata, species } = experiment1
+const experimentOmega = {
+  accession: `E-HCAD-4`,
+  species: `Homo sapiens`,
+  perplexities: [1, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50],
+  ks: [8, 32, 44, 58, 71, 84],
+  metadata: [
+    {
+      value: `characteristic_cell_type`,
+      label: `Cell type`
+    },
+    {
+      value: `characteristic_developmental_stage`,
+      label: `Developmental stage`
+    },
+    {
+      value: `characteristic_sex`,
+      label: `Sex`
+    }
+  ]
+}
+
+const { accession, perplexities, ks, metadata, species } = experimentOmega
 
 class Demo extends React.Component {
   constructor(props) {
@@ -111,7 +132,7 @@ class Demo extends React.Component {
         </div>
 
         <TsnePlotView
-          atlasUrl={`http://ves-hx-76:8080/gxa/sc/`}
+          atlasUrl={`https://wwwdev.ebi.ac.uk/gxa/sc/`}
           suggesterEndpoint={`json/suggestions`}
           experimentAccession={this.state.experimentAccession}
           wrapperClassName={`row expanded`}

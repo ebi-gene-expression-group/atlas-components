@@ -99,8 +99,7 @@ const GeneExpressionScatterPlot = (props) => {
 
   const highchartsConfig = {
     chart: {
-      // Magic number to adjust the height discrepancy between the two charts
-      height: plotIsDisabled ? height - 12 : height
+      height: height,
     },
     title: {
       text: `Gene expression`
@@ -124,9 +123,15 @@ const GeneExpressionScatterPlot = (props) => {
     marker: {
       symbol: `circle`
     },
+    plotOptions: {
+      series: {
+        colorKey: `expressionLevel`
+      }
+    },
     colorAxis: plotIsDisabled ?
       {} :
       {
+        allowNegativeLog: true,
         min: 0.1,
         max: 10 ** dataScale,
         type: `logarithmic`,
@@ -147,7 +152,8 @@ const GeneExpressionScatterPlot = (props) => {
         floating: false,
         align: `center`,
         symbolHeight: 5,
-        symbolWidth: 450
+        symbolWidth: 450,
+        enabled: true
       }
   }
 
