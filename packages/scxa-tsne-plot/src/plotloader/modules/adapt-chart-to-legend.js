@@ -42,8 +42,6 @@
           }
         }
         if (addedHeight) {
-          console.log(this.chart)
-
           // Adapt chart metrics
           chart.chartHeight = chart.originalChartHeight + addedHeight;
           chart.marginBottom += addedHeight;
