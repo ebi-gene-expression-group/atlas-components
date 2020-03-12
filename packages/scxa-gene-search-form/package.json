@@ -1,14 +1,12 @@
 {
-  "name": "scxa-gene-search-form",
+  "name": "@ebi-gene-expression-group/scxa-gene-search-form",
   "version": "1.4.1",
   "description": "Single Cell Expression Atlas homepage gene search form",
   "main": "lib/index.js",
   "scripts": {
-    "prepack": "rm -rf lib && babel src -d lib --copy-files",
+    "prepare": "rm -rf lib && babel src -d lib --copy-files",
     "test": "jest",
-    "posttest": "jest --coverage --coverageReporters=text-lcov | coveralls",
-    "postversion": "npm publish",
-    "postpublish": "git push && git push --tags"
+    "posttest": "jest --coverage --coverageReporters=text-lcov | coveralls"
   },
   "jest": {
     "setupFilesAfterEnv": [
@@ -39,7 +37,7 @@
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ebi-gene-expression-group/scxa-gene-search-form.git"
+    "url": "git+https://github.com/ebi-gene-expression-group/atlas-components.git"
   },
   "dependencies": {
     "prop-types": "^15.7.2",
@@ -61,7 +59,6 @@
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.14.0",
     "eslint": "^6.0.1",
-    "eslint-config-gene-expression": "^0.5.0",
     "fetch-mock": "^7.3.3",
     "jest": "^24.8.0",
     "jest-environment-enzyme": "^7.0.2",
