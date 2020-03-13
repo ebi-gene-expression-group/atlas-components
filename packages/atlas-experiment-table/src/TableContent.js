@@ -24,7 +24,7 @@ const TableContent =
     // Ordering
     sortColumnIndex, ascendingOrder, tableHeaderCellOnClick,
     // Row selection and action on selected rows
-    rowSelectionColumn, selectedRows, host, selectOnChange,
+    downloadFileTypes, rowSelectionColumn, selectedRows, host, selectOnChange,
     className
   }) =>
     <React.Fragment>
@@ -53,6 +53,7 @@ const TableContent =
               rowSelectionColumn &&
               <SelectionTableHeaderCell
                 {...rowSelectionColumn}
+                downloadFileTypes={downloadFileTypes}
                 selectedRowIds={selectedRows}
                 onClick={rowSelectionColumn.tableHeaderCellOnClick || _validateAndDownloadExperimentFiles(host)}/>
             }
@@ -107,6 +108,12 @@ TableContent.propTypes = {
   ascendingOrder: PropTypes.bool.isRequired,
   tableHeaderCellOnClick: PropTypes.func.isRequired,
   // Row selection and action on selected rows
+  downloadFileTypes: PropTypes.arrayOf(
+    PropTypes.shape({
+      description: PropTypes.string,
+      id: PropTypes.string
+    })
+  ).isRequired,
   rowSelectionColumn: PropTypes.shape({
     label: PropTypes.string.isRequired,
     dataKey: PropTypes.string.isRequired,

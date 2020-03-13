@@ -7,16 +7,17 @@ const fetchJson = async (host, resource, queryParams) => {
   return await response.json()
 }
 
-const _validateAndDownloadExperimentFiles = (host) => async (experimentAccessions) => {
+const _validateAndDownloadExperimentFiles = (host) => async (experimentAccessions, fileTypes) => {
   try {
-    const response = await fetchJson(host, `json/experiments/download/zip/check`, { accession: experimentAccessions })
+    const response = await fetchJson(host, `json/experiments/download/zip/check`,
+      { accession: experimentAccessions, fileType: fileTypes })
     const invalidFiles = _.chain(response.invalidFiles).values().flattenDeep().value()
 
     if (invalidFiles.length === 0 ||
         window.confirm(
           `The following files are not available:\n• ${invalidFiles.join(`\n• `)}\nWould you like to continue?`)) {
       window.location.replace(
-        URI(`experiments/download/zip`, host).search({ accession: experimentAccessions }).toString())
+        URI(`experiments/download/zip`, host).search({ accession: experimentAccessions, fileType: fileTypes }).toString())
     }
   } catch (e) {
     console.error(e)

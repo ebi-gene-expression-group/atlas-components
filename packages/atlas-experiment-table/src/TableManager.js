@@ -53,6 +53,12 @@ export default class TableManager extends React.Component {
     sortColumnIndex: PropTypes.number,
     ascendingOrder: PropTypes.bool,
     host: PropTypes.string,
+    downloadFileTypes: PropTypes.arrayOf(
+      PropTypes.shape({
+        description: PropTypes.string,
+        id: PropTypes.string
+      })
+    ).isRequired,
     rowSelectionColumn: PropTypes.shape({
       label: PropTypes.string.isRequired,
       dataKey: PropTypes.string.isRequired,
@@ -232,6 +238,7 @@ export default class TableManager extends React.Component {
           sortColumnIndex={this.state.sortColumnIndex}
           ascendingOrder={this.state.ascendingOrder}
           tableHeaderCellOnClick={this.updateSortColumn}
+          downloadFileTypes={this.props.downloadFileTypes}
           rowSelectionColumn={this.props.rowSelectionColumn}
           selectedRows={this.state.selectedRows}
           host={this.props.host}
