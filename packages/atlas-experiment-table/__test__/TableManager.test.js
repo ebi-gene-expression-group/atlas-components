@@ -13,7 +13,8 @@ import randomString from 'random-string'
 import {
   getRandomInt, randomSubstring,
   bulkTableHeaders, bulkDropdownFilters, bulkRowSelectionColumn,
-  singleCellTableHeaders, singleCellDropdownFilters, singleCellRowSelectionColumn } from './TestUtils'
+  singleCellTableHeaders, singleCellDropdownFilters, singleCellRowSelectionColumn, downloadFileTypes
+} from './TestUtils'
 import bulkExperiments from './experiments-bulk.json'
 import singleCellExperiments from './experiments-sc.json'
 
@@ -28,7 +29,8 @@ describe(`TableManager`, () => {
   const props = {
     tableHeaders: [],
     dropdownFilters: [],
-    dataRows: []
+    dataRows: [],
+    downloadFileTypes: downloadFileTypes
   }
 
   test(`renders a TablePreamble, a TableContent and a TableFooter`, () => {

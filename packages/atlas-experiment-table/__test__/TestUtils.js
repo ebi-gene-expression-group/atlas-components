@@ -182,9 +182,24 @@ const singleCellRowSelectionColumn = {
   width: 0.5
 }
 
+const downloadFileTypes = [
+  {
+    description: `File type 1`,
+    id: `file1`
+  },
+  {
+    description: `File type 2`,
+    id: `file-2`
+  },
+  {
+    description: `File type 3`,
+    id: `file-type3`
+  }
+]
+
 export {
   getRandomInt, generateRandomHost, generateRandomExperimentAccession, randomSubstring,
-  getSingleCellExperimentFiles,
+  getSingleCellExperimentFiles, downloadFileTypes,
   bulkTableHeaders, bulkDropdownFilters, bulkRowSelectionColumn,
   singleCellTableHeaders, singleCellDropdownFilters, singleCellRowSelectionColumn
 }

@@ -9,7 +9,7 @@ import TableManager from '../src/TableManager'
 import randomString from 'random-string'
 import {
   getRandomInt,
-  singleCellTableHeaders, singleCellDropdownFilters } from './TestUtils'
+  singleCellTableHeaders, singleCellDropdownFilters, downloadFileTypes } from './TestUtils'
 import singleCellExperiments from './experiments-sc.json'
 
 describe(`TableManagerRoute`, () => {
@@ -17,6 +17,7 @@ describe(`TableManagerRoute`, () => {
     const wrapper = mount(
       <MemoryRouter initialEntries={[ `/experiments` ]}>
         <TableManagerRoute
+          downloadFileTypes={downloadFileTypes}
           tableHeaders={singleCellTableHeaders}
           dropdownFilters={singleCellDropdownFilters}
           dataRows={singleCellExperiments} />
@@ -30,6 +31,7 @@ describe(`TableManagerRoute`, () => {
     const wrapper = mount(
       <MemoryRouter initialEntries={[ `/${randomString()}` ]}>
         <TableManagerRoute
+          downloadFileTypes={downloadFileTypes}
           tableHeaders={singleCellTableHeaders}
           dropdownFilters={singleCellDropdownFilters}
           dataRows={singleCellExperiments} />
@@ -46,6 +48,7 @@ describe(`TableManagerRoute`, () => {
     const wrapper = mount(
       <MemoryRouter initialEntries={[ `/experiments` ]}>
         <TableManagerRoute
+          downloadFileTypes={downloadFileTypes}
           tableHeaders={singleCellTableHeaders}
           dropdownFilters={singleCellDropdownFilters}
           dataRows={singleCellExperiments} />
@@ -79,6 +82,7 @@ describe(`TableManagerRoute`, () => {
           `${singleCellDropdownFilters[randomDropdownFilterIndex].dataKey}=bar`
         ]}>
         <TableManagerRoute
+          downloadFileTypes={downloadFileTypes}
           tableHeaders={singleCellTableHeaders}
           dropdownFilters={singleCellDropdownFilters}
           dataRows={singleCellExperiments} />
@@ -99,6 +103,7 @@ describe(`TableManagerRoute`, () => {
       <MemoryRouter
         initialEntries={[ `/experiments?foo=bar` ]}>
         <TableManagerRoute
+          downloadFileTypes={downloadFileTypes}
           tableHeaders={singleCellTableHeaders}
           dropdownFilters={singleCellDropdownFilters}
           dataRows={singleCellExperiments} />

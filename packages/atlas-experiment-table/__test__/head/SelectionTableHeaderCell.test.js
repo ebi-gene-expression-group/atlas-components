@@ -5,8 +5,9 @@ import { Table, Heading } from 'evergreen-ui'
 import ReactTooltip from 'react-tooltip'
 
 import SelectionTableHeaderCell from '../../src/head/SelectionTableHeaderCell'
+import Popup from 'react-popup'
 
-import { getRandomInt, generateRandomExperimentAccession } from '../TestUtils'
+import { getRandomInt, generateRandomExperimentAccession, downloadFileTypes } from '../TestUtils'
 
 import randomString from 'random-string'
 
@@ -17,6 +18,7 @@ describe(`SelectionTableHeaderCell`, () => {
     const props = {
       label: randomString(),
       selectedRowIds: [],
+      downloadFileTypes: downloadFileTypes,
       onClick: () => {}
     }
     const wrapper = shallow(<SelectionTableHeaderCell {...props}/>)
@@ -32,6 +34,7 @@ describe(`SelectionTableHeaderCell`, () => {
   test(`displays a table header cell with a link if there are rows selected`, () => {
     const props = {
       label: randomString(),
+      downloadFileTypes: downloadFileTypes,
       selectedRowIds:
           // https://stackoverflow.com/questions/3751520/how-to-generate-sequence-of-numbers-chars-in-javascript
           Array.apply(0, Array(getRandomInt(1, MAX_EXPERIMENT_COUNT)))
@@ -45,26 +48,27 @@ describe(`SelectionTableHeaderCell`, () => {
     expect(wrapper.find(`a`)).toIncludeText(props.label)
   })
 
-  test(`calls onClick with the selected row IDs when the link is clicked`, () => {
+  test(`opens a popup window when the download link is clicked`, () => {
     const props = {
       label: randomString(),
+      downloadFileTypes: downloadFileTypes,
       selectedRowIds:
-          // https://stackoverflow.com/questions/3751520/how-to-generate-sequence-of-numbers-chars-in-javascript
-          Array.apply(0, Array(getRandomInt(1, MAX_EXPERIMENT_COUNT)))
-            .map(() => generateRandomExperimentAccession()),
+      // https://stackoverflow.com/questions/3751520/how-to-generate-sequence-of-numbers-chars-in-javascript
+        Array.apply(0, Array(getRandomInt(1, MAX_EXPERIMENT_COUNT)))
+          .map(() => generateRandomExperimentAccession()),
       onClick: jest.fn()
     }
     const wrapper = shallow(<SelectionTableHeaderCell {...props}/>)
 
     wrapper.find(`a`).simulate(`click`)
-    expect(props.onClick).toHaveBeenCalled()
-    expect(props.onClick.mock.calls).toContainEqual([props.selectedRowIds])
+    expect(wrapper).toContainExactlyOneMatchingElement(Popup)
   })
 
   test(`can display an optional tooltip`, () => {
     const props = {
       label: randomString(),
       selectedRowIds: [],
+      downloadFileTypes: downloadFileTypes,
       onClick: () => {},
       tooltipContent: randomString({length: 100})
     }
@@ -77,6 +81,7 @@ describe(`SelectionTableHeaderCell`, () => {
     const props = {
       label: `Action`,
       selectedRowIds: [],
+      downloadFileTypes: downloadFileTypes,
       onClick: () => {}
     }
 
@@ -86,6 +91,7 @@ describe(`SelectionTableHeaderCell`, () => {
   test(`matches snapshot (with a selection)`, () => {
     const props = {
       label: `Action`,
+      downloadFileTypes: downloadFileTypes,
       selectedRowIds: [`E-EHCA-1`, `E-MTAB-5200`],
       onClick: jest.fn()
     }
