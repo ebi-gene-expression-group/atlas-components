@@ -8,7 +8,9 @@
     <link rel="stylesheet" href="https://ebi.emblstatic.net/web_guidelines/EBI-Icon-fonts/v1.3/fonts.css"
           type="text/css" media="all"/>
     <link rel="stylesheet" href="https://www.ebi.ac.uk/gxa/sc/resources/css/theme-atlas.css" type="text/css"
-          media="all">
+          media="all"/>
+    <link rel="stylesheet" href="./react-popup.css" type="text/css" media="all"/>
+
 </head>
 
 <body>
@@ -76,6 +78,20 @@
               dataKey: 'technologyType'
             }
           ],
+            downloadFileTypes: [
+                {
+                    description: `Raw quantification files`,
+                    id: `quantification-raw`
+                },
+                {
+                    description: `Normalised counts files`,
+                    id: `normalised`
+                },
+                {
+                    description: `Experiment design file`,
+                    id: `experiment-design`
+                }
+            ],
           rowSelectionColumn: {
             label: 'Download',
             dataKey: 'experimentAccession',
@@ -88,7 +104,7 @@
             width: 0.5
           },
           dataRows: data,
-          host: 'https://www.ebi.ac.uk/gxa/sc/'
+          host: 'http://localhost:8080/gxa/sc/'
         },
         'target'
       );
