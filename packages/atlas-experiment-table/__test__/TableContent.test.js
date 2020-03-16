@@ -11,7 +11,7 @@ import SelectionTableHeaderCell from '../src/head/SelectionTableHeaderCell'
 
 import randomString from 'random-string'
 
-import {getRandomInt, bulkTableHeaders, downloadFileTypes} from './TestUtils'
+import { getRandomInt, bulkTableHeaders, downloadFileTypes } from './TestUtils'
 import bulkExperiments from './experiments-bulk.json'
 
 describe(`TableContent`, () => {
