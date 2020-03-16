@@ -58,7 +58,7 @@ export default class TableManager extends React.Component {
         description: PropTypes.string,
         id: PropTypes.string
       })
-    ).isRequired,
+    ),
     rowSelectionColumn: PropTypes.shape({
       label: PropTypes.string.isRequired,
       dataKey: PropTypes.string.isRequired,

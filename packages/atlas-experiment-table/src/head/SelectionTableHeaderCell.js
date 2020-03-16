@@ -27,7 +27,7 @@ class SelectionTableHeaderCell extends React.Component {
     super(props)
 
     this.state = {
-      fileTypes: props.downloadFileTypes.map(fileType => fileType.id)
+      fileTypes: props.downloadFileTypes && props.downloadFileTypes.map(fileType => fileType.id)
     }
 
     this.onClick = this.onClick.bind(this)
@@ -74,7 +74,7 @@ class SelectionTableHeaderCell extends React.Component {
   }
 
   render(){
-    const { label, selectedRowIds, tooltipContent, width } = this.props
+    const { label, selectedRowIds, onClick, tooltipContent, width, downloadFileTypes } = this.props
 
     return <Table.HeaderCell
       flexGrow={width}
@@ -84,7 +84,7 @@ class SelectionTableHeaderCell extends React.Component {
       <Heading size={500}>
         {
           selectedRowIds.length > 0 ?
-            <a onClick={() => this.onClick(selectedRowIds)}>
+            <a onClick={() => downloadFileTypes ? this.onClick(selectedRowIds) : onClick(selectedRowIds)}>
               {`${label} ${selectedRowIds.length} ${selectedRowIds.length === 1 ? `entry` : `entries`}`}
             </a> :
             label
@@ -111,7 +111,7 @@ SelectionTableHeaderCell.propTypes = {
       description: PropTypes.string,
       id: PropTypes.string
     })
-  ).isRequired,
+  )
 }
 
 SelectionTableHeaderCell.defaultProps = {

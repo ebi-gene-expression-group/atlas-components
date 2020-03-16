@@ -113,7 +113,7 @@ TableContent.propTypes = {
       description: PropTypes.string,
       id: PropTypes.string
     })
-  ).isRequired,
+  ),
   rowSelectionColumn: PropTypes.shape({
     label: PropTypes.string.isRequired,
     dataKey: PropTypes.string.isRequired,
