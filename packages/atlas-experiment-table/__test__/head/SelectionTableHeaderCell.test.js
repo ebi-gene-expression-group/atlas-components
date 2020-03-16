@@ -5,7 +5,7 @@ import { Table, Heading } from 'evergreen-ui'
 import ReactTooltip from 'react-tooltip'
 
 import SelectionTableHeaderCell from '../../src/head/SelectionTableHeaderCell'
-import Popup from 'react-popup'
+import Prompt from '../../src/head/Prompt'
 
 import { getRandomInt, generateRandomExperimentAccession, downloadFileTypes } from '../TestUtils'
 
@@ -56,12 +56,31 @@ describe(`SelectionTableHeaderCell`, () => {
       // https://stackoverflow.com/questions/3751520/how-to-generate-sequence-of-numbers-chars-in-javascript
         Array.apply(0, Array(getRandomInt(1, MAX_EXPERIMENT_COUNT)))
           .map(() => generateRandomExperimentAccession()),
+      onClick: () => {}
+    }
+
+    const wrapper = mount(<SelectionTableHeaderCell {...props}/>)
+
+    expect(wrapper.find(Prompt)).toHaveLength(0)
+    wrapper.find(`a`).simulate(`click`)
+    expect(wrapper.find(Prompt)).toHaveLength(1)
+  })
+
+  test(`calls onClick with the selected row IDs when the link is clicked, if download file types not provided`, () => {
+    const props = {
+      label: randomString(),
+      selectedRowIds:
+      // https://stackoverflow.com/questions/3751520/how-to-generate-sequence-of-numbers-chars-in-javascript
+        Array.apply(0, Array(getRandomInt(1, MAX_EXPERIMENT_COUNT)))
+          .map(() => generateRandomExperimentAccession()),
       onClick: jest.fn()
     }
+
     const wrapper = shallow(<SelectionTableHeaderCell {...props}/>)
 
     wrapper.find(`a`).simulate(`click`)
-    expect(wrapper).toContainExactlyOneMatchingElement(Popup)
+    expect(props.onClick).toHaveBeenCalled()
+    expect(props.onClick.mock.calls).toContainEqual([props.selectedRowIds])
   })
 
   test(`can display an optional tooltip`, () => {
@@ -91,7 +110,6 @@ describe(`SelectionTableHeaderCell`, () => {
   test(`matches snapshot (with a selection)`, () => {
     const props = {
       label: `Action`,
-      downloadFileTypes: downloadFileTypes,
       selectedRowIds: [`E-EHCA-1`, `E-MTAB-5200`],
       onClick: jest.fn()
     }
