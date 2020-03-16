@@ -60,7 +60,7 @@ const mapping = {
     "u": [`fungus`],
     "4": [`louse`],
     "1": [`mosquito`, `anopheles gambiae`],
-    "@": [`plasmodium`, `plasmodium berghei`],
+    "@": [`plasmodium`, `plasmodium berghei`, `plasmodium falciparum`],
     "E": [`pufferfish`, `tetraodon nigroviridis`],
     "+": [`ray`],
     "s": [`scorpion`],
