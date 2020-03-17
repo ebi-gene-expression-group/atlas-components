@@ -18,28 +18,28 @@ class Prompt extends React.Component {
       selectedFileTypes: selectedFileTypes.includes(selectedFileType) ?
         selectedFileTypes.filter(fileType => fileType !== selectedFileType) :
         [selectedFileType, ...selectedFileTypes]
-      },
-      () => this.props.onSelect(this.state.selectedFileTypes)
+    },
+    () => this.props.onSelect(this.state.selectedFileTypes)
     )
   }
 
   render() {
     return <div>
-        <p style={{paddingBottom: `1rem`}}>Choose file types...</p>
-          {
-            this.props.downloadFileTypes.map((fileType, idx) =>
-              <div key={`filetype${idx}`} style={{display:"flex"}}>
-                <input type={`checkbox`} className={`checkbox`} id={fileType.id}
-                       checked={this.state.selectedFileTypes.includes(fileType.id)}
-                       onChange={() => this.onClick(fileType.id)}/>
-                <p id={fileType.description} style={{paddingLeft: `1rem`, paddingBottom: `1rem`}}>
-                  {fileType.description}
-                </p>
-              </div>
-            )
-          }
+      <p style={{paddingBottom: `1rem`}}>Choose file types...</p>
+      {
+        this.props.downloadFileTypes.map((fileType, idx) =>
+          <div key={`filetype${idx}`} style={{display:`flex`}}>
+            <input type={`checkbox`} className={`checkbox`} id={fileType.id}
+              checked={this.state.selectedFileTypes.includes(fileType.id)}
+              onChange={() => this.onClick(fileType.id)}/>
+            <p id={fileType.description} style={{paddingLeft: `1rem`, paddingBottom: `1rem`}}>
+              {fileType.description}
+            </p>
+          </div>
+        )
+      }
 
-      </div>
+    </div>
 
   }
 }
