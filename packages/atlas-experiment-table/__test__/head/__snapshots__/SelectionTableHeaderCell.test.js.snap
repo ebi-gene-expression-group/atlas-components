@@ -953,6 +953,7 @@ exports[`SelectionTableHeaderCell matches snapshot (basic) 1`] = `
                 className="css-saeo60 css-nil 📦pl_12px 📦pr_12px 📦box-szg_border-box 📦flx_1 📦dspl_flex 📦algn-itms_center 📦flx-srnk_0 📦ovflw-x_visible 📦ovflw-y_visible 📦flx-grow_1 📦just-cnt_center"
                 onKeyDown={[Function]}
               >
+                <Memo(GlobalStyleComponent) />
                 <Popup
                   btnClass="mm-popup__btn"
                   className="mm-popup"
@@ -1448,6 +1449,7 @@ exports[`SelectionTableHeaderCell matches snapshot (basic) 1`] = `
 
 exports[`SelectionTableHeaderCell matches snapshot (with a selection) 1`] = `
 <SelectionTableHeaderCell
+  downloadFileTypes={Array []}
   label="Action"
   onClick={[MockFunction]}
   selectedRowIds={
@@ -2388,6 +2390,7 @@ exports[`SelectionTableHeaderCell matches snapshot (with a selection) 1`] = `
                 className="css-saeo60 css-nil 📦pl_12px 📦pr_12px 📦box-szg_border-box 📦flx_1 📦dspl_flex 📦algn-itms_center 📦flx-srnk_0 📦ovflw-x_visible 📦ovflw-y_visible 📦flx-grow_1 📦just-cnt_center"
                 onKeyDown={[Function]}
               >
+                <Memo(GlobalStyleComponent) />
                 <Popup
                   btnClass="mm-popup__btn"
                   className="mm-popup"
