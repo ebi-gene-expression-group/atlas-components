@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 import Popup from 'react-popup'
 import Prompt from './Prompt'
-
+import ReactPopupStyle from './ReactPopupStyle'
 // We’re not using Link because Evergreen restyles the links and we want EBI VF for that
 // We also don’t like Evergreen’s Tooltip because  it doesn’t render HTML :(
 import { Table, Heading, Pane, majorScale } from 'evergreen-ui'
@@ -27,7 +27,7 @@ class SelectionTableHeaderCell extends React.Component {
     super(props)
 
     this.state = {
-      fileTypes: props.downloadFileTypes && props.downloadFileTypes.map(fileType => fileType.id)
+      fileTypes: props.downloadFileTypes.map(fileType => fileType.id)
     }
 
     this.onClick = this.onClick.bind(this)
@@ -79,12 +79,13 @@ class SelectionTableHeaderCell extends React.Component {
     return <Table.HeaderCell
       flexGrow={width}
       justifyContent={`center`}>
+      <ReactPopupStyle />
       <Popup />
 
       <Heading size={500}>
         {
           selectedRowIds.length > 0 ?
-            <a onClick={() => downloadFileTypes ? this.onClick(selectedRowIds) : onClick(selectedRowIds)}>
+            <a onClick={() => downloadFileTypes.length ? this.onClick(selectedRowIds) : onClick(selectedRowIds)}>
               {`${label} ${selectedRowIds.length} ${selectedRowIds.length === 1 ? `entry` : `entries`}`}
             </a> :
             label
@@ -116,7 +117,8 @@ SelectionTableHeaderCell.propTypes = {
 
 SelectionTableHeaderCell.defaultProps = {
   tooltipContent: ``,
-  width: 1
+  width: 1,
+  downloadFileTypes: []
 }
 
 export default SelectionTableHeaderCell

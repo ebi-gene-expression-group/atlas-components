@@ -1,4 +1,7 @@
-.mm-popup {
+import { createGlobalStyle } from 'styled-components'
+
+const ReactPopupStyle = createGlobalStyle`
+  .mm-popup {
     display: none;
 }
 
@@ -199,3 +202,7 @@
         margin-top: 10px;
     }
 }
+
+  `
+
+export default ReactPopupStyle
