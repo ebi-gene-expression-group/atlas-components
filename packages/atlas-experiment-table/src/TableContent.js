@@ -129,7 +129,8 @@ TableContent.propTypes = {
 
 TableContent.defaultProps = {
   host: ``,
-  className: `small-12 columns`
+  className: `small-12 columns`,
+  downloadFileTypes: []
 }
 
 export default TableContent

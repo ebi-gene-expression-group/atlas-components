@@ -74,6 +74,7 @@ export default class TableManager extends React.Component {
     sortColumnIndex: 0,
     ascendingOrder: true,
     host: ``,
+    downloadFileTypes: [],
     rowSelectionColumn: null,
     className: `row expanded`,
     afterStateUpdate: () => {}
