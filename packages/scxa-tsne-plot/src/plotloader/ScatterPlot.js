@@ -75,10 +75,8 @@ const highchartsBaseConfig = {
 
   chart: {
     type: `scatter`,
-    spacingLeft: 0,
     height: `100%`,
     panning: true,
-    spacingTop: 50,
     zoomType: `xy`,
     plotBackgroundColor: `transparent`, // This needs to be set to allow access to this.plotBackground
     events: {
