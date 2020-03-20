@@ -56,7 +56,7 @@ addModules()
 
 const getRadiusSize = (totalNumberOfPoints) => {
   if (totalNumberOfPoints >= 40000) {
-    return 1
+    return 1.25
   } else if (totalNumberOfPoints >= 10000) {
     return 2
   } else if (totalNumberOfPoints >= 5000) {
