@@ -68,6 +68,9 @@ const highchartsBaseConfig = {
   credits: {
     enabled: false
   },
+  tooltip: {
+    outside: true
+  },
 
   chart: {
     type: `scatter`,
