@@ -202,6 +202,11 @@ const ScatterPlot = (props) => {
       {
         plotOptions: {
           series: {
+            states: {
+              inactive: {
+                enabled: false
+              }
+            },
             boostThreshold: boostThreshold,
             marker: {
               radius: getRadiusSize(totalNumberOfPoints)
