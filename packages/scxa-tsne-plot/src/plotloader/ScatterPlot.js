@@ -39,12 +39,13 @@ async function addModules() {
   HighchartsExporting(Highcharts)
   highchartsExportStyle(Highcharts)
 
-  highchartsBoost(Highcharts)
-
   HighchartsColorAxis(Highcharts)
   highchartsColorAxisLogWithNegativeValues(Highcharts)
 
   highchartsAdaptChartToLegendModule(Highcharts)
+
+  // Boost should be the last module loaded; read note in https://www.highcharts.com/docs/advanced-chart-features/boost-module
+  highchartsBoost(Highcharts)
 }
 
 addModules()
