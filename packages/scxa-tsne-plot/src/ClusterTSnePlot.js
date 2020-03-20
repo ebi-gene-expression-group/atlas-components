@@ -80,11 +80,6 @@ const ClusterTSnePlot = (props) => {
       itemMarginBottom: 20
     },
     tooltip: {
-      style: {
-        width: `200px`,
-        overflow: `auto`,
-        whiteSpace: `normal`
-      },
       formatter: function (tooltip) {
         // Trick Highcharts into thinking the point is in the bottom half of the chart, so that the tooltip
         // is displayed below the point
