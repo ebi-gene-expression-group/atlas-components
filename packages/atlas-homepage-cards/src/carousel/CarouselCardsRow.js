@@ -20,7 +20,6 @@ const CarouselCardsRow = (props) => {
   const { className, cardContainerClassName, speciesIconHeight, imageIconHeight, hoverColour} = props
 
   const disableSlider = sliderSettings.slidesToShow >= cards.length
-  sliderSettings.slidesToShow = disableSlider ? cards.length : sliderSettings.slidesToShow
 
   const cardsDisplay = Array.isArray(cards) && cards.map((card, index) =>
     <CardContainer hoverColour={hoverColour} className={cardContainerClassName} key={index}>
@@ -37,7 +36,8 @@ const CarouselCardsRow = (props) => {
           <SlickStyle sliderHeight={sliderHeight}/>
           <SlickThemeStyle/>
           <Slider
-            {...sliderSettings}>
+            {...sliderSettings}
+            slidesToShow={disableSlider ? cards.length : sliderSettings.slidesToShow}>
             {cardsDisplay}
           </Slider>
         </React.Fragment>
