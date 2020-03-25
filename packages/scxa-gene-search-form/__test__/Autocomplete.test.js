@@ -13,7 +13,8 @@ const getRandomInt = (max) => Math.floor(Math.random() * Math.floor(max))
 const props = {
   atlasUrl: `foo/`,
   suggesterEndpoint: `suggest`,
-  onChange: () => {}
+  onChange: () => {},
+  labelText: `Foobar:`
 }
 
 const defaultValue = {
