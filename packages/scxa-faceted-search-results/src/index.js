@@ -1,1 +1,1 @@
-export default from './FetchLoader'
+export { default } from './FetchLoader'
