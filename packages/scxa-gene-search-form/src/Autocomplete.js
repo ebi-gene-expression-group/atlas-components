@@ -36,7 +36,7 @@ const Autocomplete = (
 
   return (
     <div>
-      <label htmlFor={`geneQuery`}>{labelText}</label>
+      {labelText && <label htmlFor={`geneQuery`}>{labelText}</label>}
       <AsyncCreatableSelect
         name={`geneQuery`}
         components={{ DropdownIndicator: null, IndicatorSeparator: null }}
