@@ -1,6 +1,6 @@
 {
   "name": "@ebi-gene-expression-group/scxa-gene-search-form",
-  "version": "1.6.0-beta.1",
+  "version": "1.6.0-beta.2",
   "description": "Single Cell Expression Atlas homepage gene search form",
   "main": "lib/index.js",
   "scripts": {
