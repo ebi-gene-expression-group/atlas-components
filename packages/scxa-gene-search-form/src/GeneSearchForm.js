@@ -43,7 +43,7 @@ class GeneSearchForm extends React.Component {
   render() {
     const {wrapperClassName, actionEndpoint, onSubmit, searchExamples} = this.props
 
-    const {autocompleteClassName, atlasUrl, suggesterEndpoint, defaultValue} = this.props
+    const {autocompleteClassName, atlasUrl, suggesterEndpoint, defaultValue,autocompleteLabel} = this.props
 
     const {enableSpeciesSelect, speciesSelectClassName, speciesSelectStatusMessage} = this.props
     const {allSpecies, topSpecies} = this.props
@@ -58,7 +58,8 @@ class GeneSearchForm extends React.Component {
               onChange={this.autocompleteOnChange}
               selectedSpecies={this.state.selectedSpecies}
               allSpecies={allSpecies}
-              defaultValue={defaultValue}/>
+              defaultValue={defaultValue}
+              labelText={autocompleteLabel}/>
           </div>
           { enableSpeciesSelect &&
             <div className={speciesSelectClassName}>
@@ -105,6 +106,7 @@ GeneSearchForm.propTypes = {
   onSubmit: PropTypes.func,
   wrapperClassName: PropTypes.string,
 
+  autocompleteLabel: PropTypes.string,
   autocompleteClassName: PropTypes.string,
   suggesterEndpoint: PropTypes.string.isRequired,
   defaultValue: PropTypes.shape({
@@ -126,6 +128,7 @@ GeneSearchForm.propTypes = {
 }
 
 GeneSearchForm.defaultProps = {
+  autocompleteLabel: `Gene ID or gene symbol`,
   wrapperClassName: ``,
   autocompleteClassName: ``,
   defaultValue: {},

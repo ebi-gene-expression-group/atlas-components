@@ -13,7 +13,8 @@ const getRandomInt = (max) => Math.floor(Math.random() * Math.floor(max))
 const props = {
   atlasUrl: `foo/`,
   suggesterEndpoint: `suggest`,
-  onChange: () => {}
+  onChange: () => {},
+  labelText: `Foobar:`
 }
 
 const defaultValue = {
@@ -79,6 +80,18 @@ describe(`Autocomplete suggestions fetch`, () => {
 
     expect(fetchMock.calls()).toHaveLength(1)
     expect(URI(fetchMock.lastUrl()).search(true)).toHaveProperty(`species`, species.join(`,`))
+  })
 
+  test(`can hide the label if we pass an empty string`, () => {
+    const wrapper = shallow(<Autocomplete {...props} labelText={``} />)
+
+    expect(wrapper).not.toContainMatchingElement(`label`)
+  })
+
+  test(`can customise the label`, () => {
+    const labelText = `COVID-19 UK lockdown day 2`
+    const wrapper = shallow(<Autocomplete {...props} labelText={labelText} />)
+
+    expect(wrapper.find(`label`)).toHaveText(labelText)
   })
 })
