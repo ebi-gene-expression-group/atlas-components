@@ -5,7 +5,7 @@ import { xorBy as _xorBy } from 'lodash'
 import FacetGroupPropTypes from './FacetGroupPropTypes'
 import TooltipIcon from './TooltipIcon'
 
-const CheckboxOption = ({group, value, label, disabled, checked, onChange}) =>
+const CheckboxOption = ({ group, value, label, disabled, checked, onChange }) =>
   <div>
     <input type={`checkbox`} {...{value, checked, disabled}}
       onChange={() => onChange({group, label, value, disabled})}/>
@@ -41,8 +41,8 @@ class CheckboxFacetGroup extends React.Component {
   }
 
   render() {
-    const {facetGroupName, facetGroupNameDescription, facets} = this.props
-    const {checkedFacets} = this.state
+    const { facetGroupName, facetGroupNameDescription, facets } = this.props
+    const { checkedFacets } = this.state
 
     return (
       <div className={`padding-bottom-xlarge`}>

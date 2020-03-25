@@ -4,7 +4,7 @@ import CheckboxFacetGroup from './facetgroups/CheckboxFacetGroup'
 import MultiselectDropdownFacetGroup from './facetgroups/MultiselectDropdownFacetGroup'
 import _ from "lodash"
 
-import {FacetPropTypes} from './ResultPropTypes'
+import { FacetPropTypes } from './ResultPropTypes'
 
 const FilterSidebar = ({facets, checkboxFacetGroups, onChange}) => {
   const facetGroups =

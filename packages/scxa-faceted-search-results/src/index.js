@@ -1,3 +1,1 @@
-import FetchLoader from './FetchLoader.js'
-
-export default FetchLoader
+export default from './FetchLoader'

@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 
-import {FacetPropTypes} from '../ResultPropTypes'
+import { FacetPropTypes } from '../ResultPropTypes'
 
 const FacetGroupPropTypes = {
   facetGroupName: PropTypes.string.isRequired,

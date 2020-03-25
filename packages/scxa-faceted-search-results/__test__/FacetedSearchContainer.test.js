@@ -4,7 +4,7 @@ import Enzyme from 'enzyme'
 import { mount } from 'enzyme'
 import Adapter from 'enzyme-adapter-react-16'
 
-import {episodes, ExperimentTableHeader, ExperimentTableCard} from './TestUtils'
+import { episodes, ExperimentTableHeader, ExperimentTableCard } from './TestUtils'
 
 import FacetedSearchContainer from '../src/FacetedSearchContainer'
 import FilterSidebar from '../src/FilterSidebar'
@@ -66,7 +66,23 @@ describe(`FacetedSearchContainer`, () => {
   })
 
   test(`matches snapshot`, () => {
-    const tree = renderer.create(<FacetedSearchContainer {...props} />).toJSON()
+    // The latest version of React Tooltip at the time of writing creates dynamically UID-like generated class names
+    // that break snapshot tests, so we don’t want descriptions
+    const withoutTooltips =
+      episodes.map(episode => (
+        {
+          element: episode.element,
+          facets: episode.facets.map(facet => (
+            {
+              group: facet.group,
+              value: facet.value,
+              label: facet.label
+            }
+          ))
+        }
+      ))
+
+    const tree = renderer.create(<FacetedSearchContainer {...props} results={withoutTooltips} />).toJSON()
     expect(tree).toMatchSnapshot()
   })
 })

@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const CalloutAlert = ({error}) =>
+const CalloutAlert = ({ error }) =>
   <div className={`row column`}>
     <div className={`callout alert small`}>
       <h5>Oops!</h5>

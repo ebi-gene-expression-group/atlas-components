@@ -61,40 +61,26 @@ exports[`FacetedSearchContainer matches snapshot 1`] = `
     >
       <h4>
         Guest character
-        <sup>
-          <span
-            className="icon icon-generic"
-            data-html={true}
-            data-icon="i"
-            data-tip="<span>Guest characters that tag along for the<br>adventures in this episodes</span>"
-            style={
-              Object {
-                "color": "lightgrey",
-                "fontSize": "smaller",
-              }
-            }
-          />
-        </sup>
       </h4>
       <div
-        className="css-1pcexqc-container"
+        className=" css-2b097c-container"
         onKeyDown={[Function]}
       >
         <div
-          className="css-12emboz"
+          className=" css-15r8ym2-Control"
           onMouseDown={[Function]}
           onTouchEnd={[Function]}
         >
           <div
-            className="css-1hwfws3"
+            className=" css-g1d714-ValueContainer"
           >
             <div
-              className="css-151xaom-placeholder"
+              className=" css-1wa3eu0-placeholder"
             >
               Select...
             </div>
             <div
-              className="css-1g6gooi"
+              className="css-b8ldur-Input"
             >
               <div
                 className=""
@@ -152,10 +138,10 @@ exports[`FacetedSearchContainer matches snapshot 1`] = `
             </div>
           </div>
           <div
-            className="css-1wy0on6"
+            className=" css-1hb7zxy-IndicatorsContainer"
           >
             <span
-              className="sc-bxivhb iCJrRm"
+              className="sc-AxhCb ifMswC"
               cx={[Function]}
             />
           </div>
@@ -167,40 +153,26 @@ exports[`FacetedSearchContainer matches snapshot 1`] = `
     >
       <h4>
         Planet
-        <sup>
-          <span
-            className="icon icon-generic"
-            data-html={true}
-            data-icon="i"
-            data-tip="<span>Planets where events in this episode take<br>place</span>"
-            style={
-              Object {
-                "color": "lightgrey",
-                "fontSize": "smaller",
-              }
-            }
-          />
-        </sup>
       </h4>
       <div
-        className="css-1pcexqc-container"
+        className=" css-2b097c-container"
         onKeyDown={[Function]}
       >
         <div
-          className="css-12emboz"
+          className=" css-15r8ym2-Control"
           onMouseDown={[Function]}
           onTouchEnd={[Function]}
         >
           <div
-            className="css-1hwfws3"
+            className=" css-g1d714-ValueContainer"
           >
             <div
-              className="css-151xaom-placeholder"
+              className=" css-1wa3eu0-placeholder"
             >
               Select...
             </div>
             <div
-              className="css-1g6gooi"
+              className="css-b8ldur-Input"
             >
               <div
                 className=""
@@ -258,10 +230,10 @@ exports[`FacetedSearchContainer matches snapshot 1`] = `
             </div>
           </div>
           <div
-            className="css-1wy0on6"
+            className=" css-1hb7zxy-IndicatorsContainer"
           >
             <span
-              className="sc-bxivhb iCJrRm"
+              className="sc-AxhCb ifMswC"
               cx={[Function]}
             />
           </div>
@@ -277,16 +249,16 @@ exports[`FacetedSearchContainer matches snapshot 1`] = `
         
       </h4>
       <div
-        className="sc-htpNat jYhomY"
+        className="sc-AxiKw ivgkfy"
       >
         <div
-          className="sc-bdVaJa edgMnc"
+          className="sc-AxjAm feCCqm"
           onClick={[Function]}
         >
           Meow
         </div>
         <div
-          className="sc-bwzfXH laSsVf"
+          className="sc-AxirZ gEVUAG"
           onClick={[Function]}
         >
           Wow wow
@@ -329,9 +301,5 @@ exports[`FacetedSearchContainer matches snapshot 1`] = `
       </div>
     </div>
   </div>
-  <div
-    className="__react_component_tooltip place-top type-dark "
-    data-id="tooltip"
-  />
 </div>
 `;

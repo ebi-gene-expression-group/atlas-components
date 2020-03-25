@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import {ResultPropTypes} from './ResultPropTypes'
+import { ResultPropTypes } from './ResultPropTypes'
 import _ from 'lodash'
 
 class FilterList extends React.Component {
@@ -9,7 +9,7 @@ class FilterList extends React.Component {
 
     this.state = {
       ascending: false,
-	    sortTitle: props.sortTitle
+      sortTitle: props.sortTitle
     }
 
     this.sortEntries = this.sortEntries.bind(this)
@@ -43,7 +43,7 @@ FilterList.propTypes = {
   resultsMessage: PropTypes.string,
   ResultsHeaderClass: PropTypes.func,
   ResultElementClass: PropTypes.func.isRequired,
-	sortTitle: PropTypes.string
+  sortTitle: PropTypes.string
 }
 
 FilterList.defaultProps = {

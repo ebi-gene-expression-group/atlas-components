@@ -241,4 +241,4 @@ const episodes = [
   }
 ]
 
-export {getRandomInt, vindicators, episodes, ExperimentTableCard, ExperimentTableHeader}
+export { getRandomInt, vindicators, episodes, ExperimentTableCard, ExperimentTableHeader }

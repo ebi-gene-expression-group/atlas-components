@@ -6,7 +6,7 @@ import _ from 'lodash'
 import FilterSidebar from './FilterSidebar'
 import FilterList from './FilterList'
 
-import {ResultPropTypes} from './ResultPropTypes'
+import { ResultPropTypes } from './ResultPropTypes'
 
 class FacetedSearchContainer extends React.Component {
   constructor(props) {
@@ -83,7 +83,7 @@ class FacetedSearchContainer extends React.Component {
 
   _handleChange(facetGroup, selectedFacetsInGroup) {
     const _selectedFacets = _.defaultsDeep({}, this.state.selectedFacets)
-    _selectedFacets[facetGroup] = selectedFacetsInGroup
+    _selectedFacets[facetGroup] = selectedFacetsInGroup || []
 
     const nextSelectedFacets =
        Object.keys(_selectedFacets)
@@ -99,7 +99,7 @@ class FacetedSearchContainer extends React.Component {
     let nextFacets = {}
     if (_selectedFacets[facetGroup].length > previousNumberOfSelectedFacetsInGroup) {
       if (_selectedFacets[facetGroup].length === 1) {
-        // First facet in group selected: less results, disable enabled facets
+        // First facet in group selected: fewer results, disable enabled facets
         nextFacets = this._disableEnabledFacetsWithNoResults(nextSelectedFacets, facetGroup)
       } else {
         // Add a second or subsequent facet to a group: more results, enable disabled facets
@@ -110,7 +110,7 @@ class FacetedSearchContainer extends React.Component {
         // No facets in group selected: more results, enable disabled facets
         nextFacets = this._enableDisabledFacetsWithResults(nextSelectedFacets, facetGroup)
       } else {
-        // Facet has been deselected but others in group remain: less results, disable enabled facets
+        // Facet has been deselected but others in group remain: fewer results, disable enabled facets
         nextFacets = this._disableEnabledFacetsWithNoResults(nextSelectedFacets, facetGroup)
       }
     }
@@ -122,8 +122,8 @@ class FacetedSearchContainer extends React.Component {
   }
 
   render() {
-    const {facets, selectedFacets} = this.state
-    const {checkboxFacetGroups, ResultElementClass, ResultsHeaderClass, resultsMessage, sortTitle} = this.props
+    const { facets, selectedFacets } = this.state
+    const { checkboxFacetGroups, ResultElementClass, ResultsHeaderClass, resultsMessage, sortTitle } = this.props
 
     return(
       <div className={`row expanded`}>
@@ -138,7 +138,7 @@ class FacetedSearchContainer extends React.Component {
           <FilterList {...{resultsMessage, ResultElementClass, ResultsHeaderClass, sortTitle}}
             filteredResults={this._filterResults(selectedFacets)}/>
         </div>
-        <ReactTooltip effect={`solid`}/>
+        { facets.find(facet => facet.description) && <ReactTooltip effect={`solid`}/> }
       </div>
     )
   }
@@ -154,7 +154,7 @@ FacetedSearchContainer.propTypes = {
   // See also https://stackoverflow.com/questions/45315918/react-proptypes-component-class
   ResultsHeaderClass: PropTypes.func,
   ResultElementClass: PropTypes.func.isRequired,
-	sortTitle: PropTypes.string
+  sortTitle: PropTypes.string
 }
 
 FacetedSearchContainer.defaultProps = {
