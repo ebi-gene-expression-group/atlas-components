@@ -6,26 +6,32 @@ const ExperimentFileTypeMultiChoice = ({ fileTypes, onChange }) => {
   const [selectedFileTypes, setSelectedFileTypes] = useState(_.map(fileTypes, `id`))
 
   return (
-    <ul style={{listStyle: `none`}}>
+    <React.Fragment>
+      <ul style={{listStyle: `none`}}>
+        {
+          fileTypes.map((fileType, index) =>
+            <li key={index}>
+              <input
+                id={fileType.id}
+                type={`checkbox`}
+                checked={selectedFileTypes.includes(fileType.id)}
+                onChange={() => {
+                  const updatedSelectedFiletypes = _.xor(selectedFileTypes, [fileType.id])
+                  setSelectedFileTypes(updatedSelectedFiletypes)
+                  onChange(updatedSelectedFiletypes)
+                }}/>
+              <label htmlFor={fileType.id}>
+                {fileType.description}
+              </label>
+            </li>
+          )
+        }
+      </ul>
       {
-        fileTypes.map((fileType, index) =>
-          <li key={index}>
-            <input
-              id={fileType.id}
-              type={`checkbox`}
-              checked={selectedFileTypes.includes(fileType.id)}
-              onChange={() => {
-                const updatedSelectedFiletypes = _.xor(selectedFileTypes, [fileType.id])
-                setSelectedFileTypes(updatedSelectedFiletypes)
-                onChange(updatedSelectedFiletypes)
-              }}/>
-            <label htmlFor={fileType.id}>
-              {fileType.description}
-            </label>
-          </li>
-        )
+        selectedFileTypes.length === 0 &&
+        <p className={`small`}>Please select at least one file type to start your download.</p>
       }
-    </ul>
+    </React.Fragment>
   )
 }
 

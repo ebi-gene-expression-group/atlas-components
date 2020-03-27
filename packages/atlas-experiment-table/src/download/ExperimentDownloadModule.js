@@ -43,8 +43,10 @@ export default (host, fileTypes, target) => {
               className: `success`,
               key: `enter`,
               action: () => {
-                validateAndDownloadExperimentFiles(host, experimentAccessions, selectedFileTypeIds)
-                Popup.close()
+                if (selectedFileTypeIds.length) {
+                  validateAndDownloadExperimentFiles(host, experimentAccessions, selectedFileTypeIds)
+                  Popup.close()
+                }
               }
             }]
         }
