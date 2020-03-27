@@ -15,8 +15,8 @@
 <body>
 <div id="wrapper" class="row expanded">
     <div id="content" class="small-12 columns">
-        <div id="target">
-        </div>
+        <div id="target"></div>
+        <div id="popup-placeholder"></div>
     </div>
 </div>
 </body>
@@ -77,23 +77,27 @@
               dataKey: 'technologyType'
             }
           ],
-            downloadFileTypes: [
-                {
-                    description: `Raw quantification files`,
-                    id: `quantification-raw`
-                },
-                {
-                    description: `Normalised counts files`,
-                    id: `normalised`
-                },
-                {
-                    description: `Experiment design file`,
-                    id: `experiment-design`
-                }
-            ],
           rowSelectionColumn: {
             label: 'Download',
             dataKey: 'experimentAccession',
+            tableHeaderCellOnClick:
+              experimentTable.loadExperimentDownloadModule(
+                'https://www.ebi.ac.uk/gxa/sc/',
+                [
+                  {
+                    description: 'Raw quantification files',
+                    id: 'quantification-raw'
+                  },
+                  {
+                    description: 'Normalised counts files',
+                    id: 'normalised'
+                  },
+                  {
+                    description: 'Experiment design file',
+                    id: 'experiment-design'
+                  }
+                ],
+                'popup-placeholder',),
             tooltipContent:
               '<ul>' +
                 '<li>Raw filtered count matrix after quantification</li>' +
