@@ -100,6 +100,7 @@
           rowSelectionColumn: {
             label: 'Download',
             dataKey: 'experimentAccession',
+            tableHeaderCellOnClick: experimentTable._validateAndDownloadExperimentFiles('https://www.ebi.ac.uk/gxa/'),
             tooltipContent:
               '<ul>' +
                 '<li>Expression matrices in TPMs or log<sub>2</sub>fold-change</li>' +
