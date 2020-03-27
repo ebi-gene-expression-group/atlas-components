@@ -5,7 +5,6 @@ import { Table, Heading } from 'evergreen-ui'
 import ReactTooltip from 'react-tooltip'
 
 import SelectionTableHeaderCell from '../../src/head/SelectionTableHeaderCell'
-import Prompt from '../../src/head/Prompt'
 
 import { getRandomInt, generateRandomExperimentAccession, downloadFileTypes } from '../TestUtils'
 
@@ -46,24 +45,6 @@ describe(`SelectionTableHeaderCell`, () => {
     expect(wrapper).toContainExactlyOneMatchingElement(Table.HeaderCell)
     expect(wrapper).toContainExactlyOneMatchingElement(`a`)
     expect(wrapper.find(`a`)).toIncludeText(props.label)
-  })
-
-  test(`opens a popup window when the download link is clicked`, () => {
-    const props = {
-      label: randomString(),
-      downloadFileTypes: downloadFileTypes,
-      selectedRowIds:
-      // https://stackoverflow.com/questions/3751520/how-to-generate-sequence-of-numbers-chars-in-javascript
-        Array.apply(0, Array(getRandomInt(1, MAX_EXPERIMENT_COUNT)))
-          .map(() => generateRandomExperimentAccession()),
-      onClick: () => {}
-    }
-
-    const wrapper = mount(<SelectionTableHeaderCell {...props}/>)
-
-    expect(wrapper.find(Prompt)).toHaveLength(0)
-    wrapper.find(`a`).simulate(`click`)
-    expect(wrapper.find(Prompt)).toHaveLength(1)
   })
 
   test(`calls onClick with the selected row IDs when the link is clicked, if download file types not provided`, () => {
