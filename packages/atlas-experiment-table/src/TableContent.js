@@ -7,7 +7,6 @@ import { tableHeaderPropTypes } from './filterPropTypes'
 
 import TableHeaderCell from './head/TableHeaderCell'
 import SelectionTableHeaderCell from './head/SelectionTableHeaderCell'
-import { _validateAndDownloadExperimentFiles } from './head/downloadHelper'
 
 import TableCell from './TableCell'
 import SelectionTableCell from './SelectionTableCell'
@@ -24,7 +23,7 @@ const TableContent =
     // Ordering
     sortColumnIndex, ascendingOrder, tableHeaderCellOnClick,
     // Row selection and action on selected rows
-    downloadFileTypes, rowSelectionColumn, selectedRows, host, selectOnChange,
+    rowSelectionColumn, selectedRows, host, selectOnChange,
     className
   }) =>
     <React.Fragment>
@@ -53,9 +52,8 @@ const TableContent =
               rowSelectionColumn &&
               <SelectionTableHeaderCell
                 {...rowSelectionColumn}
-                downloadFileTypes={downloadFileTypes}
-                selectedRowIds={selectedRows}
-                onClick={rowSelectionColumn.tableHeaderCellOnClick || _validateAndDownloadExperimentFiles(host)}/>
+                onClick={rowSelectionColumn.tableHeaderCellOnClick}
+                selectedRowIds={selectedRows}/>
             }
           </Table.Head>
 
@@ -108,12 +106,6 @@ TableContent.propTypes = {
   ascendingOrder: PropTypes.bool.isRequired,
   tableHeaderCellOnClick: PropTypes.func.isRequired,
   // Row selection and action on selected rows
-  downloadFileTypes: PropTypes.arrayOf(
-    PropTypes.shape({
-      description: PropTypes.string,
-      id: PropTypes.string
-    })
-  ),
   rowSelectionColumn: PropTypes.shape({
     label: PropTypes.string.isRequired,
     dataKey: PropTypes.string.isRequired,
@@ -130,7 +122,6 @@ TableContent.propTypes = {
 TableContent.defaultProps = {
   host: ``,
   className: `small-12 columns`,
-  downloadFileTypes: []
 }
 
 export default TableContent

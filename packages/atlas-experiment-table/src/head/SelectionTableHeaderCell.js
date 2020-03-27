@@ -1,18 +1,15 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import Popup from 'react-popup'
-import Prompt from './Prompt'
-import ReactPopupStyle from './ReactPopupStyle'
 // We’re not using Link because Evergreen restyles the links and we want EBI VF for that
 // We also don’t like Evergreen’s Tooltip because  it doesn’t render HTML :(
 import { Table, Heading, Pane, majorScale } from 'evergreen-ui'
 import ReactTooltip from 'react-tooltip'
 
-const TooltipIcon = ({tooltipText}) =>
+const TooltipIcon = ({ tooltipText }) =>
   <sup>
     <span
-      data-tip={`${tooltipText}`}
+      data-tip={tooltipText}
       data-html={true}
       className={`icon icon-generic`} data-icon={`i`}
       style={{color: `lightgrey`, fontSize: `small`}}/>
@@ -22,103 +19,40 @@ TooltipIcon.propTypes = {
   tooltipText: PropTypes.string.isRequired
 }
 
-class SelectionTableHeaderCell extends React.Component {
-  constructor(props) {
-    super(props)
+const SelectionTableHeaderCell = ({ label, selectedRowIds, onClick, tooltipContent, width }) =>
+  <Table.HeaderCell
+    flexGrow={width}
+    justifyContent={`center`}>
 
-    this.state = {
-      fileTypes: props.downloadFileTypes.map(fileType => fileType.id)
+    <Heading size={500}>
+      {
+        selectedRowIds.length > 0 ?
+          <a onClick={() => onClick(selectedRowIds)}>
+            {`${label} ${selectedRowIds.length} ${selectedRowIds.length === 1 ? `entry` : `entries`}`}
+          </a> :
+          label
+      }
+    </Heading>
+    { tooltipContent &&
+    <Pane paddingLeft={majorScale(1)}>
+      <TooltipIcon tooltipText={tooltipContent}/>
+      <ReactTooltip place={`left`}/>
+    </Pane>
     }
-
-    this.onClick = this.onClick.bind(this)
-    this.onChange = this.onChange.bind(this)
-
-    Popup.registerPlugin(
-      `prompt`,
-      (downloadFileTypes, onChange, callback) => {
-        Popup.create({
-          title: `Download`,
-          content: <Prompt downloadFileTypes={downloadFileTypes} onSelect={(v) => onChange(v)}/>,
-          buttons: {
-            left: [`cancel`],
-            right:
-              [{
-                text: `Download`,
-                className: `success`,
-                action: () => {
-                  callback()
-                  Popup.close()
-                }
-              }]
-          }
-        })
-      }
-    )
-  }
-
-  onClick(checkedRows) {
-    Popup.plugins().prompt(
-      this.props.downloadFileTypes,
-      this.onChange,
-      () => { this.props.onClick(checkedRows, this.state.fileTypes) }
-    )
-  }
-
-  onChange(fileTypes) {
-    this.setState(
-      { fileTypes: fileTypes },
-      () => {
-        Popup.close()
-        this.onClick(this.props.selectedRowIds)
-      })
-  }
-
-  render(){
-    const { label, selectedRowIds, onClick, tooltipContent, width, downloadFileTypes } = this.props
-
-    return <Table.HeaderCell
-      flexGrow={width}
-      justifyContent={`center`}>
-      <ReactPopupStyle />
-      <Popup />
-
-      <Heading size={500}>
-        {
-          selectedRowIds.length > 0 ?
-            <a onClick={() => downloadFileTypes.length ? this.onClick(selectedRowIds) : onClick(selectedRowIds)}>
-              {`${label} ${selectedRowIds.length} ${selectedRowIds.length === 1 ? `entry` : `entries`}`}
-            </a> :
-            label
-        }
-      </Heading>
-      { tooltipContent &&
-      <Pane paddingLeft={majorScale(1)}>
-        <TooltipIcon tooltipText={tooltipContent}/>
-        <ReactTooltip place={`left`}/>
-      </Pane>
-      }
-    </Table.HeaderCell>
-  }
-}
+  </Table.HeaderCell>
 
 SelectionTableHeaderCell.propTypes = {
   label: PropTypes.string.isRequired,
   selectedRowIds: PropTypes.arrayOf(PropTypes.string).isRequired,
-  onClick: PropTypes.func.isRequired,
+  onClick: PropTypes.func,
   tooltipContent: PropTypes.string,
-  width: PropTypes.number.isRequired,
-  downloadFileTypes: PropTypes.arrayOf(
-    PropTypes.shape({
-      description: PropTypes.string,
-      id: PropTypes.string
-    })
-  )
+  width: PropTypes.number.isRequired
 }
 
 SelectionTableHeaderCell.defaultProps = {
   tooltipContent: ``,
   width: 1,
-  downloadFileTypes: []
+  onClick: () => {}
 }
 
 export default SelectionTableHeaderCell
