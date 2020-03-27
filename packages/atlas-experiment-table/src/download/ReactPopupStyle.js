@@ -81,13 +81,6 @@ const ReactPopupStyle = createGlobalStyle`
     color: #fff;
 }
 
-.mm-popup__btn--disabled {
-  opacity: 0.25;
-  cursor: not-allowed;
-  background-color: #007c82;
-      color: #fefefe;
-}
-
 .mm-popup__btn--success.primary:hover,
 .mm-popup__btn--success.primary:focus,
 .mm-popup__btn--success.hover,
@@ -104,7 +97,7 @@ const ReactPopupStyle = createGlobalStyle`
 }
 
 .mm-popup__box {
-    width: 350px;
+    width: 250px;
     position: fixed;
     top: 10%;
     left: 50%;
