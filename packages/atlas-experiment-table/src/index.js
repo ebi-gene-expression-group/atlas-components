@@ -20,3 +20,4 @@ TableManagerRouter.defaultProps = {
 
 export { default as TableManager } from './TableManager'
 export { TableManagerRouter }
+export { default as loadExperimentDownloadModule } from './download/ExperimentDownloadModule'
