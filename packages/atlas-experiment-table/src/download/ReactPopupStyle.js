@@ -21,19 +21,7 @@ const ReactPopupStyle = createGlobalStyle`
 }
 
 .mm-popup__close {
-    position: absolute;
-    top: 0.5rem;
-    right: 1rem;
-    padding: 0;
-    cursor: pointer;
-    text-align: center;
-    margin: 0;
-    font-size: 2em;
-    color: #8a8a8a;
-}
-
-.mm-popup__close:after {
-    content: '×';
+    display: none;
 }
 
 .mm-popup__input {
