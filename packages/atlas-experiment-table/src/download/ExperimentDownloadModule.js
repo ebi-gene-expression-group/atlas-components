@@ -7,7 +7,7 @@ import ReactPopupStyle from './ReactPopupStyle'
 
 import validateAndDownloadExperimentFiles from './validateAndDownloadExperimentFiles'
 
-export default (host, fileTypes, target) => {
+export default (host, fileTypes, target, callback = validateAndDownloadExperimentFiles) => {
   // Render Popup component with some styling, it won’t be visible just yet
   ReactDOM.render(
     <React.Fragment>
@@ -44,7 +44,7 @@ export default (host, fileTypes, target) => {
               key: `enter`,
               action: () => {
                 if (selectedFileTypeIds.length) {
-                  validateAndDownloadExperimentFiles(host, experimentAccessions, selectedFileTypeIds)
+                  callback(host, experimentAccessions, selectedFileTypeIds)
                   Popup.close()
                 }
               }
