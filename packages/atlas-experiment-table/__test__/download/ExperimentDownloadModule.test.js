@@ -35,10 +35,10 @@ describe(`ExperimentDownloadModule`, () => {
     expect(container.querySelector(`button`)).toBeNull()
 
     openDownloadPopup()
-    
+
     expect(container.querySelector(`.mm-popup`)).not.toBeNull()
     expect(container.querySelector(`.mm-popup--visible`)).not.toBeNull()
-    // Close (not visible), cancel and success buttons;
+    // Close (not visible), cancel and success buttons
     expect(container.querySelectorAll(`button`)).toHaveLength(3)
     expect(container.querySelectorAll(`button`)[1].textContent).toEqual(`Cancel`)
     expect(container.querySelectorAll(`button`)[2].textContent).toEqual(`Download`)
