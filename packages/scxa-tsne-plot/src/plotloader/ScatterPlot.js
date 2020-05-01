@@ -39,12 +39,13 @@ async function addModules() {
   HighchartsExporting(Highcharts)
   highchartsExportStyle(Highcharts)
 
-  highchartsBoost(Highcharts)
-
   HighchartsColorAxis(Highcharts)
   highchartsColorAxisLogWithNegativeValues(Highcharts)
 
   highchartsAdaptChartToLegendModule(Highcharts)
+
+  // Boost should be the last module loaded; read note in https://www.highcharts.com/docs/advanced-chart-features/boost-module
+  highchartsBoost(Highcharts)
 }
 
 addModules()
@@ -55,7 +56,7 @@ addModules()
 
 const getRadiusSize = (totalNumberOfPoints) => {
   if (totalNumberOfPoints >= 40000) {
-    return 1
+    return 1.25
   } else if (totalNumberOfPoints >= 10000) {
     return 2
   } else if (totalNumberOfPoints >= 5000) {
@@ -68,13 +69,14 @@ const highchartsBaseConfig = {
   credits: {
     enabled: false
   },
+  tooltip: {
+    outside: true
+  },
 
   chart: {
     type: `scatter`,
-    spacingLeft: 0,
     height: `100%`,
     panning: true,
-    spacingTop: 50,
     zoomType: `xy`,
     plotBackgroundColor: `transparent`, // This needs to be set to allow access to this.plotBackground
     events: {
@@ -200,6 +202,11 @@ const ScatterPlot = (props) => {
       {
         plotOptions: {
           series: {
+            states: {
+              inactive: {
+                enabled: false
+              }
+            },
             boostThreshold: boostThreshold,
             marker: {
               radius: getRadiusSize(totalNumberOfPoints)

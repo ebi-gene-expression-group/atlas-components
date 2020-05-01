@@ -1,6 +1,6 @@
 {
   "name": "@ebi-gene-expression-group/react-ebi-species",
-  "version": "2.5.3",
+  "version": "2.5.4",
   "description": "React component based on the EBI species icons",
   "main": "lib/index.js",
   "scripts": {

@@ -5,7 +5,7 @@ exports[`Autocomplete matches snapshot 1`] = `
   <label
     htmlFor="geneQuery"
   >
-    Gene ID or gene symbol
+    Foobar:
   </label>
   <div
     className=" css-2b097c-container"

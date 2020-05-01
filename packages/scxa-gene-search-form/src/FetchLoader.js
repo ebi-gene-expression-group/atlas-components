@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import URI from 'urijs'
 
 import GeneSearchForm from './GeneSearchForm'
@@ -21,10 +20,10 @@ class FetchLoader extends React.Component {
     return(
       error ?
         <GeneSearchForm {...data} {...this.props} speciesSelectStatusMessage={`${error.name}: ${error.message}`}/> :
-      loading ?
-        <GeneSearchForm {...data} {...this.props} speciesSelectStatusMessage={`Fetching species…`}/> :
-      // promise fulfilled
-        <GeneSearchForm {...data} {...this.props} />
+        loading ?
+          <GeneSearchForm {...data} {...this.props} speciesSelectStatusMessage={`Fetching species…`}/> :
+          // promise fulfilled
+          <GeneSearchForm {...data} {...this.props} />
     )
   }
 
@@ -68,37 +67,7 @@ class FetchLoader extends React.Component {
   }
 }
 
-FetchLoader.propTypes = {
-  atlasUrl: PropTypes.string.isRequired,
-  wrapperClassName: PropTypes.string,
-  actionEndpoint: PropTypes.string.isRequired,
-  onSubmit: PropTypes.func,
-
-  autocompleteClassName: PropTypes.string,
-  suggesterEndpoint: PropTypes.string.isRequired,
-  defaultValue: PropTypes.shape({
-    term: PropTypes.string,
-    category: PropTypes.string
-  }),
-
-  enableSpeciesSelect: PropTypes.bool,
-  speciesEndpoint: PropTypes.string,
-  speciesSelectClassName: PropTypes.string,
-  defaultSpecies: PropTypes.string,
-
-  searchExamples: PropTypes.arrayOf(PropTypes.shape({
-    text: PropTypes.string.isRequired,
-    url: PropTypes.string.isRequired
-  }))
-}
-
-FetchLoader.defaultProps = {
-  autocompleteClassName: ``,
-  defaultValue: {},
-  enableSpeciesSelect: false,
-  speciesEndpoint: ``,
-  speciesSelectClassName: ``,
-  defaultSpecies: ``
-}
+FetchLoader.propTypes = GeneSearchForm.propTypes
+FetchLoader.defaultProps = GeneSearchForm.defaultProps
 
 export default FetchLoader
