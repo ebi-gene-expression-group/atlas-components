@@ -6,7 +6,7 @@ import ReactTooltip from 'react-tooltip'
 
 import SelectionTableHeaderCell from '../../src/head/SelectionTableHeaderCell'
 
-import { getRandomInt, generateRandomExperimentAccession } from '../TestUtils'
+import { getRandomInt, generateRandomExperimentAccession, downloadFileTypes } from '../TestUtils'
 
 import randomString from 'random-string'
 
@@ -17,6 +17,7 @@ describe(`SelectionTableHeaderCell`, () => {
     const props = {
       label: randomString(),
       selectedRowIds: [],
+      downloadFileTypes: downloadFileTypes,
       onClick: () => {}
     }
     const wrapper = shallow(<SelectionTableHeaderCell {...props}/>)
@@ -32,6 +33,7 @@ describe(`SelectionTableHeaderCell`, () => {
   test(`displays a table header cell with a link if there are rows selected`, () => {
     const props = {
       label: randomString(),
+      downloadFileTypes: downloadFileTypes,
       selectedRowIds:
           // https://stackoverflow.com/questions/3751520/how-to-generate-sequence-of-numbers-chars-in-javascript
           Array.apply(0, Array(getRandomInt(1, MAX_EXPERIMENT_COUNT)))
@@ -45,15 +47,16 @@ describe(`SelectionTableHeaderCell`, () => {
     expect(wrapper.find(`a`)).toIncludeText(props.label)
   })
 
-  test(`calls onClick with the selected row IDs when the link is clicked`, () => {
+  test(`calls onClick with the selected row IDs when the link is clicked, if download file types not provided`, () => {
     const props = {
       label: randomString(),
       selectedRowIds:
-          // https://stackoverflow.com/questions/3751520/how-to-generate-sequence-of-numbers-chars-in-javascript
-          Array.apply(0, Array(getRandomInt(1, MAX_EXPERIMENT_COUNT)))
-            .map(() => generateRandomExperimentAccession()),
+      // https://stackoverflow.com/questions/3751520/how-to-generate-sequence-of-numbers-chars-in-javascript
+        Array.apply(0, Array(getRandomInt(1, MAX_EXPERIMENT_COUNT)))
+          .map(() => generateRandomExperimentAccession()),
       onClick: jest.fn()
     }
+
     const wrapper = shallow(<SelectionTableHeaderCell {...props}/>)
 
     wrapper.find(`a`).simulate(`click`)
@@ -65,6 +68,7 @@ describe(`SelectionTableHeaderCell`, () => {
     const props = {
       label: randomString(),
       selectedRowIds: [],
+      downloadFileTypes: downloadFileTypes,
       onClick: () => {},
       tooltipContent: randomString({length: 100})
     }
@@ -77,6 +81,7 @@ describe(`SelectionTableHeaderCell`, () => {
     const props = {
       label: `Action`,
       selectedRowIds: [],
+      downloadFileTypes: downloadFileTypes,
       onClick: () => {}
     }
 

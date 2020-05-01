@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ExperimentFileTypeMultiChoice matches snapshot 1`] = `
+<ul
+  style={
+    Object {
+      "listStyle": "none",
+    }
+  }
+>
+  <li>
+    <input
+      checked={true}
+      id="file1"
+      onChange={[Function]}
+      type="checkbox"
+    />
+    <label
+      htmlFor="file1"
+    >
+      File type 1
+    </label>
+  </li>
+  <li>
+    <input
+      checked={true}
+      id="file-2"
+      onChange={[Function]}
+      type="checkbox"
+    />
+    <label
+      htmlFor="file-2"
+    >
+      File type 2
+    </label>
+  </li>
+  <li>
+    <input
+      checked={true}
+      id="file-type3"
+      onChange={[Function]}
+      type="checkbox"
+    />
+    <label
+      htmlFor="file-type3"
+    >
+      File type 3
+    </label>
+  </li>
+</ul>
+`;

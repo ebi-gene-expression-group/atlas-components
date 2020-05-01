@@ -7,7 +7,6 @@ import { tableHeaderPropTypes } from './filterPropTypes'
 
 import TableHeaderCell from './head/TableHeaderCell'
 import SelectionTableHeaderCell from './head/SelectionTableHeaderCell'
-import { _validateAndDownloadExperimentFiles } from './head/downloadHelper'
 
 import TableCell from './TableCell'
 import SelectionTableCell from './SelectionTableCell'
@@ -53,8 +52,8 @@ const TableContent =
               rowSelectionColumn &&
               <SelectionTableHeaderCell
                 {...rowSelectionColumn}
-                selectedRowIds={selectedRows}
-                onClick={rowSelectionColumn.tableHeaderCellOnClick || _validateAndDownloadExperimentFiles(host)}/>
+                onClick={rowSelectionColumn.tableHeaderCellOnClick}
+                selectedRowIds={selectedRows}/>
             }
           </Table.Head>
 
@@ -122,7 +121,7 @@ TableContent.propTypes = {
 
 TableContent.defaultProps = {
   host: ``,
-  className: `small-12 columns`
+  className: `small-12 columns`,
 }
 
 export default TableContent

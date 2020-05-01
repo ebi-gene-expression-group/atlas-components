@@ -11,7 +11,7 @@ import SelectionTableHeaderCell from '../src/head/SelectionTableHeaderCell'
 
 import randomString from 'random-string'
 
-import { getRandomInt, bulkTableHeaders } from './TestUtils'
+import { getRandomInt, bulkTableHeaders, downloadFileTypes } from './TestUtils'
 import bulkExperiments from './experiments-bulk.json'
 
 describe(`TableContent`, () => {
@@ -27,6 +27,7 @@ describe(`TableContent`, () => {
     tableHeaderCellOnClick: jest.fn(),
     selectedRows: [],
     host: ``,
+    downloadFileTypes: downloadFileTypes,
     selectOnChange: jest.fn()
   }
 
@@ -85,7 +86,8 @@ describe(`TableContent`, () => {
       label: randomString(),
       dataKey: tableHeaders[getRandomInt(0, tableHeaders.length)].dataKey,
       tooltipContent: randomString(),
-      tableHeaderCellOnClick: jest.fn()
+      tableHeaderCellOnClick: jest.fn(),
+      downloadFileTypes: downloadFileTypes
     }
     const wrapper =
       shallow(

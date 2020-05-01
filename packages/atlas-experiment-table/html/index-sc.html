@@ -8,14 +8,15 @@
     <link rel="stylesheet" href="https://ebi.emblstatic.net/web_guidelines/EBI-Icon-fonts/v1.3/fonts.css"
           type="text/css" media="all"/>
     <link rel="stylesheet" href="https://www.ebi.ac.uk/gxa/sc/resources/css/theme-atlas.css" type="text/css"
-          media="all">
+          media="all"/>
+
 </head>
 
 <body>
 <div id="wrapper" class="row expanded">
     <div id="content" class="small-12 columns">
-        <div id="target">
-        </div>
+        <div id="target"></div>
+        <div id="popup-placeholder"></div>
     </div>
 </div>
 </body>
@@ -79,6 +80,24 @@
           rowSelectionColumn: {
             label: 'Download',
             dataKey: 'experimentAccession',
+            tableHeaderCellOnClick:
+              experimentTable.loadExperimentDownloadModule(
+                'https://www.ebi.ac.uk/gxa/sc/',
+                [
+                  {
+                    description: 'Raw quantification files',
+                    id: 'quantification-raw'
+                  },
+                  {
+                    description: 'Normalised counts files',
+                    id: 'normalised'
+                  },
+                  {
+                    description: 'Experiment design file',
+                    id: 'experiment-design'
+                  }
+                ],
+                'popup-placeholder',),
             tooltipContent:
               '<ul>' +
                 '<li>Raw filtered count matrix after quantification</li>' +

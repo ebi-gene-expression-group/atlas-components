@@ -6,10 +6,10 @@ import PropTypes from 'prop-types'
 import { Table, Heading, Pane, majorScale } from 'evergreen-ui'
 import ReactTooltip from 'react-tooltip'
 
-const TooltipIcon = ({tooltipText}) =>
+const TooltipIcon = ({ tooltipText }) =>
   <sup>
     <span
-      data-tip={`${tooltipText}`}
+      data-tip={tooltipText}
       data-html={true}
       className={`icon icon-generic`} data-icon={`i`}
       style={{color: `lightgrey`, fontSize: `small`}}/>
@@ -23,6 +23,7 @@ const SelectionTableHeaderCell = ({ label, selectedRowIds, onClick, tooltipConte
   <Table.HeaderCell
     flexGrow={width}
     justifyContent={`center`}>
+
     <Heading size={500}>
       {
         selectedRowIds.length > 0 ?
@@ -33,24 +34,25 @@ const SelectionTableHeaderCell = ({ label, selectedRowIds, onClick, tooltipConte
       }
     </Heading>
     { tooltipContent &&
-      <Pane paddingLeft={majorScale(1)}>
-        <TooltipIcon tooltipText={tooltipContent}/>
-        <ReactTooltip place={`left`}/>
-      </Pane>
+    <Pane paddingLeft={majorScale(1)}>
+      <TooltipIcon tooltipText={tooltipContent}/>
+      <ReactTooltip place={`left`}/>
+    </Pane>
     }
   </Table.HeaderCell>
 
 SelectionTableHeaderCell.propTypes = {
   label: PropTypes.string.isRequired,
   selectedRowIds: PropTypes.arrayOf(PropTypes.string).isRequired,
-  onClick: PropTypes.func.isRequired,
+  onClick: PropTypes.func,
   tooltipContent: PropTypes.string,
   width: PropTypes.number.isRequired
 }
 
 SelectionTableHeaderCell.defaultProps = {
   tooltipContent: ``,
-  width: 1
+  width: 1,
+  onClick: () => {}
 }
 
 export default SelectionTableHeaderCell

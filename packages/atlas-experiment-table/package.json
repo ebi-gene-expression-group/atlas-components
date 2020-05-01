@@ -45,8 +45,10 @@
     "prop-types": "^15.7.2",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
+    "react-popup": "^0.10.0",
     "react-router-dom": "^5.1.2",
     "react-tooltip": "^4.0.5",
+    "styled-components": "^5.0.1",
     "urijs": "^1.19.2"
   },
   "devDependencies": {

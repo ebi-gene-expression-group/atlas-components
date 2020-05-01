@@ -2,6 +2,22 @@
 
 exports[`SelectionTableHeaderCell matches snapshot (basic) 1`] = `
 <SelectionTableHeaderCell
+  downloadFileTypes={
+    Array [
+      Object {
+        "description": "File type 1",
+        "id": "file1",
+      },
+      Object {
+        "description": "File type 2",
+        "id": "file-2",
+      },
+      Object {
+        "description": "File type 3",
+        "id": "file-type3",
+      },
+    ]
+  }
   label="Action"
   onClick={[Function]}
   selectedRowIds={Array []}
