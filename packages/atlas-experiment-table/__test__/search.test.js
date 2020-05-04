@@ -66,13 +66,12 @@ describe(`Search function`, () => {
 
     expect(searchResults1.length).toBeGreaterThan(0)
     expect(searchResults2.length).toBeGreaterThan(0)
-    expect(searchResults12.length).toBeGreaterThan(searchResults1.length)
-    expect(searchResults12.length).toBeGreaterThan(searchResults2.length)
+    expect(searchResults12.length).toBeGreaterThanOrEqual(searchResults1.length)
+    expect(searchResults12.length).toBeGreaterThanOrEqual(searchResults2.length)
 
     expect(searchResults12).toHaveLength(searchResults21.length)
     expect(searchResults12).toHaveLength(searchResults21Foobar.length)
   })
-
 
   test(`can search for exact phrases enclosing query in double quotes`, () => {
     const dataKey = getRandomTextFieldDataKey(bulkExperiments)
