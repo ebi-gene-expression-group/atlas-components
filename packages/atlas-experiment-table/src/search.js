@@ -1,19 +1,32 @@
 import _ from 'lodash'
 
+// Don’t search for queries that are shorter than this
+const TOKEN_MIN_LENGTH = 3
+
 const fuzzyDeepContainsCaseInsensitive = (object, keys, value) => {
-  const words = _.chain(object)
-    .pick(keys)
-    .values()
-    .flatten()
-    .map(_.toString)
-    .map(_.toLower)
-    .map(phrase => _.split(phrase, /\s+/))
-    .flatten()
-    .value()
+  const words =
+    _.chain(object)
+      .pick(keys)
+      .values()
+      .flatten()
+      .map(_.toString)
+      .map(_.toLower)
+      .map(phrase => _.split(phrase, /\s+/))
+      .flatten()
+      .value()
 
-  const searchTokens = _.chain(value).toLower().split(/\s+/).reject(_.isEmpty).value()
+  const searchTokens =
+    _.chain(value)
+      .toLower()
+      .split(/\s+/)
+      .reject(_.isEmpty)
+      .filter(searchToken => searchToken.length >= TOKEN_MIN_LENGTH)
+      .value()
 
-  return searchTokens.length === 0 || _.intersection(searchTokens, words).length > 0
+  return (
+    searchTokens.length === 0 ||
+    searchTokens.some(searchToken => words.some(word => word.includes(searchToken)))
+  )
 }
 
 const exactDeepContainsCaseInsensitive = (object, keys, value) =>
@@ -35,3 +48,5 @@ export default (object, keys, value) => {
     return fuzzyDeepContainsCaseInsensitive(object, keys, trimmedValue)
   }
 }
+
+export { TOKEN_MIN_LENGTH }

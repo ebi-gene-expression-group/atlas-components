@@ -1,7 +1,9 @@
 import _ from 'lodash'
-import search from '../src/search'
+import search, { TOKEN_MIN_LENGTH } from '../src/search'
 
 import bulkExperiments from './experiments-bulk.json'
+
+import { randomSubstring } from './TestUtils'
 
 const getRandomValueFromKeyedRows = (dataRows, dataKey) =>
   _.chain(dataRows)
@@ -19,6 +21,20 @@ const getRandomTextFieldDataKey = dataRows =>
     .value()
 
 describe(`Search function`, () => {
+  test(`can match long enough substrings`, () => {
+    let dataKey
+    let queryString = ``
+    while (queryString.length < TOKEN_MIN_LENGTH) {
+      dataKey = getRandomTextFieldDataKey(bulkExperiments)
+      queryString = randomSubstring(getRandomValueFromKeyedRows(bulkExperiments, dataKey))
+    }
+
+    const searchResults = bulkExperiments.filter(bulkExperiment => search(bulkExperiment, dataKey, queryString))
+
+    expect(searchResults.length).toBeGreaterThan(0)
+    expect(searchResults.length).toBeLessThan(bulkExperiments.length)
+  })
+
   test(`is case insensitive`, () => {
     const dataKey = getRandomTextFieldDataKey(bulkExperiments)
     const queryString = getRandomValueFromKeyedRows(bulkExperiments, dataKey)
