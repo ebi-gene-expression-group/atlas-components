@@ -7,28 +7,20 @@ import TablePreamble from './TablePreamble'
 import TableContent from './TableContent'
 import TableFooter from './TableFooter'
 
-const capitalizeEachWord = str => str.replace(/\w+([\s-])*/g, _.capitalize)
+import search from './search'
 
-const deepIncludesCaseInsensitive = (object, keys, value) =>
-  _.chain(object)
-    .pick(keys)
-    .values()
-    .flatten()
-    .map(_.toString)
-    .map(_.toLower)
-    .some(valueToLower => valueToLower.includes(_.toString(value).toLowerCase()))
-    .value()
+const capitalizeEachWord = str => str.replace(/\w+([\s-])*/g, _.capitalize)
 
 const filterSortDataRows = (dataRows, filters, displayedKeys, searchAll, sortColumnDataKey, ascendingOrder) => {
   const filterSortedDataRows = _.chain(dataRows)
     .filter(
       // Keep the rows whose displayed columns match searchAll
-      dataRow => deepIncludesCaseInsensitive(dataRow, displayedKeys, searchAll)
+      dataRow => search(dataRow, displayedKeys, searchAll)
       // Keep the rows that have matching values defined in the filters (i.e. table headers and drop-downs)
       &&
       _.chain(filters)
         .keys()
-        .every(filterKey => deepIncludesCaseInsensitive(dataRow, filterKey, filters[filterKey]))
+        .every(filterKey => search(dataRow, filterKey, filters[filterKey]))
         .value())
     // Sort by sortColumnDataKey
     .sortBy(

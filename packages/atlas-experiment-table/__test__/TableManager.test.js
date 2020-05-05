@@ -15,6 +15,7 @@ import {
   bulkTableHeaders, bulkDropdownFilters, bulkRowSelectionColumn,
   singleCellTableHeaders, singleCellDropdownFilters, singleCellRowSelectionColumn, downloadFileTypes
 } from './TestUtils'
+
 import bulkExperiments from './experiments-bulk.json'
 import singleCellExperiments from './experiments-sc.json'
 
