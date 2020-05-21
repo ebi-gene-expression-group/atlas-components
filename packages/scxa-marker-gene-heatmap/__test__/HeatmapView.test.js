@@ -20,7 +20,8 @@ describe(`HeatmapView`, () => {
     host: `foo/`,
     resource: `bar`,
     ks: [1, 2, 3, 4],
-    selectedK: `1`
+    selectedK: `1`,
+    species: `species`
   }
 
   test(`renders error if API request is unsuccessful`, () => {
