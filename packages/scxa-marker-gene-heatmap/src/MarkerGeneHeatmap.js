@@ -8,7 +8,6 @@ import HighchartsNoData from 'highcharts/modules/no-data-to-display'
 import HighchartsExporting from 'highcharts/modules/exporting'
 import HighchartsExportData from 'highcharts/modules/export-data'
 import HighchartsGetHeatmapData from './highchartsHeatmapTableDataModule'
-import YAxisFormatter from './axesFormatters'
 
 import _ from 'lodash'
 
@@ -172,9 +171,10 @@ const MarkerGeneHeatmap = (props) => {
       visible: data.length !== 0,
       labels: {
         useHTML: true,
-        formatter: function() {
-          return YAxisFormatter(species, this.value)
-        }
+        formatter: function () {
+          return `<a href="https://www.ebi.ac.uk/gxa/sc/search?q=${this.value}&species=${species}"` +
+            `style="border: none; color: #148ff3">${this.value}</a>`
+          }
       }
     },
 
