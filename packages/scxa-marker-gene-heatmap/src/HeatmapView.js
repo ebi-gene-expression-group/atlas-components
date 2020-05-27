@@ -80,7 +80,7 @@ class HeatmapView extends React.Component {
     const { data, filteredData, selectedClusterId, isLoading, hasError } = this.state
     const { wrapperClassName, plotWrapperClassName } = this.props
     const { ks, ksWithMarkers, selectedK, onSelectK } = this.props
-    const { hasDynamicHeight, defaultHeatmapHeight, heatmapRowHeight } = this.props
+    const { hasDynamicHeight, defaultHeatmapHeight, heatmapRowHeight, species } = this.props
 
     const kOptions = ks
       .sort((a, b) => a-b)
@@ -148,6 +148,7 @@ class HeatmapView extends React.Component {
                 chartHeight={defaultHeatmapHeight}
                 hasDynamicHeight={_.chain(filteredData).map(`geneName`).uniq().value().length > 5 ? hasDynamicHeight : false}
                 heatmapRowHeight={heatmapRowHeight}
+                species={species}
               />
               <LoadingOverlay
                 show={isLoading}
@@ -170,7 +171,8 @@ HeatmapView.propTypes = {
   plotWrapperClassName: PropTypes.string,
   defaultHeatmapHeight: PropTypes.number,
   hasDynamicHeight: PropTypes.bool,
-  heatmapRowHeight: PropTypes.number
+  heatmapRowHeight: PropTypes.number,
+  species: PropTypes.string.isRequired
 }
 
 HeatmapView.defaultProps = {

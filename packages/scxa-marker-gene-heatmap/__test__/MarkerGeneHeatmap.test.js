@@ -39,7 +39,8 @@ describe(`MarkerGeneHeatmap`, () => {
       chartHeight={200}
       isDataFiltered={false}
       heatmapRowHeight={20}
-      hasDynamicHeight={false} />)
+      hasDynamicHeight={false}
+      species={`species`} />)
 
     const chartOptions = wrapper.find(`t`).props().options
 
@@ -62,9 +63,10 @@ describe(`MarkerGeneHeatmap`, () => {
       chartHeight={200}
       isDataFiltered={true}
       heatmapRowHeight={20}
-      hasDynamicHeight={false} />)
+      hasDynamicHeight={false}
+      species={`species`} />)
 
-    const chartOptions = wrapper.find(`t`).props().options
+    const chartOptions = wrapper.props().options
 
     expect(chartOptions.yAxis.plotLines).toHaveLength(0)
   })
@@ -85,7 +87,8 @@ describe(`MarkerGeneHeatmap`, () => {
       chartHeight={200}
       isDataFiltered={true}
       heatmapRowHeight={20}
-      hasDynamicHeight={false} />)
+      hasDynamicHeight={false}
+      species={`species`} />)
 
     const chartOptions = wrapper.find(`t`).props().options
 

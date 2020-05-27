@@ -52,6 +52,7 @@ class Demo extends React.Component {
               })
             }
           }
+          species={`Homo sapiens`}
           hasDynamicHeight={true}
           heatmapRowHeight={20}
         />

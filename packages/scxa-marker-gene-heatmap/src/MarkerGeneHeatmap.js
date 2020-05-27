@@ -38,7 +38,7 @@ Highcharts.SVGRenderer.prototype.symbols.download = (x, y, w, h) => [
 ]
 
 const MarkerGeneHeatmap = (props) => {
-  const { chartHeight, hasDynamicHeight, heatmapRowHeight } = props
+  const { chartHeight, hasDynamicHeight, heatmapRowHeight, species } = props
   const { data, isDataFiltered, xAxisCategories, yAxisCategories } = props
   const totalNumberOfRows = Object.keys(_.groupBy(data, `geneName`)).length
   const groupedData = _.groupBy(data, `clusterIdWhereMarker`)
@@ -168,7 +168,14 @@ const MarkerGeneHeatmap = (props) => {
       minorGridLineWidth: 0,
       plotLines: plotLines,
       showEmpty: false,
-      visible: data.length !== 0
+      visible: data.length !== 0,
+      labels: {
+        useHTML: true,
+        formatter: function () {
+          return `<a href="https://www.ebi.ac.uk/gxa/sc/search?q=${this.value}&species=${species}"` +
+            `style="border: none; color: #148ff3">${this.value}</a>`
+          }
+      }
     },
 
     tooltip: {
@@ -307,7 +314,8 @@ MarkerGeneHeatmap.propTypes = {
   xAxisCategories: PropTypes.array.isRequired,
   yAxisCategories: PropTypes.array.isRequired,
   hasDynamicHeight: PropTypes.bool.isRequired,
-  heatmapRowHeight: PropTypes.number.isRequired
+  heatmapRowHeight: PropTypes.number.isRequired,
+  species: PropTypes.string.isRequired
 }
 
 export default MarkerGeneHeatmap
