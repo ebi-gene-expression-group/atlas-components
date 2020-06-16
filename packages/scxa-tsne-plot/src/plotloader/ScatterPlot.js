@@ -4,6 +4,7 @@ import Highcharts from 'highcharts'
 import HighchartsReact from 'highcharts-react-official'
 
 import HighchartsExporting from 'highcharts/modules/exporting'
+import HighchartsOfflineExporting from 'highcharts/modules/offline-exporting'
 import HighchartsColorAxis from 'highcharts/modules/coloraxis'
 
 //import HighchartsMap from 'highcharts/modules/map'
@@ -37,6 +38,7 @@ async function addModules() {
   // Only include modules if Highcharts isn’t a *good* mock -- Boost/Exporting can break tests
   // if (Highcharts.getOptions()) {...}
   HighchartsExporting(Highcharts)
+  HighchartsOfflineExporting(Highcharts)
   highchartsExportStyle(Highcharts)
 
   HighchartsColorAxis(Highcharts)

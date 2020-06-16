@@ -58,6 +58,21 @@ const experiment4 = {
   ]
 }
 
+//Image export fails for the large experiments
+// Number of cells: 32,369
+const experiment5 = {
+  accession: `E-HCAD-14`,
+  species: `Mus musculus`,
+  perplexities: [25],
+  ks: [11],
+  metadata: [
+    {
+      value: `lung`,
+      label: `Organism part`
+    }
+  ]
+}
+
 const experimentOmega = {
   accession: `E-HCAD-4`,
   species: `Homo sapiens`,
@@ -79,7 +94,7 @@ const experimentOmega = {
   ]
 }
 
-const { accession, perplexities, ks, metadata, species } = experimentOmega
+const { accession, perplexities, ks, metadata, species } = experiment5
 
 class Demo extends React.Component {
   constructor(props) {
