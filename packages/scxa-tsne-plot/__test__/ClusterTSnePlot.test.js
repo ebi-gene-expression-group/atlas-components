@@ -38,6 +38,21 @@ describe(`ClusterTSnePlot colourize function`, () => {
     })
   })
 
+  test(`must dim if metadata is Not Available`, () => {
+    const randomSeries = randomHighchartsSeriesWithNamesAndMaxPoints([...seriesNames, `Not available`], maxPointsPerSeries)
+    _colourizeClusters([], `lightgrey`)(randomSeries).forEach((series) => {
+      if(series.name === `Not available`) {
+        series.data.forEach((point) => {
+          expect(point).toHaveProperty(`color`)
+        })
+      } else {
+        series.data.forEach((point) => {
+          expect(point).not.toHaveProperty(`color`)
+        })
+      }
+    })
+  })
+
   test(`must not dim (i.e. add a color field) any series if none are passed to highlight`, () => {
     const randomSeries = randomHighchartsSeriesWithNamesAndMaxPoints(seriesNames, maxPointsPerSeries)
     _colourizeClusters([], `lightgrey`)(randomSeries).forEach((series) => {
