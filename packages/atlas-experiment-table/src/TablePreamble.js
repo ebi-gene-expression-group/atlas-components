@@ -2,71 +2,74 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 const TablePreamble =
-({
-  dropdowns,
-  dropdownOnChange,
-  rowsCount,
-  rowsPerPageOptions,
-  rowsPerPage,
-  rowsPerPageOnChange,
-  searchAll,
-  searchAllOnChange,
-  className
-}) =>
-  <React.Fragment>
-    {
-      dropdowns.map((dropdown, index) =>  {
-        if (dropdown.value) {
-          const valueIndex =
-            // Fuzzy-match the value in the select, in case an initial value in props was passed
-            dropdown.options.findIndex(option => option.toLowerCase().match(dropdown.value.trim().toLowerCase()))
-          dropdown.value = valueIndex >= 0 ? dropdown.options[valueIndex] : ``
-        }
-
-        return (
-          <div
-            key={index}
-            className={`small-12 medium-4 large-2 columns`}>
-            <label>{dropdown.label}:
-              <select
-                value={dropdown.value || ``}
-                onChange={e => dropdownOnChange(dropdown.dataKey, e.target.value, false)}>
-                <option value={``}>All</option>
-                {
-                  dropdown.options.map((option, index) => <option key={index} value={option}>{option}</option>)
+    ({
+       dropdowns,
+       dropdownOnChange,
+       rowsCount,
+       rowsPerPageOptions,
+       rowsPerPage,
+       rowsPerPageOnChange,
+       searchAll,
+       searchAllOnChange,
+       className
+     }) =>
+        <React.Fragment>
+          {
+            dropdowns.map((dropdown, index) =>  {
+              let defaultValue = ``
+              if (dropdown.value) {
+                const valueIndex =
+                    // Fuzzy-match the value in the select, in case an initial value in props was passed
+                    dropdown.options.findIndex(option => option.toLowerCase().match(dropdown.value.trim().toLowerCase()))
+                if (valueIndex >= 0) {
+                  defaultValue = dropdown.options[valueIndex]
                 }
+              }
+
+              return (
+                  <div
+                      key={index}
+                      className={`small-12 medium-4 large-2 columns`}>
+                    <label>{dropdown.label}:
+                      <select
+                          defaultValue={defaultValue}
+                          onChange={e => dropdownOnChange(dropdown.dataKey, e.target.value, false)}>
+                        <option value={``}>All</option>
+                        {
+                          dropdown.options.map((option, index) => <option key={index} value={`"${option}"`}>{option}</option>)
+                        }
+                      </select>
+                    </label>
+                  </div>
+              )
+            })
+          }
+
+          <div className={className}>
+            <label>Entries per page:
+              <select
+                  defaultValue={rowsPerPage}
+                  onChange={e => rowsPerPageOnChange(Number.parseInt(e.target.value))}>
+                {
+                  rowsPerPageOptions
+                      .filter(rowsPerPageOption => rowsCount >= rowsPerPageOption)
+                      .map((rowsPerPageOption, index) =>
+                          <option key={index} value={rowsPerPageOption}>{rowsPerPageOption}</option>)
+                }
+                <option value={0}>All</option>
               </select>
             </label>
           </div>
-        )
-      })
-    }
 
-    <div className={className}>
-      <label>Entries per page:
-        <select
-          value={rowsPerPage}
-          onChange={e => rowsPerPageOnChange(Number.parseInt(e.target.value))}>
-          {
-            rowsPerPageOptions
-              .filter(rowsPerPageOption => rowsCount >= rowsPerPageOption)
-              .map((rowsPerPageOption, index) =>
-                <option key={index} value={rowsPerPageOption}>{rowsPerPageOption}</option>)
-          }
-          <option value={0}>All</option>
-        </select>
-      </label>
-    </div>
-
-    <div className={className}>
-      <label>Search all columns:
-        <input
-          type={`search`}
-          value={searchAll}
-          onChange={e => searchAllOnChange(e.target.value)}/>
-      </label>
-    </div>
-  </React.Fragment>
+          <div className={className}>
+            <label>Search all columns:
+              <input
+                  type={`search`}
+                  value={searchAll}
+                  onChange={e => searchAllOnChange(e.target.value)}/>
+            </label>
+          </div>
+        </React.Fragment>
 
 TablePreamble.propTypes = {
   dropdowns: PropTypes.arrayOf(PropTypes.shape({
