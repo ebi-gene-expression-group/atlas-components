@@ -2,6 +2,7 @@ import _ from 'lodash'
 import search, { TOKEN_MIN_LENGTH } from '../src/search'
 
 import bulkExperiments from './experiments-bulk.json'
+import scExperiments from './experiments-sc.json'
 
 import { randomSubstring } from './TestUtils'
 
@@ -88,5 +89,19 @@ describe(`Search function`, () => {
     expect(searchResults1.length).toBeGreaterThan(0)
     expect(searchResults2.length).toBeGreaterThan(0)
     expect(searchResults12).toHaveLength(0)
+  })
+
+  test(`differentiate between Malaria Cell Atlas and Human Cell Atlas search terms`, () => {
+    const dataKey = `experimentProjects`
+    const hcaQueryString = `Human Cell Atlas`
+    const mcaQueryString = `Malaria Cell Atlas`
+
+    const hcaSearchResults =
+        scExperiments.filter(scExperiments => search(scExperiments, dataKey, `"${hcaQueryString}"`))
+    const mcaSearchResults =
+        scExperiments.filter(scExperiments => search(scExperiments, dataKey, `"${mcaQueryString}"`))
+
+    expect(hcaSearchResults.length).toBeGreaterThanOrEqual(7)
+    expect(mcaSearchResults.length).toBeGreaterThanOrEqual(1)
   })
 })
