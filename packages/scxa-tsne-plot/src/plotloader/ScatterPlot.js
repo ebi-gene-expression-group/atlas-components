@@ -6,11 +6,11 @@ import HighchartsReact from 'highcharts-react-official'
 import HighchartsExporting from 'highcharts/modules/exporting'
 import HighchartsOfflineExporting from 'highcharts/modules/offline-exporting'
 import HighchartsColorAxis from 'highcharts/modules/coloraxis'
+import HighchartsBoost from 'highcharts/modules/boost'
 
 //import HighchartsMap from 'highcharts/modules/map'
 //import highchartsYAxisPanningModule from './modules/y-axis-panning'
 
-import highchartsBoost from './modules/boost'
 import highchartsExportStyle from './modules/export-style'
 import highchartsAdaptChartToLegendModule from './modules/adapt-chart-to-legend'
 import highchartsColorAxisLogWithNegativeValues from './modules/coloraxis-logarithmic-with-negative-values'
@@ -47,7 +47,7 @@ async function addModules() {
   highchartsAdaptChartToLegendModule(Highcharts)
 
   // Boost should be the last module loaded; read note in https://www.highcharts.com/docs/advanced-chart-features/boost-module
-  highchartsBoost(Highcharts)
+  HighchartsBoost(Highcharts)
 }
 
 addModules()
