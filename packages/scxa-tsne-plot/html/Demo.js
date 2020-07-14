@@ -49,11 +49,11 @@ const experiment4 = {
   accession: `E-MTAB-7324`,
   species: `Mus musculus`,
   perplexities: [1, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50],
-  ks: [8, 12, 15, 18, 29, 37, 48, 50],
+  ks: [8, 14, 17, 19, 26, 35, 44, 53, 60],
   metadata: [
     {
-      value: `characteristic_inferred_cell_type`,
-      label: `Inferred cell type`
+      value: `genotype`,
+      label: `Genotype`
     }
   ]
 }
@@ -77,7 +77,7 @@ const experimentOmega = {
   accession: `E-HCAD-4`,
   species: `Homo sapiens`,
   perplexities: [1, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50],
-  ks: [8, 32, 44, 58, 71, 84],
+  ks: [9, 13, 16, 36, 51],
   metadata: [
     {
       value: `characteristic_cell_type`,
@@ -94,7 +94,7 @@ const experimentOmega = {
   ]
 }
 
-const { accession, perplexities, ks, metadata, species } = experiment5
+const { accession, perplexities, ks, metadata, species } = experimentOmega
 
 class Demo extends React.Component {
   constructor(props) {
