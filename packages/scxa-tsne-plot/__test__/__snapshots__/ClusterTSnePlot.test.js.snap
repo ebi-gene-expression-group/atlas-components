@@ -21,7 +21,7 @@ Array [
           onTouchEnd={[Function]}
         >
           <div
-            className=" css-1hwfws3"
+            className=" css-g1d714-ValueContainer"
           >
             <div
               className=" css-1uccc91-singleValue"
@@ -113,7 +113,7 @@ Array [
           onTouchEnd={[Function]}
         >
           <div
-            className=" css-1hwfws3"
+            className=" css-g1d714-ValueContainer"
           >
             <div
               className=" css-1wa3eu0-placeholder"
