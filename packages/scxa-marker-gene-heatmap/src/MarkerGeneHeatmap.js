@@ -10,6 +10,7 @@ import HighchartsExportData from 'highcharts/modules/export-data'
 import HighchartsGetHeatmapData from './highchartsHeatmapTableDataModule'
 
 import _ from 'lodash'
+import URI from 'urijs'
 
 // initialise modules
 async function addModules() {
@@ -172,7 +173,7 @@ const MarkerGeneHeatmap = (props) => {
       labels: {
         useHTML: true,
         formatter: function () {
-          return `<a href="${host}search?q=${this.value}&species=${species}"` +
+          return `<a href="${URI(`search?q=${this.value}&species=${species}`, host)}"` +
             `style="border: none; color: #148ff3">${this.value}</a>`
           }
       }
