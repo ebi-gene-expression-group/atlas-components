@@ -173,7 +173,7 @@ const MarkerGeneHeatmap = (props) => {
       labels: {
         useHTML: true,
         formatter: function () {
-          return `<a href="${URI(`search?q=${this.value}&species=${species}`, host)}"` +
+          return `<a href="${URI(`search`, host).search({ q: this.value, species: species }).toString()}"` +
             `style="border: none; color: #148ff3">${this.value}</a>`
           }
       }
