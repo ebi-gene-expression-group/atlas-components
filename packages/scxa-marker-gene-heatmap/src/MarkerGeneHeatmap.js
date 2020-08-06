@@ -10,6 +10,7 @@ import HighchartsExportData from 'highcharts/modules/export-data'
 import HighchartsGetHeatmapData from './highchartsHeatmapTableDataModule'
 
 import _ from 'lodash'
+import URI from 'urijs'
 
 // initialise modules
 async function addModules() {
@@ -38,7 +39,7 @@ Highcharts.SVGRenderer.prototype.symbols.download = (x, y, w, h) => [
 ]
 
 const MarkerGeneHeatmap = (props) => {
-  const { chartHeight, hasDynamicHeight, heatmapRowHeight, species } = props
+  const { chartHeight, hasDynamicHeight, heatmapRowHeight, species, host } = props
   const { data, isDataFiltered, xAxisCategories, yAxisCategories } = props
   const totalNumberOfRows = Object.keys(_.groupBy(data, `geneName`)).length
   const groupedData = _.groupBy(data, `clusterIdWhereMarker`)
@@ -172,7 +173,7 @@ const MarkerGeneHeatmap = (props) => {
       labels: {
         useHTML: true,
         formatter: function () {
-          return `<a href="https://www.ebi.ac.uk/gxa/sc/search?q=${this.value}&species=${species}"` +
+          return `<a href="${URI(`search`, host).search({ q: this.value, species: species }).toString()}"` +
             `style="border: none; color: #148ff3">${this.value}</a>`
           }
       }
