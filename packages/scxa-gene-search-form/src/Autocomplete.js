@@ -5,9 +5,9 @@ import URI from 'urijs'
 import AsyncCreatableSelect from 'react-select/async-creatable'
 import ebiVfReactSelectReplacements from './ebiVfReactSelectReplacements'
 
-const _asyncFetchOptions = (atlasUrl, suggesterEndpoint, selectedSpecies, allSpecies) =>
+const _asyncFetchOptions = (host, suggesterEndpoint, selectedSpecies, allSpecies) =>
   async (inputValue) => {
-    const suggesterUrl = URI(suggesterEndpoint, atlasUrl).search({
+    const suggesterUrl = URI(suggesterEndpoint, host).search({
       query: inputValue,
       species: selectedSpecies || allSpecies.join(`,`)
     }).toString()
@@ -21,7 +21,7 @@ const _asyncFetchOptions = (atlasUrl, suggesterEndpoint, selectedSpecies, allSpe
 
 const Autocomplete = (
   {
-    atlasUrl, suggesterEndpoint,
+    host, suggesterEndpoint,
     selectedSpecies, allSpecies, onChange, defaultValue,
     labelText
   }) => {
@@ -43,7 +43,7 @@ const Autocomplete = (
         styles={ebiVfReactSelectReplacements.styles}
         inputId={`gene-input`}
         onChange={onChange}
-        loadOptions={_asyncFetchOptions(atlasUrl, suggesterEndpoint, selectedSpecies, allSpecies)}
+        loadOptions={_asyncFetchOptions(host, suggesterEndpoint, selectedSpecies, allSpecies)}
         noOptionsMessage={() => null}
         allowCreateWhileLoading={true}
         isClearable={true}
@@ -61,7 +61,7 @@ const Autocomplete = (
 }
 
 Autocomplete.propTypes = {
-  atlasUrl: PropTypes.string.isRequired,
+  host: PropTypes.string.isRequired,
   suggesterEndpoint: PropTypes.string.isRequired,
   selectedSpecies: PropTypes.string,
   allSpecies: PropTypes.arrayOf(PropTypes.string),

@@ -139,14 +139,14 @@
   }, 'select-error');
 
   geneSearchFormDemo.render({
-    atlasUrl: 'http://localhost:8080/gxa/sc/',
+    host: 'http://localhost:8080/gxa/sc/',
+    resource: 'json/suggestions/species',
     wrapperClassName: 'row expanded',
     actionEndpoint: 'search',
     suggesterEndpoint: 'json/suggestions/gene_ids',
     initialValue: 'ENS',
     autocompleteClassName: 'small-8 columns',
     enableSpeciesSelect: true,
-    speciesEndpoint: 'json/suggestions/species',
     speciesSelectClassName: 'small-4 columns',
     searchExamples: [
       {
@@ -173,48 +173,48 @@
   }, 'search');
 
   geneSearchFormDemo.render({
-    atlasUrl: 'http://localhost:8080/gxa/sc/',
+    host: 'http://localhost:8080/gxa/sc/',
+    resource: 'json/suggestions/species',
     wrapperClassName: 'row expanded',
     actionEndpoint: 'search',
     onSubmit: function(event, query, species) {event.preventDefault() ; console.log(event); console.log(query); console.log(species);},
     suggesterEndpoint: 'json/suggestions/gene_ids',
     autocompleteClassName: 'small-8 columns',
     enableSpeciesSelect: true,
-    speciesEndpoint: 'json/suggestions/species',
     speciesSelectClassName: 'small-4 columns'
   }, 'search-callback');
 
   geneSearchFormDemo.render({
-    atlasUrl: 'http://localhost:8080/gxa/sc/',
+    host: 'http://localhost:8080/gxa/sc/',
+    resource: '',
     wrapperClassName: 'row',
     actionEndpoint: 'search',
     suggesterEndpoint: 'json/suggestions/gene_ids',
     autocompleteClassName: 'small-8 columns',
     enableSpeciesSelect: false,
-    speciesEndpoint: 'json/suggestions/species',
     speciesSelectClassName: 'small-4 columns'
   }, 'no_species_select');
 
   geneSearchFormDemo.render({
-    atlasUrl: 'http://localhost:8080/gxa/sc/',
+    host: 'http://localhost:8080/gxa/sc/',
+    resource: '',
     wrapperClassName: 'row',
     actionEndpoint: 'search',
     suggesterEndpoint: 'json/suggestions/gene_ids',
     autocompleteClassName: 'small-8 columns',
     enableSpeciesSelect: false,
-    speciesEndpoint: 'json/suggestions/species',
     speciesSelectClassName: 'small-4 columns',
     defaultSpecies: 'Homo sapiens'
   }, 'no_species_select_human');
 
   geneSearchFormDemo.render({
-    atlasUrl: 'http://localhost:8080/gxa/sc/',
+    host: 'http://localhost:8080/gxa/sc/',
+    resource: '',
     wrapperClassName: 'row',
     actionEndpoint: 'search',
     suggesterEndpoint: 'json/suggestions/gene_ids',
     autocompleteClassName: 'small-8 columns',
     enableSpeciesSelect: false,
-    speciesEndpoint: 'json/suggestions/species',
     speciesSelectClassName: 'small-4 columns',
     defaultSpecies: 'Mus musculus',
     defaultValue: {
