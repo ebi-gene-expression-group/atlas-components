@@ -17,7 +17,7 @@ exports[`Autocomplete matches snapshot 1`] = `
       onTouchEnd={[Function]}
     >
       <div
-        className=" css-1hwfws3"
+        className=" css-g1d714-ValueContainer"
       >
         <div
           className=" css-1uccc91-singleValue"

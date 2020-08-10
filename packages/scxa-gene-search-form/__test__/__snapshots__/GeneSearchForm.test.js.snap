@@ -27,7 +27,7 @@ exports[`GeneSearchForm matches snapshot 1`] = `
             onTouchEnd={[Function]}
           >
             <div
-              className=" css-1hwfws3"
+              className=" css-g1d714-ValueContainer"
             >
               <div
                 className=" css-1wa3eu0-placeholder"
@@ -123,7 +123,7 @@ exports[`GeneSearchForm matches snapshot 1`] = `
             onTouchEnd={[Function]}
           >
             <div
-              className=" css-1hwfws3"
+              className=" css-g1d714-ValueContainer"
             >
               <div
                 className=" css-1uccc91-singleValue"
@@ -131,6 +131,7 @@ exports[`GeneSearchForm matches snapshot 1`] = `
                 Any
               </div>
               <input
+                aria-autocomplete="list"
                 className="css-62g3xt-dummyInput"
                 disabled={false}
                 id="species-input"
@@ -146,7 +147,7 @@ exports[`GeneSearchForm matches snapshot 1`] = `
               className=" css-1hb7zxy-IndicatorsContainer"
             >
               <span
-                className="sc-bdVaJa jcfyVD"
+                className="sc-AxjAm bxcukt"
                 cx={[Function]}
               />
             </div>

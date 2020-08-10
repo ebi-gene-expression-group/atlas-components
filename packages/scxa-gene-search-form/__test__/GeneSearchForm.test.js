@@ -12,7 +12,7 @@ import * as species from './utils/species'
 import searchExamples from './utils/searchExamples'
 
 const props = {
-  atlasUrl: `foo/`,
+  host: `foo/`,
   actionEndpoint: `bar`,
   suggesterEndpoint: `suggest`,
   enableSpeciesSelect: true,

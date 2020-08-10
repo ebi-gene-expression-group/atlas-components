@@ -43,17 +43,17 @@ class GeneSearchForm extends React.Component {
   render() {
     const {wrapperClassName, actionEndpoint, onSubmit, searchExamples} = this.props
 
-    const {autocompleteClassName, atlasUrl, suggesterEndpoint, defaultValue,autocompleteLabel} = this.props
+    const {autocompleteClassName, host, suggesterEndpoint, defaultValue, autocompleteLabel} = this.props
 
     const {enableSpeciesSelect, speciesSelectClassName, speciesSelectStatusMessage} = this.props
     const {allSpecies, topSpecies} = this.props
 
     return (
-      <form action={URI(actionEndpoint, atlasUrl).toString()} method={`post`}>
+      <form action={URI(actionEndpoint, host).toString()} method={`post`}>
         <div className={wrapperClassName}>
           <div className={autocompleteClassName}>
             <Autocomplete
-              atlasUrl={atlasUrl}
+              host={host}
               suggesterEndpoint={suggesterEndpoint}
               onChange={this.autocompleteOnChange}
               selectedSpecies={this.state.selectedSpecies}
@@ -101,7 +101,7 @@ class GeneSearchForm extends React.Component {
 }
 
 GeneSearchForm.propTypes = {
-  atlasUrl: PropTypes.string.isRequired,
+  host: PropTypes.string.isRequired,
   actionEndpoint: PropTypes.string.isRequired,
   onSubmit: PropTypes.func,
   wrapperClassName: PropTypes.string,

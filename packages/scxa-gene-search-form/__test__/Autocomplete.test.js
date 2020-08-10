@@ -11,7 +11,7 @@ import AsyncCreatableSelect from 'react-select/async-creatable'
 const getRandomInt = (max) => Math.floor(Math.random() * Math.floor(max))
 
 const props = {
-  atlasUrl: `foo/`,
+  host: `foo/`,
   suggesterEndpoint: `suggest`,
   onChange: () => {},
   labelText: `Foobar:`
