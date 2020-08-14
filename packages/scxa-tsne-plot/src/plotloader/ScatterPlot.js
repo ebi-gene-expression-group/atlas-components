@@ -240,11 +240,12 @@ ScatterPlot.propTypes = {
   series: SeriesPropTypes,
   highchartsConfig: PropTypes.object,
   legendWidth: PropTypes.number,
-  afterRender: PropTypes.func.isRequired
+  afterRender: PropTypes.func
 }
 
 ScatterPlot.defaultProps = {
-  highchartsConfig: {}
+  highchartsConfig: {},
+  afterRender: () => {}
 }
 
 export default ScatterPlot
