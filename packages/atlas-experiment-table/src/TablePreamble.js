@@ -20,7 +20,8 @@ const TablePreamble =
               if (dropdown.value) {
                 const valueIndex =
                     // Fuzzy-match the value in the select, in case an initial value in props was passed
-                    dropdown.options.findIndex(option => option.toLowerCase().match(dropdown.value.trim().toLowerCase()))
+                    dropdown.options.findIndex(
+                      option => option.toLowerCase().match(dropdown.value.replace(/"/g, ``).replace(/\s+/g, ` `).trim().toLowerCase()))
                 if (valueIndex >= 0) {
                   defaultValue = dropdown.options[valueIndex]
                 }
@@ -32,7 +33,7 @@ const TablePreamble =
                       className={`small-12 medium-4 large-2 columns`}>
                     <label>{dropdown.label}:
                       <select
-                          defaultValue={defaultValue}
+                          defaultValue={`"${defaultValue}"`}
                           onChange={e => dropdownOnChange(dropdown.dataKey, e.target.value, false)}>
                         <option value={``}>All</option>
                         {
