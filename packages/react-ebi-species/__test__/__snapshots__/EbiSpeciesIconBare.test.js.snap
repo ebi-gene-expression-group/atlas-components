@@ -3060,6 +3060,40 @@ exports[`EbiSpeciesIconBare Icon of mapped species plasmodium berghei matches sn
 </EbiSpeciesIconBare>
 `;
 
+exports[`EbiSpeciesIconBare Icon of mapped species plasmodium falciparum matches snapshot 1`] = `
+<EbiSpeciesIconBare
+  groupColors={
+    Object {
+      "other": "deepskyblue",
+      "plants": "mediumseagreen",
+      "warmBlooded": "indianred",
+    }
+  }
+  species="plasmodium falciparum"
+>
+  <Styled(styled.span)
+    data-icon="@"
+    style={
+      Object {
+        "color": "deepskyblue",
+      }
+    }
+    title="Plasmodium falciparum"
+  >
+    <span
+      className="sc-AxjAm sc-AxirZ eilfJa"
+      data-icon="@"
+      style={
+        Object {
+          "color": "deepskyblue",
+        }
+      }
+      title="Plasmodium falciparum"
+    />
+  </Styled(styled.span)>
+</EbiSpeciesIconBare>
+`;
+
 exports[`EbiSpeciesIconBare Icon of mapped species plasmodium matches snapshot 1`] = `
 <EbiSpeciesIconBare
   groupColors={
