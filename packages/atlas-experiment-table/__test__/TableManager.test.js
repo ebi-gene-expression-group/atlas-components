@@ -299,8 +299,8 @@ describe(`TableManager`, () => {
 
     expect(wrapper.find(TablePreamble).dive().find(`select`).at(randomDropdownFilterIndex))
       .toHaveProp(
-        `value`,
-        randomDropdownOptions[nextOptionIndex])
+        `defaultValue`,
+        `"${randomDropdownOptions[nextOptionIndex]}"`)
   })
 
   test(`can sort using a randomly picked sortable header`, () => {
