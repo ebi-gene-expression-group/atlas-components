@@ -38,7 +38,10 @@ const TableFooter =
     restyledPages[restyledPages.length - 2] = `…`
   }
 
-  const currentPageDataRowsLength = pagination.endIndex - pagination.startIndex + 1
+  const currentPageDataRowsLength =
+    (pagination.pageSize === 0 && pagination.totalPages === 1) ?
+      `all` :
+      pagination.endIndex - pagination.startIndex + 1
 
   return (
     <React.Fragment>
@@ -48,7 +51,7 @@ const TableFooter =
             `Nothing to see here. Move along!` :
             filteredDataRowsLength === 0 ?
               `Your query didn’t match any experiments.` :
-              `Showing ${currentPageDataRowsLength} result${currentPageDataRowsLength > 1 ? `s`: ``} ` +
+              `Showing ${currentPageDataRowsLength} result${currentPageDataRowsLength === `all` || currentPageDataRowsLength > 1 ? `s`: ``} ` +
               `${filteredDataRowsLength < dataRowsLength ? ` out of ${filteredDataRowsLength} ` : ``}` +
               `from a total of ${dataRowsLength} experiments` +
               `${pagination.totalPages > 1 ? ` (page ${currentPage} of ${pagination.totalPages})` : ``}.`

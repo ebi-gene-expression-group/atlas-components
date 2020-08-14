@@ -121,7 +121,7 @@ describe(`TablePreamble`, () => {
     const wrapper = shallow(<TablePreamble {...props} dropdowns={dropdowns}/>)
 
     expect(wrapper.find(`select`).first().find(`option`)).toHaveLength(options.length + 1)
-    expect(wrapper.find(`select`).first()).toHaveProp({value: options[randomOptionIndex]})
+    expect(wrapper.find(`select`).first()).toHaveProp({defaultValue: `"${options[randomOptionIndex]}"`})
   })
 
   test(`defaults to ‘All’  if the initial value in a dropdown filter isn’t one of the options`, () => {
@@ -142,7 +142,7 @@ describe(`TablePreamble`, () => {
     const wrapper = shallow(<TablePreamble {...props} dropdowns={dropdowns}/>)
 
     expect(wrapper.find(`select`).first().find(`option`)).toHaveLength(options.length + 1)
-    expect(wrapper.find(`select`).first()).toHaveProp({value: ``})
+    expect(wrapper.find(`select`).first()).toHaveProp({defaultValue: `""`})
   })
 
   test(`renders as many dropdowns as specified in the dropdowns prop`, () => {

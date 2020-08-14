@@ -24,8 +24,8 @@ exports[`TablePreamble matches snapshot (basic) 1`] = `
     <label>
       Entries per page:
       <select
+        defaultValue={10}
         onChange={[Function]}
-        value={10}
       >
         <option
           key="0"
@@ -90,7 +90,7 @@ exports[`TablePreamble matches snapshot (with dropdowns) 1`] = `
           "Plants",
           "Fungi",
         ],
-        "value": "",
+        "value": "Dorne",
       },
       Object {
         "dataKey": "technologyType",
@@ -125,8 +125,8 @@ exports[`TablePreamble matches snapshot (with dropdowns) 1`] = `
       Experiment type
       :
       <select
+        defaultValue="\\"\\""
         onChange={[Function]}
-        value=""
       >
         <option
           value=""
@@ -135,13 +135,13 @@ exports[`TablePreamble matches snapshot (with dropdowns) 1`] = `
         </option>
         <option
           key="0"
-          value="Baseline"
+          value="\\"Baseline\\""
         >
           Baseline
         </option>
         <option
           key="1"
-          value="Differential"
+          value="\\"Differential\\""
         >
           Differential
         </option>
@@ -156,8 +156,8 @@ exports[`TablePreamble matches snapshot (with dropdowns) 1`] = `
       Kingdom
       :
       <select
+        defaultValue="\\"\\""
         onChange={[Function]}
-        value=""
       >
         <option
           value=""
@@ -166,19 +166,19 @@ exports[`TablePreamble matches snapshot (with dropdowns) 1`] = `
         </option>
         <option
           key="0"
-          value="Animals"
+          value="\\"Animals\\""
         >
           Animals
         </option>
         <option
           key="1"
-          value="Plants"
+          value="\\"Plants\\""
         >
           Plants
         </option>
         <option
           key="2"
-          value="Fungi"
+          value="\\"Fungi\\""
         >
           Fungi
         </option>
@@ -193,8 +193,8 @@ exports[`TablePreamble matches snapshot (with dropdowns) 1`] = `
       Technology type
       :
       <select
+        defaultValue="\\"Smart-Seq\\""
         onChange={[Function]}
-        value="Smart-Seq"
       >
         <option
           value=""
@@ -203,19 +203,19 @@ exports[`TablePreamble matches snapshot (with dropdowns) 1`] = `
         </option>
         <option
           key="0"
-          value="Smart-Seq"
+          value="\\"Smart-Seq\\""
         >
           Smart-Seq
         </option>
         <option
           key="1"
-          value="10x"
+          value="\\"10x\\""
         >
           10x
         </option>
         <option
           key="2"
-          value="Droplet-based"
+          value="\\"Droplet-based\\""
         >
           Droplet-based
         </option>
@@ -228,8 +228,8 @@ exports[`TablePreamble matches snapshot (with dropdowns) 1`] = `
     <label>
       Entries per page:
       <select
+        defaultValue={10}
         onChange={[Function]}
-        value={10}
       >
         <option
           key="0"
