@@ -23,11 +23,11 @@
     "seedrandom": "^3.0.5"
   },
   "devDependencies": {
-    "@babel/cli": "^7.8.4",
-    "@babel/core": "^7.8.7",
-    "@babel/preset-env": "^7.8.7",
-    "coveralls": "^3.0.9",
-    "jest": "^25.1.0"
+    "@babel/cli": "^7.10.5",
+    "@babel/core": "^7.11.1",
+    "@babel/preset-env": "^7.11.0",
+    "coveralls": "^3.1.0",
+    "jest": "^26.4.0"
   },
   "gitHead": "7e03f78b4db84dbcf8247a040490afe00d57d105"
 }
