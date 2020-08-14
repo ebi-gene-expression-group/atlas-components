@@ -2160,6 +2160,30 @@ exports[`EbiSpeciesIcon with classes Icon of mapped species plasmodium berghei m
 </EbiSpeciesIcon>
 `;
 
+exports[`EbiSpeciesIcon with classes Icon of mapped species plasmodium falciparum matches snapshot 1`] = `
+<EbiSpeciesIcon
+  groupColors={
+    Object {
+      "other": "deepskyblue",
+      "plants": "mediumseagreen",
+      "warmBlooded": "indianred",
+    }
+  }
+  species="plasmodium falciparum"
+>
+  <span
+    className="icon icon-species"
+    data-icon="@"
+    style={
+      Object {
+        "color": "deepskyblue",
+      }
+    }
+    title="Plasmodium falciparum"
+  />
+</EbiSpeciesIcon>
+`;
+
 exports[`EbiSpeciesIcon with classes Icon of mapped species plasmodium matches snapshot 1`] = `
 <EbiSpeciesIcon
   groupColors={
