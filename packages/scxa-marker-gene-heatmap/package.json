@@ -1,6 +1,6 @@
 {
   "name": "@ebi-gene-expression-group/scxa-marker-gene-heatmap",
-  "version": "1.6.3",
+  "version": "1.7.0",
   "description": "Highcharts heatmap used to visualize marker genes for an experiment in the Single Cell Expression Atlas",
   "main": "lib/index.js",
   "scripts": {

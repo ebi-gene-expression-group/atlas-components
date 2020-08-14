@@ -1,6 +1,6 @@
 {
   "name": "@ebi-gene-expression-group/scxa-tsne-widget",
-  "version": "2.1.3",
+  "version": "2.2.0",
   "description": "tSNE widget visualizes Single Cell Expression Atlas data",
   "main": "lib/index.js",
   "scripts": {
@@ -35,7 +35,7 @@
     "url": "git+https://github.com/ebi-gene-expression-group/atlas-components.git"
   },
   "dependencies": {
-    "@ebi-gene-expression-group/scxa-tsne-plot": "^5.1.4",
+    "@ebi-gene-expression-group/scxa-tsne-plot": "^5.2.0",
     "expression-atlas-autocomplete": "^3.2.0",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
