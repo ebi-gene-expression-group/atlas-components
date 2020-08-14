@@ -1,12 +1,8 @@
 import React from 'react'
-import Enzyme from 'enzyme'
-import {shallow} from 'enzyme'
-import Adapter from 'enzyme-adapter-react-16'
+import { shallow } from 'enzyme'
 
 import '@babel/polyfill'
 import MarkerGeneHeatmap from '../src/MarkerGeneHeatmap'
-
-Enzyme.configure({ adapter: new Adapter() })
 
 describe(`MarkerGeneHeatmap`, () => {
   test(`creates plotlines for every cluster if data isn't filtered`, () => {
@@ -42,12 +38,11 @@ describe(`MarkerGeneHeatmap`, () => {
       hasDynamicHeight={false}
       species={`species`} />)
 
-    const chartOptions = wrapper.find(`t`).props().options
-
+    const chartOptions = wrapper.children().first().props().options
     expect(chartOptions.yAxis.plotLines).toHaveLength(3)
   })
 
-  test(`doesn't create plotlines if data is filtered`, () => {
+  test(`doesn’t create plotlines if data is filtered`, () => {
     const wrapper = shallow(<MarkerGeneHeatmap
       data={[
         {
@@ -66,8 +61,7 @@ describe(`MarkerGeneHeatmap`, () => {
       hasDynamicHeight={false}
       species={`species`} />)
 
-    const chartOptions = wrapper.props().options
-
+    const chartOptions = wrapper.children().first().props().options
     expect(chartOptions.yAxis.plotLines).toHaveLength(0)
   })
 
@@ -90,7 +84,7 @@ describe(`MarkerGeneHeatmap`, () => {
       hasDynamicHeight={false}
       species={`species`} />)
 
-    const chartOptions = wrapper.find(`t`).props().options
+    const chartOptions = wrapper.children().first().props().options
 
     expect(chartOptions.exporting.buttons.contextButton.text).toEqual(
       `Download`)

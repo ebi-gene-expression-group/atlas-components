@@ -25,8 +25,8 @@ class Demo extends React.Component {
       // experimentAccession: `E-EHCA-2`,
       // experimentAccession: `E-ENAD-19`,
       // experimentAccession: `E-GEOD-93593`,
-      ks: ks,
-      ksWithMarkers: [3, 7, 8, 9, 11, 19, 25, 26, 30],
+      ks: [3, 7, 8, 10, 11, 17, 20, 27, 33],
+      ksWithMarkers: [3, 7, 8, 10, 11, 17, 20, 27, 33],
       // ksWithMarkers: [8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18],
       // ksWithMarkers: [4, 7, 9],
       // ksWithMarkers: [36, 37, 38, 39, 40, 41, 42, 42, 43, 44, 45, 46],
@@ -41,7 +41,7 @@ class Demo extends React.Component {
         <HeatmapView
           wrapperClassName={`row expanded`}
           resource={`json/experiments/${this.state.experimentAccession}/marker-genes/${this.state.selectedK}`}
-          host={`http://ves-hx-76:8080/gxa/sc/`}
+          host={`https://wwwdev.ebi.ac.uk/gxa/sc/`}
           ks={this.state.ks}
           ksWithMarkers={this.state.ksWithMarkers}
           selectedK={this.state.selectedK}
