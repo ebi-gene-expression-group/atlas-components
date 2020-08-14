@@ -1,12 +1,8 @@
 import React from 'react'
-import Enzyme from 'enzyme'
-import {shallow} from 'enzyme'
-import Adapter from 'enzyme-adapter-react-16'
+import { shallow } from 'enzyme'
 
 import '@babel/polyfill'
 import MarkerGeneHeatmap from '../src/MarkerGeneHeatmap'
-
-Enzyme.configure({ adapter: new Adapter() })
 
 describe(`MarkerGeneHeatmap`, () => {
   test(`creates plotlines for every cluster if data isn't filtered`, () => {

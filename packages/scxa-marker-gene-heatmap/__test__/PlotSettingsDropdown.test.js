@@ -1,15 +1,11 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
 
-import Enzyme from 'enzyme'
-import {mount} from 'enzyme'
-import Adapter from 'enzyme-adapter-react-16'
+import { mount } from 'enzyme'
 
 import Select from 'react-select'
 
 import PlotSettingsDropdown from '../src/PlotSettingsDropdown'
-
-Enzyme.configure({ adapter: new Adapter() })
 
 describe(`PlotSettingsDropdown`, () => {
   test(`with no data matches snapshot`, () => {
