@@ -38,12 +38,11 @@ describe(`MarkerGeneHeatmap`, () => {
       hasDynamicHeight={false}
       species={`species`} />)
 
-    const chartOptions = wrapper.find(`t`).props().options
-
+    const chartOptions = wrapper.children().first().props().options
     expect(chartOptions.yAxis.plotLines).toHaveLength(3)
   })
 
-  test(`doesn't create plotlines if data is filtered`, () => {
+  test(`doesn’t create plotlines if data is filtered`, () => {
     const wrapper = shallow(<MarkerGeneHeatmap
       data={[
         {
@@ -62,8 +61,7 @@ describe(`MarkerGeneHeatmap`, () => {
       hasDynamicHeight={false}
       species={`species`} />)
 
-    const chartOptions = wrapper.props().options
-
+    const chartOptions = wrapper.children().first().props().options
     expect(chartOptions.yAxis.plotLines).toHaveLength(0)
   })
 
@@ -86,7 +84,7 @@ describe(`MarkerGeneHeatmap`, () => {
       hasDynamicHeight={false}
       species={`species`} />)
 
-    const chartOptions = wrapper.find(`t`).props().options
+    const chartOptions = wrapper.children().first().props().options
 
     expect(chartOptions.exporting.buttons.contextButton.text).toEqual(
       `Download`)
