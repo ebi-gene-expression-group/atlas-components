@@ -1,10 +1,10 @@
 import '@babel/polyfill'
 import React from 'react'
-import { mount } from 'enzyme'
+import { shallow } from 'enzyme'
 import renderer from 'react-test-renderer'
 
 import TSnePlotWidget from '../src/TSnePlotWidget'
-import TSnePlotView from 'expression-atlas-experiment-page-tsne-plot'
+import TSnePlotView from '@ebi-gene-expression-group/scxa-tsne-plot'
 
 describe(`TSnePlotWidget`, () => {
 
@@ -19,7 +19,7 @@ describe(`TSnePlotWidget`, () => {
     }
 
     const wrapper =
-      mount(
+      shallow(
         <TSnePlotWidget
           speciesName={speciesName}
           experimentAccession={experimentAccession}
