@@ -42,13 +42,9 @@ describe(`ClusterTSnePlot colourize function`, () => {
     const randomSeries = randomHighchartsSeriesWithNamesAndMaxPoints([...seriesNames, `Not available`], maxPointsPerSeries)
     _colourizeClusters([], `lightgrey`)(randomSeries).forEach((series) => {
       if(series.name === `Not available`) {
-        series.data.forEach((point) => {
-          expect(point).toHaveProperty(`color`)
-        })
+        expect(series).toHaveProperty(`color`)
       } else {
-        series.data.forEach((point) => {
-          expect(point).not.toHaveProperty(`color`)
-        })
+        expect(series).not.toHaveProperty(`color`)
       }
     })
   })
@@ -57,7 +53,7 @@ describe(`ClusterTSnePlot colourize function`, () => {
     const randomSeries = randomHighchartsSeriesWithNamesAndMaxPoints(seriesNames, maxPointsPerSeries)
     _colourizeClusters([], `lightgrey`)(randomSeries).forEach((series) => {
       series.data.forEach((point) => {
-        expect(point).not.toHaveProperty(`color`)
+        expect(point).not.toHaveProperty(`color`,  Color(`lightgrey`).alpha(0.65).rgb().toString())
       })
     })
   })
@@ -77,9 +73,9 @@ describe(`ClusterTSnePlot colourize function`, () => {
     _colourizeClusters(highlightRandomSeries, `lightgrey`)(randomSeries).forEach((series) => {
       series.data.forEach((point) => {
         if (highlightRandomSeriesNames.includes(series.name)) {
-          expect(point).not.toHaveProperty(`color`)
+          expect(series).not.toHaveProperty(`color`)
         } else {
-          expect(point).toHaveProperty(`color`, Color(`lightgrey`).alpha(0.65).rgb().toString())
+          expect(series).toHaveProperty(`color`, Color(`lightgrey`).alpha(0.65).rgb().toString())
         }
       })
     })

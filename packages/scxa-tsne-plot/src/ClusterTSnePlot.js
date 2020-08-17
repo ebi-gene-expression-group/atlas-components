@@ -14,10 +14,7 @@ const _colourizeClusters = (highlightSeries) =>
       if(aSeries.name === `Not available`) {
         return {
           name: aSeries.name,
-          data: aSeries.data.map((point) => ({
-            ...point,
-            color: Color(`lightgrey`).alpha(0.65).rgb().toString()
-          })),
+          data: aSeries.data,
           color: Color(`lightgrey`).alpha(0.65).rgb().toString()
         }
       } else return aSeries
@@ -25,10 +22,8 @@ const _colourizeClusters = (highlightSeries) =>
     } else {
       return {
         name: aSeries.name,
-        data: aSeries.data.map((point) => ({
-          ...point,
-          color: Color(`lightgrey`).alpha(0.65).rgb().toString()
-        }))
+        data: aSeries.data,
+        color: Color(`lightgrey`).alpha(0.65).rgb().toString()
       }
     }
   })

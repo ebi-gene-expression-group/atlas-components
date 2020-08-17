@@ -73,6 +73,21 @@ const experiment5 = {
   ]
 }
 
+//Image export fails for the large experiments
+// Number of cells: 32,369
+const experiment6 = {
+  accession: `E-CURD-46`,
+  species: `Homo sapiens`,
+  perplexities: [1, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50],
+  ks: [6, 9 , 11, 14, 17, 25, 32, 43, 55],
+  metadata: [
+    {
+      value: `authors_inferred_cell_type`,
+      label: `Authors Inferrede Cell type`
+    }
+  ]
+}
+
 const experimentOmega = {
   accession: `E-HCAD-4`,
   species: `Homo sapiens`,
@@ -94,7 +109,7 @@ const experimentOmega = {
   ]
 }
 
-const { accession, perplexities, ks, metadata, species } = experimentOmega
+const { accession, perplexities, ks, metadata, species } = experiment6
 
 class Demo extends React.Component {
   constructor(props) {
