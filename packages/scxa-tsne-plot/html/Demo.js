@@ -73,8 +73,8 @@ const experiment5 = {
   ]
 }
 
-//Image export fails for the large experiments
-// Number of cells: 32,369
+// Big chunk of Not Available points
+// Number of cells: 101,843
 const experiment6 = {
   accession: `E-CURD-46`,
   species: `Homo sapiens`,
@@ -83,7 +83,7 @@ const experiment6 = {
   metadata: [
     {
       value: `authors_inferred_cell_type`,
-      label: `Authors Inferrede Cell type`
+      label: `Authors Inferred Cell Type`
     }
   ]
 }
