@@ -43,6 +43,14 @@ const CellTypeMarkerGeneHeatmap = (props) => {
   const totalNumberOfRows = Object.keys(_.groupBy(data, `geneName`)).length
   const groupedData = _.groupBy(data, `cellType`)
 
+  const filteredData = data.map(cell => {
+    if (cell.value <= 0.0) {
+      let filteredCell = cell
+      filteredCell.value = null
+      return filteredCell
+    } else return cell
+  })
+
   const plotLines = []
   const cellTypes = Object.keys(groupedData)
 
@@ -187,13 +195,7 @@ const CellTypeMarkerGeneHeatmap = (props) => {
             `<b>Cell type where marker:</b> ${this.point.cellTypeWhereMarker}<br/>` +
             `<b>Gene ID:</b> ${this.point.geneName}<br/>` +
                        `<b>Expression:</b> ${+this.point.value.toFixed(3)} CPM`
-
-          if(this.point.clusterIdWhereMarker === this.point.x+1) {
-            return text + `<br/><b>P-value:</b> ${this.point.pValue.toExponential(3)}`
-          }
-          else {
             return text
-          }
         }
       }
     },
@@ -229,7 +231,7 @@ const CellTypeMarkerGeneHeatmap = (props) => {
     },
 
     series: [{
-      data: data,
+      data: filteredData,
       nullColor: `#eaeaea`,
       cursor: `crosshair`,
       states: {

@@ -91,21 +91,17 @@ class HeatmapView extends React.Component {
 render() {
     const { isLoading, hasError } = this.state
     const { wrapperClassName, plotWrapperClassName } = this.props
-    const view = cellTypeHeatmapView(this.props.props, this.state)
 
     return (
       hasError ?
         <CalloutAlert error={hasError}/> :
-        <div>
-          { this.props.type == `cluster` ? view[1] : `` }
           <div className={wrapperClassName}>
             <div className={plotWrapperClassName} style={{position: `relative`}}>
-              {view[0]}
+              {cellTypeHeatmapView(this.props.props, this.state)}
               <LoadingOverlay
                 show={isLoading}
               />
             </div>
-          </div>
         </div>
     )
   }

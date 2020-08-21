@@ -4,12 +4,10 @@ import CellTypeMarkerGeneHeatmap from './CellTypeMarkerGeneHeatmap'
 import _ from 'lodash'
 
 const cellTypeHeatmapView = (props, state) => {
-  console.log(`data`, data)
   const { data } = state
-  const { defaultHeatmapHeight } = props
-  const { hasDynamicHeight, heatmapRowHeight, species } = props
+  const { hasDynamicHeight, heatmapRowHeight, species, defaultHeatmapHeight } = props
 
-  const markerGeneHeatmap = <CellTypeMarkerGeneHeatmap
+  return  <CellTypeMarkerGeneHeatmap
     data={data}
     isDataFiltered={false}
     xAxisCategories={_.uniq(data.map(cell => cell.cellType))}
@@ -19,9 +17,6 @@ const cellTypeHeatmapView = (props, state) => {
     heatmapRowHeight={heatmapRowHeight}
     species={species}
   />
-
-
-  return [markerGeneHeatmap]
 }
 
 export {cellTypeHeatmapView}
