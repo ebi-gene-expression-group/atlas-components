@@ -12,34 +12,34 @@ exports[`Prompt matches snapshot 1`] = `
     How satisfied are you?
   </p>
   <div
-    className="sc-bwzfXH bXowzj"
+    className="sc-AxirZ cXMrdn"
   >
     <div
-      className="sc-bdVaJa HHxyE"
+      className="sc-AxjAm fjZxKF"
       label="Terrible"
       onClick={[Function]}
       selected={false}
     />
     <div
-      className="sc-bdVaJa crhCQw"
+      className="sc-AxjAm dRpUMP"
       label="Bad"
       onClick={[Function]}
       selected={false}
     />
     <div
-      className="sc-bdVaJa iyzqPF"
+      className="sc-AxjAm gDcErk"
       label="Okay"
       onClick={[Function]}
       selected={false}
     />
     <div
-      className="sc-bdVaJa dMybav"
+      className="sc-AxjAm hRvmQO"
       label="Good"
       onClick={[Function]}
       selected={false}
     />
     <div
-      className="sc-bdVaJa fRkOYZ"
+      className="sc-AxjAm cyNyeb"
       label="Great"
       onClick={[Function]}
       selected={false}

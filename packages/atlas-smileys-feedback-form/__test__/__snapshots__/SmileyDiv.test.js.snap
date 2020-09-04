@@ -3,61 +3,61 @@
 exports[`SmileyDiv matches snapshot 1`] = `
 <div>
   <div
-    className="sc-bdVaJa cYkeeX"
+    className="sc-AxjAm ioufIR"
     label="Terrible"
     onClick={[Function]}
     selected={true}
   />
   <div
-    className="sc-bdVaJa gMDgTM"
+    className="sc-AxjAm bBISfz"
     label="Bad"
     onClick={[Function]}
     selected={true}
   />
   <div
-    className="sc-bdVaJa qXzDJ"
+    className="sc-AxjAm klKtLU"
     label="Okay"
     onClick={[Function]}
     selected={true}
   />
   <div
-    className="sc-bdVaJa kWXEUb"
+    className="sc-AxjAm bOPsEu"
     label="Good"
     onClick={[Function]}
     selected={true}
   />
   <div
-    className="sc-bdVaJa buQGKf"
+    className="sc-AxjAm jIwbdH"
     label="Great"
     onClick={[Function]}
     selected={true}
   />
   <div
-    className="sc-bdVaJa HHxyE"
+    className="sc-AxjAm fjZxKF"
     label="Terrible"
     onClick={[Function]}
     selected={false}
   />
   <div
-    className="sc-bdVaJa crhCQw"
+    className="sc-AxjAm dRpUMP"
     label="Bad"
     onClick={[Function]}
     selected={false}
   />
   <div
-    className="sc-bdVaJa iyzqPF"
+    className="sc-AxjAm gDcErk"
     label="Okay"
     onClick={[Function]}
     selected={false}
   />
   <div
-    className="sc-bdVaJa dMybav"
+    className="sc-AxjAm hRvmQO"
     label="Good"
     onClick={[Function]}
     selected={false}
   />
   <div
-    className="sc-bdVaJa fRkOYZ"
+    className="sc-AxjAm cyNyeb"
     label="Great"
     onClick={[Function]}
     selected={false}
