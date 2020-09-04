@@ -112,7 +112,7 @@ FetchLoader.propTypes = {
   ResultElementClass: PropTypes.func.isRequired,
   noResultsMessageFormatter: PropTypes.func,
   resultsMessageFormatter: PropTypes.func,
-	sortTitle: PropTypes.string
+  sortTitle: PropTypes.string
 }
 
 FetchLoader.defaultProps = {
