@@ -1,3 +1,1 @@
-import ScientificNotationNumber from './ScientificNotationNumber.js'
-
-export default ScientificNotationNumber
+export { default } from './ScientificNotationNumber.js'
