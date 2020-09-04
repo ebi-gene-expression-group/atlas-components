@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FeedbackButton matches snapshot 1`] = `
+<div>
+  <div
+    className="mm-popup"
+  >
+    <div
+      className="mm-popup__overlay"
+      onClick={[Function]}
+      role="presentation"
+      style={Object {}}
+    />
+  </div>
+  <button
+    className="sc-AxiKw Cpbuh"
+    onClick={[Function]}
+  >
+    <i
+      className="icon icon-functional"
+      data-icon="n"
+      style={
+        Object {
+          "paddingRight": "0.5rem",
+        }
+      }
+    />
+    Feedback
+  </button>
+</div>
+`;

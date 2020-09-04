@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Prompt matches snapshot 1`] = `
+<div>
+  <p
+    style={
+      Object {
+        "paddingBottom": "1rem",
+      }
+    }
+  >
+    How satisfied are you?
+  </p>
+  <div
+    className="sc-AxirZ cXMrdn"
+  >
+    <div
+      className="sc-AxjAm fjZxKF"
+      label="Terrible"
+      onClick={[Function]}
+      selected={false}
+    />
+    <div
+      className="sc-AxjAm dRpUMP"
+      label="Bad"
+      onClick={[Function]}
+      selected={false}
+    />
+    <div
+      className="sc-AxjAm gDcErk"
+      label="Okay"
+      onClick={[Function]}
+      selected={false}
+    />
+    <div
+      className="sc-AxjAm hRvmQO"
+      label="Good"
+      onClick={[Function]}
+      selected={false}
+    />
+    <div
+      className="sc-AxjAm cyNyeb"
+      label="Great"
+      onClick={[Function]}
+      selected={false}
+    />
+  </div>
+  <p
+    style={
+      Object {
+        "paddingTop": "1rem",
+      }
+    }
+  >
+    <a
+      href="https://www.ebi.ac.uk/support/gxasc"
+      target="_blank"
+    >
+      Click here if you need support.
+    </a>
+  </p>
+</div>
+`;
