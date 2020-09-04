@@ -1,5 +1,5 @@
 {
-  "name": "@ebi-gene-expression-group/expression-atlas-number-format",
+  "name": "@ebi-gene-expression-group/atlas-scientific-notation-number",
   "version": "3.2.0",
   "description": "Format numbers nicely",
   "main": "lib/index.js",
