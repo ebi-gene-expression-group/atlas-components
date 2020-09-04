@@ -1,6 +1,9 @@
 {
   "name": "@ebi-gene-expression-group/atlas-scientific-notation-number",
-  "version": "3.2.0",
+  "version": "1.0.0",
+  "publishConfig": {
+    "access": "public"
+  },
   "description": "Format numbers nicely",
   "main": "lib/index.js",
   "scripts": {
