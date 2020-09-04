@@ -1,6 +1,6 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import {shallow, mount, render} from 'enzyme'
+import { render } from 'enzyme'
 
 import ScientificNotationNumber from '../src/ScientificNotationNumber.js'
 
