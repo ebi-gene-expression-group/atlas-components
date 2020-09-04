@@ -1,13 +1,9 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import Enzyme from 'enzyme'
-import {mount} from 'enzyme'
-import Adapter from 'enzyme-adapter-react-16'
+import { mount } from 'enzyme'
 
 import Prompt from '../src/Prompt'
 import FeedbackButton from '../src/FeedbackButton'
-
-Enzyme.configure({ adapter: new Adapter() })
 
 jest.mock(`react-ga`)
 

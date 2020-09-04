@@ -1,14 +1,9 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import Enzyme from 'enzyme'
-import {shallow, mount} from 'enzyme'
-import Adapter from 'enzyme-adapter-react-16'
+import { shallow, mount } from 'enzyme'
 
 import Prompt from '../src/Prompt'
 import SmileyDiv from '../src/SmileyDiv'
-
-Enzyme.configure({ adapter: new Adapter() })
-
 
 describe(`Prompt`, () => {
   const props = {
