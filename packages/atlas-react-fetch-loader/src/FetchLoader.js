@@ -68,7 +68,14 @@ const withFetchLoader = (WrappedComponent) => {
 
         const data = await response.json()
         Object.keys(this.props.renameDataKeys)
-          .forEach(key => delete Object.assign(data, {[this.props.renameDataKeys[key]]: data[key] })[key])
+          .forEach(key => {
+            // Defend against accidental same-value fields: { foo: "foo" }
+            if (data[key]) {
+              const dataKey = data[key]
+              delete data[key]
+              Object.assign(data, {[this.props.renameDataKeys[key]]: dataKey })
+            }
+          })
 
         this.setState({
           data: data,
@@ -99,7 +106,7 @@ const withFetchLoader = (WrappedComponent) => {
     }
 
     render() {
-      const { errorPayloadProvider, loadingPayloadProvider, ...passThroughProps } = this.props
+      const { errorPayloadProvider, loadingPayloadProvider, fulfilledPayloadProvider, ...passThroughProps } = this.props
       const { data, isLoading, hasError } = this.state
 
       return (
@@ -107,11 +114,13 @@ const withFetchLoader = (WrappedComponent) => {
           errorPayloadProvider ?
             <WrappedComponent {...{...passThroughProps, ...errorPayloadProvider(hasError)}}/> :
             <CalloutAlert error={hasError} /> :
-          isLoading ?
-            loadingPayloadProvider ?
-              <WrappedComponent {...{...passThroughProps, ...loadingPayloadProvider()}}/> :
-              <AnimatedLoadingMessage/> :
+        isLoading ?
+          loadingPayloadProvider ?
+            <WrappedComponent {...{...passThroughProps, ...loadingPayloadProvider()}}/> :
+            <AnimatedLoadingMessage/> :
             // Promise fulfilled, merge passed props and merge-overwrite with retrieved data
+          fulfilledPayloadProvider ?
+            <WrappedComponent {...{...passThroughProps, ...data, ...fulfilledPayloadProvider(data)}}/> :
             <WrappedComponent {...{...passThroughProps, ...data}}/>
       )
     }
@@ -122,12 +131,14 @@ const withFetchLoader = (WrappedComponent) => {
     resource: PropTypes.string.isRequired,
     loadingPayloadProvider: PropTypes.func,
     errorPayloadProvider: PropTypes.func,
+    fulfilledPayloadProvider: PropTypes.func,
     renameDataKeys: PropTypes.objectOf(PropTypes.string)
   }
 
   FetchLoader.defaultProps = {
     loadingPayloadProvider: null,
     errorPayloadProvider: null,
+    fulfilledPayloadProvider: null,
     renameDataKeys: {}
   }
 
