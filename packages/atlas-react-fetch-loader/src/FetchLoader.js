@@ -27,7 +27,7 @@ const withFetchLoader = (WrappedComponent) => {
       this.state = {
         data: null,
         isLoading: true,
-        hasError: null
+        error: null
       }
     }
 
@@ -39,7 +39,7 @@ const withFetchLoader = (WrappedComponent) => {
         return {
           data: null,
           loading: true,
-          hasError: null,
+          error: null,
           url: url
         }
       }
@@ -49,7 +49,7 @@ const withFetchLoader = (WrappedComponent) => {
     }
 
     async componentDidUpdate(/*prevProps, prevState*/) {
-      if (this.state.data === null && this.state.hasError === null) {
+      if (this.state.data === null && this.state.error === null) {
         await this._loadAsyncData(URI(this.props.resource, this.props.host).toString())
       }
     }
@@ -68,18 +68,25 @@ const withFetchLoader = (WrappedComponent) => {
 
         const data = await response.json()
         Object.keys(this.props.renameDataKeys)
-          .forEach(key => delete Object.assign(data, {[this.props.renameDataKeys[key]]: data[key] })[key])
+          .forEach(key => {
+            // Defend against accidental same-value fields: { foo: "foo" }
+            if (data[key]) {
+              const dataKey = data[key]
+              delete data[key]
+              Object.assign(data, {[this.props.renameDataKeys[key]]: dataKey })
+            }
+          })
 
         this.setState({
           data: data,
           isLoading: false,
-          hasError: null
+          error: null
         })
       } catch (e) {
         this.setState({
           data: null,
           isLoading: false,
-          hasError: {
+          error: {
             description: `There was a problem communicating with the server. Please try again later.`,
             name: e.name,
             message: e.message
@@ -90,7 +97,7 @@ const withFetchLoader = (WrappedComponent) => {
 
     componentDidCatch(error, info) {
       this.setState({
-        hasError: {
+        error: {
           description: `There was a problem rendering this component.`,
           name: error.name,
           message: `${error.message} – ${info}`
@@ -99,20 +106,20 @@ const withFetchLoader = (WrappedComponent) => {
     }
 
     render() {
-      const { errorPayloadProvider, loadingPayloadProvider, ...passThroughProps } = this.props
-      const { data, isLoading, hasError } = this.state
+      const { errorPayloadProvider, loadingPayloadProvider, fulfilledPayloadProvider, ...passThroughProps } = this.props
+      const { data, isLoading, error } = this.state
 
       return (
-        hasError ?
+        error ?
           errorPayloadProvider ?
-            <WrappedComponent {...{...passThroughProps, ...errorPayloadProvider(hasError)}}/> :
-            <CalloutAlert error={hasError} /> :
-          isLoading ?
-            loadingPayloadProvider ?
-              <WrappedComponent {...{...passThroughProps, ...loadingPayloadProvider()}}/> :
-              <AnimatedLoadingMessage/> :
+            <WrappedComponent {...{...passThroughProps, ...errorPayloadProvider(error)}}/> :
+            <CalloutAlert error={error} /> :
+        isLoading ?
+          loadingPayloadProvider ?
+            <WrappedComponent {...{...passThroughProps, ...loadingPayloadProvider()}}/> :
+            <AnimatedLoadingMessage/> :
             // Promise fulfilled, merge passed props and merge-overwrite with retrieved data
-            <WrappedComponent {...{...passThroughProps, ...data}}/>
+          <WrappedComponent {...{...passThroughProps, ...data, ...fulfilledPayloadProvider(data)}}/>
       )
     }
   }
@@ -122,12 +129,14 @@ const withFetchLoader = (WrappedComponent) => {
     resource: PropTypes.string.isRequired,
     loadingPayloadProvider: PropTypes.func,
     errorPayloadProvider: PropTypes.func,
+    fulfilledPayloadProvider: PropTypes.func,
     renameDataKeys: PropTypes.objectOf(PropTypes.string)
   }
 
   FetchLoader.defaultProps = {
     loadingPayloadProvider: null,
     errorPayloadProvider: null,
+    fulfilledPayloadProvider: () => {},
     renameDataKeys: {}
   }
 
