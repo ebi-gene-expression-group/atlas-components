@@ -152,9 +152,9 @@ FacetedSearchContainer.propTypes = {
   resultsMessage: PropTypes.string,
   // Must be classes that extends React.Component, sadly there’s no such prop type :(
   // See also https://stackoverflow.com/questions/45315918/react-proptypes-component-class
-  ResultsHeaderClass: PropTypes.func,
+  ResultsHeaderClass: PropTypes.func.isRequired,
   ResultElementClass: PropTypes.func.isRequired,
-  sortTitle: PropTypes.string
+  sortTitle: PropTypes.string.isRequired
 }
 
 FacetedSearchContainer.defaultProps = {
