@@ -33,6 +33,7 @@
     "url": "https://github.com/ebi-gene-expression-group/scxa-gene-search-results.git"
   },
   "dependencies": {
+    "@ebi-gene-expression-group/atlas-react-fetch-loader": "^3.5.0",
     "format-number": "^3.0.0",
     "lodash": "^4.17.15",
     "prop-types": "^15.7.2",
