@@ -27,7 +27,7 @@ const withFetchLoader = (WrappedComponent) => {
       this.state = {
         data: null,
         isLoading: true,
-        hasError: null
+        error: null
       }
     }
 
@@ -39,7 +39,7 @@ const withFetchLoader = (WrappedComponent) => {
         return {
           data: null,
           loading: true,
-          hasError: null,
+          error: null,
           url: url
         }
       }
@@ -49,7 +49,7 @@ const withFetchLoader = (WrappedComponent) => {
     }
 
     async componentDidUpdate(/*prevProps, prevState*/) {
-      if (this.state.data === null && this.state.hasError === null) {
+      if (this.state.data === null && this.state.error === null) {
         await this._loadAsyncData(URI(this.props.resource, this.props.host).toString())
       }
     }
@@ -80,13 +80,13 @@ const withFetchLoader = (WrappedComponent) => {
         this.setState({
           data: data,
           isLoading: false,
-          hasError: null
+          error: null
         })
       } catch (e) {
         this.setState({
           data: null,
           isLoading: false,
-          hasError: {
+          error: {
             description: `There was a problem communicating with the server. Please try again later.`,
             name: e.name,
             message: e.message
@@ -97,7 +97,7 @@ const withFetchLoader = (WrappedComponent) => {
 
     componentDidCatch(error, info) {
       this.setState({
-        hasError: {
+        error: {
           description: `There was a problem rendering this component.`,
           name: error.name,
           message: `${error.message} – ${info}`
@@ -107,21 +107,19 @@ const withFetchLoader = (WrappedComponent) => {
 
     render() {
       const { errorPayloadProvider, loadingPayloadProvider, fulfilledPayloadProvider, ...passThroughProps } = this.props
-      const { data, isLoading, hasError } = this.state
+      const { data, isLoading, error } = this.state
 
       return (
-        hasError ?
+        error ?
           errorPayloadProvider ?
-            <WrappedComponent {...{...passThroughProps, ...errorPayloadProvider(hasError)}}/> :
-            <CalloutAlert error={hasError} /> :
+            <WrappedComponent {...{...passThroughProps, ...errorPayloadProvider(error)}}/> :
+            <CalloutAlert error={error} /> :
         isLoading ?
           loadingPayloadProvider ?
             <WrappedComponent {...{...passThroughProps, ...loadingPayloadProvider()}}/> :
             <AnimatedLoadingMessage/> :
             // Promise fulfilled, merge passed props and merge-overwrite with retrieved data
-          fulfilledPayloadProvider ?
-            <WrappedComponent {...{...passThroughProps, ...data, ...fulfilledPayloadProvider(data)}}/> :
-            <WrappedComponent {...{...passThroughProps, ...data}}/>
+          <WrappedComponent {...{...passThroughProps, ...data, ...fulfilledPayloadProvider(data)}}/>
       )
     }
   }
@@ -138,7 +136,7 @@ const withFetchLoader = (WrappedComponent) => {
   FetchLoader.defaultProps = {
     loadingPayloadProvider: null,
     errorPayloadProvider: null,
-    fulfilledPayloadProvider: null,
+    fulfilledPayloadProvider: () => {},
     renameDataKeys: {}
   }
 
