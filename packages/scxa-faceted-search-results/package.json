@@ -1,6 +1,6 @@
 {
   "name": "@ebi-gene-expression-group/scxa-search-results",
-  "version": "3.0.1",
+  "version": "4.0.0",
   "description": "Faceted experiments list for Single Cell Expression Atlas gene search results",
   "main": "lib/index.js",
   "scripts": {
@@ -33,7 +33,7 @@
     "url": "https://github.com/ebi-gene-expression-group/scxa-gene-search-results.git"
   },
   "dependencies": {
-    "@ebi-gene-expression-group/atlas-react-fetch-loader": "^3.5.0",
+    "@ebi-gene-expression-group/atlas-react-fetch-loader": "^3.6.0",
     "format-number": "^3.0.0",
     "lodash": "^4.17.20",
     "prop-types": "^15.7.2",
