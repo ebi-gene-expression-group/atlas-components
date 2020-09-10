@@ -7,11 +7,9 @@
   "description": "Faceted experiments list for Single Cell Expression Atlas gene search results",
   "main": "lib/index.js",
   "scripts": {
-    "prepack": "rm -rf lib && babel src -d lib --copy-files",
+    "prepare": "rm -rf lib && babel src -d lib --copy-files",
     "test": "jest",
-    "posttest": "jest --coverage --coverageReporters=text-lcov | coveralls",
-    "postversion": "npm publish",
-    "postpublish": "git push && git push --tags"
+    "posttest": "jest --coverage --coverageReporters=text-lcov | coveralls"
   },
   "jest": {
     "moduleNameMapper": {
