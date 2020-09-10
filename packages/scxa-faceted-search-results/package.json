@@ -1,5 +1,5 @@
 {
-  "name": "@ebi-gene-expression-group/scxa-search-results",
+  "name": "@ebi-gene-expression-group/scxa-faceted-search-results",
   "version": "4.0.0",
   "description": "Faceted experiments list for Single Cell Expression Atlas gene search results",
   "main": "lib/index.js",
