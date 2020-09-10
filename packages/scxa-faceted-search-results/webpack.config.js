@@ -6,8 +6,8 @@ const vendorsBundleName = `vendors`
 
 module.exports = {
   entry: {
-    fetchLoaderDemo: [`@babel/polyfill`, `./html/fetch-loader/renderFetchLoaderDemo.js`],
-    facetedSearchContainerDemo: `./html/facetedSearchContainerDemo.js`
+    facetedSearchContainerWithFetchLoaderDemo: [`@babel/polyfill`, `./html/fetch-loader/demo.js`],
+    facetedSearchContainerDemo: [`@babel/polyfill`, `./html/container/demo.js`]
   },
 
   plugins: [
@@ -22,6 +22,14 @@ module.exports = {
     filename: `[name].bundle.js`,
     publicPath: commonPublicPath,
     devtoolNamespace: `firefox`
+  },
+
+  resolve: {
+    alias: {
+      "react": path.resolve(`./node_modules/react`),
+      "react-dom": path.resolve(`./node_modules/react-dom`),
+      "styled-components": path.resolve(`./node_modules/styled-components`)
+    },
   },
 
   optimization: {

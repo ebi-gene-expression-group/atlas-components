@@ -24,19 +24,24 @@
 </div>
 </body>
 
-<script src="../../dist/vendors.bundle.js"></script>
-<script src="../../dist/fetchLoaderDemo.bundle.js"></script>
+<script src="/dist/vendors.bundle.js"></script>
+<script src="/dist/facetedSearchContainerWithFetchLoaderDemo.bundle.js"></script>
 
-<!-- Set to http://localhost:8080/gxa/ or http://localhost:8080/gxa/sc/ -- Remember the trailing slash! -->
 <script>
     const symbol = `Aspa`;
 
-    fetchLoaderDemo.render({
-      host: 'https://www-test.ebi.ac.uk/gxa/sc/',
+    facetedSearchContainerWithFetchLoaderDemo.render({
+      // Set to http://localhost:8080/gxa/, http://localhost:8080/gxa/sc/ or wherever, but remember the trailing slash!
+      host: 'https://wwwdev.ebi.ac.uk/gxa/sc/',
       resource: 'json/search?symbol=' + symbol, // Add species to see shared facets go away: + '&species=mus musculus',
       // matchingGeneId will be populated for species-specific genes
-      resultsMessageFormatter: function(data) { return symbol + ' ' + data.matchingGeneId + ' is expressed in:'; },
-      noResultsMessageFormatter: function(data) { return 'Your search for ' + symbol + ' yielded no results: ' + data.reason; }
+      fulfilledPayloadProvider: function(data) {
+        return {
+          resultsMessage: (data.results && data.results.length > 0) ?
+            symbol + ' ' + data.matchingGeneId + ' is expressed in:' :
+            'Your search for ' + symbol + ' yielded no results: ' + data.reason
+        }
+      }
     }, 'target');
 </script>
 
