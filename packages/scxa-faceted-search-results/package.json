@@ -31,7 +31,7 @@
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ebi-gene-expression-group/scxa-gene-search-results.git"
+    "url": "https://github.com/ebi-gene-expression-group/atlas-components.git"
   },
   "dependencies": {
     "@ebi-gene-expression-group/atlas-react-fetch-loader": "^3.6.0",
