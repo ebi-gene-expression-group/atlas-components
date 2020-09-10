@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TooltipIcon matches snapshot 1`] = `
+<sup>
+  <span
+    className="icon icon-generic"
+    data-html={true}
+    data-icon="i"
+    data-tip="<span>The blowfish puffs himself up four, five<br>times larger than normal and why? Why does<br>he do that? So that it makes him intimidating,<br>that's why. Intimidating! So that the other,<br>scarier fish are scared off. And that's you!<br>You are a blowfish. You see it's just all<br>an illusion. You see it's... it's nothing<br>but air. Now... who messes with the blowfish,<br>Jesse? You're damn right. You are a blowfish.<br>Say it again. Say it like you mean it. You're<br>a BLOWFISH!</span>"
+    style={
+      Object {
+        "color": "lightgrey",
+        "fontSize": "smaller",
+      }
+    }
+  />
+</sup>
+`;

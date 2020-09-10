@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>FetchLoader demo</title>
+
+    <link rel="stylesheet" href="https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/css/ebi-global.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="https://ebi.emblstatic.net/web_guidelines/EBI-Icon-fonts/v1.3/fonts.css" type="text/css" media="all" />
+
+    <style type="text/css">
+    #target input {
+      height: unset;
+      box-shadow: none;
+      margin: 0;
+    }
+    </style>
+</head>
+
+<body>
+<div id="wrapper" class="row">
+    <div id="content" class="small-12 columns">
+        <div id="target">
+        </div>
+    </div>
+</div>
+</body>
+
+<script src="/dist/vendors.bundle.js"></script>
+<script src="/dist/facetedSearchContainerWithFetchLoaderDemo.bundle.js"></script>
+
+<script>
+    const symbol = `Aspa`;
+
+    facetedSearchContainerWithFetchLoaderDemo.render({
+      // Set to http://localhost:8080/gxa/, http://localhost:8080/gxa/sc/ or wherever, but remember the trailing slash!
+      host: 'https://wwwdev.ebi.ac.uk/gxa/sc/',
+      resource: 'json/search?symbol=' + symbol, // Add species to see shared facets go away: + '&species=mus musculus',
+      // matchingGeneId will be populated for species-specific genes
+      fulfilledPayloadProvider: function(data) {
+        return {
+          resultsMessage: (data.results && data.results.length > 0) ?
+            symbol + ' ' + data.matchingGeneId + ' is expressed in:' :
+            'Your search for ' + symbol + ' yielded no results: ' + data.reason
+        }
+      }
+    }, 'target');
+</script>
+
+</html>

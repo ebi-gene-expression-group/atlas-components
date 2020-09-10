@@ -1,0 +1,71 @@
+{
+  "name": "@ebi-gene-expression-group/scxa-search-results",
+  "version": "3.0.1",
+  "description": "Faceted experiments list for Single Cell Expression Atlas gene search results",
+  "main": "lib/index.js",
+  "scripts": {
+    "prepack": "rm -rf lib && babel src -d lib --copy-files",
+    "test": "jest",
+    "posttest": "jest --coverage --coverageReporters=text-lcov | coveralls",
+    "postversion": "npm publish",
+    "postpublish": "git push && git push --tags"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+      "\\.(css|less)$": "identity-obj-proxy"
+    },
+    "setupFiles": [
+      "<rootDir>/__mocks__/requestAnimationFrame.js"
+    ],
+    "coveragePathIgnorePatterns": [
+      "/node_modules/",
+      "<rootDir>/__test__/TestUtils.js"
+    ]
+  },
+  "author": "Expression Atlas developers <arrayexpress-atlas@ebi.ac.uk>",
+  "collaborators": [
+    "Alfonso Muñoz-Pomer Fuentes <amunoz@ebi.ac.uk>"
+  ],
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ebi-gene-expression-group/scxa-gene-search-results.git"
+  },
+  "dependencies": {
+    "@ebi-gene-expression-group/atlas-react-fetch-loader": "^3.5.0",
+    "format-number": "^3.0.0",
+    "lodash": "^4.17.20",
+    "prop-types": "^15.7.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-select": "^3.1.0",
+    "react-tooltip": "^4.2.9",
+    "styled-components": "^5.1.1",
+    "urijs": "^1.19.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.11.6",
+    "@babel/core": "^7.11.6",
+    "@babel/polyfill": "^7.11.5",
+    "@babel/preset-env": "^7.11.5",
+    "@babel/preset-react": "^7.10.4",
+    "@ebi-gene-expression-group/react-ebi-species": "^2.6.0",
+    "babel-loader": "^8.1.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "coveralls": "^3.1.0",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.4",
+    "eslint": "^7.8.1",
+    "eslint-config-gene-expression": "^0.5.0",
+    "fetch-mock": "^9.10.7",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^26.4.2",
+    "node-fetch": "^2.6.0",
+    "random-words": "^1.1.1",
+    "react-test-renderer": "^16.13.1",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  }
+}

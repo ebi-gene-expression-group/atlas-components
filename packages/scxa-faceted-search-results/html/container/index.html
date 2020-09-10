@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>FacetedSearchContainer demo</title>
+
+  <link rel="stylesheet" href="https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/css/ebi-global.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="https://ebi.emblstatic.net/web_guidelines/EBI-Icon-fonts/v1.3/fonts.css" type="text/css" media="all" />
+
+  <style type="text/css">
+    #target input {
+      height: unset;
+      box-shadow: none;
+      margin: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="wrapper" class="row column expanded margin-top-large">
+    <div id="content" class="small-12 columns">
+      <div id="target">
+      </div>
+    </div>
+  </div>
+</body>
+
+<script src="/dist/vendors.bundle.js"></script>
+<script src="/dist/facetedSearchContainerDemo.bundle.js"></script>
+
+<script>
+  const episodes =  [
+    {
+      element: {
+        title: 'Raising Gazorpazorp'
+      },
+      facets: [
+        {
+          group: 'Show',
+          value: 'rick-and-morty',
+          label: 'Rick & Morty',
+          description: 'Name of TV show'
+        },
+        {
+          group: 'Planet',
+          value: 'gazorpazorp',
+          label: 'Gazorpazorp',
+          description: 'Planet Tooltip'
+        },
+        {
+          group: 'Guest character',
+          value: 'gwendolyn',
+          label: 'Gwendolyn',
+          description: 'The “Guest character” tooltip is very long so we can make sure that the tooltip text is conveniently broken into several lines to improve readability and it doesn’t overflow or cover elements in the view that we might want to read at the same time that the tooltip is being shown'
+        },
+        {
+          group: 'Guest character',
+          value: 'ma-sha',
+          label: 'Ma-Sha',
+          description: 'The “Guest character” tooltip is very long so we can make sure that the tooltip text is conveniently broken into several lines to improve readability and it doesn’t overflow or cover elements in the view that we might want to read at the same time that the tooltip is being shown'
+        },
+        {
+          group: 'Season',
+          value: '1',
+          label: '1',
+          description: 'Season Tooltip'
+        }
+      ]
+    },
+    {
+      element: {
+        title: 'The wedding squanchers'
+      },
+      facets: [
+        {
+          group: 'Show',
+          value: 'rick-and-morty',
+          label: 'Rick & Morty',
+          description: 'Name of TV show'
+        },
+        {
+          group: 'Planet',
+          value: 'squanch',
+          label: 'Squanch',
+          description: 'Planet Tooltip'
+        },
+        {
+          group: 'Guest character',
+          value: 'birdperson',
+          label: 'Birdperson',
+          description: 'The “Guest character” tooltip is very long so we can make sure that the tooltip text is conveniently broken into several lines to improve readability and it doesn’t overflow or cover elements in the view that we might want to read at the same time that the tooltip is being shown'
+        },
+        {
+          group: 'Guest character',
+          value: 'squanchy',
+          label: 'Squanchy',
+          description: 'The “Guest character” tooltip is very long so we can make sure that the tooltip text is conveniently broken into several lines to improve readability and it doesn’t overflow or cover elements in the view that we might want to read at the same time that the tooltip is being shown'
+        },
+        {
+          group: 'Season',
+          value: '2',
+          label: '2',
+          description: 'Season Tooltip'
+        }
+      ]
+    },
+    {
+      element: {
+        title: 'The Rickshank redemption'
+      },
+      facets: [
+        {
+          group: 'Show',
+          value: 'rick-and-morty',
+          label: 'Rick & Morty',
+          description: 'Name of TV show'
+        },
+        {
+          group: 'Guest character',
+          value: 'birdperson',
+          label: 'Birdperson',
+          description: 'The “Guest character” tooltip is very long so we can make sure that the tooltip text is conveniently broken into several lines to improve readability and it doesn’t overflow or cover elements in the view that we might want to read at the same time that the tooltip is being shown'
+        },
+        {
+          group: 'Planet',
+          value: 'buttworld',
+          label: 'Buttworld',
+          description: 'Planet Tooltip'
+        },
+        {
+          group: 'Season',
+          value: '3',
+          label: '3',
+          description: 'Season Tooltip'
+        }
+      ]
+    },
+    {
+      element: {
+        title: 'Ricksy business'
+      },
+      facets: [
+        {
+          group: 'Show',
+          value: 'rick-and-morty',
+          label: 'Rick & Morty',
+          description: 'Name of TV show'
+        },
+        {
+          group: 'Guest character',
+          value: 'squanchy',
+          label: 'Squanchy',
+          description: 'The “Guest character” tooltip is very long so we can make sure that the tooltip text is conveniently broken into several lines to improve readability and it doesn’t overflow or cover elements in the view that we might want to read at the same time that the tooltip is being shown'
+        },
+        {
+          group: 'Guest character',
+          value: 'abradolf_lincler',
+          label: 'Abradolf Lincler',
+          description: 'The “Guest character” tooltip is very long so we can make sure that the tooltip text is conveniently broken into several lines to improve readability and it doesn’t overflow or cover elements in the view that we might want to read at the same time that the tooltip is being shown'
+        },
+        {
+          group: 'Season',
+          value: '1',
+          label: '1',
+          description: 'Season Tooltip'
+        }
+      ]
+    },
+    {
+      element: {
+        title: 'Close Rick-counters of the Rick kind'
+      },
+      facets: [
+        {
+          group: 'Show',
+          value: 'rick-and-morty',
+          label: 'Rick & Morty',
+          description: 'Name of TV show'
+        },
+        {
+          group: 'Guest character',
+          value: 'ricktiminus_sancheziminius',
+          label: 'Ricktiminus Sancheziminius',
+          description: 'The “Guest character” tooltip is very long so we can make sure that the tooltip text is conveniently broken into several lines to improve readability and it doesn’t overflow or cover elements in the view that we might want to read at the same time that the tooltip is being shown'
+        },
+        {
+          group: 'Guest character',
+          value: 'abradolf_lincler',
+          label: 'Abradolf Lincler',
+          description: 'The “Guest character” tooltip is very long so we can make sure that the tooltip text is conveniently broken into several lines to improve readability and it doesn’t overflow or cover elements in the view that we might want to read at the same time that the tooltip is being shown'
+        },
+        {
+          group: 'Planet',
+          value: 'buttworld',
+          label: 'Buttworld',
+          description: 'Planet Tooltip'
+        },
+        {
+          group: 'Season',
+          value: '1',
+          label: '1',
+          description: 'Season Tooltip'
+        }
+      ]
+    }
+  ]
+
+  document.addEventListener('DOMContentLoaded', function (event) {
+    facetedSearchContainerDemo.render(
+      {
+        results: episodes,
+        checkboxFacetGroups: ['Season'],
+        resultsMessage: '‘Rick & Morty’ episdoes',
+        sortTitle: `title`
+      },
+      'target');
+  })
+</script>
+
+</html>
