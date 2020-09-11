@@ -170,4 +170,32 @@ describe(`FetchLoader`, () => {
     expect(wrapper.find(MyComponent)).toHaveProp(`results`, payload.results)
     expect(wrapper.find(MyComponent)).toHaveProp(`resultsLength`, payload.results.length)
   })
+
+  test(`when host/resource change, the component is reset and reloads`, async () => {
+    const firstPayload = {
+      results: [{ title: `Foobar` }]
+    }
+    const secondPayload = {
+      results: [{ title: `Barfoo`}]
+    }
+
+    fetchMock.get(`/foo/bar`, JSON.stringify(firstPayload))
+    fetchMock.get(`/bar/foo`, JSON.stringify(secondPayload))
+
+    const wrapper =
+      shallow(
+        <ComponentWithFetchLoader
+          host={`foo/`}
+          resource={`bar`}
+        />)
+
+    expect(wrapper).toHaveState({ isLoading: true, data: null })
+    await wrapper.instance().componentDidMount()
+    expect(wrapper).toHaveState({ isLoading: false, data: firstPayload })
+
+    wrapper.setProps({ host:`bar/`, resource: `foo`})
+    expect(wrapper).toHaveState({ isLoading: true, data: null })
+    await wrapper.instance().componentDidMount()
+    expect(wrapper).toHaveState({ isLoading: false, data: secondPayload })
+  })
 })
