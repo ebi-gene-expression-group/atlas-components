@@ -38,7 +38,7 @@ const withFetchLoader = (WrappedComponent) => {
       if (url !== state.url) {
         return {
           data: null,
-          loading: true,
+          isLoading: true,
           error: null,
           url: url
         }
