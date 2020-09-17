@@ -8,6 +8,7 @@ import ScatterPlotLoader from './plotloader/PlotLoader'
 import AtlasAutocomplete from 'expression-atlas-autocomplete'
 
 import './util/MathRound'
+import PlotSettingsDropdown from "./PlotSettingsDropdown"
 
 const stops = [
   {
@@ -84,17 +85,17 @@ const _colourizeExpressionLevel = (highlightSeries) => {
 }
 
 const GeneExpressionScatterPlot = (props) => {
-  const {atlasUrl, suggesterEndpoint, geneId, onSelectGeneId, speciesName} = props       // Suggester
-  const {height, plotData, highlightClusters} = props  // Chart
-  const {loading, resourcesUrl, errorMessage, showControls} = props                       // Overlay
+  const { atlasUrl, suggesterEndpoint, geneId, geneIds, onSelectGeneId, speciesName } = props       // Suggester
+  const { height, plotData, highlightClusters } = props  // Chart
+  const { loading, resourcesUrl, errorMessage, showControls } = props                       // Overlay
   const plotIsDisabled = !plotData.max
 
   // Number of significative digits before decimal point
   const dataScale = plotIsDisabled ?
-    0 :
-    plotData.max <= 1 ?
-      0 : // 10^0 = 1
-      (plotData.max - 1).toFixed(0).toString().length  // Substract 1 to correctly get boundary values: 1, 10, ...
+      0 :
+      plotData.max <= 1 ?
+          0 : // 10^0 = 1
+          (plotData.max - 1).toFixed(0).toString().length  // Substract 1 to correctly get boundary values: 1, 10, ...
   const adjustedStops = stops.filter(e => e.cutoff <= 10 ** dataScale)
 
   const highchartsConfig = {
@@ -105,17 +106,17 @@ const GeneExpressionScatterPlot = (props) => {
       text: `Gene expression`
     },
     tooltip: {
-      formatter: function(tooltip) {
+      formatter: function (tooltip) {
         // Trick Highcharts into thinking the point is in the bottom half of the chart, so that the tooltip
         // is displayed below the point
         this.point.negative = true
 
         const header = `<b>Cell ID:</b> ${this.point.name}<br>`
         const text = geneId ?
-          `<b>Expression level:</b> ${this.point.expressionLevel ?
-            `${this.point.expressionLevel} ${plotData.unit}` :
-            `Below cutoff`}` :
-          `No gene selected`
+            `<b>Expression level:</b> ${this.point.expressionLevel ?
+                `${this.point.expressionLevel} ${plotData.unit}` :
+                `Below cutoff`}` :
+            `No gene selected`
 
         return header + text
       }
@@ -129,59 +130,78 @@ const GeneExpressionScatterPlot = (props) => {
       }
     },
     colorAxis: plotIsDisabled ?
-      {} :
-      {
-        allowNegativeLog: true,
-        min: 0.1,
-        max: 10 ** dataScale,
-        type: `logarithmic`,
-        stops: adjustedStops.map((e, idx) => [1 / adjustedStops.length * idx, e.color]),
-        marker: {
-          color: `#c4463a`
+        {} :
+        {
+          allowNegativeLog: true,
+          min: 0.1,
+          max: 10 ** dataScale,
+          type: `logarithmic`,
+          stops: adjustedStops.map((e, idx) => [1 / adjustedStops.length * idx, e.color]),
+          marker: {
+            color: `#c4463a`
+          },
+          endOnTick: false
         },
-        endOnTick: false
-      },
     legend: plotIsDisabled ?
-      {
-        enabled: false
-      } :
-      {
-        title: {
-          text: `Expression level (CPM)`
-        },
-        floating: false,
-        align: `center`,
-        symbolHeight: 5,
-        symbolWidth: 450,
-        enabled: true
-      }
+        {
+          enabled: false
+        } :
+        {
+          title: {
+            text: `Expression level (CPM)`
+          },
+          floating: false,
+          align: `center`,
+          symbolHeight: 5,
+          symbolWidth: 450,
+          enabled: true
+        }
+  }
+
+  const geneIdOptions = geneIds.sort((a, b) => a - b).map((geneId) => ({
+    value: geneId,
+    label: geneId
+  }))
+
+  let geneIdControl
+  if (geneIds.length) {
+    geneIdControl =
+        <PlotSettingsDropdown
+            labelText={`Gene Ids`}
+            options={geneIdOptions}
+            defaultValue={{ value: geneId, label: geneId }}
+            onSelect={(event) => {
+              onSelectGeneId(event)
+            }} />
+  } else {
+    geneIdControl = <AtlasAutocomplete
+        wrapperClassName={`row margin-bottom-large`}
+        atlasUrl={atlasUrl}
+        suggesterEndpoint={suggesterEndpoint}
+        initialValue={geneId}
+        defaultSpecies={speciesName}
+        onSelect={(event) => {
+          onSelectGeneId(event)
+        }}
+        show={showControls}
+    />
   }
 
   return (
-    <React.Fragment>
-      <div style={{visibility: `${showControls ? `visible` : `hidden`}`}}>
-        <AtlasAutocomplete
-          wrapperClassName={`row margin-bottom-large`}
-          atlasUrl={atlasUrl}
-          suggesterEndpoint={suggesterEndpoint}
-          initialValue={geneId}
-          defaultSpecies={speciesName}
-          onSelect={(event) => {
-            onSelectGeneId(event)
-          }}
-          show={showControls}
+      <React.Fragment>
+        <div style={{visibility: `${showControls ? `visible` : `hidden`}`}}>
+          {geneIdControl}
+        </div>
+        <ScatterPlotLoader
+            wrapperClassName={`row`}
+            chartClassName={`small-12 columns`}
+            series={_colourizeExpressionLevel(highlightClusters)(plotData)}
+            highchartsConfig={highchartsConfig}
+            loading={loading}
+            resourcesUrl={resourcesUrl}
+            errorMessage={errorMessage}
         />
-      </div>
-      <ScatterPlotLoader
-        wrapperClassName={`row`}
-        chartClassName={`small-12 columns`}
-        series={_colourizeExpressionLevel(highlightClusters)(plotData)}
-        highchartsConfig={highchartsConfig}
-        loading={loading}
-        resourcesUrl={resourcesUrl}
-        errorMessage={errorMessage}
-      />
-    </React.Fragment>
+      </React.Fragment>
   )
 }
 
@@ -201,6 +221,7 @@ GeneExpressionScatterPlot.propTypes = {
   suggesterEndpoint: PropTypes.string.isRequired,
   speciesName: PropTypes.string.isRequired,
   geneId: PropTypes.string.isRequired,
+  geneIds: PropTypes.arrayOf(PropTypes.string),
   onSelectGeneId: PropTypes.func.isRequired,
 
   loading: PropTypes.bool.isRequired,
@@ -208,4 +229,8 @@ GeneExpressionScatterPlot.propTypes = {
   errorMessage: PropTypes.string
 }
 
-export {GeneExpressionScatterPlot as default, _colourizeExpressionLevel}
+GeneExpressionScatterPlot.defaultProps = {
+  geneIds: []
+}
+
+export { GeneExpressionScatterPlot as default, _colourizeExpressionLevel }

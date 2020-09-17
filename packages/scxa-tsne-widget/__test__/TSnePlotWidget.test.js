@@ -38,6 +38,38 @@ describe(`TSnePlotWidget`, () => {
     expect(tSnePlotView.props().showControls).toBe(false)
   })
 
+  test(`whether geneIds prop is passed or not`, () => {
+    const experimentAccession = `E-MTAB-5061`
+    const speciesName = `Homo Sapiens`
+
+    const onChangeColourBy = () => {}
+    const onChangePerplexity = () => {}
+    const geneIds = [`foo`, `bar`]
+    const plotData = {
+      series: []
+    }
+
+    const wrapper =
+        shallow(
+            <TSnePlotWidget
+                speciesName={speciesName}
+                experimentAccession={experimentAccession}
+                ks={[]}
+                metadata={[]}
+                geneIds={geneIds}
+                selectedColourBy={`0`}
+                onChangeColourBy={onChangeColourBy}
+                perplexities={[]}
+                selectedPerplexity={0}
+                onChangePerplexity={onChangePerplexity}
+                loading={true}
+                plotData={plotData}/>)
+
+    const tSnePlotView = wrapper.find(TSnePlotView)
+
+    expect(tSnePlotView.props().geneIds.length).toEqual(2)
+  })
+
   test(`matches snapshot`, () => {
     const experimentAccession = `E-MTAB-5061`
     const speciesName = `Homo Sapiens`

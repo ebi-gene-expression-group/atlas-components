@@ -13,6 +13,7 @@ class TSnePlotWidget extends React.Component {
         metadata: [],
         perplexities: []
       },
+      selectedGeneId: this.props.geneId,
       selectedColourBy: `inferred_cell_type`,
       selectedColourByCategory: `metadata`,
       metadataErrorMessage: null,
@@ -76,9 +77,9 @@ class TSnePlotWidget extends React.Component {
   render() {
     const {height, atlasUrl, suggesterEndpoint} = this.props
     const {wrapperClassName, clusterPlotClassName, expressionPlotClassName} = this.props
-    const {geneId, speciesName, ks, experimentAccession} = this.props
+    const {geneIds, speciesName, ks, experimentAccession} = this.props
     const {metadata, perplexities} = this.state.plotdata
-    const {selectedColourBy, selectedColourByCategory, loadingMetadata} = this.state
+    const {selectedColourBy, selectedColourByCategory, loadingMetadata, selectedGeneId} = this.state
 
     const perplexitiesOrdered = perplexities.sort((a, b) => a - b)
 
@@ -106,11 +107,13 @@ class TSnePlotWidget extends React.Component {
             selectedColourByCategory={selectedColourByCategory}
             perplexities={perplexities}
             selectedPerplexity={perplexitiesOrdered[Math.round((perplexitiesOrdered.length - 1) / 2)]}
-            geneId={geneId}
+            geneId={selectedGeneId}
+            geneIds={geneIds}
             height={height}
             onChangeColourBy={(colourByCategory, colourByValue) =>
               this._onChangeColourBy(colourByCategory, colourByValue)
             }
+            onSelectGeneId={(geneId) => this.setState({ selectedGeneId: geneId.value })}
             showControls={false}
           />
           <p>
@@ -128,6 +131,7 @@ TSnePlotWidget.propTypes = {
   expressionPlotClassName: PropTypes.string,
   experimentAccession: PropTypes.string.isRequired,
   geneId: PropTypes.string.isRequired,
+  geneIds: PropTypes.arrayOf(PropTypes.string),
   ks: PropTypes.arrayOf(PropTypes.number),
   suggesterEndpoint: PropTypes.string,
   speciesName: PropTypes.string,
@@ -143,7 +147,8 @@ TSnePlotWidget.defaultProps = {
   expressionPlotClassName: `small-12 large-6 columns`,
   speciesName: ``,
   height: 800,
-  ks: []
+  ks: [],
+  geneIds: []
 }
 
 export default TSnePlotWidget
