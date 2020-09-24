@@ -21,10 +21,3 @@ Even though NPM no longer installs `peerDependencies`, we follow
 [ESLint’s recommendation on shareable configs](https://eslint.org/docs/developer-guide/shareable-configs#publishing-a-shareable-config).
 You can install `eslint-plugin-react` in the root package like detailed in the instructions above.
 
-And if you’re using Atom, because it won’t bother to use your package’s settings (you know, it’s better to reinvent
-the wheel every single time), this might be useful:
-```bash
-cd ~/.atom/packages/linter-eslint
-npm install @ebi-gene-expression-group/eslint-config eslint-plugin-react
-
-```
