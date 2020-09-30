@@ -163,29 +163,24 @@ const GeneExpressionScatterPlot = (props) => {
     label: geneId
   }))
 
-  let geneIdControl
-  if (geneIds.length) {
-    geneIdControl =
-        <PlotSettingsDropdown
-            labelText={`Gene Ids`}
-            options={geneIdOptions}
-            defaultValue={{ value: geneId, label: geneId }}
-            onSelect={(event) => {
-              onSelectGeneId(event)
-            }} />
-  } else {
-    geneIdControl = <AtlasAutocomplete
-        wrapperClassName={`row margin-bottom-large`}
-        atlasUrl={atlasUrl}
-        suggesterEndpoint={suggesterEndpoint}
-        initialValue={geneId}
-        defaultSpecies={speciesName}
-        onSelect={(event) => {
-          onSelectGeneId(event)
-        }}
-        show={showControls}
-    />
-  }
+
+  const geneIdControl = geneIds.length ? <PlotSettingsDropdown
+          labelText={`Gene Ids`}
+          options={geneIdOptions}
+          defaultValue={{value: geneId, label: geneId}}
+          onSelect={(event) => {
+            onSelectGeneId(event)
+          }}/> :
+      <AtlasAutocomplete
+          wrapperClassName={`row margin-bottom-large`}
+          atlasUrl={atlasUrl}
+          suggesterEndpoint={suggesterEndpoint}
+          initialValue={geneId}
+          defaultSpecies={speciesName}
+          onSelect={(event) => {
+            onSelectGeneId(event)
+          }}
+          show={showControls}/>
 
   return (
       <React.Fragment>
