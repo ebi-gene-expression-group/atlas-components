@@ -1,7 +1,7 @@
 {
   "name": "@ebi-gene-expression-group/scxa-experiment-cell-type-heatmap",
   "version": "1.0.0",
-  "description": "Highcharts heatmap used to visualize marker genes for an experiment in the Single Cell Expression Atlas",
+  "description": "Highcharts heatmap used to visualize cell type marker genes for an experiment in the Single Cell Expression Atlas",
   "main": "lib/index.js",
   "scripts": {
     "prepare": "rm -rf lib && babel src -d lib --copy-files",
