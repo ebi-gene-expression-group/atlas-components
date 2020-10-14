@@ -144,7 +144,7 @@ const CellTypeMarkerGeneHeatmap = (props) => {
             return `<span style="font-size: 12px; font-weight: bold; color: #e96b23;">Cell Type ${this.value}</span>`
           }
           else {
-            return `Cell Type ${this.value}`
+            return `${this.value}`
           }
         }
       },
