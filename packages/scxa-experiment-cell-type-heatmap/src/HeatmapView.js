@@ -110,7 +110,6 @@ render() {
 HeatmapView.propTypes = {
   host: PropTypes.string.isRequired,
   resource: PropTypes.string.isRequired,
-  type: PropTypes.string.isRequired,
   props: PropTypes.object.isRequired
 }
 

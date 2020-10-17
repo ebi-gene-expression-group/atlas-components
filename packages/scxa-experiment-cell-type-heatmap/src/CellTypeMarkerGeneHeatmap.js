@@ -39,7 +39,7 @@ Highcharts.SVGRenderer.prototype.symbols.download = (x, y, w, h) => [
 
 const CellTypeMarkerGeneHeatmap = (props) => {
   const { chartHeight, hasDynamicHeight, heatmapRowHeight, species } = props
-  const { data, isDataFiltered, xAxisCategories, yAxisCategories } = props
+  const { data, xAxisCategories, yAxisCategories } = props
   const totalNumberOfRows = Object.keys(_.groupBy(data, `geneName`)).length
   const groupedData = _.groupBy(data, `cellType`)
 
@@ -57,9 +57,7 @@ const CellTypeMarkerGeneHeatmap = (props) => {
   // 175px = title + legend + X axis labels; 8 is the height of a plot line separating the clusters
   const dynamicHeight = (totalNumberOfRows * heatmapRowHeight) + (cellTypes.length * 8) + 175
 
-  // We don't need to worry about plotlines and labels if the heatmap is showing data filtered by cluster ID
-  if (!isDataFiltered) {
-    let plotLineAxisPosition = -0.5
+  let plotLineAxisPosition = -0.5
 
     // If we don't have a set row height, we try to estimate the height as worked out by Highcharts
     const rowHeight = hasDynamicHeight ?
@@ -102,7 +100,7 @@ const CellTypeMarkerGeneHeatmap = (props) => {
         }
       })
     })
-  }
+  })
 
   const options = {
     chart: {
@@ -139,13 +137,8 @@ const CellTypeMarkerGeneHeatmap = (props) => {
       categories: xAxisCategories,
       labels: {
         useHtml: true,
-        formatter: function () {
-          if (isDataFiltered && this.value === data[0].cellType) {
-            return `<span style="font-size: 12px; font-weight: bold; color: #e96b23;">Cell Type ${this.value}</span>`
-          }
-          else {
-            return `Cell Type ${this.value}`
-          }
+        formatter: function() {
+          return `${this.value}`
         }
       },
       endOnTick: false,
@@ -308,7 +301,6 @@ CellTypeMarkerGeneHeatmap.propTypes = {
     cellTypeWhereMarker: PropTypes.string.isRequired,
     cellType: PropTypes.string.isRequired
   })).isRequired,
-  isDataFiltered: PropTypes.bool.isRequired,
   xAxisCategories: PropTypes.array.isRequired,
   yAxisCategories: PropTypes.array.isRequired,
   hasDynamicHeight: PropTypes.bool.isRequired,

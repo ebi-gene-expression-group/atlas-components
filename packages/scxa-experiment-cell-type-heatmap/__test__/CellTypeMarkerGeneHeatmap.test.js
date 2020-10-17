@@ -9,7 +9,7 @@ import CellTypeMarkerGeneHeatmap from '../src/CellTypeMarkerGeneHeatmap'
 Enzyme.configure({ adapter: new Adapter() })
 
 describe(`CellTypeMarkerGeneHeatmap`, () => {
-  test(`creates plotlines for every cell type if data isn't filtered`, () => {
+  test(`creates plotlines for every cell type`, () => {
     const wrapper = shallow(<CellTypeMarkerGeneHeatmap
       data={[
         {
@@ -40,7 +40,6 @@ describe(`CellTypeMarkerGeneHeatmap`, () => {
       xAxisCategories={[`1`, `2`, `3`]}
       yAxisCategories={[`a`, `b`, `c`]}
       chartHeight={200}
-      isDataFiltered={false}
       heatmapRowHeight={20}
       hasDynamicHeight={false}
       species={`species`} />)
@@ -65,7 +64,6 @@ describe(`CellTypeMarkerGeneHeatmap`, () => {
       xAxisCategories={[`1`, `2`, `3`]}
       yAxisCategories={[`a`, `b`, `c`]}
       chartHeight={200}
-      isDataFiltered={true}
       heatmapRowHeight={20}
       hasDynamicHeight={false}
       species={`species`} />)
