@@ -1,6 +1,6 @@
-//This is a module to overwrite `getDataRows` method in `export-data` module
-//to get a table formated heatmap data
-//https://github.com/highcharts/highcharts/issues/7980
+// This is a module to overwrite `getDataRows` method in `export-data` module
+// to get a table-formatted heatmap data
+// https://github.com/highcharts/highcharts/issues/7980
 (function(H){
   `object` === typeof module && module.exports ?
     module.exports = H :
