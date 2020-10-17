@@ -290,12 +290,10 @@ const CellTypeMarkerGeneHeatmap = (props) => {
   }
 
   return (
-    <div>
-      <HighchartsReact
-        highcharts={Highcharts}
-        options={options}
-      />
-    </div>
+    <HighchartsReact
+      highcharts={Highcharts}
+      options={options}
+    />
   )
 }
 
