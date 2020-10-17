@@ -298,7 +298,7 @@ const CellTypeMarkerGeneHeatmap = (props) => {
 }
 
 CellTypeMarkerGeneHeatmap.propTypes = {
-  chartHeight: PropTypes.number.isRequired,
+  chartHeight: PropTypes.number,
   data: PropTypes.arrayOf(PropTypes.shape({
     x: PropTypes.number.isRequired,
     y: PropTypes.number.isRequired,
@@ -312,6 +312,10 @@ CellTypeMarkerGeneHeatmap.propTypes = {
   hasDynamicHeight: PropTypes.bool.isRequired,
   heatmapRowHeight: PropTypes.number.isRequired,
   species: PropTypes.string.isRequired
+}
+
+CellTypeMarkerGeneHeatmap.defaultProps = {
+  chartHeight: 300
 }
 
 export default CellTypeMarkerGeneHeatmap
