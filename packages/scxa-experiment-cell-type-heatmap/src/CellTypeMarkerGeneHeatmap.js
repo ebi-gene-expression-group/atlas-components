@@ -41,7 +41,7 @@ const CellTypeMarkerGeneHeatmap = (props) => {
   const { chartHeight, hasDynamicHeight, heatmapRowHeight, species } = props
   const { data, xAxisCategories, yAxisCategories } = props
   const totalNumberOfRows = Object.keys(_.groupBy(data, `geneName`)).length
-  const groupedData = _.groupBy(data, `cellType`)
+  const groupedData = _.groupBy(data, `cellTypeValueWhereMarker`)
 
   const filteredData = data.map(cell => {
     if (cell.value <= 0.0) {
@@ -64,9 +64,9 @@ const CellTypeMarkerGeneHeatmap = (props) => {
       heatmapRowHeight :
       Math.round((chartHeight - 175) / totalNumberOfRows + ((cellTypes.length-1) * 8))
 
-    cellTypes.forEach((cellType, idx, array) => {
-      const numberOfRows = Object.keys(_.groupBy(groupedData[cellType], `cellTypeWhereMarker`)).length // how many marker genes per cluster
-      plotLineAxisPosition = plotLineAxisPosition + numberOfRows
+  cellTypes.forEach((cellType, idx, array) => {
+    const numberOfRows = Object.keys(_.groupBy(groupedData[cellType], `y`)).length // how many marker genes per cluster
+    plotLineAxisPosition = plotLineAxisPosition + numberOfRows
 
       const yOffset = -numberOfRows * rowHeight/2
 
