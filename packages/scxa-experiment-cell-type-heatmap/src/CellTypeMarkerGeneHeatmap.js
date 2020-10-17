@@ -122,7 +122,7 @@ const CellTypeMarkerGeneHeatmap = (props) => {
       spacingBottom: 0
     },
     lang: {
-      noData: `There are no marker genes for this k value. Try selecting another k.`,
+      noData: `No marker genes found for the selected organ region`,
     },
     noData: {
       style: {
