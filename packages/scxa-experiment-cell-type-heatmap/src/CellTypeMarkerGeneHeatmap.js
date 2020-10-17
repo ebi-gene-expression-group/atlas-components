@@ -72,28 +72,28 @@ const CellTypeMarkerGeneHeatmap = (props) => {
 
   let plotLineAxisPosition = -0.5
 
-    // If we don't have a set row height, we try to estimate the height as worked out by Highcharts
-    const rowHeight = hasDynamicHeight ?
-      heatmapRowHeight :
-      Math.round((chartHeight - 175) / totalNumberOfRows + ((cellTypes.length-1) * 8))
+  // If we don't have a set row height, we try to estimate the height as worked out by Highcharts
+  const rowHeight = hasDynamicHeight ?
+    heatmapRowHeight :
+    Math.round((chartHeight - 175) / totalNumberOfRows + ((cellTypes.length-1) * 8))
 
   cellTypes.forEach((cellType, idx, array) => {
     const numberOfRows = Object.keys(_.groupBy(groupedData[cellType], `y`)).length // how many marker genes per cluster
     plotLineAxisPosition = plotLineAxisPosition + numberOfRows
 
-      const yOffset = -numberOfRows * rowHeight/2
+    const yOffset = -numberOfRows * rowHeight/2
 
-      let color, zIndex
-      // don't show last plot line
-      if (idx === array.length-1) {
-        // removing the plot line altogether would remove the label, so we need to make it "invisible"
-        color = `#FFFFFF`
-        zIndex = 0
-      }
-      else {
-        color = `#000000`
-        zIndex = 5
-      }
+    let color, zIndex
+    // don't show last plot line
+    if (idx === array.length-1) {
+      // removing the plot line altogether would remove the label, so we need to make it "invisible"
+      color = `#FFFFFF`
+      zIndex = 0
+    }
+    else {
+      color = `#000000`
+      zIndex = 5
+    }
 
     const splitCellTypeLabel = splitPhrase(cellType)
     plotLines.push({
