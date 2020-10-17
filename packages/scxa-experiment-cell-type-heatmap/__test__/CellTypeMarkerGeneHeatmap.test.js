@@ -44,7 +44,7 @@ describe(`CellTypeMarkerGeneHeatmap`, () => {
       hasDynamicHeight={false}
       species={`species`} />)
 
-    const chartOptions = wrapper.find(`t`).props().options
+    const chartOptions = wrapper.props().options
 
     expect(chartOptions.yAxis.plotLines).toHaveLength(3)
   })
@@ -68,7 +68,7 @@ describe(`CellTypeMarkerGeneHeatmap`, () => {
       hasDynamicHeight={false}
       species={`species`} />)
 
-    const chartOptions = wrapper.find(`t`).props().options
+    const chartOptions = wrapper.props().options
 
     expect(chartOptions.exporting.buttons.contextButton.text).toEqual(
       `Download`)
