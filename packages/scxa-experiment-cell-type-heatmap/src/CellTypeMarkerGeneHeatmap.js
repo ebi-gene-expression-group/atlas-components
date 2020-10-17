@@ -179,13 +179,13 @@ const CellTypeMarkerGeneHeatmap = (props) => {
       // followPointer: true,
       formatter: function () {
         if(this.point.value === null) {
-          return `<b>Cell type:</b> ${this.point.cellType}<br/>` +
+          return `<b>Cell type:</b> ${this.point.cellTypeValue}<br/>` +
                  `<b>Gene ID:</b> ${this.point.geneName}<br/>` +
                  `<b>Expression:</b> Not expressed<br/>`
         }
         else {
-          const text = `<b>Cell type:</b> ${this.point.cellType}<br/>` +
-            `<b>Cell type where marker:</b> ${this.point.cellTypeWhereMarker}<br/>` +
+          const text = `<b>Cell type:</b> ${this.point.cellTypeValue}<br/>` +
+            `<b>Cell type where marker:</b> ${this.point.cellTypeValueWhereMarker}<br/>` +
             `<b>Gene ID:</b> ${this.point.geneName}<br/>` +
                        `<b>Expression:</b> ${+this.point.value.toFixed(3)} CPM`
             return text
