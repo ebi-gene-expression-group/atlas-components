@@ -22,6 +22,22 @@ async function addModules() {
 
 addModules()
 
+const splitPhrase = (phrase, maxLineLength = 12) => {
+  const splitPhrase = [``]
+
+  const words = phrase.split(/\s+/)
+  while (words.length > 0) {
+    const nextWord = words.shift()
+    if (splitPhrase[splitPhrase.length - 1].length + nextWord.length < maxLineLength) {
+      splitPhrase[splitPhrase.length - 1] = `${splitPhrase[splitPhrase.length - 1]} ${nextWord}`
+    } else {
+      splitPhrase.push(nextWord)
+    }
+  }
+
+  return splitPhrase
+}
+
 Highcharts.SVGRenderer.prototype.symbols.download = (x, y, w, h) => [
   // Arrow stem
   `M`, x + w * 0.5, y,
@@ -79,23 +95,19 @@ const CellTypeMarkerGeneHeatmap = (props) => {
         zIndex = 5
       }
 
-      plotLines.push({
-        color: color,
-        width: 2,
-        value: plotLineAxisPosition,
-        zIndex: zIndex,
-        label: {
-          text: cellType,
-          align: `right`,
-          textAlign: `left`,
-          x: 15,
-          y: yOffset,
-          style: {
-            fontWeight: `bold`,
-            fontSize: `12px`
-          }
-        }
-      })
+    const splitCellTypeLabel = splitPhrase(cellType)
+    plotLines.push({
+      color: color,
+      width: 2,
+      value: plotLineAxisPosition,
+      zIndex: zIndex,
+      label: {
+        text: splitCellTypeLabel.join(`<br/>`),
+        align: `right`,
+        textAlign: `left`,
+        x: 15,
+        y: yOffset - Math.max(splitCellTypeLabel.length - 3, 0) * rowHeight / 2,  // Move very long labels slightly up
+      }
     })
   })
 
