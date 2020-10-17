@@ -1,11 +1,7 @@
-# Single Cell Expression Atlas marker gene heatmap
-[![Build Status](https://travis-ci.com/ebi-gene-expression-group/scxa-marker-gene-heatmap.svg?branch=master)](https://travis-ci.com/ebi-gene-expression-group/scxa-marker-gene-heatmap) [![Coverage Status](https://coveralls.io/repos/github/ebi-gene-expression-group/scxa-marker-gene-heatmap/badge.svg?branch=master)](https://coveralls.io/github/ebi-gene-expression-group/scxa-marker-gene-heatmap?branch=master)
+# Single Cell Expression Atlas cell type marker gene heatmap
 
 ## Installing dependencies
-In order to run the application, you must first install the dependencies using `npm`:
-```
-npm install
-```
+See Lerna instructions on thsi repo’s main REDAME document.
 
 ## Try it out
 Use [webpack-dev-server](https://github.com/webpack/webpack-dev-server) to run the application in your browser:
