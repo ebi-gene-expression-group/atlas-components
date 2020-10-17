@@ -43,13 +43,10 @@ const CellTypeMarkerGeneHeatmap = (props) => {
   const totalNumberOfRows = Object.keys(_.groupBy(data, `geneName`)).length
   const groupedData = _.groupBy(data, `cellTypeValueWhereMarker`)
 
-  const filteredData = data.map(cell => {
-    if (cell.value <= 0.0) {
-      let filteredCell = cell
-      filteredCell.value = null
-      return filteredCell
-    } else return cell
-  })
+  const filteredData = data.map(cell => ({
+    ...cell,
+    value: cell.value <= 0 ? null : cell.value
+  }))
 
   const plotLines = []
   const cellTypes = Object.keys(groupedData)
