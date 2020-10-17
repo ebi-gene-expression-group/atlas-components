@@ -298,8 +298,8 @@ CellTypeMarkerGeneHeatmap.propTypes = {
     y: PropTypes.number.isRequired,
     geneName: PropTypes.string.isRequired,
     value: PropTypes.number.isRequired,
-    cellTypeWhereMarker: PropTypes.string.isRequired,
-    cellType: PropTypes.string.isRequired
+    cellTypeValueWhereMarker: PropTypes.string.isRequired,
+    cellTypeValue: PropTypes.string.isRequired
   })).isRequired,
   xAxisCategories: PropTypes.array.isRequired,
   yAxisCategories: PropTypes.array.isRequired,

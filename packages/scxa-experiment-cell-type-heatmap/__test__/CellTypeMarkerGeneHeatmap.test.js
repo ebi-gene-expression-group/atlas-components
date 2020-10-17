@@ -17,24 +17,24 @@ describe(`CellTypeMarkerGeneHeatmap`, () => {
           y: 0,
           geneName: `foo`,
           value: 13,
-          cellType: `1`,
-          cellTypeWhereMarker: `1`
+          cellTypeValue: `1`,
+          cellTypeValueWhereMarker: `1`
         },
         {
           x: 1,
           y: 1,
           geneName: `bar`,
           value: 2,
-          cellType: `2`,
-          cellTypeWhereMarker: `2`
+          cellTypeValue: `2`,
+          cellTypeValueWhereMarker: `2`
         },
         {
           x: 2,
           y: 2,
           geneName: `foobar`,
           value: 1,
-          cellType: `3`,
-          cellTypeWhereMarker: `3`
+          cellTypeValue: `3`,
+          cellTypeValueWhereMarker: `3`
         }
       ]}
       xAxisCategories={[`1`, `2`, `3`]}
