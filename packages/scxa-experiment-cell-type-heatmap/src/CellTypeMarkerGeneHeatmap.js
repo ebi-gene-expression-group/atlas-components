@@ -135,7 +135,7 @@ const CellTypeMarkerGeneHeatmap = (props) => {
       enabled: false
     },
     title: {
-      text: `Marker genes`,
+      text: `Cell type marker genes`,
       style: {
         fontSize: `25px`,
         fontWeight: `bold`
