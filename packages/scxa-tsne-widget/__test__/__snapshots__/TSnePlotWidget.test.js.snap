@@ -118,7 +118,7 @@ Array [
       <div
         style={
           Object {
-            "visibility": "visible",
+            "visibility": "hidden",
           }
         }
       >
