@@ -77,7 +77,7 @@ class TSnePlotWidget extends React.Component {
   render() {
     const {height, atlasUrl, suggesterEndpoint} = this.props
     const {wrapperClassName, clusterPlotClassName, expressionPlotClassName} = this.props
-    const {geneIds, speciesName, ks, experimentAccession} = this.props
+    const {geneIds, speciesName, ks, experimentAccession, showControls} = this.props
     const {metadata, perplexities} = this.state.plotdata
     const {selectedColourBy, selectedColourByCategory, loadingMetadata, selectedGeneId} = this.state
 
@@ -107,6 +107,7 @@ class TSnePlotWidget extends React.Component {
             selectedColourByCategory={selectedColourByCategory}
             perplexities={perplexities}
             selectedPerplexity={perplexitiesOrdered[Math.round((perplexitiesOrdered.length - 1) / 2)]}
+            onChangePerplexity={() => {}}
             geneId={selectedGeneId}
             geneIds={geneIds}
             height={height}
@@ -114,7 +115,7 @@ class TSnePlotWidget extends React.Component {
               this._onChangeColourBy(colourByCategory, colourByValue)
             }
             onSelectGeneId={(geneId) => this.setState({ selectedGeneId: geneId.value })}
-            showControls={false}
+            showControls={showControls}
           />
           <p>
             To know more about this experiment please go to <a target={`_blank`} href={`https://www.ebi.ac.uk/gxa/sc/experiments/${experimentAccession}`}>Single Cell Expression Atlas </a>.
@@ -135,7 +136,8 @@ TSnePlotWidget.propTypes = {
   ks: PropTypes.arrayOf(PropTypes.number),
   suggesterEndpoint: PropTypes.string,
   speciesName: PropTypes.string,
-  height: PropTypes.number
+  height: PropTypes.number,
+  showControls: PropTypes.bool
 }
 
 
@@ -148,7 +150,8 @@ TSnePlotWidget.defaultProps = {
   speciesName: ``,
   height: 800,
   ks: [],
-  geneIds: []
+  geneIds: [],
+  showControls: false
 }
 
 export default TSnePlotWidget
