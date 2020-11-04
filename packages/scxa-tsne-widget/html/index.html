@@ -9,7 +9,7 @@
 
   <style>
     /* Override EBI VF styles for components that use React Select */
-    #target input {
+    #widget-without-controls input, #widget-with-controls input {
       height: unset;
       box-shadow: none;
       margin: 0;
@@ -25,8 +25,13 @@
 </head>
 
 <body>
-  <div class="row column">
-    <div id="target"></div>
+  <div class="row">
+    <h2 class="text-center">TSne Widget without Controls</h2>
+    <div id="widget-without-controls"></div>
+  </div>
+  <div class="row">
+    <h2 class="text-center">TSne Widget with Controls</h2>
+    <div id="widget-with-controls"></div>
   </div>
 </body>
 
@@ -38,7 +43,14 @@
     TSnePlotWidgetDemo.render({
       experimentAccession: 'E-ENAD-15',
       geneId: 'ENSMUSG00000041147'
-    }, 'target');
+    }, 'widget-without-controls');
+
+    TSnePlotWidgetDemo.render({
+      experimentAccession: 'E-ENAD-15',
+      geneId: 'ENSMUSG00000041147',
+      geneIds: ['ENSMUSG00000041147', 'ENSMUSG00000090110', 'ENSMUSG00000064345'],
+      showControls: true
+    }, 'widget-with-controls');
   })
 </script>
 
