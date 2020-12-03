@@ -20,6 +20,7 @@ import {
   plotData,
   randomHighchartsSeriesWithSeed
 } from './Utils'
+import PlotSettingsDropdown from "../src/PlotSettingsDropdown";
 
 describe(`GeneExpressionTSnePlot colourize function`, () => {
 
@@ -160,7 +161,8 @@ describe(`GeneExpressionTSnePlot`, () => {
     loading: true,
     atlasUrl: ``,
     suggesterEndpoint: ``,
-    speciesName: ``
+    speciesName: ``,
+    geneId: ``
   }
 
 
@@ -178,6 +180,21 @@ describe(`GeneExpressionTSnePlot`, () => {
   })
 
   test(`wraps the autocomplete control in a visible div when showControls is true`, () => {
+    const wrapper = mount(<GeneExpressionTSnePlot {...props} showControls={true}/>)
+    expect(wrapper.find(AtlasAutocomplete).parent()).toHaveStyle({visibility: `visible`})
+  })
+
+  test(`wraps the gene ids dropdown control in a hidden div when showControls is false`, () => {
+    const wrapper = mount(<GeneExpressionTSnePlot {...props} showControls={false} geneIds={[`foo`, `bar`]}/>)
+    expect(wrapper.find(PlotSettingsDropdown).parent()).toHaveStyle({visibility: `hidden`})
+  })
+
+  test(`wraps the gene ids control in a visible div when showControls is true`, () => {
+    const wrapper = mount(<GeneExpressionTSnePlot {...props} showControls={true} geneIds={[`foo`, `bar`]}/>)
+    expect(wrapper.find(PlotSettingsDropdown).parent()).toHaveStyle({visibility: `visible`})
+  })
+
+  test(`do not render gene ids dropdown if gene ids is empty array`, () => {
     const wrapper = mount(<GeneExpressionTSnePlot {...props} showControls={true}/>)
     expect(wrapper.find(AtlasAutocomplete).parent()).toHaveStyle({visibility: `visible`})
   })

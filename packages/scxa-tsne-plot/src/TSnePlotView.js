@@ -95,7 +95,7 @@ class TSnePlotView extends React.Component {
   render() {
     const {height, atlasUrl, resourcesUrl, suggesterEndpoint, showControls} = this.props
     const {wrapperClassName, clusterPlotClassName, expressionPlotClassName} = this.props
-    const {geneId, speciesName} = this.props
+    const {geneId, speciesName, geneIds} = this.props
     const highlightClusters = []
     const {ks, perplexities, selectedPerplexity, metadata, selectedColourBy, selectedColourByCategory} = this.props
     const {onChangePerplexity, onSelectGeneId, onChangeColourBy} = this.props
@@ -148,6 +148,7 @@ class TSnePlotView extends React.Component {
             suggesterEndpoint={suggesterEndpoint}
             onSelectGeneId={onSelectGeneId}
             geneId={geneId}
+            geneIds={geneIds}
             speciesName={speciesName}
             highlightClusters={[]}
             loading={loadingGeneExpression}
@@ -189,6 +190,7 @@ TSnePlotView.propTypes = {
 
   highlightClusters: PropTypes.arrayOf(PropTypes.number),
   geneId: PropTypes.string.isRequired,
+  geneIds: PropTypes.arrayOf(PropTypes.string),
   speciesName: PropTypes.string.isRequired,
   height: PropTypes.number,
   resourcesUrl: PropTypes.string,
