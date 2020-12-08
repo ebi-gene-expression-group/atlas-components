@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TSnePlotWidget matches snapshot 1`] = `
+"<Fragment>
+  <TSnePlotView atlasUrl=\\"https://www.ebi.ac.uk/gxa/sc/\\" suggesterEndpoint=\\"json/suggestions\\" wrapperClassName=\\"row expanded\\" clusterPlotClassName=\\"small-12 large-6 columns\\" expressionPlotClassName=\\"small-12 large-6 columns\\" speciesName=\\"Homo Sapiens\\" experimentAccession=\\"E-MTAB-5061\\" ks={{...}} metadata={{...}} selectedColourBy=\\"inferred_cell_type\\" selectedColourByCategory=\\"metadata\\" perplexities={{...}} selectedPerplexity={[undefined]} onChangePerplexity={[Function: onChangePerplexity]} geneId=\\"\\" geneIds={{...}} height={800} onChangeColourBy={[Function: onChangeColourBy]} onSelectGeneId={[Function: onSelectGeneId]} showControls={false} highlightClusters={{...}} onPerplexityChange={[Function: onPerplexityChange]} />
+  <p>
+    To know more about this experiment please go to 
+    <a target=\\"_blank\\" href=\\"https://www.ebi.ac.uk/gxa/sc/experiments/E-MTAB-5061\\">
+      Single Cell Expression Atlas 
+    </a>
+    .
+  </p>
+</Fragment>"
+`;
