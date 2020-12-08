@@ -24,11 +24,10 @@ describe(`TSnePlotWidget`, () => {
           speciesName={speciesName}
           experimentAccession={experimentAccession}
           ks={[]}
-          metadata={[]}
+          geneId={``}
           selectedColourBy={`0`}
           onChangeColourBy={onChangeColourBy}
           perplexities={[]}
-          selectedPerplexity={0}
           onChangePerplexity={onChangePerplexity}
           loading={true}
           plotData={plotData}/>)
@@ -55,12 +54,11 @@ describe(`TSnePlotWidget`, () => {
                 speciesName={speciesName}
                 experimentAccession={experimentAccession}
                 ks={[]}
-                metadata={[]}
+                geneId={``}
                 geneIds={geneIds}
                 selectedColourBy={`0`}
                 onChangeColourBy={onChangeColourBy}
                 perplexities={[]}
-                selectedPerplexity={0}
                 onChangePerplexity={onChangePerplexity}
                 loading={true}
                 plotData={plotData}/>)
@@ -70,7 +68,12 @@ describe(`TSnePlotWidget`, () => {
     expect(tSnePlotView.props().geneIds.length).toEqual(2)
   })
 
-  /*test(`matches snapshot`, () => {
+  //We are doing a shallow debug test here because the styled-component version 5+ being used in TSnePlotView
+  //causes the test to fail otherwise with react-test-renderer. An issue has been opened with Styled-Component
+  //repo here https://github.com/styled-components/styled-components/issues/3342
+  //If a solution to the issue has been found then this test would be updated.
+
+  test(`matches snapshot`, () => {
     const experimentAccession = `E-MTAB-5061`
     const speciesName = `Homo Sapiens`
 
@@ -80,23 +83,20 @@ describe(`TSnePlotWidget`, () => {
       series: []
     }
 
-    const tree = renderer
-      .create(
+    const tree = shallow(
         <TSnePlotWidget
           speciesName={speciesName}
           experimentAccession={experimentAccession}
           ks={[]}
           geneId={``}
-          metadata={[]}
           selectedColourBy={`0`}
           onChangeColourBy={onChangeColourBy}
           perplexities={[]}
-          selectedPerplexity={0}
           onChangePerplexity={onChangePerplexity}
           loading={true}
           plotData={plotData}/>)
-      .toJSON()
+      .debug()
 
     expect(tree).toMatchSnapshot()
-  })*/
+  })
 })
