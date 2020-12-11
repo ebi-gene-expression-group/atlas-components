@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Color from 'color'
-import {find as _find, flatten as _flatten} from 'lodash'
+import _ from 'lodash'
 
 import ScatterPlotLoader from './plotloader/PlotLoader'
 import PlotSettingsDropdown from './PlotSettingsDropdown'
@@ -37,7 +37,7 @@ const tooltipHeader = (clusterType, series, point) => {
 const ClusterTSnePlot = (props) => {
   const {ks, perplexities, metadata, selectedPerplexity, onChangePerplexity, selectedColourBy, onChangeColourBy, clusterType} = props  // Select
   const {plotData, highlightClusters, height, tooltipContent} = props   // Chart
-  const {loading, resourcesUrl, errorMessage, showControls} = props   // Overlay
+  const {loading, resourcesUrl, errorMessage, showControls, initialCellTypeValues} = props   // Overlay
   const opacity = 0.7
 
   const highchartsConfig = {
@@ -143,11 +143,13 @@ const ClusterTSnePlot = (props) => {
     },
   ]
 
-  const defaultValue = _find(
-    _flatten(
+  const cellType = _.first(_.intersection(_.map(metadataOptions,`value`),initialCellTypeValues))
+
+  const defaultValue = _.find(
+    _.flatten(
       options.map((item) => (item.options))
     ),
-    {value: selectedColourBy}
+    {value: cellType === undefined ? selectedColourBy : cellType}
   )
 
   const afterRender = (chart) => {
@@ -205,6 +207,7 @@ ClusterTSnePlot.propTypes = {
   plotData: PropTypes.shape({
     series: PropTypes.array.isRequired
   }),
+  initialCellTypeValues: PropTypes.array.isRequired,
   highlightClusters: PropTypes.array,
 
   ks: PropTypes.arrayOf(PropTypes.number).isRequired,

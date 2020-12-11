@@ -94,6 +94,7 @@ describe(`ClusterTSnePlot`, () => {
     metadata: [],
     ks: [],
     perplexities: [],
+    initialCellTypeValues: [`inferred_cell_type_-_authors_labels`,`inferred_cell_type_-_ontology_labels`],
     loading: true
   }
 
@@ -154,6 +155,26 @@ describe(`ClusterTSnePlot`, () => {
     const dropdown = wrapper.find({ labelText: `Colour plot by:`})
 
     expect(dropdown.props().defaultValue.label).toContain(`The first metadata value`)
+  })
+
+  test(`dropdown selection text is inferred_cell_type when metadata options contain when plot is coloured by metadata`, () => {
+    const ks = [1, 2, 3]
+    const metadata = [
+      {
+        value: `metadata-1`,
+        label: `The first metadata value`
+      },
+      {
+        value: `inferred_cell_type_-_authors_labels`,
+        label: `Inferred cell type - authors_labels`
+      }
+    ]
+
+    const wrapper = mount(<ClusterTSnePlot {...props} ks={ks} metadata={metadata} selectedPerplexity={0} showControls={true}/>)
+
+    const dropdown = wrapper.find({ labelText: `Colour plot by:`})
+
+    expect(dropdown.props().defaultValue.label).toContain(`Inferred cell type - authors_labels`)
   })
 
   test(`hides the cluster name in tooltips if tSNE is coloured by metadata`, () => {
