@@ -143,13 +143,13 @@ const ClusterTSnePlot = (props) => {
     },
   ]
 
-  const cellType = _.first(_.intersection(_.map(metadataOptions,`value`),initialCellTypeValues))
+  const cellType = _.first(_.intersection(_.map(metadataOptions,`value`), initialCellTypeValues))
 
   const defaultValue = _.find(
     _.flatten(
       options.map((item) => (item.options))
     ),
-    {value: cellType === undefined ? selectedColourBy : cellType}
+    {value: cellType ? cellType : selectedColourBy}
   )
 
   const afterRender = (chart) => {
