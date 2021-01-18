@@ -1,43 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Demo</title>
+  <meta charset="UTF-8">
+  <title>Cell type heatmap demo - TOC</title>
 
-    <link rel="stylesheet" href="https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/css/ebi-global.css" type="text/css" media="all" />
-    <link rel="stylesheet" href="https://ebi.emblstatic.net/web_guidelines/EBI-Icon-fonts/v1.3/fonts.css"
-          type="text/css" media="all" />
+  <link rel="stylesheet" href="https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/css/ebi-global.css" type="text/css" media="all"/>
+  <link rel="stylesheet" href="https://ebi.emblstatic.net/web_guidelines/EBI-Icon-fonts/v1.3/fonts.css" type="text/css" media="all"/>
 
-    <link rel="stylesheet" href="https://www.ebi.ac.uk/gxa/resources/css/foundation/atlas.css" type="text/css" media="all">
-
-    <style type="text/css">
-        #target input {
-            height: unset;
-            box-shadow: none;
-            margin: 0;
-        }
-
-        div.highcharts-button span {
-          pointer-events: none;
-        }
-    </style>
+  <link rel="stylesheet" href="https://www.ebi.ac.uk/gxa/resources/css/foundation/atlas.css" type="text/css" media="all">
 </head>
-
 <body>
-<div id="wrapper" class="row expanded">
-    <div id="content" class="small-12 columns">
-        <div id="target">
-        </div>
+  <div class="row">
+    <div class="columns small-10">
+      <h1>Cell type heatmap demo</h1>
+      <ul>
+        <li>
+          <a href="demo-data-via-fetch.html">
+            Cell type heatmap demo - Props retrieved via fetchg from <code>http://localhost:8080/gxa/sc</code>
+          </a>
+        </li>
+        <li>
+          <a href="demo-data-in-props.html">
+            Cell type heatmap demo - Props passed as <code>options</code> field
+          </a>
+        </li>
+      </ul>
     </div>
-</div>
+  </div>
 </body>
-
-<script src="../dist/vendors.bundle.js"></script>
-<script src="../dist/markerGeneHeatmap.bundle.js"></script>
-<script src="../dist/markerGeneHeatmapDemo.bundle.js"></script>
-
-<!-- Set to http://localhost:8080/gxa/ or http://localhost:8080/gxa/sc/ -- Remember the trailing slash! -->
-<script>
-  markerGeneHeatmapDemo.render({}, 'target')
-</script>
-
 </html>

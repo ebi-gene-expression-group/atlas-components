@@ -1,21 +1,24 @@
 const { CleanWebpackPlugin } = require(`clean-webpack-plugin`)
 const path = require(`path`)
 
-const commonPublicPath = `/dist/`
+const vendorsBundleName = `vendors`
 
 module.exports = {
   entry: {
-    markerGeneHeatmapDemo: [`@babel/polyfill`, `./html/DemoCellTypeHeatmap.js`],
+    heatmapViewRenderModule: [`@babel/polyfill`, `./html/heatmapViewRenderModule.js`],
+    cellTypeHeatmapViewRenderModule: [`@babel/polyfill`, `./html/cellTypeHeatmapViewRenderModule.js`]
   },
 
   plugins: [
     new CleanWebpackPlugin()
   ],
 
+
   output: {
     library: `[name]`,
+    path: path.resolve(__dirname, `dist`),
     filename: `[name].bundle.js`,
-    publicPath: commonPublicPath,
+    publicPath: `/html/`,
     devtoolNamespace: `firefox`
   },
 
@@ -62,6 +65,6 @@ module.exports = {
   devServer: {
     port: 9000,
     contentBase: path.resolve(__dirname, `html`),
-    publicPath: commonPublicPath
+    publicPath: `/html`
   }
 }
