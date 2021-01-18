@@ -26,10 +26,8 @@ class HeatmapView extends React.Component {
     })
 
     const url = URI(resource, host).toString()
-    console.log(`url`, url)
     try {
       const response = await fetch(url)
-      console.log(`response`, response)
 
       if (!response.ok) {
         throw new Error(`${url} => ${response.status}`)
