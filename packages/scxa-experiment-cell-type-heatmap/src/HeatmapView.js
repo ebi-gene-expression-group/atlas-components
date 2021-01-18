@@ -86,7 +86,7 @@ class HeatmapView extends React.Component {
    }))
  }
 
-render() {
+  render() {
     const { isLoading, hasError } = this.state
     const { wrapperClassName, plotWrapperClassName } = this.props
 
@@ -100,7 +100,7 @@ render() {
                 show={isLoading}
               />
             </div>
-        </div>
+          </div>
     )
   }
 }
