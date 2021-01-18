@@ -20,19 +20,15 @@ module.exports = {
   },
 
   optimization: {
+    runtimeChunk: {
+      name: vendorsBundleName
+    },
     splitChunks: {
-      chunks: `all`,
-      minSize: 1,
       cacheGroups: {
-        markerGeneHeatmap: {
-          test: /[\\/]src[\\/]/,
-          name: `markerGeneHeatmap`,
-          priority: -20
-        },
-        vendors: {
+        commons: {
           test: /[\\/]node_modules[\\/]/,
-          name: `vendors`,
-          priority: -10
+          name: vendorsBundleName,
+          chunks: 'all'
         }
       }
     }
