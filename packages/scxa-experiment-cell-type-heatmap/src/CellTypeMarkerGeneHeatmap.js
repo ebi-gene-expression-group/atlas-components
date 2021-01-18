@@ -57,7 +57,7 @@ const CellTypeMarkerGeneHeatmap = (props) => {
   const { chartHeight, hasDynamicHeight, heatmapRowHeight, species } = props
   const { data, xAxisCategories, yAxisCategories } = props
   const totalNumberOfRows = Object.keys(_.groupBy(data, `geneName`)).length
-  const groupedData = _.groupBy(data, `cellTypeGroupValueWhereMarker`)
+  const groupedData = _.groupBy(data, `cellGroupValueWhereMarker`)
 
   const filteredData = data.map(cell => ({
     ...cell,
@@ -187,13 +187,13 @@ const CellTypeMarkerGeneHeatmap = (props) => {
       // followPointer: true,
       formatter: function () {
         if(this.point.value === null) {
-          return `<b>Cell type:</b> ${this.point.cellTypeGroupValue}<br/>` +
+          return `<b>Cell type:</b> ${this.point.cellGroupValue}<br/>` +
                  `<b>Gene ID:</b> ${this.point.geneName}<br/>` +
                  `<b>Expression:</b> Not expressed<br/>`
         }
         else {
-          const text = `<b>Cell type:</b> ${this.point.cellTypeGroupValue}<br/>` +
-            `<b>Cell type where marker:</b> ${this.point.cellTypeGroupValueWhereMarker}<br/>` +
+          const text = `<b>Cell type:</b> ${this.point.cellGroupValue}<br/>` +
+            `<b>Cell type where marker:</b> ${this.point.cellGroupValueWhereMarker}<br/>` +
             `<b>Gene ID:</b> ${this.point.geneName}<br/>` +
                        `<b>Expression:</b> ${+this.point.value.toFixed(3)} CPM`
             return text
@@ -304,8 +304,8 @@ CellTypeMarkerGeneHeatmap.propTypes = {
     y: PropTypes.number.isRequired,
     geneName: PropTypes.string.isRequired,
     value: PropTypes.number.isRequired,
-    cellTypeGroupValueWhereMarker: PropTypes.string.isRequired,
-    cellTypeGroupValue: PropTypes.string.isRequired
+    cellGroupValueWhereMarker: PropTypes.string.isRequired,
+    cellGroupValue: PropTypes.string.isRequired
   })).isRequired,
   xAxisCategories: PropTypes.array.isRequired,
   yAxisCategories: PropTypes.array.isRequired,

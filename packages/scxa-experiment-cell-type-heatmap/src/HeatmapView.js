@@ -81,7 +81,7 @@ class HeatmapView extends React.Component {
      data: _.cloneDeep(state.data),
      filteredData: selectedOption.value === `all` ?
        _.cloneDeep(state.data) :
-       _.filter(state.data, {'clusterIdWhereMarker': parseInt(selectedOption.value)}),
+       _.filter(state.data, {'cellGroupValueWhereMarker': parseInt(selectedOption.value)}),
      selectedClusterId: selectedOption
    }))
  }
