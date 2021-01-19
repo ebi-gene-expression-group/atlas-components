@@ -22,6 +22,22 @@ async function addModules() {
 
 addModules()
 
+const splitPhrase = (phrase, maxLineLength = 12) => {
+  const splitPhrase = [``]
+
+  const words = phrase.split(/\s+/)
+  while (words.length > 0) {
+    const nextWord = words.shift()
+    if (splitPhrase[splitPhrase.length - 1].length + nextWord.length < maxLineLength) {
+      splitPhrase[splitPhrase.length - 1] = `${splitPhrase[splitPhrase.length - 1]} ${nextWord}`
+    } else {
+      splitPhrase.push(nextWord)
+    }
+  }
+
+  return splitPhrase
+}
+
 Highcharts.SVGRenderer.prototype.symbols.download = (x, y, w, h) => [
   // Arrow stem
   `M`, x + w * 0.5, y,
@@ -39,17 +55,14 @@ Highcharts.SVGRenderer.prototype.symbols.download = (x, y, w, h) => [
 
 const CellTypeMarkerGeneHeatmap = (props) => {
   const { chartHeight, hasDynamicHeight, heatmapRowHeight, species } = props
-  const { data, isDataFiltered, xAxisCategories, yAxisCategories } = props
+  const { data, xAxisCategories, yAxisCategories } = props
   const totalNumberOfRows = Object.keys(_.groupBy(data, `geneName`)).length
-  const groupedData = _.groupBy(data, `cellType`)
+  const groupedData = _.groupBy(data, `cellGroupValueWhereMarker`)
 
-  const filteredData = data.map(cell => {
-    if (cell.value <= 0.0) {
-      let filteredCell = cell
-      filteredCell.value = null
-      return filteredCell
-    } else return cell
-  })
+  const filteredData = data.map(cell => ({
+    ...cell,
+    value: cell.value <= 0 ? null : cell.value
+  }))
 
   const plotLines = []
   const cellTypes = Object.keys(groupedData)
@@ -57,52 +70,46 @@ const CellTypeMarkerGeneHeatmap = (props) => {
   // 175px = title + legend + X axis labels; 8 is the height of a plot line separating the clusters
   const dynamicHeight = (totalNumberOfRows * heatmapRowHeight) + (cellTypes.length * 8) + 175
 
-  // We don't need to worry about plotlines and labels if the heatmap is showing data filtered by cluster ID
-  if (!isDataFiltered) {
-    let plotLineAxisPosition = -0.5
+  let plotLineAxisPosition = -0.5
 
-    // If we don't have a set row height, we try to estimate the height as worked out by Highcharts
-    const rowHeight = hasDynamicHeight ?
-      heatmapRowHeight :
-      Math.round((chartHeight - 175) / totalNumberOfRows + ((cellTypes.length-1) * 8))
+  // If we don't have a set row height, we try to estimate the height as worked out by Highcharts
+  const rowHeight = hasDynamicHeight ?
+    heatmapRowHeight :
+    Math.round((chartHeight - 175) / totalNumberOfRows + ((cellTypes.length-1) * 8))
 
-    cellTypes.forEach((cellType, idx, array) => {
-      const numberOfRows = Object.keys(_.groupBy(groupedData[cellType], `cellTypeWhereMarker`)).length // how many marker genes per cluster
-      plotLineAxisPosition = plotLineAxisPosition + numberOfRows
+  cellTypes.forEach((cellType, idx, array) => {
+    const numberOfRows = Object.keys(_.groupBy(groupedData[cellType], `y`)).length // how many marker genes per cluster
+    plotLineAxisPosition = plotLineAxisPosition + numberOfRows
 
-      const yOffset = -numberOfRows * rowHeight/2
+    const yOffset = -numberOfRows * rowHeight/2
 
-      let color, zIndex
-      // don't show last plot line
-      if (idx === array.length-1) {
-        // removing the plot line altogether would remove the label, so we need to make it "invisible"
-        color = `#FFFFFF`
-        zIndex = 0
+    let color, zIndex
+    // don't show last plot line
+    if (idx === array.length-1) {
+      // removing the plot line altogether would remove the label, so we need to make it "invisible"
+      color = `#FFFFFF`
+      zIndex = 0
+    }
+    else {
+      color = `#000000`
+      zIndex = 5
+    }
+
+    const splitCellTypeLabel = splitPhrase(cellType)
+    plotLines.push({
+      color: color,
+      width: 2,
+      value: plotLineAxisPosition,
+      zIndex: zIndex,
+      label: {
+        text: splitCellTypeLabel.join(`<br/>`),
+        align: `right`,
+        textAlign: `left`,
+        x: 15,
+        y: yOffset - Math.max(splitCellTypeLabel.length - 3, 0) * rowHeight / 2,  // Move very long labels slightly up
       }
-      else {
-        color = `#000000`
-        zIndex = 5
-      }
-
-      plotLines.push({
-        color: color,
-        width: 2,
-        value: plotLineAxisPosition,
-        zIndex: zIndex,
-        label: {
-          text: cellType,
-          align: `right`,
-          textAlign: `left`,
-          x: 15,
-          y: yOffset,
-          style: {
-            fontWeight: `bold`,
-            fontSize: `12px`
-          }
-        }
-      })
     })
-  }
+  })
 
   const options = {
     chart: {
@@ -115,7 +122,7 @@ const CellTypeMarkerGeneHeatmap = (props) => {
       spacingBottom: 0
     },
     lang: {
-      noData: `There are no marker genes for this k value. Try selecting another k.`,
+      noData: `No marker genes found for the selected organ region`,
     },
     noData: {
       style: {
@@ -128,7 +135,7 @@ const CellTypeMarkerGeneHeatmap = (props) => {
       enabled: false
     },
     title: {
-      text: `Marker genes`,
+      text: `Cell type marker genes`,
       style: {
         fontSize: `25px`,
         fontWeight: `bold`
@@ -139,13 +146,8 @@ const CellTypeMarkerGeneHeatmap = (props) => {
       categories: xAxisCategories,
       labels: {
         useHtml: true,
-        formatter: function () {
-          if (isDataFiltered && this.value === data[0].cellType) {
-            return `<span style="font-size: 12px; font-weight: bold; color: #e96b23;">Cell Type ${this.value}</span>`
-          }
-          else {
-            return `${this.value}`
-          }
+        formatter: function() {
+          return `${this.value}`
         }
       },
       endOnTick: false,
@@ -174,7 +176,6 @@ const CellTypeMarkerGeneHeatmap = (props) => {
       showEmpty: false,
       visible: data.length !== 0,
       labels: {
-        useHTML: true,
         formatter: function () {
           return `<a href="https://www.ebi.ac.uk/gxa/sc/search?q=${this.value}&species=${species}"` +
             `style="border: none; color: #148ff3">${this.value}</a>`
@@ -186,13 +187,13 @@ const CellTypeMarkerGeneHeatmap = (props) => {
       // followPointer: true,
       formatter: function () {
         if(this.point.value === null) {
-          return `<b>Cell type:</b> ${this.point.cellType}<br/>` +
+          return `<b>Cell type:</b> ${this.point.cellGroupValue}<br/>` +
                  `<b>Gene ID:</b> ${this.point.geneName}<br/>` +
                  `<b>Expression:</b> Not expressed<br/>`
         }
         else {
-          const text = `<b>Cell type:</b> ${this.point.cellType}<br/>` +
-            `<b>Cell type where marker:</b> ${this.point.cellTypeWhereMarker}<br/>` +
+          const text = `<b>Cell type:</b> ${this.point.cellGroupValue}<br/>` +
+            `<b>Cell type where marker:</b> ${this.point.cellGroupValueWhereMarker}<br/>` +
             `<b>Gene ID:</b> ${this.point.geneName}<br/>` +
                        `<b>Expression:</b> ${+this.point.value.toFixed(3)} CPM`
             return text
@@ -289,31 +290,32 @@ const CellTypeMarkerGeneHeatmap = (props) => {
   }
 
   return (
-    <div>
-      <HighchartsReact
-        highcharts={Highcharts}
-        options={options}
-      />
-    </div>
+    <HighchartsReact
+      highcharts={Highcharts}
+      options={options}
+    />
   )
 }
 
 CellTypeMarkerGeneHeatmap.propTypes = {
-  chartHeight: PropTypes.number.isRequired,
+  chartHeight: PropTypes.number,
   data: PropTypes.arrayOf(PropTypes.shape({
     x: PropTypes.number.isRequired,
     y: PropTypes.number.isRequired,
     geneName: PropTypes.string.isRequired,
     value: PropTypes.number.isRequired,
-    cellTypeWhereMarker: PropTypes.string.isRequired,
-    cellType: PropTypes.string.isRequired
+    cellGroupValueWhereMarker: PropTypes.string.isRequired,
+    cellGroupValue: PropTypes.string.isRequired
   })).isRequired,
-  isDataFiltered: PropTypes.bool.isRequired,
   xAxisCategories: PropTypes.array.isRequired,
   yAxisCategories: PropTypes.array.isRequired,
   hasDynamicHeight: PropTypes.bool.isRequired,
   heatmapRowHeight: PropTypes.number.isRequired,
   species: PropTypes.string.isRequired
+}
+
+CellTypeMarkerGeneHeatmap.defaultProps = {
+  chartHeight: 300
 }
 
 export default CellTypeMarkerGeneHeatmap

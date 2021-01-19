@@ -9,7 +9,7 @@ exports[`LoadingOverlay matches snapshot when hidden 1`] = `
     show={false}
   >
     <div
-      className="sc-AxjAm gdhldL"
+      className="sc-bdnylx bqQJZW"
     >
       <p>
         Loading, please wait...
@@ -31,7 +31,7 @@ exports[`LoadingOverlay matches snapshot when shown 1`] = `
     show={true}
   >
     <div
-      className="sc-AxjAm boPAjy"
+      className="sc-bdnylx dRCoQz"
     >
       <p>
         Loading, please wait...

@@ -9,9 +9,8 @@ const cellTypeHeatmapView = (props, state) => {
 
   return  <CellTypeMarkerGeneHeatmap
     data={data}
-    isDataFiltered={false}
-    xAxisCategories={_.uniq(data.map(cell => cell.cellType))}
-    yAxisCategories={_.uniq(data.map(cell => cell.geneName))}
+    xAxisCategories={_.chain(data).uniqBy(`x`).sortBy(`x`).map(`cellGroupValue`).value()}
+    yAxisCategories={_.chain(data).uniqBy(`y`).sortBy(`y`).map(`geneName`).value()}
     chartHeight={defaultHeatmapHeight}
     hasDynamicHeight={_.chain(data).map(`geneName`).uniq().value().length > 5 ? hasDynamicHeight : false}
     heatmapRowHeight={heatmapRowHeight}
@@ -19,4 +18,4 @@ const cellTypeHeatmapView = (props, state) => {
   />
 }
 
-export {cellTypeHeatmapView}
+export { cellTypeHeatmapView }

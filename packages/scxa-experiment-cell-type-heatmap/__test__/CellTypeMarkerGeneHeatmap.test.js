@@ -9,7 +9,7 @@ import CellTypeMarkerGeneHeatmap from '../src/CellTypeMarkerGeneHeatmap'
 Enzyme.configure({ adapter: new Adapter() })
 
 describe(`CellTypeMarkerGeneHeatmap`, () => {
-  test(`creates plotlines for every cell type if data isn't filtered`, () => {
+  test(`creates plot lines for every cell type`, () => {
     const wrapper = shallow(<CellTypeMarkerGeneHeatmap
       data={[
         {
@@ -17,35 +17,34 @@ describe(`CellTypeMarkerGeneHeatmap`, () => {
           y: 0,
           geneName: `foo`,
           value: 13,
-          cellType: `1`,
-          cellTypeWhereMarker: `1`
+          cellGroupValue: `1`,
+          cellGroupValueWhereMarker: `1`
         },
         {
           x: 1,
           y: 1,
           geneName: `bar`,
           value: 2,
-          cellType: `2`,
-          cellTypeWhereMarker: `2`
+          cellGroupValue: `2`,
+          cellGroupValueWhereMarker: `2`
         },
         {
           x: 2,
           y: 2,
           geneName: `foobar`,
           value: 1,
-          cellType: `3`,
-          cellTypeWhereMarker: `3`
+          cellGroupValue: `3`,
+          cellGroupValueWhereMarker: `3`
         }
       ]}
       xAxisCategories={[`1`, `2`, `3`]}
       yAxisCategories={[`a`, `b`, `c`]}
       chartHeight={200}
-      isDataFiltered={false}
       heatmapRowHeight={20}
       hasDynamicHeight={false}
       species={`species`} />)
 
-    const chartOptions = wrapper.find(`t`).props().options
+    const chartOptions = wrapper.props().options
 
     expect(chartOptions.yAxis.plotLines).toHaveLength(3)
   })
@@ -58,19 +57,18 @@ describe(`CellTypeMarkerGeneHeatmap`, () => {
           y: 0,
           geneName: `foo`,
           value: 13,
-          cellType: `1`,
-          cellTypeWhereMarker: `1`
+          cellGroupValue: `1`,
+          cellGroupValueWhereMarker: `1`
         }
       ]}
       xAxisCategories={[`1`, `2`, `3`]}
       yAxisCategories={[`a`, `b`, `c`]}
       chartHeight={200}
-      isDataFiltered={true}
       heatmapRowHeight={20}
       hasDynamicHeight={false}
       species={`species`} />)
 
-    const chartOptions = wrapper.find(`t`).props().options
+    const chartOptions = wrapper.props().options
 
     expect(chartOptions.exporting.buttons.contextButton.text).toEqual(
       `Download`)

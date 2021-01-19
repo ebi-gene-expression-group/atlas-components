@@ -26,10 +26,8 @@ class HeatmapView extends React.Component {
     })
 
     const url = URI(resource, host).toString()
-    console.log(`url`, url)
     try {
       const response = await fetch(url)
-      console.log(`response`, response)
 
       if (!response.ok) {
         throw new Error(`${url} => ${response.status}`)
@@ -83,12 +81,12 @@ class HeatmapView extends React.Component {
      data: _.cloneDeep(state.data),
      filteredData: selectedOption.value === `all` ?
        _.cloneDeep(state.data) :
-       _.filter(state.data, {'clusterIdWhereMarker': parseInt(selectedOption.value)}),
+       _.filter(state.data, {'cellGroupValueWhereMarker': parseInt(selectedOption.value)}),
      selectedClusterId: selectedOption
    }))
  }
 
-render() {
+  render() {
     const { isLoading, hasError } = this.state
     const { wrapperClassName, plotWrapperClassName } = this.props
 
@@ -102,7 +100,7 @@ render() {
                 show={isLoading}
               />
             </div>
-        </div>
+          </div>
     )
   }
 }
@@ -110,7 +108,6 @@ render() {
 HeatmapView.propTypes = {
   host: PropTypes.string.isRequired,
   resource: PropTypes.string.isRequired,
-  type: PropTypes.string.isRequired,
   props: PropTypes.object.isRequired
 }
 
