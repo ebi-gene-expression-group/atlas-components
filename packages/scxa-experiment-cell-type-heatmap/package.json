@@ -1,6 +1,6 @@
 {
-  "name": "@ebi-gene-expression-group/scxa-cell-type-marker-gene-heatmap",
-  "version": "1.1.0-rc1.1",
+  "name": "@ebi-gene-expression-group/scxa-marker-gene-heatmap",
+  "version": "2.0",
   "publishConfig": {
     "access": "public"
   },
@@ -72,7 +72,6 @@
     "jest-enzyme": "^7.1.2",
     "node-fetch": "^2.6.1",
     "react-test-renderer": "^16.14.0",
-
     "webpack": "^4.42.0",
     "webpack-cli": "^3.3.11",
     "webpack-dev-server": "^3.10.3"
