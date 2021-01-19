@@ -1,6 +1,6 @@
 {
   "name": "@ebi-gene-expression-group/scxa-marker-gene-heatmap",
-  "version": "2.0.0-beta1",
+  "version": "2.0.0-beta1.0",
   "publishConfig": {
     "access": "public"
   },
