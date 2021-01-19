@@ -8,37 +8,37 @@
  */
 
 export default function (H) {
-    // Pass error messages
-    H.addEvent(H.ColorAxis, 'init', function (e) {
-        this.allowNegativeLog = e.userOptions.allowNegativeLog;
-    });
+  H.addEvent(H.Axis, 'afterInit', function () {
+    const logarithmic = this.logarithmic;
 
-    // Override conversions
-    H.wrap(H.ColorAxis.prototype, 'log2lin', function (proceed, num) {
-        if (!this.allowNegativeLog) {
-            return proceed.call(this, num);
-        }
+    if (logarithmic && this.options.allowNegativeLog) {
 
-        var isNegative = num < 0,
-            adjustedNum = Math.abs(num),
-            result;
+      // Avoid errors on negative numbers on a log axis
+      this.positiveValuesOnly = false;
+
+      // Override the converter functions
+      logarithmic.log2lin = num => {
+        const isNegative = num < 0;
+
+        let adjustedNum = Math.abs(num);
+
         if (adjustedNum < 10) {
-            adjustedNum += (10 - adjustedNum) / 10;
-        }
-        result = Math.log(adjustedNum) / Math.LN10;
-        return isNegative ? -result : result;
-    });
-    H.wrap(H.ColorAxis.prototype, 'lin2log', function (proceed, num) {
-        if (!this.allowNegativeLog) {
-            return proceed.call(this, num);
+          adjustedNum += (10 - adjustedNum) / 10;
         }
 
-        var isNegative = num < 0,
-            absNum = Math.abs(num),
-            result = Math.pow(10, absNum);
+        const result = Math.log(adjustedNum) / Math.LN10;
+        return isNegative ? -result : result;
+      };
+
+      logarithmic.lin2log = num => {
+        const isNegative = num < 0;
+
+        let result = Math.pow(10, Math.abs(num));
         if (result < 10) {
-            result = (10 * (result - 1)) / (10 - 1);
+          result = (10 * (result - 1)) / (10 - 1);
         }
         return isNegative ? -result : result;
-    });
+      };
+    }
+  });
 }

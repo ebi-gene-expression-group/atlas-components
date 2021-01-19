@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ScientificNotationNumber matches snapshot 1`] = `
+<span
+  style={Object {}}
+>
+  3.1416 × 
+  10
+  <span
+    style={
+      Object {
+        "verticalAlign": "super",
+      }
+    }
+  >
+    11
+  </span>
+</span>
+`;
+
+exports[`ScientificNotationNumber matches snapshot 2`] = `
+<span
+  style={Object {}}
+>
+  1.4159 × 
+  10
+  <span
+    style={
+      Object {
+        "verticalAlign": "super",
+      }
+    }
+  >
+    -8
+  </span>
+</span>
+`;

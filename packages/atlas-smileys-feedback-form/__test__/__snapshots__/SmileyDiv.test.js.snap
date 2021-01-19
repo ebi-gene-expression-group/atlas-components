@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SmileyDiv matches snapshot 1`] = `
+<div>
+  <div
+    className="sc-AxjAm ioufIR"
+    label="Terrible"
+    onClick={[Function]}
+    selected={true}
+  />
+  <div
+    className="sc-AxjAm bBISfz"
+    label="Bad"
+    onClick={[Function]}
+    selected={true}
+  />
+  <div
+    className="sc-AxjAm klKtLU"
+    label="Okay"
+    onClick={[Function]}
+    selected={true}
+  />
+  <div
+    className="sc-AxjAm bOPsEu"
+    label="Good"
+    onClick={[Function]}
+    selected={true}
+  />
+  <div
+    className="sc-AxjAm jIwbdH"
+    label="Great"
+    onClick={[Function]}
+    selected={true}
+  />
+  <div
+    className="sc-AxjAm fjZxKF"
+    label="Terrible"
+    onClick={[Function]}
+    selected={false}
+  />
+  <div
+    className="sc-AxjAm dRpUMP"
+    label="Bad"
+    onClick={[Function]}
+    selected={false}
+  />
+  <div
+    className="sc-AxjAm gDcErk"
+    label="Okay"
+    onClick={[Function]}
+    selected={false}
+  />
+  <div
+    className="sc-AxjAm hRvmQO"
+    label="Good"
+    onClick={[Function]}
+    selected={false}
+  />
+  <div
+    className="sc-AxjAm cyNyeb"
+    label="Great"
+    onClick={[Function]}
+    selected={false}
+  />
+</div>
+`;

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>FetchLoader demo</title>
+
+    <link rel="stylesheet" href="https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/css/ebi-global.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="https://ebi.emblstatic.net/web_guidelines/EBI-Icon-fonts/v1.3/fonts.css" type="text/css" media="all" />
+</head>
+
+<body>
+<div id="wrapper" class="row">
+    <div id="content" class="small-12 columns">
+        <div id="target">
+        </div>
+    </div>
+</div>
+</body>
+
+<script src="/dist/vendors.bundle.js"></script>
+<script src="/dist/facetedSearchContainerWithFetchLoaderDemo.bundle.js"></script>
+
+<script>
+    facetedSearchContainerWithFetchLoaderDemo.render({
+      // Set to http://localhost:8080/gxa/, http://localhost:8080/gxa/sc/ or wherever, but remember the trailing slash!
+      host: 'https://www.ebi.ac.uk/gxa/',
+      resource: 'foobar'
+      // This is an example in which the component will silently fail, since it receives a valid JSON response but it
+      // hasn’t been supplied a React component with which to render the content of the payload:
+      // resource: 'json/dbsolr/status'
+    }, 'target');
+</script>
+
+</html>

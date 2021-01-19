@@ -131,4 +131,71 @@ describe(`FetchLoader`, () => {
     expect(wrapper.find(MyComponent)).not.toHaveProp(`results`)
     expect(wrapper.find(MyComponent)).toHaveProp(`foobarius`, [])
   })
+
+  test(`can gracefully handle non-existing renamed data keys`, async () => {
+    fetchMock.get(`/foo/bar`, `{"results":[]}`)
+    const wrapper = shallow(<ComponentWithFetchLoader {...props} renameDataKeys={{ foo: `bar` }}/>)
+
+    await wrapper.instance().componentDidMount()
+    expect(wrapper.find(MyComponent)).toHaveProp(props)
+    expect(wrapper.find(MyComponent)).toHaveProp(`results`, [])
+    expect(wrapper.find(MyComponent)).not.toHaveProp(`foo`)
+    expect(wrapper.find(MyComponent)).not.toHaveProp(`bar`)
+  })
+
+  test(`handles same name data keys as a pass-through props`, async () => {
+    fetchMock.get(`/foo/bar`, `{"results":[]}`)
+    const wrapper = shallow(<ComponentWithFetchLoader {...props} renameDataKeys={{ results: `results` }}/>)
+
+    await wrapper.instance().componentDidMount()
+    expect(wrapper.find(MyComponent)).toHaveProp(props)
+    expect(wrapper.find(MyComponent)).toHaveProp(`results`, [])
+  })
+
+  test(`can add new props via callbacks over the data payload`, async () => {
+    const payload = {
+      results: []
+    }
+
+    fetchMock.get(`/foo/bar`, JSON.stringify(payload))
+    const wrapper =
+      shallow(
+        <ComponentWithFetchLoader
+          {...props}
+          fulfilledPayloadProvider={ data => ({ resultsLength: data.results.length }) }
+        />)
+
+    await wrapper.instance().componentDidMount()
+    expect(wrapper.find(MyComponent)).toHaveProp(props)
+    expect(wrapper.find(MyComponent)).toHaveProp(`results`, payload.results)
+    expect(wrapper.find(MyComponent)).toHaveProp(`resultsLength`, payload.results.length)
+  })
+
+  test(`when host/resource change, the component is reset and reloads`, async () => {
+    const firstPayload = {
+      results: [{ title: `Foobar` }]
+    }
+    const secondPayload = {
+      results: [{ title: `Barfoo`}]
+    }
+
+    fetchMock.get(`/foo/bar`, JSON.stringify(firstPayload))
+    fetchMock.get(`/bar/foo`, JSON.stringify(secondPayload))
+
+    const wrapper =
+      shallow(
+        <ComponentWithFetchLoader
+          host={`foo/`}
+          resource={`bar`}
+        />)
+
+    expect(wrapper).toHaveState({ isLoading: true, data: null })
+    await wrapper.instance().componentDidMount()
+    expect(wrapper).toHaveState({ isLoading: false, data: firstPayload })
+
+    wrapper.setProps({ host:`bar/`, resource: `foo`})
+    expect(wrapper).toHaveState({ isLoading: true, data: null })
+    await wrapper.instance().componentDidMount()
+    expect(wrapper).toHaveState({ isLoading: false, data: secondPayload })
+  })
 })
