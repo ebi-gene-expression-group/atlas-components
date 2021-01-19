@@ -55,8 +55,8 @@ Highcharts.SVGRenderer.prototype.symbols.download = (x, y, w, h) => [
   `L`, x + w, y + h * 0.9
 ]
 
-const CellTypeMarkerGeneHeatmap = (props) => {
-  const { chartHeight, hasDynamicHeight, heatmapRowHeight, species } = props
+const MarkerGeneHeatmap = (props) => {
+  const { chartHeight, hasDynamicHeight, heatmapRowHeight, heatmapType, species } = props
   const { data, xAxisCategories, yAxisCategories } = props
   const totalNumberOfRows = Object.keys(_.groupBy(data, `geneName`)).length
   const groupedData = _.groupBy(data, `cellGroupValueWhereMarker`)
@@ -124,7 +124,7 @@ const CellTypeMarkerGeneHeatmap = (props) => {
       spacingBottom: 0
     },
     lang: {
-      noData: `No marker genes found for the selected organ region`,
+      noData: heatmapOptionsProvider[heatmapType].noData,
     },
     noData: {
       style: {
@@ -283,7 +283,7 @@ const CellTypeMarkerGeneHeatmap = (props) => {
   )
 }
 
-CellTypeMarkerGeneHeatmap.propTypes = {
+MarkerGeneHeatmap.propTypes = {
   chartHeight: PropTypes.number,
   data: PropTypes.arrayOf(PropTypes.shape({
     x: PropTypes.number.isRequired,
@@ -301,8 +301,8 @@ CellTypeMarkerGeneHeatmap.propTypes = {
   heatmapType: PropTypes.oneOf(Object.keys(heatmapOptionsProvider)).isRequired
 }
 
-CellTypeMarkerGeneHeatmap.defaultProps = {
+MarkerGeneHeatmap.defaultProps = {
   chartHeight: 300
 }
 
-export default CellTypeMarkerGeneHeatmap
+export default MarkerGeneHeatmap
