@@ -87,7 +87,7 @@ class HeatmapView extends React.Component {
       .map((k) => ({
         value: k.toString(),
         label: `k = ${k}`,
-        isDisabled: ksWithMarkers ? !ksWithMarkers.includes(k) : false
+        isDisabled: ksWithMarkers ? !ksWithMarkers.includes(k.toString()) : false
       }))
 
     const allClusterIds = _.range(1, parseInt(selectedK) + 1)

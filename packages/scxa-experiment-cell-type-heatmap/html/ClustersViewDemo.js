@@ -27,11 +27,11 @@ class Demo extends React.Component {
       // experimentAccession: `E-ENAD-19`,
       // experimentAccession: `E-GEOD-93593`,
       ks: ks,
-      ksWithMarkers: [14,18,20],
+      ksWithMarkers: ['14','18','20'],
       // ksWithMarkers: [8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18],
       // ksWithMarkers: [4, 7, 9],
       // ksWithMarkers: [36, 37, 38, 39, 40, 41, 42, 42, 43, 44, 45, 46],
-      selectedK: ks[2].toString()
+      selectedK: ks[2]
       // selectedK: 17
     }
   }
@@ -58,8 +58,6 @@ class Demo extends React.Component {
             }
           }
           species={`Homo sapiens`}
-          hasDynamicHeight={true}
-          heatmapRowHeight={20}
         />
       </div>
     )
