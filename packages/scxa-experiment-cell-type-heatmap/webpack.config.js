@@ -6,7 +6,8 @@ const vendorsBundleName = `vendors`
 module.exports = {
   entry: {
     heatmapViewRenderModule: [`@babel/polyfill`, `./html/heatmapViewRenderModule.js`],
-    cellTypeHeatmapViewRenderModule: [`@babel/polyfill`, `./html/cellTypeHeatmapViewRenderModule.js`]
+    markerGeneHeatmapRenderModule: [`@babel/polyfill`, `./html/markerGeneHeatmapRenderModule.js`],
+    clustersViewDemo: [`@babel/polyfill`, `./html/ClustersViewDemo.js`]
   },
 
   plugins: [

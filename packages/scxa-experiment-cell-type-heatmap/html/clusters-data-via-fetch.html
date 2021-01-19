@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Clusters marker gene heatmap demo – Fetch</title>
+
+  <link rel="stylesheet" href="https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/css/ebi-global.css" type="text/css" media="all"/>
+  <link rel="stylesheet" href="https://ebi.emblstatic.net/web_guidelines/EBI-Icon-fonts/v1.3/fonts.css" type="text/css" media="all"/>
+
+  <link rel="stylesheet" href="https://www.ebi.ac.uk/gxa/resources/css/foundation/atlas.css" type="text/css" media="all">
+
+  <style type="text/css">
+      div.highcharts-button span {
+          pointer-events: none;
+      }
+  </style>
+</head>
+
+<body>
+<div class="row expanded">
+  <div class="columns small-12 small-centered">
+    <h1 style="text-align: center">Clusters marker gene heatmap – Data retrieved from <code>localhost:8080/gxa/sc</code></h1>
+    <div id="target"></div>
+  </div>
+</div>
+</body>
+
+<script src="/html/vendors.bundle.js"></script>
+<script src="/html/heatmapViewRenderModule.bundle.js"></script>
+<script>
+  heatmapViewRenderModule.render({
+    resource: 'json/experiments/E-MTAB-5061/marker-genes/clusters?k=20',
+    host: 'http://localhost:8080/gxa/sc/',
+    species: 'Homo sapiens',
+    hasDynamicHeight: true,
+    heatmapRowHeight: 20,
+    wrapperClassName: 'row expanded',
+    heatmapType: 'clusters'
+
+  }, 'target');
+</script>
+
+</html>

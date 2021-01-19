@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>$Title$</title>
+  <title>Cell types marker gene heatmap demo – Data in props</title>
 
   <link rel="stylesheet" href="https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/css/ebi-global.css" type="text/css" media="all"/>
   <link rel="stylesheet" href="https://ebi.emblstatic.net/web_guidelines/EBI-Icon-fonts/v1.3/fonts.css" type="text/css" media="all"/>
@@ -10,12 +10,6 @@
   <link rel="stylesheet" href="https://www.ebi.ac.uk/gxa/resources/css/foundation/atlas.css" type="text/css" media="all">
 
   <style type="text/css">
-      #target input {
-          height: unset;
-          box-shadow: none;
-          margin: 0;
-      }
-
       div.highcharts-button span {
           pointer-events: none;
       }
@@ -24,14 +18,14 @@
 <body>
 <div class="row expanded">
   <div class="columns small-12 small-centered">
-    <h1 style="text-align: center">Cell type marker gene heatmap – Data passed as <code>options.state.data</code></h1>
+    <h1 style="text-align: center">Cell types marker gene heatmap – Data passed as <code>options.data</code></h1>
     <div id="target"></div>
   </div>
 </div>
 </body>
 
 <script src="/html/vendors.bundle.js"></script>
-<script src="/html/cellTypeHeatmapViewRenderModule.bundle.js"></script>
+<script src="/html/markerGeneHeatmapRenderModule.bundle.js"></script>
 <script>
   var jsonPayload = [
     {
@@ -6588,16 +6582,13 @@
     }
   ];
 
-  cellTypeHeatmapViewRenderModule.render(
+  markerGeneHeatmapRenderModule.render(
     {
-      props: {
-        hasDynamicHeight: true,
-        heatmapRowHeight: 40,
-        species: `Homo sapiens`
-      },
-      state: {
-        data: jsonPayload
-      }
+      hasDynamicHeight: true,
+      heatmapRowHeight: 40,
+      species: 'Homo sapiens',
+      heatmapType: 'celltypes',
+      data: jsonPayload
     },
     'target'
   );
