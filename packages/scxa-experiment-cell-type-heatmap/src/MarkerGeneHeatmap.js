@@ -179,7 +179,7 @@ const MarkerGeneHeatmap = (props) => {
       visible: data.length !== 0,
       labels: {
         formatter: function () {
-          return `<a href="https://www.ebi.ac.uk/gxa/sc/search?q=${this.value}&species=${species}"` +
+          return `<a href="https://www.ebi.ac.uk/gxa/sc/search?q=${this.value}&species=${species}" ` +
             `style="border: none; color: #148ff3">${this.value}</a>`
           }
       }
