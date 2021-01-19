@@ -2,9 +2,11 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import LoadingOverlay from './LoadingOverlay'
 import CalloutAlert from './CalloutAlert'
-import { cellTypeHeatmapView } from './cellTypeHeatmapView'
 import URI from 'urijs'
 import _ from "lodash";
+
+import heatmapOptionsProvider from './heatmapOptionsProvider'
+import MarkerGeneHeatmap from "./MarkerGeneHeatmap";
 
 class HeatmapView extends React.Component {
   constructor(props) {
@@ -17,7 +19,6 @@ class HeatmapView extends React.Component {
       isLoading: true,
       hasError: null
     }
-    this.onSelectCluster = this.onSelectCluster.bind(this)
   }
 
   async _fetchAndSetState({resource, host}) {
@@ -76,26 +77,26 @@ class HeatmapView extends React.Component {
     })
   }
 
- onSelectCluster(selectedOption) {
-   this.setState((state) => ({
-     data: _.cloneDeep(state.data),
-     filteredData: selectedOption.value === `all` ?
-       _.cloneDeep(state.data) :
-       _.filter(state.data, {'cellGroupValueWhereMarker': parseInt(selectedOption.value)}),
-     selectedClusterId: selectedOption
-   }))
- }
-
   render() {
-    const { isLoading, hasError } = this.state
-    const { wrapperClassName, plotWrapperClassName } = this.props
+    const { isLoading, hasError, data } = this.state
+    const { wrapperClassName, plotWrapperClassName, heatmapType } = this.props
+    const { defaultHeatmapHeight, hasDynamicHeight, heatmapRowHeight, species } = this.props
 
     return (
       hasError ?
         <CalloutAlert error={hasError}/> :
           <div className={wrapperClassName}>
             <div className={plotWrapperClassName} style={{position: `relative`}}>
-              {cellTypeHeatmapView(this.props.props, this.state)}
+              <MarkerGeneHeatmap
+                data={data}
+                xAxisCategories={_.chain(data).uniqBy(`x`).sortBy(`x`).map(`cellGroupValue`).value()}
+                yAxisCategories={_.chain(data).uniqBy(`y`).sortBy(`y`).map(`geneName`).value()}
+                chartHeight={defaultHeatmapHeight}
+                hasDynamicHeight={_.chain(data).map(`geneName`).uniq().value().length > 5 ? hasDynamicHeight : false}
+                heatmapRowHeight={heatmapRowHeight}
+                species={species}
+                heatmapType={heatmapType}
+              />
               <LoadingOverlay
                 show={isLoading}
               />
@@ -108,7 +109,13 @@ class HeatmapView extends React.Component {
 HeatmapView.propTypes = {
   host: PropTypes.string.isRequired,
   resource: PropTypes.string.isRequired,
-  props: PropTypes.object.isRequired
+  wrapperClassName: PropTypes.string,
+  plotWrapperClassName: PropTypes.string,
+  defaultHeatmapHeight: PropTypes.number,
+  hasDynamicHeight: PropTypes.bool,
+  heatmapRowHeight: PropTypes.number,
+  species: PropTypes.string.isRequired,
+  heatmapType: PropTypes.oneOf(Object.keys(heatmapOptionsProvider)).isRequired
 }
 
 export default HeatmapView
