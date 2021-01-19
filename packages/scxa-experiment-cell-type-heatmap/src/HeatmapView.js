@@ -109,13 +109,21 @@ class HeatmapView extends React.Component {
 HeatmapView.propTypes = {
   host: PropTypes.string.isRequired,
   resource: PropTypes.string.isRequired,
+  species: PropTypes.string.isRequired,
+  heatmapType: PropTypes.oneOf(Object.keys(heatmapOptionsProvider)).isRequired,
   wrapperClassName: PropTypes.string,
   plotWrapperClassName: PropTypes.string,
   defaultHeatmapHeight: PropTypes.number,
   hasDynamicHeight: PropTypes.bool,
-  heatmapRowHeight: PropTypes.number,
-  species: PropTypes.string.isRequired,
-  heatmapType: PropTypes.oneOf(Object.keys(heatmapOptionsProvider)).isRequired
+  heatmapRowHeight: PropTypes.number
+}
+
+HeatmapView.defaultProps = {
+  wrapperClassName: ``,
+  plotWrapperClassName: ``,
+  defaultHeatmapHeight: 300,
+  hasDynamicHeight: true,
+  heatmapRowHeight: 20
 }
 
 export default HeatmapView

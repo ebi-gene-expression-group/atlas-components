@@ -19,12 +19,8 @@ describe(`HeatmapView`, () => {
   const props = {
     host: `foo/`,
     resource: `bar`,
-    type: `cluster`,
-    props: {
-      ks: [1, 2, 3, 4],
-      selectedK: `1`,
-      species: `species`
-    }
+    species: `species`,
+    heatmapType: `clusters`
   }
 
   test(`renders error if API request is unsuccessful`, () => {
