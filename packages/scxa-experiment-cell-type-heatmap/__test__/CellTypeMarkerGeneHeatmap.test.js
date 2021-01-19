@@ -4,13 +4,13 @@ import {shallow} from 'enzyme'
 import Adapter from 'enzyme-adapter-react-16'
 
 import '@babel/polyfill'
-import CellTypeMarkerGeneHeatmap from '../src/CellTypeMarkerGeneHeatmap'
+import MarkerGeneHeatmap from '../src/MarkerGeneHeatmap'
 
 Enzyme.configure({ adapter: new Adapter() })
 
-describe(`CellTypeMarkerGeneHeatmap`, () => {
+describe(`MarkerGeneHeatmap`, () => {
   test(`creates plot lines for every cell type`, () => {
-    const wrapper = shallow(<CellTypeMarkerGeneHeatmap
+    const wrapper = shallow(<MarkerGeneHeatmap
       data={[
         {
           x: 0,
@@ -42,7 +42,8 @@ describe(`CellTypeMarkerGeneHeatmap`, () => {
       chartHeight={200}
       heatmapRowHeight={20}
       hasDynamicHeight={false}
-      species={`species`} />)
+      species={`species`}
+      heatmapType={`celltypes`} />)
 
     const chartOptions = wrapper.props().options
 
@@ -50,7 +51,7 @@ describe(`CellTypeMarkerGeneHeatmap`, () => {
   })
 
   test(`does have data export options and a styled button`, () => {
-    const wrapper = shallow(<CellTypeMarkerGeneHeatmap
+    const wrapper = shallow(<MarkerGeneHeatmap
       data={[
         {
           x: 0,
@@ -66,7 +67,8 @@ describe(`CellTypeMarkerGeneHeatmap`, () => {
       chartHeight={200}
       heatmapRowHeight={20}
       hasDynamicHeight={false}
-      species={`species`} />)
+      species={`species`}
+      heatmapType={`celltypes`} />)
 
     const chartOptions = wrapper.props().options
 
