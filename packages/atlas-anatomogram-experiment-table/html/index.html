@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Anatomogram Experiment Table Demo</title>
+
+    <link rel="stylesheet"
+          href="https://www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/libraries/foundation-6/css/foundation.css"
+          type="text/css" media="all"/>
+    <link rel="stylesheet" href="https://www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/css/ebi-global.css"
+          type="text/css" media="all"/>
+    <link rel="stylesheet" href="https://www.ebi.ac.uk/web_guidelines/EBI-Icon-fonts/v1.2/fonts.css" type="text/css"
+          media="all"/>
+
+    <link rel="stylesheet" href="https://www.ebi.ac.uk/gxa/resources/css/foundation/atlas.css" type="text/css"
+          media="all">
+</head>
+
+<body>
+<div id="wrapper" class="row">
+    <div id="content" class="small-12 columns">
+        <div id="target">
+        </div>
+    </div>
+</div>
+</body>
+
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<script crossorigin src="../dist/vendors.bundle.js"></script>
+<script crossorigin src="../dist/anatomogramExperimentTableDemo.bundle.js"></script>
+
+<!-- Set to http://localhost:8080/gxa/ or http://localhost:8080/gxa_sc/ -- Remember the trailing slash! -->
+<script>
+  $.getJSON("http://hlcadev2.westeurope.cloudapp.azure.com:8080/sc/json/experiments").done(
+    function(json) {
+      anatomogramExperimentTableDemo.render(
+      {
+        showIds: [],
+        species: `lung`,
+        dataHost: `http://localhost:8080/sc/`,
+        anatomogramHost: `http://localhost:9000/`,
+        organs: [`kidney`, `pancreas`, `lung`, `liver`, `placenta`],
+        experiments: json["experiments"]
+      },
+      'target'
+      )
+    }
+  )
+</script>
+
+</html>

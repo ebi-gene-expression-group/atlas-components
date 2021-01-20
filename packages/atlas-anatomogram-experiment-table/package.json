@@ -1,0 +1,77 @@
+{
+  "name": "@ebi-gene-expression-group/atlas-anatomogram-experiment-table",
+  "version": "1.0.0",
+  "description": "This package renders an anatomogram to filter an experiment table",
+  "main": "lib/index.js",
+  "scripts": {
+    "prepack": "rm -rf lib && babel src -d lib --copy-files",
+    "test": "jest",
+    "posttest": "jest --coverage --coverageReporters=text-lcov | coveralls",
+    "postversion": "npm publish",
+    "postpublish": "git push && git push --tags"
+  },
+  "jest": {
+    "setupFilesAfterEnv": [
+      "jest-enzyme"
+    ],
+    "testEnvironment": "enzyme",
+    "testEnvironmentOptions": {
+      "enzymeAdapter": "react16"
+    },
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+      "\\.(css|less)$": "<rootDir>/__mocks__/styleMock.js"
+    },
+    "setupFiles": [
+      "<rootDir>/__mocks__/requestAnimationFrame.js"
+    ]
+  },
+  "author": "Expression Atlas developers <arrayexpress-atlas@ebi.ac.uk>",
+  "collaborators": [
+    "Alfonso Muñoz-Pomer Fuentes <amunoz@ebi.ac.uk>",
+    "Haider Iqbal <haideri@ebi.ac.uk>",
+    "Michael von Papen <michael.papen@comma-soft.com>",
+    "Thomas Mazurkiewicz <thomas.mazurkiewicz@comma-soft.com>"
+  ],
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ebi-gene-expression-group/atlas-components.git"
+  },
+  "dependencies": {
+    "@ebi-gene-expression-group/atlas-experiment-table": "^2.2.0",
+    "@ebi-gene-expression-group/organ-anatomogram": "file:../../../organ-anatomogram",
+    "prop-types": "^15.7.2",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
+    "styled-components": "^4.2.0",
+    "urijs": "^1.19.3"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.12.10",
+    "@babel/core": "^7.12.10",
+    "@babel/polyfill": "^7.12.1",
+    "@babel/preset-env": "^7.12.11",
+    "@babel/preset-react": "^7.12.10",
+    "@ebi-gene-expression-group/anatomogram": "^2.4.0",
+    "@ebi-gene-expression-group/atlas-react-fetch-loader": "^3.7.0",
+    "babel-loader": "^8.2.2",
+    "clean-webpack-plugin": "^2.0.1",
+    "coveralls": "^3.1.0",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.5",
+    "eslint": "^5.16.0",
+    "eslint-config-gene-expression": "^0.5.0",
+    "fetch-mock": "^7.7.3",
+    "file-loader": "^4.2.0",
+    "image-webpack-loader": "^6.0.0",
+    "jest": "^24.7.1",
+    "jest-environment-enzyme": "^7.0.2",
+    "jest-enzyme": "^7.1.2",
+    "node-fetch": "^2.6.1",
+    "react-test-renderer": "^16.14.0",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  }
+}
