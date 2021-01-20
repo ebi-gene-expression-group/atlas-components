@@ -19,6 +19,7 @@ class AnatomogramExperimentTable extends React.Component {
       selectedOrganId: ``
     }
 
+
     this._addRemoveFromSelectIds = this._addRemoveFromSelectIds.bind(this)
     this._showLinkBoxIds = this._showLinkBoxIds.bind(this)
     this._clearSelectedIds = this._clearSelectedIds.bind(this)
@@ -32,20 +33,18 @@ class AnatomogramExperimentTable extends React.Component {
   }
 
   _addRemoveFromSelectIds(ids) {
+    const { dataHost } = this.props
     this.setState({
       selectIds: ids
     })
     window.alert(`Organ:` + this.state.selectedSpecies + ` Ontology ID:` + ids)
     // TEST TO PRINT SOLR QUERY RESULTS
-    // const requestOptions = {
-    //   method: 'POST',
-    //   headers: { 'Content-Type': 'application/json' },
-    //   body: 'unique(search(scxa-analytics-v3,qt="/export",q="characteristic_name:organism_part AND (characteristic_value:*lung* OR ontology_annotation_label_t:lung  OR ontology_annotation_ancestors_labels_t:lung OR ontology_annotation_part_of_rel_labels_t:lung)",fl="experiment_accession",sort="experiment_accession asc"),over=experiment_accession)'
-    // };
-    // fetch('http://localhost:8983/solr/scxa-analytics-v3/stream', requestOptions)
-    //   .then(response => response.json())
-    //   .then(data => this.setState({ postId: data.id }));
-    // console.log(this.postId)
+    $.getJSON("http://hlcadev2.westeurope.cloudapp.azure.com:8080/sc/json/experiments/hca/human?organismPart=" + ids).done(
+      function (json) {
+        console.log(json)
+        self.setState({ experiments: data });
+      }
+    )
   }
 
   _showLinkBoxIds(id) {
