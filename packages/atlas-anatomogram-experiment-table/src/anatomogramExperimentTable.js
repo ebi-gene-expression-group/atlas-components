@@ -33,18 +33,19 @@ class AnatomogramExperimentTable extends React.Component {
   }
 
   _addRemoveFromSelectIds(ids) {
-    const { dataHost } = this.props
     this.setState({
       selectIds: ids
     })
     window.alert(`Organ:` + this.state.selectedSpecies + ` Ontology ID:` + ids)
     // TEST TO PRINT SOLR QUERY RESULTS
+    var that=this;
     $.getJSON("http://hlcadev2.westeurope.cloudapp.azure.com:8080/sc/json/experiments/hca/human?organismPart=" + ids).done(
       function (json) {
-        console.log(json)
-        self.setState({ experiments: data });
+	console.log(json)
+        that.setState({ experiments: json })
       }
     )
+    console.log(this.state.experiments)
   }
 
   _showLinkBoxIds(id) {
@@ -183,7 +184,7 @@ AnatomogramExperimentTable.propTypes = {
 }
 
 AnatomogramExperimentTable.defaultProps = {
-  host: `http://localhost:8080/sc/`,
+  host: `http://http://hlcadev2.westeurope.cloudapp.azure.com:8080/sc/`,
   resource: `json/experiments`,
   species: ``
 }
