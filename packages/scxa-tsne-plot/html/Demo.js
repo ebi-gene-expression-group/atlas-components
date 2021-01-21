@@ -24,8 +24,8 @@ const experiment2 = {
   ks: [8, 21, 43, 53, 63],
   metadata: [
     {
-      value: `inferred_cell_type_-_ontology_labels`,
-      label: `Inferred cell type - ontology labels`
+      value: `characteristic_inferred_cell_type`,
+      label: `Inferred cell type`
     }
   ]
 }
@@ -82,8 +82,8 @@ const experiment6 = {
   ks: [6, 9 , 11, 14, 17, 25, 32, 43, 55],
   metadata: [
     {
-      value: `inferred_cell_type_-_authors_labels`,
-      label: `Inferred cell type - authors labels`
+      value: `authors_inferred_cell_type`,
+      label: `Authors Inferred Cell Type`
     }
   ]
 }
