@@ -93,7 +93,7 @@ class TSnePlotView extends React.Component {
   }
 
   render() {
-    const {height, atlasUrl, resourcesUrl, suggesterEndpoint, showControls, initialCellTypeValues} = this.props
+    const {height, atlasUrl, resourcesUrl, suggesterEndpoint, showControls} = this.props
     const {wrapperClassName, clusterPlotClassName, expressionPlotClassName} = this.props
     const {geneId, speciesName, geneIds} = this.props
     const highlightClusters = []
@@ -137,7 +137,6 @@ class TSnePlotView extends React.Component {
             tooltipContent={getTooltipContent}
             clusterType={selectedColourByCategory}
             showControls={showControls}
-            initialCellTypeValues={initialCellTypeValues}
           />
         </div>
 
@@ -195,7 +194,6 @@ TSnePlotView.propTypes = {
   speciesName: PropTypes.string.isRequired,
   height: PropTypes.number,
   resourcesUrl: PropTypes.string,
-  initialCellTypeValues: PropTypes.array,
   onSelectGeneId: PropTypes.func,
   onChangePerplexity: PropTypes.func
 }
@@ -209,7 +207,6 @@ TSnePlotView.defaultProps = {
   geneId: ``,
   speciesName: ``,
   height: 800,
-  initialCellTypeValues: [`inferred_cell_type_-_authors_labels`,`inferred_cell_type_-_ontology_labels`],
   onSelectGeneId: () => {},
   onChangeColourBy: () => {},
   onPerplexityChange: () => {}
