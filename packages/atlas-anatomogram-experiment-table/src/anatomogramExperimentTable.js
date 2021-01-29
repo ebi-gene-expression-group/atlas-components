@@ -36,16 +36,34 @@ class AnatomogramExperimentTable extends React.Component {
     this.setState({
       selectIds: ids
     })
-    window.alert(`Organ:` + this.state.selectedSpecies + ` Ontology ID:` + ids)
+    console.log(`Organ:` + this.state.selectedSpecies + ` Ontology ID:` + ids);
+    //  window.alert(`Organ:` + this.state.selectedSpecies + ` Ontology ID:` + ids)
     // TEST TO PRINT SOLR QUERY RESULTS
-    var that=this;
-    $.getJSON("http://hlcadev2.westeurope.cloudapp.azure.com:8080/sc/json/experiments/hca/human?organismPart=" + ids).done(
-      function (json) {
-	console.log(json)
-        that.setState({ experiments: json })
-      }
-    )
-    console.log(this.state.experiments)
+    //    var that = this;
+    var uri = "http://hlcadev2.westeurope.cloudapp.azure.com:8080/sc/json/experiments/hca/human?organismPart=" + ids;
+    this.getExperimentsAndUpdateState(uri)
+    // $.getJSON("http://hlcadev2.westeurope.cloudapp.azure.com:8080/sc/json/experiments/hca/human?organismPart=" + ids).done(
+    //   function (json) {
+    //     console.log("that", json)
+    //     that.setState({ experiments: json })
+    //     this.handleResponse(json, this)
+    //   }
+    // )
+    console.log("this", this.state.experiments)
+  }
+
+  getExperimentsAndUpdateState(uri) {
+    $.getJSON(uri).done(function (json) {
+      console.log("responseJson", json)
+      this.handleResponse(json)
+    }.bind(this));
+  }
+
+  handleResponse(json) {
+    console.log("updateState", json)
+    this.setState({ experiments: json })
+    this.forceUpdate();
+    console.log("this", this.state.experiments)
   }
 
   _showLinkBoxIds(id) {
