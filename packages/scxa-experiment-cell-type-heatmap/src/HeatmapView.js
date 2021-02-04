@@ -80,7 +80,7 @@ class HeatmapView extends React.Component {
   render() {
     const { isLoading, hasError, data } = this.state
     const { wrapperClassName, plotWrapperClassName, heatmapType } = this.props
-    const { defaultHeatmapHeight, hasDynamicHeight, heatmapRowHeight, species } = this.props
+    const { host, defaultHeatmapHeight, hasDynamicHeight, heatmapRowHeight, species } = this.props
 
     return (
       hasError ?
@@ -96,6 +96,7 @@ class HeatmapView extends React.Component {
                 heatmapRowHeight={heatmapRowHeight}
                 species={species}
                 heatmapType={heatmapType}
+                host={host}
               />
               <LoadingOverlay
                 show={isLoading}
