@@ -10,6 +10,9 @@ import HighchartsExportData from 'highcharts/modules/export-data'
 import HighchartsGetHeatmapData from './highchartsHeatmapTableDataModule'
 
 import _ from 'lodash'
+import URI from 'urijs'
+
+import heatmapOptionsProvider from './heatmapOptionsProvider'
 
 // initialise modules
 async function addModules() {
@@ -53,8 +56,8 @@ Highcharts.SVGRenderer.prototype.symbols.download = (x, y, w, h) => [
   `L`, x + w, y + h * 0.9
 ]
 
-const CellTypeMarkerGeneHeatmap = (props) => {
-  const { chartHeight, hasDynamicHeight, heatmapRowHeight, species } = props
+const MarkerGeneHeatmap = (props) => {
+  const { host, chartHeight, hasDynamicHeight, heatmapRowHeight, heatmapType, species } = props
   const { data, xAxisCategories, yAxisCategories } = props
   const totalNumberOfRows = Object.keys(_.groupBy(data, `geneName`)).length
   const groupedData = _.groupBy(data, `cellGroupValueWhereMarker`)
@@ -95,7 +98,7 @@ const CellTypeMarkerGeneHeatmap = (props) => {
       zIndex = 5
     }
 
-    const splitCellTypeLabel = splitPhrase(cellType)
+    const splitCellTypeLabel = splitPhrase(heatmapOptionsProvider[heatmapType].labelsFormatter(cellType))
     plotLines.push({
       color: color,
       width: 2,
@@ -122,7 +125,7 @@ const CellTypeMarkerGeneHeatmap = (props) => {
       spacingBottom: 0
     },
     lang: {
-      noData: `No marker genes found for the selected organ region`,
+      noData: heatmapOptionsProvider[heatmapType].noData,
     },
     noData: {
       style: {
@@ -135,7 +138,7 @@ const CellTypeMarkerGeneHeatmap = (props) => {
       enabled: false
     },
     title: {
-      text: `Cell type marker genes`,
+      text: heatmapOptionsProvider[heatmapType].title,
       style: {
         fontSize: `25px`,
         fontWeight: `bold`
@@ -147,7 +150,7 @@ const CellTypeMarkerGeneHeatmap = (props) => {
       labels: {
         useHtml: true,
         formatter: function() {
-          return `${this.value}`
+          return heatmapOptionsProvider[heatmapType].labelsFormatter(this.value)
         }
       },
       endOnTick: false,
@@ -177,29 +180,13 @@ const CellTypeMarkerGeneHeatmap = (props) => {
       visible: data.length !== 0,
       labels: {
         formatter: function () {
-          return `<a href="https://www.ebi.ac.uk/gxa/sc/search?q=${this.value}&species=${species}"` +
+          return `<a href="${URI(`search`, host).search({q: this.value, species: species}).toString()}" ` +
             `style="border: none; color: #148ff3">${this.value}</a>`
           }
       }
     },
 
-    tooltip: {
-      // followPointer: true,
-      formatter: function () {
-        if(this.point.value === null) {
-          return `<b>Cell type:</b> ${this.point.cellGroupValue}<br/>` +
-                 `<b>Gene ID:</b> ${this.point.geneName}<br/>` +
-                 `<b>Expression:</b> Not expressed<br/>`
-        }
-        else {
-          const text = `<b>Cell type:</b> ${this.point.cellGroupValue}<br/>` +
-            `<b>Cell type where marker:</b> ${this.point.cellGroupValueWhereMarker}<br/>` +
-            `<b>Gene ID:</b> ${this.point.geneName}<br/>` +
-                       `<b>Expression:</b> ${+this.point.value.toFixed(3)} CPM`
-            return text
-        }
-      }
-    },
+    tooltip: heatmapOptionsProvider[heatmapType].tooltip,
 
     colorAxis: {
       type: `logarithmic`,
@@ -297,7 +284,7 @@ const CellTypeMarkerGeneHeatmap = (props) => {
   )
 }
 
-CellTypeMarkerGeneHeatmap.propTypes = {
+MarkerGeneHeatmap.propTypes = {
   chartHeight: PropTypes.number,
   data: PropTypes.arrayOf(PropTypes.shape({
     x: PropTypes.number.isRequired,
@@ -311,11 +298,14 @@ CellTypeMarkerGeneHeatmap.propTypes = {
   yAxisCategories: PropTypes.array.isRequired,
   hasDynamicHeight: PropTypes.bool.isRequired,
   heatmapRowHeight: PropTypes.number.isRequired,
-  species: PropTypes.string.isRequired
+  species: PropTypes.string.isRequired,
+  heatmapType: PropTypes.oneOf(Object.keys(heatmapOptionsProvider)).isRequired,
+  host: PropTypes.string
 }
 
-CellTypeMarkerGeneHeatmap.defaultProps = {
-  chartHeight: 300
+MarkerGeneHeatmap.defaultProps = {
+  chartHeight: 300,
+  host: `https://www.ebi.ac.uk/gxa/sc/`
 }
 
-export default CellTypeMarkerGeneHeatmap
+export default MarkerGeneHeatmap

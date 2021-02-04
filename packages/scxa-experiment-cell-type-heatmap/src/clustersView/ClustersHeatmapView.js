@@ -1,9 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import MarkerGeneHeatmap from './MarkerGeneHeatmap'
+import MarkerGeneHeatmap from '../MarkerGeneHeatmap'
 import PlotSettingsDropdown from './PlotSettingsDropdown'
-import LoadingOverlay from './LoadingOverlay'
-import CalloutAlert from './CalloutAlert'
+import LoadingOverlay from '../LoadingOverlay'
+import CalloutAlert from '../CalloutAlert'
 
 import URI from 'urijs'
 import _ from 'lodash'
@@ -87,11 +87,11 @@ class HeatmapView extends React.Component {
       .map((k) => ({
         value: k.toString(),
         label: `k = ${k}`,
-        isDisabled: ksWithMarkers ? !ksWithMarkers.includes(k) : false
+        isDisabled: ksWithMarkers ? !ksWithMarkers.includes(k.toString()) : false
       }))
 
     const allClusterIds = _.range(1, parseInt(selectedK) + 1)
-    const clusterIdsWithMarkers = data && _.uniq(data.map(x => x.clusterIdWhereMarker))
+    const clusterIdsWithMarkers = data && _.uniq(data.map(x => parseInt(x.cellGroupValueWhereMarker)))
 
     const clusterIdOptions = allClusterIds
       .sort((a, b) => a-b)
@@ -130,7 +130,7 @@ class HeatmapView extends React.Component {
                     data: _.cloneDeep(state.data),
                     filteredData: selectedOption.value === `all` ?
                       _.cloneDeep(state.data) :
-                      _.filter(state.data, {'clusterIdWhereMarker': parseInt(selectedOption.value)}),
+                      _.filter(state.data, {'cellGroupValueWhereMarker': selectedOption.value}),
                     selectedClusterId: selectedOption
                   }))
                 }}
@@ -144,12 +144,13 @@ class HeatmapView extends React.Component {
                 data={filteredData}
                 isDataFiltered={selectedClusterId && selectedClusterId.value !== `all` || false}
                 xAxisCategories={allClusterIds}
-                yAxisCategories={_.chain(data).map(cell => _.pick(cell, `geneName`, `clusterIdWhereMarker`)).uniqWith(_.isEqual).map(`geneName`).value()}
+                yAxisCategories={_.chain(data).map(cell => _.pick(cell, `geneName`, `cellGroupValueWhereMarker`)).uniqWith(_.isEqual).map(`geneName`).value()}
                 chartHeight={defaultHeatmapHeight}
                 hasDynamicHeight={_.chain(filteredData).map(`geneName`).uniq().value().length > 5 ? hasDynamicHeight : false}
                 heatmapRowHeight={heatmapRowHeight}
                 species={species}
                 host={host}
+                heatmapType={`clusters`}
               />
               <LoadingOverlay
                 show={isLoading}
@@ -165,7 +166,7 @@ HeatmapView.propTypes = {
   host: PropTypes.string.isRequired,
   resource: PropTypes.string.isRequired,
   ks: PropTypes.arrayOf(PropTypes.number).isRequired,
-  ksWithMarkers: PropTypes.arrayOf(PropTypes.number),
+  ksWithMarkers: PropTypes.arrayOf(PropTypes.string),
   selectedK: PropTypes.string.isRequired,
   onSelectK: PropTypes.func,
   wrapperClassName: PropTypes.string,
