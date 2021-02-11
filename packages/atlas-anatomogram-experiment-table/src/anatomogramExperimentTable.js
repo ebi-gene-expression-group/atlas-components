@@ -19,37 +19,41 @@ class AnatomogramExperimentTable extends React.Component {
       selectedOrganId: ``
     }
 
-
     this._addRemoveFromSelectIds = this._addRemoveFromSelectIds.bind(this)
     this._showLinkBoxIds = this._showLinkBoxIds.bind(this)
     this._clearSelectedIds = this._clearSelectedIds.bind(this)
     this._handleSelectOnChange = this._handleSelectOnChange.bind(this)
+    this.handleResponse = this.handleResponse.bind(this)
+    this.getExperimentsAndUpdateState = this.getExperimentsAndUpdateState.bind(this)
   }
 
   _handleSelectOnChange(event) {
-    this.setState({
+    this.setState(() => ({
       selectedSpecies: event.target.value
-    })
+    }))
   }
 
   _addRemoveFromSelectIds(ids) {
-    this.setState({
-      selectIds: ids
-    })
-    console.log(`Organ:` + this.state.selectedSpecies + ` Ontology ID:` + ids);
-    //  window.alert(`Organ:` + this.state.selectedSpecies + ` Ontology ID:` + ids)
-    // TEST TO PRINT SOLR QUERY RESULTS
-    //    var that = this;
-    var uri = "http://hlcadev2.westeurope.cloudapp.azure.com:8080/sc/json/experiments/hca/human?organismPart=" + ids;
-    this.getExperimentsAndUpdateState(uri)
-    // $.getJSON("http://hlcadev2.westeurope.cloudapp.azure.com:8080/sc/json/experiments/hca/human?organismPart=" + ids).done(
-    //   function (json) {
-    //     console.log("that", json)
-    //     that.setState({ experiments: json })
-    //     this.handleResponse(json, this)
-    //   }
-    // )
-    console.log("this", this.state.experiments)
+
+    let selectedIds = ids;
+    var uri = "http://hlcadev2.westeurope.cloudapp.azure.com:8080/sc/json/experiments/hca/human";
+    if (JSON.stringify(ids) === JSON.stringify(this.state.selectIds)) {
+      // selecting the same item results in deselecting..
+      console.log(`deselect`);
+      selectedIds = [];
+      //this._clearSelectedIds();
+    }
+    this.setState(() => ({
+      selectIds: selectedIds
+    }));
+
+    console.log(`Organ:` + this.state.selectedSpecies + ` Ontology ID:` + selectedIds);
+    if (selectedIds.length > 0) {
+      this.getExperimentsAndUpdateState(uri + "?organismPart=" + selectedIds)
+    }
+    else {
+      this.getExperimentsAndUpdateState(uri)
+    }
   }
 
   getExperimentsAndUpdateState(uri) {
@@ -60,10 +64,11 @@ class AnatomogramExperimentTable extends React.Component {
   }
 
   handleResponse(json) {
-    console.log("updateState", json)
-    this.setState({ experiments: json })
+    console.log("handleResponse", json)
+    this.setState(() => ({
+      experiments: json
+    }));
     this.forceUpdate();
-    console.log("this", this.state.experiments)
   }
 
   _showLinkBoxIds(id) {
@@ -81,11 +86,20 @@ class AnatomogramExperimentTable extends React.Component {
   }
 
   render() {
+    console.log("RENDER!");
     const { anatomogramHost, dataHost, organs, resource } = this.props
-    const { experiments } = this.state
+    let experiments = this.state.experiments
 
     return (
       <div>
+        <div>
+          <h4>experiments</h4>
+          <pre>Test={JSON.stringify(experiments)}</pre>
+          <h4>this.state.selectIds</h4>
+          <pre>selectIds={JSON.stringify(this.state.selectIds)}</pre>
+          <h4>this.state.experiments</h4>
+          <pre>exp={JSON.stringify(this.state.experiments)}</pre>
+        </div>
         <div className={`row`}>
           <div className={`small-12 medium-3 columns`}>
             {
@@ -118,7 +132,8 @@ class AnatomogramExperimentTable extends React.Component {
           <TableManager
             host={dataHost}
             resource={resource}
-            dataRows={experiments}
+            dataRows={this.state.experiments}
+
             tableHeaders={[
               {
                 label: `Load date`,
@@ -202,7 +217,7 @@ AnatomogramExperimentTable.propTypes = {
 }
 
 AnatomogramExperimentTable.defaultProps = {
-  host: `http://http://hlcadev2.westeurope.cloudapp.azure.com:8080/sc/`,
+  host: `http://hlcadev2.westeurope.cloudapp.azure.com:8080/sc/`,
   resource: `json/experiments`,
   species: ``
 }
