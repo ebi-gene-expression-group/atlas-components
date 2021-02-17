@@ -12,7 +12,7 @@ class AnatomogramExperimentTable extends React.Component {
     this.state = {
       selectedSpecies: props.species,
       showIds: props.showIds,
-      experiments: props.experiments,
+      experiments: [],
       highlightIds: [],
       selectIds: [],
       selectAllIds: [],

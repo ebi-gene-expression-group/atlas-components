@@ -83,6 +83,11 @@ module.exports = {
       'hlcadev2',
       'hlcadev2.westeurope.cloudapp.azure.com'
     ],
+    headers: {
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, PATCH, OPTIONS",
+      "Access-Control-Allow-Headers": "X-Requested-With, content-type, Authorization"
+    },
     disableHostCheck: true,
     host: '0.0.0.0',
     // Add if developing a SPA to redirect non-matching routes known by WDS (i.e. no document in /html) to the router
