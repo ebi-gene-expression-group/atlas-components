@@ -39,15 +39,12 @@ class AnatomogramExperimentTable extends React.Component {
     var uri = "https://www.ebi.ac.uk/gxa/sc/json/experiments/hca/human";
     if (JSON.stringify(ids) === JSON.stringify(this.state.selectIds)) {
       // selecting the same item results in deselecting..
-      console.log(`deselect`);
       selectedIds = [];
-      //this._clearSelectedIds();
     }
     this.setState(() => ({
       selectIds: selectedIds
     }));
 
-    console.log(`Organ:` + this.state.selectedSpecies + ` Ontology ID:` + selectedIds);
     if (selectedIds.length > 0) {
       this.getExperimentsAndUpdateState(uri + "?organismPart=" + selectedIds)
     }
@@ -58,13 +55,11 @@ class AnatomogramExperimentTable extends React.Component {
 
   getExperimentsAndUpdateState(uri) {
     $.getJSON(uri).done(function (json) {
-      console.log("responseJson", json)
       this.handleResponse(json)
     }.bind(this));
   }
 
   handleResponse(json) {
-    console.log("handleResponse", json)
     this.setState(() => ({
       experiments: json
     }));
@@ -86,20 +81,11 @@ class AnatomogramExperimentTable extends React.Component {
   }
 
   render() {
-    console.log("RENDER!");
     const { anatomogramHost, dataHost, organs, resource } = this.props
     let experiments = this.state.experiments
 
     return (
       <div>
-        <div>
-          <h4>experiments</h4>
-          <pre>Test={JSON.stringify(experiments)}</pre>
-          <h4>this.state.selectIds</h4>
-          <pre>selectIds={JSON.stringify(this.state.selectIds)}</pre>
-          <h4>this.state.experiments</h4>
-          <pre>exp={JSON.stringify(this.state.experiments)}</pre>
-        </div>
         <div className={`row`}>
           <div className={`small-12 medium-3 columns`}>
             {
