@@ -30,14 +30,14 @@
 
 <!-- Set to http://localhost:8080/gxa/ or http://localhost:8080/gxa_sc/ -- Remember the trailing slash! -->
 <script>
-  $.getJSON("http://hlcadev2.westeurope.cloudapp.azure.com:8080/sc/json/experiments").done(
+  $.getJSON("https://www.ebi.ac.uk/gxa/sc/json/experiments").done(
     function(json) {
       anatomogramExperimentTableDemo.render(
       {
         showIds: [],
         species: `lung`,
-        dataHost: `http://hlcadev2.westeurope.cloudapp.azure.com:8080/sc/`,
-        anatomogramHost: `http://hlcadev2.westeurope.cloudapp.azure.com:9000/`,
+        dataHost: `https://www.ebi.ac.uk/gxa/sc/`,
+        anatomogramHost: `localhost:9000/`,
         organs: [`lung`, 'liver'],
         experiments: json["experiments"]
       },
