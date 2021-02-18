@@ -36,7 +36,7 @@ class AnatomogramExperimentTable extends React.Component {
   _addRemoveFromSelectIds(ids) {
 
     let selectedIds = ids;
-    var uri = "http://hlcadev2.westeurope.cloudapp.azure.com:8080/sc/json/experiments/hca/human";
+    var uri = "https://www.ebi.ac.uk/gxa/sc/json/experiments/hca/human";
     if (JSON.stringify(ids) === JSON.stringify(this.state.selectIds)) {
       // selecting the same item results in deselecting..
       console.log(`deselect`);
@@ -217,7 +217,7 @@ AnatomogramExperimentTable.propTypes = {
 }
 
 AnatomogramExperimentTable.defaultProps = {
-  host: `http://hlcadev2.westeurope.cloudapp.azure.com:8080/sc/`,
+  host: `https://www.ebi.ac.uk/gxa/sc/`,
   resource: `json/experiments`,
   species: ``
 }
