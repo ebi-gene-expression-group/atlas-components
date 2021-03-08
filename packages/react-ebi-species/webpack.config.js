@@ -1,8 +1,3 @@
-const path = require(`path`)
-const { CleanWebpackPlugin } = require(`clean-webpack-plugin`)
-
-const commonPublicPath = `/dist/`
-
 module.exports = {
   entry: {
     reactEbiSpecies: `./src/index.js`,
@@ -11,16 +6,11 @@ module.exports = {
     reactEbiSpeciesBareDemo: `./html/bareDemo.js`
   },
 
-  plugins: [
-    new CleanWebpackPlugin({
-      cleanOnceBeforeBuildPatterns: `dist`
-    })
-  ],
-
   output: {
     library: `[name]`,
     filename: `[name].bundle.js`,
-    publicPath: commonPublicPath
+    devtoolNamespace: `webpack`,
+    clean: true
   },
 
   optimization: {
@@ -28,8 +18,8 @@ module.exports = {
       cacheGroups: {
         commons: {
           test: /[\\/]node_modules[\\/]/,
-          name: 'vendors',
-          chunks: 'all'
+          name: `vendors`,
+          chunks: `all`
         }
       }
     }
@@ -46,8 +36,11 @@ module.exports = {
   },
 
   devServer: {
+    // injectClient: false, // webpack-dev-server@3 https://github.com/webpack/webpack-dev-server/issues/2484
     port: 9000,
-    contentBase: path.resolve(__dirname, `html`),
-    publicPath: commonPublicPath
+    static: `./html`,
+    dev: {
+      publicPath: `/dist`
+    }
   }
 }
