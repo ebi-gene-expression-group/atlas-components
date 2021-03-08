@@ -1,4387 +1,1678 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EbiSpeciesIconBare Icon of mapped species alpaca matches snapshot 1`] = `
-<EbiSpeciesIconBare
-  groupColors={
-    Object {
-      "other": "deepskyblue",
-      "plants": "mediumseagreen",
-      "warmBlooded": "indianred",
-    }
-  }
-  species="alpaca"
->
-  <Styled(styled.span)
-    data-icon="a"
-    style={
-      Object {
-        "color": "indianred",
-      }
-    }
-    title="Alpaca"
-  >
-    <span
-      className="sc-AxjAm sc-AxirZ eilfJa"
-      data-icon="a"
-      style={
-        Object {
-          "color": "indianred",
-        }
-      }
-      title="Alpaca"
-    />
-  </Styled(styled.span)>
-</EbiSpeciesIconBare>
-`;
-
-exports[`EbiSpeciesIconBare Icon of mapped species amoeba matches snapshot 1`] = `
-<EbiSpeciesIconBare
-  groupColors={
-    Object {
-      "other": "deepskyblue",
-      "plants": "mediumseagreen",
-      "warmBlooded": "indianred",
-    }
-  }
-  species="amoeba"
->
-  <Styled(styled.span)
-    data-icon="0"
-    style={
-      Object {
-        "color": "deepskyblue",
-      }
-    }
-    title="Amoeba"
-  >
-    <span
-      className="sc-AxjAm sc-AxirZ eilfJa"
-      data-icon="0"
-      style={
-        Object {
-          "color": "deepskyblue",
-        }
-      }
-      title="Amoeba"
-    />
-  </Styled(styled.span)>
-</EbiSpeciesIconBare>
-`;
-
-exports[`EbiSpeciesIconBare Icon of mapped species anolis carolinensis matches snapshot 1`] = `
-<EbiSpeciesIconBare
-  groupColors={
-    Object {
-      "other": "deepskyblue",
-      "plants": "mediumseagreen",
-      "warmBlooded": "indianred",
-    }
-  }
-  species="anolis carolinensis"
->
-  <Styled(styled.span)
-    data-icon="7"
-    style={
-      Object {
-        "color": "deepskyblue",
-      }
-    }
-    title="Anolis carolinensis"
-  >
-    <span
-      className="sc-AxjAm sc-AxirZ eilfJa"
-      data-icon="7"
-      style={
-        Object {
-          "color": "deepskyblue",
-        }
-      }
-      title="Anolis carolinensis"
-    />
-  </Styled(styled.span)>
-</EbiSpeciesIconBare>
-`;
+exports[`EbiSpeciesIcon with classes Icon of mapped species alpaca matches snapshot 1`] = `
+<span
+  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  data-icon="a"
+  style={
+    Object {
+      "color": "indianred",
+    }
+  }
+  title="Alpaca"
+/>
+`;
+
+exports[`EbiSpeciesIcon with classes Icon of mapped species amoeba matches snapshot 1`] = `
+<span
+  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  data-icon="0"
+  style={
+    Object {
+      "color": "deepskyblue",
+    }
+  }
+  title="Amoeba"
+/>
+`;
+
+exports[`EbiSpeciesIcon with classes Icon of mapped species anolis carolinensis matches snapshot 1`] = `
+<span
+  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  data-icon="7"
+  style={
+    Object {
+      "color": "deepskyblue",
+    }
+  }
+  title="Anolis carolinensis"
+/>
+`;
+
+exports[`EbiSpeciesIcon with classes Icon of mapped species anolis matches snapshot 1`] = `
+<span
+  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  data-icon="7"
+  style={
+    Object {
+      "color": "deepskyblue",
+    }
+  }
+  title="Anolis"
+/>
+`;
+
+exports[`EbiSpeciesIcon with classes Icon of mapped species anopheles gambiae matches snapshot 1`] = `
+<span
+  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  data-icon="1"
+  style={
+    Object {
+      "color": "deepskyblue",
+    }
+  }
+  title="Anopheles gambiae"
+/>
+`;
+
+exports[`EbiSpeciesIcon with classes Icon of mapped species arabidopsis lyrata matches snapshot 1`] = `
+<span
+  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  data-icon="B"
+  style={
+    Object {
+      "color": "mediumseagreen",
+    }
+  }
+  title="Arabidopsis lyrata"
+/>
+`;
+
+exports[`EbiSpeciesIcon with classes Icon of mapped species arabidopsis matches snapshot 1`] = `
+<span
+  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  data-icon="B"
+  style={
+    Object {
+      "color": "mediumseagreen",
+    }
+  }
+  title="Arabidopsis"
+/>
+`;
+
+exports[`EbiSpeciesIcon with classes Icon of mapped species arabidopsis thaliana matches snapshot 1`] = `
+<span
+  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  data-icon="B"
+  style={
+    Object {
+      "color": "mediumseagreen",
+    }
+  }
+  title="Arabidopsis thaliana"
+/>
+`;
+
+exports[`EbiSpeciesIcon with classes Icon of mapped species armadillo matches snapshot 1`] = `
+<span
+  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  data-icon="l"
+  style={
+    Object {
+      "color": "indianred",
+    }
+  }
+  title="Armadillo"
+/>
+`;
+
+exports[`EbiSpeciesIcon with classes Icon of mapped species aspergillus fumigatus matches snapshot 1`] = `
+<span
+  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  data-icon="£"
+  style={
+    Object {
+      "color": "deepskyblue",
+    }
+  }
+  title="Aspergillus fumigatus"
+/>
+`;
+
+exports[`EbiSpeciesIcon with classes Icon of mapped species aspergillus matches snapshot 1`] = `
+<span
+  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  data-icon="£"
+  style={
+    Object {
+      "color": "deepskyblue",
+    }
+  }
+  title="Aspergillus"
+/>
+`;
+
+exports[`EbiSpeciesIcon with classes Icon of mapped species barley matches snapshot 1`] = `
+<span
+  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  data-icon="5"
+  style={
+    Object {
+      "color": "mediumseagreen",
+    }
+  }
+  title="Barley"
+/>
+`;
+
+exports[`EbiSpeciesIcon with classes Icon of mapped species bat matches snapshot 1`] = `
+<span
+  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  data-icon="("
+  style={
+    Object {
+      "color": "indianred",
+    }
+  }
+  title="Bat"
+/>
+`;
+
+exports[`EbiSpeciesIcon with classes Icon of mapped species bee matches snapshot 1`] = `
+<span
+  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  data-icon="$"
+  style={
+    Object {
+      "color": "deepskyblue",
+    }
+  }
+  title="Bee"
+/>
+`;
+
+exports[`EbiSpeciesIcon with classes Icon of mapped species bos taurus matches snapshot 1`] = `
+<span
+  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  data-icon="C"
+  style={
+    Object {
+      "color": "indianred",
+    }
+  }
+  title="Bos taurus"
+/>
+`;
+
+exports[`EbiSpeciesIcon with classes Icon of mapped species brachypodium distachyon matches snapshot 1`] = `
+<span
+  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  data-icon="%"
+  style={
+    Object {
+      "color": "mediumseagreen",
+    }
+  }
+  title="Brachypodium distachyon"
+/>
+`;
+
+exports[`EbiSpeciesIcon with classes Icon of mapped species brachypodium matches snapshot 1`] = `
+<span
+  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  data-icon="%"
+  style={
+    Object {
+      "color": "mediumseagreen",
+    }
+  }
+  title="Brachypodium"
+/>
+`;
+
+exports[`EbiSpeciesIcon with classes Icon of mapped species brassica matches snapshot 1`] = `
+<span
+  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  data-icon="B"
+  style={
+    Object {
+      "color": "mediumseagreen",
+    }
+  }
+  title="Brassica"
+/>
+`;
+
+exports[`EbiSpeciesIcon with classes Icon of mapped species brassica oleracea matches snapshot 1`] = `
+<span
+  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  data-icon="B"
+  style={
+    Object {
+      "color": "mediumseagreen",
+    }
+  }
+  title="Brassica oleracea"
+/>
+`;
+
+exports[`EbiSpeciesIcon with classes Icon of mapped species brassica rapa matches snapshot 1`] = `
+<span
+  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  data-icon="B"
+  style={
+    Object {
+      "color": "mediumseagreen",
+    }
+  }
+  title="Brassica rapa"
+/>
+`;
+
+exports[`EbiSpeciesIcon with classes Icon of mapped species bug matches snapshot 1`] = `
+<span
+  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  data-icon="b"
+  style={
+    Object {
+      "color": "deepskyblue",
+    }
+  }
+  title="Bug"
+/>
+`;
+
+exports[`EbiSpeciesIcon with classes Icon of mapped species c elegans matches snapshot 1`] = `
+<span
+  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  data-icon="W"
+  style={
+    Object {
+      "color": "deepskyblue",
+    }
+  }
+  title="C elegans"
+/>
+`;
+
+exports[`EbiSpeciesIcon with classes Icon of mapped species caenorhabditis elegans matches snapshot 1`] = `
+<span
+  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  data-icon="W"
+  style={
+    Object {
+      "color": "deepskyblue",
+    }
+  }
+  title="Caenorhabditis elegans"
+/>
+`;
+
+exports[`EbiSpeciesIcon with classes Icon of mapped species callithrix jacchus matches snapshot 1`] = `
+<span
+  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  data-icon="q"
+  style={
+    Object {
+      "color": "indianred",
+    }
+  }
+  title="Callithrix jacchus"
+/>
+`;
+
+exports[`EbiSpeciesIcon with classes Icon of mapped species canis lupus familiaris matches snapshot 1`] = `
+<span
+  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  data-icon="d"
+  style={
+    Object {
+      "color": "indianred",
+    }
+  }
+  title="Canis lupus familiaris"
+/>
+`;
+
+exports[`EbiSpeciesIcon with classes Icon of mapped species canis lupus matches snapshot 1`] = `
+<span
+  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  data-icon="d"
+  style={
+    Object {
+      "color": "indianred",
+    }
+  }
+  title="Canis lupus"
+/>
+`;
+
+exports[`EbiSpeciesIcon with classes Icon of mapped species cat matches snapshot 1`] = `
+<span
+  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  data-icon="A"
+  style={
+    Object {
+      "color": "indianred",
+    }
+  }
+  title="Cat"
+/>
+`;
+
+exports[`EbiSpeciesIcon with classes Icon of mapped species cavia porcellus matches snapshot 1`] = `
+<span
+  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  data-icon="g"
+  style={
+    Object {
+      "color": "indianred",
+    }
+  }
+  title="Cavia porcellus"
+/>
+`;
+
+exports[`EbiSpeciesIcon with classes Icon of mapped species chicken matches snapshot 1`] = `
+<span
+  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  data-icon="k"
+  style={
+    Object {
+      "color": "indianred",
+    }
+  }
+  title="Chicken"
+/>
+`;
+
+exports[`EbiSpeciesIcon with classes Icon of mapped species chimpanzee matches snapshot 1`] = `
+<span
+  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  data-icon="i"
+  style={
+    Object {
+      "color": "indianred",
+    }
+  }
+  title="Chimpanzee"
+/>
+`;
+
+exports[`EbiSpeciesIcon with classes Icon of mapped species corn matches snapshot 1`] = `
+<span
+  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  data-icon="c"
+  style={
+    Object {
+      "color": "mediumseagreen",
+    }
+  }
+  title="Corn"
+/>
+`;
+
+exports[`EbiSpeciesIcon with classes Icon of mapped species cow matches snapshot 1`] = `
+<span
+  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  data-icon="C"
+  style={
+    Object {
+      "color": "indianred",
+    }
+  }
+  title="Cow"
+/>
+`;
+
+exports[`EbiSpeciesIcon with classes Icon of mapped species danio rerio matches snapshot 1`] = `
+<span
+  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  data-icon="Z"
+  style={
+    Object {
+      "color": "deepskyblue",
+    }
+  }
+  title="Danio rerio"
+/>
+`;
+
+exports[`EbiSpeciesIcon with classes Icon of mapped species diatom matches snapshot 1`] = `
+<span
+  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  data-icon="2"
+  style={
+    Object {
+      "color": "deepskyblue",
+    }
+  }
+  title="Diatom"
+/>
+`;
+
+exports[`EbiSpeciesIcon with classes Icon of mapped species dog matches snapshot 1`] = `
+<span
+  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  data-icon="d"
+  style={
+    Object {
+      "color": "indianred",
+    }
+  }
+  title="Dog"
+/>
+`;
+
+exports[`EbiSpeciesIcon with classes Icon of mapped species dolphin matches snapshot 1`] = `
+<span
+  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  data-icon="D"
+  style={
+    Object {
+      "color": "indianred",
+    }
+  }
+  title="Dolphin"
+/>
+`;
+
+exports[`EbiSpeciesIcon with classes Icon of mapped species drosophila melanogaster matches snapshot 1`] = `
+<span
+  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  data-icon="F"
+  style={
+    Object {
+      "color": "deepskyblue",
+    }
+  }
+  title="Drosophila melanogaster"
+/>
+`;
+
+exports[`EbiSpeciesIcon with classes Icon of mapped species ecoli matches snapshot 1`] = `
+<span
+  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  data-icon="L"
+  style={
+    Object {
+      "color": "deepskyblue",
+    }
+  }
+  title="Ecoli"
+/>
+`;
+
+exports[`EbiSpeciesIcon with classes Icon of mapped species elephant matches snapshot 1`] = `
+<span
+  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  data-icon="e"
+  style={
+    Object {
+      "color": "indianred",
+    }
+  }
+  title="Elephant"
+/>
+`;
+
+exports[`EbiSpeciesIcon with classes Icon of mapped species elephas maximus matches snapshot 1`] = `
+<span
+  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  data-icon="e"
+  style={
+    Object {
+      "color": "indianred",
+    }
+  }
+  title="Elephas maximus"
+/>
+`;
+
+exports[`EbiSpeciesIcon with classes Icon of mapped species equus caballus matches snapshot 1`] = `
+<span
+  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  data-icon="h"
+  style={
+    Object {
+      "color": "indianred",
+    }
+  }
+  title="Equus caballus"
+/>
+`;
+
+exports[`EbiSpeciesIcon with classes Icon of mapped species erinaceus europaeus matches snapshot 1`] = `
+<span
+  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  data-icon="o"
+  style={
+    Object {
+      "color": "indianred",
+    }
+  }
+  title="Erinaceus europaeus"
+/>
+`;
+
+exports[`EbiSpeciesIcon with classes Icon of mapped species escherichia coli matches snapshot 1`] = `
+<span
+  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  data-icon="L"
+  style={
+    Object {
+      "color": "deepskyblue",
+    }
+  }
+  title="Escherichia coli"
+/>
+`;
+
+exports[`EbiSpeciesIcon with classes Icon of mapped species felis catus matches snapshot 1`] = `
+<span
+  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  data-icon="A"
+  style={
+    Object {
+      "color": "indianred",
+    }
+  }
+  title="Felis catus"
+/>
+`;
+
+exports[`EbiSpeciesIcon with classes Icon of mapped species ferret matches snapshot 1`] = `
+<span
+  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  data-icon="!"
+  style={
+    Object {
+      "color": "indianred",
+    }
+  }
+  title="Ferret"
+/>
+`;
+
+exports[`EbiSpeciesIcon with classes Icon of mapped species finch matches snapshot 1`] = `
+<span
+  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  data-icon="n"
+  style={
+    Object {
+      "color": "indianred",
+    }
+  }
+  title="Finch"
+/>
+`;
+
+exports[`EbiSpeciesIcon with classes Icon of mapped species fly matches snapshot 1`] = `
+<span
+  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  data-icon="F"
+  style={
+    Object {
+      "color": "deepskyblue",
+    }
+  }
+  title="Fly"
+/>
+`;
+
+exports[`EbiSpeciesIcon with classes Icon of mapped species frog matches snapshot 1`] = `
+<span
+  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  data-icon="f"
+  style={
+    Object {
+      "color": "deepskyblue",
+    }
+  }
+  title="Frog"
+/>
+`;
+
+exports[`EbiSpeciesIcon with classes Icon of mapped species fungus matches snapshot 1`] = `
+<span
+  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  data-icon="u"
+  style={
+    Object {
+      "color": "deepskyblue",
+    }
+  }
+  title="Fungus"
+/>
+`;
+
+exports[`EbiSpeciesIcon with classes Icon of mapped species gallus gallus matches snapshot 1`] = `
+<span
+  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  data-icon="k"
+  style={
+    Object {
+      "color": "indianred",
+    }
+  }
+  title="Gallus gallus"
+/>
+`;
+
+exports[`EbiSpeciesIcon with classes Icon of mapped species glycine max matches snapshot 1`] = `
+<span
+  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  data-icon="^"
+  style={
+    Object {
+      "color": "mediumseagreen",
+    }
+  }
+  title="Glycine max"
+/>
+`;
+
+exports[`EbiSpeciesIcon with classes Icon of mapped species glycinemax matches snapshot 1`] = `
+<span
+  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  data-icon="^"
+  style={
+    Object {
+      "color": "mediumseagreen",
+    }
+  }
+  title="Glycinemax"
+/>
+`;
+
+exports[`EbiSpeciesIcon with classes Icon of mapped species goat matches snapshot 1`] = `
+<span
+  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  data-icon="m"
+  style={
+    Object {
+      "color": "indianred",
+    }
+  }
+  title="Goat"
+/>
+`;
+
+exports[`EbiSpeciesIcon with classes Icon of mapped species gorilla gorilla matches snapshot 1`] = `
+<span
+  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  data-icon="G"
+  style={
+    Object {
+      "color": "indianred",
+    }
+  }
+  title="Gorilla gorilla"
+/>
+`;
+
+exports[`EbiSpeciesIcon with classes Icon of mapped species gorilla matches snapshot 1`] = `
+<span
+  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  data-icon="G"
+  style={
+    Object {
+      "color": "indianred",
+    }
+  }
+  title="Gorilla"
+/>
+`;
+
+exports[`EbiSpeciesIcon with classes Icon of mapped species grapes matches snapshot 1`] = `
+<span
+  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  data-icon="O"
+  style={
+    Object {
+      "color": "mediumseagreen",
+    }
+  }
+  title="Grapes"
+/>
+`;
+
+exports[`EbiSpeciesIcon with classes Icon of mapped species guinea pig matches snapshot 1`] = `
+<span
+  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  data-icon="g"
+  style={
+    Object {
+      "color": "indianred",
+    }
+  }
+  title="Guinea pig"
+/>
+`;
+
+exports[`EbiSpeciesIcon with classes Icon of mapped species hedgehog matches snapshot 1`] = `
+<span
+  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  data-icon="o"
+  style={
+    Object {
+      "color": "indianred",
+    }
+  }
+  title="Hedgehog"
+/>
+`;
+
+exports[`EbiSpeciesIcon with classes Icon of mapped species homo sapiens matches snapshot 1`] = `
+<span
+  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  data-icon="H"
+  style={
+    Object {
+      "color": "indianred",
+    }
+  }
+  title="Homo sapiens"
+/>
+`;
+
+exports[`EbiSpeciesIcon with classes Icon of mapped species hordeum vulgare matches snapshot 1`] = `
+<span
+  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  data-icon="5"
+  style={
+    Object {
+      "color": "mediumseagreen",
+    }
+  }
+  title="Hordeum vulgare"
+/>
+`;
+
+exports[`EbiSpeciesIcon with classes Icon of mapped species hordeum vulgare subsp. vulgare matches snapshot 1`] = `
+<span
+  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  data-icon="5"
+  style={
+    Object {
+      "color": "mediumseagreen",
+    }
+  }
+  title="Hordeum vulgare subsp. vulgare"
+/>
+`;
+
+exports[`EbiSpeciesIcon with classes Icon of mapped species horse matches snapshot 1`] = `
+<span
+  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  data-icon="h"
+  style={
+    Object {
+      "color": "indianred",
+    }
+  }
+  title="Horse"
+/>
+`;
+
+exports[`EbiSpeciesIcon with classes Icon of mapped species human matches snapshot 1`] = `
+<span
+  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  data-icon="H"
+  style={
+    Object {
+      "color": "indianred",
+    }
+  }
+  title="Human"
+/>
+`;
+
+exports[`EbiSpeciesIcon with classes Icon of mapped species kangaroo rat matches snapshot 1`] = `
+<span
+  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  data-icon="3"
+  style={
+    Object {
+      "color": "indianred",
+    }
+  }
+  title="Kangaroo rat"
+/>
+`;
+
+exports[`EbiSpeciesIcon with classes Icon of mapped species louse matches snapshot 1`] = `
+<span
+  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  data-icon="4"
+  style={
+    Object {
+      "color": "deepskyblue",
+    }
+  }
+  title="Louse"
+/>
+`;
+
+exports[`EbiSpeciesIcon with classes Icon of mapped species loxodonta africana matches snapshot 1`] = `
+<span
+  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  data-icon="e"
+  style={
+    Object {
+      "color": "indianred",
+    }
+  }
+  title="Loxodonta africana"
+/>
+`;
+
+exports[`EbiSpeciesIcon with classes Icon of mapped species loxodonta cyclotis matches snapshot 1`] = `
+<span
+  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  data-icon="e"
+  style={
+    Object {
+      "color": "indianred",
+    }
+  }
+  title="Loxodonta cyclotis"
+/>
+`;
+
+exports[`EbiSpeciesIcon with classes Icon of mapped species macaca mulatta matches snapshot 1`] = `
+<span
+  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  data-icon="r"
+  style={
+    Object {
+      "color": "indianred",
+    }
+  }
+  title="Macaca mulatta"
+/>
+`;
+
+exports[`EbiSpeciesIcon with classes Icon of mapped species marmoset matches snapshot 1`] = `
+<span
+  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  data-icon="q"
+  style={
+    Object {
+      "color": "indianred",
+    }
+  }
+  title="Marmoset"
+/>
+`;
+
+exports[`EbiSpeciesIcon with classes Icon of mapped species monkey matches snapshot 1`] = `
+<span
+  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  data-icon="r"
+  style={
+    Object {
+      "color": "indianred",
+    }
+  }
+  title="Monkey"
+/>
+`;
+
+exports[`EbiSpeciesIcon with classes Icon of mapped species monodelphis domestica matches snapshot 1`] = `
+<span
+  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  data-icon="9"
+  style={
+    Object {
+      "color": "indianred",
+    }
+  }
+  title="Monodelphis domestica"
+/>
+`;
+
+exports[`EbiSpeciesIcon with classes Icon of mapped species monodelphis matches snapshot 1`] = `
+<span
+  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  data-icon="9"
+  style={
+    Object {
+      "color": "indianred",
+    }
+  }
+  title="Monodelphis"
+/>
+`;
+
+exports[`EbiSpeciesIcon with classes Icon of mapped species mosquito matches snapshot 1`] = `
+<span
+  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  data-icon="1"
+  style={
+    Object {
+      "color": "deepskyblue",
+    }
+  }
+  title="Mosquito"
+/>
+`;
+
+exports[`EbiSpeciesIcon with classes Icon of mapped species mouse lemur matches snapshot 1`] = `
+<span
+  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  data-icon="N"
+  style={
+    Object {
+      "color": "indianred",
+    }
+  }
+  title="Mouse lemur"
+/>
+`;
+
+exports[`EbiSpeciesIcon with classes Icon of mapped species mouse matches snapshot 1`] = `
+<span
+  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  data-icon="M"
+  style={
+    Object {
+      "color": "indianred",
+    }
+  }
+  title="Mouse"
+/>
+`;
+
+exports[`EbiSpeciesIcon with classes Icon of mapped species mus musculus matches snapshot 1`] = `
+<span
+  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  data-icon="M"
+  style={
+    Object {
+      "color": "indianred",
+    }
+  }
+  title="Mus musculus"
+/>
+`;
+
+exports[`EbiSpeciesIcon with classes Icon of mapped species mustela putorius furo matches snapshot 1`] = `
+<span
+  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  data-icon="!"
+  style={
+    Object {
+      "color": "indianred",
+    }
+  }
+  title="Mustela putorius furo"
+/>
+`;
+
+exports[`EbiSpeciesIcon with classes Icon of mapped species orangutan matches snapshot 1`] = `
+<span
+  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  data-icon="*"
+  style={
+    Object {
+      "color": "indianred",
+    }
+  }
+  title="Orangutan"
+/>
+`;
+
+exports[`EbiSpeciesIcon with classes Icon of mapped species ornithorhynchus anatinus matches snapshot 1`] = `
+<span
+  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  data-icon="U"
+  style={
+    Object {
+      "color": "indianred",
+    }
+  }
+  title="Ornithorhynchus anatinus"
+/>
+`;
+
+exports[`EbiSpeciesIcon with classes Icon of mapped species oryctolagus cuniculus matches snapshot 1`] = `
+<span
+  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  data-icon="t"
+  style={
+    Object {
+      "color": "indianred",
+    }
+  }
+  title="Oryctolagus cuniculus"
+/>
+`;
+
+exports[`EbiSpeciesIcon with classes Icon of mapped species oryza sativa japonica group matches snapshot 1`] = `
+<span
+  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  data-icon="6"
+  style={
+    Object {
+      "color": "mediumseagreen",
+    }
+  }
+  title="Oryza sativa japonica group"
+/>
+`;
+
+exports[`EbiSpeciesIcon with classes Icon of mapped species oryza sativa matches snapshot 1`] = `
+<span
+  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  data-icon="6"
+  style={
+    Object {
+      "color": "mediumseagreen",
+    }
+  }
+  title="Oryza sativa"
+/>
+`;
+
+exports[`EbiSpeciesIcon with classes Icon of mapped species ovis aries matches snapshot 1`] = `
+<span
+  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  data-icon="x"
+  style={
+    Object {
+      "color": "indianred",
+    }
+  }
+  title="Ovis aries"
+/>
+`;
+
+exports[`EbiSpeciesIcon with classes Icon of mapped species pan paniscus matches snapshot 1`] = `
+<span
+  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  data-icon="i"
+  style={
+    Object {
+      "color": "indianred",
+    }
+  }
+  title="Pan paniscus"
+/>
+`;
+
+exports[`EbiSpeciesIcon with classes Icon of mapped species pan troglodytes matches snapshot 1`] = `
+<span
+  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  data-icon="i"
+  style={
+    Object {
+      "color": "indianred",
+    }
+  }
+  title="Pan troglodytes"
+/>
+`;
+
+exports[`EbiSpeciesIcon with classes Icon of mapped species papio anubis matches snapshot 1`] = `
+<span
+  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  data-icon="8"
+  style={
+    Object {
+      "color": "indianred",
+    }
+  }
+  title="Papio anubis"
+/>
+`;
+
+exports[`EbiSpeciesIcon with classes Icon of mapped species physcomitrella patens matches snapshot 1`] = `
+<span
+  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  data-icon="P"
+  style={
+    Object {
+      "color": "mediumseagreen",
+    }
+  }
+  title="Physcomitrella patens"
+/>
+`;
+
+exports[`EbiSpeciesIcon with classes Icon of mapped species pig matches snapshot 1`] = `
+<span
+  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  data-icon="p"
+  style={
+    Object {
+      "color": "indianred",
+    }
+  }
+  title="Pig"
+/>
+`;
+
+exports[`EbiSpeciesIcon with classes Icon of mapped species plant matches snapshot 1`] = `
+<span
+  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  data-icon="P"
+  style={
+    Object {
+      "color": "mediumseagreen",
+    }
+  }
+  title="Plant"
+/>
+`;
+
+exports[`EbiSpeciesIcon with classes Icon of mapped species plasmodium berghei matches snapshot 1`] = `
+<span
+  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  data-icon="@"
+  style={
+    Object {
+      "color": "deepskyblue",
+    }
+  }
+  title="Plasmodium berghei"
+/>
+`;
+
+exports[`EbiSpeciesIcon with classes Icon of mapped species plasmodium falciparum matches snapshot 1`] = `
+<span
+  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  data-icon="@"
+  style={
+    Object {
+      "color": "deepskyblue",
+    }
+  }
+  title="Plasmodium falciparum"
+/>
+`;
+
+exports[`EbiSpeciesIcon with classes Icon of mapped species plasmodium matches snapshot 1`] = `
+<span
+  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  data-icon="@"
+  style={
+    Object {
+      "color": "deepskyblue",
+    }
+  }
+  title="Plasmodium"
+/>
+`;
+
+exports[`EbiSpeciesIcon with classes Icon of mapped species platypus matches snapshot 1`] = `
+<span
+  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  data-icon="U"
+  style={
+    Object {
+      "color": "indianred",
+    }
+  }
+  title="Platypus"
+/>
+`;
+
+exports[`EbiSpeciesIcon with classes Icon of mapped species pongo abelii matches snapshot 1`] = `
+<span
+  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  data-icon="*"
+  style={
+    Object {
+      "color": "indianred",
+    }
+  }
+  title="Pongo abelii"
+/>
+`;
+
+exports[`EbiSpeciesIcon with classes Icon of mapped species pongo pygmaeus matches snapshot 1`] = `
+<span
+  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  data-icon="*"
+  style={
+    Object {
+      "color": "indianred",
+    }
+  }
+  title="Pongo pygmaeus"
+/>
+`;
+
+exports[`EbiSpeciesIcon with classes Icon of mapped species pufferfish matches snapshot 1`] = `
+<span
+  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  data-icon="E"
+  style={
+    Object {
+      "color": "deepskyblue",
+    }
+  }
+  title="Pufferfish"
+/>
+`;
+
+exports[`EbiSpeciesIcon with classes Icon of mapped species pyrrhula pyrrhula matches snapshot 1`] = `
+<span
+  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  data-icon="n"
+  style={
+    Object {
+      "color": "indianred",
+    }
+  }
+  title="Pyrrhula pyrrhula"
+/>
+`;
+
+exports[`EbiSpeciesIcon with classes Icon of mapped species rabbit matches snapshot 1`] = `
+<span
+  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  data-icon="t"
+  style={
+    Object {
+      "color": "indianred",
+    }
+  }
+  title="Rabbit"
+/>
+`;
+
+exports[`EbiSpeciesIcon with classes Icon of mapped species rat matches snapshot 1`] = `
+<span
+  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  data-icon="R"
+  style={
+    Object {
+      "color": "indianred",
+    }
+  }
+  title="Rat"
+/>
+`;
+
+exports[`EbiSpeciesIcon with classes Icon of mapped species rattus norvegicus matches snapshot 1`] = `
+<span
+  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  data-icon="R"
+  style={
+    Object {
+      "color": "indianred",
+    }
+  }
+  title="Rattus norvegicus"
+/>
+`;
+
+exports[`EbiSpeciesIcon with classes Icon of mapped species ray matches snapshot 1`] = `
+<span
+  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  data-icon="+"
+  style={
+    Object {
+      "color": "deepskyblue",
+    }
+  }
+  title="Ray"
+/>
+`;
+
+exports[`EbiSpeciesIcon with classes Icon of mapped species rice matches snapshot 1`] = `
+<span
+  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  data-icon="6"
+  style={
+    Object {
+      "color": "mediumseagreen",
+    }
+  }
+  title="Rice"
+/>
+`;
+
+exports[`EbiSpeciesIcon with classes Icon of mapped species saccharomyces cerevisiae matches snapshot 1`] = `
+<span
+  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  data-icon="Y"
+  style={
+    Object {
+      "color": "deepskyblue",
+    }
+  }
+  title="Saccharomyces cerevisiae"
+/>
+`;
+
+exports[`EbiSpeciesIcon with classes Icon of mapped species schistosoma mansoni matches snapshot 1`] = `
+<span
+  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  data-icon="W"
+  style={
+    Object {
+      "color": "deepskyblue",
+    }
+  }
+  title="Schistosoma mansoni"
+/>
+`;
+
+exports[`EbiSpeciesIcon with classes Icon of mapped species schizosaccharomyces pombe matches snapshot 1`] = `
+<span
+  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  data-icon="Y"
+  style={
+    Object {
+      "color": "deepskyblue",
+    }
+  }
+  title="Schizosaccharomyces pombe"
+/>
+`;
+
+exports[`EbiSpeciesIcon with classes Icon of mapped species scorpion matches snapshot 1`] = `
+<span
+  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  data-icon="s"
+  style={
+    Object {
+      "color": "deepskyblue",
+    }
+  }
+  title="Scorpion"
+/>
+`;
+
+exports[`EbiSpeciesIcon with classes Icon of mapped species sheep matches snapshot 1`] = `
+<span
+  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  data-icon="x"
+  style={
+    Object {
+      "color": "indianred",
+    }
+  }
+  title="Sheep"
+/>
+`;
+
+exports[`EbiSpeciesIcon with classes Icon of mapped species shrew matches snapshot 1`] = `
+<span
+  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  data-icon="Q"
+  style={
+    Object {
+      "color": "indianred",
+    }
+  }
+  title="Shrew"
+/>
+`;
+
+exports[`EbiSpeciesIcon with classes Icon of mapped species snail matches snapshot 1`] = `
+<span
+  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  data-icon="'"
+  style={
+    Object {
+      "color": "deepskyblue",
+    }
+  }
+  title="Snail"
+/>
+`;
+
+exports[`EbiSpeciesIcon with classes Icon of mapped species solanum lycopersicum matches snapshot 1`] = `
+<span
+  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  data-icon=")"
+  style={
+    Object {
+      "color": "mediumseagreen",
+    }
+  }
+  title="Solanum lycopersicum"
+/>
+`;
+
+exports[`EbiSpeciesIcon with classes Icon of mapped species solanum tuberosum matches snapshot 1`] = `
+<span
+  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  data-icon=")"
+  style={
+    Object {
+      "color": "mediumseagreen",
+    }
+  }
+  title="Solanum tuberosum"
+/>
+`;
+
+exports[`EbiSpeciesIcon with classes Icon of mapped species sorghum bicolor matches snapshot 1`] = `
+<span
+  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  data-icon="P"
+  style={
+    Object {
+      "color": "mediumseagreen",
+    }
+  }
+  title="Sorghum bicolor"
+/>
+`;
+
+exports[`EbiSpeciesIcon with classes Icon of mapped species spider matches snapshot 1`] = `
+<span
+  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  data-icon="S"
+  style={
+    Object {
+      "color": "deepskyblue",
+    }
+  }
+  title="Spider"
+/>
+`;
+
+exports[`EbiSpeciesIcon with classes Icon of mapped species squirrel matches snapshot 1`] = `
+<span
+  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  data-icon="I"
+  style={
+    Object {
+      "color": "indianred",
+    }
+  }
+  title="Squirrel"
+/>
+`;
+
+exports[`EbiSpeciesIcon with classes Icon of mapped species sus scrofa matches snapshot 1`] = `
+<span
+  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  data-icon="p"
+  style={
+    Object {
+      "color": "indianred",
+    }
+  }
+  title="Sus scrofa"
+/>
+`;
+
+exports[`EbiSpeciesIcon with classes Icon of mapped species tetraodon nigroviridis matches snapshot 1`] = `
+<span
+  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  data-icon="E"
+  style={
+    Object {
+      "color": "deepskyblue",
+    }
+  }
+  title="Tetraodon nigroviridis"
+/>
+`;
+
+exports[`EbiSpeciesIcon with classes Icon of mapped species tick matches snapshot 1`] = `
+<span
+  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  data-icon="&"
+  style={
+    Object {
+      "color": "deepskyblue",
+    }
+  }
+  title="Tick"
+/>
+`;
+
+exports[`EbiSpeciesIcon with classes Icon of mapped species tomatoes matches snapshot 1`] = `
+<span
+  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  data-icon=")"
+  style={
+    Object {
+      "color": "mediumseagreen",
+    }
+  }
+  title="Tomatoes"
+/>
+`;
+
+exports[`EbiSpeciesIcon with classes Icon of mapped species triticum aestivum matches snapshot 1`] = `
+<span
+  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  data-icon="P"
+  style={
+    Object {
+      "color": "mediumseagreen",
+    }
+  }
+  title="Triticum aestivum"
+/>
+`;
+
+exports[`EbiSpeciesIcon with classes Icon of mapped species vicugna pacos matches snapshot 1`] = `
+<span
+  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  data-icon="a"
+  style={
+    Object {
+      "color": "indianred",
+    }
+  }
+  title="Vicugna pacos"
+/>
+`;
+
+exports[`EbiSpeciesIcon with classes Icon of mapped species virus matches snapshot 1`] = `
+<span
+  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  data-icon="v"
+  style={
+    Object {
+      "color": "deepskyblue",
+    }
+  }
+  title="Virus"
+/>
+`;
+
+exports[`EbiSpeciesIcon with classes Icon of mapped species vitis vinifera matches snapshot 1`] = `
+<span
+  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  data-icon="O"
+  style={
+    Object {
+      "color": "mediumseagreen",
+    }
+  }
+  title="Vitis vinifera"
+/>
+`;
 
-exports[`EbiSpeciesIconBare Icon of mapped species anolis matches snapshot 1`] = `
-<EbiSpeciesIconBare
-  groupColors={
-    Object {
-      "other": "deepskyblue",
-      "plants": "mediumseagreen",
-      "warmBlooded": "indianred",
-    }
-  }
-  species="anolis"
->
-  <Styled(styled.span)
-    data-icon="7"
-    style={
-      Object {
-        "color": "deepskyblue",
-      }
-    }
-    title="Anolis"
-  >
-    <span
-      className="sc-AxjAm sc-AxirZ eilfJa"
-      data-icon="7"
-      style={
-        Object {
-          "color": "deepskyblue",
-        }
-      }
-      title="Anolis"
-    />
-  </Styled(styled.span)>
-</EbiSpeciesIconBare>
-`;
-
-exports[`EbiSpeciesIconBare Icon of mapped species anopheles gambiae matches snapshot 1`] = `
-<EbiSpeciesIconBare
-  groupColors={
-    Object {
-      "other": "deepskyblue",
-      "plants": "mediumseagreen",
-      "warmBlooded": "indianred",
-    }
-  }
-  species="anopheles gambiae"
->
-  <Styled(styled.span)
-    data-icon="1"
-    style={
-      Object {
-        "color": "deepskyblue",
-      }
-    }
-    title="Anopheles gambiae"
-  >
-    <span
-      className="sc-AxjAm sc-AxirZ eilfJa"
-      data-icon="1"
-      style={
-        Object {
-          "color": "deepskyblue",
-        }
-      }
-      title="Anopheles gambiae"
-    />
-  </Styled(styled.span)>
-</EbiSpeciesIconBare>
-`;
-
-exports[`EbiSpeciesIconBare Icon of mapped species arabidopsis lyrata matches snapshot 1`] = `
-<EbiSpeciesIconBare
-  groupColors={
-    Object {
-      "other": "deepskyblue",
-      "plants": "mediumseagreen",
-      "warmBlooded": "indianred",
-    }
-  }
-  species="arabidopsis lyrata"
->
-  <Styled(styled.span)
-    data-icon="B"
-    style={
-      Object {
-        "color": "mediumseagreen",
-      }
-    }
-    title="Arabidopsis lyrata"
-  >
-    <span
-      className="sc-AxjAm sc-AxirZ eilfJa"
-      data-icon="B"
-      style={
-        Object {
-          "color": "mediumseagreen",
-        }
-      }
-      title="Arabidopsis lyrata"
-    />
-  </Styled(styled.span)>
-</EbiSpeciesIconBare>
-`;
-
-exports[`EbiSpeciesIconBare Icon of mapped species arabidopsis matches snapshot 1`] = `
-<EbiSpeciesIconBare
-  groupColors={
-    Object {
-      "other": "deepskyblue",
-      "plants": "mediumseagreen",
-      "warmBlooded": "indianred",
-    }
-  }
-  species="arabidopsis"
->
-  <Styled(styled.span)
-    data-icon="B"
-    style={
-      Object {
-        "color": "mediumseagreen",
-      }
-    }
-    title="Arabidopsis"
-  >
-    <span
-      className="sc-AxjAm sc-AxirZ eilfJa"
-      data-icon="B"
-      style={
-        Object {
-          "color": "mediumseagreen",
-        }
-      }
-      title="Arabidopsis"
-    />
-  </Styled(styled.span)>
-</EbiSpeciesIconBare>
-`;
-
-exports[`EbiSpeciesIconBare Icon of mapped species arabidopsis thaliana matches snapshot 1`] = `
-<EbiSpeciesIconBare
-  groupColors={
-    Object {
-      "other": "deepskyblue",
-      "plants": "mediumseagreen",
-      "warmBlooded": "indianred",
-    }
-  }
-  species="arabidopsis thaliana"
->
-  <Styled(styled.span)
-    data-icon="B"
-    style={
-      Object {
-        "color": "mediumseagreen",
-      }
-    }
-    title="Arabidopsis thaliana"
-  >
-    <span
-      className="sc-AxjAm sc-AxirZ eilfJa"
-      data-icon="B"
-      style={
-        Object {
-          "color": "mediumseagreen",
-        }
-      }
-      title="Arabidopsis thaliana"
-    />
-  </Styled(styled.span)>
-</EbiSpeciesIconBare>
-`;
-
-exports[`EbiSpeciesIconBare Icon of mapped species armadillo matches snapshot 1`] = `
-<EbiSpeciesIconBare
-  groupColors={
-    Object {
-      "other": "deepskyblue",
-      "plants": "mediumseagreen",
-      "warmBlooded": "indianred",
-    }
-  }
-  species="armadillo"
->
-  <Styled(styled.span)
-    data-icon="l"
-    style={
-      Object {
-        "color": "indianred",
-      }
-    }
-    title="Armadillo"
-  >
-    <span
-      className="sc-AxjAm sc-AxirZ eilfJa"
-      data-icon="l"
-      style={
-        Object {
-          "color": "indianred",
-        }
-      }
-      title="Armadillo"
-    />
-  </Styled(styled.span)>
-</EbiSpeciesIconBare>
-`;
-
-exports[`EbiSpeciesIconBare Icon of mapped species aspergillus fumigatus matches snapshot 1`] = `
-<EbiSpeciesIconBare
-  groupColors={
-    Object {
-      "other": "deepskyblue",
-      "plants": "mediumseagreen",
-      "warmBlooded": "indianred",
-    }
-  }
-  species="aspergillus fumigatus"
->
-  <Styled(styled.span)
-    data-icon="£"
-    style={
-      Object {
-        "color": "deepskyblue",
-      }
-    }
-    title="Aspergillus fumigatus"
-  >
-    <span
-      className="sc-AxjAm sc-AxirZ eilfJa"
-      data-icon="£"
-      style={
-        Object {
-          "color": "deepskyblue",
-        }
-      }
-      title="Aspergillus fumigatus"
-    />
-  </Styled(styled.span)>
-</EbiSpeciesIconBare>
-`;
-
-exports[`EbiSpeciesIconBare Icon of mapped species aspergillus matches snapshot 1`] = `
-<EbiSpeciesIconBare
-  groupColors={
-    Object {
-      "other": "deepskyblue",
-      "plants": "mediumseagreen",
-      "warmBlooded": "indianred",
-    }
-  }
-  species="aspergillus"
->
-  <Styled(styled.span)
-    data-icon="£"
-    style={
-      Object {
-        "color": "deepskyblue",
-      }
-    }
-    title="Aspergillus"
-  >
-    <span
-      className="sc-AxjAm sc-AxirZ eilfJa"
-      data-icon="£"
-      style={
-        Object {
-          "color": "deepskyblue",
-        }
-      }
-      title="Aspergillus"
-    />
-  </Styled(styled.span)>
-</EbiSpeciesIconBare>
-`;
-
-exports[`EbiSpeciesIconBare Icon of mapped species barley matches snapshot 1`] = `
-<EbiSpeciesIconBare
-  groupColors={
-    Object {
-      "other": "deepskyblue",
-      "plants": "mediumseagreen",
-      "warmBlooded": "indianred",
-    }
-  }
-  species="barley"
->
-  <Styled(styled.span)
-    data-icon="5"
-    style={
-      Object {
-        "color": "mediumseagreen",
-      }
-    }
-    title="Barley"
-  >
-    <span
-      className="sc-AxjAm sc-AxirZ eilfJa"
-      data-icon="5"
-      style={
-        Object {
-          "color": "mediumseagreen",
-        }
-      }
-      title="Barley"
-    />
-  </Styled(styled.span)>
-</EbiSpeciesIconBare>
-`;
-
-exports[`EbiSpeciesIconBare Icon of mapped species bat matches snapshot 1`] = `
-<EbiSpeciesIconBare
-  groupColors={
-    Object {
-      "other": "deepskyblue",
-      "plants": "mediumseagreen",
-      "warmBlooded": "indianred",
-    }
-  }
-  species="bat"
->
-  <Styled(styled.span)
-    data-icon="("
-    style={
-      Object {
-        "color": "indianred",
-      }
-    }
-    title="Bat"
-  >
-    <span
-      className="sc-AxjAm sc-AxirZ eilfJa"
-      data-icon="("
-      style={
-        Object {
-          "color": "indianred",
-        }
-      }
-      title="Bat"
-    />
-  </Styled(styled.span)>
-</EbiSpeciesIconBare>
-`;
-
-exports[`EbiSpeciesIconBare Icon of mapped species bee matches snapshot 1`] = `
-<EbiSpeciesIconBare
-  groupColors={
-    Object {
-      "other": "deepskyblue",
-      "plants": "mediumseagreen",
-      "warmBlooded": "indianred",
-    }
-  }
-  species="bee"
->
-  <Styled(styled.span)
-    data-icon="$"
-    style={
-      Object {
-        "color": "deepskyblue",
-      }
-    }
-    title="Bee"
-  >
-    <span
-      className="sc-AxjAm sc-AxirZ eilfJa"
-      data-icon="$"
-      style={
-        Object {
-          "color": "deepskyblue",
-        }
-      }
-      title="Bee"
-    />
-  </Styled(styled.span)>
-</EbiSpeciesIconBare>
-`;
-
-exports[`EbiSpeciesIconBare Icon of mapped species bos taurus matches snapshot 1`] = `
-<EbiSpeciesIconBare
-  groupColors={
-    Object {
-      "other": "deepskyblue",
-      "plants": "mediumseagreen",
-      "warmBlooded": "indianred",
-    }
-  }
-  species="bos taurus"
->
-  <Styled(styled.span)
-    data-icon="C"
-    style={
-      Object {
-        "color": "indianred",
-      }
-    }
-    title="Bos taurus"
-  >
-    <span
-      className="sc-AxjAm sc-AxirZ eilfJa"
-      data-icon="C"
-      style={
-        Object {
-          "color": "indianred",
-        }
-      }
-      title="Bos taurus"
-    />
-  </Styled(styled.span)>
-</EbiSpeciesIconBare>
-`;
-
-exports[`EbiSpeciesIconBare Icon of mapped species brachypodium distachyon matches snapshot 1`] = `
-<EbiSpeciesIconBare
-  groupColors={
-    Object {
-      "other": "deepskyblue",
-      "plants": "mediumseagreen",
-      "warmBlooded": "indianred",
-    }
-  }
-  species="brachypodium distachyon"
->
-  <Styled(styled.span)
-    data-icon="%"
-    style={
-      Object {
-        "color": "mediumseagreen",
-      }
-    }
-    title="Brachypodium distachyon"
-  >
-    <span
-      className="sc-AxjAm sc-AxirZ eilfJa"
-      data-icon="%"
-      style={
-        Object {
-          "color": "mediumseagreen",
-        }
-      }
-      title="Brachypodium distachyon"
-    />
-  </Styled(styled.span)>
-</EbiSpeciesIconBare>
-`;
-
-exports[`EbiSpeciesIconBare Icon of mapped species brachypodium matches snapshot 1`] = `
-<EbiSpeciesIconBare
-  groupColors={
-    Object {
-      "other": "deepskyblue",
-      "plants": "mediumseagreen",
-      "warmBlooded": "indianred",
-    }
-  }
-  species="brachypodium"
->
-  <Styled(styled.span)
-    data-icon="%"
-    style={
-      Object {
-        "color": "mediumseagreen",
-      }
-    }
-    title="Brachypodium"
-  >
-    <span
-      className="sc-AxjAm sc-AxirZ eilfJa"
-      data-icon="%"
-      style={
-        Object {
-          "color": "mediumseagreen",
-        }
-      }
-      title="Brachypodium"
-    />
-  </Styled(styled.span)>
-</EbiSpeciesIconBare>
-`;
-
-exports[`EbiSpeciesIconBare Icon of mapped species brassica matches snapshot 1`] = `
-<EbiSpeciesIconBare
-  groupColors={
-    Object {
-      "other": "deepskyblue",
-      "plants": "mediumseagreen",
-      "warmBlooded": "indianred",
-    }
-  }
-  species="brassica"
->
-  <Styled(styled.span)
-    data-icon="B"
-    style={
-      Object {
-        "color": "mediumseagreen",
-      }
-    }
-    title="Brassica"
-  >
-    <span
-      className="sc-AxjAm sc-AxirZ eilfJa"
-      data-icon="B"
-      style={
-        Object {
-          "color": "mediumseagreen",
-        }
-      }
-      title="Brassica"
-    />
-  </Styled(styled.span)>
-</EbiSpeciesIconBare>
-`;
-
-exports[`EbiSpeciesIconBare Icon of mapped species brassica oleracea matches snapshot 1`] = `
-<EbiSpeciesIconBare
-  groupColors={
-    Object {
-      "other": "deepskyblue",
-      "plants": "mediumseagreen",
-      "warmBlooded": "indianred",
-    }
-  }
-  species="brassica oleracea"
->
-  <Styled(styled.span)
-    data-icon="B"
-    style={
-      Object {
-        "color": "mediumseagreen",
-      }
-    }
-    title="Brassica oleracea"
-  >
-    <span
-      className="sc-AxjAm sc-AxirZ eilfJa"
-      data-icon="B"
-      style={
-        Object {
-          "color": "mediumseagreen",
-        }
-      }
-      title="Brassica oleracea"
-    />
-  </Styled(styled.span)>
-</EbiSpeciesIconBare>
-`;
-
-exports[`EbiSpeciesIconBare Icon of mapped species brassica rapa matches snapshot 1`] = `
-<EbiSpeciesIconBare
-  groupColors={
-    Object {
-      "other": "deepskyblue",
-      "plants": "mediumseagreen",
-      "warmBlooded": "indianred",
-    }
-  }
-  species="brassica rapa"
->
-  <Styled(styled.span)
-    data-icon="B"
-    style={
-      Object {
-        "color": "mediumseagreen",
-      }
-    }
-    title="Brassica rapa"
-  >
-    <span
-      className="sc-AxjAm sc-AxirZ eilfJa"
-      data-icon="B"
-      style={
-        Object {
-          "color": "mediumseagreen",
-        }
-      }
-      title="Brassica rapa"
-    />
-  </Styled(styled.span)>
-</EbiSpeciesIconBare>
-`;
-
-exports[`EbiSpeciesIconBare Icon of mapped species bug matches snapshot 1`] = `
-<EbiSpeciesIconBare
-  groupColors={
-    Object {
-      "other": "deepskyblue",
-      "plants": "mediumseagreen",
-      "warmBlooded": "indianred",
-    }
-  }
-  species="bug"
->
-  <Styled(styled.span)
-    data-icon="b"
-    style={
-      Object {
-        "color": "deepskyblue",
-      }
-    }
-    title="Bug"
-  >
-    <span
-      className="sc-AxjAm sc-AxirZ eilfJa"
-      data-icon="b"
-      style={
-        Object {
-          "color": "deepskyblue",
-        }
-      }
-      title="Bug"
-    />
-  </Styled(styled.span)>
-</EbiSpeciesIconBare>
-`;
-
-exports[`EbiSpeciesIconBare Icon of mapped species c elegans matches snapshot 1`] = `
-<EbiSpeciesIconBare
-  groupColors={
-    Object {
-      "other": "deepskyblue",
-      "plants": "mediumseagreen",
-      "warmBlooded": "indianred",
-    }
-  }
-  species="c elegans"
->
-  <Styled(styled.span)
-    data-icon="W"
-    style={
-      Object {
-        "color": "deepskyblue",
-      }
-    }
-    title="C elegans"
-  >
-    <span
-      className="sc-AxjAm sc-AxirZ eilfJa"
-      data-icon="W"
-      style={
-        Object {
-          "color": "deepskyblue",
-        }
-      }
-      title="C elegans"
-    />
-  </Styled(styled.span)>
-</EbiSpeciesIconBare>
-`;
-
-exports[`EbiSpeciesIconBare Icon of mapped species caenorhabditis elegans matches snapshot 1`] = `
-<EbiSpeciesIconBare
-  groupColors={
-    Object {
-      "other": "deepskyblue",
-      "plants": "mediumseagreen",
-      "warmBlooded": "indianred",
-    }
-  }
-  species="caenorhabditis elegans"
->
-  <Styled(styled.span)
-    data-icon="W"
-    style={
-      Object {
-        "color": "deepskyblue",
-      }
-    }
-    title="Caenorhabditis elegans"
-  >
-    <span
-      className="sc-AxjAm sc-AxirZ eilfJa"
-      data-icon="W"
-      style={
-        Object {
-          "color": "deepskyblue",
-        }
-      }
-      title="Caenorhabditis elegans"
-    />
-  </Styled(styled.span)>
-</EbiSpeciesIconBare>
-`;
-
-exports[`EbiSpeciesIconBare Icon of mapped species callithrix jacchus matches snapshot 1`] = `
-<EbiSpeciesIconBare
-  groupColors={
-    Object {
-      "other": "deepskyblue",
-      "plants": "mediumseagreen",
-      "warmBlooded": "indianred",
-    }
-  }
-  species="callithrix jacchus"
->
-  <Styled(styled.span)
-    data-icon="q"
-    style={
-      Object {
-        "color": "indianred",
-      }
-    }
-    title="Callithrix jacchus"
-  >
-    <span
-      className="sc-AxjAm sc-AxirZ eilfJa"
-      data-icon="q"
-      style={
-        Object {
-          "color": "indianred",
-        }
-      }
-      title="Callithrix jacchus"
-    />
-  </Styled(styled.span)>
-</EbiSpeciesIconBare>
-`;
-
-exports[`EbiSpeciesIconBare Icon of mapped species canis lupus familiaris matches snapshot 1`] = `
-<EbiSpeciesIconBare
-  groupColors={
-    Object {
-      "other": "deepskyblue",
-      "plants": "mediumseagreen",
-      "warmBlooded": "indianred",
-    }
-  }
-  species="canis lupus familiaris"
->
-  <Styled(styled.span)
-    data-icon="d"
-    style={
-      Object {
-        "color": "indianred",
-      }
-    }
-    title="Canis lupus familiaris"
-  >
-    <span
-      className="sc-AxjAm sc-AxirZ eilfJa"
-      data-icon="d"
-      style={
-        Object {
-          "color": "indianred",
-        }
-      }
-      title="Canis lupus familiaris"
-    />
-  </Styled(styled.span)>
-</EbiSpeciesIconBare>
-`;
-
-exports[`EbiSpeciesIconBare Icon of mapped species canis lupus matches snapshot 1`] = `
-<EbiSpeciesIconBare
-  groupColors={
-    Object {
-      "other": "deepskyblue",
-      "plants": "mediumseagreen",
-      "warmBlooded": "indianred",
-    }
-  }
-  species="canis lupus"
->
-  <Styled(styled.span)
-    data-icon="d"
-    style={
-      Object {
-        "color": "indianred",
-      }
-    }
-    title="Canis lupus"
-  >
-    <span
-      className="sc-AxjAm sc-AxirZ eilfJa"
-      data-icon="d"
-      style={
-        Object {
-          "color": "indianred",
-        }
-      }
-      title="Canis lupus"
-    />
-  </Styled(styled.span)>
-</EbiSpeciesIconBare>
-`;
-
-exports[`EbiSpeciesIconBare Icon of mapped species cat matches snapshot 1`] = `
-<EbiSpeciesIconBare
-  groupColors={
-    Object {
-      "other": "deepskyblue",
-      "plants": "mediumseagreen",
-      "warmBlooded": "indianred",
-    }
-  }
-  species="cat"
->
-  <Styled(styled.span)
-    data-icon="A"
-    style={
-      Object {
-        "color": "indianred",
-      }
-    }
-    title="Cat"
-  >
-    <span
-      className="sc-AxjAm sc-AxirZ eilfJa"
-      data-icon="A"
-      style={
-        Object {
-          "color": "indianred",
-        }
-      }
-      title="Cat"
-    />
-  </Styled(styled.span)>
-</EbiSpeciesIconBare>
-`;
-
-exports[`EbiSpeciesIconBare Icon of mapped species cavia porcellus matches snapshot 1`] = `
-<EbiSpeciesIconBare
-  groupColors={
-    Object {
-      "other": "deepskyblue",
-      "plants": "mediumseagreen",
-      "warmBlooded": "indianred",
-    }
-  }
-  species="cavia porcellus"
->
-  <Styled(styled.span)
-    data-icon="g"
-    style={
-      Object {
-        "color": "indianred",
-      }
-    }
-    title="Cavia porcellus"
-  >
-    <span
-      className="sc-AxjAm sc-AxirZ eilfJa"
-      data-icon="g"
-      style={
-        Object {
-          "color": "indianred",
-        }
-      }
-      title="Cavia porcellus"
-    />
-  </Styled(styled.span)>
-</EbiSpeciesIconBare>
-`;
-
-exports[`EbiSpeciesIconBare Icon of mapped species chicken matches snapshot 1`] = `
-<EbiSpeciesIconBare
-  groupColors={
-    Object {
-      "other": "deepskyblue",
-      "plants": "mediumseagreen",
-      "warmBlooded": "indianred",
-    }
-  }
-  species="chicken"
->
-  <Styled(styled.span)
-    data-icon="k"
-    style={
-      Object {
-        "color": "indianred",
-      }
-    }
-    title="Chicken"
-  >
-    <span
-      className="sc-AxjAm sc-AxirZ eilfJa"
-      data-icon="k"
-      style={
-        Object {
-          "color": "indianred",
-        }
-      }
-      title="Chicken"
-    />
-  </Styled(styled.span)>
-</EbiSpeciesIconBare>
-`;
-
-exports[`EbiSpeciesIconBare Icon of mapped species chimpanzee matches snapshot 1`] = `
-<EbiSpeciesIconBare
-  groupColors={
-    Object {
-      "other": "deepskyblue",
-      "plants": "mediumseagreen",
-      "warmBlooded": "indianred",
-    }
-  }
-  species="chimpanzee"
->
-  <Styled(styled.span)
-    data-icon="i"
-    style={
-      Object {
-        "color": "indianred",
-      }
-    }
-    title="Chimpanzee"
-  >
-    <span
-      className="sc-AxjAm sc-AxirZ eilfJa"
-      data-icon="i"
-      style={
-        Object {
-          "color": "indianred",
-        }
-      }
-      title="Chimpanzee"
-    />
-  </Styled(styled.span)>
-</EbiSpeciesIconBare>
-`;
-
-exports[`EbiSpeciesIconBare Icon of mapped species corn matches snapshot 1`] = `
-<EbiSpeciesIconBare
-  groupColors={
-    Object {
-      "other": "deepskyblue",
-      "plants": "mediumseagreen",
-      "warmBlooded": "indianred",
-    }
-  }
-  species="corn"
->
-  <Styled(styled.span)
-    data-icon="c"
-    style={
-      Object {
-        "color": "mediumseagreen",
-      }
-    }
-    title="Corn"
-  >
-    <span
-      className="sc-AxjAm sc-AxirZ eilfJa"
-      data-icon="c"
-      style={
-        Object {
-          "color": "mediumseagreen",
-        }
-      }
-      title="Corn"
-    />
-  </Styled(styled.span)>
-</EbiSpeciesIconBare>
-`;
-
-exports[`EbiSpeciesIconBare Icon of mapped species cow matches snapshot 1`] = `
-<EbiSpeciesIconBare
-  groupColors={
-    Object {
-      "other": "deepskyblue",
-      "plants": "mediumseagreen",
-      "warmBlooded": "indianred",
-    }
-  }
-  species="cow"
->
-  <Styled(styled.span)
-    data-icon="C"
-    style={
-      Object {
-        "color": "indianred",
-      }
-    }
-    title="Cow"
-  >
-    <span
-      className="sc-AxjAm sc-AxirZ eilfJa"
-      data-icon="C"
-      style={
-        Object {
-          "color": "indianred",
-        }
-      }
-      title="Cow"
-    />
-  </Styled(styled.span)>
-</EbiSpeciesIconBare>
-`;
-
-exports[`EbiSpeciesIconBare Icon of mapped species danio rerio matches snapshot 1`] = `
-<EbiSpeciesIconBare
-  groupColors={
-    Object {
-      "other": "deepskyblue",
-      "plants": "mediumseagreen",
-      "warmBlooded": "indianred",
-    }
-  }
-  species="danio rerio"
->
-  <Styled(styled.span)
-    data-icon="Z"
-    style={
-      Object {
-        "color": "deepskyblue",
-      }
-    }
-    title="Danio rerio"
-  >
-    <span
-      className="sc-AxjAm sc-AxirZ eilfJa"
-      data-icon="Z"
-      style={
-        Object {
-          "color": "deepskyblue",
-        }
-      }
-      title="Danio rerio"
-    />
-  </Styled(styled.span)>
-</EbiSpeciesIconBare>
-`;
-
-exports[`EbiSpeciesIconBare Icon of mapped species diatom matches snapshot 1`] = `
-<EbiSpeciesIconBare
-  groupColors={
-    Object {
-      "other": "deepskyblue",
-      "plants": "mediumseagreen",
-      "warmBlooded": "indianred",
-    }
-  }
-  species="diatom"
->
-  <Styled(styled.span)
-    data-icon="2"
-    style={
-      Object {
-        "color": "deepskyblue",
-      }
-    }
-    title="Diatom"
-  >
-    <span
-      className="sc-AxjAm sc-AxirZ eilfJa"
-      data-icon="2"
-      style={
-        Object {
-          "color": "deepskyblue",
-        }
-      }
-      title="Diatom"
-    />
-  </Styled(styled.span)>
-</EbiSpeciesIconBare>
-`;
-
-exports[`EbiSpeciesIconBare Icon of mapped species dog matches snapshot 1`] = `
-<EbiSpeciesIconBare
-  groupColors={
-    Object {
-      "other": "deepskyblue",
-      "plants": "mediumseagreen",
-      "warmBlooded": "indianred",
-    }
-  }
-  species="dog"
->
-  <Styled(styled.span)
-    data-icon="d"
-    style={
-      Object {
-        "color": "indianred",
-      }
-    }
-    title="Dog"
-  >
-    <span
-      className="sc-AxjAm sc-AxirZ eilfJa"
-      data-icon="d"
-      style={
-        Object {
-          "color": "indianred",
-        }
-      }
-      title="Dog"
-    />
-  </Styled(styled.span)>
-</EbiSpeciesIconBare>
-`;
-
-exports[`EbiSpeciesIconBare Icon of mapped species dolphin matches snapshot 1`] = `
-<EbiSpeciesIconBare
-  groupColors={
-    Object {
-      "other": "deepskyblue",
-      "plants": "mediumseagreen",
-      "warmBlooded": "indianred",
-    }
-  }
-  species="dolphin"
->
-  <Styled(styled.span)
-    data-icon="D"
-    style={
-      Object {
-        "color": "indianred",
-      }
-    }
-    title="Dolphin"
-  >
-    <span
-      className="sc-AxjAm sc-AxirZ eilfJa"
-      data-icon="D"
-      style={
-        Object {
-          "color": "indianred",
-        }
-      }
-      title="Dolphin"
-    />
-  </Styled(styled.span)>
-</EbiSpeciesIconBare>
-`;
-
-exports[`EbiSpeciesIconBare Icon of mapped species drosophila melanogaster matches snapshot 1`] = `
-<EbiSpeciesIconBare
-  groupColors={
-    Object {
-      "other": "deepskyblue",
-      "plants": "mediumseagreen",
-      "warmBlooded": "indianred",
-    }
-  }
-  species="drosophila melanogaster"
->
-  <Styled(styled.span)
-    data-icon="F"
-    style={
-      Object {
-        "color": "deepskyblue",
-      }
-    }
-    title="Drosophila melanogaster"
-  >
-    <span
-      className="sc-AxjAm sc-AxirZ eilfJa"
-      data-icon="F"
-      style={
-        Object {
-          "color": "deepskyblue",
-        }
-      }
-      title="Drosophila melanogaster"
-    />
-  </Styled(styled.span)>
-</EbiSpeciesIconBare>
-`;
-
-exports[`EbiSpeciesIconBare Icon of mapped species ecoli matches snapshot 1`] = `
-<EbiSpeciesIconBare
-  groupColors={
-    Object {
-      "other": "deepskyblue",
-      "plants": "mediumseagreen",
-      "warmBlooded": "indianred",
-    }
-  }
-  species="ecoli"
->
-  <Styled(styled.span)
-    data-icon="L"
-    style={
-      Object {
-        "color": "deepskyblue",
-      }
-    }
-    title="Ecoli"
-  >
-    <span
-      className="sc-AxjAm sc-AxirZ eilfJa"
-      data-icon="L"
-      style={
-        Object {
-          "color": "deepskyblue",
-        }
-      }
-      title="Ecoli"
-    />
-  </Styled(styled.span)>
-</EbiSpeciesIconBare>
-`;
-
-exports[`EbiSpeciesIconBare Icon of mapped species elephant matches snapshot 1`] = `
-<EbiSpeciesIconBare
-  groupColors={
-    Object {
-      "other": "deepskyblue",
-      "plants": "mediumseagreen",
-      "warmBlooded": "indianred",
-    }
-  }
-  species="elephant"
->
-  <Styled(styled.span)
-    data-icon="e"
-    style={
-      Object {
-        "color": "indianred",
-      }
-    }
-    title="Elephant"
-  >
-    <span
-      className="sc-AxjAm sc-AxirZ eilfJa"
-      data-icon="e"
-      style={
-        Object {
-          "color": "indianred",
-        }
-      }
-      title="Elephant"
-    />
-  </Styled(styled.span)>
-</EbiSpeciesIconBare>
-`;
-
-exports[`EbiSpeciesIconBare Icon of mapped species elephas maximus matches snapshot 1`] = `
-<EbiSpeciesIconBare
-  groupColors={
-    Object {
-      "other": "deepskyblue",
-      "plants": "mediumseagreen",
-      "warmBlooded": "indianred",
-    }
-  }
-  species="elephas maximus"
->
-  <Styled(styled.span)
-    data-icon="e"
-    style={
-      Object {
-        "color": "indianred",
-      }
-    }
-    title="Elephas maximus"
-  >
-    <span
-      className="sc-AxjAm sc-AxirZ eilfJa"
-      data-icon="e"
-      style={
-        Object {
-          "color": "indianred",
-        }
-      }
-      title="Elephas maximus"
-    />
-  </Styled(styled.span)>
-</EbiSpeciesIconBare>
-`;
-
-exports[`EbiSpeciesIconBare Icon of mapped species equus caballus matches snapshot 1`] = `
-<EbiSpeciesIconBare
-  groupColors={
-    Object {
-      "other": "deepskyblue",
-      "plants": "mediumseagreen",
-      "warmBlooded": "indianred",
-    }
-  }
-  species="equus caballus"
->
-  <Styled(styled.span)
-    data-icon="h"
-    style={
-      Object {
-        "color": "indianred",
-      }
-    }
-    title="Equus caballus"
-  >
-    <span
-      className="sc-AxjAm sc-AxirZ eilfJa"
-      data-icon="h"
-      style={
-        Object {
-          "color": "indianred",
-        }
-      }
-      title="Equus caballus"
-    />
-  </Styled(styled.span)>
-</EbiSpeciesIconBare>
-`;
-
-exports[`EbiSpeciesIconBare Icon of mapped species erinaceus europaeus matches snapshot 1`] = `
-<EbiSpeciesIconBare
-  groupColors={
-    Object {
-      "other": "deepskyblue",
-      "plants": "mediumseagreen",
-      "warmBlooded": "indianred",
-    }
-  }
-  species="erinaceus europaeus"
->
-  <Styled(styled.span)
-    data-icon="o"
-    style={
-      Object {
-        "color": "indianred",
-      }
-    }
-    title="Erinaceus europaeus"
-  >
-    <span
-      className="sc-AxjAm sc-AxirZ eilfJa"
-      data-icon="o"
-      style={
-        Object {
-          "color": "indianred",
-        }
-      }
-      title="Erinaceus europaeus"
-    />
-  </Styled(styled.span)>
-</EbiSpeciesIconBare>
-`;
-
-exports[`EbiSpeciesIconBare Icon of mapped species escherichia coli matches snapshot 1`] = `
-<EbiSpeciesIconBare
-  groupColors={
-    Object {
-      "other": "deepskyblue",
-      "plants": "mediumseagreen",
-      "warmBlooded": "indianred",
-    }
-  }
-  species="escherichia coli"
->
-  <Styled(styled.span)
-    data-icon="L"
-    style={
-      Object {
-        "color": "deepskyblue",
-      }
-    }
-    title="Escherichia coli"
-  >
-    <span
-      className="sc-AxjAm sc-AxirZ eilfJa"
-      data-icon="L"
-      style={
-        Object {
-          "color": "deepskyblue",
-        }
-      }
-      title="Escherichia coli"
-    />
-  </Styled(styled.span)>
-</EbiSpeciesIconBare>
-`;
-
-exports[`EbiSpeciesIconBare Icon of mapped species felis catus matches snapshot 1`] = `
-<EbiSpeciesIconBare
-  groupColors={
-    Object {
-      "other": "deepskyblue",
-      "plants": "mediumseagreen",
-      "warmBlooded": "indianred",
-    }
-  }
-  species="felis catus"
->
-  <Styled(styled.span)
-    data-icon="A"
-    style={
-      Object {
-        "color": "indianred",
-      }
-    }
-    title="Felis catus"
-  >
-    <span
-      className="sc-AxjAm sc-AxirZ eilfJa"
-      data-icon="A"
-      style={
-        Object {
-          "color": "indianred",
-        }
-      }
-      title="Felis catus"
-    />
-  </Styled(styled.span)>
-</EbiSpeciesIconBare>
-`;
-
-exports[`EbiSpeciesIconBare Icon of mapped species ferret matches snapshot 1`] = `
-<EbiSpeciesIconBare
-  groupColors={
-    Object {
-      "other": "deepskyblue",
-      "plants": "mediumseagreen",
-      "warmBlooded": "indianred",
-    }
-  }
-  species="ferret"
->
-  <Styled(styled.span)
-    data-icon="!"
-    style={
-      Object {
-        "color": "indianred",
-      }
-    }
-    title="Ferret"
-  >
-    <span
-      className="sc-AxjAm sc-AxirZ eilfJa"
-      data-icon="!"
-      style={
-        Object {
-          "color": "indianred",
-        }
-      }
-      title="Ferret"
-    />
-  </Styled(styled.span)>
-</EbiSpeciesIconBare>
-`;
-
-exports[`EbiSpeciesIconBare Icon of mapped species finch matches snapshot 1`] = `
-<EbiSpeciesIconBare
-  groupColors={
-    Object {
-      "other": "deepskyblue",
-      "plants": "mediumseagreen",
-      "warmBlooded": "indianred",
-    }
-  }
-  species="finch"
->
-  <Styled(styled.span)
-    data-icon="n"
-    style={
-      Object {
-        "color": "indianred",
-      }
-    }
-    title="Finch"
-  >
-    <span
-      className="sc-AxjAm sc-AxirZ eilfJa"
-      data-icon="n"
-      style={
-        Object {
-          "color": "indianred",
-        }
-      }
-      title="Finch"
-    />
-  </Styled(styled.span)>
-</EbiSpeciesIconBare>
-`;
-
-exports[`EbiSpeciesIconBare Icon of mapped species fly matches snapshot 1`] = `
-<EbiSpeciesIconBare
-  groupColors={
-    Object {
-      "other": "deepskyblue",
-      "plants": "mediumseagreen",
-      "warmBlooded": "indianred",
-    }
-  }
-  species="fly"
->
-  <Styled(styled.span)
-    data-icon="F"
-    style={
-      Object {
-        "color": "deepskyblue",
-      }
-    }
-    title="Fly"
-  >
-    <span
-      className="sc-AxjAm sc-AxirZ eilfJa"
-      data-icon="F"
-      style={
-        Object {
-          "color": "deepskyblue",
-        }
-      }
-      title="Fly"
-    />
-  </Styled(styled.span)>
-</EbiSpeciesIconBare>
-`;
-
-exports[`EbiSpeciesIconBare Icon of mapped species frog matches snapshot 1`] = `
-<EbiSpeciesIconBare
-  groupColors={
-    Object {
-      "other": "deepskyblue",
-      "plants": "mediumseagreen",
-      "warmBlooded": "indianred",
-    }
-  }
-  species="frog"
->
-  <Styled(styled.span)
-    data-icon="f"
-    style={
-      Object {
-        "color": "deepskyblue",
-      }
-    }
-    title="Frog"
-  >
-    <span
-      className="sc-AxjAm sc-AxirZ eilfJa"
-      data-icon="f"
-      style={
-        Object {
-          "color": "deepskyblue",
-        }
-      }
-      title="Frog"
-    />
-  </Styled(styled.span)>
-</EbiSpeciesIconBare>
-`;
-
-exports[`EbiSpeciesIconBare Icon of mapped species fungus matches snapshot 1`] = `
-<EbiSpeciesIconBare
-  groupColors={
-    Object {
-      "other": "deepskyblue",
-      "plants": "mediumseagreen",
-      "warmBlooded": "indianred",
-    }
-  }
-  species="fungus"
->
-  <Styled(styled.span)
-    data-icon="u"
-    style={
-      Object {
-        "color": "deepskyblue",
-      }
-    }
-    title="Fungus"
-  >
-    <span
-      className="sc-AxjAm sc-AxirZ eilfJa"
-      data-icon="u"
-      style={
-        Object {
-          "color": "deepskyblue",
-        }
-      }
-      title="Fungus"
-    />
-  </Styled(styled.span)>
-</EbiSpeciesIconBare>
-`;
-
-exports[`EbiSpeciesIconBare Icon of mapped species gallus gallus matches snapshot 1`] = `
-<EbiSpeciesIconBare
-  groupColors={
-    Object {
-      "other": "deepskyblue",
-      "plants": "mediumseagreen",
-      "warmBlooded": "indianred",
-    }
-  }
-  species="gallus gallus"
->
-  <Styled(styled.span)
-    data-icon="k"
-    style={
-      Object {
-        "color": "indianred",
-      }
-    }
-    title="Gallus gallus"
-  >
-    <span
-      className="sc-AxjAm sc-AxirZ eilfJa"
-      data-icon="k"
-      style={
-        Object {
-          "color": "indianred",
-        }
-      }
-      title="Gallus gallus"
-    />
-  </Styled(styled.span)>
-</EbiSpeciesIconBare>
-`;
-
-exports[`EbiSpeciesIconBare Icon of mapped species glycine max matches snapshot 1`] = `
-<EbiSpeciesIconBare
-  groupColors={
-    Object {
-      "other": "deepskyblue",
-      "plants": "mediumseagreen",
-      "warmBlooded": "indianred",
-    }
-  }
-  species="glycine max"
->
-  <Styled(styled.span)
-    data-icon="^"
-    style={
-      Object {
-        "color": "mediumseagreen",
-      }
-    }
-    title="Glycine max"
-  >
-    <span
-      className="sc-AxjAm sc-AxirZ eilfJa"
-      data-icon="^"
-      style={
-        Object {
-          "color": "mediumseagreen",
-        }
-      }
-      title="Glycine max"
-    />
-  </Styled(styled.span)>
-</EbiSpeciesIconBare>
-`;
-
-exports[`EbiSpeciesIconBare Icon of mapped species glycinemax matches snapshot 1`] = `
-<EbiSpeciesIconBare
-  groupColors={
-    Object {
-      "other": "deepskyblue",
-      "plants": "mediumseagreen",
-      "warmBlooded": "indianred",
-    }
-  }
-  species="glycinemax"
->
-  <Styled(styled.span)
-    data-icon="^"
-    style={
-      Object {
-        "color": "mediumseagreen",
-      }
-    }
-    title="Glycinemax"
-  >
-    <span
-      className="sc-AxjAm sc-AxirZ eilfJa"
-      data-icon="^"
-      style={
-        Object {
-          "color": "mediumseagreen",
-        }
-      }
-      title="Glycinemax"
-    />
-  </Styled(styled.span)>
-</EbiSpeciesIconBare>
-`;
-
-exports[`EbiSpeciesIconBare Icon of mapped species goat matches snapshot 1`] = `
-<EbiSpeciesIconBare
-  groupColors={
-    Object {
-      "other": "deepskyblue",
-      "plants": "mediumseagreen",
-      "warmBlooded": "indianred",
-    }
-  }
-  species="goat"
->
-  <Styled(styled.span)
-    data-icon="m"
-    style={
-      Object {
-        "color": "indianred",
-      }
-    }
-    title="Goat"
-  >
-    <span
-      className="sc-AxjAm sc-AxirZ eilfJa"
-      data-icon="m"
-      style={
-        Object {
-          "color": "indianred",
-        }
-      }
-      title="Goat"
-    />
-  </Styled(styled.span)>
-</EbiSpeciesIconBare>
-`;
-
-exports[`EbiSpeciesIconBare Icon of mapped species gorilla gorilla matches snapshot 1`] = `
-<EbiSpeciesIconBare
-  groupColors={
-    Object {
-      "other": "deepskyblue",
-      "plants": "mediumseagreen",
-      "warmBlooded": "indianred",
-    }
-  }
-  species="gorilla gorilla"
->
-  <Styled(styled.span)
-    data-icon="G"
-    style={
-      Object {
-        "color": "indianred",
-      }
-    }
-    title="Gorilla gorilla"
-  >
-    <span
-      className="sc-AxjAm sc-AxirZ eilfJa"
-      data-icon="G"
-      style={
-        Object {
-          "color": "indianred",
-        }
-      }
-      title="Gorilla gorilla"
-    />
-  </Styled(styled.span)>
-</EbiSpeciesIconBare>
-`;
-
-exports[`EbiSpeciesIconBare Icon of mapped species gorilla matches snapshot 1`] = `
-<EbiSpeciesIconBare
-  groupColors={
-    Object {
-      "other": "deepskyblue",
-      "plants": "mediumseagreen",
-      "warmBlooded": "indianred",
-    }
-  }
-  species="gorilla"
->
-  <Styled(styled.span)
-    data-icon="G"
-    style={
-      Object {
-        "color": "indianred",
-      }
-    }
-    title="Gorilla"
-  >
-    <span
-      className="sc-AxjAm sc-AxirZ eilfJa"
-      data-icon="G"
-      style={
-        Object {
-          "color": "indianred",
-        }
-      }
-      title="Gorilla"
-    />
-  </Styled(styled.span)>
-</EbiSpeciesIconBare>
-`;
-
-exports[`EbiSpeciesIconBare Icon of mapped species grapes matches snapshot 1`] = `
-<EbiSpeciesIconBare
-  groupColors={
-    Object {
-      "other": "deepskyblue",
-      "plants": "mediumseagreen",
-      "warmBlooded": "indianred",
-    }
-  }
-  species="grapes"
->
-  <Styled(styled.span)
-    data-icon="O"
-    style={
-      Object {
-        "color": "mediumseagreen",
-      }
-    }
-    title="Grapes"
-  >
-    <span
-      className="sc-AxjAm sc-AxirZ eilfJa"
-      data-icon="O"
-      style={
-        Object {
-          "color": "mediumseagreen",
-        }
-      }
-      title="Grapes"
-    />
-  </Styled(styled.span)>
-</EbiSpeciesIconBare>
-`;
-
-exports[`EbiSpeciesIconBare Icon of mapped species guinea pig matches snapshot 1`] = `
-<EbiSpeciesIconBare
-  groupColors={
-    Object {
-      "other": "deepskyblue",
-      "plants": "mediumseagreen",
-      "warmBlooded": "indianred",
-    }
-  }
-  species="guinea pig"
->
-  <Styled(styled.span)
-    data-icon="g"
-    style={
-      Object {
-        "color": "indianred",
-      }
-    }
-    title="Guinea pig"
-  >
-    <span
-      className="sc-AxjAm sc-AxirZ eilfJa"
-      data-icon="g"
-      style={
-        Object {
-          "color": "indianred",
-        }
-      }
-      title="Guinea pig"
-    />
-  </Styled(styled.span)>
-</EbiSpeciesIconBare>
-`;
-
-exports[`EbiSpeciesIconBare Icon of mapped species hedgehog matches snapshot 1`] = `
-<EbiSpeciesIconBare
-  groupColors={
-    Object {
-      "other": "deepskyblue",
-      "plants": "mediumseagreen",
-      "warmBlooded": "indianred",
-    }
-  }
-  species="hedgehog"
->
-  <Styled(styled.span)
-    data-icon="o"
-    style={
-      Object {
-        "color": "indianred",
-      }
-    }
-    title="Hedgehog"
-  >
-    <span
-      className="sc-AxjAm sc-AxirZ eilfJa"
-      data-icon="o"
-      style={
-        Object {
-          "color": "indianred",
-        }
-      }
-      title="Hedgehog"
-    />
-  </Styled(styled.span)>
-</EbiSpeciesIconBare>
-`;
-
-exports[`EbiSpeciesIconBare Icon of mapped species homo sapiens matches snapshot 1`] = `
-<EbiSpeciesIconBare
-  groupColors={
-    Object {
-      "other": "deepskyblue",
-      "plants": "mediumseagreen",
-      "warmBlooded": "indianred",
-    }
-  }
-  species="homo sapiens"
->
-  <Styled(styled.span)
-    data-icon="H"
-    style={
-      Object {
-        "color": "indianred",
-      }
-    }
-    title="Homo sapiens"
-  >
-    <span
-      className="sc-AxjAm sc-AxirZ eilfJa"
-      data-icon="H"
-      style={
-        Object {
-          "color": "indianred",
-        }
-      }
-      title="Homo sapiens"
-    />
-  </Styled(styled.span)>
-</EbiSpeciesIconBare>
-`;
-
-exports[`EbiSpeciesIconBare Icon of mapped species hordeum vulgare matches snapshot 1`] = `
-<EbiSpeciesIconBare
-  groupColors={
-    Object {
-      "other": "deepskyblue",
-      "plants": "mediumseagreen",
-      "warmBlooded": "indianred",
-    }
-  }
-  species="hordeum vulgare"
->
-  <Styled(styled.span)
-    data-icon="5"
-    style={
-      Object {
-        "color": "mediumseagreen",
-      }
-    }
-    title="Hordeum vulgare"
-  >
-    <span
-      className="sc-AxjAm sc-AxirZ eilfJa"
-      data-icon="5"
-      style={
-        Object {
-          "color": "mediumseagreen",
-        }
-      }
-      title="Hordeum vulgare"
-    />
-  </Styled(styled.span)>
-</EbiSpeciesIconBare>
-`;
-
-exports[`EbiSpeciesIconBare Icon of mapped species hordeum vulgare subsp. vulgare matches snapshot 1`] = `
-<EbiSpeciesIconBare
-  groupColors={
-    Object {
-      "other": "deepskyblue",
-      "plants": "mediumseagreen",
-      "warmBlooded": "indianred",
-    }
-  }
-  species="hordeum vulgare subsp. vulgare"
->
-  <Styled(styled.span)
-    data-icon="5"
-    style={
-      Object {
-        "color": "mediumseagreen",
-      }
-    }
-    title="Hordeum vulgare subsp. vulgare"
-  >
-    <span
-      className="sc-AxjAm sc-AxirZ eilfJa"
-      data-icon="5"
-      style={
-        Object {
-          "color": "mediumseagreen",
-        }
-      }
-      title="Hordeum vulgare subsp. vulgare"
-    />
-  </Styled(styled.span)>
-</EbiSpeciesIconBare>
-`;
-
-exports[`EbiSpeciesIconBare Icon of mapped species horse matches snapshot 1`] = `
-<EbiSpeciesIconBare
-  groupColors={
-    Object {
-      "other": "deepskyblue",
-      "plants": "mediumseagreen",
-      "warmBlooded": "indianred",
-    }
-  }
-  species="horse"
->
-  <Styled(styled.span)
-    data-icon="h"
-    style={
-      Object {
-        "color": "indianred",
-      }
-    }
-    title="Horse"
-  >
-    <span
-      className="sc-AxjAm sc-AxirZ eilfJa"
-      data-icon="h"
-      style={
-        Object {
-          "color": "indianred",
-        }
-      }
-      title="Horse"
-    />
-  </Styled(styled.span)>
-</EbiSpeciesIconBare>
-`;
-
-exports[`EbiSpeciesIconBare Icon of mapped species human matches snapshot 1`] = `
-<EbiSpeciesIconBare
-  groupColors={
-    Object {
-      "other": "deepskyblue",
-      "plants": "mediumseagreen",
-      "warmBlooded": "indianred",
-    }
-  }
-  species="human"
->
-  <Styled(styled.span)
-    data-icon="H"
-    style={
-      Object {
-        "color": "indianred",
-      }
-    }
-    title="Human"
-  >
-    <span
-      className="sc-AxjAm sc-AxirZ eilfJa"
-      data-icon="H"
-      style={
-        Object {
-          "color": "indianred",
-        }
-      }
-      title="Human"
-    />
-  </Styled(styled.span)>
-</EbiSpeciesIconBare>
-`;
-
-exports[`EbiSpeciesIconBare Icon of mapped species kangaroo rat matches snapshot 1`] = `
-<EbiSpeciesIconBare
-  groupColors={
-    Object {
-      "other": "deepskyblue",
-      "plants": "mediumseagreen",
-      "warmBlooded": "indianred",
-    }
-  }
-  species="kangaroo rat"
->
-  <Styled(styled.span)
-    data-icon="3"
-    style={
-      Object {
-        "color": "indianred",
-      }
-    }
-    title="Kangaroo rat"
-  >
-    <span
-      className="sc-AxjAm sc-AxirZ eilfJa"
-      data-icon="3"
-      style={
-        Object {
-          "color": "indianred",
-        }
-      }
-      title="Kangaroo rat"
-    />
-  </Styled(styled.span)>
-</EbiSpeciesIconBare>
-`;
-
-exports[`EbiSpeciesIconBare Icon of mapped species louse matches snapshot 1`] = `
-<EbiSpeciesIconBare
-  groupColors={
-    Object {
-      "other": "deepskyblue",
-      "plants": "mediumseagreen",
-      "warmBlooded": "indianred",
-    }
-  }
-  species="louse"
->
-  <Styled(styled.span)
-    data-icon="4"
-    style={
-      Object {
-        "color": "deepskyblue",
-      }
-    }
-    title="Louse"
-  >
-    <span
-      className="sc-AxjAm sc-AxirZ eilfJa"
-      data-icon="4"
-      style={
-        Object {
-          "color": "deepskyblue",
-        }
-      }
-      title="Louse"
-    />
-  </Styled(styled.span)>
-</EbiSpeciesIconBare>
-`;
-
-exports[`EbiSpeciesIconBare Icon of mapped species loxodonta africana matches snapshot 1`] = `
-<EbiSpeciesIconBare
-  groupColors={
-    Object {
-      "other": "deepskyblue",
-      "plants": "mediumseagreen",
-      "warmBlooded": "indianred",
-    }
-  }
-  species="loxodonta africana"
->
-  <Styled(styled.span)
-    data-icon="e"
-    style={
-      Object {
-        "color": "indianred",
-      }
-    }
-    title="Loxodonta africana"
-  >
-    <span
-      className="sc-AxjAm sc-AxirZ eilfJa"
-      data-icon="e"
-      style={
-        Object {
-          "color": "indianred",
-        }
-      }
-      title="Loxodonta africana"
-    />
-  </Styled(styled.span)>
-</EbiSpeciesIconBare>
-`;
-
-exports[`EbiSpeciesIconBare Icon of mapped species loxodonta cyclotis matches snapshot 1`] = `
-<EbiSpeciesIconBare
-  groupColors={
-    Object {
-      "other": "deepskyblue",
-      "plants": "mediumseagreen",
-      "warmBlooded": "indianred",
-    }
-  }
-  species="loxodonta cyclotis"
->
-  <Styled(styled.span)
-    data-icon="e"
-    style={
-      Object {
-        "color": "indianred",
-      }
-    }
-    title="Loxodonta cyclotis"
-  >
-    <span
-      className="sc-AxjAm sc-AxirZ eilfJa"
-      data-icon="e"
-      style={
-        Object {
-          "color": "indianred",
-        }
-      }
-      title="Loxodonta cyclotis"
-    />
-  </Styled(styled.span)>
-</EbiSpeciesIconBare>
-`;
-
-exports[`EbiSpeciesIconBare Icon of mapped species macaca mulatta matches snapshot 1`] = `
-<EbiSpeciesIconBare
-  groupColors={
-    Object {
-      "other": "deepskyblue",
-      "plants": "mediumseagreen",
-      "warmBlooded": "indianred",
-    }
-  }
-  species="macaca mulatta"
->
-  <Styled(styled.span)
-    data-icon="r"
-    style={
-      Object {
-        "color": "indianred",
-      }
-    }
-    title="Macaca mulatta"
-  >
-    <span
-      className="sc-AxjAm sc-AxirZ eilfJa"
-      data-icon="r"
-      style={
-        Object {
-          "color": "indianred",
-        }
-      }
-      title="Macaca mulatta"
-    />
-  </Styled(styled.span)>
-</EbiSpeciesIconBare>
-`;
-
-exports[`EbiSpeciesIconBare Icon of mapped species marmoset matches snapshot 1`] = `
-<EbiSpeciesIconBare
-  groupColors={
-    Object {
-      "other": "deepskyblue",
-      "plants": "mediumseagreen",
-      "warmBlooded": "indianred",
-    }
-  }
-  species="marmoset"
->
-  <Styled(styled.span)
-    data-icon="q"
-    style={
-      Object {
-        "color": "indianred",
-      }
-    }
-    title="Marmoset"
-  >
-    <span
-      className="sc-AxjAm sc-AxirZ eilfJa"
-      data-icon="q"
-      style={
-        Object {
-          "color": "indianred",
-        }
-      }
-      title="Marmoset"
-    />
-  </Styled(styled.span)>
-</EbiSpeciesIconBare>
-`;
-
-exports[`EbiSpeciesIconBare Icon of mapped species monkey matches snapshot 1`] = `
-<EbiSpeciesIconBare
-  groupColors={
-    Object {
-      "other": "deepskyblue",
-      "plants": "mediumseagreen",
-      "warmBlooded": "indianred",
-    }
-  }
-  species="monkey"
->
-  <Styled(styled.span)
-    data-icon="r"
-    style={
-      Object {
-        "color": "indianred",
-      }
-    }
-    title="Monkey"
-  >
-    <span
-      className="sc-AxjAm sc-AxirZ eilfJa"
-      data-icon="r"
-      style={
-        Object {
-          "color": "indianred",
-        }
-      }
-      title="Monkey"
-    />
-  </Styled(styled.span)>
-</EbiSpeciesIconBare>
-`;
-
-exports[`EbiSpeciesIconBare Icon of mapped species monodelphis domestica matches snapshot 1`] = `
-<EbiSpeciesIconBare
-  groupColors={
-    Object {
-      "other": "deepskyblue",
-      "plants": "mediumseagreen",
-      "warmBlooded": "indianred",
-    }
-  }
-  species="monodelphis domestica"
->
-  <Styled(styled.span)
-    data-icon="9"
-    style={
-      Object {
-        "color": "indianred",
-      }
-    }
-    title="Monodelphis domestica"
-  >
-    <span
-      className="sc-AxjAm sc-AxirZ eilfJa"
-      data-icon="9"
-      style={
-        Object {
-          "color": "indianred",
-        }
-      }
-      title="Monodelphis domestica"
-    />
-  </Styled(styled.span)>
-</EbiSpeciesIconBare>
-`;
-
-exports[`EbiSpeciesIconBare Icon of mapped species monodelphis matches snapshot 1`] = `
-<EbiSpeciesIconBare
-  groupColors={
-    Object {
-      "other": "deepskyblue",
-      "plants": "mediumseagreen",
-      "warmBlooded": "indianred",
-    }
-  }
-  species="monodelphis"
->
-  <Styled(styled.span)
-    data-icon="9"
-    style={
-      Object {
-        "color": "indianred",
-      }
-    }
-    title="Monodelphis"
-  >
-    <span
-      className="sc-AxjAm sc-AxirZ eilfJa"
-      data-icon="9"
-      style={
-        Object {
-          "color": "indianred",
-        }
-      }
-      title="Monodelphis"
-    />
-  </Styled(styled.span)>
-</EbiSpeciesIconBare>
-`;
-
-exports[`EbiSpeciesIconBare Icon of mapped species mosquito matches snapshot 1`] = `
-<EbiSpeciesIconBare
-  groupColors={
-    Object {
-      "other": "deepskyblue",
-      "plants": "mediumseagreen",
-      "warmBlooded": "indianred",
-    }
-  }
-  species="mosquito"
->
-  <Styled(styled.span)
-    data-icon="1"
-    style={
-      Object {
-        "color": "deepskyblue",
-      }
-    }
-    title="Mosquito"
-  >
-    <span
-      className="sc-AxjAm sc-AxirZ eilfJa"
-      data-icon="1"
-      style={
-        Object {
-          "color": "deepskyblue",
-        }
-      }
-      title="Mosquito"
-    />
-  </Styled(styled.span)>
-</EbiSpeciesIconBare>
-`;
-
-exports[`EbiSpeciesIconBare Icon of mapped species mouse lemur matches snapshot 1`] = `
-<EbiSpeciesIconBare
-  groupColors={
-    Object {
-      "other": "deepskyblue",
-      "plants": "mediumseagreen",
-      "warmBlooded": "indianred",
-    }
-  }
-  species="mouse lemur"
->
-  <Styled(styled.span)
-    data-icon="N"
-    style={
-      Object {
-        "color": "indianred",
-      }
-    }
-    title="Mouse lemur"
-  >
-    <span
-      className="sc-AxjAm sc-AxirZ eilfJa"
-      data-icon="N"
-      style={
-        Object {
-          "color": "indianred",
-        }
-      }
-      title="Mouse lemur"
-    />
-  </Styled(styled.span)>
-</EbiSpeciesIconBare>
-`;
-
-exports[`EbiSpeciesIconBare Icon of mapped species mouse matches snapshot 1`] = `
-<EbiSpeciesIconBare
-  groupColors={
-    Object {
-      "other": "deepskyblue",
-      "plants": "mediumseagreen",
-      "warmBlooded": "indianred",
-    }
-  }
-  species="mouse"
->
-  <Styled(styled.span)
-    data-icon="M"
-    style={
-      Object {
-        "color": "indianred",
-      }
-    }
-    title="Mouse"
-  >
-    <span
-      className="sc-AxjAm sc-AxirZ eilfJa"
-      data-icon="M"
-      style={
-        Object {
-          "color": "indianred",
-        }
-      }
-      title="Mouse"
-    />
-  </Styled(styled.span)>
-</EbiSpeciesIconBare>
-`;
-
-exports[`EbiSpeciesIconBare Icon of mapped species mus musculus matches snapshot 1`] = `
-<EbiSpeciesIconBare
-  groupColors={
-    Object {
-      "other": "deepskyblue",
-      "plants": "mediumseagreen",
-      "warmBlooded": "indianred",
-    }
-  }
-  species="mus musculus"
->
-  <Styled(styled.span)
-    data-icon="M"
-    style={
-      Object {
-        "color": "indianred",
-      }
-    }
-    title="Mus musculus"
-  >
-    <span
-      className="sc-AxjAm sc-AxirZ eilfJa"
-      data-icon="M"
-      style={
-        Object {
-          "color": "indianred",
-        }
-      }
-      title="Mus musculus"
-    />
-  </Styled(styled.span)>
-</EbiSpeciesIconBare>
-`;
-
-exports[`EbiSpeciesIconBare Icon of mapped species mustela putorius furo matches snapshot 1`] = `
-<EbiSpeciesIconBare
-  groupColors={
-    Object {
-      "other": "deepskyblue",
-      "plants": "mediumseagreen",
-      "warmBlooded": "indianred",
-    }
-  }
-  species="mustela putorius furo"
->
-  <Styled(styled.span)
-    data-icon="!"
-    style={
-      Object {
-        "color": "indianred",
-      }
-    }
-    title="Mustela putorius furo"
-  >
-    <span
-      className="sc-AxjAm sc-AxirZ eilfJa"
-      data-icon="!"
-      style={
-        Object {
-          "color": "indianred",
-        }
-      }
-      title="Mustela putorius furo"
-    />
-  </Styled(styled.span)>
-</EbiSpeciesIconBare>
-`;
-
-exports[`EbiSpeciesIconBare Icon of mapped species orangutan matches snapshot 1`] = `
-<EbiSpeciesIconBare
-  groupColors={
-    Object {
-      "other": "deepskyblue",
-      "plants": "mediumseagreen",
-      "warmBlooded": "indianred",
-    }
-  }
-  species="orangutan"
->
-  <Styled(styled.span)
-    data-icon="*"
-    style={
-      Object {
-        "color": "indianred",
-      }
-    }
-    title="Orangutan"
-  >
-    <span
-      className="sc-AxjAm sc-AxirZ eilfJa"
-      data-icon="*"
-      style={
-        Object {
-          "color": "indianred",
-        }
-      }
-      title="Orangutan"
-    />
-  </Styled(styled.span)>
-</EbiSpeciesIconBare>
-`;
-
-exports[`EbiSpeciesIconBare Icon of mapped species ornithorhynchus anatinus matches snapshot 1`] = `
-<EbiSpeciesIconBare
-  groupColors={
-    Object {
-      "other": "deepskyblue",
-      "plants": "mediumseagreen",
-      "warmBlooded": "indianred",
-    }
-  }
-  species="ornithorhynchus anatinus"
->
-  <Styled(styled.span)
-    data-icon="U"
-    style={
-      Object {
-        "color": "indianred",
-      }
-    }
-    title="Ornithorhynchus anatinus"
-  >
-    <span
-      className="sc-AxjAm sc-AxirZ eilfJa"
-      data-icon="U"
-      style={
-        Object {
-          "color": "indianred",
-        }
-      }
-      title="Ornithorhynchus anatinus"
-    />
-  </Styled(styled.span)>
-</EbiSpeciesIconBare>
-`;
-
-exports[`EbiSpeciesIconBare Icon of mapped species oryctolagus cuniculus matches snapshot 1`] = `
-<EbiSpeciesIconBare
-  groupColors={
-    Object {
-      "other": "deepskyblue",
-      "plants": "mediumseagreen",
-      "warmBlooded": "indianred",
-    }
-  }
-  species="oryctolagus cuniculus"
->
-  <Styled(styled.span)
-    data-icon="t"
-    style={
-      Object {
-        "color": "indianred",
-      }
-    }
-    title="Oryctolagus cuniculus"
-  >
-    <span
-      className="sc-AxjAm sc-AxirZ eilfJa"
-      data-icon="t"
-      style={
-        Object {
-          "color": "indianred",
-        }
-      }
-      title="Oryctolagus cuniculus"
-    />
-  </Styled(styled.span)>
-</EbiSpeciesIconBare>
-`;
-
-exports[`EbiSpeciesIconBare Icon of mapped species oryza sativa japonica group matches snapshot 1`] = `
-<EbiSpeciesIconBare
-  groupColors={
-    Object {
-      "other": "deepskyblue",
-      "plants": "mediumseagreen",
-      "warmBlooded": "indianred",
-    }
-  }
-  species="oryza sativa japonica group"
->
-  <Styled(styled.span)
-    data-icon="6"
-    style={
-      Object {
-        "color": "mediumseagreen",
-      }
-    }
-    title="Oryza sativa japonica group"
-  >
-    <span
-      className="sc-AxjAm sc-AxirZ eilfJa"
-      data-icon="6"
-      style={
-        Object {
-          "color": "mediumseagreen",
-        }
-      }
-      title="Oryza sativa japonica group"
-    />
-  </Styled(styled.span)>
-</EbiSpeciesIconBare>
-`;
-
-exports[`EbiSpeciesIconBare Icon of mapped species oryza sativa matches snapshot 1`] = `
-<EbiSpeciesIconBare
-  groupColors={
-    Object {
-      "other": "deepskyblue",
-      "plants": "mediumseagreen",
-      "warmBlooded": "indianred",
-    }
-  }
-  species="oryza sativa"
->
-  <Styled(styled.span)
-    data-icon="6"
-    style={
-      Object {
-        "color": "mediumseagreen",
-      }
-    }
-    title="Oryza sativa"
-  >
-    <span
-      className="sc-AxjAm sc-AxirZ eilfJa"
-      data-icon="6"
-      style={
-        Object {
-          "color": "mediumseagreen",
-        }
-      }
-      title="Oryza sativa"
-    />
-  </Styled(styled.span)>
-</EbiSpeciesIconBare>
-`;
-
-exports[`EbiSpeciesIconBare Icon of mapped species ovis aries matches snapshot 1`] = `
-<EbiSpeciesIconBare
-  groupColors={
-    Object {
-      "other": "deepskyblue",
-      "plants": "mediumseagreen",
-      "warmBlooded": "indianred",
-    }
-  }
-  species="ovis aries"
->
-  <Styled(styled.span)
-    data-icon="x"
-    style={
-      Object {
-        "color": "indianred",
-      }
-    }
-    title="Ovis aries"
-  >
-    <span
-      className="sc-AxjAm sc-AxirZ eilfJa"
-      data-icon="x"
-      style={
-        Object {
-          "color": "indianred",
-        }
-      }
-      title="Ovis aries"
-    />
-  </Styled(styled.span)>
-</EbiSpeciesIconBare>
-`;
-
-exports[`EbiSpeciesIconBare Icon of mapped species pan paniscus matches snapshot 1`] = `
-<EbiSpeciesIconBare
-  groupColors={
-    Object {
-      "other": "deepskyblue",
-      "plants": "mediumseagreen",
-      "warmBlooded": "indianred",
-    }
-  }
-  species="pan paniscus"
->
-  <Styled(styled.span)
-    data-icon="i"
-    style={
-      Object {
-        "color": "indianred",
-      }
-    }
-    title="Pan paniscus"
-  >
-    <span
-      className="sc-AxjAm sc-AxirZ eilfJa"
-      data-icon="i"
-      style={
-        Object {
-          "color": "indianred",
-        }
-      }
-      title="Pan paniscus"
-    />
-  </Styled(styled.span)>
-</EbiSpeciesIconBare>
-`;
-
-exports[`EbiSpeciesIconBare Icon of mapped species pan troglodytes matches snapshot 1`] = `
-<EbiSpeciesIconBare
-  groupColors={
-    Object {
-      "other": "deepskyblue",
-      "plants": "mediumseagreen",
-      "warmBlooded": "indianred",
-    }
-  }
-  species="pan troglodytes"
->
-  <Styled(styled.span)
-    data-icon="i"
-    style={
-      Object {
-        "color": "indianred",
-      }
-    }
-    title="Pan troglodytes"
-  >
-    <span
-      className="sc-AxjAm sc-AxirZ eilfJa"
-      data-icon="i"
-      style={
-        Object {
-          "color": "indianred",
-        }
-      }
-      title="Pan troglodytes"
-    />
-  </Styled(styled.span)>
-</EbiSpeciesIconBare>
-`;
-
-exports[`EbiSpeciesIconBare Icon of mapped species papio anubis matches snapshot 1`] = `
-<EbiSpeciesIconBare
-  groupColors={
-    Object {
-      "other": "deepskyblue",
-      "plants": "mediumseagreen",
-      "warmBlooded": "indianred",
-    }
-  }
-  species="papio anubis"
->
-  <Styled(styled.span)
-    data-icon="8"
-    style={
-      Object {
-        "color": "indianred",
-      }
-    }
-    title="Papio anubis"
-  >
-    <span
-      className="sc-AxjAm sc-AxirZ eilfJa"
-      data-icon="8"
-      style={
-        Object {
-          "color": "indianred",
-        }
-      }
-      title="Papio anubis"
-    />
-  </Styled(styled.span)>
-</EbiSpeciesIconBare>
-`;
-
-exports[`EbiSpeciesIconBare Icon of mapped species physcomitrella patens matches snapshot 1`] = `
-<EbiSpeciesIconBare
-  groupColors={
-    Object {
-      "other": "deepskyblue",
-      "plants": "mediumseagreen",
-      "warmBlooded": "indianred",
-    }
-  }
-  species="physcomitrella patens"
->
-  <Styled(styled.span)
-    data-icon="P"
-    style={
-      Object {
-        "color": "mediumseagreen",
-      }
-    }
-    title="Physcomitrella patens"
-  >
-    <span
-      className="sc-AxjAm sc-AxirZ eilfJa"
-      data-icon="P"
-      style={
-        Object {
-          "color": "mediumseagreen",
-        }
-      }
-      title="Physcomitrella patens"
-    />
-  </Styled(styled.span)>
-</EbiSpeciesIconBare>
-`;
-
-exports[`EbiSpeciesIconBare Icon of mapped species pig matches snapshot 1`] = `
-<EbiSpeciesIconBare
-  groupColors={
-    Object {
-      "other": "deepskyblue",
-      "plants": "mediumseagreen",
-      "warmBlooded": "indianred",
-    }
-  }
-  species="pig"
->
-  <Styled(styled.span)
-    data-icon="p"
-    style={
-      Object {
-        "color": "indianred",
-      }
-    }
-    title="Pig"
-  >
-    <span
-      className="sc-AxjAm sc-AxirZ eilfJa"
-      data-icon="p"
-      style={
-        Object {
-          "color": "indianred",
-        }
-      }
-      title="Pig"
-    />
-  </Styled(styled.span)>
-</EbiSpeciesIconBare>
-`;
-
-exports[`EbiSpeciesIconBare Icon of mapped species plant matches snapshot 1`] = `
-<EbiSpeciesIconBare
-  groupColors={
-    Object {
-      "other": "deepskyblue",
-      "plants": "mediumseagreen",
-      "warmBlooded": "indianred",
-    }
-  }
-  species="plant"
->
-  <Styled(styled.span)
-    data-icon="P"
-    style={
-      Object {
-        "color": "mediumseagreen",
-      }
-    }
-    title="Plant"
-  >
-    <span
-      className="sc-AxjAm sc-AxirZ eilfJa"
-      data-icon="P"
-      style={
-        Object {
-          "color": "mediumseagreen",
-        }
-      }
-      title="Plant"
-    />
-  </Styled(styled.span)>
-</EbiSpeciesIconBare>
-`;
-
-exports[`EbiSpeciesIconBare Icon of mapped species plasmodium berghei matches snapshot 1`] = `
-<EbiSpeciesIconBare
-  groupColors={
-    Object {
-      "other": "deepskyblue",
-      "plants": "mediumseagreen",
-      "warmBlooded": "indianred",
-    }
-  }
-  species="plasmodium berghei"
->
-  <Styled(styled.span)
-    data-icon="@"
-    style={
-      Object {
-        "color": "deepskyblue",
-      }
-    }
-    title="Plasmodium berghei"
-  >
-    <span
-      className="sc-AxjAm sc-AxirZ eilfJa"
-      data-icon="@"
-      style={
-        Object {
-          "color": "deepskyblue",
-        }
-      }
-      title="Plasmodium berghei"
-    />
-  </Styled(styled.span)>
-</EbiSpeciesIconBare>
-`;
-
-exports[`EbiSpeciesIconBare Icon of mapped species plasmodium falciparum matches snapshot 1`] = `
-<EbiSpeciesIconBare
-  groupColors={
-    Object {
-      "other": "deepskyblue",
-      "plants": "mediumseagreen",
-      "warmBlooded": "indianred",
-    }
-  }
-  species="plasmodium falciparum"
->
-  <Styled(styled.span)
-    data-icon="@"
-    style={
-      Object {
-        "color": "deepskyblue",
-      }
-    }
-    title="Plasmodium falciparum"
-  >
-    <span
-      className="sc-AxjAm sc-AxirZ eilfJa"
-      data-icon="@"
-      style={
-        Object {
-          "color": "deepskyblue",
-        }
-      }
-      title="Plasmodium falciparum"
-    />
-  </Styled(styled.span)>
-</EbiSpeciesIconBare>
-`;
-
-exports[`EbiSpeciesIconBare Icon of mapped species plasmodium matches snapshot 1`] = `
-<EbiSpeciesIconBare
-  groupColors={
-    Object {
-      "other": "deepskyblue",
-      "plants": "mediumseagreen",
-      "warmBlooded": "indianred",
-    }
-  }
-  species="plasmodium"
->
-  <Styled(styled.span)
-    data-icon="@"
-    style={
-      Object {
-        "color": "deepskyblue",
-      }
-    }
-    title="Plasmodium"
-  >
-    <span
-      className="sc-AxjAm sc-AxirZ eilfJa"
-      data-icon="@"
-      style={
-        Object {
-          "color": "deepskyblue",
-        }
-      }
-      title="Plasmodium"
-    />
-  </Styled(styled.span)>
-</EbiSpeciesIconBare>
-`;
-
-exports[`EbiSpeciesIconBare Icon of mapped species platypus matches snapshot 1`] = `
-<EbiSpeciesIconBare
-  groupColors={
-    Object {
-      "other": "deepskyblue",
-      "plants": "mediumseagreen",
-      "warmBlooded": "indianred",
-    }
-  }
-  species="platypus"
->
-  <Styled(styled.span)
-    data-icon="U"
-    style={
-      Object {
-        "color": "indianred",
-      }
-    }
-    title="Platypus"
-  >
-    <span
-      className="sc-AxjAm sc-AxirZ eilfJa"
-      data-icon="U"
-      style={
-        Object {
-          "color": "indianred",
-        }
-      }
-      title="Platypus"
-    />
-  </Styled(styled.span)>
-</EbiSpeciesIconBare>
-`;
-
-exports[`EbiSpeciesIconBare Icon of mapped species pongo abelii matches snapshot 1`] = `
-<EbiSpeciesIconBare
-  groupColors={
-    Object {
-      "other": "deepskyblue",
-      "plants": "mediumseagreen",
-      "warmBlooded": "indianred",
-    }
-  }
-  species="pongo abelii"
->
-  <Styled(styled.span)
-    data-icon="*"
-    style={
-      Object {
-        "color": "indianred",
-      }
-    }
-    title="Pongo abelii"
-  >
-    <span
-      className="sc-AxjAm sc-AxirZ eilfJa"
-      data-icon="*"
-      style={
-        Object {
-          "color": "indianred",
-        }
-      }
-      title="Pongo abelii"
-    />
-  </Styled(styled.span)>
-</EbiSpeciesIconBare>
-`;
-
-exports[`EbiSpeciesIconBare Icon of mapped species pongo pygmaeus matches snapshot 1`] = `
-<EbiSpeciesIconBare
-  groupColors={
-    Object {
-      "other": "deepskyblue",
-      "plants": "mediumseagreen",
-      "warmBlooded": "indianred",
-    }
-  }
-  species="pongo pygmaeus"
->
-  <Styled(styled.span)
-    data-icon="*"
-    style={
-      Object {
-        "color": "indianred",
-      }
-    }
-    title="Pongo pygmaeus"
-  >
-    <span
-      className="sc-AxjAm sc-AxirZ eilfJa"
-      data-icon="*"
-      style={
-        Object {
-          "color": "indianred",
-        }
-      }
-      title="Pongo pygmaeus"
-    />
-  </Styled(styled.span)>
-</EbiSpeciesIconBare>
-`;
-
-exports[`EbiSpeciesIconBare Icon of mapped species pufferfish matches snapshot 1`] = `
-<EbiSpeciesIconBare
-  groupColors={
-    Object {
-      "other": "deepskyblue",
-      "plants": "mediumseagreen",
-      "warmBlooded": "indianred",
-    }
-  }
-  species="pufferfish"
->
-  <Styled(styled.span)
-    data-icon="E"
-    style={
-      Object {
-        "color": "deepskyblue",
-      }
-    }
-    title="Pufferfish"
-  >
-    <span
-      className="sc-AxjAm sc-AxirZ eilfJa"
-      data-icon="E"
-      style={
-        Object {
-          "color": "deepskyblue",
-        }
-      }
-      title="Pufferfish"
-    />
-  </Styled(styled.span)>
-</EbiSpeciesIconBare>
-`;
-
-exports[`EbiSpeciesIconBare Icon of mapped species pyrrhula pyrrhula matches snapshot 1`] = `
-<EbiSpeciesIconBare
-  groupColors={
-    Object {
-      "other": "deepskyblue",
-      "plants": "mediumseagreen",
-      "warmBlooded": "indianred",
-    }
-  }
-  species="pyrrhula pyrrhula"
->
-  <Styled(styled.span)
-    data-icon="n"
-    style={
-      Object {
-        "color": "indianred",
-      }
-    }
-    title="Pyrrhula pyrrhula"
-  >
-    <span
-      className="sc-AxjAm sc-AxirZ eilfJa"
-      data-icon="n"
-      style={
-        Object {
-          "color": "indianred",
-        }
-      }
-      title="Pyrrhula pyrrhula"
-    />
-  </Styled(styled.span)>
-</EbiSpeciesIconBare>
-`;
-
-exports[`EbiSpeciesIconBare Icon of mapped species rabbit matches snapshot 1`] = `
-<EbiSpeciesIconBare
-  groupColors={
-    Object {
-      "other": "deepskyblue",
-      "plants": "mediumseagreen",
-      "warmBlooded": "indianred",
-    }
-  }
-  species="rabbit"
->
-  <Styled(styled.span)
-    data-icon="t"
-    style={
-      Object {
-        "color": "indianred",
-      }
-    }
-    title="Rabbit"
-  >
-    <span
-      className="sc-AxjAm sc-AxirZ eilfJa"
-      data-icon="t"
-      style={
-        Object {
-          "color": "indianred",
-        }
-      }
-      title="Rabbit"
-    />
-  </Styled(styled.span)>
-</EbiSpeciesIconBare>
-`;
-
-exports[`EbiSpeciesIconBare Icon of mapped species rat matches snapshot 1`] = `
-<EbiSpeciesIconBare
-  groupColors={
-    Object {
-      "other": "deepskyblue",
-      "plants": "mediumseagreen",
-      "warmBlooded": "indianred",
-    }
-  }
-  species="rat"
->
-  <Styled(styled.span)
-    data-icon="R"
-    style={
-      Object {
-        "color": "indianred",
-      }
-    }
-    title="Rat"
-  >
-    <span
-      className="sc-AxjAm sc-AxirZ eilfJa"
-      data-icon="R"
-      style={
-        Object {
-          "color": "indianred",
-        }
-      }
-      title="Rat"
-    />
-  </Styled(styled.span)>
-</EbiSpeciesIconBare>
-`;
-
-exports[`EbiSpeciesIconBare Icon of mapped species rattus norvegicus matches snapshot 1`] = `
-<EbiSpeciesIconBare
-  groupColors={
-    Object {
-      "other": "deepskyblue",
-      "plants": "mediumseagreen",
-      "warmBlooded": "indianred",
-    }
-  }
-  species="rattus norvegicus"
->
-  <Styled(styled.span)
-    data-icon="R"
-    style={
-      Object {
-        "color": "indianred",
-      }
-    }
-    title="Rattus norvegicus"
-  >
-    <span
-      className="sc-AxjAm sc-AxirZ eilfJa"
-      data-icon="R"
-      style={
-        Object {
-          "color": "indianred",
-        }
-      }
-      title="Rattus norvegicus"
-    />
-  </Styled(styled.span)>
-</EbiSpeciesIconBare>
-`;
-
-exports[`EbiSpeciesIconBare Icon of mapped species ray matches snapshot 1`] = `
-<EbiSpeciesIconBare
-  groupColors={
-    Object {
-      "other": "deepskyblue",
-      "plants": "mediumseagreen",
-      "warmBlooded": "indianred",
-    }
-  }
-  species="ray"
->
-  <Styled(styled.span)
-    data-icon="+"
-    style={
-      Object {
-        "color": "deepskyblue",
-      }
-    }
-    title="Ray"
-  >
-    <span
-      className="sc-AxjAm sc-AxirZ eilfJa"
-      data-icon="+"
-      style={
-        Object {
-          "color": "deepskyblue",
-        }
-      }
-      title="Ray"
-    />
-  </Styled(styled.span)>
-</EbiSpeciesIconBare>
-`;
-
-exports[`EbiSpeciesIconBare Icon of mapped species rice matches snapshot 1`] = `
-<EbiSpeciesIconBare
-  groupColors={
-    Object {
-      "other": "deepskyblue",
-      "plants": "mediumseagreen",
-      "warmBlooded": "indianred",
-    }
-  }
-  species="rice"
->
-  <Styled(styled.span)
-    data-icon="6"
-    style={
-      Object {
-        "color": "mediumseagreen",
-      }
-    }
-    title="Rice"
-  >
-    <span
-      className="sc-AxjAm sc-AxirZ eilfJa"
-      data-icon="6"
-      style={
-        Object {
-          "color": "mediumseagreen",
-        }
-      }
-      title="Rice"
-    />
-  </Styled(styled.span)>
-</EbiSpeciesIconBare>
-`;
-
-exports[`EbiSpeciesIconBare Icon of mapped species saccharomyces cerevisiae matches snapshot 1`] = `
-<EbiSpeciesIconBare
-  groupColors={
-    Object {
-      "other": "deepskyblue",
-      "plants": "mediumseagreen",
-      "warmBlooded": "indianred",
-    }
-  }
-  species="saccharomyces cerevisiae"
->
-  <Styled(styled.span)
-    data-icon="Y"
-    style={
-      Object {
-        "color": "deepskyblue",
-      }
-    }
-    title="Saccharomyces cerevisiae"
-  >
-    <span
-      className="sc-AxjAm sc-AxirZ eilfJa"
-      data-icon="Y"
-      style={
-        Object {
-          "color": "deepskyblue",
-        }
-      }
-      title="Saccharomyces cerevisiae"
-    />
-  </Styled(styled.span)>
-</EbiSpeciesIconBare>
-`;
-
-exports[`EbiSpeciesIconBare Icon of mapped species schistosoma mansoni matches snapshot 1`] = `
-<EbiSpeciesIconBare
-  groupColors={
-    Object {
-      "other": "deepskyblue",
-      "plants": "mediumseagreen",
-      "warmBlooded": "indianred",
-    }
-  }
-  species="schistosoma mansoni"
->
-  <Styled(styled.span)
-    data-icon="W"
-    style={
-      Object {
-        "color": "deepskyblue",
-      }
-    }
-    title="Schistosoma mansoni"
-  >
-    <span
-      className="sc-AxjAm sc-AxirZ eilfJa"
-      data-icon="W"
-      style={
-        Object {
-          "color": "deepskyblue",
-        }
-      }
-      title="Schistosoma mansoni"
-    />
-  </Styled(styled.span)>
-</EbiSpeciesIconBare>
-`;
-
-exports[`EbiSpeciesIconBare Icon of mapped species schizosaccharomyces pombe matches snapshot 1`] = `
-<EbiSpeciesIconBare
-  groupColors={
-    Object {
-      "other": "deepskyblue",
-      "plants": "mediumseagreen",
-      "warmBlooded": "indianred",
-    }
-  }
-  species="schizosaccharomyces pombe"
->
-  <Styled(styled.span)
-    data-icon="Y"
-    style={
-      Object {
-        "color": "deepskyblue",
-      }
-    }
-    title="Schizosaccharomyces pombe"
-  >
-    <span
-      className="sc-AxjAm sc-AxirZ eilfJa"
-      data-icon="Y"
-      style={
-        Object {
-          "color": "deepskyblue",
-        }
-      }
-      title="Schizosaccharomyces pombe"
-    />
-  </Styled(styled.span)>
-</EbiSpeciesIconBare>
-`;
-
-exports[`EbiSpeciesIconBare Icon of mapped species scorpion matches snapshot 1`] = `
-<EbiSpeciesIconBare
-  groupColors={
-    Object {
-      "other": "deepskyblue",
-      "plants": "mediumseagreen",
-      "warmBlooded": "indianred",
-    }
-  }
-  species="scorpion"
->
-  <Styled(styled.span)
-    data-icon="s"
-    style={
-      Object {
-        "color": "deepskyblue",
-      }
-    }
-    title="Scorpion"
-  >
-    <span
-      className="sc-AxjAm sc-AxirZ eilfJa"
-      data-icon="s"
-      style={
-        Object {
-          "color": "deepskyblue",
-        }
-      }
-      title="Scorpion"
-    />
-  </Styled(styled.span)>
-</EbiSpeciesIconBare>
-`;
-
-exports[`EbiSpeciesIconBare Icon of mapped species sheep matches snapshot 1`] = `
-<EbiSpeciesIconBare
-  groupColors={
-    Object {
-      "other": "deepskyblue",
-      "plants": "mediumseagreen",
-      "warmBlooded": "indianred",
-    }
-  }
-  species="sheep"
->
-  <Styled(styled.span)
-    data-icon="x"
-    style={
-      Object {
-        "color": "indianred",
-      }
-    }
-    title="Sheep"
-  >
-    <span
-      className="sc-AxjAm sc-AxirZ eilfJa"
-      data-icon="x"
-      style={
-        Object {
-          "color": "indianred",
-        }
-      }
-      title="Sheep"
-    />
-  </Styled(styled.span)>
-</EbiSpeciesIconBare>
-`;
-
-exports[`EbiSpeciesIconBare Icon of mapped species shrew matches snapshot 1`] = `
-<EbiSpeciesIconBare
-  groupColors={
-    Object {
-      "other": "deepskyblue",
-      "plants": "mediumseagreen",
-      "warmBlooded": "indianred",
-    }
-  }
-  species="shrew"
->
-  <Styled(styled.span)
-    data-icon="Q"
-    style={
-      Object {
-        "color": "indianred",
-      }
-    }
-    title="Shrew"
-  >
-    <span
-      className="sc-AxjAm sc-AxirZ eilfJa"
-      data-icon="Q"
-      style={
-        Object {
-          "color": "indianred",
-        }
-      }
-      title="Shrew"
-    />
-  </Styled(styled.span)>
-</EbiSpeciesIconBare>
-`;
-
-exports[`EbiSpeciesIconBare Icon of mapped species snail matches snapshot 1`] = `
-<EbiSpeciesIconBare
-  groupColors={
-    Object {
-      "other": "deepskyblue",
-      "plants": "mediumseagreen",
-      "warmBlooded": "indianred",
-    }
-  }
-  species="snail"
->
-  <Styled(styled.span)
-    data-icon="'"
-    style={
-      Object {
-        "color": "deepskyblue",
-      }
-    }
-    title="Snail"
-  >
-    <span
-      className="sc-AxjAm sc-AxirZ eilfJa"
-      data-icon="'"
-      style={
-        Object {
-          "color": "deepskyblue",
-        }
-      }
-      title="Snail"
-    />
-  </Styled(styled.span)>
-</EbiSpeciesIconBare>
-`;
-
-exports[`EbiSpeciesIconBare Icon of mapped species solanum lycopersicum matches snapshot 1`] = `
-<EbiSpeciesIconBare
-  groupColors={
-    Object {
-      "other": "deepskyblue",
-      "plants": "mediumseagreen",
-      "warmBlooded": "indianred",
-    }
-  }
-  species="solanum lycopersicum"
->
-  <Styled(styled.span)
-    data-icon=")"
-    style={
-      Object {
-        "color": "mediumseagreen",
-      }
-    }
-    title="Solanum lycopersicum"
-  >
-    <span
-      className="sc-AxjAm sc-AxirZ eilfJa"
-      data-icon=")"
-      style={
-        Object {
-          "color": "mediumseagreen",
-        }
-      }
-      title="Solanum lycopersicum"
-    />
-  </Styled(styled.span)>
-</EbiSpeciesIconBare>
-`;
-
-exports[`EbiSpeciesIconBare Icon of mapped species solanum tuberosum matches snapshot 1`] = `
-<EbiSpeciesIconBare
-  groupColors={
-    Object {
-      "other": "deepskyblue",
-      "plants": "mediumseagreen",
-      "warmBlooded": "indianred",
-    }
-  }
-  species="solanum tuberosum"
->
-  <Styled(styled.span)
-    data-icon=")"
-    style={
-      Object {
-        "color": "mediumseagreen",
-      }
-    }
-    title="Solanum tuberosum"
-  >
-    <span
-      className="sc-AxjAm sc-AxirZ eilfJa"
-      data-icon=")"
-      style={
-        Object {
-          "color": "mediumseagreen",
-        }
-      }
-      title="Solanum tuberosum"
-    />
-  </Styled(styled.span)>
-</EbiSpeciesIconBare>
-`;
-
-exports[`EbiSpeciesIconBare Icon of mapped species sorghum bicolor matches snapshot 1`] = `
-<EbiSpeciesIconBare
-  groupColors={
-    Object {
-      "other": "deepskyblue",
-      "plants": "mediumseagreen",
-      "warmBlooded": "indianred",
-    }
-  }
-  species="sorghum bicolor"
->
-  <Styled(styled.span)
-    data-icon="P"
-    style={
-      Object {
-        "color": "mediumseagreen",
-      }
-    }
-    title="Sorghum bicolor"
-  >
-    <span
-      className="sc-AxjAm sc-AxirZ eilfJa"
-      data-icon="P"
-      style={
-        Object {
-          "color": "mediumseagreen",
-        }
-      }
-      title="Sorghum bicolor"
-    />
-  </Styled(styled.span)>
-</EbiSpeciesIconBare>
-`;
-
-exports[`EbiSpeciesIconBare Icon of mapped species spider matches snapshot 1`] = `
-<EbiSpeciesIconBare
-  groupColors={
-    Object {
-      "other": "deepskyblue",
-      "plants": "mediumseagreen",
-      "warmBlooded": "indianred",
-    }
-  }
-  species="spider"
->
-  <Styled(styled.span)
-    data-icon="S"
-    style={
-      Object {
-        "color": "deepskyblue",
-      }
-    }
-    title="Spider"
-  >
-    <span
-      className="sc-AxjAm sc-AxirZ eilfJa"
-      data-icon="S"
-      style={
-        Object {
-          "color": "deepskyblue",
-        }
-      }
-      title="Spider"
-    />
-  </Styled(styled.span)>
-</EbiSpeciesIconBare>
-`;
-
-exports[`EbiSpeciesIconBare Icon of mapped species squirrel matches snapshot 1`] = `
-<EbiSpeciesIconBare
-  groupColors={
-    Object {
-      "other": "deepskyblue",
-      "plants": "mediumseagreen",
-      "warmBlooded": "indianred",
-    }
-  }
-  species="squirrel"
->
-  <Styled(styled.span)
-    data-icon="I"
-    style={
-      Object {
-        "color": "indianred",
-      }
-    }
-    title="Squirrel"
-  >
-    <span
-      className="sc-AxjAm sc-AxirZ eilfJa"
-      data-icon="I"
-      style={
-        Object {
-          "color": "indianred",
-        }
-      }
-      title="Squirrel"
-    />
-  </Styled(styled.span)>
-</EbiSpeciesIconBare>
-`;
-
-exports[`EbiSpeciesIconBare Icon of mapped species sus scrofa matches snapshot 1`] = `
-<EbiSpeciesIconBare
-  groupColors={
-    Object {
-      "other": "deepskyblue",
-      "plants": "mediumseagreen",
-      "warmBlooded": "indianred",
-    }
-  }
-  species="sus scrofa"
->
-  <Styled(styled.span)
-    data-icon="p"
-    style={
-      Object {
-        "color": "indianred",
-      }
-    }
-    title="Sus scrofa"
-  >
-    <span
-      className="sc-AxjAm sc-AxirZ eilfJa"
-      data-icon="p"
-      style={
-        Object {
-          "color": "indianred",
-        }
-      }
-      title="Sus scrofa"
-    />
-  </Styled(styled.span)>
-</EbiSpeciesIconBare>
-`;
-
-exports[`EbiSpeciesIconBare Icon of mapped species tetraodon nigroviridis matches snapshot 1`] = `
-<EbiSpeciesIconBare
-  groupColors={
-    Object {
-      "other": "deepskyblue",
-      "plants": "mediumseagreen",
-      "warmBlooded": "indianred",
-    }
-  }
-  species="tetraodon nigroviridis"
->
-  <Styled(styled.span)
-    data-icon="E"
-    style={
-      Object {
-        "color": "deepskyblue",
-      }
-    }
-    title="Tetraodon nigroviridis"
-  >
-    <span
-      className="sc-AxjAm sc-AxirZ eilfJa"
-      data-icon="E"
-      style={
-        Object {
-          "color": "deepskyblue",
-        }
-      }
-      title="Tetraodon nigroviridis"
-    />
-  </Styled(styled.span)>
-</EbiSpeciesIconBare>
-`;
-
-exports[`EbiSpeciesIconBare Icon of mapped species tick matches snapshot 1`] = `
-<EbiSpeciesIconBare
-  groupColors={
-    Object {
-      "other": "deepskyblue",
-      "plants": "mediumseagreen",
-      "warmBlooded": "indianred",
-    }
-  }
-  species="tick"
->
-  <Styled(styled.span)
-    data-icon="&"
-    style={
-      Object {
-        "color": "deepskyblue",
-      }
-    }
-    title="Tick"
-  >
-    <span
-      className="sc-AxjAm sc-AxirZ eilfJa"
-      data-icon="&"
-      style={
-        Object {
-          "color": "deepskyblue",
-        }
-      }
-      title="Tick"
-    />
-  </Styled(styled.span)>
-</EbiSpeciesIconBare>
-`;
-
-exports[`EbiSpeciesIconBare Icon of mapped species tomatoes matches snapshot 1`] = `
-<EbiSpeciesIconBare
-  groupColors={
-    Object {
-      "other": "deepskyblue",
-      "plants": "mediumseagreen",
-      "warmBlooded": "indianred",
-    }
-  }
-  species="tomatoes"
->
-  <Styled(styled.span)
-    data-icon=")"
-    style={
-      Object {
-        "color": "mediumseagreen",
-      }
-    }
-    title="Tomatoes"
-  >
-    <span
-      className="sc-AxjAm sc-AxirZ eilfJa"
-      data-icon=")"
-      style={
-        Object {
-          "color": "mediumseagreen",
-        }
-      }
-      title="Tomatoes"
-    />
-  </Styled(styled.span)>
-</EbiSpeciesIconBare>
-`;
-
-exports[`EbiSpeciesIconBare Icon of mapped species triticum aestivum matches snapshot 1`] = `
-<EbiSpeciesIconBare
-  groupColors={
-    Object {
-      "other": "deepskyblue",
-      "plants": "mediumseagreen",
-      "warmBlooded": "indianred",
-    }
-  }
-  species="triticum aestivum"
->
-  <Styled(styled.span)
-    data-icon="P"
-    style={
-      Object {
-        "color": "mediumseagreen",
-      }
-    }
-    title="Triticum aestivum"
-  >
-    <span
-      className="sc-AxjAm sc-AxirZ eilfJa"
-      data-icon="P"
-      style={
-        Object {
-          "color": "mediumseagreen",
-        }
-      }
-      title="Triticum aestivum"
-    />
-  </Styled(styled.span)>
-</EbiSpeciesIconBare>
-`;
-
-exports[`EbiSpeciesIconBare Icon of mapped species vicugna pacos matches snapshot 1`] = `
-<EbiSpeciesIconBare
-  groupColors={
-    Object {
-      "other": "deepskyblue",
-      "plants": "mediumseagreen",
-      "warmBlooded": "indianred",
-    }
-  }
-  species="vicugna pacos"
->
-  <Styled(styled.span)
-    data-icon="a"
-    style={
-      Object {
-        "color": "indianred",
-      }
-    }
-    title="Vicugna pacos"
-  >
-    <span
-      className="sc-AxjAm sc-AxirZ eilfJa"
-      data-icon="a"
-      style={
-        Object {
-          "color": "indianred",
-        }
-      }
-      title="Vicugna pacos"
-    />
-  </Styled(styled.span)>
-</EbiSpeciesIconBare>
-`;
-
-exports[`EbiSpeciesIconBare Icon of mapped species virus matches snapshot 1`] = `
-<EbiSpeciesIconBare
-  groupColors={
-    Object {
-      "other": "deepskyblue",
-      "plants": "mediumseagreen",
-      "warmBlooded": "indianred",
-    }
-  }
-  species="virus"
->
-  <Styled(styled.span)
-    data-icon="v"
-    style={
-      Object {
-        "color": "deepskyblue",
-      }
-    }
-    title="Virus"
-  >
-    <span
-      className="sc-AxjAm sc-AxirZ eilfJa"
-      data-icon="v"
-      style={
-        Object {
-          "color": "deepskyblue",
-        }
-      }
-      title="Virus"
-    />
-  </Styled(styled.span)>
-</EbiSpeciesIconBare>
-`;
-
-exports[`EbiSpeciesIconBare Icon of mapped species vitis vinifera matches snapshot 1`] = `
-<EbiSpeciesIconBare
-  groupColors={
-    Object {
-      "other": "deepskyblue",
-      "plants": "mediumseagreen",
-      "warmBlooded": "indianred",
-    }
-  }
-  species="vitis vinifera"
->
-  <Styled(styled.span)
-    data-icon="O"
-    style={
-      Object {
-        "color": "mediumseagreen",
-      }
-    }
-    title="Vitis vinifera"
-  >
-    <span
-      className="sc-AxjAm sc-AxirZ eilfJa"
-      data-icon="O"
-      style={
-        Object {
-          "color": "mediumseagreen",
-        }
-      }
-      title="Vitis vinifera"
-    />
-  </Styled(styled.span)>
-</EbiSpeciesIconBare>
-`;
-
-exports[`EbiSpeciesIconBare Icon of mapped species wallaby matches snapshot 1`] = `
-<EbiSpeciesIconBare
-  groupColors={
-    Object {
-      "other": "deepskyblue",
-      "plants": "mediumseagreen",
-      "warmBlooded": "indianred",
-    }
-  }
-  species="wallaby"
->
-  <Styled(styled.span)
-    data-icon="w"
-    style={
-      Object {
-        "color": "indianred",
-      }
-    }
-    title="Wallaby"
-  >
-    <span
-      className="sc-AxjAm sc-AxirZ eilfJa"
-      data-icon="w"
-      style={
-        Object {
-          "color": "indianred",
-        }
-      }
-      title="Wallaby"
-    />
-  </Styled(styled.span)>
-</EbiSpeciesIconBare>
-`;
-
-exports[`EbiSpeciesIconBare Icon of mapped species xenopus (silurana) tropicalis matches snapshot 1`] = `
-<EbiSpeciesIconBare
-  groupColors={
-    Object {
-      "other": "deepskyblue",
-      "plants": "mediumseagreen",
-      "warmBlooded": "indianred",
-    }
-  }
-  species="xenopus (silurana) tropicalis"
->
-  <Styled(styled.span)
-    data-icon="f"
-    style={
-      Object {
-        "color": "deepskyblue",
-      }
-    }
-    title="Xenopus (silurana) tropicalis"
-  >
-    <span
-      className="sc-AxjAm sc-AxirZ eilfJa"
-      data-icon="f"
-      style={
-        Object {
-          "color": "deepskyblue",
-        }
-      }
-      title="Xenopus (silurana) tropicalis"
-    />
-  </Styled(styled.span)>
-</EbiSpeciesIconBare>
-`;
-
-exports[`EbiSpeciesIconBare Icon of mapped species xenopus tropicalis matches snapshot 1`] = `
-<EbiSpeciesIconBare
-  groupColors={
-    Object {
-      "other": "deepskyblue",
-      "plants": "mediumseagreen",
-      "warmBlooded": "indianred",
-    }
-  }
-  species="xenopus tropicalis"
->
-  <Styled(styled.span)
-    data-icon="f"
-    style={
-      Object {
-        "color": "deepskyblue",
-      }
-    }
-    title="Xenopus tropicalis"
-  >
-    <span
-      className="sc-AxjAm sc-AxirZ eilfJa"
-      data-icon="f"
-      style={
-        Object {
-          "color": "deepskyblue",
-        }
-      }
-      title="Xenopus tropicalis"
-    />
-  </Styled(styled.span)>
-</EbiSpeciesIconBare>
-`;
-
-exports[`EbiSpeciesIconBare Icon of mapped species yeast matches snapshot 1`] = `
-<EbiSpeciesIconBare
-  groupColors={
-    Object {
-      "other": "deepskyblue",
-      "plants": "mediumseagreen",
-      "warmBlooded": "indianred",
-    }
-  }
-  species="yeast"
->
-  <Styled(styled.span)
-    data-icon="Y"
-    style={
-      Object {
-        "color": "deepskyblue",
-      }
-    }
-    title="Yeast"
-  >
-    <span
-      className="sc-AxjAm sc-AxirZ eilfJa"
-      data-icon="Y"
-      style={
-        Object {
-          "color": "deepskyblue",
-        }
-      }
-      title="Yeast"
-    />
-  </Styled(styled.span)>
-</EbiSpeciesIconBare>
-`;
-
-exports[`EbiSpeciesIconBare Icon of mapped species zea mays matches snapshot 1`] = `
-<EbiSpeciesIconBare
-  groupColors={
-    Object {
-      "other": "deepskyblue",
-      "plants": "mediumseagreen",
-      "warmBlooded": "indianred",
-    }
-  }
-  species="zea mays"
->
-  <Styled(styled.span)
-    data-icon="c"
-    style={
-      Object {
-        "color": "mediumseagreen",
-      }
-    }
-    title="Zea mays"
-  >
-    <span
-      className="sc-AxjAm sc-AxirZ eilfJa"
-      data-icon="c"
-      style={
-        Object {
-          "color": "mediumseagreen",
-        }
-      }
-      title="Zea mays"
-    />
-  </Styled(styled.span)>
-</EbiSpeciesIconBare>
-`;
-
-exports[`EbiSpeciesIconBare Icon of mapped species zebrafish matches snapshot 1`] = `
-<EbiSpeciesIconBare
-  groupColors={
-    Object {
-      "other": "deepskyblue",
-      "plants": "mediumseagreen",
-      "warmBlooded": "indianred",
-    }
-  }
-  species="zebrafish"
->
-  <Styled(styled.span)
-    data-icon="Z"
-    style={
-      Object {
-        "color": "deepskyblue",
-      }
-    }
-    title="Zebrafish"
-  >
-    <span
-      className="sc-AxjAm sc-AxirZ eilfJa"
-      data-icon="Z"
-      style={
-        Object {
-          "color": "deepskyblue",
-        }
-      }
-      title="Zebrafish"
-    />
-  </Styled(styled.span)>
-</EbiSpeciesIconBare>
-`;
-
-exports[`EbiSpeciesIconBare Icon of unknown species matches snapshot 1`] = `
-<EbiSpeciesIconBare
-  groupColors={
-    Object {
-      "other": "deepskyblue",
-      "plants": "mediumseagreen",
-      "warmBlooded": "indianred",
-    }
-  }
-  species="crocubot"
->
-  <Styled(styled.span)
-    data-icon="❔"
-    style={
-      Object {
-        "color": "black",
-      }
-    }
-    title="Crocubot"
-  >
-    <span
-      className="sc-AxjAm sc-AxirZ eilfJa"
-      data-icon="❔"
-      style={
-        Object {
-          "color": "black",
-        }
-      }
-      title="Crocubot"
-    />
-  </Styled(styled.span)>
-</EbiSpeciesIconBare>
+exports[`EbiSpeciesIcon with classes Icon of mapped species wallaby matches snapshot 1`] = `
+<span
+  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  data-icon="w"
+  style={
+    Object {
+      "color": "indianred",
+    }
+  }
+  title="Wallaby"
+/>
+`;
+
+exports[`EbiSpeciesIcon with classes Icon of mapped species xenopus (silurana) tropicalis matches snapshot 1`] = `
+<span
+  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  data-icon="f"
+  style={
+    Object {
+      "color": "deepskyblue",
+    }
+  }
+  title="Xenopus (silurana) tropicalis"
+/>
+`;
+
+exports[`EbiSpeciesIcon with classes Icon of mapped species xenopus tropicalis matches snapshot 1`] = `
+<span
+  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  data-icon="f"
+  style={
+    Object {
+      "color": "deepskyblue",
+    }
+  }
+  title="Xenopus tropicalis"
+/>
+`;
+
+exports[`EbiSpeciesIcon with classes Icon of mapped species yeast matches snapshot 1`] = `
+<span
+  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  data-icon="Y"
+  style={
+    Object {
+      "color": "deepskyblue",
+    }
+  }
+  title="Yeast"
+/>
+`;
+
+exports[`EbiSpeciesIcon with classes Icon of mapped species zea mays matches snapshot 1`] = `
+<span
+  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  data-icon="c"
+  style={
+    Object {
+      "color": "mediumseagreen",
+    }
+  }
+  title="Zea mays"
+/>
+`;
+
+exports[`EbiSpeciesIcon with classes Icon of mapped species zebrafish matches snapshot 1`] = `
+<span
+  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  data-icon="Z"
+  style={
+    Object {
+      "color": "deepskyblue",
+    }
+  }
+  title="Zebrafish"
+/>
+`;
+
+exports[`EbiSpeciesIcon with classes Icon of unknown species matches snapshot 1`] = `
+<span
+  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  data-icon="❔"
+  style={
+    Object {
+      "color": "black",
+    }
+  }
+  title="Crocubot"
+/>
 `;
