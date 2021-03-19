@@ -85,6 +85,18 @@ const experiment6 = {
       value: `authors_inferred_cell_type`,
       label: `Authors Inferred Cell Type`
     }
+  ],
+  plotTypeDropdown: [
+    {
+      plotType: `TSne`,
+      plotOptionsLabel: `Perplexities`,
+      plotOptions: [1, 2, 3, 4]
+    },
+    {
+      plotType: `UMap`,
+      plotOptionsLabel: `N-neighbors`,
+      plotOptions: [1, 2, 3]
+    }
   ]
 }
 
@@ -109,7 +121,7 @@ const experimentOmega = {
   ]
 }
 
-const { accession, perplexities, ks, metadata, species } = experiment6
+const { accession, perplexities, ks, metadata, species, plotTypeDropdown } = experiment6
 
 class Demo extends React.Component {
   constructor(props) {
@@ -172,6 +184,9 @@ class Demo extends React.Component {
           selectedPerplexity={this.state.perplexity}
           ks={ks}
           metadata={metadata}
+          plotTypeDropdown={plotTypeDropdown}
+          onChangePlotTypes={() => {}}
+          onChangePlotOptions={() => {}}
           selectedColourBy={this.state.selectedColourBy}
           selectedColourByCategory={this.state.selectedColourByCategory} // Is the plot coloured by clusters or metadata
           highlightClusters={this.state.highlightClusters}

@@ -87,9 +87,23 @@ describe(`ClusterTSnePlot`, () => {
   const props = {
     onChangeColourBy: () => {},
     onChangePerplexity: () => {},
+    onChangePlotOptions: () => {},
+    onChangePlotTypes: () => {},
     plotData: {
       series: []
     },
+    plotTypeDropdown: [
+      {
+        plotType: `TSne`,
+        plotOptionsLabel: `Perplexities`,
+        plotOptions: [1, 2, 3, 4]
+      },
+      {
+        plotType: `UMap`,
+        plotOptionsLabel: `N-neighbors`,
+        plotOptions: [1, 2, 3]
+      }
+    ],
     height: 500,
     metadata: [],
     ks: [],
@@ -111,10 +125,10 @@ describe(`ClusterTSnePlot`, () => {
     expect(wrapper.find(ScatterPlotLoader).length).toBe(1)
   })
 
-  test(`contains 2 PlotSettingsDropdowns`, () => {
+  test(`contains 3 PlotSettingsDropdowns`, () => {
     const wrapper = mount(<ClusterTSnePlot {...props} selectedColourBy={`0`} selectedPerplexity={0} showControls={true}/>)
 
-    expect(wrapper.find(PlotSettingsDropdown).length).toBe(2)
+    expect(wrapper.find(PlotSettingsDropdown).length).toBe(3)
   })
 
   test(`contains only 1 PlotSettingsDropdowns when showControls is false`, () => {
@@ -157,8 +171,8 @@ describe(`ClusterTSnePlot`, () => {
   })
 
   test(`hides the cluster name in tooltips if tSNE is coloured by metadata`, () => {
-    const randomSeries1 = randomHighchartsSeriesWithNamesAndMaxPoints(seriesNames, 10).map(point => Object.assign(point, {clusterType: "clusters"}))
-    const randomSeries2 = randomHighchartsSeriesWithNamesAndMaxPoints(seriesNames, 10).map(point => Object.assign(point, {clusterType: "metadata"}))
+    const randomSeries1 = randomHighchartsSeriesWithNamesAndMaxPoints(seriesNames, 10).map(point => Object.assign(point, {clusterType: `clusters`}))
+    const randomSeries2 = randomHighchartsSeriesWithNamesAndMaxPoints(seriesNames, 10).map(point => Object.assign(point, {clusterType: `metadata`}))
     randomSeries1.forEach(point => expect(tooltipHeader(point.clusterType, point, point)).toContain(`Cluster name`))
     randomSeries2.forEach(point => expect(tooltipHeader(point.clusterType, point, point)).not.toContain(`Cluster name`))
   })

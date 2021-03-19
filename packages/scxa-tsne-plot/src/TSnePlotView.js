@@ -97,8 +97,8 @@ class TSnePlotView extends React.Component {
     const {wrapperClassName, clusterPlotClassName, expressionPlotClassName} = this.props
     const {geneId, speciesName, geneIds} = this.props
     const highlightClusters = []
-    const {ks, perplexities, selectedPerplexity, metadata, selectedColourBy, selectedColourByCategory} = this.props
-    const {onChangePerplexity, onSelectGeneId, onChangeColourBy} = this.props
+    const {ks, perplexities, selectedPerplexity, metadata, selectedColourBy, selectedColourByCategory, plotTypeDropdown} = this.props
+    const {onChangePerplexity, onSelectGeneId, onChangeColourBy, onChangePlotOptions, onChangePlotTypes} = this.props
     const {loadingGeneExpression, geneExpressionData, geneExpressionErrorMessage} = this.state
     const {loadingCellClusters, cellClustersData, cellClustersErrorMessage} = this.state
 
@@ -126,6 +126,9 @@ class TSnePlotView extends React.Component {
             perplexities={perplexities}
             selectedPerplexity={selectedPerplexity}
             onChangePerplexity={onChangePerplexity}
+            onChangePlotOptions={onChangePlotOptions}
+            onChangePlotTypes={onChangePlotTypes}
+            plotTypeDropdown={plotTypeDropdown}
             ks={ks}
             metadata={metadata}
             onChangeColourBy={onChangeColourBy}
@@ -195,7 +198,16 @@ TSnePlotView.propTypes = {
   height: PropTypes.number,
   resourcesUrl: PropTypes.string,
   onSelectGeneId: PropTypes.func,
-  onChangePerplexity: PropTypes.func
+  onChangePerplexity: PropTypes.func,
+  onChangePlotOptions: PropTypes.func,
+  onChangePlotTypes: PropTypes.func,
+  plotTypeDropdown: PropTypes.arrayOf(
+    PropTypes.shape({
+      plotType: PropTypes.string,
+      plotOptionsLabel: PropTypes.string,
+      plotOptions: PropTypes.arrayOf(PropTypes.number)
+    })
+  )
 }
 
 TSnePlotView.defaultProps = {
