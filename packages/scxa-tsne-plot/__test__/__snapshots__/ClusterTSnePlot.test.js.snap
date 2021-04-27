@@ -9,7 +9,7 @@ Array [
       className="small-12 medium-6 columns"
     >
       <label>
-        t-SNE Perplexity
+        Plot Types
       </label>
       <div
         className=" css-2b097c-container"
@@ -26,7 +26,7 @@ Array [
             <div
               className=" css-1uccc91-singleValue"
             >
-              0
+              TSne
             </div>
             <div
               className="css-b8ldur-Input"
@@ -46,6 +46,94 @@ Array [
                   autoCorrect="off"
                   disabled={false}
                   id="react-select-2-input"
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  onFocus={[Function]}
+                  spellCheck="false"
+                  style={
+                    Object {
+                      "background": 0,
+                      "border": 0,
+                      "boxSizing": "content-box",
+                      "color": "inherit",
+                      "fontSize": "inherit",
+                      "label": "input",
+                      "opacity": 1,
+                      "outline": 0,
+                      "padding": 0,
+                      "width": "1px",
+                    }
+                  }
+                  tabIndex="0"
+                  type="text"
+                  value=""
+                />
+                <div
+                  style={
+                    Object {
+                      "height": 0,
+                      "left": 0,
+                      "overflow": "scroll",
+                      "position": "absolute",
+                      "top": 0,
+                      "visibility": "hidden",
+                      "whiteSpace": "pre",
+                    }
+                  }
+                >
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className=" css-1hb7zxy-IndicatorsContainer"
+          >
+            <span
+              className="sc-AxirZ eHnaPO"
+              cx={[Function]}
+            />
+          </div>
+        </div>
+      </div>
+      <label>
+        Perplexities
+      </label>
+      <div
+        className=" css-2b097c-container"
+        onKeyDown={[Function]}
+      >
+        <div
+          className=" css-15r8ym2-Control"
+          onMouseDown={[Function]}
+          onTouchEnd={[Function]}
+        >
+          <div
+            className=" css-g1d714-ValueContainer"
+          >
+            <div
+              className=" css-1uccc91-singleValue"
+            >
+              1
+            </div>
+            <div
+              className="css-b8ldur-Input"
+            >
+              <div
+                className=""
+                style={
+                  Object {
+                    "display": "inline-block",
+                  }
+                }
+              >
+                <input
+                  aria-autocomplete="list"
+                  autoCapitalize="none"
+                  autoComplete="off"
+                  autoCorrect="off"
+                  disabled={false}
+                  id="react-select-3-input"
                   onBlur={[Function]}
                   onChange={[Function]}
                   onFocus={[Function]}
@@ -137,7 +225,7 @@ Array [
                   autoComplete="off"
                   autoCorrect="off"
                   disabled={false}
-                  id="react-select-3-input"
+                  id="react-select-4-input"
                   onBlur={[Function]}
                   onChange={[Function]}
                   onFocus={[Function]}
