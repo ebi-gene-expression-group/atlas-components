@@ -102,7 +102,8 @@ export default class TableManager extends React.Component {
       ,
       searchAll: ``,
       filters: filters,
-      selectedRows: []
+      selectedRows: [],
+      filteredSortedDataRows: []
     }
 
     const doFilterAndSort = () =>
@@ -196,6 +197,22 @@ export default class TableManager extends React.Component {
       },
       () => this.immediateFilterAndSort()
     )
+  }
+
+  componentDidUpdate(previousProps) {
+    if (previousProps.dataRows !== this.props.dataRows) {
+      this.setState(
+          {
+            filteredSortedDataRows: filterSortDataRows(
+                this.props.dataRows,
+                this.state.filters,
+                this.props.tableHeaders.map(tableHeader => tableHeader.dataKey),
+                this.state.searchAll,
+                this.props.tableHeaders.length > 0 ? this.props.tableHeaders[this.state.sortColumnIndex].dataKey : ``,
+                this.state.ascendingOrder)
+          }
+      )
+    }
   }
 
   render() {
