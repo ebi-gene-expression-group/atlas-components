@@ -54,12 +54,12 @@ class TSnePlotView extends React.Component {
   }
 
   _fetchAndSetStateCellClusters(
-    {atlasUrl, experimentAccession, selectedColourBy, selectedColourByCategory, selectedPerplexity}) {
+    {atlasUrl, experimentAccession, selectedColourBy, selectedColourByCategory, selectedPerplexity, plotType}) {
     const resource =
       selectedColourByCategory === `clusters` ?
-        `json/experiments/${experimentAccession}/tsneplot/${selectedPerplexity}/clusters/k/${selectedColourBy}` :
+        `json/experiments/${experimentAccession}/tsneplot/${selectedPerplexity}/clusters/variable/${selectedColourBy}?method=${plotType}` :
         selectedColourByCategory === `metadata` ?
-          `json/experiments/${experimentAccession}/tsneplot/${selectedPerplexity}/metadata/${selectedColourBy}` :
+          `json/experiments/${experimentAccession}/tsneplot/${selectedPerplexity}/clusters/variable/${selectedColourBy}?method=${plotType}` :
           // We shouldn’t arrive here...
           undefined
 
@@ -67,8 +67,8 @@ class TSnePlotView extends React.Component {
       resource, atlasUrl, `cellClustersData`, `cellClustersErrorMessage`, `loadingCellClusters`)
   }
 
-  _fetchAndSetStateGeneId({atlasUrl, experimentAccession, selectedPerplexity, geneId}) {
-    const resource = `json/experiments/${experimentAccession}/tsneplot/${selectedPerplexity}/expression/${geneId}`
+  _fetchAndSetStateGeneId({atlasUrl, experimentAccession, selectedPerplexity, geneId, plotType}) {
+    const resource = `json/experiments/${experimentAccession}/tsneplot/${selectedPerplexity}/expression/${geneId}?method=${plotType}`
 
     this._fetchAndSetState(
       resource, atlasUrl, `geneExpressionData`, `geneExpressionErrorMessage`, `loadingGeneExpression`)
@@ -76,7 +76,9 @@ class TSnePlotView extends React.Component {
 
   componentDidUpdate(previousProps) {
     if (previousProps.selectedPerplexity !== this.props.selectedPerplexity ||
-      previousProps.experimentAccession !== this.props.experimentAccession) {
+      previousProps.experimentAccession !== this.props.experimentAccession ||
+        previousProps.plotType !== this.props.plotType
+    ) {
       this._fetchAndSetStateCellClusters(this.props)
       this._fetchAndSetStateGeneId(this.props)
     } else if (previousProps.selectedColourByCategory !== this.props.selectedColourByCategory ||
@@ -219,6 +221,7 @@ TSnePlotView.defaultProps = {
   geneId: ``,
   speciesName: ``,
   height: 800,
+  plotType: `tsne`,
   onSelectGeneId: () => {},
   onChangeColourBy: () => {},
   onPerplexityChange: () => {}
