@@ -39,32 +39,25 @@ class ClusterTSnePlot extends React.Component {
     super(props)
 
     this.state = {
-      selectedPlotType: this.props.plotTypeDropdown[0].plotType,
-      plotOptions: this.props.plotTypeDropdown[0].plotOptions,
-      plotOptionsLabel: this.props.plotTypeDropdown[0].plotOptionsLabel
     }
-
-    this.updateSelectedPlotType = this.updateSelectedPlotType.bind(this)
-  }
-
-  updateSelectedPlotType(plotType)
-  {
-    let plot = _find(this.props.plotTypeDropdown, (plot) => {
-      return plot.plotType === plotType.value})
-
-    this.setState({
-      selectedPlotType: plotType.value,
-      plotOptions: plot.plotOptions,
-      plotOptionsLabel: plot.plotOptionsLabel
-    })
   }
 
   render() {
     const {ks, metadata, selectedColourBy, onChangeColourBy, clusterType, onChangePlotOptions,
-      onChangePlotTypes, plotTypeDropdown} = this.props  // Select
+      onChangePlotTypes, plotTypeDropdown, selectedPlotType, selectedParameter} = this.props  // Select
     const {plotData, highlightClusters, height, tooltipContent} = this.props   // Chart
     const {loading, resourcesUrl, errorMessage, showControls} = this.props   // Overlay
-    const {selectedPlotType, plotOptions, plotOptionsLabel} = this.state
+
+    const plot = _find(plotTypeDropdown, (plot) => plot.plotType.toLowerCase() === selectedPlotType)
+
+    const plotOptions = plot.plotOptions
+    const plotOptionsValues = plotOptions.map((value) => ({value: value, label: value}))
+    const plotOptionsLabel = plot.plotOptionsLabel
+    const plotTypesOptions = plotTypeDropdown.map((plot) => ({
+      value: plot.plotType.toLowerCase(),
+      label: plot.plotType
+    }))
+
     const opacity = 0.7
 
     const highchartsConfig = {
@@ -143,16 +136,6 @@ class ClusterTSnePlot extends React.Component {
       }
     }
 
-    const plotOptionsValues = this.state.plotOptions.map((value) => ({
-      value: value,
-      label: value
-    }))
-
-    const plotTypesOptions = plotTypeDropdown.map((plot) => ({
-      value: plot.plotType,
-      label: plot.plotType
-    }))
-
     const kOptions = ks.sort((a, b) => a - b).map((k) => ({
       value: k.toString(),
       label: `k = ${k}`,
@@ -193,31 +176,32 @@ class ClusterTSnePlot extends React.Component {
       })
     }
 
-
-
     return (
       <React.Fragment>
         <div key={`perplexity-k-select`} className={`row`}>
           {showControls &&
-        <div className={`small-12 medium-6 columns`}>
+<div>
+        <div className={`small-12 medium-3 columns`}>
           <PlotSettingsDropdown
             labelText={`Plot Types`}
             options={plotTypesOptions}
-            defaultValue={{value: selectedPlotType, label: selectedPlotType}}
-            onSelect={(selectedOption) => {
-              this.updateSelectedPlotType(selectedOption)
-              onChangePlotOptions(selectedOption.value)
+            defaultValue={{value: selectedPlotType, label: plot.plotType}}
+            onSelect={(selectedPlotType) => {
+              onChangePlotTypes(selectedPlotType.value)
             }}/>
+        </div>
+          <div className={`small-12 medium-3 columns`}>
           <PlotSettingsDropdown
             labelText={plotOptionsLabel}
             options={plotOptionsValues}
-            defaultValue={{value: plotOptions[0], label: plotOptions[0]}}
+            defaultValue={{value: selectedParameter, label: selectedParameter}}
             onSelect={(selectedOption) => {
-              onChangePlotTypes(selectedOption.value)
+              onChangePlotOptions(selectedOption.value)
             }}/>
-        </div>
+            </div>
+  </div>
           }
-          <div className={`small-12 medium-6 columns`}>
+          <div className={`small-12 medium-3 columns`}>
             <PlotSettingsDropdown
               labelText={`Colour plot by:`}
               options={metadata ? options : kOptions} // Some experiments don't have metadata in Solr, although they should do. Leaving this check in for now so we don't break the entire experiment page.
@@ -263,10 +247,8 @@ ClusterTSnePlot.propTypes = {
   onChangeColourBy: PropTypes.func,
   clusterType: PropTypes.string,
 
-  perplexities: PropTypes.arrayOf(PropTypes.number).isRequired,
-  selectedPerplexity: PropTypes.number.isRequired,
-  onChangePerplexity: PropTypes.func.isRequired,
-
+  selectedPlotType: PropTypes.string.isRequired,
+  selectedParameter: PropTypes.number.isRequired,
   onChangePlotOptions: PropTypes.func.isRequired,
   onChangePlotTypes: PropTypes.func.isRequired,
 
