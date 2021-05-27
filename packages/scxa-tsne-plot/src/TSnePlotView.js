@@ -102,12 +102,14 @@ class TSnePlotView extends React.Component {
     const plot = _find(plotTypeDropdown, (plot) => plot.plotType.toLowerCase() === selectedPlotType)
 
     const plotOptions = plot.plotOptions
-    const plotOptionsValues = plotOptions.map((value) => ({value: value, label: value}))
+    const plotOptionsValues = plotOptions.map((value) => ( selectedPlotType == `tSNE` ?
+          {value: value, label: `perplexity=` + value} : {value: value, label: `n_neighbors=` + value}
+    ))
     const plotOptionsLabel = plot.plotOptionsLabel
     const plotTypesOptions = plotTypeDropdown.map((plot) => ({
-      value: plot.plotType.toLowerCase(),
-      label: plot.plotType
-    }))
+          value: plot.plotType.toLowerCase(),
+          label: plot.plotType
+        }))
 
     const getTooltipContent = async (cellId) => {
       const url = URI(`json/experiment/${this.props.experimentAccession}/cell/${cellId}/metadata`, atlasUrl).toString()
@@ -129,7 +131,7 @@ class TSnePlotView extends React.Component {
         <div className={`row expanded`}>
           <div className={`small-12 medium-6 columns`}>
             <PlotSettingsDropdown
-                labelText={`Plot Types`}
+                labelText={`Plot type:`}
                 options={plotTypesOptions}
                 defaultValue={{value: selectedPlotType, label: plot.plotType}}
                 onSelect={(selectedPlotType) => {
@@ -140,7 +142,8 @@ class TSnePlotView extends React.Component {
             <PlotSettingsDropdown
                 labelText={plotOptionsLabel}
                 options={plotOptionsValues}
-                defaultValue={{value: selectedParameter, label: selectedParameter}}
+                defaultValue={{value: selectedParameter,
+                  label: selectedPlotType == `tSNE` ? `perplexity=` + selectedParameter : `n_neighbor=` + selectedParameter}}
                 onSelect={(selectedOption) => {
                   onChangePlotOptions(selectedOption.value)
                 }}/>
