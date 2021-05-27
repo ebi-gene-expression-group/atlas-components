@@ -93,12 +93,12 @@ const experiment6 = {
   plotTypeDropdown: [
     {
       plotType: `UMAP`,
-      plotOptionsLabel: `N-neighbors`,
+      plotOptionsLabel: `Options:`,
       plotOptions: [5, 10, 15, 20, 25, 50, 100]
     },
     {
       plotType: `tSNE`,
-      plotOptionsLabel: `Perplexities`,
+      plotOptionsLabel: `Options:`,
       plotOptions: [1, 5 ,10, 15, 20, 25, 30, 35, 40, 45, 50]
     }
   ]
@@ -179,8 +179,6 @@ class Demo extends React.Component {
   render() {
     return(
        <div className={`row column expanded`}>
-
-
         <TsnePlotView
           atlasUrl={`http://localhost:8080/gxa/sc/`}
           suggesterEndpoint={`json/suggestions`}
