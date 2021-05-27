@@ -92,14 +92,14 @@ const experiment6 = {
   ],
   plotTypeDropdown: [
     {
-      plotType: `UMap`,
+      plotType: `UMAP`,
       plotOptionsLabel: `N-neighbors`,
-      plotOptions: [10, 20]
+      plotOptions: [5, 10, 15, 20, 25, 50, 100]
     },
     {
-      plotType: `TSne`,
+      plotType: `tSNE`,
       plotOptionsLabel: `Perplexities`,
-      plotOptions: [10]
+      plotOptions: [1, 5 ,10, 15, 20, 25, 30, 35, 40, 45, 50]
     }
   ]
 }
@@ -137,7 +137,8 @@ class Demo extends React.Component {
       selectedParameter: plotTypeDropdown[0].plotOptions[0],
       selectedColourBy: ks[Math.round((ks.length -1) / 2)].toString(),
       highlightClusters: [],
-      experimentAccession: accession
+      experimentAccession: accession,
+      selectedColourByCategory: `clusters`
     }
 
     this.experimentAccessionInput = React.createRef()
@@ -161,11 +162,8 @@ class Demo extends React.Component {
     })
     this.highlightClustersInput.current.value = `` // reset the form field
   }
-
-  render() {
-    return(
-      <div className={`row column expanded`}>
-        <div className={`row column expanded`}>
+  /*
+          <div className={`row column expanded`}>
           <form onSubmit={this._handleSubmit}>
             <label>Highlight clusters (cluster integer IDs separated by commas):
               <input name={`inputHighlightClusters`} type={`text`} ref={this.highlightClustersInput} defaultValue={``}/>
@@ -176,6 +174,12 @@ class Demo extends React.Component {
             <button className={`button`} type="submit">Submit</button>
           </form>
         </div>
+   */
+
+  render() {
+    return(
+       <div className={`row column expanded`}>
+
 
         <TsnePlotView
           atlasUrl={`http://localhost:8080/gxa/sc/`}
@@ -188,6 +192,7 @@ class Demo extends React.Component {
           selectedPlotType={this.state.selectedPlotType}
           ks={ks}
           metadata={metadata}
+          selectedColourByCategory={this.state.selectedColourByCategory}
           plotTypeDropdown={plotTypeDropdown}
           onChangePlotTypes={
               (plotOption) => {
@@ -199,7 +204,8 @@ class Demo extends React.Component {
           onChangePlotOptions={
             (plotOption) => {
               this.setState({
-                selectedParameter: plotOption
+                selectedParameter: plotOption,
+                clusterType: plotOption
               })}
           }
           selectedColourBy={this.state.selectedColourBy}
@@ -209,7 +215,9 @@ class Demo extends React.Component {
           onChangeColourBy={
             (colourByCategory, colourByValue) => {
               this.setState({
-                selectedColourBy : colourByValue
+                selectedColourBy : colourByValue,
+                selectedColourByCategory : colourByCategory
+
               })
               this._resetHighlightClusters()
             }
