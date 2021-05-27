@@ -5,6 +5,8 @@ import URI from 'urijs'
 
 import ClusterTSnePlot from './ClusterTSnePlot'
 import GeneExpressionTSnePlot from './GeneExpressionTSnePlot'
+import PlotSettingsDropdown from "./PlotSettingsDropdown";
+import {find as _find} from "lodash";
 
 class TSnePlotView extends React.Component {
   constructor(props) {
@@ -88,7 +90,7 @@ class TSnePlotView extends React.Component {
   }
 
   render() {
-    const {height, atlasUrl, resourcesUrl, suggesterEndpoint, showControls} = this.props
+    const {height, atlasUrl, resourcesUrl, suggesterEndpoint, showControls, selectedColourByCategory} = this.props
     const {wrapperClassName, clusterPlotClassName, expressionPlotClassName} = this.props
     const {geneId, speciesName, geneIds} = this.props
     const highlightClusters = []
@@ -96,6 +98,16 @@ class TSnePlotView extends React.Component {
     const {onSelectGeneId, onChangeColourBy, onChangePlotOptions, onChangePlotTypes} = this.props
     const {loadingGeneExpression, geneExpressionData, geneExpressionErrorMessage} = this.state
     const {loadingCellClusters, cellClustersData, cellClustersErrorMessage} = this.state
+
+    const plot = _find(plotTypeDropdown, (plot) => plot.plotType.toLowerCase() === selectedPlotType)
+
+    const plotOptions = plot.plotOptions
+    const plotOptionsValues = plotOptions.map((value) => ({value: value, label: value}))
+    const plotOptionsLabel = plot.plotOptionsLabel
+    const plotTypesOptions = plotTypeDropdown.map((plot) => ({
+      value: plot.plotType.toLowerCase(),
+      label: plot.plotType
+    }))
 
     const getTooltipContent = async (cellId) => {
       const url = URI(`json/experiment/${this.props.experimentAccession}/cell/${cellId}/metadata`, atlasUrl).toString()
@@ -114,6 +126,27 @@ class TSnePlotView extends React.Component {
 
     return (
       <div className={wrapperClassName}>
+        <div className={`row expanded`}>
+          <div className={`small-12 medium-6 columns`}>
+            <PlotSettingsDropdown
+                labelText={`Plot Types`}
+                options={plotTypesOptions}
+                defaultValue={{value: selectedPlotType, label: plot.plotType}}
+                onSelect={(selectedPlotType) => {
+                  onChangePlotTypes(selectedPlotType.value)
+                }}/>
+          </div>
+          <div className={`small-12 medium-6 columns`}>
+            <PlotSettingsDropdown
+                labelText={plotOptionsLabel}
+                options={plotOptionsValues}
+                defaultValue={{value: selectedParameter, label: selectedParameter}}
+                onSelect={(selectedOption) => {
+                  onChangePlotOptions(selectedOption.value)
+                }}/>
+          </div>
+        </div>
+
         <div className={clusterPlotClassName}>
           <ClusterTSnePlot
             height={height}
@@ -125,6 +158,7 @@ class TSnePlotView extends React.Component {
             plotTypeDropdown={plotTypeDropdown}
             ks={ks}
             metadata={metadata}
+            clusterType={selectedColourByCategory}
             onChangeColourBy={onChangeColourBy}
             selectedColourBy={selectedColourBy}
             highlightClusters={highlightClusters}
@@ -192,6 +226,7 @@ TSnePlotView.propTypes = {
   onChangePlotOptions: PropTypes.func,
   onChangePlotTypes: PropTypes.func,
   selectedPlotType: PropTypes.string.isRequired,
+  selectedColourByCategory: PropTypes.string,
   plotTypeDropdown: PropTypes.arrayOf(
     PropTypes.shape({
       plotType: PropTypes.string,
