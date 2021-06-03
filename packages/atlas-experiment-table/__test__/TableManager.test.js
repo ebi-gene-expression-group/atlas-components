@@ -184,6 +184,21 @@ describe(`TableManager`, () => {
     expect(wrapper.find(TableContent).prop(`dataRows`)).toHaveLength(0)
   })
 
+  test(`props change call ComponentDidUpdate function`, () => {
+    const wrapper =
+        shallow(
+            <TableManager
+                {...props}
+                dataRows={bulkExperiments}
+                tableHeaders={bulkTableHeaders}
+                dropdownFilters={bulkDropdownFilters}/>)
+
+    wrapper.setProps({dataRows: singleCellExperiments})
+    // logic to test here is once ComponentDidUpdate is called it will update state variable `filteredSortedDataRows`
+    // according to the new props which has been set in previous step
+    expect(wrapper.state(`filteredSortedDataRows`)).toHaveLength(wrapper.instance().props.dataRows.length)
+  })
+
   test(`can filter using a randomly picked searchable header, filtering is debounced 600ms (results found)`, (done) => {
     const wrapper =
       shallow(
