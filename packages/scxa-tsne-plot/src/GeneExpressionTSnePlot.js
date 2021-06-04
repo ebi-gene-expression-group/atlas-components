@@ -165,7 +165,8 @@ const GeneExpressionScatterPlot = (props) => {
 
 
   const geneIdControl = geneIds.length ? <PlotSettingsDropdown
-          labelText={`Gene Ids`}
+          labelText={`Gene Ids:`}
+          labelText={`Gene Ids:`}
           options={geneIdOptions}
           defaultValue={{value: geneId, label: geneId}}
           onSelect={(event) => {
