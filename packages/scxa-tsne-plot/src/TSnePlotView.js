@@ -140,7 +140,7 @@ class TSnePlotView extends React.Component {
           </div>
           <div className={`small-12 medium-6 columns`}>
             <PlotSettingsDropdown
-                labelText={plotOptionsLabel}
+                labelText={`Options:`}
                 options={plotOptionsValues}
                 defaultValue={{value: selectedParameter,
                   label: selectedPlotType == `tSNE` ? `perplexity=` + selectedParameter : `n_neighbor=` + selectedParameter}}

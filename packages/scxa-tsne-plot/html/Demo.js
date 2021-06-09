@@ -93,12 +93,10 @@ const experiment6 = {
   plotTypeDropdown: [
     {
       plotType: `UMAP`,
-      plotOptionsLabel: `Options:`,
       plotOptions: [5, 10, 15, 20, 25, 50, 100]
     },
     {
       plotType: `tSNE`,
-      plotOptionsLabel: `Options:`,
       plotOptions: [1, 5 ,10, 15, 20, 25, 30, 35, 40, 45, 50]
     }
   ]
