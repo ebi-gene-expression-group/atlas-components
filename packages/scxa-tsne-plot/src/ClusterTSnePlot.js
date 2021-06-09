@@ -203,23 +203,11 @@ ClusterTSnePlot.propTypes = {
   onChangeColourBy: PropTypes.func,
   clusterType: PropTypes.string,
 
-  selectedPlotType: PropTypes.string.isRequired,
-  selectedParameter: PropTypes.number.isRequired,
-  onChangePlotOptions: PropTypes.func.isRequired,
-  onChangePlotTypes: PropTypes.func.isRequired,
-
   loading: PropTypes.bool.isRequired,
   resourcesUrl: PropTypes.string,
   errorMessage: PropTypes.string,
 
-  tooltipContent: PropTypes.func,
-  plotTypeDropdown: PropTypes.arrayOf(
-    PropTypes.shape({
-      plotType: PropTypes.string,
-      plotOptionsLabel: PropTypes.string,
-      plotOptions: PropTypes.arrayOf(PropTypes.number)
-    })
-  )
+  tooltipContent: PropTypes.func
 }
 
 export {ClusterTSnePlot as default, _colourizeClusters, tooltipHeader}

@@ -56,22 +56,22 @@ class TSnePlotView extends React.Component {
   }
 
   _fetchAndSetStateCellClusters(
-    {atlasUrl, experimentAccession, selectedColourBy, selectedParameter, selectedPlotType}) {
-    const resource = `json/experiments/${experimentAccession}/tsneplot/${selectedParameter}/clusters/variable/${selectedColourBy}?method=${selectedPlotType}`
+    {atlasUrl, experimentAccession, selectedColourBy, selectedPlotOption, selectedPlotType}) {
+    const resource = `json/experiments/${experimentAccession}/tsneplot/${selectedPlotOption}/clusters/variable/${selectedColourBy}?method=${selectedPlotType}`
 
     this._fetchAndSetState(
       resource, atlasUrl, `cellClustersData`, `cellClustersErrorMessage`, `loadingCellClusters`)
   }
 
-  _fetchAndSetStateGeneId({atlasUrl, experimentAccession, selectedParameter, geneId, selectedPlotType}) {
-    const resource = `json/experiments/${experimentAccession}/tsneplot/${selectedParameter}/expression/${geneId}?method=${selectedPlotType}`
+  _fetchAndSetStateGeneId({atlasUrl, experimentAccession, selectedPlotOption, geneId, selectedPlotType}) {
+    const resource = `json/experiments/${experimentAccession}/tsneplot/${selectedPlotOption}/expression/${geneId}?method=${selectedPlotType}`
 
     this._fetchAndSetState(
       resource, atlasUrl, `geneExpressionData`, `geneExpressionErrorMessage`, `loadingGeneExpression`)
   }
 
   componentDidUpdate(previousProps) {
-    if (previousProps.selectedParameter !== this.props.selectedParameter ||
+    if (previousProps.selectedPlotOption !== this.props.selectedPlotOption ||
         previousProps.experimentAccession !== this.props.experimentAccession ||
         previousProps.selectedPlotType !== this.props.selectedPlotType
     ) {
@@ -94,7 +94,7 @@ class TSnePlotView extends React.Component {
     const {wrapperClassName, clusterPlotClassName, expressionPlotClassName} = this.props
     const {geneId, speciesName, geneIds} = this.props
     const highlightClusters = []
-    const {ks, selectedParameter, selectedPlotType, metadata, selectedColourBy, plotTypeDropdown} = this.props
+    const {ks, selectedPlotOption, selectedPlotType, metadata, selectedColourBy, plotTypeDropdown} = this.props
     const {onSelectGeneId, onChangeColourBy, onChangePlotOptions, onChangePlotTypes} = this.props
     const {loadingGeneExpression, geneExpressionData, geneExpressionErrorMessage} = this.state
     const {loadingCellClusters, cellClustersData, cellClustersErrorMessage} = this.state
@@ -102,7 +102,7 @@ class TSnePlotView extends React.Component {
     const plot = _find(plotTypeDropdown, (plot) => plot.plotType.toLowerCase() === selectedPlotType)
 
     const plotOptions = plot.plotOptions
-    const plotOptionsValues = plotOptions.map((value) => ( selectedPlotType == `tSNE` ?
+    const plotOptionsValues = plotOptions.map((value) => ( selectedPlotType === `tSNE` ?
           {value: value, label: `perplexity=` + value} : {value: value, label: `n_neighbors=` + value}
     ))
     const plotOptionsLabel = plot.plotOptionsLabel
@@ -142,8 +142,8 @@ class TSnePlotView extends React.Component {
             <PlotSettingsDropdown
                 labelText={`Options:`}
                 options={plotOptionsValues}
-                defaultValue={{value: selectedParameter,
-                  label: selectedPlotType == `tSNE` ? `perplexity=` + selectedParameter : `n_neighbor=` + selectedParameter}}
+                defaultValue={{value: selectedPlotOption,
+                  label: selectedPlotType === `tSNE` ? `perplexity=` + selectedPlotOption : `n_neighbor=` + selectedPlotOption}}
                 onSelect={(selectedOption) => {
                   onChangePlotOptions(selectedOption.value)
                 }}/>
@@ -154,7 +154,7 @@ class TSnePlotView extends React.Component {
           <ClusterTSnePlot
             height={height}
             plotData={cellClustersData}
-            selectedParameter={selectedParameter}
+            selectedPlotOption={selectedPlotOption}
             selectedPlotType={selectedPlotType}
             onChangePlotOptions={onChangePlotOptions}
             onChangePlotTypes={onChangePlotTypes}
@@ -206,7 +206,7 @@ TSnePlotView.propTypes = {
   wrapperClassName: PropTypes.string,
   clusterPlotClassName: PropTypes.string,
   expressionPlotClassName: PropTypes.string,
-  selectedParameter: PropTypes.number.isRequired,
+  selectedPlotOption: PropTypes.number.isRequired,
   suggesterEndpoint: PropTypes.string.isRequired,
   experimentAccession: PropTypes.string.isRequired,
   ks: PropTypes.arrayOf(PropTypes.number).isRequired,
@@ -233,7 +233,6 @@ TSnePlotView.propTypes = {
   plotTypeDropdown: PropTypes.arrayOf(
     PropTypes.shape({
       plotType: PropTypes.string,
-      plotOptionsLabel: PropTypes.string,
       plotOptions: PropTypes.arrayOf(PropTypes.number)
     })
   )

@@ -132,7 +132,7 @@ class Demo extends React.Component {
     this.state = {
       selectedPlotType: plotTypeDropdown[0].plotType.toLowerCase(),
       geneId: ``,
-      selectedParameter: plotTypeDropdown[0].plotOptions[0],
+      selectedPlotOption: plotTypeDropdown[0].plotOptions[0],
       selectedColourBy: ks[Math.round((ks.length -1) / 2)].toString(),
       highlightClusters: [],
       experimentAccession: accession,
@@ -178,13 +178,13 @@ class Demo extends React.Component {
     return(
        <div className={`row column expanded`}>
         <TsnePlotView
-          atlasUrl={`http://localhost:8080/gxa/sc/`}
+          atlasUrl={`http://wwwdev.ebi.ac.uk/gxa/sc/`}
           suggesterEndpoint={`json/suggestions`}
           experimentAccession={this.state.experimentAccession}
           wrapperClassName={`row expanded`}
           clusterPlotClassName={`small-12 large-6 columns`}
           expressionPlotClassName={`small-12 large-6 columns`}
-          selectedParameter={this.state.selectedParameter}
+          selectedPlotOption={this.state.selectedPlotOption}
           selectedPlotType={this.state.selectedPlotType}
           ks={ks}
           metadata={metadata}
