@@ -90,16 +90,11 @@ const experiment6 = {
       label: `inferred cell type - ontology labels`
     }
   ],
-  plotTypeDropdown: [
-    {
-      plotType: `UMAP`,
-      plotOptions: [5, 10, 15, 20, 25, 50, 100]
-    },
-    {
-      plotType: `tSNE`,
-      plotOptions: [1, 5 ,10, 15, 20, 25, 30, 35, 40, 45, 50]
-    }
-  ]
+  plotTypesAndOptions: {
+    "tsne": [{ "perplexity": 40 }, { "perplexity": 25 }, { "perplexity": 45 },{ "perplexity": 1 },{ "perplexity": 30 },
+    {"perplexity": 10 },{ "perplexity": 15 },{ "perplexity": 50 },{ "perplexity": 35 },{ "perplexity": 20 },{ "perplexity": 5 }],
+    "umap": [{"n_neighbors": 5},{"n_neighbors": 100},{"n_neighbors": 50},{"n_neighbors": 10},{"n_neighbors": 30},{"n_neighbors": 15},{"n_neighbors": 3}]
+  }
 }
 
 const experimentOmega = {
@@ -123,7 +118,18 @@ const experimentOmega = {
   ]
 }
 
-const { accession, ks, metadata, species, plotTypeDropdown } = experiment6
+const { accession, ks, metadata, species, plotTypesAndOptions } = experiment6
+
+const plotTypeDropdown =  [
+  {
+    plotType: `UMAP`,
+    plotOptions: plotTypesAndOptions.umap
+  },
+  {
+    plotType: `tSNE`,
+    plotOptions: plotTypesAndOptions.tsne
+  }
+]
 
 class Demo extends React.Component {
   constructor(props) {
@@ -132,7 +138,8 @@ class Demo extends React.Component {
     this.state = {
       selectedPlotType: plotTypeDropdown[0].plotType.toLowerCase(),
       geneId: ``,
-      selectedPlotOption: plotTypeDropdown[0].plotOptions[0],
+      selectedPlotOption: Object.values(plotTypeDropdown[0].plotOptions[0])[0],
+      selectedPlotOptionLabel: Object.keys(plotTypeDropdown[0].plotOptions[0])[0] + `: ` + Object.values(plotTypeDropdown[0].plotOptions[0])[0],
       selectedColourBy: ks[Math.round((ks.length -1) / 2)].toString(),
       highlightClusters: [],
       experimentAccession: accession,
@@ -160,6 +167,7 @@ class Demo extends React.Component {
     })
     this.highlightClustersInput.current.value = `` // reset the form field
   }
+
   /*
           <div className={`row column expanded`}>
           <form onSubmit={this._handleSubmit}>
@@ -190,18 +198,24 @@ class Demo extends React.Component {
           metadata={metadata}
           selectedColourByCategory={this.state.selectedColourByCategory}
           plotTypeDropdown={plotTypeDropdown}
+          selectedPlotOptionLabel={this.state.selectedPlotOptionLabel}
           onChangePlotTypes={
               (plotOption) => {
                 this.setState({
                   selectedPlotType: plotOption,
-                  selectedParameter: _find(plotTypeDropdown, (plot) => plot.plotType.toLowerCase() === plotOption).plotOptions[0]
+                  selectedPlotOption: Object.values(_find(plotTypeDropdown,
+                      (plot) => plot.plotType.toLowerCase() === plotOption).plotOptions[0])[0],
+                  selectedPlotOptionLabel: Object.keys(_find(plotTypeDropdown,
+                      (plot) => plot.plotType.toLowerCase() === plotOption).plotOptions[0])[0] + `: ` +
+                      Object.values(_find(plotTypeDropdown,
+                      (plot) => plot.plotType.toLowerCase() === plotOption).plotOptions[0])[0]
                 })}
           }
           onChangePlotOptions={
             (plotOption) => {
               this.setState({
-                selectedParameter: plotOption,
-                clusterType: plotOption
+                selectedPlotOption: plotOption.value,
+                selectedPlotOptionLabel: plotOption.label
               })}
           }
           selectedColourBy={this.state.selectedColourBy}

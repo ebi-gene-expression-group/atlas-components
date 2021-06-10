@@ -94,18 +94,16 @@ class TSnePlotView extends React.Component {
     const {wrapperClassName, clusterPlotClassName, expressionPlotClassName} = this.props
     const {geneId, speciesName, geneIds} = this.props
     const highlightClusters = []
-    const {ks, selectedPlotOption, selectedPlotType, metadata, selectedColourBy, plotTypeDropdown} = this.props
+    const {ks, selectedPlotOption, selectedPlotType, metadata, selectedColourBy, plotTypeDropdown, selectedPlotOptionLabel} = this.props
     const {onSelectGeneId, onChangeColourBy, onChangePlotOptions, onChangePlotTypes} = this.props
     const {loadingGeneExpression, geneExpressionData, geneExpressionErrorMessage} = this.state
     const {loadingCellClusters, cellClustersData, cellClustersErrorMessage} = this.state
 
     const plot = _find(plotTypeDropdown, (plot) => plot.plotType.toLowerCase() === selectedPlotType)
 
-    const plotOptions = plot.plotOptions
-    const plotOptionsValues = plotOptions.map((value) => ( selectedPlotType === `tSNE` ?
-          {value: value, label: `perplexity=` + value} : {value: value, label: `n_neighbors=` + value}
-    ))
-    const plotOptionsLabel = plot.plotOptionsLabel
+    const plotOptionsValues = plot.plotOptions.map((option) =>
+        ({value: Object.values(option)[0], label: Object.keys(option)[0]+`: `+Object.values(option)[0]}))
+
     const plotTypesOptions = plotTypeDropdown.map((plot) => ({
           value: plot.plotType.toLowerCase(),
           label: plot.plotType
@@ -143,9 +141,9 @@ class TSnePlotView extends React.Component {
                 labelText={`Options:`}
                 options={plotOptionsValues}
                 defaultValue={{value: selectedPlotOption,
-                  label: selectedPlotType === `tSNE` ? `perplexity=` + selectedPlotOption : `n_neighbor=` + selectedPlotOption}}
+                  label: selectedPlotOptionLabel}}
                 onSelect={(selectedOption) => {
-                  onChangePlotOptions(selectedOption.value)
+                  onChangePlotOptions(selectedOption)
                 }}/>
           </div>
         </div>
@@ -230,6 +228,7 @@ TSnePlotView.propTypes = {
   onChangePlotTypes: PropTypes.func,
   selectedPlotType: PropTypes.string.isRequired,
   selectedColourByCategory: PropTypes.string,
+  selectedPlotOptionLabel: PropTypes.string,
   plotTypeDropdown: PropTypes.arrayOf(
     PropTypes.shape({
       plotType: PropTypes.string,
