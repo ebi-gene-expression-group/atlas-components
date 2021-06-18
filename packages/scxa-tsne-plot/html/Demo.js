@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import TsnePlotView from '../src/index'
+import {find as _find} from "lodash";
 
 // Tabula Muris: 53 759 cells
 const experiment1 = {
@@ -76,28 +77,24 @@ const experiment5 = {
 // Big chunk of Not Available points
 // Number of cells: 101,843
 const experiment6 = {
-  accession: `E-CURD-46`,
+  accession: `E-MTAB-5061`,
   species: `Homo sapiens`,
-  perplexities: [1, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50],
-  ks: [6, 9 , 11, 14, 17, 25, 32, 43, 55],
+  ks: [20],
   metadata: [
     {
-      value: `authors_inferred_cell_type`,
-      label: `Authors Inferred Cell Type`
-    }
-  ],
-  plotTypeDropdown: [
-    {
-      plotType: `TSne`,
-      plotOptionsLabel: `Perplexities`,
-      plotOptions: [1, 2, 3, 4]
+      value: `inferred cell type - authors labels`,
+      label: `inferred cell type - authors labels`
     },
     {
-      plotType: `UMap`,
-      plotOptionsLabel: `N-neighbors`,
-      plotOptions: [1, 2, 3]
+      value: `inferred cell type - ontology labels`,
+      label: `inferred cell type - ontology labels`
     }
-  ]
+  ],
+  plotTypesAndOptions: {
+    "tsne": [{ "perplexity": 40 }, { "perplexity": 25 }, { "perplexity": 45 },{ "perplexity": 1 },{ "perplexity": 30 },
+    {"perplexity": 10 },{ "perplexity": 15 },{ "perplexity": 50 },{ "perplexity": 35 },{ "perplexity": 20 },{ "perplexity": 5 }],
+    "umap": [{"n_neighbors": 5},{"n_neighbors": 100},{"n_neighbors": 50},{"n_neighbors": 10},{"n_neighbors": 30},{"n_neighbors": 15},{"n_neighbors": 3}]
+  }
 }
 
 const experimentOmega = {
@@ -121,19 +118,32 @@ const experimentOmega = {
   ]
 }
 
-const { accession, perplexities, ks, metadata, species, plotTypeDropdown } = experiment6
+const { accession, ks, metadata, species, plotTypesAndOptions } = experiment6
+
+const plotTypeDropdown =  [
+  {
+    plotType: `UMAP`,
+    plotOptions: plotTypesAndOptions.umap
+  },
+  {
+    plotType: `tSNE`,
+    plotOptions: plotTypesAndOptions.tsne
+  }
+]
 
 class Demo extends React.Component {
   constructor(props) {
     super(props)
 
     this.state = {
-      perplexity: perplexities[Math.round((perplexities.length - 1) / 2)],
+      selectedPlotType: plotTypeDropdown[0].plotType.toLowerCase(),
       geneId: ``,
+      selectedPlotOption: Object.values(plotTypeDropdown[0].plotOptions[0])[0],
+      selectedPlotOptionLabel: Object.keys(plotTypeDropdown[0].plotOptions[0])[0] + `: ` + Object.values(plotTypeDropdown[0].plotOptions[0])[0],
       selectedColourBy: ks[Math.round((ks.length -1) / 2)].toString(),
-      selectedColourByCategory: `clusters`,
       highlightClusters: [],
-      experimentAccession: accession
+      experimentAccession: accession,
+      selectedColourByCategory: `clusters`
     }
 
     this.experimentAccessionInput = React.createRef()
@@ -158,10 +168,8 @@ class Demo extends React.Component {
     this.highlightClustersInput.current.value = `` // reset the form field
   }
 
-  render() {
-    return(
-      <div className={`row column expanded`}>
-        <div className={`row column expanded`}>
+  /*
+          <div className={`row column expanded`}>
           <form onSubmit={this._handleSubmit}>
             <label>Highlight clusters (cluster integer IDs separated by commas):
               <input name={`inputHighlightClusters`} type={`text`} ref={this.highlightClustersInput} defaultValue={``}/>
@@ -172,34 +180,54 @@ class Demo extends React.Component {
             <button className={`button`} type="submit">Submit</button>
           </form>
         </div>
+   */
 
+  render() {
+    return(
+       <div className={`row column expanded`}>
         <TsnePlotView
-          atlasUrl={`https://wwwdev.ebi.ac.uk/gxa/sc/`}
+          atlasUrl={`http://wwwdev.ebi.ac.uk/gxa/sc/`}
           suggesterEndpoint={`json/suggestions`}
           experimentAccession={this.state.experimentAccession}
           wrapperClassName={`row expanded`}
           clusterPlotClassName={`small-12 large-6 columns`}
           expressionPlotClassName={`small-12 large-6 columns`}
-          perplexities={perplexities}
-          selectedPerplexity={this.state.perplexity}
+          selectedPlotOption={this.state.selectedPlotOption}
+          selectedPlotType={this.state.selectedPlotType}
           ks={ks}
           metadata={metadata}
+          selectedColourByCategory={this.state.selectedColourByCategory}
           plotTypeDropdown={plotTypeDropdown}
-          onChangePlotTypes={() => {}}
-          onChangePlotOptions={() => {}}
+          selectedPlotOptionLabel={this.state.selectedPlotOptionLabel}
+          onChangePlotTypes={
+              (plotOption) => {
+                this.setState({
+                  selectedPlotType: plotOption,
+                  selectedPlotOption: Object.values(_find(plotTypeDropdown,
+                      (plot) => plot.plotType.toLowerCase() === plotOption).plotOptions[0])[0],
+                  selectedPlotOptionLabel: Object.keys(_find(plotTypeDropdown,
+                      (plot) => plot.plotType.toLowerCase() === plotOption).plotOptions[0])[0] + `: ` +
+                      Object.values(_find(plotTypeDropdown,
+                      (plot) => plot.plotType.toLowerCase() === plotOption).plotOptions[0])[0]
+                })}
+          }
+          onChangePlotOptions={
+            (plotOption) => {
+              this.setState({
+                selectedPlotOption: plotOption.value,
+                selectedPlotOptionLabel: plotOption.label
+              })}
+          }
           selectedColourBy={this.state.selectedColourBy}
-          selectedColourByCategory={this.state.selectedColourByCategory} // Is the plot coloured by clusters or metadata
           highlightClusters={this.state.highlightClusters}
           geneId={this.state.geneId}
           speciesName={species}
-          onChangePerplexity={
-            (perplexity) => { this.setState({perplexity: perplexity}) }
-          }
           onChangeColourBy={
             (colourByCategory, colourByValue) => {
               this.setState({
                 selectedColourBy : colourByValue,
-                selectedColourByCategory : colourByCategory,
+                selectedColourByCategory : colourByCategory
+
               })
               this._resetHighlightClusters()
             }

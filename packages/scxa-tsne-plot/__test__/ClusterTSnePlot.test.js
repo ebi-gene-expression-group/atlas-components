@@ -94,16 +94,18 @@ describe(`ClusterTSnePlot`, () => {
     },
     plotTypeDropdown: [
       {
-        plotType: `TSne`,
+        plotType: `tSNE`,
         plotOptionsLabel: `Perplexities`,
         plotOptions: [1, 2, 3, 4]
       },
       {
-        plotType: `UMap`,
+        plotType: `UMAP`,
         plotOptionsLabel: `N-neighbors`,
         plotOptions: [1, 2, 3]
       }
     ],
+    selectedParameter: 10,
+    selectedPlotType: `tSNE`,
     height: 500,
     metadata: [],
     ks: [],
@@ -113,26 +115,26 @@ describe(`ClusterTSnePlot`, () => {
 
   test(`with no data matches snapshot`, () => {
     const tree = renderer
-      .create(<ClusterTSnePlot {...props} selectedColourBy={`0`} selectedPerplexity={0} showControls={true}/>)
+      .create(<ClusterTSnePlot {...props} selectedColourBy={`0`} showControls={true}/>)
       .toJSON()
 
     expect(tree).toMatchSnapshot()
   })
 
   test(`contains ScatterPlotLoader`, () => {
-    const wrapper = mount(<ClusterTSnePlot {...props} selectedColourBy={`0`} selectedPerplexity={0} showControls={true}/>)
+    const wrapper = mount(<ClusterTSnePlot {...props} selectedColourBy={`0`} showControls={true}/>)
 
     expect(wrapper.find(ScatterPlotLoader).length).toBe(1)
   })
 
   test(`contains 3 PlotSettingsDropdowns`, () => {
-    const wrapper = mount(<ClusterTSnePlot {...props} selectedColourBy={`0`} selectedPerplexity={0} showControls={true}/>)
+    const wrapper = mount(<ClusterTSnePlot {...props} selectedColourBy={`0`} showControls={true}/>)
 
-    expect(wrapper.find(PlotSettingsDropdown).length).toBe(3)
+    expect(wrapper.find(PlotSettingsDropdown).length).toBe(1)
   })
 
   test(`contains only 1 PlotSettingsDropdowns when showControls is false`, () => {
-    const wrapper = mount(<ClusterTSnePlot {...props} selectedColourBy={`0`} selectedPerplexity={0} showControls={false}/>)
+    const wrapper = mount(<ClusterTSnePlot {...props} selectedColourBy={`0`} showControls={false}/>)
 
     expect(wrapper.find(PlotSettingsDropdown).length).toBe(1)
   })
@@ -146,7 +148,7 @@ describe(`ClusterTSnePlot`, () => {
       }
     ]
 
-    const wrapper = mount(<ClusterTSnePlot {...props} ks={ks} metadata={metadata} selectedColourBy={`2`} selectedPerplexity={0} showControls={true}/>)
+    const wrapper = mount(<ClusterTSnePlot {...props} ks={ks} metadata={metadata} selectedColourBy={`2`} showControls={true}/>)
 
     const dropdown = wrapper.find({ labelText: `Colour plot by:`})
 
@@ -163,7 +165,7 @@ describe(`ClusterTSnePlot`, () => {
       }
     ]
 
-    const wrapper = mount(<ClusterTSnePlot {...props} ks={ks} metadata={metadata} selectedColourBy={`metadata-1`} selectedPerplexity={0} showControls={true}/>)
+    const wrapper = mount(<ClusterTSnePlot {...props} ks={ks} metadata={metadata} selectedColourBy={`metadata-1`} showControls={true}/>)
 
     const dropdown = wrapper.find({ labelText: `Colour plot by:`})
 
