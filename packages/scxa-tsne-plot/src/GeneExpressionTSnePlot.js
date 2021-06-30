@@ -5,7 +5,7 @@ import Color from 'color'
 import colorize from './colorize'
 
 import ScatterPlotLoader from './plotloader/PlotLoader'
-import AtlasAutocomplete from 'expression-atlas-autocomplete'
+import AtlasAutocomplete from '@ebi-gene-expression-group/expression-atlas-autocomplete'
 
 import './util/MathRound'
 import PlotSettingsDropdown from "./PlotSettingsDropdown"

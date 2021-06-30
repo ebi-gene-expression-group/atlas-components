@@ -41,9 +41,9 @@
     "url": "git+https://github.com/ebi-gene-expression-group/atlas-components.git"
   },
   "dependencies": {
+    "@ebi-gene-expression-group/expression-atlas-autocomplete": "^3.2.4",
     "color": "^3.1.2",
     "deepmerge": "^4.2.2",
-    "expression-atlas-autocomplete": "^3.2.0",
     "highcharts": "^8.1.2",
     "highcharts-react-official": "^3.0.0",
     "lodash": "^4.17.20",
@@ -79,5 +79,5 @@
     "webpack-dev-server": "^3.11.0",
     "whatwg-fetch": "^3.4.0"
   },
-  "gitHead": "7e03f78b4db84dbcf8247a040490afe00d57d105"
+  "gitHead": "8da25976eb6316d63b59f37f35a62915997e3455"
 }
