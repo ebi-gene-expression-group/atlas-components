@@ -125,8 +125,8 @@ class TSnePlotView extends React.Component {
     }
 
     return (
-      <div className={wrapperClassName}>
-        <div className={`row expanded`}>
+      <div className={wrapperClassName} >
+        <div className={`row expanded`} style={{width: `50%`}}>
           <div className={`small-12 medium-6 columns`}>
             <PlotSettingsDropdown
                 labelText={`Plot type:`}
@@ -138,7 +138,7 @@ class TSnePlotView extends React.Component {
           </div>
           <div className={`small-12 medium-6 columns`}>
             <PlotSettingsDropdown
-                labelText={`Options:`}
+                labelText={`Plot options:`}
                 options={plotOptionsValues}
                 defaultValue={{value: selectedPlotOption,
                   label: selectedPlotOptionLabel}}
