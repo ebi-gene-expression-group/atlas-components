@@ -56,8 +56,8 @@ class TSnePlotView extends React.Component {
   }
 
   _fetchAndSetStateCellClusters(
-    {atlasUrl, experimentAccession, selectedColourBy, selectedPlotOption, selectedPlotType}) {
-    const resource = `json/experiments/${experimentAccession}/tsneplot/${selectedPlotOption}/clusters/variable/${selectedColourBy}?method=${selectedPlotType}`
+    {atlasUrl, experimentAccession, selectedColourBy, selectedColourByCategory, selectedPlotOption, selectedPlotType}) {
+    const resource = `json/experiments/${experimentAccession}/tsneplot/${selectedPlotOption}/clusters/variable/${selectedColourBy}?method=${selectedPlotType}&variableType=${selectedColourByCategory}`
 
     this._fetchAndSetState(
       resource, atlasUrl, `cellClustersData`, `cellClustersErrorMessage`, `loadingCellClusters`)
