@@ -2,6 +2,10 @@
   "name": "@ebi-gene-expression-group/eslint-config",
   "version": "2.3.0",
   "description": "",
+  "keywords": [
+    "eslint",
+    "eslint-config"
+  ],
   "main": "index.js",
   "scripts": {},
   "author": "Expression Atlas developers <atlas-developers@ebi.ac.uk>",
@@ -11,14 +15,13 @@
   ],
   "license": "Apache-2.0",
   "peerDependencies": {
-    "eslint": ">=7",
     "eslint-plugin-import": ">= 2",
     "eslint-plugin-react": ">= 7"
   },
+  "gitHead": "7e03f78b4db84dbcf8247a040490afe00d57d105",
   "dependencies": {
-    "babel-eslint": "^10.1.0",
-    "eslint": "^6.8.0",
-    "eslint-import-resolver-webpack": "^0.12.2"
-  },
-  "gitHead": "7e03f78b4db84dbcf8247a040490afe00d57d105"
+    "@babel/eslint-parser": "^7.14.3",
+    "eslint": "^7.27.0",
+    "eslint-import-resolver-webpack": "^0.13.1"
+  }
 }
