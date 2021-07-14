@@ -13,7 +13,7 @@ Array [
       className="row margin-bottom-large"
     >
       <label>
-        Gene ID, gene name or gene feature
+        Gene ID, gene name or gene feature:
       </label>
       <div
         style={

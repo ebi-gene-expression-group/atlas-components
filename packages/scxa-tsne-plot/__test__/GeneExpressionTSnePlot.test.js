@@ -10,7 +10,7 @@ import { mount } from 'enzyme'
 import '@babel/polyfill'
 import {_colourizeExpressionLevel} from '../src/GeneExpressionTSnePlot'
 import GeneExpressionTSnePlot from '../src/GeneExpressionTSnePlot'
-import AtlasAutocomplete from 'expression-atlas-autocomplete'
+import AtlasAutocomplete from '@ebi-gene-expression-group/expression-atlas-autocomplete'
 
 import '../src/util/MathRound'
 import {
