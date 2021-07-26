@@ -168,7 +168,6 @@ class TSnePlotView extends React.Component {
             errorMessage={cellClustersErrorMessage}
             tooltipContent={getTooltipContent}
             initialCellTypeValues={initialCellTypeValues}
-            initialRender={true}
             showControls={showControls}
           />
         </div>
