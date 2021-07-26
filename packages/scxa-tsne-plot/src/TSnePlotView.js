@@ -5,8 +5,8 @@ import URI from 'urijs'
 
 import ClusterTSnePlot from './ClusterTSnePlot'
 import GeneExpressionTSnePlot from './GeneExpressionTSnePlot'
-import PlotSettingsDropdown from "./PlotSettingsDropdown";
-import {find as _find} from "lodash";
+import PlotSettingsDropdown from './PlotSettingsDropdown'
+import { find as _find } from 'lodash'
 
 class TSnePlotView extends React.Component {
   constructor(props) {
@@ -90,7 +90,7 @@ class TSnePlotView extends React.Component {
   }
 
   render() {
-    const {height, atlasUrl, resourcesUrl, suggesterEndpoint, showControls, selectedColourByCategory} = this.props
+    const {height, atlasUrl, resourcesUrl, suggesterEndpoint, showControls, selectedColourByCategory, initialCellTypeValues} = this.props
     const {wrapperClassName, clusterPlotClassName, expressionPlotClassName} = this.props
     const {geneId, speciesName, geneIds} = this.props
     const highlightClusters = []
@@ -102,12 +102,12 @@ class TSnePlotView extends React.Component {
     const plot = _find(plotTypeDropdown, (plot) => plot.plotType.toLowerCase() === selectedPlotType)
 
     const plotOptionsValues = plot.plotOptions.map((option) =>
-        ({value: Object.values(option)[0], label: Object.keys(option)[0]+`: `+Object.values(option)[0]}))
+      ({value: Object.values(option)[0], label: Object.keys(option)[0]+`: `+Object.values(option)[0]}))
 
     const plotTypesOptions = plotTypeDropdown.map((plot) => ({
-          value: plot.plotType.toLowerCase(),
-          label: plot.plotType
-        }))
+      value: plot.plotType.toLowerCase(),
+      label: plot.plotType
+    }))
 
     const getTooltipContent = async (cellId) => {
       const url = URI(`json/experiment/${this.props.experimentAccession}/cell/${cellId}/metadata`, atlasUrl).toString()
@@ -129,22 +129,22 @@ class TSnePlotView extends React.Component {
         <div className={`row expanded`} style={{width: `50%`}}>
           <div className={`small-12 medium-6 columns`}>
             <PlotSettingsDropdown
-                labelText={`Plot type:`}
-                options={plotTypesOptions}
-                defaultValue={{value: selectedPlotType, label: plot.plotType}}
-                onSelect={(selectedPlotType) => {
-                  onChangePlotTypes(selectedPlotType.value)
-                }}/>
+              labelText={`Plot type:`}
+              options={plotTypesOptions}
+              defaultValue={{value: selectedPlotType, label: plot.plotType}}
+              onSelect={(selectedPlotType) => {
+                onChangePlotTypes(selectedPlotType.value)
+              }}/>
           </div>
           <div className={`small-12 medium-6 columns`}>
             <PlotSettingsDropdown
-                labelText={`Plot options:`}
-                options={plotOptionsValues}
-                defaultValue={{value: selectedPlotOption,
-                  label: selectedPlotOptionLabel}}
-                onSelect={(selectedOption) => {
-                  onChangePlotOptions(selectedOption)
-                }}/>
+              labelText={`Plot options:`}
+              options={plotOptionsValues}
+              defaultValue={{value: selectedPlotOption,
+                label: selectedPlotOptionLabel}}
+              onSelect={(selectedOption) => {
+                onChangePlotOptions(selectedOption)
+              }}/>
           </div>
         </div>
 
@@ -167,6 +167,8 @@ class TSnePlotView extends React.Component {
             resourcesUrl={resourcesUrl}
             errorMessage={cellClustersErrorMessage}
             tooltipContent={getTooltipContent}
+            initialCellTypeValues={initialCellTypeValues}
+            initialRender={true}
             showControls={showControls}
           />
         </div>
@@ -223,6 +225,7 @@ TSnePlotView.propTypes = {
   speciesName: PropTypes.string.isRequired,
   height: PropTypes.number,
   resourcesUrl: PropTypes.string,
+  initialCellTypeValues: PropTypes.array,
   onSelectGeneId: PropTypes.func,
   onChangePlotOptions: PropTypes.func,
   onChangePlotTypes: PropTypes.func,
@@ -246,6 +249,7 @@ TSnePlotView.defaultProps = {
   geneId: ``,
   speciesName: ``,
   height: 800,
+  initialCellTypeValues: [`inferred_cell_type_-_authors_labels`, `inferred_cell_type_-_ontology_labels`],
   onSelectGeneId: () => {},
   onChangeColourBy: () => {},
   onPerplexityChange: () => {}

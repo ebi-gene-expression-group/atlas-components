@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Color from 'color'
-import {find as _find, flatten as _flatten} from 'lodash'
+import _ from 'lodash'
 
 import ScatterPlotLoader from './plotloader/PlotLoader'
 import PlotSettingsDropdown from './PlotSettingsDropdown'
@@ -35,7 +35,7 @@ const tooltipHeader = (clusterType, series, point) => {
 }
 
 const ClusterTSnePlot = (props) => {
-  const {ks, metadata, selectedColourBy, onChangeColourBy, clusterType} = props  // Select
+  const {ks, metadata, selectedColourBy, onChangeColourBy, clusterType, initialCellTypeValues} = props  // Select
   const {plotData, highlightClusters, height, tooltipContent} = props   // Chart
   const {loading, resourcesUrl, errorMessage} = props   // Overlay
 
@@ -139,47 +139,48 @@ const ClusterTSnePlot = (props) => {
     },
   ]
 
-  const defaultValue = _find(
-      _flatten(
-          options.map((item) => (item.options))
-      ),
-      {value: selectedColourBy}
-  )
+  const cellType = _.first(_.intersection(_.map(metadataOptions,`value`), initialCellTypeValues))
+
+  const defaultValue = _.find(
+    _.flatten(
+      options.map((item) => (item.options))
+    ),
+    {value: cellType ? cellType : selectedColourBy})
 
   const afterRender = (chart) => {
     chart.series.forEach(series => {
       const legendSymbolSize = 10
       series.legendSymbol.translate(
-          (series.legendSymbol.width / 2) - legendSymbolSize / 2,
-          (series.legendSymbol.height / 2) - legendSymbolSize / 2)
+        (series.legendSymbol.width / 2) - legendSymbolSize / 2,
+        (series.legendSymbol.height / 2) - legendSymbolSize / 2)
       series.legendSymbol.attr(`width`, legendSymbolSize)
       series.legendSymbol.attr(`height`, legendSymbolSize)
     })
   }
 
   return (
-      <React.Fragment>
-        <div key={`perplexity-k-select`} className={`row`}>
-          <PlotSettingsDropdown
-              labelText={`Colour plot by:`}
-              options={metadata ? options : kOptions} // Some experiments don't have metadata in Solr, although they should do. Leaving this check in for now so we don't break the entire experiment page.
-              defaultValue={defaultValue}
-              onSelect={(selectedOption) => {
-                onChangeColourBy(selectedOption.group, selectedOption.value)
-              }}/>
-        </div>
-        <ScatterPlotLoader
-            key={`cluster-plot`}
-            wrapperClassName={`row`}
-            chartClassName={`small-12 columns`}
-            series={_colourizeClusters(highlightClusters)(plotData.series)}
-            highchartsConfig={highchartsConfig}
-            loading={loading}
-            resourcesUrl={resourcesUrl}
-            errorMessage={errorMessage}
-            afterRender={afterRender}
-        />
-      </React.Fragment>
+    <React.Fragment>
+      <div key={`perplexity-k-select`} className={`row`}>
+        <PlotSettingsDropdown
+          labelText={`Colour plot by:`}
+          options={metadata ? options : kOptions} // Some experiments don't have metadata in Solr, although they should do. Leaving this check in for now so we don't break the entire experiment page.
+          defaultValue={defaultValue}
+          onSelect={(selectedOption) => {
+            onChangeColourBy(selectedOption.group, selectedOption.value)
+          }}/>
+      </div>
+      <ScatterPlotLoader
+        key={`cluster-plot`}
+        wrapperClassName={`row`}
+        chartClassName={`small-12 columns`}
+        series={_colourizeClusters(highlightClusters)(plotData.series)}
+        highchartsConfig={highchartsConfig}
+        loading={loading}
+        resourcesUrl={resourcesUrl}
+        errorMessage={errorMessage}
+        afterRender={afterRender}
+      />
+    </React.Fragment>
   )
 }
 
@@ -192,6 +193,7 @@ ClusterTSnePlot.propTypes = {
   plotData: PropTypes.shape({
     series: PropTypes.array.isRequired
   }),
+  initialCellTypeValues: PropTypes.array.isRequired,
   highlightClusters: PropTypes.array,
 
   ks: PropTypes.arrayOf(PropTypes.number).isRequired,

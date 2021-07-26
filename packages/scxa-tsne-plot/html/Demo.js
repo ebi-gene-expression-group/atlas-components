@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import TsnePlotView from '../src/index'
-import {find as _find} from "lodash";
+import {find as _find} from "lodash"
 
 // Tabula Muris: 53 759 cells
 const experiment1 = {
@@ -82,17 +82,17 @@ const experiment6 = {
   ks: [20],
   metadata: [
     {
-      value: `inferred cell type - authors labels`,
+      value: `inferred_cell_type_-_authors_labels`,
       label: `inferred cell type - authors labels`
     },
     {
-      value: `inferred cell type - ontology labels`,
+      value: `inferred_cell_type_-_ontology_labels`,
       label: `inferred cell type - ontology labels`
     }
   ],
   plotTypesAndOptions: {
     "tsne": [{ "perplexity": 40 }, { "perplexity": 25 }, { "perplexity": 45 },{ "perplexity": 1 },{ "perplexity": 30 },
-    {"perplexity": 10 },{ "perplexity": 15 },{ "perplexity": 50 },{ "perplexity": 35 },{ "perplexity": 20 },{ "perplexity": 5 }],
+      {"perplexity": 10 },{ "perplexity": 15 },{ "perplexity": 50 },{ "perplexity": 35 },{ "perplexity": 20 },{ "perplexity": 5 }],
     "umap": [{"n_neighbors": 5},{"n_neighbors": 100},{"n_neighbors": 50},{"n_neighbors": 10},{"n_neighbors": 30},{"n_neighbors": 15},{"n_neighbors": 3}]
   }
 }
@@ -184,9 +184,9 @@ class Demo extends React.Component {
 
   render() {
     return(
-       <div className={`row column expanded`}>
+      <div className={`row column expanded`}>
         <TsnePlotView
-          atlasUrl={`http://wwwdev.ebi.ac.uk/gxa/sc/`}
+          atlasUrl={`https://wwwdev.ebi.ac.uk/gxa/sc/`}
           suggesterEndpoint={`json/suggestions`}
           experimentAccession={this.state.experimentAccession}
           wrapperClassName={`row expanded`}
@@ -200,16 +200,16 @@ class Demo extends React.Component {
           plotTypeDropdown={plotTypeDropdown}
           selectedPlotOptionLabel={this.state.selectedPlotOptionLabel}
           onChangePlotTypes={
-              (plotOption) => {
-                this.setState({
-                  selectedPlotType: plotOption,
-                  selectedPlotOption: Object.values(_find(plotTypeDropdown,
-                      (plot) => plot.plotType.toLowerCase() === plotOption).plotOptions[0])[0],
-                  selectedPlotOptionLabel: Object.keys(_find(plotTypeDropdown,
-                      (plot) => plot.plotType.toLowerCase() === plotOption).plotOptions[0])[0] + `: ` +
+            (plotOption) => {
+              this.setState({
+                selectedPlotType: plotOption,
+                selectedPlotOption: Object.values(_find(plotTypeDropdown,
+                  (plot) => plot.plotType.toLowerCase() === plotOption).plotOptions[0])[0],
+                selectedPlotOptionLabel: Object.keys(_find(plotTypeDropdown,
+                  (plot) => plot.plotType.toLowerCase() === plotOption).plotOptions[0])[0] + `: ` +
                       Object.values(_find(plotTypeDropdown,
-                      (plot) => plot.plotType.toLowerCase() === plotOption).plotOptions[0])[0]
-                })}
+                        (plot) => plot.plotType.toLowerCase() === plotOption).plotOptions[0])[0]
+              })}
           }
           onChangePlotOptions={
             (plotOption) => {
@@ -227,7 +227,6 @@ class Demo extends React.Component {
               this.setState({
                 selectedColourBy : colourByValue,
                 selectedColourByCategory : colourByCategory
-
               })
               this._resetHighlightClusters()
             }
