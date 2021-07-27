@@ -173,7 +173,7 @@ describe(`ClusterTSnePlot`, () => {
     expect(dropdown.props().defaultValue.label).toContain(`The first metadata value`)
   })
 
-  test(`dropdown selection text is inferred_cell_type when metadata options contain when plot is coloured by metadata`, () => {
+  test(`dropdown selection text is Inferred cell type - authors_labels when plot is coloured by metadata`, () => {
     const ks = [1, 2, 3]
     const metadata = [
       {

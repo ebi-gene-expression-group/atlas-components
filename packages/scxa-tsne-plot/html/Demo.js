@@ -82,12 +82,20 @@ const experiment6 = {
   ks: [20],
   metadata: [
     {
-      value: `inferred_cell_type_-_authors_labels`,
-      label: `inferred cell type - authors labels`
+      value: `inferred_cell_type_-_ontology_labels`,
+      label: `Inferred cell type - ontology labels`
     },
     {
-      value: `inferred_cell_type_-_ontology_labels`,
-      label: `inferred cell type - ontology labels`
+      value: `inferred_cell_type_-_authors_labels`,
+      label: `Inferred cell type - authors labels`
+    },
+    {
+      value: `cell_type`,
+      label: `Cell type`
+    },
+    {
+      value: `progenitor_cell_type`,
+      label: `Progenitor cell type`
     }
   ],
   plotTypesAndOptions: {

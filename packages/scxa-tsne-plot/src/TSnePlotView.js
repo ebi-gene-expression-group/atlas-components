@@ -248,7 +248,7 @@ TSnePlotView.defaultProps = {
   geneId: ``,
   speciesName: ``,
   height: 800,
-  initialCellTypeValues: [`inferred_cell_type_-_authors_labels`, `inferred_cell_type_-_ontology_labels`],
+  initialCellTypeValues: [`inferred_cell_type_-_ontology_labels`, `inferred_cell_type_-_authors_labels`, `cell_type`, `progenitor_cell_type`],
   onSelectGeneId: () => {},
   onChangeColourBy: () => {},
   onPerplexityChange: () => {}
