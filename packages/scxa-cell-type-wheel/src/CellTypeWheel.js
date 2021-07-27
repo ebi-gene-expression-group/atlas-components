@@ -3,17 +3,13 @@ import HighchartsReact from 'highcharts-react-official'
 import Highcharts from 'highcharts'
 import highchartsSunburst from 'highcharts/modules/sunburst'
 
-//import data from '../html/data/tcell-sunburst.json'
-
 highchartsSunburst(Highcharts)
 
 // SUPER HACK!
 // https://github.com/highcharts/highcharts/issues/4994
 window.Highcharts = Highcharts
 
-console.log(Highcharts.getOptions().colors)
-
-class LineChart extends React.Component {
+class CellTypeWheel extends React.Component {
   constructor(props) {
     super(props)
 
@@ -86,4 +82,4 @@ class LineChart extends React.Component {
   }
 }
 
-export default LineChart
+export default CellTypeWheel

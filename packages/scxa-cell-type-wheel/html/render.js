@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-import MyComponent from '../src/index'
+import CellTypeWheel from '../src/index'
 
 import cftr from './data/cftr-sunburst.json'
 import lungany from './data/lung-any-sunburst.json'
@@ -24,7 +24,7 @@ const data = {
 }
 
 const render = (options, dataKey, target) => {
-  ReactDOM.render(<MyComponent {...options} data={data[dataKey]} />, document.getElementById(target))
+  ReactDOM.render(<CellTypeWheel {...options} data={data[dataKey]} />, document.getElementById(target))
 }
 
-export {render}
+export { render }

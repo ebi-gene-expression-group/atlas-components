@@ -5,21 +5,21 @@ import React from 'react'
 import renderer from 'react-test-renderer'
 import { render, screen } from '@testing-library/react'
 
-import MyComponent from '../src/MyComponent'
+import CellTypeWheel from '../src/CellTypeWheel'
 
-describe(`MyComponent`, () => {
+describe(`CellTypeWheel`, () => {
   test(`should mount in a full DOM`, () => {
-    render(<MyComponent />)
+    render(<CellTypeWheel />)
     expect(screen.getByRole(`heading`)).toBeInTheDocument()
   })
 
   test(`should render to static HTML`, () => {
-    render(<MyComponent />)
+    render(<CellTypeWheel />)
     expect(screen.getByRole(`heading`)).toHaveTextContent(`Bar`)
   })
 
   test(`matches snapshot`, () => {
-    const tree = renderer.create(<MyComponent />).toJSON()
+    const tree = renderer.create(<CellTypeWheel />).toJSON()
     expect(tree).toMatchSnapshot()
   })
 })
