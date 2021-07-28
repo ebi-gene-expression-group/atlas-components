@@ -11,7 +11,7 @@ const _colourizeClusters = (highlightSeries) =>
     // I can’t think of a better way to reconcile series.name being a string and highlightSeries being an array of
     // numbers. For more flexibility we might think of having our series be identified by an arbitrary ID string
     if (!highlightSeries.length || highlightSeries.length === series.length || highlightSeries.map((hs) => `Cluster ${hs}`).includes(aSeries.name)) {
-      if(aSeries.name === `Not available`) {
+      if(aSeries.name === `Not available` || aSeries.name === `not defined`) {
         return {
           name: aSeries.name,
           data: aSeries.data,
