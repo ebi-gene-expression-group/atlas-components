@@ -58,15 +58,25 @@ class TSnePlotView extends React.Component {
   _fetchAndSetStateCellClusters(
     {atlasUrl, experimentAccession, selectedColourBy, selectedColourByCategory, selectedPlotType, selectedPlotOptionLabel}) {
     const resource = selectedColourByCategory === `clusters` ?
-      `json/cell-plots/${experimentAccession}/clusters/k/${selectedColourBy}?plotMethod=${selectedPlotType}&${selectedPlotOptionLabel.replace(`:`, `=`)}` :
-      `json/cell-plots/${experimentAccession}/clusters/metadata/${selectedColourBy}?plotMethod=${selectedPlotType}&${selectedPlotOptionLabel.replace(`:`, `=`)}`
+      URI(`json/cell-plots/${experimentAccession}/clusters/k/${selectedColourBy}`)
+        .query({plotMethod: selectedPlotType})
+        .toString()
+        .concat(`&${selectedPlotOptionLabel.replace(`: `, `=`)}`) :
+      URI(`json/cell-plots/${experimentAccession}/clusters/metadata/${selectedColourBy}`)
+        .query({plotMethod: selectedPlotType})
+        .toString()
+        .concat(`&${selectedPlotOptionLabel.replace(`: `, `=`)}`)
+
 
     this._fetchAndSetState(
       resource, atlasUrl, `cellClustersData`, `cellClustersErrorMessage`, `loadingCellClusters`)
   }
 
-  _fetchAndSetStateGeneId({atlasUrl, experimentAccession, selectedPlotOption, geneId, selectedPlotType}) {
-    const resource = `json/experiments/${experimentAccession}/tsneplot/${selectedPlotOption}/expression/${geneId}?method=${selectedPlotType}`
+  _fetchAndSetStateGeneId({atlasUrl, experimentAccession, selectedPlotOptionLabel, geneId, selectedPlotType}) {
+    const resource = URI(`json/cell-plots/${experimentAccession}/expression/${geneId}`)
+      .query({plotMethod:selectedPlotType})
+      .toString()
+      .concat(`&${selectedPlotOptionLabel.replace(`: `, `=`)}`)
 
     this._fetchAndSetState(
       resource, atlasUrl, `geneExpressionData`, `geneExpressionErrorMessage`, `loadingGeneExpression`)
