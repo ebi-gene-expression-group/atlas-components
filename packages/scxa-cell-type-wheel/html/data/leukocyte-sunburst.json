@@ -1,0 +1,4021 @@
+[
+    {
+        "name": "Leukocyte",
+        "id": "root",
+        "parent": ""
+    },
+    {
+        "name": "Mus musculus",
+        "id": "mus_musculus",
+        "parent": "root"
+    },
+    {
+        "name": "Homo sapiens",
+        "id": "homo_sapiens",
+        "parent": "root"
+    },
+    {
+        "name": "Gallus gallus",
+        "id": "gallus_gallus",
+        "parent": "root"
+    },
+    {
+        "name": "lymph node",
+        "id": "mus_musculus.lymph_node",
+        "parent": "mus_musculus"
+    },
+    {
+        "name": "skin",
+        "id": "mus_musculus.skin",
+        "parent": "mus_musculus"
+    },
+    {
+        "name": "striatum",
+        "id": "mus_musculus.striatum",
+        "parent": "mus_musculus"
+    },
+    {
+        "name": "spleen",
+        "id": "mus_musculus.spleen",
+        "parent": "mus_musculus"
+    },
+    {
+        "name": "interscapular brown adipose tissue",
+        "id": "mus_musculus.interscapular_brown_adipose_tissue",
+        "parent": "mus_musculus"
+    },
+    {
+        "name": "hippocampus",
+        "id": "mus_musculus.hippocampus",
+        "parent": "mus_musculus"
+    },
+    {
+        "name": "bone marrow",
+        "id": "mus_musculus.bone_marrow",
+        "parent": "mus_musculus"
+    },
+    {
+        "name": "heart left atrium",
+        "id": "mus_musculus.heart_left_atrium",
+        "parent": "mus_musculus"
+    },
+    {
+        "name": "cerebellum",
+        "id": "mus_musculus.cerebellum",
+        "parent": "mus_musculus"
+    },
+    {
+        "name": "cerebral cortex",
+        "id": "mus_musculus.cerebral_cortex",
+        "parent": "mus_musculus"
+    },
+    {
+        "name": "mesenteric adipose tissue",
+        "id": "mus_musculus.mesenteric_adipose_tissue",
+        "parent": "mus_musculus"
+    },
+    {
+        "name": "heart right atrium",
+        "id": "mus_musculus.heart_right_atrium",
+        "parent": "mus_musculus"
+    },
+    {
+        "name": "subcutaneous adipose tissue",
+        "id": "mus_musculus.subcutaneous_adipose_tissue",
+        "parent": "mus_musculus"
+    },
+    {
+        "name": "gonadal fat pad",
+        "id": "mus_musculus.gonadal_fat_pad",
+        "parent": "mus_musculus"
+    },
+    {
+        "name": "endocrine pancreas",
+        "id": "mus_musculus.endocrine_pancreas",
+        "parent": "mus_musculus"
+    },
+    {
+        "name": "heart left ventricle",
+        "id": "mus_musculus.heart_left_ventricle",
+        "parent": "mus_musculus"
+    },
+    {
+        "name": "kidney",
+        "id": "mus_musculus.kidney",
+        "parent": "mus_musculus"
+    },
+    {
+        "name": "limb muscle",
+        "id": "mus_musculus.limb_muscle",
+        "parent": "mus_musculus"
+    },
+    {
+        "name": "liver",
+        "id": "mus_musculus.liver",
+        "parent": "mus_musculus"
+    },
+    {
+        "name": "heart right ventricle",
+        "id": "mus_musculus.heart_right_ventricle",
+        "parent": "mus_musculus"
+    },
+    {
+        "name": "lung",
+        "id": "mus_musculus.lung",
+        "parent": "mus_musculus"
+    },
+    {
+        "name": "back skin",
+        "id": "mus_musculus.back_skin",
+        "parent": "mus_musculus"
+    },
+    {
+        "name": "exocrine pancreas",
+        "id": "mus_musculus.exocrine_pancreas",
+        "parent": "mus_musculus"
+    },
+    {
+        "name": "heart",
+        "id": "mus_musculus.heart",
+        "parent": "mus_musculus"
+    },
+    {
+        "name": "diaphragm",
+        "id": "mus_musculus.diaphragm",
+        "parent": "mus_musculus"
+    },
+    {
+        "name": "olfactory bulb",
+        "id": "mus_musculus.olfactory_bulb",
+        "parent": "mus_musculus"
+    },
+    {
+        "name": "nasal cavity mucosa",
+        "id": "mus_musculus.nasal_cavity_mucosa",
+        "parent": "mus_musculus"
+    },
+    {
+        "name": "olfactory segment of nasal mucosa",
+        "id": "mus_musculus.olfactory_segment_of_nasal_mucosa",
+        "parent": "mus_musculus"
+    },
+    {
+        "name": "medial ganglionic eminence",
+        "id": "mus_musculus.medial_ganglionic_eminence",
+        "parent": "mus_musculus"
+    },
+    {
+        "name": "kidney",
+        "id": "homo_sapiens.kidney",
+        "parent": "homo_sapiens"
+    },
+    {
+        "name": "pancreas",
+        "id": "homo_sapiens.pancreas",
+        "parent": "homo_sapiens"
+    },
+    {
+        "name": "decidua",
+        "id": "homo_sapiens.decidua",
+        "parent": "homo_sapiens"
+    },
+    {
+        "name": "blood",
+        "id": "homo_sapiens.blood",
+        "parent": "homo_sapiens"
+    },
+    {
+        "name": "placenta",
+        "id": "homo_sapiens.placenta",
+        "parent": "homo_sapiens"
+    },
+    {
+        "name": "retinal neural layer",
+        "id": "homo_sapiens.retinal_neural_layer",
+        "parent": "homo_sapiens"
+    },
+    {
+        "name": "bone marrow",
+        "id": "homo_sapiens.bone_marrow",
+        "parent": "homo_sapiens"
+    },
+    {
+        "name": "liver",
+        "id": "homo_sapiens.liver",
+        "parent": "homo_sapiens"
+    },
+    {
+        "name": "oesophagus",
+        "id": "homo_sapiens.oesophagus",
+        "parent": "homo_sapiens"
+    },
+    {
+        "name": "spleen",
+        "id": "homo_sapiens.spleen",
+        "parent": "homo_sapiens"
+    },
+    {
+        "name": "lung",
+        "id": "homo_sapiens.lung",
+        "parent": "homo_sapiens"
+    },
+    {
+        "name": "lymph node",
+        "id": "homo_sapiens.lymph_node",
+        "parent": "homo_sapiens"
+    },
+    {
+        "name": "caecum",
+        "id": "homo_sapiens.caecum",
+        "parent": "homo_sapiens"
+    },
+    {
+        "name": "rectosigmoid junction",
+        "id": "homo_sapiens.rectosigmoid_junction",
+        "parent": "homo_sapiens"
+    },
+    {
+        "name": "sigmoid colon",
+        "id": "homo_sapiens.sigmoid_colon",
+        "parent": "homo_sapiens"
+    },
+    {
+        "name": "ascending colon",
+        "id": "homo_sapiens.ascending_colon",
+        "parent": "homo_sapiens"
+    },
+    {
+        "name": "testis",
+        "id": "homo_sapiens.testis",
+        "parent": "homo_sapiens"
+    },
+    {
+        "name": "ileal mucosa",
+        "id": "homo_sapiens.ileal_mucosa",
+        "parent": "homo_sapiens"
+    },
+    {
+        "name": "pigmented layer of retina and optic choroid",
+        "id": "homo_sapiens.pigmented_layer_of_retina_and_optic_choroid",
+        "parent": "homo_sapiens"
+    },
+    {
+        "name": "brain",
+        "id": "homo_sapiens.brain",
+        "parent": "homo_sapiens"
+    },
+    {
+        "name": "juxtamedullary cortex",
+        "id": "homo_sapiens.juxtamedullary_cortex",
+        "parent": "homo_sapiens"
+    },
+    {
+        "name": "lung parenchyma",
+        "id": "homo_sapiens.lung_parenchyma",
+        "parent": "homo_sapiens"
+    },
+    {
+        "name": "colon",
+        "id": "homo_sapiens.colon",
+        "parent": "homo_sapiens"
+    },
+    {
+        "name": "skin of body",
+        "id": "homo_sapiens.skin_of_body",
+        "parent": "homo_sapiens"
+    },
+    {
+        "name": "shoot axis apex",
+        "id": "homo_sapiens.shoot_axis_apex",
+        "parent": "homo_sapiens"
+    },
+    {
+        "name": "skin epidermis",
+        "id": "homo_sapiens.skin_epidermis",
+        "parent": "homo_sapiens"
+    },
+    {
+        "name": "umbilical cord blood",
+        "id": "homo_sapiens.umbilical_cord_blood",
+        "parent": "homo_sapiens"
+    },
+    {
+        "name": "autopod",
+        "id": "gallus_gallus.autopod",
+        "parent": "gallus_gallus"
+    },
+    {
+        "name": "conventional dendritic cell 2",
+        "id": "mus_musculus.lymph_node.conventional_dendritic_cell_2",
+        "parent": "mus_musculus.lymph_node",
+        "value": 1
+    },
+    {
+        "name": "natural killer cell",
+        "id": "mus_musculus.lymph_node.natural_killer_cell",
+        "parent": "mus_musculus.lymph_node",
+        "value": 1
+    },
+    {
+        "name": "conventional dendritic cell 1",
+        "id": "mus_musculus.lymph_node.conventional_dendritic_cell_1",
+        "parent": "mus_musculus.lymph_node",
+        "value": 1
+    },
+    {
+        "name": "B cell",
+        "id": "mus_musculus.lymph_node.b_cell",
+        "parent": "mus_musculus.lymph_node",
+        "value": 1
+    },
+    {
+        "name": "plasmacytoid dendritic cell",
+        "id": "mus_musculus.lymph_node.plasmacytoid_dendritic_cell",
+        "parent": "mus_musculus.lymph_node",
+        "value": 1
+    },
+    {
+        "name": "conventional dendritic cell 2",
+        "id": "mus_musculus.skin.conventional_dendritic_cell_2",
+        "parent": "mus_musculus.skin",
+        "value": 1
+    },
+    {
+        "name": "conventional dendritic cell 1",
+        "id": "mus_musculus.skin.conventional_dendritic_cell_1",
+        "parent": "mus_musculus.skin",
+        "value": 1
+    },
+    {
+        "name": "natural killer cell",
+        "id": "mus_musculus.skin.natural_killer_cell",
+        "parent": "mus_musculus.skin",
+        "value": 1
+    },
+    {
+        "name": "B cell",
+        "id": "mus_musculus.skin.b_cell",
+        "parent": "mus_musculus.skin",
+        "value": 1
+    },
+    {
+        "name": "plasmacytoid dendritic cell",
+        "id": "mus_musculus.skin.plasmacytoid_dendritic_cell",
+        "parent": "mus_musculus.skin",
+        "value": 1
+    },
+    {
+        "name": "microglial cell",
+        "id": "mus_musculus.striatum.microglial_cell",
+        "parent": "mus_musculus.striatum",
+        "value": 1
+    },
+    {
+        "name": "macrophage",
+        "id": "mus_musculus.striatum.macrophage",
+        "parent": "mus_musculus.striatum",
+        "value": 1
+    },
+    {
+        "name": "T cell",
+        "id": "mus_musculus.spleen.t_cell",
+        "parent": "mus_musculus.spleen",
+        "value": 1
+    },
+    {
+        "name": "B cell",
+        "id": "mus_musculus.spleen.b_cell",
+        "parent": "mus_musculus.spleen",
+        "value": 1
+    },
+    {
+        "name": "macrophage",
+        "id": "mus_musculus.spleen.macrophage",
+        "parent": "mus_musculus.spleen",
+        "value": 1
+    },
+    {
+        "name": "natural killer cell",
+        "id": "mus_musculus.interscapular_brown_adipose_tissue.natural_killer_cell",
+        "parent": "mus_musculus.interscapular_brown_adipose_tissue",
+        "value": 1
+    },
+    {
+        "name": "B cell",
+        "id": "mus_musculus.interscapular_brown_adipose_tissue.b_cell",
+        "parent": "mus_musculus.interscapular_brown_adipose_tissue",
+        "value": 1
+    },
+    {
+        "name": "T cell",
+        "id": "mus_musculus.interscapular_brown_adipose_tissue.t_cell",
+        "parent": "mus_musculus.interscapular_brown_adipose_tissue",
+        "value": 1
+    },
+    {
+        "name": "microglial cell",
+        "id": "mus_musculus.hippocampus.microglial_cell",
+        "parent": "mus_musculus.hippocampus",
+        "value": 1
+    },
+    {
+        "name": "macrophage",
+        "id": "mus_musculus.hippocampus.macrophage",
+        "parent": "mus_musculus.hippocampus",
+        "value": 1
+    },
+    {
+        "name": "naive B cell",
+        "id": "mus_musculus.bone_marrow.naive_b_cell",
+        "parent": "mus_musculus.bone_marrow",
+        "value": 1
+    },
+    {
+        "name": "monocyte",
+        "id": "mus_musculus.bone_marrow.monocyte",
+        "parent": "mus_musculus.bone_marrow",
+        "value": 1
+    },
+    {
+        "name": "granulocyte",
+        "id": "mus_musculus.bone_marrow.granulocyte",
+        "parent": "mus_musculus.bone_marrow",
+        "value": 1
+    },
+    {
+        "name": "macrophage",
+        "id": "mus_musculus.bone_marrow.macrophage",
+        "parent": "mus_musculus.bone_marrow",
+        "value": 1
+    },
+    {
+        "name": "immature B cell",
+        "id": "mus_musculus.bone_marrow.immature_b_cell",
+        "parent": "mus_musculus.bone_marrow",
+        "value": 1
+    },
+    {
+        "name": "B cell",
+        "id": "mus_musculus.bone_marrow.b_cell",
+        "parent": "mus_musculus.bone_marrow",
+        "value": 1
+    },
+    {
+        "name": "basophil",
+        "id": "mus_musculus.bone_marrow.basophil",
+        "parent": "mus_musculus.bone_marrow",
+        "value": 1
+    },
+    {
+        "name": "regulatory T cell",
+        "id": "mus_musculus.bone_marrow.regulatory_t_cell",
+        "parent": "mus_musculus.bone_marrow",
+        "value": 1
+    },
+    {
+        "name": "leukocyte",
+        "id": "mus_musculus.heart_left_atrium.leukocyte",
+        "parent": "mus_musculus.heart_left_atrium",
+        "value": 1
+    },
+    {
+        "name": "microglial cell",
+        "id": "mus_musculus.cerebellum.microglial_cell",
+        "parent": "mus_musculus.cerebellum",
+        "value": 1
+    },
+    {
+        "name": "macrophage",
+        "id": "mus_musculus.cerebellum.macrophage",
+        "parent": "mus_musculus.cerebellum",
+        "value": 1
+    },
+    {
+        "name": "microglial cell",
+        "id": "mus_musculus.cerebral_cortex.microglial_cell",
+        "parent": "mus_musculus.cerebral_cortex",
+        "value": 1
+    },
+    {
+        "name": "macrophage",
+        "id": "mus_musculus.cerebral_cortex.macrophage",
+        "parent": "mus_musculus.cerebral_cortex",
+        "value": 1
+    },
+    {
+        "name": "T cell",
+        "id": "mus_musculus.mesenteric_adipose_tissue.t_cell",
+        "parent": "mus_musculus.mesenteric_adipose_tissue",
+        "value": 1
+    },
+    {
+        "name": "B cell",
+        "id": "mus_musculus.mesenteric_adipose_tissue.b_cell",
+        "parent": "mus_musculus.mesenteric_adipose_tissue",
+        "value": 1
+    },
+    {
+        "name": "natural killer cell",
+        "id": "mus_musculus.mesenteric_adipose_tissue.natural_killer_cell",
+        "parent": "mus_musculus.mesenteric_adipose_tissue",
+        "value": 1
+    },
+    {
+        "name": "leukocyte",
+        "id": "mus_musculus.heart_right_atrium.leukocyte",
+        "parent": "mus_musculus.heart_right_atrium",
+        "value": 1
+    },
+    {
+        "name": "B cell",
+        "id": "mus_musculus.subcutaneous_adipose_tissue.b_cell",
+        "parent": "mus_musculus.subcutaneous_adipose_tissue",
+        "value": 1
+    },
+    {
+        "name": "natural killer cell",
+        "id": "mus_musculus.subcutaneous_adipose_tissue.natural_killer_cell",
+        "parent": "mus_musculus.subcutaneous_adipose_tissue",
+        "value": 1
+    },
+    {
+        "name": "T cell",
+        "id": "mus_musculus.subcutaneous_adipose_tissue.t_cell",
+        "parent": "mus_musculus.subcutaneous_adipose_tissue",
+        "value": 1
+    },
+    {
+        "name": "T cell",
+        "id": "mus_musculus.gonadal_fat_pad.t_cell",
+        "parent": "mus_musculus.gonadal_fat_pad",
+        "value": 1
+    },
+    {
+        "name": "natural killer cell",
+        "id": "mus_musculus.gonadal_fat_pad.natural_killer_cell",
+        "parent": "mus_musculus.gonadal_fat_pad",
+        "value": 1
+    },
+    {
+        "name": "B cell",
+        "id": "mus_musculus.gonadal_fat_pad.b_cell",
+        "parent": "mus_musculus.gonadal_fat_pad",
+        "value": 1
+    },
+    {
+        "name": "leukocyte",
+        "id": "mus_musculus.endocrine_pancreas.leukocyte",
+        "parent": "mus_musculus.endocrine_pancreas",
+        "value": 1
+    },
+    {
+        "name": "leukocyte",
+        "id": "mus_musculus.heart_left_ventricle.leukocyte",
+        "parent": "mus_musculus.heart_left_ventricle",
+        "value": 1
+    },
+    {
+        "name": "macrophage",
+        "id": "mus_musculus.kidney.macrophage",
+        "parent": "mus_musculus.kidney",
+        "value": 1
+    },
+    {
+        "name": "natural killer cell",
+        "id": "mus_musculus.kidney.natural_killer_cell",
+        "parent": "mus_musculus.kidney",
+        "value": 1
+    },
+    {
+        "name": "macrophage",
+        "id": "mus_musculus.limb_muscle.macrophage",
+        "parent": "mus_musculus.limb_muscle",
+        "value": 1
+    },
+    {
+        "name": "B cell",
+        "id": "mus_musculus.limb_muscle.b_cell",
+        "parent": "mus_musculus.limb_muscle",
+        "value": 1
+    },
+    {
+        "name": "T cell",
+        "id": "mus_musculus.limb_muscle.t_cell",
+        "parent": "mus_musculus.limb_muscle",
+        "value": 1
+    },
+    {
+        "name": "Kupffer cell",
+        "id": "mus_musculus.liver.kupffer_cell",
+        "parent": "mus_musculus.liver",
+        "value": 1
+    },
+    {
+        "name": "natural killer cell",
+        "id": "mus_musculus.liver.natural_killer_cell",
+        "parent": "mus_musculus.liver",
+        "value": 1
+    },
+    {
+        "name": "B cell",
+        "id": "mus_musculus.liver.b_cell",
+        "parent": "mus_musculus.liver",
+        "value": 1
+    },
+    {
+        "name": "leukocyte",
+        "id": "mus_musculus.heart_right_ventricle.leukocyte",
+        "parent": "mus_musculus.heart_right_ventricle",
+        "value": 1
+    },
+    {
+        "name": "monocyte",
+        "id": "mus_musculus.lung.monocyte",
+        "parent": "mus_musculus.lung",
+        "value": 1
+    },
+    {
+        "name": "classical monocyte",
+        "id": "mus_musculus.lung.classical_monocyte",
+        "parent": "mus_musculus.lung",
+        "value": 1
+    },
+    {
+        "name": "B cell",
+        "id": "mus_musculus.lung.b_cell",
+        "parent": "mus_musculus.lung",
+        "value": 1
+    },
+    {
+        "name": "T cell",
+        "id": "mus_musculus.lung.t_cell",
+        "parent": "mus_musculus.lung",
+        "value": 1
+    },
+    {
+        "name": "natural killer cell",
+        "id": "mus_musculus.lung.natural_killer_cell",
+        "parent": "mus_musculus.lung",
+        "value": 1
+    },
+    {
+        "name": "leukocyte",
+        "id": "mus_musculus.lung.leukocyte",
+        "parent": "mus_musculus.lung",
+        "value": 1
+    },
+    {
+        "name": "leukocyte",
+        "id": "mus_musculus.back_skin.leukocyte",
+        "parent": "mus_musculus.back_skin",
+        "value": 1
+    },
+    {
+        "name": "leukocyte",
+        "id": "mus_musculus.exocrine_pancreas.leukocyte",
+        "parent": "mus_musculus.exocrine_pancreas",
+        "value": 1
+    },
+    {
+        "name": "T cell",
+        "id": "mus_musculus.heart.t_cell",
+        "parent": "mus_musculus.heart",
+        "value": 1
+    },
+    {
+        "name": "macrophage",
+        "id": "mus_musculus.heart.macrophage",
+        "parent": "mus_musculus.heart",
+        "value": 1
+    },
+    {
+        "name": "macrophage 1",
+        "id": "mus_musculus.heart.macrophage_1",
+        "parent": "mus_musculus.heart",
+        "value": 1
+    },
+    {
+        "name": "macrophage 3",
+        "id": "mus_musculus.heart.macrophage_3",
+        "parent": "mus_musculus.heart",
+        "value": 1
+    },
+    {
+        "name": "macrophage 2",
+        "id": "mus_musculus.heart.macrophage_2",
+        "parent": "mus_musculus.heart",
+        "value": 1
+    },
+    {
+        "name": "natural killer cell",
+        "id": "mus_musculus.heart.natural_killer_cell",
+        "parent": "mus_musculus.heart",
+        "value": 1
+    },
+    {
+        "name": "dendritic cell",
+        "id": "mus_musculus.heart.dendritic_cell",
+        "parent": "mus_musculus.heart",
+        "value": 1
+    },
+    {
+        "name": "dendritic-like cell",
+        "id": "mus_musculus.heart.dendritic_like_cell",
+        "parent": "mus_musculus.heart",
+        "value": 1
+    },
+    {
+        "name": "B cell",
+        "id": "mus_musculus.heart.b_cell",
+        "parent": "mus_musculus.heart",
+        "value": 1
+    },
+    {
+        "name": "granulocyte",
+        "id": "mus_musculus.heart.granulocyte",
+        "parent": "mus_musculus.heart",
+        "value": 1
+    },
+    {
+        "name": "macrophage 4",
+        "id": "mus_musculus.heart.macrophage_4",
+        "parent": "mus_musculus.heart",
+        "value": 1
+    },
+    {
+        "name": "macrophage",
+        "id": "mus_musculus.diaphragm.macrophage",
+        "parent": "mus_musculus.diaphragm",
+        "value": 1
+    },
+    {
+        "name": "lymphocyte",
+        "id": "mus_musculus.diaphragm.lymphocyte",
+        "parent": "mus_musculus.diaphragm",
+        "value": 1
+    },
+    {
+        "name": "macrophage",
+        "id": "mus_musculus.olfactory_bulb.macrophage",
+        "parent": "mus_musculus.olfactory_bulb",
+        "value": 1
+    },
+    {
+        "name": "microglia",
+        "id": "mus_musculus.olfactory_bulb.microglia",
+        "parent": "mus_musculus.olfactory_bulb",
+        "value": 1
+    },
+    {
+        "name": "microglial cell",
+        "id": "mus_musculus.olfactory_bulb.microglial_cell",
+        "parent": "mus_musculus.olfactory_bulb",
+        "value": 1
+    },
+    {
+        "name": "perivasular macrophage",
+        "id": "mus_musculus.olfactory_bulb.perivasular_macrophage",
+        "parent": "mus_musculus.olfactory_bulb",
+        "value": 1
+    },
+    {
+        "name": "macrophage",
+        "id": "mus_musculus.nasal_cavity_mucosa.macrophage",
+        "parent": "mus_musculus.nasal_cavity_mucosa",
+        "value": 1
+    },
+    {
+        "name": "dendritic cell",
+        "id": "mus_musculus.nasal_cavity_mucosa.dendritic_cell",
+        "parent": "mus_musculus.nasal_cavity_mucosa",
+        "value": 1
+    },
+    {
+        "name": "basal cell of olfactory epithelium",
+        "id": "mus_musculus.nasal_cavity_mucosa.basal_cell_of_olfactory_epithelium",
+        "parent": "mus_musculus.nasal_cavity_mucosa",
+        "value": 1
+    },
+    {
+        "name": "neutrophil",
+        "id": "mus_musculus.nasal_cavity_mucosa.neutrophil",
+        "parent": "mus_musculus.nasal_cavity_mucosa",
+        "value": 1
+    },
+    {
+        "name": "B cell",
+        "id": "mus_musculus.nasal_cavity_mucosa.b_cell",
+        "parent": "mus_musculus.nasal_cavity_mucosa",
+        "value": 1
+    },
+    {
+        "name": "monocyte",
+        "id": "mus_musculus.nasal_cavity_mucosa.monocyte",
+        "parent": "mus_musculus.nasal_cavity_mucosa",
+        "value": 1
+    },
+    {
+        "name": "basal epithelial cell",
+        "id": "mus_musculus.nasal_cavity_mucosa.basal_epithelial_cell",
+        "parent": "mus_musculus.nasal_cavity_mucosa",
+        "value": 1
+    },
+    {
+        "name": "T cell",
+        "id": "mus_musculus.nasal_cavity_mucosa.t_cell",
+        "parent": "mus_musculus.nasal_cavity_mucosa",
+        "value": 1
+    },
+    {
+        "name": "leukocyte",
+        "id": "mus_musculus.olfactory_segment_of_nasal_mucosa.leukocyte",
+        "parent": "mus_musculus.olfactory_segment_of_nasal_mucosa",
+        "value": 1
+    },
+    {
+        "name": "immune cell",
+        "id": "mus_musculus.olfactory_segment_of_nasal_mucosa.immune_cell",
+        "parent": "mus_musculus.olfactory_segment_of_nasal_mucosa",
+        "value": 1
+    },
+    {
+        "name": "proliferating neural progenitor cell 5 - microglial cell",
+        "id": "mus_musculus.medial_ganglionic_eminence.proliferating_neural_progenitor_cell_5___microglial_cell",
+        "parent": "mus_musculus.medial_ganglionic_eminence",
+        "value": 1
+    },
+    {
+        "name": "microglial cell",
+        "id": "mus_musculus.medial_ganglionic_eminence.microglial_cell",
+        "parent": "mus_musculus.medial_ganglionic_eminence",
+        "value": 1
+    },
+    {
+        "name": "proliferating neural progenitor cell",
+        "id": "mus_musculus.medial_ganglionic_eminence.proliferating_neural_progenitor_cell",
+        "parent": "mus_musculus.medial_ganglionic_eminence",
+        "value": 1
+    },
+    {
+        "name": "macrophage",
+        "id": "homo_sapiens.kidney.macrophage",
+        "parent": "homo_sapiens.kidney",
+        "value": 1
+    },
+    {
+        "name": "mast cell",
+        "id": "homo_sapiens.kidney.mast_cell",
+        "parent": "homo_sapiens.kidney",
+        "value": 1
+    },
+    {
+        "name": "monocyte",
+        "id": "homo_sapiens.kidney.monocyte",
+        "parent": "homo_sapiens.kidney",
+        "value": 1
+    },
+    {
+        "name": "macrophage type 1",
+        "id": "homo_sapiens.kidney.macrophage_type_1",
+        "parent": "homo_sapiens.kidney",
+        "value": 1
+    },
+    {
+        "name": "neutrophil",
+        "id": "homo_sapiens.kidney.neutrophil",
+        "parent": "homo_sapiens.kidney",
+        "value": 1
+    },
+    {
+        "name": "natural killer cell",
+        "id": "homo_sapiens.kidney.natural_killer_cell",
+        "parent": "homo_sapiens.kidney",
+        "value": 1
+    },
+    {
+        "name": "conventional dendritic cell type 2",
+        "id": "homo_sapiens.kidney.conventional_dendritic_cell_type_2",
+        "parent": "homo_sapiens.kidney",
+        "value": 1
+    },
+    {
+        "name": "innate lymphocyte-like cell",
+        "id": "homo_sapiens.kidney.innate_lymphocyte_like_cell",
+        "parent": "homo_sapiens.kidney",
+        "value": 1
+    },
+    {
+        "name": "proliferating conventional dendritic cell type 2",
+        "id": "homo_sapiens.kidney.proliferating_conventional_dendritic_cell_type_2",
+        "parent": "homo_sapiens.kidney",
+        "value": 1
+    },
+    {
+        "name": "innate lymphoid cell",
+        "id": "homo_sapiens.kidney.innate_lymphoid_cell",
+        "parent": "homo_sapiens.kidney",
+        "value": 1
+    },
+    {
+        "name": "proliferating natural killer cell",
+        "id": "homo_sapiens.kidney.proliferating_natural_killer_cell",
+        "parent": "homo_sapiens.kidney",
+        "value": 1
+    },
+    {
+        "name": "macrophage type 2",
+        "id": "homo_sapiens.kidney.macrophage_type_2",
+        "parent": "homo_sapiens.kidney",
+        "value": 1
+    },
+    {
+        "name": "CD8-positive, alpha-beta T cell",
+        "id": "homo_sapiens.kidney.cd8_positive,_alpha_beta_t_cell",
+        "parent": "homo_sapiens.kidney",
+        "value": 1
+    },
+    {
+        "name": "prolifirating macrophage",
+        "id": "homo_sapiens.kidney.prolifirating_macrophage",
+        "parent": "homo_sapiens.kidney",
+        "value": 1
+    },
+    {
+        "name": "proliferating monocyte",
+        "id": "homo_sapiens.kidney.proliferating_monocyte",
+        "parent": "homo_sapiens.kidney",
+        "value": 1
+    },
+    {
+        "name": "conventional dendritic cell",
+        "id": "homo_sapiens.kidney.conventional_dendritic_cell",
+        "parent": "homo_sapiens.kidney",
+        "value": 1
+    },
+    {
+        "name": "plasmacytoid dendritic cell",
+        "id": "homo_sapiens.kidney.plasmacytoid_dendritic_cell",
+        "parent": "homo_sapiens.kidney",
+        "value": 1
+    },
+    {
+        "name": "CD4-positive, alpha-beta T cell",
+        "id": "homo_sapiens.kidney.cd4_positive,_alpha_beta_t_cell",
+        "parent": "homo_sapiens.kidney",
+        "value": 1
+    },
+    {
+        "name": "CD8+ T cell",
+        "id": "homo_sapiens.kidney.cd8+_t_cell",
+        "parent": "homo_sapiens.kidney",
+        "value": 1
+    },
+    {
+        "name": "B cell",
+        "id": "homo_sapiens.kidney.b_cell",
+        "parent": "homo_sapiens.kidney",
+        "value": 1
+    },
+    {
+        "name": "conventional dendritic cell type 1",
+        "id": "homo_sapiens.kidney.conventional_dendritic_cell_type_1",
+        "parent": "homo_sapiens.kidney",
+        "value": 1
+    },
+    {
+        "name": "prolifirating B cell",
+        "id": "homo_sapiens.kidney.prolifirating_b_cell",
+        "parent": "homo_sapiens.kidney",
+        "value": 1
+    },
+    {
+        "name": "CD4+ T cell",
+        "id": "homo_sapiens.kidney.cd4+_t_cell",
+        "parent": "homo_sapiens.kidney",
+        "value": 1
+    },
+    {
+        "name": "leukocyte",
+        "id": "homo_sapiens.kidney.leukocyte",
+        "parent": "homo_sapiens.kidney",
+        "value": 1
+    },
+    {
+        "name": "mesangial cell",
+        "id": "homo_sapiens.kidney.mesangial_cell",
+        "parent": "homo_sapiens.kidney",
+        "value": 1
+    },
+    {
+        "name": "mast cell",
+        "id": "homo_sapiens.pancreas.mast_cell",
+        "parent": "homo_sapiens.pancreas",
+        "value": 1
+    },
+    {
+        "name": "decidual macrophage (dM1)",
+        "id": "homo_sapiens.decidua.decidual_macrophage_(dm1)",
+        "parent": "homo_sapiens.decidua",
+        "value": 1
+    },
+    {
+        "name": "macrophage",
+        "id": "homo_sapiens.decidua.macrophage",
+        "parent": "homo_sapiens.decidua",
+        "value": 1
+    },
+    {
+        "name": "decidual macrophage (dM2)",
+        "id": "homo_sapiens.decidua.decidual_macrophage_(dm2)",
+        "parent": "homo_sapiens.decidua",
+        "value": 1
+    },
+    {
+        "name": "T cell",
+        "id": "homo_sapiens.decidua.t_cell",
+        "parent": "homo_sapiens.decidua",
+        "value": 1
+    },
+    {
+        "name": "decidual natural killer cell",
+        "id": "homo_sapiens.decidua.decidual_natural_killer_cell",
+        "parent": "homo_sapiens.decidua",
+        "value": 1
+    },
+    {
+        "name": "decidual natural killer cell (dNK2)",
+        "id": "homo_sapiens.decidua.decidual_natural_killer_cell_(dnk2)",
+        "parent": "homo_sapiens.decidua",
+        "value": 1
+    },
+    {
+        "name": "villous cytotrophoblast (VCT)",
+        "id": "homo_sapiens.decidua.villous_cytotrophoblast_(vct)",
+        "parent": "homo_sapiens.decidua",
+        "value": 1
+    },
+    {
+        "name": "cytotrophoblast",
+        "id": "homo_sapiens.decidua.cytotrophoblast",
+        "parent": "homo_sapiens.decidua",
+        "value": 1
+    },
+    {
+        "name": "syncytiotrophoblast",
+        "id": "homo_sapiens.decidua.syncytiotrophoblast",
+        "parent": "homo_sapiens.decidua",
+        "value": 1
+    },
+    {
+        "name": "decidual natural killer cell (dNK1)",
+        "id": "homo_sapiens.decidua.decidual_natural_killer_cell_(dnk1)",
+        "parent": "homo_sapiens.decidua",
+        "value": 1
+    },
+    {
+        "name": "decidual natural killer cell (dNK3)",
+        "id": "homo_sapiens.decidua.decidual_natural_killer_cell_(dnk3)",
+        "parent": "homo_sapiens.decidua",
+        "value": 1
+    },
+    {
+        "name": "Hofbauer cell",
+        "id": "homo_sapiens.decidua.hofbauer_cell",
+        "parent": "homo_sapiens.decidua",
+        "value": 1
+    },
+    {
+        "name": "innate lymphoid cell (ILC3)",
+        "id": "homo_sapiens.decidua.innate_lymphoid_cell_(ilc3)",
+        "parent": "homo_sapiens.decidua",
+        "value": 1
+    },
+    {
+        "name": "conventional dendritic cell (DC1)",
+        "id": "homo_sapiens.decidua.conventional_dendritic_cell_(dc1)",
+        "parent": "homo_sapiens.decidua",
+        "value": 1
+    },
+    {
+        "name": "Hofbauer cell (HB)",
+        "id": "homo_sapiens.decidua.hofbauer_cell_(hb)",
+        "parent": "homo_sapiens.decidua",
+        "value": 1
+    },
+    {
+        "name": "innate lymphoid cell",
+        "id": "homo_sapiens.decidua.innate_lymphoid_cell",
+        "parent": "homo_sapiens.decidua",
+        "value": 1
+    },
+    {
+        "name": "CD16-positive natural killer cell (NK CD16+)",
+        "id": "homo_sapiens.decidua.cd16_positive_natural_killer_cell_(nk_cd16+)",
+        "parent": "homo_sapiens.decidua",
+        "value": 1
+    },
+    {
+        "name": "decidual cell",
+        "id": "homo_sapiens.decidua.decidual_cell",
+        "parent": "homo_sapiens.decidua",
+        "value": 1
+    },
+    {
+        "name": "natural killer cell",
+        "id": "homo_sapiens.decidua.natural_killer_cell",
+        "parent": "homo_sapiens.decidua",
+        "value": 1
+    },
+    {
+        "name": "granulocyte",
+        "id": "homo_sapiens.decidua.granulocyte",
+        "parent": "homo_sapiens.decidua",
+        "value": 1
+    },
+    {
+        "name": "proliferating decidual natural killer cell (dNK p)",
+        "id": "homo_sapiens.decidua.proliferating_decidual_natural_killer_cell_(dnk_p)",
+        "parent": "homo_sapiens.decidua",
+        "value": 1
+    },
+    {
+        "name": "CD16-negative natural killer cell (NK CD16-)",
+        "id": "homo_sapiens.decidua.cd16_negative_natural_killer_cell_(nk_cd16_)",
+        "parent": "homo_sapiens.decidua",
+        "value": 1
+    },
+    {
+        "name": "conventional dendritic cell",
+        "id": "homo_sapiens.decidua.conventional_dendritic_cell",
+        "parent": "homo_sapiens.decidua",
+        "value": 1
+    },
+    {
+        "name": "fetal fibroblast (fFB1)",
+        "id": "homo_sapiens.decidua.fetal_fibroblast_(ffb1)",
+        "parent": "homo_sapiens.decidua",
+        "value": 1
+    },
+    {
+        "name": "plasma cell",
+        "id": "homo_sapiens.decidua.plasma_cell",
+        "parent": "homo_sapiens.decidua",
+        "value": 1
+    },
+    {
+        "name": "uterine perivascular cell",
+        "id": "homo_sapiens.decidua.uterine_perivascular_cell",
+        "parent": "homo_sapiens.decidua",
+        "value": 1
+    },
+    {
+        "name": "decidual stromal cell (dS1)",
+        "id": "homo_sapiens.decidua.decidual_stromal_cell_(ds1)",
+        "parent": "homo_sapiens.decidua",
+        "value": 1
+    },
+    {
+        "name": "decidual stromal cell (dS3)",
+        "id": "homo_sapiens.decidua.decidual_stromal_cell_(ds3)",
+        "parent": "homo_sapiens.decidua",
+        "value": 1
+    },
+    {
+        "name": "decidual macrophage (dM3)",
+        "id": "homo_sapiens.decidua.decidual_macrophage_(dm3)",
+        "parent": "homo_sapiens.decidua",
+        "value": 1
+    },
+    {
+        "name": "monocyte",
+        "id": "homo_sapiens.decidua.monocyte",
+        "parent": "homo_sapiens.decidua",
+        "value": 1
+    },
+    {
+        "name": "plasmacytoid dendritic cell (DC2)",
+        "id": "homo_sapiens.decidua.plasmacytoid_dendritic_cell_(dc2)",
+        "parent": "homo_sapiens.decidua",
+        "value": 1
+    },
+    {
+        "name": "plasmacytoid dendritic cell",
+        "id": "homo_sapiens.decidua.plasmacytoid_dendritic_cell",
+        "parent": "homo_sapiens.decidua",
+        "value": 1
+    },
+    {
+        "name": "monocyte",
+        "id": "homo_sapiens.blood.monocyte",
+        "parent": "homo_sapiens.blood",
+        "value": 1
+    },
+    {
+        "name": "T cell",
+        "id": "homo_sapiens.blood.t_cell",
+        "parent": "homo_sapiens.blood",
+        "value": 1
+    },
+    {
+        "name": "plasma cell",
+        "id": "homo_sapiens.blood.plasma_cell",
+        "parent": "homo_sapiens.blood",
+        "value": 1
+    },
+    {
+        "name": "CD16-positive natural killer cell (NK CD16+)",
+        "id": "homo_sapiens.blood.cd16_positive_natural_killer_cell_(nk_cd16+)",
+        "parent": "homo_sapiens.blood",
+        "value": 1
+    },
+    {
+        "name": "CD16-negative natural killer cell (NK CD16-)",
+        "id": "homo_sapiens.blood.cd16_negative_natural_killer_cell_(nk_cd16_)",
+        "parent": "homo_sapiens.blood",
+        "value": 1
+    },
+    {
+        "name": "granulocyte",
+        "id": "homo_sapiens.blood.granulocyte",
+        "parent": "homo_sapiens.blood",
+        "value": 1
+    },
+    {
+        "name": "plasmacytoid dendritic cell (DC2)",
+        "id": "homo_sapiens.blood.plasmacytoid_dendritic_cell_(dc2)",
+        "parent": "homo_sapiens.blood",
+        "value": 1
+    },
+    {
+        "name": "natural killer cell",
+        "id": "homo_sapiens.blood.natural_killer_cell",
+        "parent": "homo_sapiens.blood",
+        "value": 1
+    },
+    {
+        "name": "cytotrophoblast",
+        "id": "homo_sapiens.blood.cytotrophoblast",
+        "parent": "homo_sapiens.blood",
+        "value": 1
+    },
+    {
+        "name": "plasmacytoid dendritic cell",
+        "id": "homo_sapiens.blood.plasmacytoid_dendritic_cell",
+        "parent": "homo_sapiens.blood",
+        "value": 1
+    },
+    {
+        "name": "villous cytotrophoblast (VCT)",
+        "id": "homo_sapiens.blood.villous_cytotrophoblast_(vct)",
+        "parent": "homo_sapiens.blood",
+        "value": 1
+    },
+    {
+        "name": "decidual natural killer cell (dNK2)",
+        "id": "homo_sapiens.blood.decidual_natural_killer_cell_(dnk2)",
+        "parent": "homo_sapiens.blood",
+        "value": 1
+    },
+    {
+        "name": "decidual natural killer cell (dNK3)",
+        "id": "homo_sapiens.blood.decidual_natural_killer_cell_(dnk3)",
+        "parent": "homo_sapiens.blood",
+        "value": 1
+    },
+    {
+        "name": "decidual natural killer cell",
+        "id": "homo_sapiens.blood.decidual_natural_killer_cell",
+        "parent": "homo_sapiens.blood",
+        "value": 1
+    },
+    {
+        "name": "conventional dendritic cell (DC1)",
+        "id": "homo_sapiens.blood.conventional_dendritic_cell_(dc1)",
+        "parent": "homo_sapiens.blood",
+        "value": 1
+    },
+    {
+        "name": "conventional dendritic cell",
+        "id": "homo_sapiens.blood.conventional_dendritic_cell",
+        "parent": "homo_sapiens.blood",
+        "value": 1
+    },
+    {
+        "name": "decidual macrophage (dM2)",
+        "id": "homo_sapiens.blood.decidual_macrophage_(dm2)",
+        "parent": "homo_sapiens.blood",
+        "value": 1
+    },
+    {
+        "name": "macrophage",
+        "id": "homo_sapiens.blood.macrophage",
+        "parent": "homo_sapiens.blood",
+        "value": 1
+    },
+    {
+        "name": "innate lymphoid cell",
+        "id": "homo_sapiens.blood.innate_lymphoid_cell",
+        "parent": "homo_sapiens.blood",
+        "value": 1
+    },
+    {
+        "name": "activated CD4+ T cell",
+        "id": "homo_sapiens.blood.activated_cd4+_t_cell",
+        "parent": "homo_sapiens.blood",
+        "value": 1
+    },
+    {
+        "name": "activated CD4-positive, alpha-beta T cell",
+        "id": "homo_sapiens.blood.activated_cd4_positive,_alpha_beta_t_cell",
+        "parent": "homo_sapiens.blood",
+        "value": 1
+    },
+    {
+        "name": "activated CD8+ T cell",
+        "id": "homo_sapiens.blood.activated_cd8+_t_cell",
+        "parent": "homo_sapiens.blood",
+        "value": 1
+    },
+    {
+        "name": "CD8-positive, alpha-beta T cell",
+        "id": "homo_sapiens.blood.cd8_positive,_alpha_beta_t_cell",
+        "parent": "homo_sapiens.blood",
+        "value": 1
+    },
+    {
+        "name": "resting CD8+ T cell",
+        "id": "homo_sapiens.blood.resting_cd8+_t_cell",
+        "parent": "homo_sapiens.blood",
+        "value": 1
+    },
+    {
+        "name": "resting CD4+ T cell",
+        "id": "homo_sapiens.blood.resting_cd4+_t_cell",
+        "parent": "homo_sapiens.blood",
+        "value": 1
+    },
+    {
+        "name": "CD4-positive, alpha-beta T cell",
+        "id": "homo_sapiens.blood.cd4_positive,_alpha_beta_t_cell",
+        "parent": "homo_sapiens.blood",
+        "value": 1
+    },
+    {
+        "name": "B cell",
+        "id": "homo_sapiens.blood.b_cell",
+        "parent": "homo_sapiens.blood",
+        "value": 1
+    },
+    {
+        "name": "neutrophil",
+        "id": "homo_sapiens.blood.neutrophil",
+        "parent": "homo_sapiens.blood",
+        "value": 1
+    },
+    {
+        "name": "macrophage",
+        "id": "homo_sapiens.placenta.macrophage",
+        "parent": "homo_sapiens.placenta",
+        "value": 1
+    },
+    {
+        "name": "decidual macrophage (dM3)",
+        "id": "homo_sapiens.placenta.decidual_macrophage_(dm3)",
+        "parent": "homo_sapiens.placenta",
+        "value": 1
+    },
+    {
+        "name": "Hofbauer cell",
+        "id": "homo_sapiens.placenta.hofbauer_cell",
+        "parent": "homo_sapiens.placenta",
+        "value": 1
+    },
+    {
+        "name": "Hofbauer cell (HB)",
+        "id": "homo_sapiens.placenta.hofbauer_cell_(hb)",
+        "parent": "homo_sapiens.placenta",
+        "value": 1
+    },
+    {
+        "name": "monocyte",
+        "id": "homo_sapiens.placenta.monocyte",
+        "parent": "homo_sapiens.placenta",
+        "value": 1
+    },
+    {
+        "name": "decidual macrophage (dM2)",
+        "id": "homo_sapiens.placenta.decidual_macrophage_(dm2)",
+        "parent": "homo_sapiens.placenta",
+        "value": 1
+    },
+    {
+        "name": "plasmacytoid dendritic cell (DC2)",
+        "id": "homo_sapiens.placenta.plasmacytoid_dendritic_cell_(dc2)",
+        "parent": "homo_sapiens.placenta",
+        "value": 1
+    },
+    {
+        "name": "plasma cell",
+        "id": "homo_sapiens.placenta.plasma_cell",
+        "parent": "homo_sapiens.placenta",
+        "value": 1
+    },
+    {
+        "name": "granulocyte",
+        "id": "homo_sapiens.placenta.granulocyte",
+        "parent": "homo_sapiens.placenta",
+        "value": 1
+    },
+    {
+        "name": "plasmacytoid dendritic cell",
+        "id": "homo_sapiens.placenta.plasmacytoid_dendritic_cell",
+        "parent": "homo_sapiens.placenta",
+        "value": 1
+    },
+    {
+        "name": "decidual macrophage (dM1)",
+        "id": "homo_sapiens.placenta.decidual_macrophage_(dm1)",
+        "parent": "homo_sapiens.placenta",
+        "value": 1
+    },
+    {
+        "name": "natural killer cell",
+        "id": "homo_sapiens.placenta.natural_killer_cell",
+        "parent": "homo_sapiens.placenta",
+        "value": 1
+    },
+    {
+        "name": "T cell",
+        "id": "homo_sapiens.placenta.t_cell",
+        "parent": "homo_sapiens.placenta",
+        "value": 1
+    },
+    {
+        "name": "innate lymphoid cell (ILC3)",
+        "id": "homo_sapiens.placenta.innate_lymphoid_cell_(ilc3)",
+        "parent": "homo_sapiens.placenta",
+        "value": 1
+    },
+    {
+        "name": "conventional dendritic cell (DC1)",
+        "id": "homo_sapiens.placenta.conventional_dendritic_cell_(dc1)",
+        "parent": "homo_sapiens.placenta",
+        "value": 1
+    },
+    {
+        "name": "microglial cell",
+        "id": "homo_sapiens.retinal_neural_layer.microglial_cell",
+        "parent": "homo_sapiens.retinal_neural_layer",
+        "value": 1
+    },
+    {
+        "name": "precursor B cell",
+        "id": "homo_sapiens.bone_marrow.precursor_b_cell",
+        "parent": "homo_sapiens.bone_marrow",
+        "value": 1
+    },
+    {
+        "name": "granulocyte",
+        "id": "homo_sapiens.bone_marrow.granulocyte",
+        "parent": "homo_sapiens.bone_marrow",
+        "value": 1
+    },
+    {
+        "name": "natural killer cell",
+        "id": "homo_sapiens.bone_marrow.natural_killer_cell",
+        "parent": "homo_sapiens.bone_marrow",
+        "value": 1
+    },
+    {
+        "name": "mast cell",
+        "id": "homo_sapiens.bone_marrow.mast_cell",
+        "parent": "homo_sapiens.bone_marrow",
+        "value": 1
+    },
+    {
+        "name": "CD4-positive monocyte",
+        "id": "homo_sapiens.bone_marrow.cd4_positive_monocyte",
+        "parent": "homo_sapiens.bone_marrow",
+        "value": 1
+    },
+    {
+        "name": "granulocyte 2",
+        "id": "homo_sapiens.bone_marrow.granulocyte_2",
+        "parent": "homo_sapiens.bone_marrow",
+        "value": 1
+    },
+    {
+        "name": "granulocyte 1",
+        "id": "homo_sapiens.bone_marrow.granulocyte_1",
+        "parent": "homo_sapiens.bone_marrow",
+        "value": 1
+    },
+    {
+        "name": "monocyte",
+        "id": "homo_sapiens.bone_marrow.monocyte",
+        "parent": "homo_sapiens.bone_marrow",
+        "value": 1
+    },
+    {
+        "name": "monocyte 2",
+        "id": "homo_sapiens.bone_marrow.monocyte_2",
+        "parent": "homo_sapiens.bone_marrow",
+        "value": 1
+    },
+    {
+        "name": "dendritic cell",
+        "id": "homo_sapiens.bone_marrow.dendritic_cell",
+        "parent": "homo_sapiens.bone_marrow",
+        "value": 1
+    },
+    {
+        "name": "mature B cell",
+        "id": "homo_sapiens.bone_marrow.mature_b_cell",
+        "parent": "homo_sapiens.bone_marrow",
+        "value": 1
+    },
+    {
+        "name": "granulocyte 3",
+        "id": "homo_sapiens.bone_marrow.granulocyte_3",
+        "parent": "homo_sapiens.bone_marrow",
+        "value": 1
+    },
+    {
+        "name": "cycling dendritic cell",
+        "id": "homo_sapiens.bone_marrow.cycling_dendritic_cell",
+        "parent": "homo_sapiens.bone_marrow",
+        "value": 1
+    },
+    {
+        "name": "monocyte 1",
+        "id": "homo_sapiens.bone_marrow.monocyte_1",
+        "parent": "homo_sapiens.bone_marrow",
+        "value": 1
+    },
+    {
+        "name": "resting CD4+ T cell",
+        "id": "homo_sapiens.bone_marrow.resting_cd4+_t_cell",
+        "parent": "homo_sapiens.bone_marrow",
+        "value": 1
+    },
+    {
+        "name": "resting CD8+ T cell",
+        "id": "homo_sapiens.bone_marrow.resting_cd8+_t_cell",
+        "parent": "homo_sapiens.bone_marrow",
+        "value": 1
+    },
+    {
+        "name": "CD4-positive, alpha-beta T cell",
+        "id": "homo_sapiens.bone_marrow.cd4_positive,_alpha_beta_t_cell",
+        "parent": "homo_sapiens.bone_marrow",
+        "value": 1
+    },
+    {
+        "name": "CD8-positive, alpha-beta T cell",
+        "id": "homo_sapiens.bone_marrow.cd8_positive,_alpha_beta_t_cell",
+        "parent": "homo_sapiens.bone_marrow",
+        "value": 1
+    },
+    {
+        "name": "T cell",
+        "id": "homo_sapiens.bone_marrow.t_cell",
+        "parent": "homo_sapiens.bone_marrow",
+        "value": 1
+    },
+    {
+        "name": "unassigned resting T cell",
+        "id": "homo_sapiens.bone_marrow.unassigned_resting_t_cell",
+        "parent": "homo_sapiens.bone_marrow",
+        "value": 1
+    },
+    {
+        "name": "activated CD4-positive, alpha-beta T cell",
+        "id": "homo_sapiens.bone_marrow.activated_cd4_positive,_alpha_beta_t_cell",
+        "parent": "homo_sapiens.bone_marrow",
+        "value": 1
+    },
+    {
+        "name": "activated CD4+ T cell",
+        "id": "homo_sapiens.bone_marrow.activated_cd4+_t_cell",
+        "parent": "homo_sapiens.bone_marrow",
+        "value": 1
+    },
+    {
+        "name": "activated CD8+ T cell",
+        "id": "homo_sapiens.bone_marrow.activated_cd8+_t_cell",
+        "parent": "homo_sapiens.bone_marrow",
+        "value": 1
+    },
+    {
+        "name": "unassigned activated T call",
+        "id": "homo_sapiens.bone_marrow.unassigned_activated_t_call",
+        "parent": "homo_sapiens.bone_marrow",
+        "value": 1
+    },
+    {
+        "name": "CD14-positive monocyte",
+        "id": "homo_sapiens.bone_marrow.cd14_positive_monocyte",
+        "parent": "homo_sapiens.bone_marrow",
+        "value": 1
+    },
+    {
+        "name": "naive thymus-derived CD4-positive, alpha-beta T cell",
+        "id": "homo_sapiens.bone_marrow.naive_thymus_derived_cd4_positive,_alpha_beta_t_cell",
+        "parent": "homo_sapiens.bone_marrow",
+        "value": 1
+    },
+    {
+        "name": "cytotoxic T cell type 1",
+        "id": "homo_sapiens.bone_marrow.cytotoxic_t_cell_type_1",
+        "parent": "homo_sapiens.bone_marrow",
+        "value": 1
+    },
+    {
+        "name": "CD4+ naive T cell",
+        "id": "homo_sapiens.bone_marrow.cd4+_naive_t_cell",
+        "parent": "homo_sapiens.bone_marrow",
+        "value": 1
+    },
+    {
+        "name": "naive CD8+ T cell",
+        "id": "homo_sapiens.bone_marrow.naive_cd8+_t_cell",
+        "parent": "homo_sapiens.bone_marrow",
+        "value": 1
+    },
+    {
+        "name": "memory B cell",
+        "id": "homo_sapiens.bone_marrow.memory_b_cell",
+        "parent": "homo_sapiens.bone_marrow",
+        "value": 1
+    },
+    {
+        "name": "helper T cell",
+        "id": "homo_sapiens.bone_marrow.helper_t_cell",
+        "parent": "homo_sapiens.bone_marrow",
+        "value": 1
+    },
+    {
+        "name": "T-helper cell",
+        "id": "homo_sapiens.bone_marrow.t_helper_cell",
+        "parent": "homo_sapiens.bone_marrow",
+        "value": 1
+    },
+    {
+        "name": "cytotoxic T cell",
+        "id": "homo_sapiens.bone_marrow.cytotoxic_t_cell",
+        "parent": "homo_sapiens.bone_marrow",
+        "value": 1
+    },
+    {
+        "name": "conventional dendritic cell",
+        "id": "homo_sapiens.bone_marrow.conventional_dendritic_cell",
+        "parent": "homo_sapiens.bone_marrow",
+        "value": 1
+    },
+    {
+        "name": "CD14+ monocyte type 1",
+        "id": "homo_sapiens.bone_marrow.cd14+_monocyte_type_1",
+        "parent": "homo_sapiens.bone_marrow",
+        "value": 1
+    },
+    {
+        "name": "naive B cell",
+        "id": "homo_sapiens.bone_marrow.naive_b_cell",
+        "parent": "homo_sapiens.bone_marrow",
+        "value": 1
+    },
+    {
+        "name": "cortical neural progenitor cell",
+        "id": "homo_sapiens.bone_marrow.cortical_neural_progenitor_cell",
+        "parent": "homo_sapiens.bone_marrow",
+        "value": 1
+    },
+    {
+        "name": "CD14+ monocyte type 2",
+        "id": "homo_sapiens.bone_marrow.cd14+_monocyte_type_2",
+        "parent": "homo_sapiens.bone_marrow",
+        "value": 1
+    },
+    {
+        "name": "cytotoxic T cell type 2",
+        "id": "homo_sapiens.bone_marrow.cytotoxic_t_cell_type_2",
+        "parent": "homo_sapiens.bone_marrow",
+        "value": 1
+    },
+    {
+        "name": "lymphocyte",
+        "id": "homo_sapiens.bone_marrow.lymphocyte",
+        "parent": "homo_sapiens.bone_marrow",
+        "value": 1
+    },
+    {
+        "name": "plasma cell",
+        "id": "homo_sapiens.bone_marrow.plasma_cell",
+        "parent": "homo_sapiens.bone_marrow",
+        "value": 1
+    },
+    {
+        "name": "plasmacytoid dendritic cell",
+        "id": "homo_sapiens.bone_marrow.plasmacytoid_dendritic_cell",
+        "parent": "homo_sapiens.bone_marrow",
+        "value": 1
+    },
+    {
+        "name": "gamma-delta T cell",
+        "id": "homo_sapiens.bone_marrow.gamma_delta_t_cell",
+        "parent": "homo_sapiens.bone_marrow",
+        "value": 1
+    },
+    {
+        "name": "stromal cell",
+        "id": "homo_sapiens.bone_marrow.stromal_cell",
+        "parent": "homo_sapiens.bone_marrow",
+        "value": 1
+    },
+    {
+        "name": "stromal cell type 2a",
+        "id": "homo_sapiens.bone_marrow.stromal_cell_type_2a",
+        "parent": "homo_sapiens.bone_marrow",
+        "value": 1
+    },
+    {
+        "name": "cortical excitatory neuron",
+        "id": "homo_sapiens.bone_marrow.cortical_excitatory_neuron",
+        "parent": "homo_sapiens.bone_marrow",
+        "value": 1
+    },
+    {
+        "name": "canonical glycolysis",
+        "id": "homo_sapiens.bone_marrow.canonical_glycolysis",
+        "parent": "homo_sapiens.bone_marrow",
+        "value": 1
+    },
+    {
+        "name": "human embryonic fibroblast/induced day type 3 dendritic cell",
+        "id": "homo_sapiens.bone_marrow.human_embryonic_fibroblast/induced_day_type_3_dendritic_cell",
+        "parent": "homo_sapiens.bone_marrow",
+        "value": 1
+    },
+    {
+        "name": "B cell T cell doublet",
+        "id": "homo_sapiens.bone_marrow.b_cell_t_cell_doublet",
+        "parent": "homo_sapiens.bone_marrow",
+        "value": 1
+    },
+    {
+        "name": "glial cell",
+        "id": "homo_sapiens.bone_marrow.glial_cell",
+        "parent": "homo_sapiens.bone_marrow",
+        "value": 1
+    },
+    {
+        "name": "lateral ganglionic eminence inhibitory neuron",
+        "id": "homo_sapiens.bone_marrow.lateral_ganglionic_eminence_inhibitory_neuron",
+        "parent": "homo_sapiens.bone_marrow",
+        "value": 1
+    },
+    {
+        "name": "megakaryocyte progenitor cell",
+        "id": "homo_sapiens.bone_marrow.megakaryocyte_progenitor_cell",
+        "parent": "homo_sapiens.bone_marrow",
+        "value": 1
+    },
+    {
+        "name": "glycolysis state",
+        "id": "homo_sapiens.bone_marrow.glycolysis_state",
+        "parent": "homo_sapiens.bone_marrow",
+        "value": 1
+    },
+    {
+        "name": "hematopoietic stem cell",
+        "id": "homo_sapiens.bone_marrow.hematopoietic_stem_cell",
+        "parent": "homo_sapiens.bone_marrow",
+        "value": 1
+    },
+    {
+        "name": "hepatocyte",
+        "id": "homo_sapiens.bone_marrow.hepatocyte",
+        "parent": "homo_sapiens.bone_marrow",
+        "value": 1
+    },
+    {
+        "name": "hematopoietic multipotent progenitor",
+        "id": "homo_sapiens.bone_marrow.hematopoietic_multipotent_progenitor",
+        "parent": "homo_sapiens.bone_marrow",
+        "value": 1
+    },
+    {
+        "name": "cortical intermediate progenitor",
+        "id": "homo_sapiens.bone_marrow.cortical_intermediate_progenitor",
+        "parent": "homo_sapiens.bone_marrow",
+        "value": 1
+    },
+    {
+        "name": "stromal cell type 3",
+        "id": "homo_sapiens.bone_marrow.stromal_cell_type_3",
+        "parent": "homo_sapiens.bone_marrow",
+        "value": 1
+    },
+    {
+        "name": "Kupffer cell",
+        "id": "homo_sapiens.bone_marrow.kupffer_cell",
+        "parent": "homo_sapiens.bone_marrow",
+        "value": 1
+    },
+    {
+        "name": "erythroid lineage cell",
+        "id": "homo_sapiens.bone_marrow.erythroid_lineage_cell",
+        "parent": "homo_sapiens.bone_marrow",
+        "value": 1
+    },
+    {
+        "name": "erythroid progenitor cell",
+        "id": "homo_sapiens.bone_marrow.erythroid_progenitor_cell",
+        "parent": "homo_sapiens.bone_marrow",
+        "value": 1
+    },
+    {
+        "name": "common lymphoid progenitor",
+        "id": "homo_sapiens.bone_marrow.common_lymphoid_progenitor",
+        "parent": "homo_sapiens.bone_marrow",
+        "value": 1
+    },
+    {
+        "name": "stromal cel type 2b",
+        "id": "homo_sapiens.bone_marrow.stromal_cel_type_2b",
+        "parent": "homo_sapiens.bone_marrow",
+        "value": 1
+    },
+    {
+        "name": "common dendritic progenitor",
+        "id": "homo_sapiens.bone_marrow.common_dendritic_progenitor",
+        "parent": "homo_sapiens.bone_marrow",
+        "value": 1
+    },
+    {
+        "name": "monocyte progenitor",
+        "id": "homo_sapiens.bone_marrow.monocyte_progenitor",
+        "parent": "homo_sapiens.bone_marrow",
+        "value": 1
+    },
+    {
+        "name": "neural progenitor cell",
+        "id": "homo_sapiens.bone_marrow.neural_progenitor_cell",
+        "parent": "homo_sapiens.bone_marrow",
+        "value": 1
+    },
+    {
+        "name": "pericyte type 1",
+        "id": "homo_sapiens.bone_marrow.pericyte_type_1",
+        "parent": "homo_sapiens.bone_marrow",
+        "value": 1
+    },
+    {
+        "name": "inflammatory macrophage",
+        "id": "homo_sapiens.bone_marrow.inflammatory_macrophage",
+        "parent": "homo_sapiens.bone_marrow",
+        "value": 1
+    },
+    {
+        "name": "ganglionic eminence neural progenitor cell",
+        "id": "homo_sapiens.bone_marrow.ganglionic_eminence_neural_progenitor_cell",
+        "parent": "homo_sapiens.bone_marrow",
+        "value": 1
+    },
+    {
+        "name": "pericyte cell",
+        "id": "homo_sapiens.bone_marrow.pericyte_cell",
+        "parent": "homo_sapiens.bone_marrow",
+        "value": 1
+    },
+    {
+        "name": "endothelial cell",
+        "id": "homo_sapiens.bone_marrow.endothelial_cell",
+        "parent": "homo_sapiens.bone_marrow",
+        "value": 1
+    },
+    {
+        "name": "pericyte type 2",
+        "id": "homo_sapiens.bone_marrow.pericyte_type_2",
+        "parent": "homo_sapiens.bone_marrow",
+        "value": 1
+    },
+    {
+        "name": "common myeloid progenitor",
+        "id": "homo_sapiens.bone_marrow.common_myeloid_progenitor",
+        "parent": "homo_sapiens.bone_marrow",
+        "value": 1
+    },
+    {
+        "name": "granulocyte monocyte progenitor cell",
+        "id": "homo_sapiens.bone_marrow.granulocyte_monocyte_progenitor_cell",
+        "parent": "homo_sapiens.bone_marrow",
+        "value": 1
+    },
+    {
+        "name": "alpha-beta T cell",
+        "id": "homo_sapiens.bone_marrow.alpha_beta_t_cell",
+        "parent": "homo_sapiens.bone_marrow",
+        "value": 1
+    },
+    {
+        "name": "hematopoietic multipotent progenitor cell",
+        "id": "homo_sapiens.bone_marrow.hematopoietic_multipotent_progenitor_cell",
+        "parent": "homo_sapiens.bone_marrow",
+        "value": 1
+    },
+    {
+        "name": "natural killer-like cell",
+        "id": "homo_sapiens.bone_marrow.natural_killer_like_cell",
+        "parent": "homo_sapiens.bone_marrow",
+        "value": 1
+    },
+    {
+        "name": "hepatic stellate cell",
+        "id": "homo_sapiens.bone_marrow.hepatic_stellate_cell",
+        "parent": "homo_sapiens.bone_marrow",
+        "value": 1
+    },
+    {
+        "name": "erythroid progenitor",
+        "id": "homo_sapiens.bone_marrow.erythroid_progenitor",
+        "parent": "homo_sapiens.bone_marrow",
+        "value": 1
+    },
+    {
+        "name": "pro-B cell",
+        "id": "homo_sapiens.bone_marrow.pro_b_cell",
+        "parent": "homo_sapiens.bone_marrow",
+        "value": 1
+    },
+    {
+        "name": "mast cell",
+        "id": "homo_sapiens.liver.mast_cell",
+        "parent": "homo_sapiens.liver",
+        "value": 1
+    },
+    {
+        "name": "granulocyte 1",
+        "id": "homo_sapiens.liver.granulocyte_1",
+        "parent": "homo_sapiens.liver",
+        "value": 1
+    },
+    {
+        "name": "precursor B cell",
+        "id": "homo_sapiens.liver.precursor_b_cell",
+        "parent": "homo_sapiens.liver",
+        "value": 1
+    },
+    {
+        "name": "granulocyte",
+        "id": "homo_sapiens.liver.granulocyte",
+        "parent": "homo_sapiens.liver",
+        "value": 1
+    },
+    {
+        "name": "monocyte 2",
+        "id": "homo_sapiens.liver.monocyte_2",
+        "parent": "homo_sapiens.liver",
+        "value": 1
+    },
+    {
+        "name": "cycling dendritic cell",
+        "id": "homo_sapiens.liver.cycling_dendritic_cell",
+        "parent": "homo_sapiens.liver",
+        "value": 1
+    },
+    {
+        "name": "CD4-positive monocyte",
+        "id": "homo_sapiens.liver.cd4_positive_monocyte",
+        "parent": "homo_sapiens.liver",
+        "value": 1
+    },
+    {
+        "name": "monocyte",
+        "id": "homo_sapiens.liver.monocyte",
+        "parent": "homo_sapiens.liver",
+        "value": 1
+    },
+    {
+        "name": "dendritic cell",
+        "id": "homo_sapiens.liver.dendritic_cell",
+        "parent": "homo_sapiens.liver",
+        "value": 1
+    },
+    {
+        "name": "granulocyte 2",
+        "id": "homo_sapiens.liver.granulocyte_2",
+        "parent": "homo_sapiens.liver",
+        "value": 1
+    },
+    {
+        "name": "granulocyte 3",
+        "id": "homo_sapiens.liver.granulocyte_3",
+        "parent": "homo_sapiens.liver",
+        "value": 1
+    },
+    {
+        "name": "natural killer cell",
+        "id": "homo_sapiens.liver.natural_killer_cell",
+        "parent": "homo_sapiens.liver",
+        "value": 1
+    },
+    {
+        "name": "monocyte 1",
+        "id": "homo_sapiens.liver.monocyte_1",
+        "parent": "homo_sapiens.liver",
+        "value": 1
+    },
+    {
+        "name": "mature B cell",
+        "id": "homo_sapiens.liver.mature_b_cell",
+        "parent": "homo_sapiens.liver",
+        "value": 1
+    },
+    {
+        "name": "Kupffer cell",
+        "id": "homo_sapiens.liver.kupffer_cell",
+        "parent": "homo_sapiens.liver",
+        "value": 1
+    },
+    {
+        "name": "alpha-beta T cell",
+        "id": "homo_sapiens.liver.alpha_beta_t_cell",
+        "parent": "homo_sapiens.liver",
+        "value": 1
+    },
+    {
+        "name": "inflammatory macrophage",
+        "id": "homo_sapiens.liver.inflammatory_macrophage",
+        "parent": "homo_sapiens.liver",
+        "value": 1
+    },
+    {
+        "name": "gamma-delta T cell",
+        "id": "homo_sapiens.liver.gamma_delta_t_cell",
+        "parent": "homo_sapiens.liver",
+        "value": 1
+    },
+    {
+        "name": "non-inflammatory macrophage",
+        "id": "homo_sapiens.liver.non_inflammatory_macrophage",
+        "parent": "homo_sapiens.liver",
+        "value": 1
+    },
+    {
+        "name": "plasma cell",
+        "id": "homo_sapiens.liver.plasma_cell",
+        "parent": "homo_sapiens.liver",
+        "value": 1
+    },
+    {
+        "name": "canonical glycolysis",
+        "id": "homo_sapiens.liver.canonical_glycolysis",
+        "parent": "homo_sapiens.liver",
+        "value": 1
+    },
+    {
+        "name": "CD4+ naive T cell",
+        "id": "homo_sapiens.liver.cd4+_naive_t_cell",
+        "parent": "homo_sapiens.liver",
+        "value": 1
+    },
+    {
+        "name": "conventional dendritic cell",
+        "id": "homo_sapiens.liver.conventional_dendritic_cell",
+        "parent": "homo_sapiens.liver",
+        "value": 1
+    },
+    {
+        "name": "naive CD8+ T cell",
+        "id": "homo_sapiens.liver.naive_cd8+_t_cell",
+        "parent": "homo_sapiens.liver",
+        "value": 1
+    },
+    {
+        "name": "pro-B cell",
+        "id": "homo_sapiens.liver.pro_b_cell",
+        "parent": "homo_sapiens.liver",
+        "value": 1
+    },
+    {
+        "name": "naive B cell",
+        "id": "homo_sapiens.liver.naive_b_cell",
+        "parent": "homo_sapiens.liver",
+        "value": 1
+    },
+    {
+        "name": "naive thymus-derived CD4-positive, alpha-beta T cell",
+        "id": "homo_sapiens.liver.naive_thymus_derived_cd4_positive,_alpha_beta_t_cell",
+        "parent": "homo_sapiens.liver",
+        "value": 1
+    },
+    {
+        "name": "common myeloid progenitor",
+        "id": "homo_sapiens.liver.common_myeloid_progenitor",
+        "parent": "homo_sapiens.liver",
+        "value": 1
+    },
+    {
+        "name": "hematopoietic stem cell",
+        "id": "homo_sapiens.liver.hematopoietic_stem_cell",
+        "parent": "homo_sapiens.liver",
+        "value": 1
+    },
+    {
+        "name": "dendritic cell",
+        "id": "homo_sapiens.oesophagus.dendritic_cell",
+        "parent": "homo_sapiens.oesophagus",
+        "value": 1
+    },
+    {
+        "name": "basal epithelial cell",
+        "id": "homo_sapiens.oesophagus.basal_epithelial_cell",
+        "parent": "homo_sapiens.oesophagus",
+        "value": 1
+    },
+    {
+        "name": "CD4-positive, alpha-beta T cell",
+        "id": "homo_sapiens.oesophagus.cd4_positive,_alpha_beta_t_cell",
+        "parent": "homo_sapiens.oesophagus",
+        "value": 1
+    },
+    {
+        "name": "CD8+ T cell",
+        "id": "homo_sapiens.oesophagus.cd8+_t_cell",
+        "parent": "homo_sapiens.oesophagus",
+        "value": 1
+    },
+    {
+        "name": "CD4+ T cell",
+        "id": "homo_sapiens.oesophagus.cd4+_t_cell",
+        "parent": "homo_sapiens.oesophagus",
+        "value": 1
+    },
+    {
+        "name": "epithelial cell of stratum germinativum of esophagus",
+        "id": "homo_sapiens.oesophagus.epithelial_cell_of_stratum_germinativum_of_esophagus",
+        "parent": "homo_sapiens.oesophagus",
+        "value": 1
+    },
+    {
+        "name": "CD8-positive, alpha-beta T cell",
+        "id": "homo_sapiens.oesophagus.cd8_positive,_alpha_beta_t_cell",
+        "parent": "homo_sapiens.oesophagus",
+        "value": 1
+    },
+    {
+        "name": "B cell",
+        "id": "homo_sapiens.oesophagus.b_cell",
+        "parent": "homo_sapiens.oesophagus",
+        "value": 1
+    },
+    {
+        "name": "immature B cell",
+        "id": "homo_sapiens.oesophagus.immature_b_cell",
+        "parent": "homo_sapiens.oesophagus",
+        "value": 1
+    },
+    {
+        "name": "CD27+ B cell",
+        "id": "homo_sapiens.oesophagus.cd27+_b_cell",
+        "parent": "homo_sapiens.oesophagus",
+        "value": 1
+    },
+    {
+        "name": "mast cell",
+        "id": "homo_sapiens.oesophagus.mast_cell",
+        "parent": "homo_sapiens.oesophagus",
+        "value": 1
+    },
+    {
+        "name": "CD27- B cell",
+        "id": "homo_sapiens.oesophagus.cd27__b_cell",
+        "parent": "homo_sapiens.oesophagus",
+        "value": 1
+    },
+    {
+        "name": "MAIT-like CD8+ T cell",
+        "id": "homo_sapiens.spleen.mait_like_cd8+_t_cell",
+        "parent": "homo_sapiens.spleen",
+        "value": 1
+    },
+    {
+        "name": "natural killer cell",
+        "id": "homo_sapiens.spleen.natural_killer_cell",
+        "parent": "homo_sapiens.spleen",
+        "value": 1
+    },
+    {
+        "name": "activated CD8-positive, alpha-beta T cell",
+        "id": "homo_sapiens.spleen.activated_cd8_positive,_alpha_beta_t_cell",
+        "parent": "homo_sapiens.spleen",
+        "value": 1
+    },
+    {
+        "name": "B cell",
+        "id": "homo_sapiens.spleen.b_cell",
+        "parent": "homo_sapiens.spleen",
+        "value": 1
+    },
+    {
+        "name": "mantle B cell",
+        "id": "homo_sapiens.spleen.mantle_b_cell",
+        "parent": "homo_sapiens.spleen",
+        "value": 1
+    },
+    {
+        "name": "follicular helper CD4+ T cell",
+        "id": "homo_sapiens.spleen.follicular_helper_cd4+_t_cell",
+        "parent": "homo_sapiens.spleen",
+        "value": 1
+    },
+    {
+        "name": "dividing T cell",
+        "id": "homo_sapiens.spleen.dividing_t_cell",
+        "parent": "homo_sapiens.spleen",
+        "value": 1
+    },
+    {
+        "name": "follicular B cell",
+        "id": "homo_sapiens.spleen.follicular_b_cell",
+        "parent": "homo_sapiens.spleen",
+        "value": 1
+    },
+    {
+        "name": "cytotoxic CD8+ T cell",
+        "id": "homo_sapiens.spleen.cytotoxic_cd8+_t_cell",
+        "parent": "homo_sapiens.spleen",
+        "value": 1
+    },
+    {
+        "name": "FCGR3A+ natural killer cell",
+        "id": "homo_sapiens.spleen.fcgr3a+_natural_killer_cell",
+        "parent": "homo_sapiens.spleen",
+        "value": 1
+    },
+    {
+        "name": "CD4-positive, CD25-positive, alpha-beta regulatory T cell",
+        "id": "homo_sapiens.spleen.cd4_positive,_cd25_positive,_alpha_beta_regulatory_t_cell",
+        "parent": "homo_sapiens.spleen",
+        "value": 1
+    },
+    {
+        "name": "CD160+ natural killer cell",
+        "id": "homo_sapiens.spleen.cd160+_natural_killer_cell",
+        "parent": "homo_sapiens.spleen",
+        "value": 1
+    },
+    {
+        "name": "CD8-positive, alpha-beta T cell",
+        "id": "homo_sapiens.spleen.cd8_positive,_alpha_beta_t_cell",
+        "parent": "homo_sapiens.spleen",
+        "value": 1
+    },
+    {
+        "name": "naive thymus-derived CD4-positive, alpha-beta T cell",
+        "id": "homo_sapiens.spleen.naive_thymus_derived_cd4_positive,_alpha_beta_t_cell",
+        "parent": "homo_sapiens.spleen",
+        "value": 1
+    },
+    {
+        "name": "T follicular helper cell",
+        "id": "homo_sapiens.spleen.t_follicular_helper_cell",
+        "parent": "homo_sapiens.spleen",
+        "value": 1
+    },
+    {
+        "name": "CD4+ conventional T cell",
+        "id": "homo_sapiens.spleen.cd4+_conventional_t_cell",
+        "parent": "homo_sapiens.spleen",
+        "value": 1
+    },
+    {
+        "name": "monocyte",
+        "id": "homo_sapiens.spleen.monocyte",
+        "parent": "homo_sapiens.spleen",
+        "value": 1
+    },
+    {
+        "name": "CD4-positive, alpha-beta T cell",
+        "id": "homo_sapiens.spleen.cd4_positive,_alpha_beta_t_cell",
+        "parent": "homo_sapiens.spleen",
+        "value": 1
+    },
+    {
+        "name": "activated CD8+ T cell",
+        "id": "homo_sapiens.spleen.activated_cd8+_t_cell",
+        "parent": "homo_sapiens.spleen",
+        "value": 1
+    },
+    {
+        "name": "lymphocyte",
+        "id": "homo_sapiens.spleen.lymphocyte",
+        "parent": "homo_sapiens.spleen",
+        "value": 1
+    },
+    {
+        "name": "naÃ¯ve CD4+ T cell",
+        "id": "homo_sapiens.spleen.naã¯ve_cd4+_t_cell",
+        "parent": "homo_sapiens.spleen",
+        "value": 1
+    },
+    {
+        "name": "dendritic cell",
+        "id": "homo_sapiens.spleen.dendritic_cell",
+        "parent": "homo_sapiens.spleen",
+        "value": 1
+    },
+    {
+        "name": "macrophage",
+        "id": "homo_sapiens.spleen.macrophage",
+        "parent": "homo_sapiens.spleen",
+        "value": 1
+    },
+    {
+        "name": "dendritic cell type 2",
+        "id": "homo_sapiens.spleen.dendritic_cell_type_2",
+        "parent": "homo_sapiens.spleen",
+        "value": 1
+    },
+    {
+        "name": "dividing natural killer cell",
+        "id": "homo_sapiens.spleen.dividing_natural_killer_cell",
+        "parent": "homo_sapiens.spleen",
+        "value": 1
+    },
+    {
+        "name": "regulatory CD4+ T cell",
+        "id": "homo_sapiens.spleen.regulatory_cd4+_t_cell",
+        "parent": "homo_sapiens.spleen",
+        "value": 1
+    },
+    {
+        "name": "innate lymphoid cells",
+        "id": "homo_sapiens.spleen.innate_lymphoid_cells",
+        "parent": "homo_sapiens.spleen",
+        "value": 1
+    },
+    {
+        "name": "CD8-alpha alpha positive, gamma-delta intraepithelial T cell",
+        "id": "homo_sapiens.spleen.cd8_alpha_alpha_positive,_gamma_delta_intraepithelial_t_cell",
+        "parent": "homo_sapiens.spleen",
+        "value": 1
+    },
+    {
+        "name": "innate lymphoid cell",
+        "id": "homo_sapiens.spleen.innate_lymphoid_cell",
+        "parent": "homo_sapiens.spleen",
+        "value": 1
+    },
+    {
+        "name": "T cell",
+        "id": "homo_sapiens.spleen.t_cell",
+        "parent": "homo_sapiens.spleen",
+        "value": 1
+    },
+    {
+        "name": "conventional dendritic cell",
+        "id": "homo_sapiens.spleen.conventional_dendritic_cell",
+        "parent": "homo_sapiens.spleen",
+        "value": 1
+    },
+    {
+        "name": "plasma IgM expressing cell",
+        "id": "homo_sapiens.spleen.plasma_igm_expressing_cell",
+        "parent": "homo_sapiens.spleen",
+        "value": 1
+    },
+    {
+        "name": "hypermutation B cell",
+        "id": "homo_sapiens.spleen.hypermutation_b_cell",
+        "parent": "homo_sapiens.spleen",
+        "value": 1
+    },
+    {
+        "name": "B/T doublet",
+        "id": "homo_sapiens.spleen.b/t_doublet",
+        "parent": "homo_sapiens.spleen",
+        "value": 1
+    },
+    {
+        "name": "gamma-delta CD8+ T cell",
+        "id": "homo_sapiens.spleen.gamma_delta_cd8+_t_cell",
+        "parent": "homo_sapiens.spleen",
+        "value": 1
+    },
+    {
+        "name": "plasma IgG expressing cell",
+        "id": "homo_sapiens.spleen.plasma_igg_expressing_cell",
+        "parent": "homo_sapiens.spleen",
+        "value": 1
+    },
+    {
+        "name": "plasmacytoid dendritic cell",
+        "id": "homo_sapiens.spleen.plasmacytoid_dendritic_cell",
+        "parent": "homo_sapiens.spleen",
+        "value": 1
+    },
+    {
+        "name": "IgM plasma cell",
+        "id": "homo_sapiens.spleen.igm_plasma_cell",
+        "parent": "homo_sapiens.spleen",
+        "value": 1
+    },
+    {
+        "name": "plasmablast",
+        "id": "homo_sapiens.spleen.plasmablast",
+        "parent": "homo_sapiens.spleen",
+        "value": 1
+    },
+    {
+        "name": "dendritic cell type 1",
+        "id": "homo_sapiens.spleen.dendritic_cell_type_1",
+        "parent": "homo_sapiens.spleen",
+        "value": 1
+    },
+    {
+        "name": "IgG plasma cell",
+        "id": "homo_sapiens.spleen.igg_plasma_cell",
+        "parent": "homo_sapiens.spleen",
+        "value": 1
+    },
+    {
+        "name": "CD4+ T cell",
+        "id": "homo_sapiens.spleen.cd4+_t_cell",
+        "parent": "homo_sapiens.spleen",
+        "value": 1
+    },
+    {
+        "name": "activated dendritic cell",
+        "id": "homo_sapiens.spleen.activated_dendritic_cell",
+        "parent": "homo_sapiens.spleen",
+        "value": 1
+    },
+    {
+        "name": "dendritic cell",
+        "id": "homo_sapiens.lung.dendritic_cell",
+        "parent": "homo_sapiens.lung",
+        "value": 1
+    },
+    {
+        "name": "B cell",
+        "id": "homo_sapiens.lung.b_cell",
+        "parent": "homo_sapiens.lung",
+        "value": 1
+    },
+    {
+        "name": "CD8-positive, alpha-beta cytotoxic T cell",
+        "id": "homo_sapiens.lung.cd8_positive,_alpha_beta_cytotoxic_t_cell",
+        "parent": "homo_sapiens.lung",
+        "value": 1
+    },
+    {
+        "name": "natural killer cell",
+        "id": "homo_sapiens.lung.natural_killer_cell",
+        "parent": "homo_sapiens.lung",
+        "value": 1
+    },
+    {
+        "name": "macrophage",
+        "id": "homo_sapiens.lung.macrophage",
+        "parent": "homo_sapiens.lung",
+        "value": 1
+    },
+    {
+        "name": "MARCOneg macrophage",
+        "id": "homo_sapiens.lung.marconeg_macrophage",
+        "parent": "homo_sapiens.lung",
+        "value": 1
+    },
+    {
+        "name": "CD8+ cytotoxic T cell",
+        "id": "homo_sapiens.lung.cd8+_cytotoxic_t_cell",
+        "parent": "homo_sapiens.lung",
+        "value": 1
+    },
+    {
+        "name": "monocyte",
+        "id": "homo_sapiens.lung.monocyte",
+        "parent": "homo_sapiens.lung",
+        "value": 1
+    },
+    {
+        "name": "CD4-positive, alpha-beta T cell",
+        "id": "homo_sapiens.lung.cd4_positive,_alpha_beta_t_cell",
+        "parent": "homo_sapiens.lung",
+        "value": 1
+    },
+    {
+        "name": "CD4+ T cell",
+        "id": "homo_sapiens.lung.cd4+_t_cell",
+        "parent": "homo_sapiens.lung",
+        "value": 1
+    },
+    {
+        "name": "plasma cell",
+        "id": "homo_sapiens.lung.plasma_cell",
+        "parent": "homo_sapiens.lung",
+        "value": 1
+    },
+    {
+        "name": "MARCOpos macrophage",
+        "id": "homo_sapiens.lung.marcopos_macrophage",
+        "parent": "homo_sapiens.lung",
+        "value": 1
+    },
+    {
+        "name": "dendritic cell type 1",
+        "id": "homo_sapiens.lung.dendritic_cell_type_1",
+        "parent": "homo_sapiens.lung",
+        "value": 1
+    },
+    {
+        "name": "dendritic cell type 2",
+        "id": "homo_sapiens.lung.dendritic_cell_type_2",
+        "parent": "homo_sapiens.lung",
+        "value": 1
+    },
+    {
+        "name": "plasmacytoid dendritic cell",
+        "id": "homo_sapiens.lung.plasmacytoid_dendritic_cell",
+        "parent": "homo_sapiens.lung",
+        "value": 1
+    },
+    {
+        "name": "conventional dendritic cell",
+        "id": "homo_sapiens.lung.conventional_dendritic_cell",
+        "parent": "homo_sapiens.lung",
+        "value": 1
+    },
+    {
+        "name": "dividing T cell",
+        "id": "homo_sapiens.lung.dividing_t_cell",
+        "parent": "homo_sapiens.lung",
+        "value": 1
+    },
+    {
+        "name": "T cell",
+        "id": "homo_sapiens.lung.t_cell",
+        "parent": "homo_sapiens.lung",
+        "value": 1
+    },
+    {
+        "name": "mast cell",
+        "id": "homo_sapiens.lung.mast_cell",
+        "parent": "homo_sapiens.lung",
+        "value": 1
+    },
+    {
+        "name": "regulatory T cell",
+        "id": "homo_sapiens.lung.regulatory_t_cell",
+        "parent": "homo_sapiens.lung",
+        "value": 1
+    },
+    {
+        "name": "dividing natural killer cell",
+        "id": "homo_sapiens.lung.dividing_natural_killer_cell",
+        "parent": "homo_sapiens.lung",
+        "value": 1
+    },
+    {
+        "name": "dividing macrophage",
+        "id": "homo_sapiens.lung.dividing_macrophage",
+        "parent": "homo_sapiens.lung",
+        "value": 1
+    },
+    {
+        "name": "activated dendritic cell",
+        "id": "homo_sapiens.lung.activated_dendritic_cell",
+        "parent": "homo_sapiens.lung",
+        "value": 1
+    },
+    {
+        "name": "resting CD8+ T cell",
+        "id": "homo_sapiens.lung.resting_cd8+_t_cell",
+        "parent": "homo_sapiens.lung",
+        "value": 1
+    },
+    {
+        "name": "CD8-positive, alpha-beta T cell",
+        "id": "homo_sapiens.lung.cd8_positive,_alpha_beta_t_cell",
+        "parent": "homo_sapiens.lung",
+        "value": 1
+    },
+    {
+        "name": "resting CD4+ T cell",
+        "id": "homo_sapiens.lung.resting_cd4+_t_cell",
+        "parent": "homo_sapiens.lung",
+        "value": 1
+    },
+    {
+        "name": "unassigned resting T cell",
+        "id": "homo_sapiens.lung.unassigned_resting_t_cell",
+        "parent": "homo_sapiens.lung",
+        "value": 1
+    },
+    {
+        "name": "activated CD4-positive, alpha-beta T cell",
+        "id": "homo_sapiens.lung.activated_cd4_positive,_alpha_beta_t_cell",
+        "parent": "homo_sapiens.lung",
+        "value": 1
+    },
+    {
+        "name": "activated CD8+ T cell",
+        "id": "homo_sapiens.lung.activated_cd8+_t_cell",
+        "parent": "homo_sapiens.lung",
+        "value": 1
+    },
+    {
+        "name": "activated CD4+ T cell",
+        "id": "homo_sapiens.lung.activated_cd4+_t_cell",
+        "parent": "homo_sapiens.lung",
+        "value": 1
+    },
+    {
+        "name": "unassigned activated T call",
+        "id": "homo_sapiens.lung.unassigned_activated_t_call",
+        "parent": "homo_sapiens.lung",
+        "value": 1
+    },
+    {
+        "name": "resting CD4+ T cell",
+        "id": "homo_sapiens.lymph_node.resting_cd4+_t_cell",
+        "parent": "homo_sapiens.lymph_node",
+        "value": 1
+    },
+    {
+        "name": "CD4-positive, alpha-beta T cell",
+        "id": "homo_sapiens.lymph_node.cd4_positive,_alpha_beta_t_cell",
+        "parent": "homo_sapiens.lymph_node",
+        "value": 1
+    },
+    {
+        "name": "CD8-positive, alpha-beta T cell",
+        "id": "homo_sapiens.lymph_node.cd8_positive,_alpha_beta_t_cell",
+        "parent": "homo_sapiens.lymph_node",
+        "value": 1
+    },
+    {
+        "name": "T cell",
+        "id": "homo_sapiens.lymph_node.t_cell",
+        "parent": "homo_sapiens.lymph_node",
+        "value": 1
+    },
+    {
+        "name": "resting CD8+ T cell",
+        "id": "homo_sapiens.lymph_node.resting_cd8+_t_cell",
+        "parent": "homo_sapiens.lymph_node",
+        "value": 1
+    },
+    {
+        "name": "unassigned resting T cell",
+        "id": "homo_sapiens.lymph_node.unassigned_resting_t_cell",
+        "parent": "homo_sapiens.lymph_node",
+        "value": 1
+    },
+    {
+        "name": "activated CD4-positive, alpha-beta T cell",
+        "id": "homo_sapiens.lymph_node.activated_cd4_positive,_alpha_beta_t_cell",
+        "parent": "homo_sapiens.lymph_node",
+        "value": 1
+    },
+    {
+        "name": "activated CD4+ T cell",
+        "id": "homo_sapiens.lymph_node.activated_cd4+_t_cell",
+        "parent": "homo_sapiens.lymph_node",
+        "value": 1
+    },
+    {
+        "name": "activated CD8+ T cell",
+        "id": "homo_sapiens.lymph_node.activated_cd8+_t_cell",
+        "parent": "homo_sapiens.lymph_node",
+        "value": 1
+    },
+    {
+        "name": "unassigned activated T call",
+        "id": "homo_sapiens.lymph_node.unassigned_activated_t_call",
+        "parent": "homo_sapiens.lymph_node",
+        "value": 1
+    },
+    {
+        "name": "regulatory T cell",
+        "id": "homo_sapiens.caecum.regulatory_t_cell",
+        "parent": "homo_sapiens.caecum",
+        "value": 1
+    },
+    {
+        "name": "CD4-positive, alpha-beta T cell",
+        "id": "homo_sapiens.caecum.cd4_positive,_alpha_beta_t_cell",
+        "parent": "homo_sapiens.caecum",
+        "value": 1
+    },
+    {
+        "name": "mast cell",
+        "id": "homo_sapiens.caecum.mast_cell",
+        "parent": "homo_sapiens.caecum",
+        "value": 1
+    },
+    {
+        "name": "unknown T cell",
+        "id": "homo_sapiens.caecum.unknown_t_cell",
+        "parent": "homo_sapiens.caecum",
+        "value": 1
+    },
+    {
+        "name": "T cell",
+        "id": "homo_sapiens.caecum.t_cell",
+        "parent": "homo_sapiens.caecum",
+        "value": 1
+    },
+    {
+        "name": "natural killer cell",
+        "id": "homo_sapiens.caecum.natural_killer_cell",
+        "parent": "homo_sapiens.caecum",
+        "value": 1
+    },
+    {
+        "name": "conventional dendritic cell",
+        "id": "homo_sapiens.caecum.conventional_dendritic_cell",
+        "parent": "homo_sapiens.caecum",
+        "value": 1
+    },
+    {
+        "name": "B cell",
+        "id": "homo_sapiens.caecum.b_cell",
+        "parent": "homo_sapiens.caecum",
+        "value": 1
+    },
+    {
+        "name": "T follicular helper cell",
+        "id": "homo_sapiens.caecum.t_follicular_helper_cell",
+        "parent": "homo_sapiens.caecum",
+        "value": 1
+    },
+    {
+        "name": "CD4+ T cell",
+        "id": "homo_sapiens.caecum.cd4+_t_cell",
+        "parent": "homo_sapiens.caecum",
+        "value": 1
+    },
+    {
+        "name": "unknown",
+        "id": "homo_sapiens.caecum.unknown",
+        "parent": "homo_sapiens.caecum",
+        "value": 1
+    },
+    {
+        "name": "IgA+ plasma cell",
+        "id": "homo_sapiens.caecum.iga+_plasma_cell",
+        "parent": "homo_sapiens.caecum",
+        "value": 1
+    },
+    {
+        "name": "CD19+CD20+ B cell",
+        "id": "homo_sapiens.caecum.cd19+cd20+_b_cell",
+        "parent": "homo_sapiens.caecum",
+        "value": 1
+    },
+    {
+        "name": "CD8-positive, alpha-beta T cell",
+        "id": "homo_sapiens.caecum.cd8_positive,_alpha_beta_t_cell",
+        "parent": "homo_sapiens.caecum",
+        "value": 1
+    },
+    {
+        "name": "IgA plasma cell",
+        "id": "homo_sapiens.caecum.iga_plasma_cell",
+        "parent": "homo_sapiens.caecum",
+        "value": 1
+    },
+    {
+        "name": "CD8+ T cell",
+        "id": "homo_sapiens.caecum.cd8+_t_cell",
+        "parent": "homo_sapiens.caecum",
+        "value": 1
+    },
+    {
+        "name": "T-helper 17 cell",
+        "id": "homo_sapiens.caecum.t_helper_17_cell",
+        "parent": "homo_sapiens.caecum",
+        "value": 1
+    },
+    {
+        "name": "plasma cell",
+        "id": "homo_sapiens.caecum.plasma_cell",
+        "parent": "homo_sapiens.caecum",
+        "value": 1
+    },
+    {
+        "name": "gamma delta T cell",
+        "id": "homo_sapiens.caecum.gamma_delta_t_cell",
+        "parent": "homo_sapiens.caecum",
+        "value": 1
+    },
+    {
+        "name": "gamma-delta T cell",
+        "id": "homo_sapiens.caecum.gamma_delta_t_cell",
+        "parent": "homo_sapiens.caecum",
+        "value": 1
+    },
+    {
+        "name": "CD8-positive, alpha-beta T cell",
+        "id": "homo_sapiens.rectosigmoid_junction.cd8_positive,_alpha_beta_t_cell",
+        "parent": "homo_sapiens.rectosigmoid_junction",
+        "value": 1
+    },
+    {
+        "name": "T follicular helper cell",
+        "id": "homo_sapiens.rectosigmoid_junction.t_follicular_helper_cell",
+        "parent": "homo_sapiens.rectosigmoid_junction",
+        "value": 1
+    },
+    {
+        "name": "IgA+ plasma cell",
+        "id": "homo_sapiens.rectosigmoid_junction.iga+_plasma_cell",
+        "parent": "homo_sapiens.rectosigmoid_junction",
+        "value": 1
+    },
+    {
+        "name": "CD4-positive, alpha-beta T cell",
+        "id": "homo_sapiens.rectosigmoid_junction.cd4_positive,_alpha_beta_t_cell",
+        "parent": "homo_sapiens.rectosigmoid_junction",
+        "value": 1
+    },
+    {
+        "name": "CD4+ T cell",
+        "id": "homo_sapiens.rectosigmoid_junction.cd4+_t_cell",
+        "parent": "homo_sapiens.rectosigmoid_junction",
+        "value": 1
+    },
+    {
+        "name": "T-helper 17 cell",
+        "id": "homo_sapiens.rectosigmoid_junction.t_helper_17_cell",
+        "parent": "homo_sapiens.rectosigmoid_junction",
+        "value": 1
+    },
+    {
+        "name": "natural killer cell",
+        "id": "homo_sapiens.rectosigmoid_junction.natural_killer_cell",
+        "parent": "homo_sapiens.rectosigmoid_junction",
+        "value": 1
+    },
+    {
+        "name": "CD19+CD20+ B cell",
+        "id": "homo_sapiens.rectosigmoid_junction.cd19+cd20+_b_cell",
+        "parent": "homo_sapiens.rectosigmoid_junction",
+        "value": 1
+    },
+    {
+        "name": "mast cell",
+        "id": "homo_sapiens.rectosigmoid_junction.mast_cell",
+        "parent": "homo_sapiens.rectosigmoid_junction",
+        "value": 1
+    },
+    {
+        "name": "B cell",
+        "id": "homo_sapiens.rectosigmoid_junction.b_cell",
+        "parent": "homo_sapiens.rectosigmoid_junction",
+        "value": 1
+    },
+    {
+        "name": "regulatory T cell",
+        "id": "homo_sapiens.rectosigmoid_junction.regulatory_t_cell",
+        "parent": "homo_sapiens.rectosigmoid_junction",
+        "value": 1
+    },
+    {
+        "name": "CD8+ T cell",
+        "id": "homo_sapiens.rectosigmoid_junction.cd8+_t_cell",
+        "parent": "homo_sapiens.rectosigmoid_junction",
+        "value": 1
+    },
+    {
+        "name": "unknown T cell",
+        "id": "homo_sapiens.rectosigmoid_junction.unknown_t_cell",
+        "parent": "homo_sapiens.rectosigmoid_junction",
+        "value": 1
+    },
+    {
+        "name": "IgA plasma cell",
+        "id": "homo_sapiens.rectosigmoid_junction.iga_plasma_cell",
+        "parent": "homo_sapiens.rectosigmoid_junction",
+        "value": 1
+    },
+    {
+        "name": "conventional dendritic cell",
+        "id": "homo_sapiens.rectosigmoid_junction.conventional_dendritic_cell",
+        "parent": "homo_sapiens.rectosigmoid_junction",
+        "value": 1
+    },
+    {
+        "name": "plasma cell",
+        "id": "homo_sapiens.rectosigmoid_junction.plasma_cell",
+        "parent": "homo_sapiens.rectosigmoid_junction",
+        "value": 1
+    },
+    {
+        "name": "T cell",
+        "id": "homo_sapiens.rectosigmoid_junction.t_cell",
+        "parent": "homo_sapiens.rectosigmoid_junction",
+        "value": 1
+    },
+    {
+        "name": "gamma-delta T cell",
+        "id": "homo_sapiens.rectosigmoid_junction.gamma_delta_t_cell",
+        "parent": "homo_sapiens.rectosigmoid_junction",
+        "value": 1
+    },
+    {
+        "name": "unspecified plasma cell",
+        "id": "homo_sapiens.rectosigmoid_junction.unspecified_plasma_cell",
+        "parent": "homo_sapiens.rectosigmoid_junction",
+        "value": 1
+    },
+    {
+        "name": "unknown",
+        "id": "homo_sapiens.rectosigmoid_junction.unknown",
+        "parent": "homo_sapiens.rectosigmoid_junction",
+        "value": 1
+    },
+    {
+        "name": "gamma delta T cell",
+        "id": "homo_sapiens.rectosigmoid_junction.gamma_delta_t_cell",
+        "parent": "homo_sapiens.rectosigmoid_junction",
+        "value": 1
+    },
+    {
+        "name": "CD8+ T cell",
+        "id": "homo_sapiens.sigmoid_colon.cd8+_t_cell",
+        "parent": "homo_sapiens.sigmoid_colon",
+        "value": 1
+    },
+    {
+        "name": "B cell",
+        "id": "homo_sapiens.sigmoid_colon.b_cell",
+        "parent": "homo_sapiens.sigmoid_colon",
+        "value": 1
+    },
+    {
+        "name": "natural killer cell",
+        "id": "homo_sapiens.sigmoid_colon.natural_killer_cell",
+        "parent": "homo_sapiens.sigmoid_colon",
+        "value": 1
+    },
+    {
+        "name": "IgA plasma cell",
+        "id": "homo_sapiens.sigmoid_colon.iga_plasma_cell",
+        "parent": "homo_sapiens.sigmoid_colon",
+        "value": 1
+    },
+    {
+        "name": "IgA+ plasma cell",
+        "id": "homo_sapiens.sigmoid_colon.iga+_plasma_cell",
+        "parent": "homo_sapiens.sigmoid_colon",
+        "value": 1
+    },
+    {
+        "name": "CD4+ T cell",
+        "id": "homo_sapiens.sigmoid_colon.cd4+_t_cell",
+        "parent": "homo_sapiens.sigmoid_colon",
+        "value": 1
+    },
+    {
+        "name": "CD4-positive, alpha-beta T cell",
+        "id": "homo_sapiens.sigmoid_colon.cd4_positive,_alpha_beta_t_cell",
+        "parent": "homo_sapiens.sigmoid_colon",
+        "value": 1
+    },
+    {
+        "name": "regulatory T cell",
+        "id": "homo_sapiens.sigmoid_colon.regulatory_t_cell",
+        "parent": "homo_sapiens.sigmoid_colon",
+        "value": 1
+    },
+    {
+        "name": "mast cell",
+        "id": "homo_sapiens.sigmoid_colon.mast_cell",
+        "parent": "homo_sapiens.sigmoid_colon",
+        "value": 1
+    },
+    {
+        "name": "conventional dendritic cell",
+        "id": "homo_sapiens.sigmoid_colon.conventional_dendritic_cell",
+        "parent": "homo_sapiens.sigmoid_colon",
+        "value": 1
+    },
+    {
+        "name": "CD8-positive, alpha-beta T cell",
+        "id": "homo_sapiens.sigmoid_colon.cd8_positive,_alpha_beta_t_cell",
+        "parent": "homo_sapiens.sigmoid_colon",
+        "value": 1
+    },
+    {
+        "name": "T cell",
+        "id": "homo_sapiens.sigmoid_colon.t_cell",
+        "parent": "homo_sapiens.sigmoid_colon",
+        "value": 1
+    },
+    {
+        "name": "CD19+CD20+ B cell",
+        "id": "homo_sapiens.sigmoid_colon.cd19+cd20+_b_cell",
+        "parent": "homo_sapiens.sigmoid_colon",
+        "value": 1
+    },
+    {
+        "name": "T follicular helper cell",
+        "id": "homo_sapiens.sigmoid_colon.t_follicular_helper_cell",
+        "parent": "homo_sapiens.sigmoid_colon",
+        "value": 1
+    },
+    {
+        "name": "gamma-delta T cell",
+        "id": "homo_sapiens.sigmoid_colon.gamma_delta_t_cell",
+        "parent": "homo_sapiens.sigmoid_colon",
+        "value": 1
+    },
+    {
+        "name": "unknown",
+        "id": "homo_sapiens.sigmoid_colon.unknown",
+        "parent": "homo_sapiens.sigmoid_colon",
+        "value": 1
+    },
+    {
+        "name": "gamma delta T cell",
+        "id": "homo_sapiens.sigmoid_colon.gamma_delta_t_cell",
+        "parent": "homo_sapiens.sigmoid_colon",
+        "value": 1
+    },
+    {
+        "name": "unknown T cell",
+        "id": "homo_sapiens.sigmoid_colon.unknown_t_cell",
+        "parent": "homo_sapiens.sigmoid_colon",
+        "value": 1
+    },
+    {
+        "name": "T-helper 17 cell",
+        "id": "homo_sapiens.sigmoid_colon.t_helper_17_cell",
+        "parent": "homo_sapiens.sigmoid_colon",
+        "value": 1
+    },
+    {
+        "name": "plasma cell",
+        "id": "homo_sapiens.sigmoid_colon.plasma_cell",
+        "parent": "homo_sapiens.sigmoid_colon",
+        "value": 1
+    },
+    {
+        "name": "unspecified plasma cell",
+        "id": "homo_sapiens.sigmoid_colon.unspecified_plasma_cell",
+        "parent": "homo_sapiens.sigmoid_colon",
+        "value": 1
+    },
+    {
+        "name": "IgA plasma cell",
+        "id": "homo_sapiens.ascending_colon.iga_plasma_cell",
+        "parent": "homo_sapiens.ascending_colon",
+        "value": 1
+    },
+    {
+        "name": "IgA+ plasma cell",
+        "id": "homo_sapiens.ascending_colon.iga+_plasma_cell",
+        "parent": "homo_sapiens.ascending_colon",
+        "value": 1
+    },
+    {
+        "name": "CD8+ T cell",
+        "id": "homo_sapiens.ascending_colon.cd8+_t_cell",
+        "parent": "homo_sapiens.ascending_colon",
+        "value": 1
+    },
+    {
+        "name": "CD4-positive, alpha-beta T cell",
+        "id": "homo_sapiens.ascending_colon.cd4_positive,_alpha_beta_t_cell",
+        "parent": "homo_sapiens.ascending_colon",
+        "value": 1
+    },
+    {
+        "name": "mast cell",
+        "id": "homo_sapiens.ascending_colon.mast_cell",
+        "parent": "homo_sapiens.ascending_colon",
+        "value": 1
+    },
+    {
+        "name": "CD4+ T cell",
+        "id": "homo_sapiens.ascending_colon.cd4+_t_cell",
+        "parent": "homo_sapiens.ascending_colon",
+        "value": 1
+    },
+    {
+        "name": "CD19+CD20+ B cell",
+        "id": "homo_sapiens.ascending_colon.cd19+cd20+_b_cell",
+        "parent": "homo_sapiens.ascending_colon",
+        "value": 1
+    },
+    {
+        "name": "conventional dendritic cell",
+        "id": "homo_sapiens.ascending_colon.conventional_dendritic_cell",
+        "parent": "homo_sapiens.ascending_colon",
+        "value": 1
+    },
+    {
+        "name": "B cell",
+        "id": "homo_sapiens.ascending_colon.b_cell",
+        "parent": "homo_sapiens.ascending_colon",
+        "value": 1
+    },
+    {
+        "name": "CD8-positive, alpha-beta T cell",
+        "id": "homo_sapiens.ascending_colon.cd8_positive,_alpha_beta_t_cell",
+        "parent": "homo_sapiens.ascending_colon",
+        "value": 1
+    },
+    {
+        "name": "natural killer cell",
+        "id": "homo_sapiens.ascending_colon.natural_killer_cell",
+        "parent": "homo_sapiens.ascending_colon",
+        "value": 1
+    },
+    {
+        "name": "macrophage",
+        "id": "homo_sapiens.testis.macrophage",
+        "parent": "homo_sapiens.testis",
+        "value": 1
+    },
+    {
+        "name": "regulatory T cell",
+        "id": "homo_sapiens.ileal_mucosa.regulatory_t_cell",
+        "parent": "homo_sapiens.ileal_mucosa",
+        "value": 1
+    },
+    {
+        "name": "myeloid dendritic cell",
+        "id": "homo_sapiens.ileal_mucosa.myeloid_dendritic_cell",
+        "parent": "homo_sapiens.ileal_mucosa",
+        "value": 1
+    },
+    {
+        "name": "group 1 innate lymphoid cell",
+        "id": "homo_sapiens.ileal_mucosa.group_1_innate_lymphoid_cell",
+        "parent": "homo_sapiens.ileal_mucosa",
+        "value": 1
+    },
+    {
+        "name": "Tregs",
+        "id": "homo_sapiens.ileal_mucosa.tregs",
+        "parent": "homo_sapiens.ileal_mucosa",
+        "value": 1
+    },
+    {
+        "name": "IgA plasma cell",
+        "id": "homo_sapiens.ileal_mucosa.iga_plasma_cell",
+        "parent": "homo_sapiens.ileal_mucosa",
+        "value": 1
+    },
+    {
+        "name": "Trm",
+        "id": "homo_sapiens.ileal_mucosa.trm",
+        "parent": "homo_sapiens.ileal_mucosa",
+        "value": 1
+    },
+    {
+        "name": "CD8-positive, alpha-beta cytotoxic T cell",
+        "id": "homo_sapiens.ileal_mucosa.cd8_positive,_alpha_beta_cytotoxic_t_cell",
+        "parent": "homo_sapiens.ileal_mucosa",
+        "value": 1
+    },
+    {
+        "name": "memory B cell",
+        "id": "homo_sapiens.ileal_mucosa.memory_b_cell",
+        "parent": "homo_sapiens.ileal_mucosa",
+        "value": 1
+    },
+    {
+        "name": "moDC",
+        "id": "homo_sapiens.ileal_mucosa.modc",
+        "parent": "homo_sapiens.ileal_mucosa",
+        "value": 1
+    },
+    {
+        "name": "naive T cell",
+        "id": "homo_sapiens.ileal_mucosa.naive_t_cell",
+        "parent": "homo_sapiens.ileal_mucosa",
+        "value": 1
+    },
+    {
+        "name": "naive B cell",
+        "id": "homo_sapiens.ileal_mucosa.naive_b_cell",
+        "parent": "homo_sapiens.ileal_mucosa",
+        "value": 1
+    },
+    {
+        "name": "ILC3",
+        "id": "homo_sapiens.ileal_mucosa.ilc3",
+        "parent": "homo_sapiens.ileal_mucosa",
+        "value": 1
+    },
+    {
+        "name": "memory T cell",
+        "id": "homo_sapiens.ileal_mucosa.memory_t_cell",
+        "parent": "homo_sapiens.ileal_mucosa",
+        "value": 1
+    },
+    {
+        "name": "tissue-resident macrophage",
+        "id": "homo_sapiens.ileal_mucosa.tissue_resident_macrophage",
+        "parent": "homo_sapiens.ileal_mucosa",
+        "value": 1
+    },
+    {
+        "name": "IgM plasma cell",
+        "id": "homo_sapiens.ileal_mucosa.igm_plasma_cell",
+        "parent": "homo_sapiens.ileal_mucosa",
+        "value": 1
+    },
+    {
+        "name": "T-helper 17 cell",
+        "id": "homo_sapiens.ileal_mucosa.t_helper_17_cell",
+        "parent": "homo_sapiens.ileal_mucosa",
+        "value": 1
+    },
+    {
+        "name": "DC2",
+        "id": "homo_sapiens.ileal_mucosa.dc2",
+        "parent": "homo_sapiens.ileal_mucosa",
+        "value": 1
+    },
+    {
+        "name": "conventional dendritic cell",
+        "id": "homo_sapiens.ileal_mucosa.conventional_dendritic_cell",
+        "parent": "homo_sapiens.ileal_mucosa",
+        "value": 1
+    },
+    {
+        "name": "ILC1",
+        "id": "homo_sapiens.ileal_mucosa.ilc1",
+        "parent": "homo_sapiens.ileal_mucosa",
+        "value": 1
+    },
+    {
+        "name": "Th17 Trm",
+        "id": "homo_sapiens.ileal_mucosa.th17_trm",
+        "parent": "homo_sapiens.ileal_mucosa",
+        "value": 1
+    },
+    {
+        "name": "T (gd)",
+        "id": "homo_sapiens.ileal_mucosa.t_(gd)",
+        "parent": "homo_sapiens.ileal_mucosa",
+        "value": 1
+    },
+    {
+        "name": "cytotoxic CD8 Trm",
+        "id": "homo_sapiens.ileal_mucosa.cytotoxic_cd8_trm",
+        "parent": "homo_sapiens.ileal_mucosa",
+        "value": 1
+    },
+    {
+        "name": "plasmacytoid dendritic cell",
+        "id": "homo_sapiens.ileal_mucosa.plasmacytoid_dendritic_cell",
+        "parent": "homo_sapiens.ileal_mucosa",
+        "value": 1
+    },
+    {
+        "name": "activated CD8-positive, alpha-beta T cell",
+        "id": "homo_sapiens.ileal_mucosa.activated_cd8_positive,_alpha_beta_t_cell",
+        "parent": "homo_sapiens.ileal_mucosa",
+        "value": 1
+    },
+    {
+        "name": "IgG plasma cell",
+        "id": "homo_sapiens.ileal_mucosa.igg_plasma_cell",
+        "parent": "homo_sapiens.ileal_mucosa",
+        "value": 1
+    },
+    {
+        "name": "central memory CD8-positive, alpha-beta T cell",
+        "id": "homo_sapiens.ileal_mucosa.central_memory_cd8_positive,_alpha_beta_t_cell",
+        "parent": "homo_sapiens.ileal_mucosa",
+        "value": 1
+    },
+    {
+        "name": "group 3 innate lymphoid cell",
+        "id": "homo_sapiens.ileal_mucosa.group_3_innate_lymphoid_cell",
+        "parent": "homo_sapiens.ileal_mucosa",
+        "value": 1
+    },
+    {
+        "name": "inflammatory macrophage",
+        "id": "homo_sapiens.ileal_mucosa.inflammatory_macrophage",
+        "parent": "homo_sapiens.ileal_mucosa",
+        "value": 1
+    },
+    {
+        "name": "plasmablast",
+        "id": "homo_sapiens.ileal_mucosa.plasmablast",
+        "parent": "homo_sapiens.ileal_mucosa",
+        "value": 1
+    },
+    {
+        "name": "resident macrophage",
+        "id": "homo_sapiens.ileal_mucosa.resident_macrophage",
+        "parent": "homo_sapiens.ileal_mucosa",
+        "value": 1
+    },
+    {
+        "name": "mast cell",
+        "id": "homo_sapiens.ileal_mucosa.mast_cell",
+        "parent": "homo_sapiens.ileal_mucosa",
+        "value": 1
+    },
+    {
+        "name": "cytotoxic T cell",
+        "id": "homo_sapiens.ileal_mucosa.cytotoxic_t_cell",
+        "parent": "homo_sapiens.ileal_mucosa",
+        "value": 1
+    },
+    {
+        "name": "gamma-delta T cell",
+        "id": "homo_sapiens.ileal_mucosa.gamma_delta_t_cell",
+        "parent": "homo_sapiens.ileal_mucosa",
+        "value": 1
+    },
+    {
+        "name": "DC1",
+        "id": "homo_sapiens.ileal_mucosa.dc1",
+        "parent": "homo_sapiens.ileal_mucosa",
+        "value": 1
+    },
+    {
+        "name": "highly activated T cell",
+        "id": "homo_sapiens.ileal_mucosa.highly_activated_t_cell",
+        "parent": "homo_sapiens.ileal_mucosa",
+        "value": 1
+    },
+    {
+        "name": "activated DC",
+        "id": "homo_sapiens.ileal_mucosa.activated_dc",
+        "parent": "homo_sapiens.ileal_mucosa",
+        "value": 1
+    },
+    {
+        "name": "lymphocyte",
+        "id": "homo_sapiens.ileal_mucosa.lymphocyte",
+        "parent": "homo_sapiens.ileal_mucosa",
+        "value": 1
+    },
+    {
+        "name": "mature conventional dendritic cell",
+        "id": "homo_sapiens.ileal_mucosa.mature_conventional_dendritic_cell",
+        "parent": "homo_sapiens.ileal_mucosa",
+        "value": 1
+    },
+    {
+        "name": "central memory T cell",
+        "id": "homo_sapiens.ileal_mucosa.central_memory_t_cell",
+        "parent": "homo_sapiens.ileal_mucosa",
+        "value": 1
+    },
+    {
+        "name": "pDC",
+        "id": "homo_sapiens.ileal_mucosa.pdc",
+        "parent": "homo_sapiens.ileal_mucosa",
+        "value": 1
+    },
+    {
+        "name": "macrophage 3",
+        "id": "homo_sapiens.pigmented_layer_of_retina_and_optic_choroid.macrophage_3",
+        "parent": "homo_sapiens.pigmented_layer_of_retina_and_optic_choroid",
+        "value": 1
+    },
+    {
+        "name": "macrophage",
+        "id": "homo_sapiens.pigmented_layer_of_retina_and_optic_choroid.macrophage",
+        "parent": "homo_sapiens.pigmented_layer_of_retina_and_optic_choroid",
+        "value": 1
+    },
+    {
+        "name": "macrophage 1",
+        "id": "homo_sapiens.pigmented_layer_of_retina_and_optic_choroid.macrophage_1",
+        "parent": "homo_sapiens.pigmented_layer_of_retina_and_optic_choroid",
+        "value": 1
+    },
+    {
+        "name": "macrophage 2",
+        "id": "homo_sapiens.pigmented_layer_of_retina_and_optic_choroid.macrophage_2",
+        "parent": "homo_sapiens.pigmented_layer_of_retina_and_optic_choroid",
+        "value": 1
+    },
+    {
+        "name": "mast cell",
+        "id": "homo_sapiens.pigmented_layer_of_retina_and_optic_choroid.mast_cell",
+        "parent": "homo_sapiens.pigmented_layer_of_retina_and_optic_choroid",
+        "value": 1
+    },
+    {
+        "name": "B cell",
+        "id": "homo_sapiens.pigmented_layer_of_retina_and_optic_choroid.b_cell",
+        "parent": "homo_sapiens.pigmented_layer_of_retina_and_optic_choroid",
+        "value": 1
+    },
+    {
+        "name": "immune cell",
+        "id": "homo_sapiens.brain.immune_cell",
+        "parent": "homo_sapiens.brain",
+        "value": 1
+    },
+    {
+        "name": "microglial cell",
+        "id": "homo_sapiens.brain.microglial_cell",
+        "parent": "homo_sapiens.brain",
+        "value": 1
+    },
+    {
+        "name": "T cell",
+        "id": "homo_sapiens.brain.t_cell",
+        "parent": "homo_sapiens.brain",
+        "value": 1
+    },
+    {
+        "name": "B cell",
+        "id": "homo_sapiens.brain.b_cell",
+        "parent": "homo_sapiens.brain",
+        "value": 1
+    },
+    {
+        "name": "mesangial cell",
+        "id": "homo_sapiens.juxtamedullary_cortex.mesangial_cell",
+        "parent": "homo_sapiens.juxtamedullary_cortex",
+        "value": 1
+    },
+    {
+        "name": "immune cell",
+        "id": "homo_sapiens.juxtamedullary_cortex.immune_cell",
+        "parent": "homo_sapiens.juxtamedullary_cortex",
+        "value": 1
+    },
+    {
+        "name": "lung macrophage",
+        "id": "homo_sapiens.lung_parenchyma.lung_macrophage",
+        "parent": "homo_sapiens.lung_parenchyma",
+        "value": 1
+    },
+    {
+        "name": "T cell",
+        "id": "homo_sapiens.lung_parenchyma.t_cell",
+        "parent": "homo_sapiens.lung_parenchyma",
+        "value": 1
+    },
+    {
+        "name": "mast cell",
+        "id": "homo_sapiens.lung_parenchyma.mast_cell",
+        "parent": "homo_sapiens.lung_parenchyma",
+        "value": 1
+    },
+    {
+        "name": "lymphocyte",
+        "id": "homo_sapiens.lung_parenchyma.lymphocyte",
+        "parent": "homo_sapiens.lung_parenchyma",
+        "value": 1
+    },
+    {
+        "name": "natural killer cell",
+        "id": "homo_sapiens.lung_parenchyma.natural_killer_cell",
+        "parent": "homo_sapiens.lung_parenchyma",
+        "value": 1
+    },
+    {
+        "name": "B cell",
+        "id": "homo_sapiens.lung_parenchyma.b_cell",
+        "parent": "homo_sapiens.lung_parenchyma",
+        "value": 1
+    },
+    {
+        "name": "plasma cell",
+        "id": "homo_sapiens.colon.plasma_cell",
+        "parent": "homo_sapiens.colon",
+        "value": 1
+    },
+    {
+        "name": "cytotoxic T cell type 1",
+        "id": "homo_sapiens.colon.cytotoxic_t_cell_type_1",
+        "parent": "homo_sapiens.colon",
+        "value": 1
+    },
+    {
+        "name": "CD4+ naive T cell",
+        "id": "homo_sapiens.colon.cd4+_naive_t_cell",
+        "parent": "homo_sapiens.colon",
+        "value": 1
+    },
+    {
+        "name": "stromal cell",
+        "id": "homo_sapiens.colon.stromal_cell",
+        "parent": "homo_sapiens.colon",
+        "value": 1
+    },
+    {
+        "name": "helper T cell",
+        "id": "homo_sapiens.colon.helper_t_cell",
+        "parent": "homo_sapiens.colon",
+        "value": 1
+    },
+    {
+        "name": "alpha-beta T cell",
+        "id": "homo_sapiens.colon.alpha_beta_t_cell",
+        "parent": "homo_sapiens.colon",
+        "value": 1
+    },
+    {
+        "name": "inflammatory macrophage",
+        "id": "homo_sapiens.colon.inflammatory_macrophage",
+        "parent": "homo_sapiens.colon",
+        "value": 1
+    },
+    {
+        "name": "cytotoxic T cell",
+        "id": "homo_sapiens.colon.cytotoxic_t_cell",
+        "parent": "homo_sapiens.colon",
+        "value": 1
+    },
+    {
+        "name": "precursor B cell",
+        "id": "homo_sapiens.colon.precursor_b_cell",
+        "parent": "homo_sapiens.colon",
+        "value": 1
+    },
+    {
+        "name": "naive thymus-derived CD4-positive, alpha-beta T cell",
+        "id": "homo_sapiens.colon.naive_thymus_derived_cd4_positive,_alpha_beta_t_cell",
+        "parent": "homo_sapiens.colon",
+        "value": 1
+    },
+    {
+        "name": "smooth muscle cell",
+        "id": "homo_sapiens.colon.smooth_muscle_cell",
+        "parent": "homo_sapiens.colon",
+        "value": 1
+    },
+    {
+        "name": "dendritic cell",
+        "id": "homo_sapiens.colon.dendritic_cell",
+        "parent": "homo_sapiens.colon",
+        "value": 1
+    },
+    {
+        "name": "T-helper cell",
+        "id": "homo_sapiens.colon.t_helper_cell",
+        "parent": "homo_sapiens.colon",
+        "value": 1
+    },
+    {
+        "name": "stromal cell type 2a",
+        "id": "homo_sapiens.colon.stromal_cell_type_2a",
+        "parent": "homo_sapiens.colon",
+        "value": 1
+    },
+    {
+        "name": "conventional dendritic cell",
+        "id": "homo_sapiens.colon.conventional_dendritic_cell",
+        "parent": "homo_sapiens.colon",
+        "value": 1
+    },
+    {
+        "name": "glial cell",
+        "id": "homo_sapiens.colon.glial_cell",
+        "parent": "homo_sapiens.colon",
+        "value": 1
+    },
+    {
+        "name": "pericyte type 1",
+        "id": "homo_sapiens.colon.pericyte_type_1",
+        "parent": "homo_sapiens.colon",
+        "value": 1
+    },
+    {
+        "name": "plasma cell",
+        "id": "homo_sapiens.skin_of_body.plasma_cell",
+        "parent": "homo_sapiens.skin_of_body",
+        "value": 1
+    },
+    {
+        "name": "inflammatory macrophage",
+        "id": "homo_sapiens.skin_of_body.inflammatory_macrophage",
+        "parent": "homo_sapiens.skin_of_body",
+        "value": 1
+    },
+    {
+        "name": "dendritic cell",
+        "id": "homo_sapiens.skin_of_body.dendritic_cell",
+        "parent": "homo_sapiens.skin_of_body",
+        "value": 1
+    },
+    {
+        "name": "naive B cell",
+        "id": "homo_sapiens.skin_of_body.naive_b_cell",
+        "parent": "homo_sapiens.skin_of_body",
+        "value": 1
+    },
+    {
+        "name": "naive thymus-derived CD4-positive, alpha-beta T cell",
+        "id": "homo_sapiens.skin_of_body.naive_thymus_derived_cd4_positive,_alpha_beta_t_cell",
+        "parent": "homo_sapiens.skin_of_body",
+        "value": 1
+    },
+    {
+        "name": "canonical glycolysis",
+        "id": "homo_sapiens.skin_of_body.canonical_glycolysis",
+        "parent": "homo_sapiens.skin_of_body",
+        "value": 1
+    },
+    {
+        "name": "glycolysis state",
+        "id": "homo_sapiens.skin_of_body.glycolysis_state",
+        "parent": "homo_sapiens.skin_of_body",
+        "value": 1
+    },
+    {
+        "name": "gamma-delta T cell",
+        "id": "homo_sapiens.skin_of_body.gamma_delta_t_cell",
+        "parent": "homo_sapiens.skin_of_body",
+        "value": 1
+    },
+    {
+        "name": "CD14-positive monocyte",
+        "id": "homo_sapiens.skin_of_body.cd14_positive_monocyte",
+        "parent": "homo_sapiens.skin_of_body",
+        "value": 1
+    },
+    {
+        "name": "cortical neural progenitor cell",
+        "id": "homo_sapiens.skin_of_body.cortical_neural_progenitor_cell",
+        "parent": "homo_sapiens.skin_of_body",
+        "value": 1
+    },
+    {
+        "name": "cytotoxic T cell type 2",
+        "id": "homo_sapiens.skin_of_body.cytotoxic_t_cell_type_2",
+        "parent": "homo_sapiens.skin_of_body",
+        "value": 1
+    },
+    {
+        "name": "ganglionic eminence neural progenitor cell",
+        "id": "homo_sapiens.skin_of_body.ganglionic_eminence_neural_progenitor_cell",
+        "parent": "homo_sapiens.skin_of_body",
+        "value": 1
+    },
+    {
+        "name": "CD4+ naive T cell",
+        "id": "homo_sapiens.skin_of_body.cd4+_naive_t_cell",
+        "parent": "homo_sapiens.skin_of_body",
+        "value": 1
+    },
+    {
+        "name": "natural killer cell",
+        "id": "homo_sapiens.skin_of_body.natural_killer_cell",
+        "parent": "homo_sapiens.skin_of_body",
+        "value": 1
+    },
+    {
+        "name": "T-helper cell",
+        "id": "homo_sapiens.skin_of_body.t_helper_cell",
+        "parent": "homo_sapiens.skin_of_body",
+        "value": 1
+    },
+    {
+        "name": "cortical intermediate progenitor",
+        "id": "homo_sapiens.skin_of_body.cortical_intermediate_progenitor",
+        "parent": "homo_sapiens.skin_of_body",
+        "value": 1
+    },
+    {
+        "name": "cortical excitatory neuron",
+        "id": "homo_sapiens.skin_of_body.cortical_excitatory_neuron",
+        "parent": "homo_sapiens.skin_of_body",
+        "value": 1
+    },
+    {
+        "name": "CD14+ monocyte type 1",
+        "id": "homo_sapiens.skin_of_body.cd14+_monocyte_type_1",
+        "parent": "homo_sapiens.skin_of_body",
+        "value": 1
+    },
+    {
+        "name": "megakaryocyte progenitor cell",
+        "id": "homo_sapiens.skin_of_body.megakaryocyte_progenitor_cell",
+        "parent": "homo_sapiens.skin_of_body",
+        "value": 1
+    },
+    {
+        "name": "cytotoxic T cell",
+        "id": "homo_sapiens.skin_of_body.cytotoxic_t_cell",
+        "parent": "homo_sapiens.skin_of_body",
+        "value": 1
+    },
+    {
+        "name": "alpha-beta T cell",
+        "id": "homo_sapiens.shoot_axis_apex.alpha_beta_t_cell",
+        "parent": "homo_sapiens.shoot_axis_apex",
+        "value": 1
+    },
+    {
+        "name": "induced day 9 dendritic cell",
+        "id": "homo_sapiens.shoot_axis_apex.induced_day_9_dendritic_cell",
+        "parent": "homo_sapiens.shoot_axis_apex",
+        "value": 1
+    },
+    {
+        "name": "naive B cell",
+        "id": "homo_sapiens.shoot_axis_apex.naive_b_cell",
+        "parent": "homo_sapiens.shoot_axis_apex",
+        "value": 1
+    },
+    {
+        "name": "CD14+ monocyte type 1",
+        "id": "homo_sapiens.shoot_axis_apex.cd14+_monocyte_type_1",
+        "parent": "homo_sapiens.shoot_axis_apex",
+        "value": 1
+    },
+    {
+        "name": "T-helper cell",
+        "id": "homo_sapiens.shoot_axis_apex.t_helper_cell",
+        "parent": "homo_sapiens.shoot_axis_apex",
+        "value": 1
+    },
+    {
+        "name": "inflammatory macrophage",
+        "id": "homo_sapiens.shoot_axis_apex.inflammatory_macrophage",
+        "parent": "homo_sapiens.shoot_axis_apex",
+        "value": 1
+    },
+    {
+        "name": "cytotoxic T cell type 2",
+        "id": "homo_sapiens.shoot_axis_apex.cytotoxic_t_cell_type_2",
+        "parent": "homo_sapiens.shoot_axis_apex",
+        "value": 1
+    },
+    {
+        "name": "natural killer cell",
+        "id": "homo_sapiens.shoot_axis_apex.natural_killer_cell",
+        "parent": "homo_sapiens.shoot_axis_apex",
+        "value": 1
+    },
+    {
+        "name": "CD14+ monocyte type 2",
+        "id": "homo_sapiens.shoot_axis_apex.cd14+_monocyte_type_2",
+        "parent": "homo_sapiens.shoot_axis_apex",
+        "value": 1
+    },
+    {
+        "name": "plasma cell",
+        "id": "homo_sapiens.shoot_axis_apex.plasma_cell",
+        "parent": "homo_sapiens.shoot_axis_apex",
+        "value": 1
+    },
+    {
+        "name": "cytotoxic T cell type 1",
+        "id": "homo_sapiens.shoot_axis_apex.cytotoxic_t_cell_type_1",
+        "parent": "homo_sapiens.shoot_axis_apex",
+        "value": 1
+    },
+    {
+        "name": "memory B cell",
+        "id": "homo_sapiens.shoot_axis_apex.memory_b_cell",
+        "parent": "homo_sapiens.shoot_axis_apex",
+        "value": 1
+    },
+    {
+        "name": "naive thymus-derived CD4-positive, alpha-beta T cell",
+        "id": "homo_sapiens.shoot_axis_apex.naive_thymus_derived_cd4_positive,_alpha_beta_t_cell",
+        "parent": "homo_sapiens.shoot_axis_apex",
+        "value": 1
+    },
+    {
+        "name": "conventional dendritic cell",
+        "id": "homo_sapiens.shoot_axis_apex.conventional_dendritic_cell",
+        "parent": "homo_sapiens.shoot_axis_apex",
+        "value": 1
+    },
+    {
+        "name": "CD4+ naive T cell",
+        "id": "homo_sapiens.shoot_axis_apex.cd4+_naive_t_cell",
+        "parent": "homo_sapiens.shoot_axis_apex",
+        "value": 1
+    },
+    {
+        "name": "precursor B cell",
+        "id": "homo_sapiens.shoot_axis_apex.precursor_b_cell",
+        "parent": "homo_sapiens.shoot_axis_apex",
+        "value": 1
+    },
+    {
+        "name": "gamma-delta T cell",
+        "id": "homo_sapiens.shoot_axis_apex.gamma_delta_t_cell",
+        "parent": "homo_sapiens.shoot_axis_apex",
+        "value": 1
+    },
+    {
+        "name": "plasmacytoid dendritic cell",
+        "id": "homo_sapiens.skin_epidermis.plasmacytoid_dendritic_cell",
+        "parent": "homo_sapiens.skin_epidermis",
+        "value": 1
+    },
+    {
+        "name": "induced day 9 dendritic cell",
+        "id": "homo_sapiens.skin_epidermis.induced_day_9_dendritic_cell",
+        "parent": "homo_sapiens.skin_epidermis",
+        "value": 1
+    },
+    {
+        "name": "naive thymus-derived CD4-positive, alpha-beta T cell",
+        "id": "homo_sapiens.skin_epidermis.naive_thymus_derived_cd4_positive,_alpha_beta_t_cell",
+        "parent": "homo_sapiens.skin_epidermis",
+        "value": 1
+    },
+    {
+        "name": "alpha-beta T cell",
+        "id": "homo_sapiens.skin_epidermis.alpha_beta_t_cell",
+        "parent": "homo_sapiens.skin_epidermis",
+        "value": 1
+    },
+    {
+        "name": "inflammatory macrophage",
+        "id": "homo_sapiens.skin_epidermis.inflammatory_macrophage",
+        "parent": "homo_sapiens.skin_epidermis",
+        "value": 1
+    },
+    {
+        "name": "dendritic cell",
+        "id": "homo_sapiens.skin_epidermis.dendritic_cell",
+        "parent": "homo_sapiens.skin_epidermis",
+        "value": 1
+    },
+    {
+        "name": "conventional dendritic cell",
+        "id": "homo_sapiens.skin_epidermis.conventional_dendritic_cell",
+        "parent": "homo_sapiens.skin_epidermis",
+        "value": 1
+    },
+    {
+        "name": "conventional dendritic cell type 2",
+        "id": "homo_sapiens.skin_epidermis.conventional_dendritic_cell_type_2",
+        "parent": "homo_sapiens.skin_epidermis",
+        "value": 1
+    },
+    {
+        "name": "precursor B cell",
+        "id": "homo_sapiens.skin_epidermis.precursor_b_cell",
+        "parent": "homo_sapiens.skin_epidermis",
+        "value": 1
+    },
+    {
+        "name": "CD14-positive monocyte",
+        "id": "homo_sapiens.skin_epidermis.cd14_positive_monocyte",
+        "parent": "homo_sapiens.skin_epidermis",
+        "value": 1
+    },
+    {
+        "name": "cortical neural progenitor cell",
+        "id": "homo_sapiens.skin_epidermis.cortical_neural_progenitor_cell",
+        "parent": "homo_sapiens.skin_epidermis",
+        "value": 1
+    },
+    {
+        "name": "cortical excitatory neuron",
+        "id": "homo_sapiens.skin_epidermis.cortical_excitatory_neuron",
+        "parent": "homo_sapiens.skin_epidermis",
+        "value": 1
+    },
+    {
+        "name": "naive B cell",
+        "id": "homo_sapiens.umbilical_cord_blood.naive_b_cell",
+        "parent": "homo_sapiens.umbilical_cord_blood",
+        "value": 1
+    },
+    {
+        "name": "naive CD8+ T cell",
+        "id": "homo_sapiens.umbilical_cord_blood.naive_cd8+_t_cell",
+        "parent": "homo_sapiens.umbilical_cord_blood",
+        "value": 1
+    },
+    {
+        "name": "naive T-helper cell type 1",
+        "id": "homo_sapiens.umbilical_cord_blood.naive_t_helper_cell_type_1",
+        "parent": "homo_sapiens.umbilical_cord_blood",
+        "value": 1
+    },
+    {
+        "name": "naive T cell",
+        "id": "homo_sapiens.umbilical_cord_blood.naive_t_cell",
+        "parent": "homo_sapiens.umbilical_cord_blood",
+        "value": 1
+    },
+    {
+        "name": "CD14+ monocyte type 1",
+        "id": "homo_sapiens.umbilical_cord_blood.cd14+_monocyte_type_1",
+        "parent": "homo_sapiens.umbilical_cord_blood",
+        "value": 1
+    },
+    {
+        "name": "naive T cell type 2",
+        "id": "homo_sapiens.umbilical_cord_blood.naive_t_cell_type_2",
+        "parent": "homo_sapiens.umbilical_cord_blood",
+        "value": 1
+    },
+    {
+        "name": "natural killer cell",
+        "id": "homo_sapiens.umbilical_cord_blood.natural_killer_cell",
+        "parent": "homo_sapiens.umbilical_cord_blood",
+        "value": 1
+    },
+    {
+        "name": "naive T cell type 1",
+        "id": "homo_sapiens.umbilical_cord_blood.naive_t_cell_type_1",
+        "parent": "homo_sapiens.umbilical_cord_blood",
+        "value": 1
+    },
+    {
+        "name": "T-helper 2 cell",
+        "id": "homo_sapiens.umbilical_cord_blood.t_helper_2_cell",
+        "parent": "homo_sapiens.umbilical_cord_blood",
+        "value": 1
+    },
+    {
+        "name": "CD14-positive monocyte",
+        "id": "homo_sapiens.umbilical_cord_blood.cd14_positive_monocyte",
+        "parent": "homo_sapiens.umbilical_cord_blood",
+        "value": 1
+    },
+    {
+        "name": "CD8-positive, alpha-beta T cell",
+        "id": "homo_sapiens.umbilical_cord_blood.cd8_positive,_alpha_beta_t_cell",
+        "parent": "homo_sapiens.umbilical_cord_blood",
+        "value": 1
+    },
+    {
+        "name": "naive T-helper cell type 2",
+        "id": "homo_sapiens.umbilical_cord_blood.naive_t_helper_cell_type_2",
+        "parent": "homo_sapiens.umbilical_cord_blood",
+        "value": 1
+    },
+    {
+        "name": "natural killer cell type 1",
+        "id": "homo_sapiens.umbilical_cord_blood.natural_killer_cell_type_1",
+        "parent": "homo_sapiens.umbilical_cord_blood",
+        "value": 1
+    },
+    {
+        "name": "T-helper 1 cell",
+        "id": "homo_sapiens.umbilical_cord_blood.t_helper_1_cell",
+        "parent": "homo_sapiens.umbilical_cord_blood",
+        "value": 1
+    },
+    {
+        "name": "memory B cell",
+        "id": "homo_sapiens.umbilical_cord_blood.memory_b_cell",
+        "parent": "homo_sapiens.umbilical_cord_blood",
+        "value": 1
+    },
+    {
+        "name": "dendritic cell",
+        "id": "homo_sapiens.umbilical_cord_blood.dendritic_cell",
+        "parent": "homo_sapiens.umbilical_cord_blood",
+        "value": 1
+    },
+    {
+        "name": "natural killer cell type 2",
+        "id": "homo_sapiens.umbilical_cord_blood.natural_killer_cell_type_2",
+        "parent": "homo_sapiens.umbilical_cord_blood",
+        "value": 1
+    },
+    {
+        "name": "CD4-positive, alpha-beta T cell",
+        "id": "homo_sapiens.umbilical_cord_blood.cd4_positive,_alpha_beta_t_cell",
+        "parent": "homo_sapiens.umbilical_cord_blood",
+        "value": 1
+    },
+    {
+        "name": "CD14+ monocyte type 2",
+        "id": "homo_sapiens.umbilical_cord_blood.cd14+_monocyte_type_2",
+        "parent": "homo_sapiens.umbilical_cord_blood",
+        "value": 1
+    },
+    {
+        "name": "naive T cell type 3",
+        "id": "homo_sapiens.umbilical_cord_blood.naive_t_cell_type_3",
+        "parent": "homo_sapiens.umbilical_cord_blood",
+        "value": 1
+    },
+    {
+        "name": "CD4+ T cell",
+        "id": "homo_sapiens.umbilical_cord_blood.cd4+_t_cell",
+        "parent": "homo_sapiens.umbilical_cord_blood",
+        "value": 1
+    },
+    {
+        "name": "leukocyte",
+        "id": "gallus_gallus.autopod.leukocyte",
+        "parent": "gallus_gallus.autopod",
+        "value": 1
+    }
+]

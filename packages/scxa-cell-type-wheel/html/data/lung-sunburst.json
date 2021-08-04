@@ -1,0 +1,458 @@
+[
+    {
+        "name": "Lung",
+        "id": "root",
+        "parent": ""
+    },
+    {
+        "name": "Mus musculus",
+        "id": "mus_musculus",
+        "parent": "root"
+    },
+    {
+        "name": "Homo sapiens",
+        "id": "homo_sapiens",
+        "parent": "root"
+    },
+    {
+        "name": "lung",
+        "id": "mus_musculus.lung",
+        "parent": "mus_musculus"
+    },
+    {
+        "name": "lung",
+        "id": "homo_sapiens.lung",
+        "parent": "homo_sapiens"
+    },
+    {
+        "name": "lung parenchyma",
+        "id": "homo_sapiens.lung_parenchyma",
+        "parent": "homo_sapiens"
+    },
+    {
+        "name": "lung endothelial cell",
+        "id": "mus_musculus.lung.lung_endothelial_cell",
+        "parent": "mus_musculus.lung",
+        "value": 1
+    },
+    {
+        "name": "stromal cell",
+        "id": "mus_musculus.lung.stromal_cell",
+        "parent": "mus_musculus.lung",
+        "value": 1
+    },
+    {
+        "name": "myeloid cell",
+        "id": "mus_musculus.lung.myeloid_cell",
+        "parent": "mus_musculus.lung",
+        "value": 1
+    },
+    {
+        "name": "monocyte",
+        "id": "mus_musculus.lung.monocyte",
+        "parent": "mus_musculus.lung",
+        "value": 1
+    },
+    {
+        "name": "classical monocyte",
+        "id": "mus_musculus.lung.classical_monocyte",
+        "parent": "mus_musculus.lung",
+        "value": 1
+    },
+    {
+        "name": "B cell",
+        "id": "mus_musculus.lung.b_cell",
+        "parent": "mus_musculus.lung",
+        "value": 1
+    },
+    {
+        "name": "T cell",
+        "id": "mus_musculus.lung.t_cell",
+        "parent": "mus_musculus.lung",
+        "value": 1
+    },
+    {
+        "name": "natural killer cell",
+        "id": "mus_musculus.lung.natural_killer_cell",
+        "parent": "mus_musculus.lung",
+        "value": 1
+    },
+    {
+        "name": "epithelial cell of lung",
+        "id": "mus_musculus.lung.epithelial_cell_of_lung",
+        "parent": "mus_musculus.lung",
+        "value": 1
+    },
+    {
+        "name": "ciliated columnar cell of tracheobronchial tree",
+        "id": "mus_musculus.lung.ciliated_columnar_cell_of_tracheobronchial_tree",
+        "parent": "mus_musculus.lung",
+        "value": 1
+    },
+    {
+        "name": "leukocyte",
+        "id": "mus_musculus.lung.leukocyte",
+        "parent": "mus_musculus.lung",
+        "value": 1
+    },
+    {
+        "name": "blood vessel cell",
+        "id": "homo_sapiens.lung.blood_vessel_cell",
+        "parent": "homo_sapiens.lung",
+        "value": 1
+    },
+    {
+        "name": "type I pneumocyte",
+        "id": "homo_sapiens.lung.type_i_pneumocyte",
+        "parent": "homo_sapiens.lung",
+        "value": 1
+    },
+    {
+        "name": "type II pneumocyte",
+        "id": "homo_sapiens.lung.type_ii_pneumocyte",
+        "parent": "homo_sapiens.lung",
+        "value": 1
+    },
+    {
+        "name": "dendritic cell",
+        "id": "homo_sapiens.lung.dendritic_cell",
+        "parent": "homo_sapiens.lung",
+        "value": 1
+    },
+    {
+        "name": "B cell",
+        "id": "homo_sapiens.lung.b_cell",
+        "parent": "homo_sapiens.lung",
+        "value": 1
+    },
+    {
+        "name": "CD8-positive, alpha-beta cytotoxic T cell",
+        "id": "homo_sapiens.lung.cd8_positive,_alpha_beta_cytotoxic_t_cell",
+        "parent": "homo_sapiens.lung",
+        "value": 1
+    },
+    {
+        "name": "natural killer cell",
+        "id": "homo_sapiens.lung.natural_killer_cell",
+        "parent": "homo_sapiens.lung",
+        "value": 1
+    },
+    {
+        "name": "macrophage",
+        "id": "homo_sapiens.lung.macrophage",
+        "parent": "homo_sapiens.lung",
+        "value": 1
+    },
+    {
+        "name": "alveolar epithelial cell type 2",
+        "id": "homo_sapiens.lung.alveolar_epithelial_cell_type_2",
+        "parent": "homo_sapiens.lung",
+        "value": 1
+    },
+    {
+        "name": "MARCOneg macrophage",
+        "id": "homo_sapiens.lung.marconeg_macrophage",
+        "parent": "homo_sapiens.lung",
+        "value": 1
+    },
+    {
+        "name": "respiratory system blood vessel",
+        "id": "homo_sapiens.lung.respiratory_system_blood_vessel",
+        "parent": "homo_sapiens.lung",
+        "value": 1
+    },
+    {
+        "name": "fibroblast of lung",
+        "id": "homo_sapiens.lung.fibroblast_of_lung",
+        "parent": "homo_sapiens.lung",
+        "value": 1
+    },
+    {
+        "name": "CD8+ cytotoxic T cell",
+        "id": "homo_sapiens.lung.cd8+_cytotoxic_t_cell",
+        "parent": "homo_sapiens.lung",
+        "value": 1
+    },
+    {
+        "name": "respiratory system lymphatic vessel",
+        "id": "homo_sapiens.lung.respiratory_system_lymphatic_vessel",
+        "parent": "homo_sapiens.lung",
+        "value": 1
+    },
+    {
+        "name": "monocyte",
+        "id": "homo_sapiens.lung.monocyte",
+        "parent": "homo_sapiens.lung",
+        "value": 1
+    },
+    {
+        "name": "CD4-positive, alpha-beta T cell",
+        "id": "homo_sapiens.lung.cd4_positive,_alpha_beta_t_cell",
+        "parent": "homo_sapiens.lung",
+        "value": 1
+    },
+    {
+        "name": "CD4+ T cell",
+        "id": "homo_sapiens.lung.cd4+_t_cell",
+        "parent": "homo_sapiens.lung",
+        "value": 1
+    },
+    {
+        "name": "plasma cell",
+        "id": "homo_sapiens.lung.plasma_cell",
+        "parent": "homo_sapiens.lung",
+        "value": 1
+    },
+    {
+        "name": "MARCOpos macrophage",
+        "id": "homo_sapiens.lung.marcopos_macrophage",
+        "parent": "homo_sapiens.lung",
+        "value": 1
+    },
+    {
+        "name": "alveolar epithelial cell type 1",
+        "id": "homo_sapiens.lung.alveolar_epithelial_cell_type_1",
+        "parent": "homo_sapiens.lung",
+        "value": 1
+    },
+    {
+        "name": "muscle cell",
+        "id": "homo_sapiens.lung.muscle_cell",
+        "parent": "homo_sapiens.lung",
+        "value": 1
+    },
+    {
+        "name": "lymph vessel cell",
+        "id": "homo_sapiens.lung.lymph_vessel_cell",
+        "parent": "homo_sapiens.lung",
+        "value": 1
+    },
+    {
+        "name": "dendritic cell/dividing monocyte",
+        "id": "homo_sapiens.lung.dendritic_cell/dividing_monocyte",
+        "parent": "homo_sapiens.lung",
+        "value": 1
+    },
+    {
+        "name": "dendritic cell type 1",
+        "id": "homo_sapiens.lung.dendritic_cell_type_1",
+        "parent": "homo_sapiens.lung",
+        "value": 1
+    },
+    {
+        "name": "lung ciliated cell",
+        "id": "homo_sapiens.lung.lung_ciliated_cell",
+        "parent": "homo_sapiens.lung",
+        "value": 1
+    },
+    {
+        "name": "fibroblast",
+        "id": "homo_sapiens.lung.fibroblast",
+        "parent": "homo_sapiens.lung",
+        "value": 1
+    },
+    {
+        "name": "dendritic cell type 2",
+        "id": "homo_sapiens.lung.dendritic_cell_type_2",
+        "parent": "homo_sapiens.lung",
+        "value": 1
+    },
+    {
+        "name": "plasmacytoid dendritic cell",
+        "id": "homo_sapiens.lung.plasmacytoid_dendritic_cell",
+        "parent": "homo_sapiens.lung",
+        "value": 1
+    },
+    {
+        "name": "conventional dendritic cell",
+        "id": "homo_sapiens.lung.conventional_dendritic_cell",
+        "parent": "homo_sapiens.lung",
+        "value": 1
+    },
+    {
+        "name": "dividing T cell",
+        "id": "homo_sapiens.lung.dividing_t_cell",
+        "parent": "homo_sapiens.lung",
+        "value": 1
+    },
+    {
+        "name": "T cell",
+        "id": "homo_sapiens.lung.t_cell",
+        "parent": "homo_sapiens.lung",
+        "value": 1
+    },
+    {
+        "name": "mast cell",
+        "id": "homo_sapiens.lung.mast_cell",
+        "parent": "homo_sapiens.lung",
+        "value": 1
+    },
+    {
+        "name": "ciliated cell",
+        "id": "homo_sapiens.lung.ciliated_cell",
+        "parent": "homo_sapiens.lung",
+        "value": 1
+    },
+    {
+        "name": "regulatory T cell",
+        "id": "homo_sapiens.lung.regulatory_t_cell",
+        "parent": "homo_sapiens.lung",
+        "value": 1
+    },
+    {
+        "name": "dividing natural killer cell",
+        "id": "homo_sapiens.lung.dividing_natural_killer_cell",
+        "parent": "homo_sapiens.lung",
+        "value": 1
+    },
+    {
+        "name": "dividing macrophage",
+        "id": "homo_sapiens.lung.dividing_macrophage",
+        "parent": "homo_sapiens.lung",
+        "value": 1
+    },
+    {
+        "name": "activated dendritic cell",
+        "id": "homo_sapiens.lung.activated_dendritic_cell",
+        "parent": "homo_sapiens.lung",
+        "value": 1
+    },
+    {
+        "name": "lymphatic vessel",
+        "id": "homo_sapiens.lung.lymphatic_vessel",
+        "parent": "homo_sapiens.lung",
+        "value": 1
+    },
+    {
+        "name": "blood vessel endothelial cell",
+        "id": "homo_sapiens.lung.blood_vessel_endothelial_cell",
+        "parent": "homo_sapiens.lung",
+        "value": 1
+    },
+    {
+        "name": "resting CD8+ T cell",
+        "id": "homo_sapiens.lung.resting_cd8+_t_cell",
+        "parent": "homo_sapiens.lung",
+        "value": 1
+    },
+    {
+        "name": "CD8-positive, alpha-beta T cell",
+        "id": "homo_sapiens.lung.cd8_positive,_alpha_beta_t_cell",
+        "parent": "homo_sapiens.lung",
+        "value": 1
+    },
+    {
+        "name": "resting CD4+ T cell",
+        "id": "homo_sapiens.lung.resting_cd4+_t_cell",
+        "parent": "homo_sapiens.lung",
+        "value": 1
+    },
+    {
+        "name": "unassigned resting T cell",
+        "id": "homo_sapiens.lung.unassigned_resting_t_cell",
+        "parent": "homo_sapiens.lung",
+        "value": 1
+    },
+    {
+        "name": "activated CD4-positive, alpha-beta T cell",
+        "id": "homo_sapiens.lung.activated_cd4_positive,_alpha_beta_t_cell",
+        "parent": "homo_sapiens.lung",
+        "value": 1
+    },
+    {
+        "name": "activated CD8+ T cell",
+        "id": "homo_sapiens.lung.activated_cd8+_t_cell",
+        "parent": "homo_sapiens.lung",
+        "value": 1
+    },
+    {
+        "name": "activated CD4+ T cell",
+        "id": "homo_sapiens.lung.activated_cd4+_t_cell",
+        "parent": "homo_sapiens.lung",
+        "value": 1
+    },
+    {
+        "name": "unassigned activated T call",
+        "id": "homo_sapiens.lung.unassigned_activated_t_call",
+        "parent": "homo_sapiens.lung",
+        "value": 1
+    },
+    {
+        "name": "lung macrophage",
+        "id": "homo_sapiens.lung_parenchyma.lung_macrophage",
+        "parent": "homo_sapiens.lung_parenchyma",
+        "value": 1
+    },
+    {
+        "name": "type II pneumocyte",
+        "id": "homo_sapiens.lung_parenchyma.type_ii_pneumocyte",
+        "parent": "homo_sapiens.lung_parenchyma",
+        "value": 1
+    },
+    {
+        "name": "T cell",
+        "id": "homo_sapiens.lung_parenchyma.t_cell",
+        "parent": "homo_sapiens.lung_parenchyma",
+        "value": 1
+    },
+    {
+        "name": "type I pneumocyte",
+        "id": "homo_sapiens.lung_parenchyma.type_i_pneumocyte",
+        "parent": "homo_sapiens.lung_parenchyma",
+        "value": 1
+    },
+    {
+        "name": "lung secretory cell",
+        "id": "homo_sapiens.lung_parenchyma.lung_secretory_cell",
+        "parent": "homo_sapiens.lung_parenchyma",
+        "value": 1
+    },
+    {
+        "name": "mast cell",
+        "id": "homo_sapiens.lung_parenchyma.mast_cell",
+        "parent": "homo_sapiens.lung_parenchyma",
+        "value": 1
+    },
+    {
+        "name": "fibroblast of lung",
+        "id": "homo_sapiens.lung_parenchyma.fibroblast_of_lung",
+        "parent": "homo_sapiens.lung_parenchyma",
+        "value": 1
+    },
+    {
+        "name": "lymphocyte",
+        "id": "homo_sapiens.lung_parenchyma.lymphocyte",
+        "parent": "homo_sapiens.lung_parenchyma",
+        "value": 1
+    },
+    {
+        "name": "lung ciliated cell",
+        "id": "homo_sapiens.lung_parenchyma.lung_ciliated_cell",
+        "parent": "homo_sapiens.lung_parenchyma",
+        "value": 1
+    },
+    {
+        "name": "natural killer cell",
+        "id": "homo_sapiens.lung_parenchyma.natural_killer_cell",
+        "parent": "homo_sapiens.lung_parenchyma",
+        "value": 1
+    },
+    {
+        "name": "transformed epithelial cell",
+        "id": "homo_sapiens.lung_parenchyma.transformed_epithelial_cell",
+        "parent": "homo_sapiens.lung_parenchyma",
+        "value": 1
+    },
+    {
+        "name": "lung endothelial cell",
+        "id": "homo_sapiens.lung_parenchyma.lung_endothelial_cell",
+        "parent": "homo_sapiens.lung_parenchyma",
+        "value": 1
+    },
+    {
+        "name": "B cell",
+        "id": "homo_sapiens.lung_parenchyma.b_cell",
+        "parent": "homo_sapiens.lung_parenchyma",
+        "value": 1
+    }
+]

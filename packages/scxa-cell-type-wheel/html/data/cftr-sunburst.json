@@ -1,0 +1,2664 @@
+[
+    {
+        "name": "CFTR<br>ENSG00000001626",
+        "id": "root",
+        "parent": ""
+    },
+    {
+        "name": "Homo sapiens",
+        "id": "homo_sapiens",
+        "parent": "root"
+    },
+    {
+        "name": "kidney",
+        "id": "homo_sapiens.kidney",
+        "parent": "homo_sapiens"
+    },
+    {
+        "name": "pancreas",
+        "id": "homo_sapiens.pancreas",
+        "parent": "homo_sapiens"
+    },
+    {
+        "name": "decidua",
+        "id": "homo_sapiens.decidua",
+        "parent": "homo_sapiens"
+    },
+    {
+        "name": "blood",
+        "id": "homo_sapiens.blood",
+        "parent": "homo_sapiens"
+    },
+    {
+        "name": "placenta",
+        "id": "homo_sapiens.placenta",
+        "parent": "homo_sapiens"
+    },
+    {
+        "name": "ascitic fluid",
+        "id": "homo_sapiens.ascitic_fluid",
+        "parent": "homo_sapiens"
+    },
+    {
+        "name": "bone marrow",
+        "id": "homo_sapiens.bone_marrow",
+        "parent": "homo_sapiens"
+    },
+    {
+        "name": "liver",
+        "id": "homo_sapiens.liver",
+        "parent": "homo_sapiens"
+    },
+    {
+        "name": "oesophagus",
+        "id": "homo_sapiens.oesophagus",
+        "parent": "homo_sapiens"
+    },
+    {
+        "name": "lung",
+        "id": "homo_sapiens.lung",
+        "parent": "homo_sapiens"
+    },
+    {
+        "name": "caecum",
+        "id": "homo_sapiens.caecum",
+        "parent": "homo_sapiens"
+    },
+    {
+        "name": "rectosigmoid junction",
+        "id": "homo_sapiens.rectosigmoid_junction",
+        "parent": "homo_sapiens"
+    },
+    {
+        "name": "sigmoid colon",
+        "id": "homo_sapiens.sigmoid_colon",
+        "parent": "homo_sapiens"
+    },
+    {
+        "name": "ascending colon",
+        "id": "homo_sapiens.ascending_colon",
+        "parent": "homo_sapiens"
+    },
+    {
+        "name": "testis",
+        "id": "homo_sapiens.testis",
+        "parent": "homo_sapiens"
+    },
+    {
+        "name": "ileal mucosa",
+        "id": "homo_sapiens.ileal_mucosa",
+        "parent": "homo_sapiens"
+    },
+    {
+        "name": "pigmented layer of retina and optic choroid",
+        "id": "homo_sapiens.pigmented_layer_of_retina_and_optic_choroid",
+        "parent": "homo_sapiens"
+    },
+    {
+        "name": "islet of Langerhans",
+        "id": "homo_sapiens.islet_of_langerhans",
+        "parent": "homo_sapiens"
+    },
+    {
+        "name": "brain",
+        "id": "homo_sapiens.brain",
+        "parent": "homo_sapiens"
+    },
+    {
+        "name": "embryo",
+        "id": "homo_sapiens.embryo",
+        "parent": "homo_sapiens"
+    },
+    {
+        "name": "juxtamedullary cortex",
+        "id": "homo_sapiens.juxtamedullary_cortex",
+        "parent": "homo_sapiens"
+    },
+    {
+        "name": "outer cortex of kidney",
+        "id": "homo_sapiens.outer_cortex_of_kidney",
+        "parent": "homo_sapiens"
+    },
+    {
+        "name": "inner cell mass",
+        "id": "homo_sapiens.inner_cell_mass",
+        "parent": "homo_sapiens"
+    },
+    {
+        "name": "ileum",
+        "id": "homo_sapiens.ileum",
+        "parent": "homo_sapiens"
+    },
+    {
+        "name": "colon",
+        "id": "homo_sapiens.colon",
+        "parent": "homo_sapiens"
+    },
+    {
+        "name": "rectum",
+        "id": "homo_sapiens.rectum",
+        "parent": "homo_sapiens"
+    },
+    {
+        "name": "lung parenchyma",
+        "id": "homo_sapiens.lung_parenchyma",
+        "parent": "homo_sapiens"
+    },
+    {
+        "name": "skin of body",
+        "id": "homo_sapiens.skin_of_body",
+        "parent": "homo_sapiens"
+    },
+    {
+        "name": "shoot axis apex",
+        "id": "homo_sapiens.shoot_axis_apex",
+        "parent": "homo_sapiens"
+    },
+    {
+        "name": "skin epidermis",
+        "id": "homo_sapiens.skin_epidermis",
+        "parent": "homo_sapiens"
+    },
+    {
+        "name": "medial S shaped body cell",
+        "id": "homo_sapiens.kidney.medial_s_shaped_body_cell",
+        "parent": "homo_sapiens.kidney",
+        "value": 1
+    },
+    {
+        "name": "S shaped body",
+        "id": "homo_sapiens.kidney.s_shaped_body",
+        "parent": "homo_sapiens.kidney",
+        "value": 1
+    },
+    {
+        "name": "endothelial cell",
+        "id": "homo_sapiens.kidney.endothelial_cell",
+        "parent": "homo_sapiens.kidney",
+        "value": 1
+    },
+    {
+        "name": "proximal renal vesicle cell",
+        "id": "homo_sapiens.kidney.proximal_renal_vesicle_cell",
+        "parent": "homo_sapiens.kidney",
+        "value": 1
+    },
+    {
+        "name": "renal filtration cell",
+        "id": "homo_sapiens.kidney.renal_filtration_cell",
+        "parent": "homo_sapiens.kidney",
+        "value": 1
+    },
+    {
+        "name": "epithelial cell of proximal tubule",
+        "id": "homo_sapiens.kidney.epithelial_cell_of_proximal_tubule",
+        "parent": "homo_sapiens.kidney",
+        "value": 1
+    },
+    {
+        "name": "metanephric cap",
+        "id": "homo_sapiens.kidney.metanephric_cap",
+        "parent": "homo_sapiens.kidney",
+        "value": 1
+    },
+    {
+        "name": "connecting nephron tubules/principal cells - proximal ureteric bud",
+        "id": "homo_sapiens.kidney.connecting_nephron_tubules/principal_cells___proximal_ureteric_bud",
+        "parent": "homo_sapiens.kidney",
+        "value": 1
+    },
+    {
+        "name": "cap mesenchyme cell",
+        "id": "homo_sapiens.kidney.cap_mesenchyme_cell",
+        "parent": "homo_sapiens.kidney",
+        "value": 1
+    },
+    {
+        "name": "proliferating distal renal vesicle cell",
+        "id": "homo_sapiens.kidney.proliferating_distal_renal_vesicle_cell",
+        "parent": "homo_sapiens.kidney",
+        "value": 1
+    },
+    {
+        "name": "early kidney proxmial tubule cell",
+        "id": "homo_sapiens.kidney.early_kidney_proxmial_tubule_cell",
+        "parent": "homo_sapiens.kidney",
+        "value": 1
+    },
+    {
+        "name": "glomerular endothelial cell",
+        "id": "homo_sapiens.kidney.glomerular_endothelial_cell",
+        "parent": "homo_sapiens.kidney",
+        "value": 1
+    },
+    {
+        "name": "S-shaped body proximal precursor cell",
+        "id": "homo_sapiens.kidney.s_shaped_body_proximal_precursor_cell",
+        "parent": "homo_sapiens.kidney",
+        "value": 1
+    },
+    {
+        "name": "renal vesicle; comma-shaped body A",
+        "id": "homo_sapiens.kidney.renal_vesicle;_comma_shaped_body_a",
+        "parent": "homo_sapiens.kidney",
+        "value": 1
+    },
+    {
+        "name": "glomerular visceral epithelial cell",
+        "id": "homo_sapiens.kidney.glomerular_visceral_epithelial_cell",
+        "parent": "homo_sapiens.kidney",
+        "value": 1
+    },
+    {
+        "name": "pancreatic ductal cell",
+        "id": "homo_sapiens.pancreas.pancreatic_ductal_cell",
+        "parent": "homo_sapiens.pancreas",
+        "value": 1
+    },
+    {
+        "name": "pancreatic A cell",
+        "id": "homo_sapiens.pancreas.pancreatic_a_cell",
+        "parent": "homo_sapiens.pancreas",
+        "value": 1
+    },
+    {
+        "name": "pancreatic D cell",
+        "id": "homo_sapiens.pancreas.pancreatic_d_cell",
+        "parent": "homo_sapiens.pancreas",
+        "value": 1
+    },
+    {
+        "name": "type B pancreatic cell",
+        "id": "homo_sapiens.pancreas.type_b_pancreatic_cell",
+        "parent": "homo_sapiens.pancreas",
+        "value": 1
+    },
+    {
+        "name": "pancreatic PP cell",
+        "id": "homo_sapiens.pancreas.pancreatic_pp_cell",
+        "parent": "homo_sapiens.pancreas",
+        "value": 1
+    },
+    {
+        "name": "mesenchymal cell",
+        "id": "homo_sapiens.pancreas.mesenchymal_cell",
+        "parent": "homo_sapiens.pancreas",
+        "value": 1
+    },
+    {
+        "name": "acinar cell",
+        "id": "homo_sapiens.pancreas.acinar_cell",
+        "parent": "homo_sapiens.pancreas",
+        "value": 1
+    },
+    {
+        "name": "ductal cell",
+        "id": "homo_sapiens.pancreas.ductal_cell",
+        "parent": "homo_sapiens.pancreas",
+        "value": 1
+    },
+    {
+        "name": "alpha cell",
+        "id": "homo_sapiens.pancreas.alpha_cell",
+        "parent": "homo_sapiens.pancreas",
+        "value": 1
+    },
+    {
+        "name": "gamma cell",
+        "id": "homo_sapiens.pancreas.gamma_cell",
+        "parent": "homo_sapiens.pancreas",
+        "value": 1
+    },
+    {
+        "name": "beta cell",
+        "id": "homo_sapiens.pancreas.beta_cell",
+        "parent": "homo_sapiens.pancreas",
+        "value": 1
+    },
+    {
+        "name": "delta cell",
+        "id": "homo_sapiens.pancreas.delta_cell",
+        "parent": "homo_sapiens.pancreas",
+        "value": 1
+    },
+    {
+        "name": "unclassified endocrine cell",
+        "id": "homo_sapiens.pancreas.unclassified_endocrine_cell",
+        "parent": "homo_sapiens.pancreas",
+        "value": 1
+    },
+    {
+        "name": "mast cell",
+        "id": "homo_sapiens.pancreas.mast_cell",
+        "parent": "homo_sapiens.pancreas",
+        "value": 1
+    },
+    {
+        "name": "pancreatic endocrine cell",
+        "id": "homo_sapiens.pancreas.pancreatic_endocrine_cell",
+        "parent": "homo_sapiens.pancreas",
+        "value": 1
+    },
+    {
+        "name": "co-expression cell",
+        "id": "homo_sapiens.pancreas.co_expression_cell",
+        "parent": "homo_sapiens.pancreas",
+        "value": 1
+    },
+    {
+        "name": "PSC cell",
+        "id": "homo_sapiens.pancreas.psc_cell",
+        "parent": "homo_sapiens.pancreas",
+        "value": 1
+    },
+    {
+        "name": "epsilon cell",
+        "id": "homo_sapiens.pancreas.epsilon_cell",
+        "parent": "homo_sapiens.pancreas",
+        "value": 1
+    },
+    {
+        "name": "endothelial cell",
+        "id": "homo_sapiens.pancreas.endothelial_cell",
+        "parent": "homo_sapiens.pancreas",
+        "value": 1
+    },
+    {
+        "name": "pancreatic epsilon cell",
+        "id": "homo_sapiens.pancreas.pancreatic_epsilon_cell",
+        "parent": "homo_sapiens.pancreas",
+        "value": 1
+    },
+    {
+        "name": "pancreatic stellate cell",
+        "id": "homo_sapiens.pancreas.pancreatic_stellate_cell",
+        "parent": "homo_sapiens.pancreas",
+        "value": 1
+    },
+    {
+        "name": "professional antigen presenting cell",
+        "id": "homo_sapiens.pancreas.professional_antigen_presenting_cell",
+        "parent": "homo_sapiens.pancreas",
+        "value": 1
+    },
+    {
+        "name": "pancreatic B cell",
+        "id": "homo_sapiens.pancreas.pancreatic_b_cell",
+        "parent": "homo_sapiens.pancreas",
+        "value": 1
+    },
+    {
+        "name": "undefined",
+        "id": "homo_sapiens.pancreas.undefined",
+        "parent": "homo_sapiens.pancreas",
+        "value": 1
+    },
+    {
+        "name": "pancreatic acinar cell",
+        "id": "homo_sapiens.pancreas.pancreatic_acinar_cell",
+        "parent": "homo_sapiens.pancreas",
+        "value": 1
+    },
+    {
+        "name": "decidual macrophage (dM1)",
+        "id": "homo_sapiens.decidua.decidual_macrophage_(dm1)",
+        "parent": "homo_sapiens.decidua",
+        "value": 1
+    },
+    {
+        "name": "T cell",
+        "id": "homo_sapiens.decidua.t_cell",
+        "parent": "homo_sapiens.decidua",
+        "value": 1
+    },
+    {
+        "name": "decidual macrophage (dM2)",
+        "id": "homo_sapiens.decidua.decidual_macrophage_(dm2)",
+        "parent": "homo_sapiens.decidua",
+        "value": 1
+    },
+    {
+        "name": "decidual cell",
+        "id": "homo_sapiens.decidua.decidual_cell",
+        "parent": "homo_sapiens.decidua",
+        "value": 1
+    },
+    {
+        "name": "uterine endothelial cell",
+        "id": "homo_sapiens.decidua.uterine_endothelial_cell",
+        "parent": "homo_sapiens.decidua",
+        "value": 1
+    },
+    {
+        "name": "cytotrophoblast",
+        "id": "homo_sapiens.decidua.cytotrophoblast",
+        "parent": "homo_sapiens.decidua",
+        "value": 1
+    },
+    {
+        "name": "macrophage",
+        "id": "homo_sapiens.decidua.macrophage",
+        "parent": "homo_sapiens.decidua",
+        "value": 1
+    },
+    {
+        "name": "decidual stromal cell (dS1)",
+        "id": "homo_sapiens.decidua.decidual_stromal_cell_(ds1)",
+        "parent": "homo_sapiens.decidua",
+        "value": 1
+    },
+    {
+        "name": "decidual natural killer cell (dNK2)",
+        "id": "homo_sapiens.decidua.decidual_natural_killer_cell_(dnk2)",
+        "parent": "homo_sapiens.decidua",
+        "value": 1
+    },
+    {
+        "name": "decidual natural killer cell (dNK1)",
+        "id": "homo_sapiens.decidua.decidual_natural_killer_cell_(dnk1)",
+        "parent": "homo_sapiens.decidua",
+        "value": 1
+    },
+    {
+        "name": "decidual natural killer cell (dNK3)",
+        "id": "homo_sapiens.decidua.decidual_natural_killer_cell_(dnk3)",
+        "parent": "homo_sapiens.decidua",
+        "value": 1
+    },
+    {
+        "name": "Hofbauer cell (HB)",
+        "id": "homo_sapiens.decidua.hofbauer_cell_(hb)",
+        "parent": "homo_sapiens.decidua",
+        "value": 1
+    },
+    {
+        "name": "decidual natural killer cell",
+        "id": "homo_sapiens.decidua.decidual_natural_killer_cell",
+        "parent": "homo_sapiens.decidua",
+        "value": 1
+    },
+    {
+        "name": "placental extravillous trophoblast cell (EVT)",
+        "id": "homo_sapiens.decidua.placental_extravillous_trophoblast_cell_(evt)",
+        "parent": "homo_sapiens.decidua",
+        "value": 1
+    },
+    {
+        "name": "decidual stromal cell (dS2)",
+        "id": "homo_sapiens.decidua.decidual_stromal_cell_(ds2)",
+        "parent": "homo_sapiens.decidua",
+        "value": 1
+    },
+    {
+        "name": "innate lymphoid cell (ILC3)",
+        "id": "homo_sapiens.decidua.innate_lymphoid_cell_(ilc3)",
+        "parent": "homo_sapiens.decidua",
+        "value": 1
+    },
+    {
+        "name": "CD16-positive natural killer cell (NK CD16+)",
+        "id": "homo_sapiens.decidua.cd16_positive_natural_killer_cell_(nk_cd16+)",
+        "parent": "homo_sapiens.decidua",
+        "value": 1
+    },
+    {
+        "name": "maternal endothelial cell (Endo m)",
+        "id": "homo_sapiens.decidua.maternal_endothelial_cell_(endo_m)",
+        "parent": "homo_sapiens.decidua",
+        "value": 1
+    },
+    {
+        "name": "natural killer cell",
+        "id": "homo_sapiens.decidua.natural_killer_cell",
+        "parent": "homo_sapiens.decidua",
+        "value": 1
+    },
+    {
+        "name": "proliferating decidual natural killer cell (dNK p)",
+        "id": "homo_sapiens.decidua.proliferating_decidual_natural_killer_cell_(dnk_p)",
+        "parent": "homo_sapiens.decidua",
+        "value": 1
+    },
+    {
+        "name": "extravillous trophoblast",
+        "id": "homo_sapiens.decidua.extravillous_trophoblast",
+        "parent": "homo_sapiens.decidua",
+        "value": 1
+    },
+    {
+        "name": "villous cytotrophoblast (VCT)",
+        "id": "homo_sapiens.decidua.villous_cytotrophoblast_(vct)",
+        "parent": "homo_sapiens.decidua",
+        "value": 1
+    },
+    {
+        "name": "conventional dendritic cell (DC1)",
+        "id": "homo_sapiens.decidua.conventional_dendritic_cell_(dc1)",
+        "parent": "homo_sapiens.decidua",
+        "value": 1
+    },
+    {
+        "name": "granulocyte",
+        "id": "homo_sapiens.decidua.granulocyte",
+        "parent": "homo_sapiens.decidua",
+        "value": 1
+    },
+    {
+        "name": "decidual perivascular cell (dP2)",
+        "id": "homo_sapiens.decidua.decidual_perivascular_cell_(dp2)",
+        "parent": "homo_sapiens.decidua",
+        "value": 1
+    },
+    {
+        "name": "fetal fibroblast (fFB1)",
+        "id": "homo_sapiens.decidua.fetal_fibroblast_(ffb1)",
+        "parent": "homo_sapiens.decidua",
+        "value": 1
+    },
+    {
+        "name": "fetal fibroblast",
+        "id": "homo_sapiens.decidua.fetal_fibroblast",
+        "parent": "homo_sapiens.decidua",
+        "value": 1
+    },
+    {
+        "name": "syncytiotrophoblast cell (SCT)",
+        "id": "homo_sapiens.decidua.syncytiotrophoblast_cell_(sct)",
+        "parent": "homo_sapiens.decidua",
+        "value": 1
+    },
+    {
+        "name": "decidual perivascular cell (dP1)",
+        "id": "homo_sapiens.decidua.decidual_perivascular_cell_(dp1)",
+        "parent": "homo_sapiens.decidua",
+        "value": 1
+    },
+    {
+        "name": "glandular epithelial cell (Epi2)",
+        "id": "homo_sapiens.decidua.glandular_epithelial_cell_(epi2)",
+        "parent": "homo_sapiens.decidua",
+        "value": 1
+    },
+    {
+        "name": "Hofbauer cell",
+        "id": "homo_sapiens.decidua.hofbauer_cell",
+        "parent": "homo_sapiens.decidua",
+        "value": 1
+    },
+    {
+        "name": "uterine perivascular cell",
+        "id": "homo_sapiens.decidua.uterine_perivascular_cell",
+        "parent": "homo_sapiens.decidua",
+        "value": 1
+    },
+    {
+        "name": "plasma cell",
+        "id": "homo_sapiens.decidua.plasma_cell",
+        "parent": "homo_sapiens.decidua",
+        "value": 1
+    },
+    {
+        "name": "endometrial glandular epithelial cell",
+        "id": "homo_sapiens.decidua.endometrial_glandular_epithelial_cell",
+        "parent": "homo_sapiens.decidua",
+        "value": 1
+    },
+    {
+        "name": "decidual stromal cell (dS3)",
+        "id": "homo_sapiens.decidua.decidual_stromal_cell_(ds3)",
+        "parent": "homo_sapiens.decidua",
+        "value": 1
+    },
+    {
+        "name": "innate lymphoid cell",
+        "id": "homo_sapiens.decidua.innate_lymphoid_cell",
+        "parent": "homo_sapiens.decidua",
+        "value": 1
+    },
+    {
+        "name": "monocyte",
+        "id": "homo_sapiens.blood.monocyte",
+        "parent": "homo_sapiens.blood",
+        "value": 1
+    },
+    {
+        "name": "plasma cell",
+        "id": "homo_sapiens.blood.plasma_cell",
+        "parent": "homo_sapiens.blood",
+        "value": 1
+    },
+    {
+        "name": "T cell",
+        "id": "homo_sapiens.blood.t_cell",
+        "parent": "homo_sapiens.blood",
+        "value": 1
+    },
+    {
+        "name": "plasmacytoid dendritic cell",
+        "id": "homo_sapiens.blood.plasmacytoid_dendritic_cell",
+        "parent": "homo_sapiens.blood",
+        "value": 1
+    },
+    {
+        "name": "CD16-positive natural killer cell (NK CD16+)",
+        "id": "homo_sapiens.blood.cd16_positive_natural_killer_cell_(nk_cd16+)",
+        "parent": "homo_sapiens.blood",
+        "value": 1
+    },
+    {
+        "name": "CD16-negative natural killer cell (NK CD16-)",
+        "id": "homo_sapiens.blood.cd16_negative_natural_killer_cell_(nk_cd16_)",
+        "parent": "homo_sapiens.blood",
+        "value": 1
+    },
+    {
+        "name": "cytotrophoblast",
+        "id": "homo_sapiens.blood.cytotrophoblast",
+        "parent": "homo_sapiens.blood",
+        "value": 1
+    },
+    {
+        "name": "plasmacytoid dendritic cell (DC2)",
+        "id": "homo_sapiens.blood.plasmacytoid_dendritic_cell_(dc2)",
+        "parent": "homo_sapiens.blood",
+        "value": 1
+    },
+    {
+        "name": "natural killer cell",
+        "id": "homo_sapiens.blood.natural_killer_cell",
+        "parent": "homo_sapiens.blood",
+        "value": 1
+    },
+    {
+        "name": "granulocyte",
+        "id": "homo_sapiens.blood.granulocyte",
+        "parent": "homo_sapiens.blood",
+        "value": 1
+    },
+    {
+        "name": "villous cytotrophoblast (VCT)",
+        "id": "homo_sapiens.blood.villous_cytotrophoblast_(vct)",
+        "parent": "homo_sapiens.blood",
+        "value": 1
+    },
+    {
+        "name": "fetal fibroblast (fFB1)",
+        "id": "homo_sapiens.placenta.fetal_fibroblast_(ffb1)",
+        "parent": "homo_sapiens.placenta",
+        "value": 1
+    },
+    {
+        "name": "fetal fibroblast",
+        "id": "homo_sapiens.placenta.fetal_fibroblast",
+        "parent": "homo_sapiens.placenta",
+        "value": 1
+    },
+    {
+        "name": "glandular epithelial cell (Epi2)",
+        "id": "homo_sapiens.placenta.glandular_epithelial_cell_(epi2)",
+        "parent": "homo_sapiens.placenta",
+        "value": 1
+    },
+    {
+        "name": "SA-b",
+        "id": "homo_sapiens.ascitic_fluid.sa_b",
+        "parent": "homo_sapiens.ascitic_fluid",
+        "value": 1
+    },
+    {
+        "name": "stromal cell",
+        "id": "homo_sapiens.ascitic_fluid.stromal_cell",
+        "parent": "homo_sapiens.ascitic_fluid",
+        "value": 1
+    },
+    {
+        "name": "SB",
+        "id": "homo_sapiens.ascitic_fluid.sb",
+        "parent": "homo_sapiens.ascitic_fluid",
+        "value": 1
+    },
+    {
+        "name": "SA-a",
+        "id": "homo_sapiens.ascitic_fluid.sa_a",
+        "parent": "homo_sapiens.ascitic_fluid",
+        "value": 1
+    },
+    {
+        "name": "neoplastic cell",
+        "id": "homo_sapiens.ascitic_fluid.neoplastic_cell",
+        "parent": "homo_sapiens.ascitic_fluid",
+        "value": 1
+    },
+    {
+        "name": "TA-a",
+        "id": "homo_sapiens.ascitic_fluid.ta_a",
+        "parent": "homo_sapiens.ascitic_fluid",
+        "value": 1
+    },
+    {
+        "name": "TA-b",
+        "id": "homo_sapiens.ascitic_fluid.ta_b",
+        "parent": "homo_sapiens.ascitic_fluid",
+        "value": 1
+    },
+    {
+        "name": "cycling multipotent progenitor cell",
+        "id": "homo_sapiens.bone_marrow.cycling_multipotent_progenitor_cell",
+        "parent": "homo_sapiens.bone_marrow",
+        "value": 1
+    },
+    {
+        "name": "granulocyte monocyte progenitor cell",
+        "id": "homo_sapiens.bone_marrow.granulocyte_monocyte_progenitor_cell",
+        "parent": "homo_sapiens.bone_marrow",
+        "value": 1
+    },
+    {
+        "name": "multipotent progenitor cell",
+        "id": "homo_sapiens.bone_marrow.multipotent_progenitor_cell",
+        "parent": "homo_sapiens.bone_marrow",
+        "value": 1
+    },
+    {
+        "name": "granulocyte progenitor",
+        "id": "homo_sapiens.bone_marrow.granulocyte_progenitor",
+        "parent": "homo_sapiens.bone_marrow",
+        "value": 1
+    },
+    {
+        "name": "CD4-positive monocyte",
+        "id": "homo_sapiens.bone_marrow.cd4_positive_monocyte",
+        "parent": "homo_sapiens.bone_marrow",
+        "value": 1
+    },
+    {
+        "name": "mast cell",
+        "id": "homo_sapiens.bone_marrow.mast_cell",
+        "parent": "homo_sapiens.bone_marrow",
+        "value": 1
+    },
+    {
+        "name": "pro-B cell",
+        "id": "homo_sapiens.bone_marrow.pro_b_cell",
+        "parent": "homo_sapiens.bone_marrow",
+        "value": 1
+    },
+    {
+        "name": "natural killer cell",
+        "id": "homo_sapiens.bone_marrow.natural_killer_cell",
+        "parent": "homo_sapiens.bone_marrow",
+        "value": 1
+    },
+    {
+        "name": "precursor B cell",
+        "id": "homo_sapiens.bone_marrow.precursor_b_cell",
+        "parent": "homo_sapiens.bone_marrow",
+        "value": 1
+    },
+    {
+        "name": "dendritic cell",
+        "id": "homo_sapiens.bone_marrow.dendritic_cell",
+        "parent": "homo_sapiens.bone_marrow",
+        "value": 1
+    },
+    {
+        "name": "granulocyte 1",
+        "id": "homo_sapiens.bone_marrow.granulocyte_1",
+        "parent": "homo_sapiens.bone_marrow",
+        "value": 1
+    },
+    {
+        "name": "granulocyte 3",
+        "id": "homo_sapiens.bone_marrow.granulocyte_3",
+        "parent": "homo_sapiens.bone_marrow",
+        "value": 1
+    },
+    {
+        "name": "progenitor cell",
+        "id": "homo_sapiens.bone_marrow.progenitor_cell",
+        "parent": "homo_sapiens.bone_marrow",
+        "value": 1
+    },
+    {
+        "name": "endothelial cell",
+        "id": "homo_sapiens.bone_marrow.endothelial_cell",
+        "parent": "homo_sapiens.bone_marrow",
+        "value": 1
+    },
+    {
+        "name": "hematopoietic multipotent progenitor cell",
+        "id": "homo_sapiens.bone_marrow.hematopoietic_multipotent_progenitor_cell",
+        "parent": "homo_sapiens.bone_marrow",
+        "value": 1
+    },
+    {
+        "name": "megakaryocyte",
+        "id": "homo_sapiens.bone_marrow.megakaryocyte",
+        "parent": "homo_sapiens.bone_marrow",
+        "value": 1
+    },
+    {
+        "name": "cycling dendritic cell",
+        "id": "homo_sapiens.bone_marrow.cycling_dendritic_cell",
+        "parent": "homo_sapiens.bone_marrow",
+        "value": 1
+    },
+    {
+        "name": "granulocyte",
+        "id": "homo_sapiens.bone_marrow.granulocyte",
+        "parent": "homo_sapiens.bone_marrow",
+        "value": 1
+    },
+    {
+        "name": "committed progenitor",
+        "id": "homo_sapiens.bone_marrow.committed_progenitor",
+        "parent": "homo_sapiens.bone_marrow",
+        "value": 1
+    },
+    {
+        "name": "granulocyte 2",
+        "id": "homo_sapiens.bone_marrow.granulocyte_2",
+        "parent": "homo_sapiens.bone_marrow",
+        "value": 1
+    },
+    {
+        "name": "cycling committed progenitor",
+        "id": "homo_sapiens.bone_marrow.cycling_committed_progenitor",
+        "parent": "homo_sapiens.bone_marrow",
+        "value": 1
+    },
+    {
+        "name": "unspecified",
+        "id": "homo_sapiens.bone_marrow.unspecified",
+        "parent": "homo_sapiens.bone_marrow",
+        "value": 1
+    },
+    {
+        "name": "mature B cell",
+        "id": "homo_sapiens.bone_marrow.mature_b_cell",
+        "parent": "homo_sapiens.bone_marrow",
+        "value": 1
+    },
+    {
+        "name": "monocyte 1",
+        "id": "homo_sapiens.bone_marrow.monocyte_1",
+        "parent": "homo_sapiens.bone_marrow",
+        "value": 1
+    },
+    {
+        "name": "erythroid progenitor cell",
+        "id": "homo_sapiens.bone_marrow.erythroid_progenitor_cell",
+        "parent": "homo_sapiens.bone_marrow",
+        "value": 1
+    },
+    {
+        "name": "monocyte",
+        "id": "homo_sapiens.bone_marrow.monocyte",
+        "parent": "homo_sapiens.bone_marrow",
+        "value": 1
+    },
+    {
+        "name": "monocyte 2",
+        "id": "homo_sapiens.bone_marrow.monocyte_2",
+        "parent": "homo_sapiens.bone_marrow",
+        "value": 1
+    },
+    {
+        "name": "hematopoietic multipotent progenitor",
+        "id": "homo_sapiens.bone_marrow.hematopoietic_multipotent_progenitor",
+        "parent": "homo_sapiens.bone_marrow",
+        "value": 1
+    },
+    {
+        "name": "erythroid progenitor",
+        "id": "homo_sapiens.bone_marrow.erythroid_progenitor",
+        "parent": "homo_sapiens.bone_marrow",
+        "value": 1
+    },
+    {
+        "name": "common lymphoid progenitor",
+        "id": "homo_sapiens.bone_marrow.common_lymphoid_progenitor",
+        "parent": "homo_sapiens.bone_marrow",
+        "value": 1
+    },
+    {
+        "name": "common dendritic progenitor",
+        "id": "homo_sapiens.bone_marrow.common_dendritic_progenitor",
+        "parent": "homo_sapiens.bone_marrow",
+        "value": 1
+    },
+    {
+        "name": "megakaryocyte",
+        "id": "homo_sapiens.liver.megakaryocyte",
+        "parent": "homo_sapiens.liver",
+        "value": 1
+    },
+    {
+        "name": "progenitor cell",
+        "id": "homo_sapiens.liver.progenitor_cell",
+        "parent": "homo_sapiens.liver",
+        "value": 1
+    },
+    {
+        "name": "hematopoietic multipotent progenitor cell",
+        "id": "homo_sapiens.liver.hematopoietic_multipotent_progenitor_cell",
+        "parent": "homo_sapiens.liver",
+        "value": 1
+    },
+    {
+        "name": "erythroid progenitor cell",
+        "id": "homo_sapiens.liver.erythroid_progenitor_cell",
+        "parent": "homo_sapiens.liver",
+        "value": 1
+    },
+    {
+        "name": "granulocyte 1",
+        "id": "homo_sapiens.liver.granulocyte_1",
+        "parent": "homo_sapiens.liver",
+        "value": 1
+    },
+    {
+        "name": "precursor B cell",
+        "id": "homo_sapiens.liver.precursor_b_cell",
+        "parent": "homo_sapiens.liver",
+        "value": 1
+    },
+    {
+        "name": "pro-B cell",
+        "id": "homo_sapiens.liver.pro_b_cell",
+        "parent": "homo_sapiens.liver",
+        "value": 1
+    },
+    {
+        "name": "cycling dendritic cell",
+        "id": "homo_sapiens.liver.cycling_dendritic_cell",
+        "parent": "homo_sapiens.liver",
+        "value": 1
+    },
+    {
+        "name": "committed progenitor",
+        "id": "homo_sapiens.liver.committed_progenitor",
+        "parent": "homo_sapiens.liver",
+        "value": 1
+    },
+    {
+        "name": "cycling committed progenitor",
+        "id": "homo_sapiens.liver.cycling_committed_progenitor",
+        "parent": "homo_sapiens.liver",
+        "value": 1
+    },
+    {
+        "name": "granulocyte monocyte progenitor cell",
+        "id": "homo_sapiens.liver.granulocyte_monocyte_progenitor_cell",
+        "parent": "homo_sapiens.liver",
+        "value": 1
+    },
+    {
+        "name": "multipotent progenitor cell",
+        "id": "homo_sapiens.liver.multipotent_progenitor_cell",
+        "parent": "homo_sapiens.liver",
+        "value": 1
+    },
+    {
+        "name": "granulocyte progenitor",
+        "id": "homo_sapiens.liver.granulocyte_progenitor",
+        "parent": "homo_sapiens.liver",
+        "value": 1
+    },
+    {
+        "name": "mast cell",
+        "id": "homo_sapiens.liver.mast_cell",
+        "parent": "homo_sapiens.liver",
+        "value": 1
+    },
+    {
+        "name": "CD4-positive monocyte",
+        "id": "homo_sapiens.liver.cd4_positive_monocyte",
+        "parent": "homo_sapiens.liver",
+        "value": 1
+    },
+    {
+        "name": "dendritic cell",
+        "id": "homo_sapiens.liver.dendritic_cell",
+        "parent": "homo_sapiens.liver",
+        "value": 1
+    },
+    {
+        "name": "endothelial cell",
+        "id": "homo_sapiens.liver.endothelial_cell",
+        "parent": "homo_sapiens.liver",
+        "value": 1
+    },
+    {
+        "name": "cycling multipotent progenitor cell",
+        "id": "homo_sapiens.liver.cycling_multipotent_progenitor_cell",
+        "parent": "homo_sapiens.liver",
+        "value": 1
+    },
+    {
+        "name": "unspecified",
+        "id": "homo_sapiens.liver.unspecified",
+        "parent": "homo_sapiens.liver",
+        "value": 1
+    },
+    {
+        "name": "granulocyte",
+        "id": "homo_sapiens.liver.granulocyte",
+        "parent": "homo_sapiens.liver",
+        "value": 1
+    },
+    {
+        "name": "mature B cell",
+        "id": "homo_sapiens.liver.mature_b_cell",
+        "parent": "homo_sapiens.liver",
+        "value": 1
+    },
+    {
+        "name": "monocyte 2",
+        "id": "homo_sapiens.liver.monocyte_2",
+        "parent": "homo_sapiens.liver",
+        "value": 1
+    },
+    {
+        "name": "monocyte 1",
+        "id": "homo_sapiens.liver.monocyte_1",
+        "parent": "homo_sapiens.liver",
+        "value": 1
+    },
+    {
+        "name": "natural killer cell",
+        "id": "homo_sapiens.liver.natural_killer_cell",
+        "parent": "homo_sapiens.liver",
+        "value": 1
+    },
+    {
+        "name": "monocyte",
+        "id": "homo_sapiens.liver.monocyte",
+        "parent": "homo_sapiens.liver",
+        "value": 1
+    },
+    {
+        "name": "granulocyte 2",
+        "id": "homo_sapiens.liver.granulocyte_2",
+        "parent": "homo_sapiens.liver",
+        "value": 1
+    },
+    {
+        "name": "cholangiocyte",
+        "id": "homo_sapiens.liver.cholangiocyte",
+        "parent": "homo_sapiens.liver",
+        "value": 1
+    },
+    {
+        "name": "hepatocyte",
+        "id": "homo_sapiens.liver.hepatocyte",
+        "parent": "homo_sapiens.liver",
+        "value": 1
+    },
+    {
+        "name": "epithelial cell of esophagus",
+        "id": "homo_sapiens.oesophagus.epithelial_cell_of_esophagus",
+        "parent": "homo_sapiens.oesophagus",
+        "value": 1
+    },
+    {
+        "name": "upper epithelial cell",
+        "id": "homo_sapiens.oesophagus.upper_epithelial_cell",
+        "parent": "homo_sapiens.oesophagus",
+        "value": 1
+    },
+    {
+        "name": "suprabasal epithelial cell",
+        "id": "homo_sapiens.oesophagus.suprabasal_epithelial_cell",
+        "parent": "homo_sapiens.oesophagus",
+        "value": 1
+    },
+    {
+        "name": "stratified epithelial cell",
+        "id": "homo_sapiens.oesophagus.stratified_epithelial_cell",
+        "parent": "homo_sapiens.oesophagus",
+        "value": 1
+    },
+    {
+        "name": "dividing epithelial cell",
+        "id": "homo_sapiens.oesophagus.dividing_epithelial_cell",
+        "parent": "homo_sapiens.oesophagus",
+        "value": 1
+    },
+    {
+        "name": "epithelial cell of stratum germinativum of esophagus",
+        "id": "homo_sapiens.oesophagus.epithelial_cell_of_stratum_germinativum_of_esophagus",
+        "parent": "homo_sapiens.oesophagus",
+        "value": 1
+    },
+    {
+        "name": "submucosal gland mucous cell",
+        "id": "homo_sapiens.oesophagus.submucosal_gland_mucous_cell",
+        "parent": "homo_sapiens.oesophagus",
+        "value": 1
+    },
+    {
+        "name": "submocosal esophageal gland",
+        "id": "homo_sapiens.oesophagus.submocosal_esophageal_gland",
+        "parent": "homo_sapiens.oesophagus",
+        "value": 1
+    },
+    {
+        "name": "basal epithelial cell",
+        "id": "homo_sapiens.oesophagus.basal_epithelial_cell",
+        "parent": "homo_sapiens.oesophagus",
+        "value": 1
+    },
+    {
+        "name": "submucosal gland duct cell",
+        "id": "homo_sapiens.oesophagus.submucosal_gland_duct_cell",
+        "parent": "homo_sapiens.oesophagus",
+        "value": 1
+    },
+    {
+        "name": "type II pneumocyte",
+        "id": "homo_sapiens.lung.type_ii_pneumocyte",
+        "parent": "homo_sapiens.lung",
+        "value": 1
+    },
+    {
+        "name": "alveolar epithelial cell type 2",
+        "id": "homo_sapiens.lung.alveolar_epithelial_cell_type_2",
+        "parent": "homo_sapiens.lung",
+        "value": 1
+    },
+    {
+        "name": "CD8-positive, alpha-beta cytotoxic T cell",
+        "id": "homo_sapiens.lung.cd8_positive,_alpha_beta_cytotoxic_t_cell",
+        "parent": "homo_sapiens.lung",
+        "value": 1
+    },
+    {
+        "name": "alveolar epithelial cell type 1",
+        "id": "homo_sapiens.lung.alveolar_epithelial_cell_type_1",
+        "parent": "homo_sapiens.lung",
+        "value": 1
+    },
+    {
+        "name": "type I pneumocyte",
+        "id": "homo_sapiens.lung.type_i_pneumocyte",
+        "parent": "homo_sapiens.lung",
+        "value": 1
+    },
+    {
+        "name": "CD8+ cytotoxic T cell",
+        "id": "homo_sapiens.lung.cd8+_cytotoxic_t_cell",
+        "parent": "homo_sapiens.lung",
+        "value": 1
+    },
+    {
+        "name": "muscle cell",
+        "id": "homo_sapiens.lung.muscle_cell",
+        "parent": "homo_sapiens.lung",
+        "value": 1
+    },
+    {
+        "name": "monocyte",
+        "id": "homo_sapiens.lung.monocyte",
+        "parent": "homo_sapiens.lung",
+        "value": 1
+    },
+    {
+        "name": "ciliated cell",
+        "id": "homo_sapiens.lung.ciliated_cell",
+        "parent": "homo_sapiens.lung",
+        "value": 1
+    },
+    {
+        "name": "lung ciliated cell",
+        "id": "homo_sapiens.lung.lung_ciliated_cell",
+        "parent": "homo_sapiens.lung",
+        "value": 1
+    },
+    {
+        "name": "fibroblast of lung",
+        "id": "homo_sapiens.lung.fibroblast_of_lung",
+        "parent": "homo_sapiens.lung",
+        "value": 1
+    },
+    {
+        "name": "respiratory system blood vessel",
+        "id": "homo_sapiens.lung.respiratory_system_blood_vessel",
+        "parent": "homo_sapiens.lung",
+        "value": 1
+    },
+    {
+        "name": "fibroblast",
+        "id": "homo_sapiens.lung.fibroblast",
+        "parent": "homo_sapiens.lung",
+        "value": 1
+    },
+    {
+        "name": "respiratory system lymphatic vessel",
+        "id": "homo_sapiens.lung.respiratory_system_lymphatic_vessel",
+        "parent": "homo_sapiens.lung",
+        "value": 1
+    },
+    {
+        "name": "CD4+ T cell",
+        "id": "homo_sapiens.lung.cd4+_t_cell",
+        "parent": "homo_sapiens.lung",
+        "value": 1
+    },
+    {
+        "name": "mast cell",
+        "id": "homo_sapiens.lung.mast_cell",
+        "parent": "homo_sapiens.lung",
+        "value": 1
+    },
+    {
+        "name": "blood vessel cell",
+        "id": "homo_sapiens.lung.blood_vessel_cell",
+        "parent": "homo_sapiens.lung",
+        "value": 1
+    },
+    {
+        "name": "consensus molecular subtype 3",
+        "id": "homo_sapiens.caecum.consensus_molecular_subtype_3",
+        "parent": "homo_sapiens.caecum",
+        "value": 1
+    },
+    {
+        "name": "consensus molecular subtype 1 epithelial cell",
+        "id": "homo_sapiens.caecum.consensus_molecular_subtype_1_epithelial_cell",
+        "parent": "homo_sapiens.caecum",
+        "value": 1
+    },
+    {
+        "name": "consensus molecular subtype 1",
+        "id": "homo_sapiens.caecum.consensus_molecular_subtype_1",
+        "parent": "homo_sapiens.caecum",
+        "value": 1
+    },
+    {
+        "name": "smooth muscle cell of large intestine",
+        "id": "homo_sapiens.caecum.smooth_muscle_cell_of_large_intestine",
+        "parent": "homo_sapiens.caecum",
+        "value": 1
+    },
+    {
+        "name": "consensus molecular subtype 3 epithelial cell",
+        "id": "homo_sapiens.caecum.consensus_molecular_subtype_3_epithelial_cell",
+        "parent": "homo_sapiens.caecum",
+        "value": 1
+    },
+    {
+        "name": "epithelial cell",
+        "id": "homo_sapiens.caecum.epithelial_cell",
+        "parent": "homo_sapiens.caecum",
+        "value": 1
+    },
+    {
+        "name": "epithelial cell of large intestine",
+        "id": "homo_sapiens.caecum.epithelial_cell_of_large_intestine",
+        "parent": "homo_sapiens.caecum",
+        "value": 1
+    },
+    {
+        "name": "stem-like/transit amplifying epithelial cell",
+        "id": "homo_sapiens.caecum.stem_like/transit_amplifying_epithelial_cell",
+        "parent": "homo_sapiens.caecum",
+        "value": 1
+    },
+    {
+        "name": "goblet cell",
+        "id": "homo_sapiens.caecum.goblet_cell",
+        "parent": "homo_sapiens.caecum",
+        "value": 1
+    },
+    {
+        "name": "IgA plasma cell",
+        "id": "homo_sapiens.caecum.iga_plasma_cell",
+        "parent": "homo_sapiens.caecum",
+        "value": 1
+    },
+    {
+        "name": "enterocyte of epithelium of large intestine",
+        "id": "homo_sapiens.caecum.enterocyte_of_epithelium_of_large_intestine",
+        "parent": "homo_sapiens.caecum",
+        "value": 1
+    },
+    {
+        "name": "stromal 3",
+        "id": "homo_sapiens.caecum.stromal_3",
+        "parent": "homo_sapiens.caecum",
+        "value": 1
+    },
+    {
+        "name": "stromal cell",
+        "id": "homo_sapiens.caecum.stromal_cell",
+        "parent": "homo_sapiens.caecum",
+        "value": 1
+    },
+    {
+        "name": "mature enterocyte",
+        "id": "homo_sapiens.caecum.mature_enterocyte",
+        "parent": "homo_sapiens.caecum",
+        "value": 1
+    },
+    {
+        "name": "consensus molecular subtype 2",
+        "id": "homo_sapiens.rectosigmoid_junction.consensus_molecular_subtype_2",
+        "parent": "homo_sapiens.rectosigmoid_junction",
+        "value": 1
+    },
+    {
+        "name": "IgA+ plasma cell",
+        "id": "homo_sapiens.rectosigmoid_junction.iga+_plasma_cell",
+        "parent": "homo_sapiens.rectosigmoid_junction",
+        "value": 1
+    },
+    {
+        "name": "consensus molecular subtype 2 epithelial cell",
+        "id": "homo_sapiens.rectosigmoid_junction.consensus_molecular_subtype_2_epithelial_cell",
+        "parent": "homo_sapiens.rectosigmoid_junction",
+        "value": 1
+    },
+    {
+        "name": "myeloid cell",
+        "id": "homo_sapiens.rectosigmoid_junction.myeloid_cell",
+        "parent": "homo_sapiens.rectosigmoid_junction",
+        "value": 1
+    },
+    {
+        "name": "consensus molecular subtype 3",
+        "id": "homo_sapiens.rectosigmoid_junction.consensus_molecular_subtype_3",
+        "parent": "homo_sapiens.rectosigmoid_junction",
+        "value": 1
+    },
+    {
+        "name": "myofibroblast",
+        "id": "homo_sapiens.rectosigmoid_junction.myofibroblast",
+        "parent": "homo_sapiens.rectosigmoid_junction",
+        "value": 1
+    },
+    {
+        "name": "regulatory T cell",
+        "id": "homo_sapiens.rectosigmoid_junction.regulatory_t_cell",
+        "parent": "homo_sapiens.rectosigmoid_junction",
+        "value": 1
+    },
+    {
+        "name": "epithelial cell of large intestine",
+        "id": "homo_sapiens.rectosigmoid_junction.epithelial_cell_of_large_intestine",
+        "parent": "homo_sapiens.rectosigmoid_junction",
+        "value": 1
+    },
+    {
+        "name": "epithelial cell",
+        "id": "homo_sapiens.rectosigmoid_junction.epithelial_cell",
+        "parent": "homo_sapiens.rectosigmoid_junction",
+        "value": 1
+    },
+    {
+        "name": "stromal cell",
+        "id": "homo_sapiens.rectosigmoid_junction.stromal_cell",
+        "parent": "homo_sapiens.rectosigmoid_junction",
+        "value": 1
+    },
+    {
+        "name": "stromal 3",
+        "id": "homo_sapiens.rectosigmoid_junction.stromal_3",
+        "parent": "homo_sapiens.rectosigmoid_junction",
+        "value": 1
+    },
+    {
+        "name": "B cell",
+        "id": "homo_sapiens.rectosigmoid_junction.b_cell",
+        "parent": "homo_sapiens.rectosigmoid_junction",
+        "value": 1
+    },
+    {
+        "name": "T follicular helper cell",
+        "id": "homo_sapiens.rectosigmoid_junction.t_follicular_helper_cell",
+        "parent": "homo_sapiens.rectosigmoid_junction",
+        "value": 1
+    },
+    {
+        "name": "IgA plasma cell",
+        "id": "homo_sapiens.rectosigmoid_junction.iga_plasma_cell",
+        "parent": "homo_sapiens.rectosigmoid_junction",
+        "value": 1
+    },
+    {
+        "name": "mature enterocyte",
+        "id": "homo_sapiens.rectosigmoid_junction.mature_enterocyte",
+        "parent": "homo_sapiens.rectosigmoid_junction",
+        "value": 1
+    },
+    {
+        "name": "stem-like/transit amplifying epithelial cell",
+        "id": "homo_sapiens.rectosigmoid_junction.stem_like/transit_amplifying_epithelial_cell",
+        "parent": "homo_sapiens.rectosigmoid_junction",
+        "value": 1
+    },
+    {
+        "name": "goblet cell",
+        "id": "homo_sapiens.rectosigmoid_junction.goblet_cell",
+        "parent": "homo_sapiens.rectosigmoid_junction",
+        "value": 1
+    },
+    {
+        "name": "enterocyte of epithelium of large intestine",
+        "id": "homo_sapiens.rectosigmoid_junction.enterocyte_of_epithelium_of_large_intestine",
+        "parent": "homo_sapiens.rectosigmoid_junction",
+        "value": 1
+    },
+    {
+        "name": "intermediate epithelial cell",
+        "id": "homo_sapiens.rectosigmoid_junction.intermediate_epithelial_cell",
+        "parent": "homo_sapiens.rectosigmoid_junction",
+        "value": 1
+    },
+    {
+        "name": "consensus molecular subtype 3 epithelial cell",
+        "id": "homo_sapiens.sigmoid_colon.consensus_molecular_subtype_3_epithelial_cell",
+        "parent": "homo_sapiens.sigmoid_colon",
+        "value": 1
+    },
+    {
+        "name": "consensus molecular subtype 1 epithelial cell",
+        "id": "homo_sapiens.sigmoid_colon.consensus_molecular_subtype_1_epithelial_cell",
+        "parent": "homo_sapiens.sigmoid_colon",
+        "value": 1
+    },
+    {
+        "name": "consensus molecular subtype 3",
+        "id": "homo_sapiens.sigmoid_colon.consensus_molecular_subtype_3",
+        "parent": "homo_sapiens.sigmoid_colon",
+        "value": 1
+    },
+    {
+        "name": "consensus molecular subtype 1",
+        "id": "homo_sapiens.sigmoid_colon.consensus_molecular_subtype_1",
+        "parent": "homo_sapiens.sigmoid_colon",
+        "value": 1
+    },
+    {
+        "name": "myofibroblast",
+        "id": "homo_sapiens.sigmoid_colon.myofibroblast",
+        "parent": "homo_sapiens.sigmoid_colon",
+        "value": 1
+    },
+    {
+        "name": "IgA+ plasma cell",
+        "id": "homo_sapiens.sigmoid_colon.iga+_plasma_cell",
+        "parent": "homo_sapiens.sigmoid_colon",
+        "value": 1
+    },
+    {
+        "name": "myeloid cell",
+        "id": "homo_sapiens.sigmoid_colon.myeloid_cell",
+        "parent": "homo_sapiens.sigmoid_colon",
+        "value": 1
+    },
+    {
+        "name": "IgA plasma cell",
+        "id": "homo_sapiens.sigmoid_colon.iga_plasma_cell",
+        "parent": "homo_sapiens.sigmoid_colon",
+        "value": 1
+    },
+    {
+        "name": "epithelial cell of large intestine",
+        "id": "homo_sapiens.sigmoid_colon.epithelial_cell_of_large_intestine",
+        "parent": "homo_sapiens.sigmoid_colon",
+        "value": 1
+    },
+    {
+        "name": "epithelial cell",
+        "id": "homo_sapiens.sigmoid_colon.epithelial_cell",
+        "parent": "homo_sapiens.sigmoid_colon",
+        "value": 1
+    },
+    {
+        "name": "endothelial cell of lymphatic vessel",
+        "id": "homo_sapiens.sigmoid_colon.endothelial_cell_of_lymphatic_vessel",
+        "parent": "homo_sapiens.sigmoid_colon",
+        "value": 1
+    },
+    {
+        "name": "stromal cell",
+        "id": "homo_sapiens.sigmoid_colon.stromal_cell",
+        "parent": "homo_sapiens.sigmoid_colon",
+        "value": 1
+    },
+    {
+        "name": "stem-like/transit amplifying epithelial cell",
+        "id": "homo_sapiens.sigmoid_colon.stem_like/transit_amplifying_epithelial_cell",
+        "parent": "homo_sapiens.sigmoid_colon",
+        "value": 1
+    },
+    {
+        "name": "enterocyte of epithelium of large intestine",
+        "id": "homo_sapiens.sigmoid_colon.enterocyte_of_epithelium_of_large_intestine",
+        "parent": "homo_sapiens.sigmoid_colon",
+        "value": 1
+    },
+    {
+        "name": "stromal 3",
+        "id": "homo_sapiens.sigmoid_colon.stromal_3",
+        "parent": "homo_sapiens.sigmoid_colon",
+        "value": 1
+    },
+    {
+        "name": "CD8-positive, alpha-beta T cell",
+        "id": "homo_sapiens.sigmoid_colon.cd8_positive,_alpha_beta_t_cell",
+        "parent": "homo_sapiens.sigmoid_colon",
+        "value": 1
+    },
+    {
+        "name": "conventional dendritic cell",
+        "id": "homo_sapiens.sigmoid_colon.conventional_dendritic_cell",
+        "parent": "homo_sapiens.sigmoid_colon",
+        "value": 1
+    },
+    {
+        "name": "CD8+ T cell",
+        "id": "homo_sapiens.sigmoid_colon.cd8+_t_cell",
+        "parent": "homo_sapiens.sigmoid_colon",
+        "value": 1
+    },
+    {
+        "name": "consensus molecular subtype 2 epithelial cell",
+        "id": "homo_sapiens.sigmoid_colon.consensus_molecular_subtype_2_epithelial_cell",
+        "parent": "homo_sapiens.sigmoid_colon",
+        "value": 1
+    },
+    {
+        "name": "consensus molecular subtype 2",
+        "id": "homo_sapiens.sigmoid_colon.consensus_molecular_subtype_2",
+        "parent": "homo_sapiens.sigmoid_colon",
+        "value": 1
+    },
+    {
+        "name": "smooth muscle cell of large intestine",
+        "id": "homo_sapiens.sigmoid_colon.smooth_muscle_cell_of_large_intestine",
+        "parent": "homo_sapiens.sigmoid_colon",
+        "value": 1
+    },
+    {
+        "name": "glial cell",
+        "id": "homo_sapiens.sigmoid_colon.glial_cell",
+        "parent": "homo_sapiens.sigmoid_colon",
+        "value": 1
+    },
+    {
+        "name": "goblet cell",
+        "id": "homo_sapiens.sigmoid_colon.goblet_cell",
+        "parent": "homo_sapiens.sigmoid_colon",
+        "value": 1
+    },
+    {
+        "name": "intermediate epithelial cell",
+        "id": "homo_sapiens.sigmoid_colon.intermediate_epithelial_cell",
+        "parent": "homo_sapiens.sigmoid_colon",
+        "value": 1
+    },
+    {
+        "name": "CD19+CD20+ B cell",
+        "id": "homo_sapiens.sigmoid_colon.cd19+cd20+_b_cell",
+        "parent": "homo_sapiens.sigmoid_colon",
+        "value": 1
+    },
+    {
+        "name": "brush cell of epithelium proper of large intestine",
+        "id": "homo_sapiens.sigmoid_colon.brush_cell_of_epithelium_proper_of_large_intestine",
+        "parent": "homo_sapiens.sigmoid_colon",
+        "value": 1
+    },
+    {
+        "name": "consensus molecular subtype 2 epithelial cell",
+        "id": "homo_sapiens.ascending_colon.consensus_molecular_subtype_2_epithelial_cell",
+        "parent": "homo_sapiens.ascending_colon",
+        "value": 1
+    },
+    {
+        "name": "endothelial tip cell",
+        "id": "homo_sapiens.ascending_colon.endothelial_tip_cell",
+        "parent": "homo_sapiens.ascending_colon",
+        "value": 1
+    },
+    {
+        "name": "consensus molecular subtype 3 epithelial cell",
+        "id": "homo_sapiens.ascending_colon.consensus_molecular_subtype_3_epithelial_cell",
+        "parent": "homo_sapiens.ascending_colon",
+        "value": 1
+    },
+    {
+        "name": "consensus molecular subtype 2",
+        "id": "homo_sapiens.ascending_colon.consensus_molecular_subtype_2",
+        "parent": "homo_sapiens.ascending_colon",
+        "value": 1
+    },
+    {
+        "name": "consensus molecular subtype 3",
+        "id": "homo_sapiens.ascending_colon.consensus_molecular_subtype_3",
+        "parent": "homo_sapiens.ascending_colon",
+        "value": 1
+    },
+    {
+        "name": "epithelial cell of large intestine",
+        "id": "homo_sapiens.ascending_colon.epithelial_cell_of_large_intestine",
+        "parent": "homo_sapiens.ascending_colon",
+        "value": 1
+    },
+    {
+        "name": "epithelial cell",
+        "id": "homo_sapiens.ascending_colon.epithelial_cell",
+        "parent": "homo_sapiens.ascending_colon",
+        "value": 1
+    },
+    {
+        "name": "IgA+ plasma cell",
+        "id": "homo_sapiens.ascending_colon.iga+_plasma_cell",
+        "parent": "homo_sapiens.ascending_colon",
+        "value": 1
+    },
+    {
+        "name": "stem-like/transit amplifying epithelial cell",
+        "id": "homo_sapiens.ascending_colon.stem_like/transit_amplifying_epithelial_cell",
+        "parent": "homo_sapiens.ascending_colon",
+        "value": 1
+    },
+    {
+        "name": "glial cell",
+        "id": "homo_sapiens.ascending_colon.glial_cell",
+        "parent": "homo_sapiens.ascending_colon",
+        "value": 1
+    },
+    {
+        "name": "tip-like endothelial cell",
+        "id": "homo_sapiens.ascending_colon.tip_like_endothelial_cell",
+        "parent": "homo_sapiens.ascending_colon",
+        "value": 1
+    },
+    {
+        "name": "IgA plasma cell",
+        "id": "homo_sapiens.ascending_colon.iga_plasma_cell",
+        "parent": "homo_sapiens.ascending_colon",
+        "value": 1
+    },
+    {
+        "name": "spermatid",
+        "id": "homo_sapiens.testis.spermatid",
+        "parent": "homo_sapiens.testis",
+        "value": 1
+    },
+    {
+        "name": "spermatocyte",
+        "id": "homo_sapiens.testis.spermatocyte",
+        "parent": "homo_sapiens.testis",
+        "value": 1
+    },
+    {
+        "name": "endothelial cell",
+        "id": "homo_sapiens.testis.endothelial_cell",
+        "parent": "homo_sapiens.testis",
+        "value": 1
+    },
+    {
+        "name": "spermatogonium",
+        "id": "homo_sapiens.testis.spermatogonium",
+        "parent": "homo_sapiens.testis",
+        "value": 1
+    },
+    {
+        "name": "macrophage",
+        "id": "homo_sapiens.testis.macrophage",
+        "parent": "homo_sapiens.testis",
+        "value": 1
+    },
+    {
+        "name": "Leydig cell and peritubular myoid cell",
+        "id": "homo_sapiens.testis.leydig_cell_and_peritubular_myoid_cell",
+        "parent": "homo_sapiens.testis",
+        "value": 1
+    },
+    {
+        "name": "Sertoli cell",
+        "id": "homo_sapiens.testis.sertoli_cell",
+        "parent": "homo_sapiens.testis",
+        "value": 1
+    },
+    {
+        "name": "IgA plasma cell",
+        "id": "homo_sapiens.ileal_mucosa.iga_plasma_cell",
+        "parent": "homo_sapiens.ileal_mucosa",
+        "value": 1
+    },
+    {
+        "name": "moDC",
+        "id": "homo_sapiens.ileal_mucosa.modc",
+        "parent": "homo_sapiens.ileal_mucosa",
+        "value": 1
+    },
+    {
+        "name": "naive B cell",
+        "id": "homo_sapiens.ileal_mucosa.naive_b_cell",
+        "parent": "homo_sapiens.ileal_mucosa",
+        "value": 1
+    },
+    {
+        "name": "cytotoxic CD8 Trm",
+        "id": "homo_sapiens.ileal_mucosa.cytotoxic_cd8_trm",
+        "parent": "homo_sapiens.ileal_mucosa",
+        "value": 1
+    },
+    {
+        "name": "CD8-positive, alpha-beta memory T cell",
+        "id": "homo_sapiens.ileal_mucosa.cd8_positive,_alpha_beta_memory_t_cell",
+        "parent": "homo_sapiens.ileal_mucosa",
+        "value": 1
+    },
+    {
+        "name": "resident macrophage",
+        "id": "homo_sapiens.ileal_mucosa.resident_macrophage",
+        "parent": "homo_sapiens.ileal_mucosa",
+        "value": 1
+    },
+    {
+        "name": "memory T cell",
+        "id": "homo_sapiens.ileal_mucosa.memory_t_cell",
+        "parent": "homo_sapiens.ileal_mucosa",
+        "value": 1
+    },
+    {
+        "name": "conventional dendritic cell",
+        "id": "homo_sapiens.ileal_mucosa.conventional_dendritic_cell",
+        "parent": "homo_sapiens.ileal_mucosa",
+        "value": 1
+    },
+    {
+        "name": "Trm",
+        "id": "homo_sapiens.ileal_mucosa.trm",
+        "parent": "homo_sapiens.ileal_mucosa",
+        "value": 1
+    },
+    {
+        "name": "IgG plasma cell",
+        "id": "homo_sapiens.ileal_mucosa.igg_plasma_cell",
+        "parent": "homo_sapiens.ileal_mucosa",
+        "value": 1
+    },
+    {
+        "name": "regulatory T cell",
+        "id": "homo_sapiens.ileal_mucosa.regulatory_t_cell",
+        "parent": "homo_sapiens.ileal_mucosa",
+        "value": 1
+    },
+    {
+        "name": "vein endothelial cell",
+        "id": "homo_sapiens.pigmented_layer_of_retina_and_optic_choroid.vein_endothelial_cell",
+        "parent": "homo_sapiens.pigmented_layer_of_retina_and_optic_choroid",
+        "value": 1
+    },
+    {
+        "name": "fibroblast",
+        "id": "homo_sapiens.pigmented_layer_of_retina_and_optic_choroid.fibroblast",
+        "parent": "homo_sapiens.pigmented_layer_of_retina_and_optic_choroid",
+        "value": 1
+    },
+    {
+        "name": "vein endothelial cell 2",
+        "id": "homo_sapiens.pigmented_layer_of_retina_and_optic_choroid.vein_endothelial_cell_2",
+        "parent": "homo_sapiens.pigmented_layer_of_retina_and_optic_choroid",
+        "value": 1
+    },
+    {
+        "name": "pericyte",
+        "id": "homo_sapiens.pigmented_layer_of_retina_and_optic_choroid.pericyte",
+        "parent": "homo_sapiens.pigmented_layer_of_retina_and_optic_choroid",
+        "value": 1
+    },
+    {
+        "name": "type B pancreatic cell",
+        "id": "homo_sapiens.islet_of_langerhans.type_b_pancreatic_cell",
+        "parent": "homo_sapiens.islet_of_langerhans",
+        "value": 1
+    },
+    {
+        "name": "pancreatic A cell",
+        "id": "homo_sapiens.islet_of_langerhans.pancreatic_a_cell",
+        "parent": "homo_sapiens.islet_of_langerhans",
+        "value": 1
+    },
+    {
+        "name": "pancreatic D cell",
+        "id": "homo_sapiens.islet_of_langerhans.pancreatic_d_cell",
+        "parent": "homo_sapiens.islet_of_langerhans",
+        "value": 1
+    },
+    {
+        "name": "pancreatic PP cell",
+        "id": "homo_sapiens.islet_of_langerhans.pancreatic_pp_cell",
+        "parent": "homo_sapiens.islet_of_langerhans",
+        "value": 1
+    },
+    {
+        "name": "acinar cell",
+        "id": "homo_sapiens.islet_of_langerhans.acinar_cell",
+        "parent": "homo_sapiens.islet_of_langerhans",
+        "value": 1
+    },
+    {
+        "name": "pancreatic ductal cell",
+        "id": "homo_sapiens.islet_of_langerhans.pancreatic_ductal_cell",
+        "parent": "homo_sapiens.islet_of_langerhans",
+        "value": 1
+    },
+    {
+        "name": "mesenchymal cell",
+        "id": "homo_sapiens.islet_of_langerhans.mesenchymal_cell",
+        "parent": "homo_sapiens.islet_of_langerhans",
+        "value": 1
+    },
+    {
+        "name": "pancreatic stellate cell",
+        "id": "homo_sapiens.islet_of_langerhans.pancreatic_stellate_cell",
+        "parent": "homo_sapiens.islet_of_langerhans",
+        "value": 1
+    },
+    {
+        "name": "neoplastic cell",
+        "id": "homo_sapiens.brain.neoplastic_cell",
+        "parent": "homo_sapiens.brain",
+        "value": 1
+    },
+    {
+        "name": "oligodendrocyte",
+        "id": "homo_sapiens.brain.oligodendrocyte",
+        "parent": "homo_sapiens.brain",
+        "value": 1
+    },
+    {
+        "name": "immune cell",
+        "id": "homo_sapiens.brain.immune_cell",
+        "parent": "homo_sapiens.brain",
+        "value": 1
+    },
+    {
+        "name": "neuron",
+        "id": "homo_sapiens.brain.neuron",
+        "parent": "homo_sapiens.brain",
+        "value": 1
+    },
+    {
+        "name": "astrocyte",
+        "id": "homo_sapiens.brain.astrocyte",
+        "parent": "homo_sapiens.brain",
+        "value": 1
+    },
+    {
+        "name": "oligodendrocyte precursor cell",
+        "id": "homo_sapiens.brain.oligodendrocyte_precursor_cell",
+        "parent": "homo_sapiens.brain",
+        "value": 1
+    },
+    {
+        "name": "vascular cell",
+        "id": "homo_sapiens.brain.vascular_cell",
+        "parent": "homo_sapiens.brain",
+        "value": 1
+    },
+    {
+        "name": "cortical layer 2-3 excitatory neuron A",
+        "id": "homo_sapiens.brain.cortical_layer_2_3_excitatory_neuron_a",
+        "parent": "homo_sapiens.brain",
+        "value": 1
+    },
+    {
+        "name": "excitatory neuron",
+        "id": "homo_sapiens.brain.excitatory_neuron",
+        "parent": "homo_sapiens.brain",
+        "value": 1
+    },
+    {
+        "name": "cortical layer 5-6 excitatory neuron",
+        "id": "homo_sapiens.brain.cortical_layer_5_6_excitatory_neuron",
+        "parent": "homo_sapiens.brain",
+        "value": 1
+    },
+    {
+        "name": "cortical layer 2-3 excitatory neuron",
+        "id": "homo_sapiens.brain.cortical_layer_2_3_excitatory_neuron",
+        "parent": "homo_sapiens.brain",
+        "value": 1
+    },
+    {
+        "name": "cortical layer 4 excitatory neuron",
+        "id": "homo_sapiens.brain.cortical_layer_4_excitatory_neuron",
+        "parent": "homo_sapiens.brain",
+        "value": 1
+    },
+    {
+        "name": "cortical layer 2-3 excitatory neuron B",
+        "id": "homo_sapiens.brain.cortical_layer_2_3_excitatory_neuron_b",
+        "parent": "homo_sapiens.brain",
+        "value": 1
+    },
+    {
+        "name": "pyramidal neuron",
+        "id": "homo_sapiens.brain.pyramidal_neuron",
+        "parent": "homo_sapiens.brain",
+        "value": 1
+    },
+    {
+        "name": "cerebral cortex glial cell",
+        "id": "homo_sapiens.brain.cerebral_cortex_glial_cell",
+        "parent": "homo_sapiens.brain",
+        "value": 1
+    },
+    {
+        "name": "oligodendrocyte A",
+        "id": "homo_sapiens.brain.oligodendrocyte_a",
+        "parent": "homo_sapiens.brain",
+        "value": 1
+    },
+    {
+        "name": "pTEL.24.ANXA1",
+        "id": "homo_sapiens.embryo.ptel.24.anxa1",
+        "parent": "homo_sapiens.embryo",
+        "value": 1
+    },
+    {
+        "name": "telencephalic progenitor cell",
+        "id": "homo_sapiens.embryo.telencephalic_progenitor_cell",
+        "parent": "homo_sapiens.embryo",
+        "value": 1
+    },
+    {
+        "name": "pTEL.24.PAX6",
+        "id": "homo_sapiens.embryo.ptel.24.pax6",
+        "parent": "homo_sapiens.embryo",
+        "value": 1
+    },
+    {
+        "name": "medial ganglionic eminence progenitor",
+        "id": "homo_sapiens.embryo.medial_ganglionic_eminence_progenitor",
+        "parent": "homo_sapiens.embryo",
+        "value": 1
+    },
+    {
+        "name": "ipMGE.24.DLL1",
+        "id": "homo_sapiens.embryo.ipmge.24.dll1",
+        "parent": "homo_sapiens.embryo",
+        "value": 1
+    },
+    {
+        "name": "pMGE.24.NKX2-1",
+        "id": "homo_sapiens.embryo.pmge.24.nkx2_1",
+        "parent": "homo_sapiens.embryo",
+        "value": 1
+    },
+    {
+        "name": "medial ganglionic eminence neuron",
+        "id": "homo_sapiens.embryo.medial_ganglionic_eminence_neuron",
+        "parent": "homo_sapiens.embryo",
+        "value": 1
+    },
+    {
+        "name": "nLGE.24.CFC1",
+        "id": "homo_sapiens.embryo.nlge.24.cfc1",
+        "parent": "homo_sapiens.embryo",
+        "value": 1
+    },
+    {
+        "name": "nMGE.24.LHX8",
+        "id": "homo_sapiens.embryo.nmge.24.lhx8",
+        "parent": "homo_sapiens.embryo",
+        "value": 1
+    },
+    {
+        "name": "nLGE.24.SP8",
+        "id": "homo_sapiens.embryo.nlge.24.sp8",
+        "parent": "homo_sapiens.embryo",
+        "value": 1
+    },
+    {
+        "name": "lateral ganglionic eminence neuron",
+        "id": "homo_sapiens.embryo.lateral_ganglionic_eminence_neuron",
+        "parent": "homo_sapiens.embryo",
+        "value": 1
+    },
+    {
+        "name": "nMGE.24.LHX8.GRIA2",
+        "id": "homo_sapiens.embryo.nmge.24.lhx8.gria2",
+        "parent": "homo_sapiens.embryo",
+        "value": 1
+    },
+    {
+        "name": "intermediate medial ganglionic eminence progenitor",
+        "id": "homo_sapiens.embryo.intermediate_medial_ganglionic_eminence_progenitor",
+        "parent": "homo_sapiens.embryo",
+        "value": 1
+    },
+    {
+        "name": "pMGE.54.SPARCL1",
+        "id": "homo_sapiens.embryo.pmge.54.sparcl1",
+        "parent": "homo_sapiens.embryo",
+        "value": 1
+    },
+    {
+        "name": "pMGE.54.CRABP2",
+        "id": "homo_sapiens.embryo.pmge.54.crabp2",
+        "parent": "homo_sapiens.embryo",
+        "value": 1
+    },
+    {
+        "name": "pTEL.54.PAX6",
+        "id": "homo_sapiens.embryo.ptel.54.pax6",
+        "parent": "homo_sapiens.embryo",
+        "value": 1
+    },
+    {
+        "name": "ipMGE.54.ST18",
+        "id": "homo_sapiens.embryo.ipmge.54.st18",
+        "parent": "homo_sapiens.embryo",
+        "value": 1
+    },
+    {
+        "name": "IpMGE.54.OLIG1",
+        "id": "homo_sapiens.embryo.ipmge.54.olig1",
+        "parent": "homo_sapiens.embryo",
+        "value": 1
+    },
+    {
+        "name": "nCTX.54.SST",
+        "id": "homo_sapiens.embryo.nctx.54.sst",
+        "parent": "homo_sapiens.embryo",
+        "value": 1
+    },
+    {
+        "name": "cortical interneuron",
+        "id": "homo_sapiens.embryo.cortical_interneuron",
+        "parent": "homo_sapiens.embryo",
+        "value": 1
+    },
+    {
+        "name": "nMGE.54.GAD1",
+        "id": "homo_sapiens.embryo.nmge.54.gad1",
+        "parent": "homo_sapiens.embryo",
+        "value": 1
+    },
+    {
+        "name": "nCTX.54.GRIA2",
+        "id": "homo_sapiens.embryo.nctx.54.gria2",
+        "parent": "homo_sapiens.embryo",
+        "value": 1
+    },
+    {
+        "name": "nMGE.54.CFC1",
+        "id": "homo_sapiens.embryo.nmge.54.cfc1",
+        "parent": "homo_sapiens.embryo",
+        "value": 1
+    },
+    {
+        "name": "nCTX.54.CORT.NEFL",
+        "id": "homo_sapiens.embryo.nctx.54.cort.nefl",
+        "parent": "homo_sapiens.embryo",
+        "value": 1
+    },
+    {
+        "name": "nCTX.54.CORT",
+        "id": "homo_sapiens.embryo.nctx.54.cort",
+        "parent": "homo_sapiens.embryo",
+        "value": 1
+    },
+    {
+        "name": "pTEL.100.OLIG1",
+        "id": "homo_sapiens.embryo.ptel.100.olig1",
+        "parent": "homo_sapiens.embryo",
+        "value": 1
+    },
+    {
+        "name": "pMGE.100.AQP4",
+        "id": "homo_sapiens.embryo.pmge.100.aqp4",
+        "parent": "homo_sapiens.embryo",
+        "value": 1
+    },
+    {
+        "name": "nCTX.100.SST.CRABP1",
+        "id": "homo_sapiens.embryo.nctx.100.sst.crabp1",
+        "parent": "homo_sapiens.embryo",
+        "value": 1
+    },
+    {
+        "name": "pMGE.100.FRZB",
+        "id": "homo_sapiens.embryo.pmge.100.frzb",
+        "parent": "homo_sapiens.embryo",
+        "value": 1
+    },
+    {
+        "name": "pTEL.100.CRH",
+        "id": "homo_sapiens.embryo.ptel.100.crh",
+        "parent": "homo_sapiens.embryo",
+        "value": 1
+    },
+    {
+        "name": "neural progenitor cell",
+        "id": "homo_sapiens.embryo.neural_progenitor_cell",
+        "parent": "homo_sapiens.embryo",
+        "value": 1
+    },
+    {
+        "name": "nCTX.100.CORT",
+        "id": "homo_sapiens.embryo.nctx.100.cort",
+        "parent": "homo_sapiens.embryo",
+        "value": 1
+    },
+    {
+        "name": "ip.100.DLL1",
+        "id": "homo_sapiens.embryo.ip.100.dll1",
+        "parent": "homo_sapiens.embryo",
+        "value": 1
+    },
+    {
+        "name": "nCTX.100.DLX5",
+        "id": "homo_sapiens.embryo.nctx.100.dlx5",
+        "parent": "homo_sapiens.embryo",
+        "value": 1
+    },
+    {
+        "name": "p.100.ATF3",
+        "id": "homo_sapiens.embryo.p.100.atf3",
+        "parent": "homo_sapiens.embryo",
+        "value": 1
+    },
+    {
+        "name": "p.100.CTGF",
+        "id": "homo_sapiens.embryo.p.100.ctgf",
+        "parent": "homo_sapiens.embryo",
+        "value": 1
+    },
+    {
+        "name": "nCTX.100.SST",
+        "id": "homo_sapiens.embryo.nctx.100.sst",
+        "parent": "homo_sapiens.embryo",
+        "value": 1
+    },
+    {
+        "name": "nMGE.100.CFC1",
+        "id": "homo_sapiens.embryo.nmge.100.cfc1",
+        "parent": "homo_sapiens.embryo",
+        "value": 1
+    },
+    {
+        "name": "oMGE.100.PDGFRA",
+        "id": "homo_sapiens.embryo.omge.100.pdgfra",
+        "parent": "homo_sapiens.embryo",
+        "value": 1
+    },
+    {
+        "name": "oligodendrocyte precursor cell",
+        "id": "homo_sapiens.embryo.oligodendrocyte_precursor_cell",
+        "parent": "homo_sapiens.embryo",
+        "value": 1
+    },
+    {
+        "name": "p.125.ATF3",
+        "id": "homo_sapiens.embryo.p.125.atf3",
+        "parent": "homo_sapiens.embryo",
+        "value": 1
+    },
+    {
+        "name": "ip.125.DLL1",
+        "id": "homo_sapiens.embryo.ip.125.dll1",
+        "parent": "homo_sapiens.embryo",
+        "value": 1
+    },
+    {
+        "name": "pMGE.125.AQP4",
+        "id": "homo_sapiens.embryo.pmge.125.aqp4",
+        "parent": "homo_sapiens.embryo",
+        "value": 1
+    },
+    {
+        "name": "oMGE.125.PDGFRA",
+        "id": "homo_sapiens.embryo.omge.125.pdgfra",
+        "parent": "homo_sapiens.embryo",
+        "value": 1
+    },
+    {
+        "name": "pMGE.125.FRZB",
+        "id": "homo_sapiens.embryo.pmge.125.frzb",
+        "parent": "homo_sapiens.embryo",
+        "value": 1
+    },
+    {
+        "name": "nCTX.125.SST",
+        "id": "homo_sapiens.embryo.nctx.125.sst",
+        "parent": "homo_sapiens.embryo",
+        "value": 1
+    },
+    {
+        "name": "nCTX.125.CORT",
+        "id": "homo_sapiens.embryo.nctx.125.cort",
+        "parent": "homo_sapiens.embryo",
+        "value": 1
+    },
+    {
+        "name": "epithelial cell of proximal tubule 2",
+        "id": "homo_sapiens.juxtamedullary_cortex.epithelial_cell_of_proximal_tubule_2",
+        "parent": "homo_sapiens.juxtamedullary_cortex",
+        "value": 1
+    },
+    {
+        "name": "medial/distal nephron progenitor 1",
+        "id": "homo_sapiens.juxtamedullary_cortex.medial/distal_nephron_progenitor_1",
+        "parent": "homo_sapiens.juxtamedullary_cortex",
+        "value": 1
+    },
+    {
+        "name": "parietal epithelial cell 3",
+        "id": "homo_sapiens.juxtamedullary_cortex.parietal_epithelial_cell_3",
+        "parent": "homo_sapiens.juxtamedullary_cortex",
+        "value": 1
+    },
+    {
+        "name": "epithelial cell of proximal tubule 1",
+        "id": "homo_sapiens.outer_cortex_of_kidney.epithelial_cell_of_proximal_tubule_1",
+        "parent": "homo_sapiens.outer_cortex_of_kidney",
+        "value": 1
+    },
+    {
+        "name": "kidney interstitial cell 11",
+        "id": "homo_sapiens.inner_cell_mass.kidney_interstitial_cell_11",
+        "parent": "homo_sapiens.inner_cell_mass",
+        "value": 1
+    },
+    {
+        "name": "epithelial cell of proximal tubule 4",
+        "id": "homo_sapiens.inner_cell_mass.epithelial_cell_of_proximal_tubule_4",
+        "parent": "homo_sapiens.inner_cell_mass",
+        "value": 1
+    },
+    {
+        "name": "medial/distal nephron progenitor 4",
+        "id": "homo_sapiens.inner_cell_mass.medial/distal_nephron_progenitor_4",
+        "parent": "homo_sapiens.inner_cell_mass",
+        "value": 1
+    },
+    {
+        "name": "muscle cell 2",
+        "id": "homo_sapiens.inner_cell_mass.muscle_cell_2",
+        "parent": "homo_sapiens.inner_cell_mass",
+        "value": 1
+    },
+    {
+        "name": "unknown 2",
+        "id": "homo_sapiens.inner_cell_mass.unknown_2",
+        "parent": "homo_sapiens.inner_cell_mass",
+        "value": 1
+    },
+    {
+        "name": "medial/distal nephron progenitor 2",
+        "id": "homo_sapiens.inner_cell_mass.medial/distal_nephron_progenitor_2",
+        "parent": "homo_sapiens.inner_cell_mass",
+        "value": 1
+    },
+    {
+        "name": "intestinal crypt transit amplifying cell",
+        "id": "homo_sapiens.ileum.intestinal_crypt_transit_amplifying_cell",
+        "parent": "homo_sapiens.ileum",
+        "value": 1
+    },
+    {
+        "name": "enterocyte of epithelium of small intestine",
+        "id": "homo_sapiens.ileum.enterocyte_of_epithelium_of_small_intestine",
+        "parent": "homo_sapiens.ileum",
+        "value": 1
+    },
+    {
+        "name": "enteroendocrine cell",
+        "id": "homo_sapiens.ileum.enteroendocrine_cell",
+        "parent": "homo_sapiens.ileum",
+        "value": 1
+    },
+    {
+        "name": "intestinal crypt stem cell",
+        "id": "homo_sapiens.ileum.intestinal_crypt_stem_cell",
+        "parent": "homo_sapiens.ileum",
+        "value": 1
+    },
+    {
+        "name": "progenitor",
+        "id": "homo_sapiens.ileum.progenitor",
+        "parent": "homo_sapiens.ileum",
+        "value": 1
+    },
+    {
+        "name": "epithelial progenitor cell of small intestine",
+        "id": "homo_sapiens.ileum.epithelial_progenitor_cell_of_small_intestine",
+        "parent": "homo_sapiens.ileum",
+        "value": 1
+    },
+    {
+        "name": "goblet",
+        "id": "homo_sapiens.ileum.goblet",
+        "parent": "homo_sapiens.ileum",
+        "value": 1
+    },
+    {
+        "name": "transit amplifying cell",
+        "id": "homo_sapiens.ileum.transit_amplifying_cell",
+        "parent": "homo_sapiens.ileum",
+        "value": 1
+    },
+    {
+        "name": "enterocyte",
+        "id": "homo_sapiens.ileum.enterocyte",
+        "parent": "homo_sapiens.ileum",
+        "value": 1
+    },
+    {
+        "name": "paneth cell of epithelium of small intestine",
+        "id": "homo_sapiens.ileum.paneth_cell_of_epithelium_of_small_intestine",
+        "parent": "homo_sapiens.ileum",
+        "value": 1
+    },
+    {
+        "name": "stem cell",
+        "id": "homo_sapiens.ileum.stem_cell",
+        "parent": "homo_sapiens.ileum",
+        "value": 1
+    },
+    {
+        "name": "intestinal enteroendocrine cell",
+        "id": "homo_sapiens.ileum.intestinal_enteroendocrine_cell",
+        "parent": "homo_sapiens.ileum",
+        "value": 1
+    },
+    {
+        "name": "paneth cell",
+        "id": "homo_sapiens.ileum.paneth_cell",
+        "parent": "homo_sapiens.ileum",
+        "value": 1
+    },
+    {
+        "name": "small intestine goblet cell",
+        "id": "homo_sapiens.ileum.small_intestine_goblet_cell",
+        "parent": "homo_sapiens.ileum",
+        "value": 1
+    },
+    {
+        "name": "progenitor",
+        "id": "homo_sapiens.colon.progenitor",
+        "parent": "homo_sapiens.colon",
+        "value": 1
+    },
+    {
+        "name": "intestinal crypt stem cell",
+        "id": "homo_sapiens.colon.intestinal_crypt_stem_cell",
+        "parent": "homo_sapiens.colon",
+        "value": 1
+    },
+    {
+        "name": "epithelial progenitor cell of large intestine",
+        "id": "homo_sapiens.colon.epithelial_progenitor_cell_of_large_intestine",
+        "parent": "homo_sapiens.colon",
+        "value": 1
+    },
+    {
+        "name": "enterocyte of epithelium of large intestine",
+        "id": "homo_sapiens.colon.enterocyte_of_epithelium_of_large_intestine",
+        "parent": "homo_sapiens.colon",
+        "value": 1
+    },
+    {
+        "name": "stem cell",
+        "id": "homo_sapiens.colon.stem_cell",
+        "parent": "homo_sapiens.colon",
+        "value": 1
+    },
+    {
+        "name": "intestinal crypt transit amplifying cell",
+        "id": "homo_sapiens.colon.intestinal_crypt_transit_amplifying_cell",
+        "parent": "homo_sapiens.colon",
+        "value": 1
+    },
+    {
+        "name": "goblet",
+        "id": "homo_sapiens.colon.goblet",
+        "parent": "homo_sapiens.colon",
+        "value": 1
+    },
+    {
+        "name": "large intestine goblet cell",
+        "id": "homo_sapiens.colon.large_intestine_goblet_cell",
+        "parent": "homo_sapiens.colon",
+        "value": 1
+    },
+    {
+        "name": "paneth-like cell",
+        "id": "homo_sapiens.colon.paneth_like_cell",
+        "parent": "homo_sapiens.colon",
+        "value": 1
+    },
+    {
+        "name": "enterocyte",
+        "id": "homo_sapiens.colon.enterocyte",
+        "parent": "homo_sapiens.colon",
+        "value": 1
+    },
+    {
+        "name": "transit amplifying cell",
+        "id": "homo_sapiens.colon.transit_amplifying_cell",
+        "parent": "homo_sapiens.colon",
+        "value": 1
+    },
+    {
+        "name": "intestinal enteroendocrine cell",
+        "id": "homo_sapiens.colon.intestinal_enteroendocrine_cell",
+        "parent": "homo_sapiens.colon",
+        "value": 1
+    },
+    {
+        "name": "stromal cel type 2b",
+        "id": "homo_sapiens.colon.stromal_cel_type_2b",
+        "parent": "homo_sapiens.colon",
+        "value": 1
+    },
+    {
+        "name": "stromal cell",
+        "id": "homo_sapiens.colon.stromal_cell",
+        "parent": "homo_sapiens.colon",
+        "value": 1
+    },
+    {
+        "name": "large intestine goblet cell",
+        "id": "homo_sapiens.rectum.large_intestine_goblet_cell",
+        "parent": "homo_sapiens.rectum",
+        "value": 1
+    },
+    {
+        "name": "epithelial progenitor cell of large intestine",
+        "id": "homo_sapiens.rectum.epithelial_progenitor_cell_of_large_intestine",
+        "parent": "homo_sapiens.rectum",
+        "value": 1
+    },
+    {
+        "name": "transit amplifying cell",
+        "id": "homo_sapiens.rectum.transit_amplifying_cell",
+        "parent": "homo_sapiens.rectum",
+        "value": 1
+    },
+    {
+        "name": "intestinal crypt stem cell",
+        "id": "homo_sapiens.rectum.intestinal_crypt_stem_cell",
+        "parent": "homo_sapiens.rectum",
+        "value": 1
+    },
+    {
+        "name": "progenitor",
+        "id": "homo_sapiens.rectum.progenitor",
+        "parent": "homo_sapiens.rectum",
+        "value": 1
+    },
+    {
+        "name": "enterocyte of epithelium of large intestine",
+        "id": "homo_sapiens.rectum.enterocyte_of_epithelium_of_large_intestine",
+        "parent": "homo_sapiens.rectum",
+        "value": 1
+    },
+    {
+        "name": "intestinal crypt transit amplifying cell",
+        "id": "homo_sapiens.rectum.intestinal_crypt_transit_amplifying_cell",
+        "parent": "homo_sapiens.rectum",
+        "value": 1
+    },
+    {
+        "name": "goblet",
+        "id": "homo_sapiens.rectum.goblet",
+        "parent": "homo_sapiens.rectum",
+        "value": 1
+    },
+    {
+        "name": "stem cell",
+        "id": "homo_sapiens.rectum.stem_cell",
+        "parent": "homo_sapiens.rectum",
+        "value": 1
+    },
+    {
+        "name": "paneth-like cell",
+        "id": "homo_sapiens.rectum.paneth_like_cell",
+        "parent": "homo_sapiens.rectum",
+        "value": 1
+    },
+    {
+        "name": "enterocyte",
+        "id": "homo_sapiens.rectum.enterocyte",
+        "parent": "homo_sapiens.rectum",
+        "value": 1
+    },
+    {
+        "name": "intestinal enteroendocrine cell",
+        "id": "homo_sapiens.rectum.intestinal_enteroendocrine_cell",
+        "parent": "homo_sapiens.rectum",
+        "value": 1
+    },
+    {
+        "name": "enteroendocrine cell",
+        "id": "homo_sapiens.rectum.enteroendocrine_cell",
+        "parent": "homo_sapiens.rectum",
+        "value": 1
+    },
+    {
+        "name": "type II pneumocyte",
+        "id": "homo_sapiens.lung_parenchyma.type_ii_pneumocyte",
+        "parent": "homo_sapiens.lung_parenchyma",
+        "value": 1
+    },
+    {
+        "name": "lung ciliated cell",
+        "id": "homo_sapiens.lung_parenchyma.lung_ciliated_cell",
+        "parent": "homo_sapiens.lung_parenchyma",
+        "value": 1
+    },
+    {
+        "name": "type I pneumocyte",
+        "id": "homo_sapiens.lung_parenchyma.type_i_pneumocyte",
+        "parent": "homo_sapiens.lung_parenchyma",
+        "value": 1
+    },
+    {
+        "name": "lung macrophage",
+        "id": "homo_sapiens.lung_parenchyma.lung_macrophage",
+        "parent": "homo_sapiens.lung_parenchyma",
+        "value": 1
+    },
+    {
+        "name": "transformed epithelial cell",
+        "id": "homo_sapiens.lung_parenchyma.transformed_epithelial_cell",
+        "parent": "homo_sapiens.lung_parenchyma",
+        "value": 1
+    },
+    {
+        "name": "lung secretory cell",
+        "id": "homo_sapiens.lung_parenchyma.lung_secretory_cell",
+        "parent": "homo_sapiens.lung_parenchyma",
+        "value": 1
+    },
+    {
+        "name": "lymphocyte",
+        "id": "homo_sapiens.lung_parenchyma.lymphocyte",
+        "parent": "homo_sapiens.lung_parenchyma",
+        "value": 1
+    },
+    {
+        "name": "lung endothelial cell",
+        "id": "homo_sapiens.lung_parenchyma.lung_endothelial_cell",
+        "parent": "homo_sapiens.lung_parenchyma",
+        "value": 1
+    },
+    {
+        "name": "mast cell",
+        "id": "homo_sapiens.lung_parenchyma.mast_cell",
+        "parent": "homo_sapiens.lung_parenchyma",
+        "value": 1
+    },
+    {
+        "name": "B cell",
+        "id": "homo_sapiens.lung_parenchyma.b_cell",
+        "parent": "homo_sapiens.lung_parenchyma",
+        "value": 1
+    },
+    {
+        "name": "fibroblast of lung",
+        "id": "homo_sapiens.lung_parenchyma.fibroblast_of_lung",
+        "parent": "homo_sapiens.lung_parenchyma",
+        "value": 1
+    },
+    {
+        "name": "glycolysis state",
+        "id": "homo_sapiens.skin_of_body.glycolysis_state",
+        "parent": "homo_sapiens.skin_of_body",
+        "value": 1
+    },
+    {
+        "name": "canonical glycolysis",
+        "id": "homo_sapiens.skin_of_body.canonical_glycolysis",
+        "parent": "homo_sapiens.skin_of_body",
+        "value": 1
+    },
+    {
+        "name": "cortical intermediate progenitor",
+        "id": "homo_sapiens.skin_of_body.cortical_intermediate_progenitor",
+        "parent": "homo_sapiens.skin_of_body",
+        "value": 1
+    },
+    {
+        "name": "cortical excitatory neuron",
+        "id": "homo_sapiens.skin_of_body.cortical_excitatory_neuron",
+        "parent": "homo_sapiens.skin_of_body",
+        "value": 1
+    },
+    {
+        "name": "cholangiocyte",
+        "id": "homo_sapiens.shoot_axis_apex.cholangiocyte",
+        "parent": "homo_sapiens.shoot_axis_apex",
+        "value": 1
+    },
+    {
+        "name": "induced day 9 dendritic cell",
+        "id": "homo_sapiens.skin_epidermis.induced_day_9_dendritic_cell",
+        "parent": "homo_sapiens.skin_epidermis",
+        "value": 1
+    },
+    {
+        "name": "conventional dendritic cell type 1/induced day 9 dendritic cell",
+        "id": "homo_sapiens.skin_epidermis.conventional_dendritic_cell_type_1/induced_day_9_dendritic_cell",
+        "parent": "homo_sapiens.skin_epidermis",
+        "value": 1
+    },
+    {
+        "name": "dendritic cell",
+        "id": "homo_sapiens.skin_epidermis.dendritic_cell",
+        "parent": "homo_sapiens.skin_epidermis",
+        "value": 1
+    }
+]

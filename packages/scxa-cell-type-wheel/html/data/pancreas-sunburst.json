@@ -1,0 +1,337 @@
+[
+  {
+    "name": "Pancreas",
+    "id": "root",
+    "parent": ""
+  },
+  {
+    "name":"Mus musculus",
+    "id":"mus_musculus",
+    "parent":"root"
+  },
+  {
+    "name":"Homo sapiens",
+    "id":"homo_sapiens",
+    "parent":"root"
+  },
+  {
+    "name":"endocrine pancreas",
+    "id":"mus_musculus.endocrine_pancreas",
+    "parent":"mus_musculus"
+  },
+  {
+    "name":"exocrine pancreas",
+    "id":"mus_musculus.exocrine_pancreas",
+    "parent":"mus_musculus"
+  },
+  {
+    "name":"pancreas",
+    "id":"homo_sapiens.pancreas",
+    "parent":"homo_sapiens"
+  },
+  {
+    "name":"islet of Langerhans",
+    "id":"homo_sapiens.islet_of_langerhans",
+    "parent":"homo_sapiens"
+  },
+  {
+    "name":"type B pancreatic cell",
+    "id":"mus_musculus.endocrine_pancreas.type_b_pancreatic_cell",
+    "parent":"mus_musculus.endocrine_pancreas",
+    "value":1
+  },
+  {
+    "name":"pancreatic A cell",
+    "id":"mus_musculus.endocrine_pancreas.pancreatic_a_cell",
+    "parent":"mus_musculus.endocrine_pancreas",
+    "value":1
+  },
+  {
+    "name":"leukocyte",
+    "id":"mus_musculus.endocrine_pancreas.leukocyte",
+    "parent":"mus_musculus.endocrine_pancreas",
+    "value":1
+  },
+  {
+    "name":"pancreatic PP cell",
+    "id":"mus_musculus.endocrine_pancreas.pancreatic_pp_cell",
+    "parent":"mus_musculus.endocrine_pancreas",
+    "value":1
+  },
+  {
+    "name":"pancreatic ductal cell",
+    "id":"mus_musculus.endocrine_pancreas.pancreatic_ductal_cell",
+    "parent":"mus_musculus.endocrine_pancreas",
+    "value":1
+  },
+  {
+    "name":"endothelial cell",
+    "id":"mus_musculus.endocrine_pancreas.endothelial_cell",
+    "parent":"mus_musculus.endocrine_pancreas",
+    "value":1
+  },
+  {
+    "name":"pancreatic D cell",
+    "id":"mus_musculus.endocrine_pancreas.pancreatic_d_cell",
+    "parent":"mus_musculus.endocrine_pancreas",
+    "value":1
+  },
+  {
+    "name":"pancreatic acinar cell",
+    "id":"mus_musculus.endocrine_pancreas.pancreatic_acinar_cell",
+    "parent":"mus_musculus.endocrine_pancreas",
+    "value":1
+  },
+  {
+    "name":"pancreatic stellate cell",
+    "id":"mus_musculus.endocrine_pancreas.pancreatic_stellate_cell",
+    "parent":"mus_musculus.endocrine_pancreas",
+    "value":1
+  },
+  {
+    "name":"type B pancreatic cell",
+    "id":"mus_musculus.exocrine_pancreas.type_b_pancreatic_cell",
+    "parent":"mus_musculus.exocrine_pancreas",
+    "value":1
+  },
+  {
+    "name":"pancreatic ductal cell",
+    "id":"mus_musculus.exocrine_pancreas.pancreatic_ductal_cell",
+    "parent":"mus_musculus.exocrine_pancreas",
+    "value":1
+  },
+  {
+    "name":"pancreatic stellate cell",
+    "id":"mus_musculus.exocrine_pancreas.pancreatic_stellate_cell",
+    "parent":"mus_musculus.exocrine_pancreas",
+    "value":1
+  },
+  {
+    "name":"pancreatic D cell",
+    "id":"mus_musculus.exocrine_pancreas.pancreatic_d_cell",
+    "parent":"mus_musculus.exocrine_pancreas",
+    "value":1
+  },
+  {
+    "name":"pancreatic A cell",
+    "id":"mus_musculus.exocrine_pancreas.pancreatic_a_cell",
+    "parent":"mus_musculus.exocrine_pancreas",
+    "value":1
+  },
+  {
+    "name":"pancreatic PP cell",
+    "id":"mus_musculus.exocrine_pancreas.pancreatic_pp_cell",
+    "parent":"mus_musculus.exocrine_pancreas",
+    "value":1
+  },
+  {
+    "name":"pancreatic A cell",
+    "id":"homo_sapiens.pancreas.pancreatic_a_cell",
+    "parent":"homo_sapiens.pancreas",
+    "value":1
+  },
+  {
+    "name":"pancreatic ductal cell",
+    "id":"homo_sapiens.pancreas.pancreatic_ductal_cell",
+    "parent":"homo_sapiens.pancreas",
+    "value":1
+  },
+  {
+    "name":"pancreatic D cell",
+    "id":"homo_sapiens.pancreas.pancreatic_d_cell",
+    "parent":"homo_sapiens.pancreas",
+    "value":1
+  },
+  {
+    "name":"type B pancreatic cell",
+    "id":"homo_sapiens.pancreas.type_b_pancreatic_cell",
+    "parent":"homo_sapiens.pancreas",
+    "value":1
+  },
+  {
+    "name":"pancreatic PP cell",
+    "id":"homo_sapiens.pancreas.pancreatic_pp_cell",
+    "parent":"homo_sapiens.pancreas",
+    "value":1
+  },
+  {
+    "name":"acinar cell",
+    "id":"homo_sapiens.pancreas.acinar_cell",
+    "parent":"homo_sapiens.pancreas",
+    "value":1
+  },
+  {
+    "name":"mesenchymal cell",
+    "id":"homo_sapiens.pancreas.mesenchymal_cell",
+    "parent":"homo_sapiens.pancreas",
+    "value":1
+  },
+  {
+    "name":"delta cell",
+    "id":"homo_sapiens.pancreas.delta_cell",
+    "parent":"homo_sapiens.pancreas",
+    "value":1
+  },
+  {
+    "name":"alpha cell",
+    "id":"homo_sapiens.pancreas.alpha_cell",
+    "parent":"homo_sapiens.pancreas",
+    "value":1
+  },
+  {
+    "name":"ductal cell",
+    "id":"homo_sapiens.pancreas.ductal_cell",
+    "parent":"homo_sapiens.pancreas",
+    "value":1
+  },
+  {
+    "name":"unclassified endocrine cell",
+    "id":"homo_sapiens.pancreas.unclassified_endocrine_cell",
+    "parent":"homo_sapiens.pancreas",
+    "value":1
+  },
+  {
+    "name":"co-expression cell",
+    "id":"homo_sapiens.pancreas.co_expression_cell",
+    "parent":"homo_sapiens.pancreas",
+    "value":1
+  },
+  {
+    "name":"pancreatic endocrine cell",
+    "id":"homo_sapiens.pancreas.pancreatic_endocrine_cell",
+    "parent":"homo_sapiens.pancreas",
+    "value":1
+  },
+  {
+    "name":"beta cell",
+    "id":"homo_sapiens.pancreas.beta_cell",
+    "parent":"homo_sapiens.pancreas",
+    "value":1
+  },
+  {
+    "name":"gamma cell",
+    "id":"homo_sapiens.pancreas.gamma_cell",
+    "parent":"homo_sapiens.pancreas",
+    "value":1
+  },
+  {
+    "name":"MHC class II cell",
+    "id":"homo_sapiens.pancreas.mhc_class_ii_cell",
+    "parent":"homo_sapiens.pancreas",
+    "value":1
+  },
+  {
+    "name":"PSC cell",
+    "id":"homo_sapiens.pancreas.psc_cell",
+    "parent":"homo_sapiens.pancreas",
+    "value":1
+  },
+  {
+    "name":"endothelial cell",
+    "id":"homo_sapiens.pancreas.endothelial_cell",
+    "parent":"homo_sapiens.pancreas",
+    "value":1
+  },
+  {
+    "name":"pancreatic epsilon cell",
+    "id":"homo_sapiens.pancreas.pancreatic_epsilon_cell",
+    "parent":"homo_sapiens.pancreas",
+    "value":1
+  },
+  {
+    "name":"mast cell",
+    "id":"homo_sapiens.pancreas.mast_cell",
+    "parent":"homo_sapiens.pancreas",
+    "value":1
+  },
+  {
+    "name":"unclassified cell",
+    "id":"homo_sapiens.pancreas.unclassified_cell",
+    "parent":"homo_sapiens.pancreas",
+    "value":1
+  },
+  {
+    "name":"pancreatic stellate cell",
+    "id":"homo_sapiens.pancreas.pancreatic_stellate_cell",
+    "parent":"homo_sapiens.pancreas",
+    "value":1
+  },
+  {
+    "name":"epsilon cell",
+    "id":"homo_sapiens.pancreas.epsilon_cell",
+    "parent":"homo_sapiens.pancreas",
+    "value":1
+  },
+  {
+    "name":"professional antigen presenting cell",
+    "id":"homo_sapiens.pancreas.professional_antigen_presenting_cell",
+    "parent":"homo_sapiens.pancreas",
+    "value":1
+  },
+  {
+    "name":"pancreatic B cell",
+    "id":"homo_sapiens.pancreas.pancreatic_b_cell",
+    "parent":"homo_sapiens.pancreas",
+    "value":1
+  },
+  {
+    "name":"undefined",
+    "id":"homo_sapiens.pancreas.undefined",
+    "parent":"homo_sapiens.pancreas",
+    "value":1
+  },
+  {
+    "name":"pancreatic acinar cell",
+    "id":"homo_sapiens.pancreas.pancreatic_acinar_cell",
+    "parent":"homo_sapiens.pancreas",
+    "value":1
+  },
+  {
+    "name":"type B pancreatic cell",
+    "id":"homo_sapiens.islet_of_langerhans.type_b_pancreatic_cell",
+    "parent":"homo_sapiens.islet_of_langerhans",
+    "value":1
+  },
+  {
+    "name":"pancreatic A cell",
+    "id":"homo_sapiens.islet_of_langerhans.pancreatic_a_cell",
+    "parent":"homo_sapiens.islet_of_langerhans",
+    "value":1
+  },
+  {
+    "name":"pancreatic D cell",
+    "id":"homo_sapiens.islet_of_langerhans.pancreatic_d_cell",
+    "parent":"homo_sapiens.islet_of_langerhans",
+    "value":1
+  },
+  {
+    "name":"pancreatic PP cell",
+    "id":"homo_sapiens.islet_of_langerhans.pancreatic_pp_cell",
+    "parent":"homo_sapiens.islet_of_langerhans",
+    "value":1
+  },
+  {
+    "name":"acinar cell",
+    "id":"homo_sapiens.islet_of_langerhans.acinar_cell",
+    "parent":"homo_sapiens.islet_of_langerhans",
+    "value":1
+  },
+  {
+    "name":"pancreatic ductal cell",
+    "id":"homo_sapiens.islet_of_langerhans.pancreatic_ductal_cell",
+    "parent":"homo_sapiens.islet_of_langerhans",
+    "value":1
+  },
+  {
+    "name":"mesenchymal cell",
+    "id":"homo_sapiens.islet_of_langerhans.mesenchymal_cell",
+    "parent":"homo_sapiens.islet_of_langerhans",
+    "value":1
+  },
+  {
+    "name":"pancreatic stellate cell",
+    "id":"homo_sapiens.islet_of_langerhans.pancreatic_stellate_cell",
+    "parent":"homo_sapiens.islet_of_langerhans",
+    "value":1
+  }
+]
