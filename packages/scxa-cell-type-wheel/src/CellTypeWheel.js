@@ -14,7 +14,6 @@ class CellTypeWheel extends React.Component {
     super(props)
 
     this.state = {
-      // To avoid unnecessary update keep all options in the state.
       chartOptions: {
         chart: {
           height: `75%`
