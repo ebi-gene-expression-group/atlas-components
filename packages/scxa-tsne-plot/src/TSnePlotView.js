@@ -124,7 +124,10 @@ class TSnePlotView extends React.Component {
     }))
 
     const getTooltipContent = async (cellId) => {
-      const url = URI(`json/experiment/${this.props.experimentAccession}/cell/${cellId}/metadata`, atlasUrl).toString()
+      const url = URI(`json/experiment/${this.props.experimentAccession}/cell/${cellId}/metadata`, atlasUrl)
+        .query({accessKey: this.props.accessKey})
+        .toString()
+
       try {
         const response = await fetch(url)
 
