@@ -1,4 +1,6 @@
 import React from 'react'
+import PropTypes from 'prop-types'
+
 import HighchartsReact from 'highcharts-react-official'
 import Highcharts from 'highcharts'
 import highchartsSunburst from 'highcharts/modules/sunburst'
@@ -79,6 +81,11 @@ class CellTypeWheel extends React.Component {
       </div>
     )
   }
+}
+
+CellTypeWheel.propTypes = {
+  searchTerm: PropTypes.string.isRequired,
+  data: PropTypes.object.isRequired
 }
 
 export default CellTypeWheel
