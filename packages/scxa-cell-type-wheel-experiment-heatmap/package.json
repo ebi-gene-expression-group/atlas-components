@@ -1,5 +1,5 @@
 {
-  "name": "scxa-cell-type-wheel-experiment-heatmap",
+  "name": "@ebi-gene-expression-group/scxa-cell-type-wheel-heatmap",
   "version": "0.0.1",
   "publishConfig": {
     "access": "public"
