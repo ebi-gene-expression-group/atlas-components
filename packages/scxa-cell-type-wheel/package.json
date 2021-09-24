@@ -1,10 +1,10 @@
 {
-  "name": "expression-atlas-my-package",
+  "name": "@ebi-gene-expression-group/scxa-cell-type-wheel",
   "version": "0.0.1",
   "publishConfig": {
     "access": "public"
   },
-  "description": "My package does some neat things",
+  "description": "Cell type wheel chart",
   "main": "lib/index.js",
   "scripts": {
     "prepare": "rm -rf lib && babel src -d lib --copy-files",
@@ -25,6 +25,7 @@
   },
   "author": "Expression Atlas developers <arrayexpress-atlas@ebi.ac.uk>",
   "collaborators": [
+    "Haider Iqbal <haider@ebi.ac.uk>",
     "Alfonso Muñoz-Pomer Fuentes <amunoz@ebi.ac.uk>"
   ],
   "license": "Apache-2.0",
