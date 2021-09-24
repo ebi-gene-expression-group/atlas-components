@@ -5,7 +5,7 @@ import _ from 'lodash'
 
 import MarkerGeneHeatmap from "../src/MarkerGeneHeatmap";
 
-const render = ({data, species, heatmapType, defaultHeatmapHeight, hasDynamicHeight, heatmapRowHeight, }, target) => {
+const render = ({ data, species, heatmapType, defaultHeatmapHeight, hasDynamicHeight, heatmapRowHeight }, target) => {
   ReactDOM.render(
     <MarkerGeneHeatmap
       data={data}

@@ -1,4 +1,4 @@
-import HeatmapView from './HeatmapView.js'
+import HeatmapView from './HeatmapView'
 import ClustersHeatmapView from './clustersView/ClustersHeatmapView'
 
 export default HeatmapView
