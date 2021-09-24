@@ -1,0 +1,6554 @@
+[
+  {
+    "x": 1,
+    "y": 0,
+    "geneName": "REG1A",
+    "value": 0,
+    "cellGroupValue": "co-expression cell",
+    "cellGroupValueWhereMarker": "acinar cell",
+    "pValue": 5.840653192100999e-160
+  },
+  {
+    "x": 12,
+    "y": 0,
+    "geneName": "REG1A",
+    "value": 1.2140047,
+    "cellGroupValue": "type B pancreatic cell",
+    "cellGroupValueWhereMarker": "acinar cell",
+    "pValue": 5.840653192100999e-160
+  },
+  {
+    "x": 11,
+    "y": 0,
+    "geneName": "REG1A",
+    "value": 2.029048,
+    "cellGroupValue": "professional antigen presenting cell",
+    "cellGroupValueWhereMarker": "acinar cell",
+    "pValue": 5.840653192100999e-160
+  },
+  {
+    "x": 10,
+    "y": 0,
+    "geneName": "REG1A",
+    "value": 0,
+    "cellGroupValue": "pancreatic stellate cell",
+    "cellGroupValueWhereMarker": "acinar cell",
+    "pValue": 5.840653192100999e-160
+  },
+  {
+    "x": 6,
+    "y": 0,
+    "geneName": "REG1A",
+    "value": 1.5912417,
+    "cellGroupValue": "pancreatic PP cell",
+    "cellGroupValueWhereMarker": "acinar cell",
+    "pValue": 5.840653192100999e-160
+  },
+  {
+    "x": 9,
+    "y": 0,
+    "geneName": "REG1A",
+    "value": 1.500938,
+    "cellGroupValue": "pancreatic epsilon cell",
+    "cellGroupValueWhereMarker": "acinar cell",
+    "pValue": 5.840653192100999e-160
+  },
+  {
+    "x": 8,
+    "y": 0,
+    "geneName": "REG1A",
+    "value": 32.409744,
+    "cellGroupValue": "pancreatic endocrine cell",
+    "cellGroupValueWhereMarker": "acinar cell",
+    "pValue": 5.840653192100999e-160
+  },
+  {
+    "x": 7,
+    "y": 0,
+    "geneName": "REG1A",
+    "value": 109.30442,
+    "cellGroupValue": "pancreatic ductal cell",
+    "cellGroupValueWhereMarker": "acinar cell",
+    "pValue": 5.840653192100999e-160
+  },
+  {
+    "x": 5,
+    "y": 0,
+    "geneName": "REG1A",
+    "value": 0,
+    "cellGroupValue": "pancreatic D cell",
+    "cellGroupValueWhereMarker": "acinar cell",
+    "pValue": 5.840653192100999e-160
+  },
+  {
+    "x": 4,
+    "y": 0,
+    "geneName": "REG1A",
+    "value": 0,
+    "cellGroupValue": "pancreatic A cell",
+    "cellGroupValueWhereMarker": "acinar cell",
+    "pValue": 5.840653192100999e-160
+  },
+  {
+    "x": 3,
+    "y": 0,
+    "geneName": "REG1A",
+    "value": 7.92101,
+    "cellGroupValue": "mast cell",
+    "cellGroupValueWhereMarker": "acinar cell",
+    "pValue": 5.840653192100999e-160
+  },
+  {
+    "x": 2,
+    "y": 0,
+    "geneName": "REG1A",
+    "value": 0,
+    "cellGroupValue": "endothelial cell",
+    "cellGroupValueWhereMarker": "acinar cell",
+    "pValue": 5.840653192100999e-160
+  },
+  {
+    "x": 0,
+    "y": 0,
+    "geneName": "REG1A",
+    "value": 60491.98,
+    "cellGroupValue": "acinar cell",
+    "cellGroupValueWhereMarker": "acinar cell",
+    "pValue": 5.840653192100999e-160
+  },
+  {
+    "x": 0,
+    "y": 1,
+    "geneName": "SPINK1",
+    "value": 7602.793,
+    "cellGroupValue": "acinar cell",
+    "cellGroupValueWhereMarker": "acinar cell",
+    "pValue": 3.4095910122915734e-153
+  },
+  {
+    "x": 12,
+    "y": 1,
+    "geneName": "SPINK1",
+    "value": 0,
+    "cellGroupValue": "type B pancreatic cell",
+    "cellGroupValueWhereMarker": "acinar cell",
+    "pValue": 3.4095910122915734e-153
+  },
+  {
+    "x": 11,
+    "y": 1,
+    "geneName": "SPINK1",
+    "value": 0,
+    "cellGroupValue": "professional antigen presenting cell",
+    "cellGroupValueWhereMarker": "acinar cell",
+    "pValue": 3.4095910122915734e-153
+  },
+  {
+    "x": 10,
+    "y": 1,
+    "geneName": "SPINK1",
+    "value": 0,
+    "cellGroupValue": "pancreatic stellate cell",
+    "cellGroupValueWhereMarker": "acinar cell",
+    "pValue": 3.4095910122915734e-153
+  },
+  {
+    "x": 6,
+    "y": 1,
+    "geneName": "SPINK1",
+    "value": 1.8500878,
+    "cellGroupValue": "pancreatic PP cell",
+    "cellGroupValueWhereMarker": "acinar cell",
+    "pValue": 3.4095910122915734e-153
+  },
+  {
+    "x": 9,
+    "y": 1,
+    "geneName": "SPINK1",
+    "value": 5940.5806,
+    "cellGroupValue": "pancreatic epsilon cell",
+    "cellGroupValueWhereMarker": "acinar cell",
+    "pValue": 3.4095910122915734e-153
+  },
+  {
+    "x": 8,
+    "y": 1,
+    "geneName": "SPINK1",
+    "value": 6.3939843,
+    "cellGroupValue": "pancreatic endocrine cell",
+    "cellGroupValueWhereMarker": "acinar cell",
+    "pValue": 3.4095910122915734e-153
+  },
+  {
+    "x": 7,
+    "y": 1,
+    "geneName": "SPINK1",
+    "value": 20.6805675,
+    "cellGroupValue": "pancreatic ductal cell",
+    "cellGroupValueWhereMarker": "acinar cell",
+    "pValue": 3.4095910122915734e-153
+  },
+  {
+    "x": 5,
+    "y": 1,
+    "geneName": "SPINK1",
+    "value": 0,
+    "cellGroupValue": "pancreatic D cell",
+    "cellGroupValueWhereMarker": "acinar cell",
+    "pValue": 3.4095910122915734e-153
+  },
+  {
+    "x": 4,
+    "y": 1,
+    "geneName": "SPINK1",
+    "value": 2.4736369,
+    "cellGroupValue": "pancreatic A cell",
+    "cellGroupValueWhereMarker": "acinar cell",
+    "pValue": 3.4095910122915734e-153
+  },
+  {
+    "x": 3,
+    "y": 1,
+    "geneName": "SPINK1",
+    "value": 0,
+    "cellGroupValue": "mast cell",
+    "cellGroupValueWhereMarker": "acinar cell",
+    "pValue": 3.4095910122915734e-153
+  },
+  {
+    "x": 2,
+    "y": 1,
+    "geneName": "SPINK1",
+    "value": 0,
+    "cellGroupValue": "endothelial cell",
+    "cellGroupValueWhereMarker": "acinar cell",
+    "pValue": 3.4095910122915734e-153
+  },
+  {
+    "x": 1,
+    "y": 1,
+    "geneName": "SPINK1",
+    "value": 1.8198858,
+    "cellGroupValue": "co-expression cell",
+    "cellGroupValueWhereMarker": "acinar cell",
+    "pValue": 3.4095910122915734e-153
+  },
+  {
+    "x": 10,
+    "y": 2,
+    "geneName": "CTRB2",
+    "value": 0,
+    "cellGroupValue": "pancreatic stellate cell",
+    "cellGroupValueWhereMarker": "acinar cell",
+    "pValue": 1.2223721564342664e-129
+  },
+  {
+    "x": 12,
+    "y": 2,
+    "geneName": "CTRB2",
+    "value": 0,
+    "cellGroupValue": "type B pancreatic cell",
+    "cellGroupValueWhereMarker": "acinar cell",
+    "pValue": 1.2223721564342664e-129
+  },
+  {
+    "x": 11,
+    "y": 2,
+    "geneName": "CTRB2",
+    "value": 0,
+    "cellGroupValue": "professional antigen presenting cell",
+    "cellGroupValueWhereMarker": "acinar cell",
+    "pValue": 1.2223721564342664e-129
+  },
+  {
+    "x": 8,
+    "y": 2,
+    "geneName": "CTRB2",
+    "value": 0,
+    "cellGroupValue": "pancreatic endocrine cell",
+    "cellGroupValueWhereMarker": "acinar cell",
+    "pValue": 1.2223721564342664e-129
+  },
+  {
+    "x": 7,
+    "y": 2,
+    "geneName": "CTRB2",
+    "value": 0,
+    "cellGroupValue": "pancreatic ductal cell",
+    "cellGroupValueWhereMarker": "acinar cell",
+    "pValue": 1.2223721564342664e-129
+  },
+  {
+    "x": 5,
+    "y": 2,
+    "geneName": "CTRB2",
+    "value": 0,
+    "cellGroupValue": "pancreatic D cell",
+    "cellGroupValueWhereMarker": "acinar cell",
+    "pValue": 1.2223721564342664e-129
+  },
+  {
+    "x": 4,
+    "y": 2,
+    "geneName": "CTRB2",
+    "value": 0,
+    "cellGroupValue": "pancreatic A cell",
+    "cellGroupValueWhereMarker": "acinar cell",
+    "pValue": 1.2223721564342664e-129
+  },
+  {
+    "x": 3,
+    "y": 2,
+    "geneName": "CTRB2",
+    "value": 0,
+    "cellGroupValue": "mast cell",
+    "cellGroupValueWhereMarker": "acinar cell",
+    "pValue": 1.2223721564342664e-129
+  },
+  {
+    "x": 2,
+    "y": 2,
+    "geneName": "CTRB2",
+    "value": 0,
+    "cellGroupValue": "endothelial cell",
+    "cellGroupValueWhereMarker": "acinar cell",
+    "pValue": 1.2223721564342664e-129
+  },
+  {
+    "x": 1,
+    "y": 2,
+    "geneName": "CTRB2",
+    "value": 0,
+    "cellGroupValue": "co-expression cell",
+    "cellGroupValueWhereMarker": "acinar cell",
+    "pValue": 1.2223721564342664e-129
+  },
+  {
+    "x": 0,
+    "y": 2,
+    "geneName": "CTRB2",
+    "value": 9830.847,
+    "cellGroupValue": "acinar cell",
+    "cellGroupValueWhereMarker": "acinar cell",
+    "pValue": 1.2223721564342664e-129
+  },
+  {
+    "x": 6,
+    "y": 2,
+    "geneName": "CTRB2",
+    "value": 0,
+    "cellGroupValue": "pancreatic PP cell",
+    "cellGroupValueWhereMarker": "acinar cell",
+    "pValue": 1.2223721564342664e-129
+  },
+  {
+    "x": 9,
+    "y": 2,
+    "geneName": "CTRB2",
+    "value": 0,
+    "cellGroupValue": "pancreatic epsilon cell",
+    "cellGroupValueWhereMarker": "acinar cell",
+    "pValue": 1.2223721564342664e-129
+  },
+  {
+    "x": 12,
+    "y": 3,
+    "geneName": "PRSS2",
+    "value": 0,
+    "cellGroupValue": "type B pancreatic cell",
+    "cellGroupValueWhereMarker": "acinar cell",
+    "pValue": 1.9216157396208623e-127
+  },
+  {
+    "x": 0,
+    "y": 3,
+    "geneName": "PRSS2",
+    "value": 19601.465,
+    "cellGroupValue": "acinar cell",
+    "cellGroupValueWhereMarker": "acinar cell",
+    "pValue": 1.9216157396208623e-127
+  },
+  {
+    "x": 1,
+    "y": 3,
+    "geneName": "PRSS2",
+    "value": 0,
+    "cellGroupValue": "co-expression cell",
+    "cellGroupValueWhereMarker": "acinar cell",
+    "pValue": 1.9216157396208623e-127
+  },
+  {
+    "x": 2,
+    "y": 3,
+    "geneName": "PRSS2",
+    "value": 0,
+    "cellGroupValue": "endothelial cell",
+    "cellGroupValueWhereMarker": "acinar cell",
+    "pValue": 1.9216157396208623e-127
+  },
+  {
+    "x": 3,
+    "y": 3,
+    "geneName": "PRSS2",
+    "value": 0,
+    "cellGroupValue": "mast cell",
+    "cellGroupValueWhereMarker": "acinar cell",
+    "pValue": 1.9216157396208623e-127
+  },
+  {
+    "x": 4,
+    "y": 3,
+    "geneName": "PRSS2",
+    "value": 0,
+    "cellGroupValue": "pancreatic A cell",
+    "cellGroupValueWhereMarker": "acinar cell",
+    "pValue": 1.9216157396208623e-127
+  },
+  {
+    "x": 5,
+    "y": 3,
+    "geneName": "PRSS2",
+    "value": 0,
+    "cellGroupValue": "pancreatic D cell",
+    "cellGroupValueWhereMarker": "acinar cell",
+    "pValue": 1.9216157396208623e-127
+  },
+  {
+    "x": 7,
+    "y": 3,
+    "geneName": "PRSS2",
+    "value": 6.85047365,
+    "cellGroupValue": "pancreatic ductal cell",
+    "cellGroupValueWhereMarker": "acinar cell",
+    "pValue": 1.9216157396208623e-127
+  },
+  {
+    "x": 8,
+    "y": 3,
+    "geneName": "PRSS2",
+    "value": 6.5624547,
+    "cellGroupValue": "pancreatic endocrine cell",
+    "cellGroupValueWhereMarker": "acinar cell",
+    "pValue": 1.9216157396208623e-127
+  },
+  {
+    "x": 9,
+    "y": 3,
+    "geneName": "PRSS2",
+    "value": 5.1773767,
+    "cellGroupValue": "pancreatic epsilon cell",
+    "cellGroupValueWhereMarker": "acinar cell",
+    "pValue": 1.9216157396208623e-127
+  },
+  {
+    "x": 6,
+    "y": 3,
+    "geneName": "PRSS2",
+    "value": 0,
+    "cellGroupValue": "pancreatic PP cell",
+    "cellGroupValueWhereMarker": "acinar cell",
+    "pValue": 1.9216157396208623e-127
+  },
+  {
+    "x": 10,
+    "y": 3,
+    "geneName": "PRSS2",
+    "value": 0,
+    "cellGroupValue": "pancreatic stellate cell",
+    "cellGroupValueWhereMarker": "acinar cell",
+    "pValue": 1.9216157396208623e-127
+  },
+  {
+    "x": 11,
+    "y": 3,
+    "geneName": "PRSS2",
+    "value": 0,
+    "cellGroupValue": "professional antigen presenting cell",
+    "cellGroupValueWhereMarker": "acinar cell",
+    "pValue": 1.9216157396208623e-127
+  },
+  {
+    "x": 5,
+    "y": 4,
+    "geneName": "IL32",
+    "value": 0,
+    "cellGroupValue": "pancreatic D cell",
+    "cellGroupValueWhereMarker": "acinar cell",
+    "pValue": 2.9283838414825948e-123
+  },
+  {
+    "x": 12,
+    "y": 4,
+    "geneName": "IL32",
+    "value": 0,
+    "cellGroupValue": "type B pancreatic cell",
+    "cellGroupValueWhereMarker": "acinar cell",
+    "pValue": 2.9283838414825948e-123
+  },
+  {
+    "x": 11,
+    "y": 4,
+    "geneName": "IL32",
+    "value": 0,
+    "cellGroupValue": "professional antigen presenting cell",
+    "cellGroupValueWhereMarker": "acinar cell",
+    "pValue": 2.9283838414825948e-123
+  },
+  {
+    "x": 10,
+    "y": 4,
+    "geneName": "IL32",
+    "value": 5.163657,
+    "cellGroupValue": "pancreatic stellate cell",
+    "cellGroupValueWhereMarker": "acinar cell",
+    "pValue": 2.9283838414825948e-123
+  },
+  {
+    "x": 6,
+    "y": 4,
+    "geneName": "IL32",
+    "value": 0,
+    "cellGroupValue": "pancreatic PP cell",
+    "cellGroupValueWhereMarker": "acinar cell",
+    "pValue": 2.9283838414825948e-123
+  },
+  {
+    "x": 7,
+    "y": 4,
+    "geneName": "IL32",
+    "value": 368.67427,
+    "cellGroupValue": "pancreatic ductal cell",
+    "cellGroupValueWhereMarker": "acinar cell",
+    "pValue": 2.9283838414825948e-123
+  },
+  {
+    "x": 8,
+    "y": 4,
+    "geneName": "IL32",
+    "value": 3.0768847,
+    "cellGroupValue": "pancreatic endocrine cell",
+    "cellGroupValueWhereMarker": "acinar cell",
+    "pValue": 2.9283838414825948e-123
+  },
+  {
+    "x": 9,
+    "y": 4,
+    "geneName": "IL32",
+    "value": 0,
+    "cellGroupValue": "pancreatic epsilon cell",
+    "cellGroupValueWhereMarker": "acinar cell",
+    "pValue": 2.9283838414825948e-123
+  },
+  {
+    "x": 0,
+    "y": 4,
+    "geneName": "IL32",
+    "value": 1823.7214,
+    "cellGroupValue": "acinar cell",
+    "cellGroupValueWhereMarker": "acinar cell",
+    "pValue": 2.9283838414825948e-123
+  },
+  {
+    "x": 1,
+    "y": 4,
+    "geneName": "IL32",
+    "value": 0,
+    "cellGroupValue": "co-expression cell",
+    "cellGroupValueWhereMarker": "acinar cell",
+    "pValue": 2.9283838414825948e-123
+  },
+  {
+    "x": 2,
+    "y": 4,
+    "geneName": "IL32",
+    "value": 47.4835037,
+    "cellGroupValue": "endothelial cell",
+    "cellGroupValueWhereMarker": "acinar cell",
+    "pValue": 2.9283838414825948e-123
+  },
+  {
+    "x": 3,
+    "y": 4,
+    "geneName": "IL32",
+    "value": 2.2030535,
+    "cellGroupValue": "mast cell",
+    "cellGroupValueWhereMarker": "acinar cell",
+    "pValue": 2.9283838414825948e-123
+  },
+  {
+    "x": 4,
+    "y": 4,
+    "geneName": "IL32",
+    "value": 0,
+    "cellGroupValue": "pancreatic A cell",
+    "cellGroupValueWhereMarker": "acinar cell",
+    "pValue": 2.9283838414825948e-123
+  },
+  {
+    "x": 12,
+    "y": 5,
+    "geneName": "INS",
+    "value": 100166.4625,
+    "cellGroupValue": "type B pancreatic cell",
+    "cellGroupValueWhereMarker": "co-expression cell",
+    "pValue": 3.3926238819346995e-13
+  },
+  {
+    "x": 11,
+    "y": 5,
+    "geneName": "INS",
+    "value": 5.5168576,
+    "cellGroupValue": "professional antigen presenting cell",
+    "cellGroupValueWhereMarker": "co-expression cell",
+    "pValue": 3.3926238819346995e-13
+  },
+  {
+    "x": 10,
+    "y": 5,
+    "geneName": "INS",
+    "value": 12.6892895,
+    "cellGroupValue": "pancreatic stellate cell",
+    "cellGroupValueWhereMarker": "co-expression cell",
+    "pValue": 3.3926238819346995e-13
+  },
+  {
+    "x": 6,
+    "y": 5,
+    "geneName": "INS",
+    "value": 36.931545,
+    "cellGroupValue": "pancreatic PP cell",
+    "cellGroupValueWhereMarker": "co-expression cell",
+    "pValue": 3.3926238819346995e-13
+  },
+  {
+    "x": 0,
+    "y": 5,
+    "geneName": "INS",
+    "value": 17.809967,
+    "cellGroupValue": "acinar cell",
+    "cellGroupValueWhereMarker": "co-expression cell",
+    "pValue": 3.3926238819346995e-13
+  },
+  {
+    "x": 1,
+    "y": 5,
+    "geneName": "INS",
+    "value": 58335.777,
+    "cellGroupValue": "co-expression cell",
+    "cellGroupValueWhereMarker": "co-expression cell",
+    "pValue": 3.3926238819346995e-13
+  },
+  {
+    "x": 2,
+    "y": 5,
+    "geneName": "INS",
+    "value": 22.4225695,
+    "cellGroupValue": "endothelial cell",
+    "cellGroupValueWhereMarker": "co-expression cell",
+    "pValue": 3.3926238819346995e-13
+  },
+  {
+    "x": 3,
+    "y": 5,
+    "geneName": "INS",
+    "value": 34.42982,
+    "cellGroupValue": "mast cell",
+    "cellGroupValueWhereMarker": "co-expression cell",
+    "pValue": 3.3926238819346995e-13
+  },
+  {
+    "x": 4,
+    "y": 5,
+    "geneName": "INS",
+    "value": 31.3276445,
+    "cellGroupValue": "pancreatic A cell",
+    "cellGroupValueWhereMarker": "co-expression cell",
+    "pValue": 3.3926238819346995e-13
+  },
+  {
+    "x": 5,
+    "y": 5,
+    "geneName": "INS",
+    "value": 67.751293,
+    "cellGroupValue": "pancreatic D cell",
+    "cellGroupValueWhereMarker": "co-expression cell",
+    "pValue": 3.3926238819346995e-13
+  },
+  {
+    "x": 7,
+    "y": 5,
+    "geneName": "INS",
+    "value": 5.66233585,
+    "cellGroupValue": "pancreatic ductal cell",
+    "cellGroupValueWhereMarker": "co-expression cell",
+    "pValue": 3.3926238819346995e-13
+  },
+  {
+    "x": 8,
+    "y": 5,
+    "geneName": "INS",
+    "value": 400.16782,
+    "cellGroupValue": "pancreatic endocrine cell",
+    "cellGroupValueWhereMarker": "co-expression cell",
+    "pValue": 3.3926238819346995e-13
+  },
+  {
+    "x": 9,
+    "y": 5,
+    "geneName": "INS",
+    "value": 28.475573,
+    "cellGroupValue": "pancreatic epsilon cell",
+    "cellGroupValueWhereMarker": "co-expression cell",
+    "pValue": 3.3926238819346995e-13
+  },
+  {
+    "x": 5,
+    "y": 6,
+    "geneName": "IAPP",
+    "value": 2.6078591,
+    "cellGroupValue": "pancreatic D cell",
+    "cellGroupValueWhereMarker": "co-expression cell",
+    "pValue": 7.419353081997574e-11
+  },
+  {
+    "x": 7,
+    "y": 6,
+    "geneName": "IAPP",
+    "value": 0,
+    "cellGroupValue": "pancreatic ductal cell",
+    "cellGroupValueWhereMarker": "co-expression cell",
+    "pValue": 7.419353081997574e-11
+  },
+  {
+    "x": 8,
+    "y": 6,
+    "geneName": "IAPP",
+    "value": 13.29142,
+    "cellGroupValue": "pancreatic endocrine cell",
+    "cellGroupValueWhereMarker": "co-expression cell",
+    "pValue": 7.419353081997574e-11
+  },
+  {
+    "x": 9,
+    "y": 6,
+    "geneName": "IAPP",
+    "value": 3.6350453,
+    "cellGroupValue": "pancreatic epsilon cell",
+    "cellGroupValueWhereMarker": "co-expression cell",
+    "pValue": 7.419353081997574e-11
+  },
+  {
+    "x": 6,
+    "y": 6,
+    "geneName": "IAPP",
+    "value": 4.0842304,
+    "cellGroupValue": "pancreatic PP cell",
+    "cellGroupValueWhereMarker": "co-expression cell",
+    "pValue": 7.419353081997574e-11
+  },
+  {
+    "x": 10,
+    "y": 6,
+    "geneName": "IAPP",
+    "value": 0,
+    "cellGroupValue": "pancreatic stellate cell",
+    "cellGroupValueWhereMarker": "co-expression cell",
+    "pValue": 7.419353081997574e-11
+  },
+  {
+    "x": 11,
+    "y": 6,
+    "geneName": "IAPP",
+    "value": 0,
+    "cellGroupValue": "professional antigen presenting cell",
+    "cellGroupValueWhereMarker": "co-expression cell",
+    "pValue": 7.419353081997574e-11
+  },
+  {
+    "x": 12,
+    "y": 6,
+    "geneName": "IAPP",
+    "value": 3949.65455,
+    "cellGroupValue": "type B pancreatic cell",
+    "cellGroupValueWhereMarker": "co-expression cell",
+    "pValue": 7.419353081997574e-11
+  },
+  {
+    "x": 4,
+    "y": 7,
+    "geneName": "HADH",
+    "value": 2.53689995,
+    "cellGroupValue": "pancreatic A cell",
+    "cellGroupValueWhereMarker": "co-expression cell",
+    "pValue": 7.419353081997574e-11
+  },
+  {
+    "x": 3,
+    "y": 7,
+    "geneName": "HADH",
+    "value": 3.7485974,
+    "cellGroupValue": "mast cell",
+    "cellGroupValueWhereMarker": "co-expression cell",
+    "pValue": 7.419353081997574e-11
+  },
+  {
+    "x": 2,
+    "y": 7,
+    "geneName": "HADH",
+    "value": 1.4250277,
+    "cellGroupValue": "endothelial cell",
+    "cellGroupValueWhereMarker": "co-expression cell",
+    "pValue": 7.419353081997574e-11
+  },
+  {
+    "x": 1,
+    "y": 7,
+    "geneName": "HADH",
+    "value": 635.1155,
+    "cellGroupValue": "co-expression cell",
+    "cellGroupValueWhereMarker": "co-expression cell",
+    "pValue": 7.419353081997574e-11
+  },
+  {
+    "x": 0,
+    "y": 7,
+    "geneName": "HADH",
+    "value": 58.948048,
+    "cellGroupValue": "acinar cell",
+    "cellGroupValueWhereMarker": "co-expression cell",
+    "pValue": 7.419353081997574e-11
+  },
+  {
+    "x": 0,
+    "y": 6,
+    "geneName": "IAPP",
+    "value": 1.9707541,
+    "cellGroupValue": "acinar cell",
+    "cellGroupValueWhereMarker": "co-expression cell",
+    "pValue": 7.419353081997574e-11
+  },
+  {
+    "x": 1,
+    "y": 6,
+    "geneName": "IAPP",
+    "value": 2851.0154,
+    "cellGroupValue": "co-expression cell",
+    "cellGroupValueWhereMarker": "co-expression cell",
+    "pValue": 7.419353081997574e-11
+  },
+  {
+    "x": 2,
+    "y": 6,
+    "geneName": "IAPP",
+    "value": 0.30476455,
+    "cellGroupValue": "endothelial cell",
+    "cellGroupValueWhereMarker": "co-expression cell",
+    "pValue": 7.419353081997574e-11
+  },
+  {
+    "x": 3,
+    "y": 6,
+    "geneName": "IAPP",
+    "value": 0.4599452,
+    "cellGroupValue": "mast cell",
+    "cellGroupValueWhereMarker": "co-expression cell",
+    "pValue": 7.419353081997574e-11
+  },
+  {
+    "x": 4,
+    "y": 6,
+    "geneName": "IAPP",
+    "value": 1.55418605,
+    "cellGroupValue": "pancreatic A cell",
+    "cellGroupValueWhereMarker": "co-expression cell",
+    "pValue": 7.419353081997574e-11
+  },
+  {
+    "x": 6,
+    "y": 7,
+    "geneName": "HADH",
+    "value": 8.17191,
+    "cellGroupValue": "pancreatic PP cell",
+    "cellGroupValueWhereMarker": "co-expression cell",
+    "pValue": 7.419353081997574e-11
+  },
+  {
+    "x": 9,
+    "y": 7,
+    "geneName": "HADH",
+    "value": 51.937668,
+    "cellGroupValue": "pancreatic epsilon cell",
+    "cellGroupValueWhereMarker": "co-expression cell",
+    "pValue": 7.419353081997574e-11
+  },
+  {
+    "x": 8,
+    "y": 7,
+    "geneName": "HADH",
+    "value": 3.3900838,
+    "cellGroupValue": "pancreatic endocrine cell",
+    "cellGroupValueWhereMarker": "co-expression cell",
+    "pValue": 7.419353081997574e-11
+  },
+  {
+    "x": 7,
+    "y": 7,
+    "geneName": "HADH",
+    "value": 74.294262,
+    "cellGroupValue": "pancreatic ductal cell",
+    "cellGroupValueWhereMarker": "co-expression cell",
+    "pValue": 7.419353081997574e-11
+  },
+  {
+    "x": 5,
+    "y": 7,
+    "geneName": "HADH",
+    "value": 692.4245,
+    "cellGroupValue": "pancreatic D cell",
+    "cellGroupValueWhereMarker": "co-expression cell",
+    "pValue": 7.419353081997574e-11
+  },
+  {
+    "x": 12,
+    "y": 7,
+    "geneName": "HADH",
+    "value": 891.34565,
+    "cellGroupValue": "type B pancreatic cell",
+    "cellGroupValueWhereMarker": "co-expression cell",
+    "pValue": 7.419353081997574e-11
+  },
+  {
+    "x": 11,
+    "y": 7,
+    "geneName": "HADH",
+    "value": 0,
+    "cellGroupValue": "professional antigen presenting cell",
+    "cellGroupValueWhereMarker": "co-expression cell",
+    "pValue": 7.419353081997574e-11
+  },
+  {
+    "x": 10,
+    "y": 7,
+    "geneName": "HADH",
+    "value": 24.7137245,
+    "cellGroupValue": "pancreatic stellate cell",
+    "cellGroupValueWhereMarker": "co-expression cell",
+    "pValue": 7.419353081997574e-11
+  },
+  {
+    "x": 3,
+    "y": 8,
+    "geneName": "NPTX2",
+    "value": 0,
+    "cellGroupValue": "mast cell",
+    "cellGroupValueWhereMarker": "co-expression cell",
+    "pValue": 3.7425774193113715e-7
+  },
+  {
+    "x": 1,
+    "y": 8,
+    "geneName": "NPTX2",
+    "value": 325.8577,
+    "cellGroupValue": "co-expression cell",
+    "cellGroupValueWhereMarker": "co-expression cell",
+    "pValue": 3.7425774193113715e-7
+  },
+  {
+    "x": 0,
+    "y": 8,
+    "geneName": "NPTX2",
+    "value": 0.54747695,
+    "cellGroupValue": "acinar cell",
+    "cellGroupValueWhereMarker": "co-expression cell",
+    "pValue": 3.7425774193113715e-7
+  },
+  {
+    "x": 12,
+    "y": 8,
+    "geneName": "NPTX2",
+    "value": 507.419935,
+    "cellGroupValue": "type B pancreatic cell",
+    "cellGroupValueWhereMarker": "co-expression cell",
+    "pValue": 3.7425774193113715e-7
+  },
+  {
+    "x": 11,
+    "y": 8,
+    "geneName": "NPTX2",
+    "value": 0,
+    "cellGroupValue": "professional antigen presenting cell",
+    "cellGroupValueWhereMarker": "co-expression cell",
+    "pValue": 3.7425774193113715e-7
+  },
+  {
+    "x": 10,
+    "y": 8,
+    "geneName": "NPTX2",
+    "value": 0,
+    "cellGroupValue": "pancreatic stellate cell",
+    "cellGroupValueWhereMarker": "co-expression cell",
+    "pValue": 3.7425774193113715e-7
+  },
+  {
+    "x": 6,
+    "y": 8,
+    "geneName": "NPTX2",
+    "value": 0,
+    "cellGroupValue": "pancreatic PP cell",
+    "cellGroupValueWhereMarker": "co-expression cell",
+    "pValue": 3.7425774193113715e-7
+  },
+  {
+    "x": 9,
+    "y": 8,
+    "geneName": "NPTX2",
+    "value": 0,
+    "cellGroupValue": "pancreatic epsilon cell",
+    "cellGroupValueWhereMarker": "co-expression cell",
+    "pValue": 3.7425774193113715e-7
+  },
+  {
+    "x": 8,
+    "y": 8,
+    "geneName": "NPTX2",
+    "value": 0,
+    "cellGroupValue": "pancreatic endocrine cell",
+    "cellGroupValueWhereMarker": "co-expression cell",
+    "pValue": 3.7425774193113715e-7
+  },
+  {
+    "x": 7,
+    "y": 8,
+    "geneName": "NPTX2",
+    "value": 0,
+    "cellGroupValue": "pancreatic ductal cell",
+    "cellGroupValueWhereMarker": "co-expression cell",
+    "pValue": 3.7425774193113715e-7
+  },
+  {
+    "x": 5,
+    "y": 8,
+    "geneName": "NPTX2",
+    "value": 78.5079995,
+    "cellGroupValue": "pancreatic D cell",
+    "cellGroupValueWhereMarker": "co-expression cell",
+    "pValue": 3.7425774193113715e-7
+  },
+  {
+    "x": 4,
+    "y": 8,
+    "geneName": "NPTX2",
+    "value": 0,
+    "cellGroupValue": "pancreatic A cell",
+    "cellGroupValueWhereMarker": "co-expression cell",
+    "pValue": 3.7425774193113715e-7
+  },
+  {
+    "x": 2,
+    "y": 8,
+    "geneName": "NPTX2",
+    "value": 0,
+    "cellGroupValue": "endothelial cell",
+    "cellGroupValueWhereMarker": "co-expression cell",
+    "pValue": 3.7425774193113715e-7
+  },
+  {
+    "x": 0,
+    "y": 9,
+    "geneName": "PCSK1",
+    "value": 0,
+    "cellGroupValue": "acinar cell",
+    "cellGroupValueWhereMarker": "co-expression cell",
+    "pValue": 6.270326248935839e-7
+  },
+  {
+    "x": 2,
+    "y": 9,
+    "geneName": "PCSK1",
+    "value": 0,
+    "cellGroupValue": "endothelial cell",
+    "cellGroupValueWhereMarker": "co-expression cell",
+    "pValue": 6.270326248935839e-7
+  },
+  {
+    "x": 1,
+    "y": 9,
+    "geneName": "PCSK1",
+    "value": 254.55658,
+    "cellGroupValue": "co-expression cell",
+    "cellGroupValueWhereMarker": "co-expression cell",
+    "pValue": 6.270326248935839e-7
+  },
+  {
+    "x": 3,
+    "y": 9,
+    "geneName": "PCSK1",
+    "value": 0,
+    "cellGroupValue": "mast cell",
+    "cellGroupValueWhereMarker": "co-expression cell",
+    "pValue": 6.270326248935839e-7
+  },
+  {
+    "x": 4,
+    "y": 9,
+    "geneName": "PCSK1",
+    "value": 0,
+    "cellGroupValue": "pancreatic A cell",
+    "cellGroupValueWhereMarker": "co-expression cell",
+    "pValue": 6.270326248935839e-7
+  },
+  {
+    "x": 5,
+    "y": 9,
+    "geneName": "PCSK1",
+    "value": 334.76672,
+    "cellGroupValue": "pancreatic D cell",
+    "cellGroupValueWhereMarker": "co-expression cell",
+    "pValue": 6.270326248935839e-7
+  },
+  {
+    "x": 7,
+    "y": 9,
+    "geneName": "PCSK1",
+    "value": 0,
+    "cellGroupValue": "pancreatic ductal cell",
+    "cellGroupValueWhereMarker": "co-expression cell",
+    "pValue": 6.270326248935839e-7
+  },
+  {
+    "x": 8,
+    "y": 9,
+    "geneName": "PCSK1",
+    "value": 0,
+    "cellGroupValue": "pancreatic endocrine cell",
+    "cellGroupValueWhereMarker": "co-expression cell",
+    "pValue": 6.270326248935839e-7
+  },
+  {
+    "x": 9,
+    "y": 9,
+    "geneName": "PCSK1",
+    "value": 367.59375,
+    "cellGroupValue": "pancreatic epsilon cell",
+    "cellGroupValueWhereMarker": "co-expression cell",
+    "pValue": 6.270326248935839e-7
+  },
+  {
+    "x": 6,
+    "y": 9,
+    "geneName": "PCSK1",
+    "value": 112.710144,
+    "cellGroupValue": "pancreatic PP cell",
+    "cellGroupValueWhereMarker": "co-expression cell",
+    "pValue": 6.270326248935839e-7
+  },
+  {
+    "x": 10,
+    "y": 9,
+    "geneName": "PCSK1",
+    "value": 0,
+    "cellGroupValue": "pancreatic stellate cell",
+    "cellGroupValueWhereMarker": "co-expression cell",
+    "pValue": 6.270326248935839e-7
+  },
+  {
+    "x": 11,
+    "y": 9,
+    "geneName": "PCSK1",
+    "value": 0,
+    "cellGroupValue": "professional antigen presenting cell",
+    "cellGroupValueWhereMarker": "co-expression cell",
+    "pValue": 6.270326248935839e-7
+  },
+  {
+    "x": 12,
+    "y": 9,
+    "geneName": "PCSK1",
+    "value": 407.99246,
+    "cellGroupValue": "type B pancreatic cell",
+    "cellGroupValueWhereMarker": "co-expression cell",
+    "pValue": 6.270326248935839e-7
+  },
+  {
+    "x": 5,
+    "y": 10,
+    "geneName": "GNG11",
+    "value": 0,
+    "cellGroupValue": "pancreatic D cell",
+    "cellGroupValueWhereMarker": "endothelial cell",
+    "pValue": 6.881791067926876e-10
+  },
+  {
+    "x": 4,
+    "y": 10,
+    "geneName": "GNG11",
+    "value": 0,
+    "cellGroupValue": "pancreatic A cell",
+    "cellGroupValueWhereMarker": "endothelial cell",
+    "pValue": 6.881791067926876e-10
+  },
+  {
+    "x": 3,
+    "y": 10,
+    "geneName": "GNG11",
+    "value": 0,
+    "cellGroupValue": "mast cell",
+    "cellGroupValueWhereMarker": "endothelial cell",
+    "pValue": 6.881791067926876e-10
+  },
+  {
+    "x": 2,
+    "y": 10,
+    "geneName": "GNG11",
+    "value": 618.400575,
+    "cellGroupValue": "endothelial cell",
+    "cellGroupValueWhereMarker": "endothelial cell",
+    "pValue": 6.881791067926876e-10
+  },
+  {
+    "x": 1,
+    "y": 10,
+    "geneName": "GNG11",
+    "value": 0,
+    "cellGroupValue": "co-expression cell",
+    "cellGroupValueWhereMarker": "endothelial cell",
+    "pValue": 6.881791067926876e-10
+  },
+  {
+    "x": 11,
+    "y": 10,
+    "geneName": "GNG11",
+    "value": 0,
+    "cellGroupValue": "professional antigen presenting cell",
+    "cellGroupValueWhereMarker": "endothelial cell",
+    "pValue": 6.881791067926876e-10
+  },
+  {
+    "x": 12,
+    "y": 10,
+    "geneName": "GNG11",
+    "value": 0,
+    "cellGroupValue": "type B pancreatic cell",
+    "cellGroupValueWhereMarker": "endothelial cell",
+    "pValue": 6.881791067926876e-10
+  },
+  {
+    "x": 0,
+    "y": 10,
+    "geneName": "GNG11",
+    "value": 0,
+    "cellGroupValue": "acinar cell",
+    "cellGroupValueWhereMarker": "endothelial cell",
+    "pValue": 6.881791067926876e-10
+  },
+  {
+    "x": 10,
+    "y": 10,
+    "geneName": "GNG11",
+    "value": 155.53991,
+    "cellGroupValue": "pancreatic stellate cell",
+    "cellGroupValueWhereMarker": "endothelial cell",
+    "pValue": 6.881791067926876e-10
+  },
+  {
+    "x": 6,
+    "y": 10,
+    "geneName": "GNG11",
+    "value": 0,
+    "cellGroupValue": "pancreatic PP cell",
+    "cellGroupValueWhereMarker": "endothelial cell",
+    "pValue": 6.881791067926876e-10
+  },
+  {
+    "x": 9,
+    "y": 10,
+    "geneName": "GNG11",
+    "value": 0,
+    "cellGroupValue": "pancreatic epsilon cell",
+    "cellGroupValueWhereMarker": "endothelial cell",
+    "pValue": 6.881791067926876e-10
+  },
+  {
+    "x": 8,
+    "y": 10,
+    "geneName": "GNG11",
+    "value": 0,
+    "cellGroupValue": "pancreatic endocrine cell",
+    "cellGroupValueWhereMarker": "endothelial cell",
+    "pValue": 6.881791067926876e-10
+  },
+  {
+    "x": 7,
+    "y": 10,
+    "geneName": "GNG11",
+    "value": 10.86676025,
+    "cellGroupValue": "pancreatic ductal cell",
+    "cellGroupValueWhereMarker": "endothelial cell",
+    "pValue": 6.881791067926876e-10
+  },
+  {
+    "x": 3,
+    "y": 11,
+    "geneName": "PECAM1",
+    "value": 0,
+    "cellGroupValue": "mast cell",
+    "cellGroupValueWhereMarker": "endothelial cell",
+    "pValue": 8.804056070356157e-10
+  },
+  {
+    "x": 2,
+    "y": 11,
+    "geneName": "PECAM1",
+    "value": 2792.942,
+    "cellGroupValue": "endothelial cell",
+    "cellGroupValueWhereMarker": "endothelial cell",
+    "pValue": 8.804056070356157e-10
+  },
+  {
+    "x": 1,
+    "y": 11,
+    "geneName": "PECAM1",
+    "value": 0,
+    "cellGroupValue": "co-expression cell",
+    "cellGroupValueWhereMarker": "endothelial cell",
+    "pValue": 8.804056070356157e-10
+  },
+  {
+    "x": 0,
+    "y": 11,
+    "geneName": "PECAM1",
+    "value": 0,
+    "cellGroupValue": "acinar cell",
+    "cellGroupValueWhereMarker": "endothelial cell",
+    "pValue": 8.804056070356157e-10
+  },
+  {
+    "x": 9,
+    "y": 11,
+    "geneName": "PECAM1",
+    "value": 1.5867667,
+    "cellGroupValue": "pancreatic epsilon cell",
+    "cellGroupValueWhereMarker": "endothelial cell",
+    "pValue": 8.804056070356157e-10
+  },
+  {
+    "x": 10,
+    "y": 11,
+    "geneName": "PECAM1",
+    "value": 0,
+    "cellGroupValue": "pancreatic stellate cell",
+    "cellGroupValueWhereMarker": "endothelial cell",
+    "pValue": 8.804056070356157e-10
+  },
+  {
+    "x": 12,
+    "y": 11,
+    "geneName": "PECAM1",
+    "value": 0,
+    "cellGroupValue": "type B pancreatic cell",
+    "cellGroupValueWhereMarker": "endothelial cell",
+    "pValue": 8.804056070356157e-10
+  },
+  {
+    "x": 11,
+    "y": 11,
+    "geneName": "PECAM1",
+    "value": 68.11852,
+    "cellGroupValue": "professional antigen presenting cell",
+    "cellGroupValueWhereMarker": "endothelial cell",
+    "pValue": 8.804056070356157e-10
+  },
+  {
+    "x": 6,
+    "y": 11,
+    "geneName": "PECAM1",
+    "value": 0.81258935,
+    "cellGroupValue": "pancreatic PP cell",
+    "cellGroupValueWhereMarker": "endothelial cell",
+    "pValue": 8.804056070356157e-10
+  },
+  {
+    "x": 8,
+    "y": 11,
+    "geneName": "PECAM1",
+    "value": 0,
+    "cellGroupValue": "pancreatic endocrine cell",
+    "cellGroupValueWhereMarker": "endothelial cell",
+    "pValue": 8.804056070356157e-10
+  },
+  {
+    "x": 7,
+    "y": 11,
+    "geneName": "PECAM1",
+    "value": 0,
+    "cellGroupValue": "pancreatic ductal cell",
+    "cellGroupValueWhereMarker": "endothelial cell",
+    "pValue": 8.804056070356157e-10
+  },
+  {
+    "x": 5,
+    "y": 11,
+    "geneName": "PECAM1",
+    "value": 0,
+    "cellGroupValue": "pancreatic D cell",
+    "cellGroupValueWhereMarker": "endothelial cell",
+    "pValue": 8.804056070356157e-10
+  },
+  {
+    "x": 4,
+    "y": 11,
+    "geneName": "PECAM1",
+    "value": 0,
+    "cellGroupValue": "pancreatic A cell",
+    "cellGroupValueWhereMarker": "endothelial cell",
+    "pValue": 8.804056070356157e-10
+  },
+  {
+    "x": 0,
+    "y": 12,
+    "geneName": "PLVAP",
+    "value": 0,
+    "cellGroupValue": "acinar cell",
+    "cellGroupValueWhereMarker": "endothelial cell",
+    "pValue": 8.477721981276207e-9
+  },
+  {
+    "x": 12,
+    "y": 12,
+    "geneName": "PLVAP",
+    "value": 0,
+    "cellGroupValue": "type B pancreatic cell",
+    "cellGroupValueWhereMarker": "endothelial cell",
+    "pValue": 8.477721981276207e-9
+  },
+  {
+    "x": 11,
+    "y": 12,
+    "geneName": "PLVAP",
+    "value": 0,
+    "cellGroupValue": "professional antigen presenting cell",
+    "cellGroupValueWhereMarker": "endothelial cell",
+    "pValue": 8.477721981276207e-9
+  },
+  {
+    "x": 10,
+    "y": 12,
+    "geneName": "PLVAP",
+    "value": 0,
+    "cellGroupValue": "pancreatic stellate cell",
+    "cellGroupValueWhereMarker": "endothelial cell",
+    "pValue": 8.477721981276207e-9
+  },
+  {
+    "x": 6,
+    "y": 12,
+    "geneName": "PLVAP",
+    "value": 0,
+    "cellGroupValue": "pancreatic PP cell",
+    "cellGroupValueWhereMarker": "endothelial cell",
+    "pValue": 8.477721981276207e-9
+  },
+  {
+    "x": 9,
+    "y": 12,
+    "geneName": "PLVAP",
+    "value": 0,
+    "cellGroupValue": "pancreatic epsilon cell",
+    "cellGroupValueWhereMarker": "endothelial cell",
+    "pValue": 8.477721981276207e-9
+  },
+  {
+    "x": 8,
+    "y": 12,
+    "geneName": "PLVAP",
+    "value": 0,
+    "cellGroupValue": "pancreatic endocrine cell",
+    "cellGroupValueWhereMarker": "endothelial cell",
+    "pValue": 8.477721981276207e-9
+  },
+  {
+    "x": 7,
+    "y": 12,
+    "geneName": "PLVAP",
+    "value": 0,
+    "cellGroupValue": "pancreatic ductal cell",
+    "cellGroupValueWhereMarker": "endothelial cell",
+    "pValue": 8.477721981276207e-9
+  },
+  {
+    "x": 5,
+    "y": 12,
+    "geneName": "PLVAP",
+    "value": 0,
+    "cellGroupValue": "pancreatic D cell",
+    "cellGroupValueWhereMarker": "endothelial cell",
+    "pValue": 8.477721981276207e-9
+  },
+  {
+    "x": 4,
+    "y": 12,
+    "geneName": "PLVAP",
+    "value": 0,
+    "cellGroupValue": "pancreatic A cell",
+    "cellGroupValueWhereMarker": "endothelial cell",
+    "pValue": 8.477721981276207e-9
+  },
+  {
+    "x": 3,
+    "y": 12,
+    "geneName": "PLVAP",
+    "value": 0,
+    "cellGroupValue": "mast cell",
+    "cellGroupValueWhereMarker": "endothelial cell",
+    "pValue": 8.477721981276207e-9
+  },
+  {
+    "x": 2,
+    "y": 12,
+    "geneName": "PLVAP",
+    "value": 6489.96,
+    "cellGroupValue": "endothelial cell",
+    "cellGroupValueWhereMarker": "endothelial cell",
+    "pValue": 8.477721981276207e-9
+  },
+  {
+    "x": 1,
+    "y": 12,
+    "geneName": "PLVAP",
+    "value": 0,
+    "cellGroupValue": "co-expression cell",
+    "cellGroupValueWhereMarker": "endothelial cell",
+    "pValue": 8.477721981276207e-9
+  },
+  {
+    "x": 6,
+    "y": 13,
+    "geneName": "FLT1",
+    "value": 0,
+    "cellGroupValue": "pancreatic PP cell",
+    "cellGroupValueWhereMarker": "endothelial cell",
+    "pValue": 4.466567673469928e-8
+  },
+  {
+    "x": 8,
+    "y": 13,
+    "geneName": "FLT1",
+    "value": 0,
+    "cellGroupValue": "pancreatic endocrine cell",
+    "cellGroupValueWhereMarker": "endothelial cell",
+    "pValue": 4.466567673469928e-8
+  },
+  {
+    "x": 7,
+    "y": 13,
+    "geneName": "FLT1",
+    "value": 0,
+    "cellGroupValue": "pancreatic ductal cell",
+    "cellGroupValueWhereMarker": "endothelial cell",
+    "pValue": 4.466567673469928e-8
+  },
+  {
+    "x": 5,
+    "y": 13,
+    "geneName": "FLT1",
+    "value": 0,
+    "cellGroupValue": "pancreatic D cell",
+    "cellGroupValueWhereMarker": "endothelial cell",
+    "pValue": 4.466567673469928e-8
+  },
+  {
+    "x": 0,
+    "y": 13,
+    "geneName": "FLT1",
+    "value": 0,
+    "cellGroupValue": "acinar cell",
+    "cellGroupValueWhereMarker": "endothelial cell",
+    "pValue": 4.466567673469928e-8
+  },
+  {
+    "x": 4,
+    "y": 13,
+    "geneName": "FLT1",
+    "value": 0,
+    "cellGroupValue": "pancreatic A cell",
+    "cellGroupValueWhereMarker": "endothelial cell",
+    "pValue": 4.466567673469928e-8
+  },
+  {
+    "x": 3,
+    "y": 13,
+    "geneName": "FLT1",
+    "value": 0,
+    "cellGroupValue": "mast cell",
+    "cellGroupValueWhereMarker": "endothelial cell",
+    "pValue": 4.466567673469928e-8
+  },
+  {
+    "x": 2,
+    "y": 13,
+    "geneName": "FLT1",
+    "value": 1053.13155,
+    "cellGroupValue": "endothelial cell",
+    "cellGroupValueWhereMarker": "endothelial cell",
+    "pValue": 4.466567673469928e-8
+  },
+  {
+    "x": 1,
+    "y": 13,
+    "geneName": "FLT1",
+    "value": 0,
+    "cellGroupValue": "co-expression cell",
+    "cellGroupValueWhereMarker": "endothelial cell",
+    "pValue": 4.466567673469928e-8
+  },
+  {
+    "x": 12,
+    "y": 13,
+    "geneName": "FLT1",
+    "value": 0,
+    "cellGroupValue": "type B pancreatic cell",
+    "cellGroupValueWhereMarker": "endothelial cell",
+    "pValue": 4.466567673469928e-8
+  },
+  {
+    "x": 11,
+    "y": 13,
+    "geneName": "FLT1",
+    "value": 0,
+    "cellGroupValue": "professional antigen presenting cell",
+    "cellGroupValueWhereMarker": "endothelial cell",
+    "pValue": 4.466567673469928e-8
+  },
+  {
+    "x": 10,
+    "y": 13,
+    "geneName": "FLT1",
+    "value": 0,
+    "cellGroupValue": "pancreatic stellate cell",
+    "cellGroupValueWhereMarker": "endothelial cell",
+    "pValue": 4.466567673469928e-8
+  },
+  {
+    "x": 9,
+    "y": 13,
+    "geneName": "FLT1",
+    "value": 0,
+    "cellGroupValue": "pancreatic epsilon cell",
+    "cellGroupValueWhereMarker": "endothelial cell",
+    "pValue": 4.466567673469928e-8
+  },
+  {
+    "x": 9,
+    "y": 14,
+    "geneName": "SERPINE1",
+    "value": 0,
+    "cellGroupValue": "pancreatic epsilon cell",
+    "cellGroupValueWhereMarker": "endothelial cell",
+    "pValue": 1.1174253918131037e-7
+  },
+  {
+    "x": 10,
+    "y": 14,
+    "geneName": "SERPINE1",
+    "value": 233.256675,
+    "cellGroupValue": "pancreatic stellate cell",
+    "cellGroupValueWhereMarker": "endothelial cell",
+    "pValue": 1.1174253918131037e-7
+  },
+  {
+    "x": 11,
+    "y": 14,
+    "geneName": "SERPINE1",
+    "value": 0,
+    "cellGroupValue": "professional antigen presenting cell",
+    "cellGroupValueWhereMarker": "endothelial cell",
+    "pValue": 1.1174253918131037e-7
+  },
+  {
+    "x": 12,
+    "y": 14,
+    "geneName": "SERPINE1",
+    "value": 0,
+    "cellGroupValue": "type B pancreatic cell",
+    "cellGroupValueWhereMarker": "endothelial cell",
+    "pValue": 1.1174253918131037e-7
+  },
+  {
+    "x": 0,
+    "y": 14,
+    "geneName": "SERPINE1",
+    "value": 0,
+    "cellGroupValue": "acinar cell",
+    "cellGroupValueWhereMarker": "endothelial cell",
+    "pValue": 1.1174253918131037e-7
+  },
+  {
+    "x": 1,
+    "y": 14,
+    "geneName": "SERPINE1",
+    "value": 0,
+    "cellGroupValue": "co-expression cell",
+    "cellGroupValueWhereMarker": "endothelial cell",
+    "pValue": 1.1174253918131037e-7
+  },
+  {
+    "x": 2,
+    "y": 14,
+    "geneName": "SERPINE1",
+    "value": 1665.81105,
+    "cellGroupValue": "endothelial cell",
+    "cellGroupValueWhereMarker": "endothelial cell",
+    "pValue": 1.1174253918131037e-7
+  },
+  {
+    "x": 3,
+    "y": 14,
+    "geneName": "SERPINE1",
+    "value": 0,
+    "cellGroupValue": "mast cell",
+    "cellGroupValueWhereMarker": "endothelial cell",
+    "pValue": 1.1174253918131037e-7
+  },
+  {
+    "x": 4,
+    "y": 14,
+    "geneName": "SERPINE1",
+    "value": 0,
+    "cellGroupValue": "pancreatic A cell",
+    "cellGroupValueWhereMarker": "endothelial cell",
+    "pValue": 1.1174253918131037e-7
+  },
+  {
+    "x": 5,
+    "y": 14,
+    "geneName": "SERPINE1",
+    "value": 0,
+    "cellGroupValue": "pancreatic D cell",
+    "cellGroupValueWhereMarker": "endothelial cell",
+    "pValue": 1.1174253918131037e-7
+  },
+  {
+    "x": 7,
+    "y": 14,
+    "geneName": "SERPINE1",
+    "value": 0,
+    "cellGroupValue": "pancreatic ductal cell",
+    "cellGroupValueWhereMarker": "endothelial cell",
+    "pValue": 1.1174253918131037e-7
+  },
+  {
+    "x": 8,
+    "y": 14,
+    "geneName": "SERPINE1",
+    "value": 0,
+    "cellGroupValue": "pancreatic endocrine cell",
+    "cellGroupValueWhereMarker": "endothelial cell",
+    "pValue": 1.1174253918131037e-7
+  },
+  {
+    "x": 6,
+    "y": 14,
+    "geneName": "SERPINE1",
+    "value": 0,
+    "cellGroupValue": "pancreatic PP cell",
+    "cellGroupValueWhereMarker": "endothelial cell",
+    "pValue": 1.1174253918131037e-7
+  },
+  {
+    "x": 9,
+    "y": 15,
+    "geneName": "ALOX5AP",
+    "value": 0,
+    "cellGroupValue": "pancreatic epsilon cell",
+    "cellGroupValueWhereMarker": "mast cell",
+    "pValue": 0.0003855030002957755
+  },
+  {
+    "x": 12,
+    "y": 15,
+    "geneName": "ALOX5AP",
+    "value": 0,
+    "cellGroupValue": "type B pancreatic cell",
+    "cellGroupValueWhereMarker": "mast cell",
+    "pValue": 0.0003855030002957755
+  },
+  {
+    "x": 11,
+    "y": 15,
+    "geneName": "ALOX5AP",
+    "value": 249.78734,
+    "cellGroupValue": "professional antigen presenting cell",
+    "cellGroupValueWhereMarker": "mast cell",
+    "pValue": 0.0003855030002957755
+  },
+  {
+    "x": 10,
+    "y": 15,
+    "geneName": "ALOX5AP",
+    "value": 0,
+    "cellGroupValue": "pancreatic stellate cell",
+    "cellGroupValueWhereMarker": "mast cell",
+    "pValue": 0.0003855030002957755
+  },
+  {
+    "x": 6,
+    "y": 15,
+    "geneName": "ALOX5AP",
+    "value": 0,
+    "cellGroupValue": "pancreatic PP cell",
+    "cellGroupValueWhereMarker": "mast cell",
+    "pValue": 0.0003855030002957755
+  },
+  {
+    "x": 8,
+    "y": 15,
+    "geneName": "ALOX5AP",
+    "value": 0,
+    "cellGroupValue": "pancreatic endocrine cell",
+    "cellGroupValueWhereMarker": "mast cell",
+    "pValue": 0.0003855030002957755
+  },
+  {
+    "x": 7,
+    "y": 15,
+    "geneName": "ALOX5AP",
+    "value": 0,
+    "cellGroupValue": "pancreatic ductal cell",
+    "cellGroupValueWhereMarker": "mast cell",
+    "pValue": 0.0003855030002957755
+  },
+  {
+    "x": 5,
+    "y": 15,
+    "geneName": "ALOX5AP",
+    "value": 0,
+    "cellGroupValue": "pancreatic D cell",
+    "cellGroupValueWhereMarker": "mast cell",
+    "pValue": 0.0003855030002957755
+  },
+  {
+    "x": 4,
+    "y": 15,
+    "geneName": "ALOX5AP",
+    "value": 0,
+    "cellGroupValue": "pancreatic A cell",
+    "cellGroupValueWhereMarker": "mast cell",
+    "pValue": 0.0003855030002957755
+  },
+  {
+    "x": 3,
+    "y": 15,
+    "geneName": "ALOX5AP",
+    "value": 2864.4177,
+    "cellGroupValue": "mast cell",
+    "cellGroupValueWhereMarker": "mast cell",
+    "pValue": 0.0003855030002957755
+  },
+  {
+    "x": 2,
+    "y": 15,
+    "geneName": "ALOX5AP",
+    "value": 0,
+    "cellGroupValue": "endothelial cell",
+    "cellGroupValueWhereMarker": "mast cell",
+    "pValue": 0.0003855030002957755
+  },
+  {
+    "x": 1,
+    "y": 15,
+    "geneName": "ALOX5AP",
+    "value": 0,
+    "cellGroupValue": "co-expression cell",
+    "cellGroupValueWhereMarker": "mast cell",
+    "pValue": 0.0003855030002957755
+  },
+  {
+    "x": 0,
+    "y": 15,
+    "geneName": "ALOX5AP",
+    "value": 0,
+    "cellGroupValue": "acinar cell",
+    "cellGroupValueWhereMarker": "mast cell",
+    "pValue": 0.0003855030002957755
+  },
+  {
+    "x": 0,
+    "y": 16,
+    "geneName": "TPSAB1",
+    "value": 0,
+    "cellGroupValue": "acinar cell",
+    "cellGroupValueWhereMarker": "mast cell",
+    "pValue": 0.0008809215798521307
+  },
+  {
+    "x": 1,
+    "y": 16,
+    "geneName": "TPSAB1",
+    "value": 0,
+    "cellGroupValue": "co-expression cell",
+    "cellGroupValueWhereMarker": "mast cell",
+    "pValue": 0.0008809215798521307
+  },
+  {
+    "x": 2,
+    "y": 16,
+    "geneName": "TPSAB1",
+    "value": 0,
+    "cellGroupValue": "endothelial cell",
+    "cellGroupValueWhereMarker": "mast cell",
+    "pValue": 0.0008809215798521307
+  },
+  {
+    "x": 12,
+    "y": 16,
+    "geneName": "TPSAB1",
+    "value": 0,
+    "cellGroupValue": "type B pancreatic cell",
+    "cellGroupValueWhereMarker": "mast cell",
+    "pValue": 0.0008809215798521307
+  },
+  {
+    "x": 3,
+    "y": 16,
+    "geneName": "TPSAB1",
+    "value": 38721.918,
+    "cellGroupValue": "mast cell",
+    "cellGroupValueWhereMarker": "mast cell",
+    "pValue": 0.0008809215798521307
+  },
+  {
+    "x": 11,
+    "y": 16,
+    "geneName": "TPSAB1",
+    "value": 0,
+    "cellGroupValue": "professional antigen presenting cell",
+    "cellGroupValueWhereMarker": "mast cell",
+    "pValue": 0.0008809215798521307
+  },
+  {
+    "x": 10,
+    "y": 16,
+    "geneName": "TPSAB1",
+    "value": 0,
+    "cellGroupValue": "pancreatic stellate cell",
+    "cellGroupValueWhereMarker": "mast cell",
+    "pValue": 0.0008809215798521307
+  },
+  {
+    "x": 6,
+    "y": 16,
+    "geneName": "TPSAB1",
+    "value": 0,
+    "cellGroupValue": "pancreatic PP cell",
+    "cellGroupValueWhereMarker": "mast cell",
+    "pValue": 0.0008809215798521307
+  },
+  {
+    "x": 9,
+    "y": 16,
+    "geneName": "TPSAB1",
+    "value": 0,
+    "cellGroupValue": "pancreatic epsilon cell",
+    "cellGroupValueWhereMarker": "mast cell",
+    "pValue": 0.0008809215798521307
+  },
+  {
+    "x": 8,
+    "y": 16,
+    "geneName": "TPSAB1",
+    "value": 0,
+    "cellGroupValue": "pancreatic endocrine cell",
+    "cellGroupValueWhereMarker": "mast cell",
+    "pValue": 0.0008809215798521307
+  },
+  {
+    "x": 7,
+    "y": 16,
+    "geneName": "TPSAB1",
+    "value": 0,
+    "cellGroupValue": "pancreatic ductal cell",
+    "cellGroupValueWhereMarker": "mast cell",
+    "pValue": 0.0008809215798521307
+  },
+  {
+    "x": 5,
+    "y": 16,
+    "geneName": "TPSAB1",
+    "value": 0,
+    "cellGroupValue": "pancreatic D cell",
+    "cellGroupValueWhereMarker": "mast cell",
+    "pValue": 0.0008809215798521307
+  },
+  {
+    "x": 4,
+    "y": 16,
+    "geneName": "TPSAB1",
+    "value": 0,
+    "cellGroupValue": "pancreatic A cell",
+    "cellGroupValueWhereMarker": "mast cell",
+    "pValue": 0.0008809215798521307
+  },
+  {
+    "x": 0,
+    "y": 17,
+    "geneName": "CAPG",
+    "value": 42.025597,
+    "cellGroupValue": "acinar cell",
+    "cellGroupValueWhereMarker": "mast cell",
+    "pValue": 0.0008809215798521307
+  },
+  {
+    "x": 10,
+    "y": 17,
+    "geneName": "CAPG",
+    "value": 0,
+    "cellGroupValue": "pancreatic stellate cell",
+    "cellGroupValueWhereMarker": "mast cell",
+    "pValue": 0.0008809215798521307
+  },
+  {
+    "x": 11,
+    "y": 17,
+    "geneName": "CAPG",
+    "value": 1644.6034,
+    "cellGroupValue": "professional antigen presenting cell",
+    "cellGroupValueWhereMarker": "mast cell",
+    "pValue": 0.0008809215798521307
+  },
+  {
+    "x": 12,
+    "y": 17,
+    "geneName": "CAPG",
+    "value": 0,
+    "cellGroupValue": "type B pancreatic cell",
+    "cellGroupValueWhereMarker": "mast cell",
+    "pValue": 0.0008809215798521307
+  },
+  {
+    "x": 6,
+    "y": 17,
+    "geneName": "CAPG",
+    "value": 0,
+    "cellGroupValue": "pancreatic PP cell",
+    "cellGroupValueWhereMarker": "mast cell",
+    "pValue": 0.0008809215798521307
+  },
+  {
+    "x": 9,
+    "y": 17,
+    "geneName": "CAPG",
+    "value": 0,
+    "cellGroupValue": "pancreatic epsilon cell",
+    "cellGroupValueWhereMarker": "mast cell",
+    "pValue": 0.0008809215798521307
+  },
+  {
+    "x": 8,
+    "y": 17,
+    "geneName": "CAPG",
+    "value": 0,
+    "cellGroupValue": "pancreatic endocrine cell",
+    "cellGroupValueWhereMarker": "mast cell",
+    "pValue": 0.0008809215798521307
+  },
+  {
+    "x": 7,
+    "y": 17,
+    "geneName": "CAPG",
+    "value": 77.8470305,
+    "cellGroupValue": "pancreatic ductal cell",
+    "cellGroupValueWhereMarker": "mast cell",
+    "pValue": 0.0008809215798521307
+  },
+  {
+    "x": 5,
+    "y": 17,
+    "geneName": "CAPG",
+    "value": 0,
+    "cellGroupValue": "pancreatic D cell",
+    "cellGroupValueWhereMarker": "mast cell",
+    "pValue": 0.0008809215798521307
+  },
+  {
+    "x": 4,
+    "y": 17,
+    "geneName": "CAPG",
+    "value": 0,
+    "cellGroupValue": "pancreatic A cell",
+    "cellGroupValueWhereMarker": "mast cell",
+    "pValue": 0.0008809215798521307
+  },
+  {
+    "x": 3,
+    "y": 17,
+    "geneName": "CAPG",
+    "value": 1544.0721,
+    "cellGroupValue": "mast cell",
+    "cellGroupValueWhereMarker": "mast cell",
+    "pValue": 0.0008809215798521307
+  },
+  {
+    "x": 2,
+    "y": 17,
+    "geneName": "CAPG",
+    "value": 0,
+    "cellGroupValue": "endothelial cell",
+    "cellGroupValueWhereMarker": "mast cell",
+    "pValue": 0.0008809215798521307
+  },
+  {
+    "x": 1,
+    "y": 17,
+    "geneName": "CAPG",
+    "value": 0,
+    "cellGroupValue": "co-expression cell",
+    "cellGroupValueWhereMarker": "mast cell",
+    "pValue": 0.0008809215798521307
+  },
+  {
+    "x": 10,
+    "y": 18,
+    "geneName": "SRGN",
+    "value": 0,
+    "cellGroupValue": "pancreatic stellate cell",
+    "cellGroupValueWhereMarker": "mast cell",
+    "pValue": 0.0022790107676355946
+  },
+  {
+    "x": 6,
+    "y": 18,
+    "geneName": "SRGN",
+    "value": 0,
+    "cellGroupValue": "pancreatic PP cell",
+    "cellGroupValueWhereMarker": "mast cell",
+    "pValue": 0.0022790107676355946
+  },
+  {
+    "x": 9,
+    "y": 18,
+    "geneName": "SRGN",
+    "value": 0,
+    "cellGroupValue": "pancreatic epsilon cell",
+    "cellGroupValueWhereMarker": "mast cell",
+    "pValue": 0.0022790107676355946
+  },
+  {
+    "x": 11,
+    "y": 18,
+    "geneName": "SRGN",
+    "value": 715.60693,
+    "cellGroupValue": "professional antigen presenting cell",
+    "cellGroupValueWhereMarker": "mast cell",
+    "pValue": 0.0022790107676355946
+  },
+  {
+    "x": 8,
+    "y": 18,
+    "geneName": "SRGN",
+    "value": 0,
+    "cellGroupValue": "pancreatic endocrine cell",
+    "cellGroupValueWhereMarker": "mast cell",
+    "pValue": 0.0022790107676355946
+  },
+  {
+    "x": 7,
+    "y": 18,
+    "geneName": "SRGN",
+    "value": 0,
+    "cellGroupValue": "pancreatic ductal cell",
+    "cellGroupValueWhereMarker": "mast cell",
+    "pValue": 0.0022790107676355946
+  },
+  {
+    "x": 5,
+    "y": 18,
+    "geneName": "SRGN",
+    "value": 0,
+    "cellGroupValue": "pancreatic D cell",
+    "cellGroupValueWhereMarker": "mast cell",
+    "pValue": 0.0022790107676355946
+  },
+  {
+    "x": 4,
+    "y": 18,
+    "geneName": "SRGN",
+    "value": 0,
+    "cellGroupValue": "pancreatic A cell",
+    "cellGroupValueWhereMarker": "mast cell",
+    "pValue": 0.0022790107676355946
+  },
+  {
+    "x": 3,
+    "y": 18,
+    "geneName": "SRGN",
+    "value": 795.6716,
+    "cellGroupValue": "mast cell",
+    "cellGroupValueWhereMarker": "mast cell",
+    "pValue": 0.0022790107676355946
+  },
+  {
+    "x": 2,
+    "y": 18,
+    "geneName": "SRGN",
+    "value": 130.1949225,
+    "cellGroupValue": "endothelial cell",
+    "cellGroupValueWhereMarker": "mast cell",
+    "pValue": 0.0022790107676355946
+  },
+  {
+    "x": 1,
+    "y": 18,
+    "geneName": "SRGN",
+    "value": 0,
+    "cellGroupValue": "co-expression cell",
+    "cellGroupValueWhereMarker": "mast cell",
+    "pValue": 0.0022790107676355946
+  },
+  {
+    "x": 0,
+    "y": 18,
+    "geneName": "SRGN",
+    "value": 0,
+    "cellGroupValue": "acinar cell",
+    "cellGroupValueWhereMarker": "mast cell",
+    "pValue": 0.0022790107676355946
+  },
+  {
+    "x": 12,
+    "y": 18,
+    "geneName": "SRGN",
+    "value": 0,
+    "cellGroupValue": "type B pancreatic cell",
+    "cellGroupValueWhereMarker": "mast cell",
+    "pValue": 0.0022790107676355946
+  },
+  {
+    "x": 3,
+    "y": 19,
+    "geneName": "RAC2",
+    "value": 1407.0824,
+    "cellGroupValue": "mast cell",
+    "cellGroupValueWhereMarker": "mast cell",
+    "pValue": 0.015617118839514473
+  },
+  {
+    "x": 2,
+    "y": 19,
+    "geneName": "RAC2",
+    "value": 0,
+    "cellGroupValue": "endothelial cell",
+    "cellGroupValueWhereMarker": "mast cell",
+    "pValue": 0.015617118839514473
+  },
+  {
+    "x": 1,
+    "y": 19,
+    "geneName": "RAC2",
+    "value": 0,
+    "cellGroupValue": "co-expression cell",
+    "cellGroupValueWhereMarker": "mast cell",
+    "pValue": 0.015617118839514473
+  },
+  {
+    "x": 0,
+    "y": 19,
+    "geneName": "RAC2",
+    "value": 0,
+    "cellGroupValue": "acinar cell",
+    "cellGroupValueWhereMarker": "mast cell",
+    "pValue": 0.015617118839514473
+  },
+  {
+    "x": 6,
+    "y": 19,
+    "geneName": "RAC2",
+    "value": 0,
+    "cellGroupValue": "pancreatic PP cell",
+    "cellGroupValueWhereMarker": "mast cell",
+    "pValue": 0.015617118839514473
+  },
+  {
+    "x": 9,
+    "y": 19,
+    "geneName": "RAC2",
+    "value": 0,
+    "cellGroupValue": "pancreatic epsilon cell",
+    "cellGroupValueWhereMarker": "mast cell",
+    "pValue": 0.015617118839514473
+  },
+  {
+    "x": 8,
+    "y": 19,
+    "geneName": "RAC2",
+    "value": 0,
+    "cellGroupValue": "pancreatic endocrine cell",
+    "cellGroupValueWhereMarker": "mast cell",
+    "pValue": 0.015617118839514473
+  },
+  {
+    "x": 7,
+    "y": 19,
+    "geneName": "RAC2",
+    "value": 0,
+    "cellGroupValue": "pancreatic ductal cell",
+    "cellGroupValueWhereMarker": "mast cell",
+    "pValue": 0.015617118839514473
+  },
+  {
+    "x": 5,
+    "y": 19,
+    "geneName": "RAC2",
+    "value": 0,
+    "cellGroupValue": "pancreatic D cell",
+    "cellGroupValueWhereMarker": "mast cell",
+    "pValue": 0.015617118839514473
+  },
+  {
+    "x": 4,
+    "y": 19,
+    "geneName": "RAC2",
+    "value": 0,
+    "cellGroupValue": "pancreatic A cell",
+    "cellGroupValueWhereMarker": "mast cell",
+    "pValue": 0.015617118839514473
+  },
+  {
+    "x": 12,
+    "y": 19,
+    "geneName": "RAC2",
+    "value": 0,
+    "cellGroupValue": "type B pancreatic cell",
+    "cellGroupValueWhereMarker": "mast cell",
+    "pValue": 0.015617118839514473
+  },
+  {
+    "x": 11,
+    "y": 19,
+    "geneName": "RAC2",
+    "value": 101.26514,
+    "cellGroupValue": "professional antigen presenting cell",
+    "cellGroupValueWhereMarker": "mast cell",
+    "pValue": 0.015617118839514473
+  },
+  {
+    "x": 10,
+    "y": 19,
+    "geneName": "RAC2",
+    "value": 0,
+    "cellGroupValue": "pancreatic stellate cell",
+    "cellGroupValueWhereMarker": "mast cell",
+    "pValue": 0.015617118839514473
+  },
+  {
+    "x": 2,
+    "y": 20,
+    "geneName": "CFC1",
+    "value": 0,
+    "cellGroupValue": "endothelial cell",
+    "cellGroupValueWhereMarker": "pancreatic A cell",
+    "pValue": 0
+  },
+  {
+    "x": 4,
+    "y": 20,
+    "geneName": "CFC1",
+    "value": 1869.82265,
+    "cellGroupValue": "pancreatic A cell",
+    "cellGroupValueWhereMarker": "pancreatic A cell",
+    "pValue": 0
+  },
+  {
+    "x": 5,
+    "y": 20,
+    "geneName": "CFC1",
+    "value": 221.88673,
+    "cellGroupValue": "pancreatic D cell",
+    "cellGroupValueWhereMarker": "pancreatic A cell",
+    "pValue": 0
+  },
+  {
+    "x": 7,
+    "y": 20,
+    "geneName": "CFC1",
+    "value": 0,
+    "cellGroupValue": "pancreatic ductal cell",
+    "cellGroupValueWhereMarker": "pancreatic A cell",
+    "pValue": 0
+  },
+  {
+    "x": 8,
+    "y": 20,
+    "geneName": "CFC1",
+    "value": 1.6950419,
+    "cellGroupValue": "pancreatic endocrine cell",
+    "cellGroupValueWhereMarker": "pancreatic A cell",
+    "pValue": 0
+  },
+  {
+    "x": 9,
+    "y": 20,
+    "geneName": "CFC1",
+    "value": 577.2775,
+    "cellGroupValue": "pancreatic epsilon cell",
+    "cellGroupValueWhereMarker": "pancreatic A cell",
+    "pValue": 0
+  },
+  {
+    "x": 6,
+    "y": 20,
+    "geneName": "CFC1",
+    "value": 165.34332,
+    "cellGroupValue": "pancreatic PP cell",
+    "cellGroupValueWhereMarker": "pancreatic A cell",
+    "pValue": 0
+  },
+  {
+    "x": 10,
+    "y": 20,
+    "geneName": "CFC1",
+    "value": 0,
+    "cellGroupValue": "pancreatic stellate cell",
+    "cellGroupValueWhereMarker": "pancreatic A cell",
+    "pValue": 0
+  },
+  {
+    "x": 11,
+    "y": 20,
+    "geneName": "CFC1",
+    "value": 0.55168575,
+    "cellGroupValue": "professional antigen presenting cell",
+    "cellGroupValueWhereMarker": "pancreatic A cell",
+    "pValue": 0
+  },
+  {
+    "x": 12,
+    "y": 20,
+    "geneName": "CFC1",
+    "value": 587.6424,
+    "cellGroupValue": "type B pancreatic cell",
+    "cellGroupValueWhereMarker": "pancreatic A cell",
+    "pValue": 0
+  },
+  {
+    "x": 0,
+    "y": 20,
+    "geneName": "CFC1",
+    "value": 0,
+    "cellGroupValue": "acinar cell",
+    "cellGroupValueWhereMarker": "pancreatic A cell",
+    "pValue": 0
+  },
+  {
+    "x": 1,
+    "y": 20,
+    "geneName": "CFC1",
+    "value": 815.0469,
+    "cellGroupValue": "co-expression cell",
+    "cellGroupValueWhereMarker": "pancreatic A cell",
+    "pValue": 0
+  },
+  {
+    "x": 3,
+    "y": 20,
+    "geneName": "CFC1",
+    "value": 2.0252836,
+    "cellGroupValue": "mast cell",
+    "cellGroupValueWhereMarker": "pancreatic A cell",
+    "pValue": 0
+  },
+  {
+    "x": 1,
+    "y": 21,
+    "geneName": "GCG",
+    "value": 39385.57,
+    "cellGroupValue": "co-expression cell",
+    "cellGroupValueWhereMarker": "pancreatic A cell",
+    "pValue": 0
+  },
+  {
+    "x": 12,
+    "y": 21,
+    "geneName": "GCG",
+    "value": 93.3063325,
+    "cellGroupValue": "type B pancreatic cell",
+    "cellGroupValueWhereMarker": "pancreatic A cell",
+    "pValue": 0
+  },
+  {
+    "x": 11,
+    "y": 21,
+    "geneName": "GCG",
+    "value": 60.63238,
+    "cellGroupValue": "professional antigen presenting cell",
+    "cellGroupValueWhereMarker": "pancreatic A cell",
+    "pValue": 0
+  },
+  {
+    "x": 10,
+    "y": 21,
+    "geneName": "GCG",
+    "value": 86.039675,
+    "cellGroupValue": "pancreatic stellate cell",
+    "cellGroupValueWhereMarker": "pancreatic A cell",
+    "pValue": 0
+  },
+  {
+    "x": 0,
+    "y": 21,
+    "geneName": "GCG",
+    "value": 47.543884,
+    "cellGroupValue": "acinar cell",
+    "cellGroupValueWhereMarker": "pancreatic A cell",
+    "pValue": 0
+  },
+  {
+    "x": 6,
+    "y": 21,
+    "geneName": "GCG",
+    "value": 109.12472,
+    "cellGroupValue": "pancreatic PP cell",
+    "cellGroupValueWhereMarker": "pancreatic A cell",
+    "pValue": 0
+  },
+  {
+    "x": 9,
+    "y": 21,
+    "geneName": "GCG",
+    "value": 121.66835,
+    "cellGroupValue": "pancreatic epsilon cell",
+    "cellGroupValueWhereMarker": "pancreatic A cell",
+    "pValue": 0
+  },
+  {
+    "x": 8,
+    "y": 21,
+    "geneName": "GCG",
+    "value": 659.2563,
+    "cellGroupValue": "pancreatic endocrine cell",
+    "cellGroupValueWhereMarker": "pancreatic A cell",
+    "pValue": 0
+  },
+  {
+    "x": 7,
+    "y": 21,
+    "geneName": "GCG",
+    "value": 49.905714,
+    "cellGroupValue": "pancreatic ductal cell",
+    "cellGroupValueWhereMarker": "pancreatic A cell",
+    "pValue": 0
+  },
+  {
+    "x": 5,
+    "y": 21,
+    "geneName": "GCG",
+    "value": 88.593375,
+    "cellGroupValue": "pancreatic D cell",
+    "cellGroupValueWhereMarker": "pancreatic A cell",
+    "pValue": 0
+  },
+  {
+    "x": 4,
+    "y": 21,
+    "geneName": "GCG",
+    "value": 128239.535,
+    "cellGroupValue": "pancreatic A cell",
+    "cellGroupValueWhereMarker": "pancreatic A cell",
+    "pValue": 0
+  },
+  {
+    "x": 3,
+    "y": 21,
+    "geneName": "GCG",
+    "value": 368.52158,
+    "cellGroupValue": "mast cell",
+    "cellGroupValueWhereMarker": "pancreatic A cell",
+    "pValue": 0
+  },
+  {
+    "x": 2,
+    "y": 21,
+    "geneName": "GCG",
+    "value": 152.580285,
+    "cellGroupValue": "endothelial cell",
+    "cellGroupValueWhereMarker": "pancreatic A cell",
+    "pValue": 0
+  },
+  {
+    "x": 4,
+    "y": 22,
+    "geneName": "TM4SF4",
+    "value": 3262.34015,
+    "cellGroupValue": "pancreatic A cell",
+    "cellGroupValueWhereMarker": "pancreatic A cell",
+    "pValue": 9.4822851003e-314
+  },
+  {
+    "x": 12,
+    "y": 22,
+    "geneName": "TM4SF4",
+    "value": 3.8128052,
+    "cellGroupValue": "type B pancreatic cell",
+    "cellGroupValueWhereMarker": "pancreatic A cell",
+    "pValue": 9.4822851003e-314
+  },
+  {
+    "x": 11,
+    "y": 22,
+    "geneName": "TM4SF4",
+    "value": 0,
+    "cellGroupValue": "professional antigen presenting cell",
+    "cellGroupValueWhereMarker": "pancreatic A cell",
+    "pValue": 9.4822851003e-314
+  },
+  {
+    "x": 10,
+    "y": 22,
+    "geneName": "TM4SF4",
+    "value": 1.875329,
+    "cellGroupValue": "pancreatic stellate cell",
+    "cellGroupValueWhereMarker": "pancreatic A cell",
+    "pValue": 9.4822851003e-314
+  },
+  {
+    "x": 6,
+    "y": 22,
+    "geneName": "TM4SF4",
+    "value": 2218.61,
+    "cellGroupValue": "pancreatic PP cell",
+    "cellGroupValueWhereMarker": "pancreatic A cell",
+    "pValue": 9.4822851003e-314
+  },
+  {
+    "x": 9,
+    "y": 22,
+    "geneName": "TM4SF4",
+    "value": 3922.0808,
+    "cellGroupValue": "pancreatic epsilon cell",
+    "cellGroupValueWhereMarker": "pancreatic A cell",
+    "pValue": 9.4822851003e-314
+  },
+  {
+    "x": 8,
+    "y": 22,
+    "geneName": "TM4SF4",
+    "value": 10.995233,
+    "cellGroupValue": "pancreatic endocrine cell",
+    "cellGroupValueWhereMarker": "pancreatic A cell",
+    "pValue": 9.4822851003e-314
+  },
+  {
+    "x": 7,
+    "y": 22,
+    "geneName": "TM4SF4",
+    "value": 74.648285,
+    "cellGroupValue": "pancreatic ductal cell",
+    "cellGroupValueWhereMarker": "pancreatic A cell",
+    "pValue": 9.4822851003e-314
+  },
+  {
+    "x": 5,
+    "y": 22,
+    "geneName": "TM4SF4",
+    "value": 192.54998,
+    "cellGroupValue": "pancreatic D cell",
+    "cellGroupValueWhereMarker": "pancreatic A cell",
+    "pValue": 9.4822851003e-314
+  },
+  {
+    "x": 0,
+    "y": 22,
+    "geneName": "TM4SF4",
+    "value": 2.4636462,
+    "cellGroupValue": "acinar cell",
+    "cellGroupValueWhereMarker": "pancreatic A cell",
+    "pValue": 9.4822851003e-314
+  },
+  {
+    "x": 3,
+    "y": 22,
+    "geneName": "TM4SF4",
+    "value": 12.794596,
+    "cellGroupValue": "mast cell",
+    "cellGroupValueWhereMarker": "pancreatic A cell",
+    "pValue": 9.4822851003e-314
+  },
+  {
+    "x": 2,
+    "y": 22,
+    "geneName": "TM4SF4",
+    "value": 7.11896415,
+    "cellGroupValue": "endothelial cell",
+    "cellGroupValueWhereMarker": "pancreatic A cell",
+    "pValue": 9.4822851003e-314
+  },
+  {
+    "x": 1,
+    "y": 22,
+    "geneName": "TM4SF4",
+    "value": 607.19885,
+    "cellGroupValue": "co-expression cell",
+    "cellGroupValueWhereMarker": "pancreatic A cell",
+    "pValue": 9.4822851003e-314
+  },
+  {
+    "x": 0,
+    "y": 23,
+    "geneName": "GPX3",
+    "value": 25.062002,
+    "cellGroupValue": "acinar cell",
+    "cellGroupValueWhereMarker": "pancreatic A cell",
+    "pValue": 2.870830367268882e-301
+  },
+  {
+    "x": 12,
+    "y": 23,
+    "geneName": "GPX3",
+    "value": 192.62365,
+    "cellGroupValue": "type B pancreatic cell",
+    "cellGroupValueWhereMarker": "pancreatic A cell",
+    "pValue": 2.870830367268882e-301
+  },
+  {
+    "x": 11,
+    "y": 23,
+    "geneName": "GPX3",
+    "value": 9.011525,
+    "cellGroupValue": "professional antigen presenting cell",
+    "cellGroupValueWhereMarker": "pancreatic A cell",
+    "pValue": 2.870830367268882e-301
+  },
+  {
+    "x": 10,
+    "y": 23,
+    "geneName": "GPX3",
+    "value": 57.538085,
+    "cellGroupValue": "pancreatic stellate cell",
+    "cellGroupValueWhereMarker": "pancreatic A cell",
+    "pValue": 2.870830367268882e-301
+  },
+  {
+    "x": 6,
+    "y": 23,
+    "geneName": "GPX3",
+    "value": 131.58144,
+    "cellGroupValue": "pancreatic PP cell",
+    "cellGroupValueWhereMarker": "pancreatic A cell",
+    "pValue": 2.870830367268882e-301
+  },
+  {
+    "x": 9,
+    "y": 23,
+    "geneName": "GPX3",
+    "value": 232.93257,
+    "cellGroupValue": "pancreatic epsilon cell",
+    "cellGroupValueWhereMarker": "pancreatic A cell",
+    "pValue": 2.870830367268882e-301
+  },
+  {
+    "x": 8,
+    "y": 23,
+    "geneName": "GPX3",
+    "value": 27.7565,
+    "cellGroupValue": "pancreatic endocrine cell",
+    "cellGroupValueWhereMarker": "pancreatic A cell",
+    "pValue": 2.870830367268882e-301
+  },
+  {
+    "x": 7,
+    "y": 23,
+    "geneName": "GPX3",
+    "value": 3.55382595,
+    "cellGroupValue": "pancreatic ductal cell",
+    "cellGroupValueWhereMarker": "pancreatic A cell",
+    "pValue": 2.870830367268882e-301
+  },
+  {
+    "x": 5,
+    "y": 23,
+    "geneName": "GPX3",
+    "value": 761.41998,
+    "cellGroupValue": "pancreatic D cell",
+    "cellGroupValueWhereMarker": "pancreatic A cell",
+    "pValue": 2.870830367268882e-301
+  },
+  {
+    "x": 4,
+    "y": 23,
+    "geneName": "GPX3",
+    "value": 1975.7449,
+    "cellGroupValue": "pancreatic A cell",
+    "cellGroupValueWhereMarker": "pancreatic A cell",
+    "pValue": 2.870830367268882e-301
+  },
+  {
+    "x": 3,
+    "y": 23,
+    "geneName": "GPX3",
+    "value": 2.2030535,
+    "cellGroupValue": "mast cell",
+    "cellGroupValueWhereMarker": "pancreatic A cell",
+    "pValue": 2.870830367268882e-301
+  },
+  {
+    "x": 2,
+    "y": 23,
+    "geneName": "GPX3",
+    "value": 3.74785725,
+    "cellGroupValue": "endothelial cell",
+    "cellGroupValueWhereMarker": "pancreatic A cell",
+    "pValue": 2.870830367268882e-301
+  },
+  {
+    "x": 1,
+    "y": 23,
+    "geneName": "GPX3",
+    "value": 855.3464,
+    "cellGroupValue": "co-expression cell",
+    "cellGroupValueWhereMarker": "pancreatic A cell",
+    "pValue": 2.870830367268882e-301
+  },
+  {
+    "x": 8,
+    "y": 24,
+    "geneName": "TTR",
+    "value": 594.91876,
+    "cellGroupValue": "pancreatic endocrine cell",
+    "cellGroupValueWhereMarker": "pancreatic A cell",
+    "pValue": 1.254143988535837e-300
+  },
+  {
+    "x": 7,
+    "y": 24,
+    "geneName": "TTR",
+    "value": 26.443237,
+    "cellGroupValue": "pancreatic ductal cell",
+    "cellGroupValueWhereMarker": "pancreatic A cell",
+    "pValue": 1.254143988535837e-300
+  },
+  {
+    "x": 5,
+    "y": 24,
+    "geneName": "TTR",
+    "value": 2169.86795,
+    "cellGroupValue": "pancreatic D cell",
+    "cellGroupValueWhereMarker": "pancreatic A cell",
+    "pValue": 1.254143988535837e-300
+  },
+  {
+    "x": 3,
+    "y": 24,
+    "geneName": "TTR",
+    "value": 153.53516,
+    "cellGroupValue": "mast cell",
+    "cellGroupValueWhereMarker": "pancreatic A cell",
+    "pValue": 1.254143988535837e-300
+  },
+  {
+    "x": 4,
+    "y": 24,
+    "geneName": "TTR",
+    "value": 59171.99,
+    "cellGroupValue": "pancreatic A cell",
+    "cellGroupValueWhereMarker": "pancreatic A cell",
+    "pValue": 1.254143988535837e-300
+  },
+  {
+    "x": 2,
+    "y": 24,
+    "geneName": "TTR",
+    "value": 41.4953785,
+    "cellGroupValue": "endothelial cell",
+    "cellGroupValueWhereMarker": "pancreatic A cell",
+    "pValue": 1.254143988535837e-300
+  },
+  {
+    "x": 1,
+    "y": 24,
+    "geneName": "TTR",
+    "value": 15640.134,
+    "cellGroupValue": "co-expression cell",
+    "cellGroupValueWhereMarker": "pancreatic A cell",
+    "pValue": 1.254143988535837e-300
+  },
+  {
+    "x": 0,
+    "y": 24,
+    "geneName": "TTR",
+    "value": 22.302822,
+    "cellGroupValue": "acinar cell",
+    "cellGroupValueWhereMarker": "pancreatic A cell",
+    "pValue": 1.254143988535837e-300
+  },
+  {
+    "x": 12,
+    "y": 24,
+    "geneName": "TTR",
+    "value": 2247.3955,
+    "cellGroupValue": "type B pancreatic cell",
+    "cellGroupValueWhereMarker": "pancreatic A cell",
+    "pValue": 1.254143988535837e-300
+  },
+  {
+    "x": 11,
+    "y": 24,
+    "geneName": "TTR",
+    "value": 11.280443,
+    "cellGroupValue": "professional antigen presenting cell",
+    "cellGroupValueWhereMarker": "pancreatic A cell",
+    "pValue": 1.254143988535837e-300
+  },
+  {
+    "x": 10,
+    "y": 24,
+    "geneName": "TTR",
+    "value": 31.100355,
+    "cellGroupValue": "pancreatic stellate cell",
+    "cellGroupValueWhereMarker": "pancreatic A cell",
+    "pValue": 1.254143988535837e-300
+  },
+  {
+    "x": 6,
+    "y": 24,
+    "geneName": "TTR",
+    "value": 8642.295,
+    "cellGroupValue": "pancreatic PP cell",
+    "cellGroupValueWhereMarker": "pancreatic A cell",
+    "pValue": 1.254143988535837e-300
+  },
+  {
+    "x": 9,
+    "y": 24,
+    "geneName": "TTR",
+    "value": 12558.349,
+    "cellGroupValue": "pancreatic epsilon cell",
+    "cellGroupValueWhereMarker": "pancreatic A cell",
+    "pValue": 1.254143988535837e-300
+  },
+  {
+    "x": 1,
+    "y": 25,
+    "geneName": "SST",
+    "value": 46.740955,
+    "cellGroupValue": "co-expression cell",
+    "cellGroupValueWhereMarker": "pancreatic D cell",
+    "pValue": 2.2954265840852087e-113
+  },
+  {
+    "x": 0,
+    "y": 25,
+    "geneName": "SST",
+    "value": 0.55404085,
+    "cellGroupValue": "acinar cell",
+    "cellGroupValueWhereMarker": "pancreatic D cell",
+    "pValue": 2.2954265840852087e-113
+  },
+  {
+    "x": 12,
+    "y": 25,
+    "geneName": "SST",
+    "value": 12.161304,
+    "cellGroupValue": "type B pancreatic cell",
+    "cellGroupValueWhereMarker": "pancreatic D cell",
+    "pValue": 2.2954265840852087e-113
+  },
+  {
+    "x": 11,
+    "y": 25,
+    "geneName": "SST",
+    "value": 3.3755045,
+    "cellGroupValue": "professional antigen presenting cell",
+    "cellGroupValueWhereMarker": "pancreatic D cell",
+    "pValue": 2.2954265840852087e-113
+  },
+  {
+    "x": 10,
+    "y": 25,
+    "geneName": "SST",
+    "value": 9.8464405,
+    "cellGroupValue": "pancreatic stellate cell",
+    "cellGroupValueWhereMarker": "pancreatic D cell",
+    "pValue": 2.2954265840852087e-113
+  },
+  {
+    "x": 6,
+    "y": 25,
+    "geneName": "SST",
+    "value": 11.644854,
+    "cellGroupValue": "pancreatic PP cell",
+    "cellGroupValueWhereMarker": "pancreatic D cell",
+    "pValue": 2.2954265840852087e-113
+  },
+  {
+    "x": 9,
+    "y": 25,
+    "geneName": "SST",
+    "value": 3.001876,
+    "cellGroupValue": "pancreatic epsilon cell",
+    "cellGroupValueWhereMarker": "pancreatic D cell",
+    "pValue": 2.2954265840852087e-113
+  },
+  {
+    "x": 8,
+    "y": 25,
+    "geneName": "SST",
+    "value": 65.9714,
+    "cellGroupValue": "pancreatic endocrine cell",
+    "cellGroupValueWhereMarker": "pancreatic D cell",
+    "pValue": 2.2954265840852087e-113
+  },
+  {
+    "x": 7,
+    "y": 25,
+    "geneName": "SST",
+    "value": 3.16897225,
+    "cellGroupValue": "pancreatic ductal cell",
+    "cellGroupValueWhereMarker": "pancreatic D cell",
+    "pValue": 2.2954265840852087e-113
+  },
+  {
+    "x": 5,
+    "y": 25,
+    "geneName": "SST",
+    "value": 191843.435,
+    "cellGroupValue": "pancreatic D cell",
+    "cellGroupValueWhereMarker": "pancreatic D cell",
+    "pValue": 2.2954265840852087e-113
+  },
+  {
+    "x": 4,
+    "y": 25,
+    "geneName": "SST",
+    "value": 9.9745885,
+    "cellGroupValue": "pancreatic A cell",
+    "cellGroupValueWhereMarker": "pancreatic D cell",
+    "pValue": 2.2954265840852087e-113
+  },
+  {
+    "x": 3,
+    "y": 25,
+    "geneName": "SST",
+    "value": 28.35397,
+    "cellGroupValue": "mast cell",
+    "cellGroupValueWhereMarker": "pancreatic D cell",
+    "pValue": 2.2954265840852087e-113
+  },
+  {
+    "x": 2,
+    "y": 25,
+    "geneName": "SST",
+    "value": 15.91425725,
+    "cellGroupValue": "endothelial cell",
+    "cellGroupValueWhereMarker": "pancreatic D cell",
+    "pValue": 2.2954265840852087e-113
+  },
+  {
+    "x": 5,
+    "y": 26,
+    "geneName": "RBP4",
+    "value": 7677.5507,
+    "cellGroupValue": "pancreatic D cell",
+    "cellGroupValueWhereMarker": "pancreatic D cell",
+    "pValue": 1.3668221078688408e-70
+  },
+  {
+    "x": 4,
+    "y": 26,
+    "geneName": "RBP4",
+    "value": 0,
+    "cellGroupValue": "pancreatic A cell",
+    "cellGroupValueWhereMarker": "pancreatic D cell",
+    "pValue": 1.3668221078688408e-70
+  },
+  {
+    "x": 3,
+    "y": 26,
+    "geneName": "RBP4",
+    "value": 6.6091604,
+    "cellGroupValue": "mast cell",
+    "cellGroupValueWhereMarker": "pancreatic D cell",
+    "pValue": 1.3668221078688408e-70
+  },
+  {
+    "x": 2,
+    "y": 26,
+    "geneName": "RBP4",
+    "value": 4.2956412,
+    "cellGroupValue": "endothelial cell",
+    "cellGroupValueWhereMarker": "pancreatic D cell",
+    "pValue": 1.3668221078688408e-70
+  },
+  {
+    "x": 1,
+    "y": 26,
+    "geneName": "RBP4",
+    "value": 2092.8267,
+    "cellGroupValue": "co-expression cell",
+    "cellGroupValueWhereMarker": "pancreatic D cell",
+    "pValue": 1.3668221078688408e-70
+  },
+  {
+    "x": 0,
+    "y": 26,
+    "geneName": "RBP4",
+    "value": 0,
+    "cellGroupValue": "acinar cell",
+    "cellGroupValueWhereMarker": "pancreatic D cell",
+    "pValue": 1.3668221078688408e-70
+  },
+  {
+    "x": 10,
+    "y": 26,
+    "geneName": "RBP4",
+    "value": 0,
+    "cellGroupValue": "pancreatic stellate cell",
+    "cellGroupValueWhereMarker": "pancreatic D cell",
+    "pValue": 1.3668221078688408e-70
+  },
+  {
+    "x": 6,
+    "y": 26,
+    "geneName": "RBP4",
+    "value": 0.7953272,
+    "cellGroupValue": "pancreatic PP cell",
+    "cellGroupValueWhereMarker": "pancreatic D cell",
+    "pValue": 1.3668221078688408e-70
+  },
+  {
+    "x": 9,
+    "y": 26,
+    "geneName": "RBP4",
+    "value": 110.170815,
+    "cellGroupValue": "pancreatic epsilon cell",
+    "cellGroupValueWhereMarker": "pancreatic D cell",
+    "pValue": 1.3668221078688408e-70
+  },
+  {
+    "x": 8,
+    "y": 26,
+    "geneName": "RBP4",
+    "value": 18.047445,
+    "cellGroupValue": "pancreatic endocrine cell",
+    "cellGroupValueWhereMarker": "pancreatic D cell",
+    "pValue": 1.3668221078688408e-70
+  },
+  {
+    "x": 7,
+    "y": 26,
+    "geneName": "RBP4",
+    "value": 0.6520403,
+    "cellGroupValue": "pancreatic ductal cell",
+    "cellGroupValueWhereMarker": "pancreatic D cell",
+    "pValue": 1.3668221078688408e-70
+  },
+  {
+    "x": 11,
+    "y": 26,
+    "geneName": "RBP4",
+    "value": 0,
+    "cellGroupValue": "professional antigen presenting cell",
+    "cellGroupValueWhereMarker": "pancreatic D cell",
+    "pValue": 1.3668221078688408e-70
+  },
+  {
+    "x": 12,
+    "y": 26,
+    "geneName": "RBP4",
+    "value": 869.80887,
+    "cellGroupValue": "type B pancreatic cell",
+    "cellGroupValueWhereMarker": "pancreatic D cell",
+    "pValue": 1.3668221078688408e-70
+  },
+  {
+    "x": 4,
+    "y": 27,
+    "geneName": "SEC11C",
+    "value": 268.069585,
+    "cellGroupValue": "pancreatic A cell",
+    "cellGroupValueWhereMarker": "pancreatic D cell",
+    "pValue": 5.944258027231786e-44
+  },
+  {
+    "x": 5,
+    "y": 27,
+    "geneName": "SEC11C",
+    "value": 1237.51265,
+    "cellGroupValue": "pancreatic D cell",
+    "cellGroupValueWhereMarker": "pancreatic D cell",
+    "pValue": 5.944258027231786e-44
+  },
+  {
+    "x": 7,
+    "y": 27,
+    "geneName": "SEC11C",
+    "value": 72.330905,
+    "cellGroupValue": "pancreatic ductal cell",
+    "cellGroupValueWhereMarker": "pancreatic D cell",
+    "pValue": 5.944258027231786e-44
+  },
+  {
+    "x": 8,
+    "y": 27,
+    "geneName": "SEC11C",
+    "value": 6.7034235,
+    "cellGroupValue": "pancreatic endocrine cell",
+    "cellGroupValueWhereMarker": "pancreatic D cell",
+    "pValue": 5.944258027231786e-44
+  },
+  {
+    "x": 9,
+    "y": 27,
+    "geneName": "SEC11C",
+    "value": 442.96814,
+    "cellGroupValue": "pancreatic epsilon cell",
+    "cellGroupValueWhereMarker": "pancreatic D cell",
+    "pValue": 5.944258027231786e-44
+  },
+  {
+    "x": 6,
+    "y": 27,
+    "geneName": "SEC11C",
+    "value": 500.12018,
+    "cellGroupValue": "pancreatic PP cell",
+    "cellGroupValueWhereMarker": "pancreatic D cell",
+    "pValue": 5.944258027231786e-44
+  },
+  {
+    "x": 10,
+    "y": 27,
+    "geneName": "SEC11C",
+    "value": 6.91768265,
+    "cellGroupValue": "pancreatic stellate cell",
+    "cellGroupValueWhereMarker": "pancreatic D cell",
+    "pValue": 5.944258027231786e-44
+  },
+  {
+    "x": 11,
+    "y": 27,
+    "geneName": "SEC11C",
+    "value": 92.36813,
+    "cellGroupValue": "professional antigen presenting cell",
+    "cellGroupValueWhereMarker": "pancreatic D cell",
+    "pValue": 5.944258027231786e-44
+  },
+  {
+    "x": 12,
+    "y": 27,
+    "geneName": "SEC11C",
+    "value": 386.593,
+    "cellGroupValue": "type B pancreatic cell",
+    "cellGroupValueWhereMarker": "pancreatic D cell",
+    "pValue": 5.944258027231786e-44
+  },
+  {
+    "x": 0,
+    "y": 27,
+    "geneName": "SEC11C",
+    "value": 121.26251,
+    "cellGroupValue": "acinar cell",
+    "cellGroupValueWhereMarker": "pancreatic D cell",
+    "pValue": 5.944258027231786e-44
+  },
+  {
+    "x": 1,
+    "y": 27,
+    "geneName": "SEC11C",
+    "value": 398.00677,
+    "cellGroupValue": "co-expression cell",
+    "cellGroupValueWhereMarker": "pancreatic D cell",
+    "pValue": 5.944258027231786e-44
+  },
+  {
+    "x": 2,
+    "y": 27,
+    "geneName": "SEC11C",
+    "value": 19.9045585,
+    "cellGroupValue": "endothelial cell",
+    "cellGroupValueWhereMarker": "pancreatic D cell",
+    "pValue": 5.944258027231786e-44
+  },
+  {
+    "x": 3,
+    "y": 27,
+    "geneName": "SEC11C",
+    "value": 117.86336,
+    "cellGroupValue": "mast cell",
+    "cellGroupValueWhereMarker": "pancreatic D cell",
+    "pValue": 5.944258027231786e-44
+  },
+  {
+    "x": 10,
+    "y": 28,
+    "geneName": "LEPR",
+    "value": 0,
+    "cellGroupValue": "pancreatic stellate cell",
+    "cellGroupValueWhereMarker": "pancreatic D cell",
+    "pValue": 7.923947023348084e-40
+  },
+  {
+    "x": 11,
+    "y": 28,
+    "geneName": "LEPR",
+    "value": 0,
+    "cellGroupValue": "professional antigen presenting cell",
+    "cellGroupValueWhereMarker": "pancreatic D cell",
+    "pValue": 7.923947023348084e-40
+  },
+  {
+    "x": 12,
+    "y": 28,
+    "geneName": "LEPR",
+    "value": 0,
+    "cellGroupValue": "type B pancreatic cell",
+    "cellGroupValueWhereMarker": "pancreatic D cell",
+    "pValue": 7.923947023348084e-40
+  },
+  {
+    "x": 0,
+    "y": 28,
+    "geneName": "LEPR",
+    "value": 0,
+    "cellGroupValue": "acinar cell",
+    "cellGroupValueWhereMarker": "pancreatic D cell",
+    "pValue": 7.923947023348084e-40
+  },
+  {
+    "x": 1,
+    "y": 28,
+    "geneName": "LEPR",
+    "value": 4.5959067,
+    "cellGroupValue": "co-expression cell",
+    "cellGroupValueWhereMarker": "pancreatic D cell",
+    "pValue": 7.923947023348084e-40
+  },
+  {
+    "x": 2,
+    "y": 28,
+    "geneName": "LEPR",
+    "value": 0,
+    "cellGroupValue": "endothelial cell",
+    "cellGroupValueWhereMarker": "pancreatic D cell",
+    "pValue": 7.923947023348084e-40
+  },
+  {
+    "x": 3,
+    "y": 28,
+    "geneName": "LEPR",
+    "value": 0,
+    "cellGroupValue": "mast cell",
+    "cellGroupValueWhereMarker": "pancreatic D cell",
+    "pValue": 7.923947023348084e-40
+  },
+  {
+    "x": 5,
+    "y": 28,
+    "geneName": "LEPR",
+    "value": 368.463945,
+    "cellGroupValue": "pancreatic D cell",
+    "cellGroupValueWhereMarker": "pancreatic D cell",
+    "pValue": 7.923947023348084e-40
+  },
+  {
+    "x": 4,
+    "y": 28,
+    "geneName": "LEPR",
+    "value": 0,
+    "cellGroupValue": "pancreatic A cell",
+    "cellGroupValueWhereMarker": "pancreatic D cell",
+    "pValue": 7.923947023348084e-40
+  },
+  {
+    "x": 7,
+    "y": 28,
+    "geneName": "LEPR",
+    "value": 0,
+    "cellGroupValue": "pancreatic ductal cell",
+    "cellGroupValueWhereMarker": "pancreatic D cell",
+    "pValue": 7.923947023348084e-40
+  },
+  {
+    "x": 8,
+    "y": 28,
+    "geneName": "LEPR",
+    "value": 0,
+    "cellGroupValue": "pancreatic endocrine cell",
+    "cellGroupValueWhereMarker": "pancreatic D cell",
+    "pValue": 7.923947023348084e-40
+  },
+  {
+    "x": 9,
+    "y": 28,
+    "geneName": "LEPR",
+    "value": 1.5205091,
+    "cellGroupValue": "pancreatic epsilon cell",
+    "cellGroupValueWhereMarker": "pancreatic D cell",
+    "pValue": 7.923947023348084e-40
+  },
+  {
+    "x": 6,
+    "y": 28,
+    "geneName": "LEPR",
+    "value": 0,
+    "cellGroupValue": "pancreatic PP cell",
+    "cellGroupValueWhereMarker": "pancreatic D cell",
+    "pValue": 7.923947023348084e-40
+  },
+  {
+    "x": 4,
+    "y": 29,
+    "geneName": "HHEX",
+    "value": 0,
+    "cellGroupValue": "pancreatic A cell",
+    "cellGroupValueWhereMarker": "pancreatic D cell",
+    "pValue": 4.036390445299022e-32
+  },
+  {
+    "x": 3,
+    "y": 29,
+    "geneName": "HHEX",
+    "value": 0,
+    "cellGroupValue": "mast cell",
+    "cellGroupValueWhereMarker": "pancreatic D cell",
+    "pValue": 4.036390445299022e-32
+  },
+  {
+    "x": 2,
+    "y": 29,
+    "geneName": "HHEX",
+    "value": 54.8701385,
+    "cellGroupValue": "endothelial cell",
+    "cellGroupValueWhereMarker": "pancreatic D cell",
+    "pValue": 4.036390445299022e-32
+  },
+  {
+    "x": 1,
+    "y": 29,
+    "geneName": "HHEX",
+    "value": 0,
+    "cellGroupValue": "co-expression cell",
+    "cellGroupValueWhereMarker": "pancreatic D cell",
+    "pValue": 4.036390445299022e-32
+  },
+  {
+    "x": 0,
+    "y": 29,
+    "geneName": "HHEX",
+    "value": 0,
+    "cellGroupValue": "acinar cell",
+    "cellGroupValueWhereMarker": "pancreatic D cell",
+    "pValue": 4.036390445299022e-32
+  },
+  {
+    "x": 12,
+    "y": 29,
+    "geneName": "HHEX",
+    "value": 0,
+    "cellGroupValue": "type B pancreatic cell",
+    "cellGroupValueWhereMarker": "pancreatic D cell",
+    "pValue": 4.036390445299022e-32
+  },
+  {
+    "x": 11,
+    "y": 29,
+    "geneName": "HHEX",
+    "value": 0,
+    "cellGroupValue": "professional antigen presenting cell",
+    "cellGroupValueWhereMarker": "pancreatic D cell",
+    "pValue": 4.036390445299022e-32
+  },
+  {
+    "x": 10,
+    "y": 29,
+    "geneName": "HHEX",
+    "value": 0,
+    "cellGroupValue": "pancreatic stellate cell",
+    "cellGroupValueWhereMarker": "pancreatic D cell",
+    "pValue": 4.036390445299022e-32
+  },
+  {
+    "x": 6,
+    "y": 29,
+    "geneName": "HHEX",
+    "value": 0,
+    "cellGroupValue": "pancreatic PP cell",
+    "cellGroupValueWhereMarker": "pancreatic D cell",
+    "pValue": 4.036390445299022e-32
+  },
+  {
+    "x": 9,
+    "y": 29,
+    "geneName": "HHEX",
+    "value": 0,
+    "cellGroupValue": "pancreatic epsilon cell",
+    "cellGroupValueWhereMarker": "pancreatic D cell",
+    "pValue": 4.036390445299022e-32
+  },
+  {
+    "x": 8,
+    "y": 29,
+    "geneName": "HHEX",
+    "value": 0,
+    "cellGroupValue": "pancreatic endocrine cell",
+    "cellGroupValueWhereMarker": "pancreatic D cell",
+    "pValue": 4.036390445299022e-32
+  },
+  {
+    "x": 7,
+    "y": 29,
+    "geneName": "HHEX",
+    "value": 54.6440715,
+    "cellGroupValue": "pancreatic ductal cell",
+    "cellGroupValueWhereMarker": "pancreatic D cell",
+    "pValue": 4.036390445299022e-32
+  },
+  {
+    "x": 5,
+    "y": 29,
+    "geneName": "HHEX",
+    "value": 191.4514,
+    "cellGroupValue": "pancreatic D cell",
+    "cellGroupValueWhereMarker": "pancreatic D cell",
+    "pValue": 4.036390445299022e-32
+  },
+  {
+    "x": 6,
+    "y": 30,
+    "geneName": "PPY",
+    "value": 97171.76,
+    "cellGroupValue": "pancreatic PP cell",
+    "cellGroupValueWhereMarker": "pancreatic PP cell",
+    "pValue": 3.433850232402078e-183
+  },
+  {
+    "x": 9,
+    "y": 30,
+    "geneName": "PPY",
+    "value": 51.370422,
+    "cellGroupValue": "pancreatic epsilon cell",
+    "cellGroupValueWhereMarker": "pancreatic PP cell",
+    "pValue": 3.433850232402078e-183
+  },
+  {
+    "x": 8,
+    "y": 30,
+    "geneName": "PPY",
+    "value": 38.38608,
+    "cellGroupValue": "pancreatic endocrine cell",
+    "cellGroupValueWhereMarker": "pancreatic PP cell",
+    "pValue": 3.433850232402078e-183
+  },
+  {
+    "x": 7,
+    "y": 30,
+    "geneName": "PPY",
+    "value": 0,
+    "cellGroupValue": "pancreatic ductal cell",
+    "cellGroupValueWhereMarker": "pancreatic PP cell",
+    "pValue": 3.433850232402078e-183
+  },
+  {
+    "x": 5,
+    "y": 30,
+    "geneName": "PPY",
+    "value": 9.043688,
+    "cellGroupValue": "pancreatic D cell",
+    "cellGroupValueWhereMarker": "pancreatic PP cell",
+    "pValue": 3.433850232402078e-183
+  },
+  {
+    "x": 4,
+    "y": 30,
+    "geneName": "PPY",
+    "value": 8.544659,
+    "cellGroupValue": "pancreatic A cell",
+    "cellGroupValueWhereMarker": "pancreatic PP cell",
+    "pValue": 3.433850232402078e-183
+  },
+  {
+    "x": 3,
+    "y": 30,
+    "geneName": "PPY",
+    "value": 4.050567,
+    "cellGroupValue": "mast cell",
+    "cellGroupValueWhereMarker": "pancreatic PP cell",
+    "pValue": 3.433850232402078e-183
+  },
+  {
+    "x": 2,
+    "y": 30,
+    "geneName": "PPY",
+    "value": 8.550166,
+    "cellGroupValue": "endothelial cell",
+    "cellGroupValueWhereMarker": "pancreatic PP cell",
+    "pValue": 3.433850232402078e-183
+  },
+  {
+    "x": 1,
+    "y": 30,
+    "geneName": "PPY",
+    "value": 6.501297,
+    "cellGroupValue": "co-expression cell",
+    "cellGroupValueWhereMarker": "pancreatic PP cell",
+    "pValue": 3.433850232402078e-183
+  },
+  {
+    "x": 0,
+    "y": 30,
+    "geneName": "PPY",
+    "value": 5.985156,
+    "cellGroupValue": "acinar cell",
+    "cellGroupValueWhereMarker": "pancreatic PP cell",
+    "pValue": 3.433850232402078e-183
+  },
+  {
+    "x": 12,
+    "y": 30,
+    "geneName": "PPY",
+    "value": 7.24037525,
+    "cellGroupValue": "type B pancreatic cell",
+    "cellGroupValueWhereMarker": "pancreatic PP cell",
+    "pValue": 3.433850232402078e-183
+  },
+  {
+    "x": 11,
+    "y": 30,
+    "geneName": "PPY",
+    "value": 0,
+    "cellGroupValue": "professional antigen presenting cell",
+    "cellGroupValueWhereMarker": "pancreatic PP cell",
+    "pValue": 3.433850232402078e-183
+  },
+  {
+    "x": 10,
+    "y": 30,
+    "geneName": "PPY",
+    "value": 1.2766,
+    "cellGroupValue": "pancreatic stellate cell",
+    "cellGroupValueWhereMarker": "pancreatic PP cell",
+    "pValue": 3.433850232402078e-183
+  },
+  {
+    "x": 7,
+    "y": 31,
+    "geneName": "MEIS2",
+    "value": 23.248723,
+    "cellGroupValue": "pancreatic ductal cell",
+    "cellGroupValueWhereMarker": "pancreatic PP cell",
+    "pValue": 7.441272534721026e-86
+  },
+  {
+    "x": 4,
+    "y": 31,
+    "geneName": "MEIS2",
+    "value": 37.30664,
+    "cellGroupValue": "pancreatic A cell",
+    "cellGroupValueWhereMarker": "pancreatic PP cell",
+    "pValue": 7.441272534721026e-86
+  },
+  {
+    "x": 3,
+    "y": 31,
+    "geneName": "MEIS2",
+    "value": 1.1472129,
+    "cellGroupValue": "mast cell",
+    "cellGroupValueWhereMarker": "pancreatic PP cell",
+    "pValue": 7.441272534721026e-86
+  },
+  {
+    "x": 2,
+    "y": 31,
+    "geneName": "MEIS2",
+    "value": 0.69808615,
+    "cellGroupValue": "endothelial cell",
+    "cellGroupValueWhereMarker": "pancreatic PP cell",
+    "pValue": 7.441272534721026e-86
+  },
+  {
+    "x": 1,
+    "y": 31,
+    "geneName": "MEIS2",
+    "value": 111.099174,
+    "cellGroupValue": "co-expression cell",
+    "cellGroupValueWhereMarker": "pancreatic PP cell",
+    "pValue": 7.441272534721026e-86
+  },
+  {
+    "x": 0,
+    "y": 31,
+    "geneName": "MEIS2",
+    "value": 0.7965869,
+    "cellGroupValue": "acinar cell",
+    "cellGroupValueWhereMarker": "pancreatic PP cell",
+    "pValue": 7.441272534721026e-86
+  },
+  {
+    "x": 12,
+    "y": 31,
+    "geneName": "MEIS2",
+    "value": 106.67186,
+    "cellGroupValue": "type B pancreatic cell",
+    "cellGroupValueWhereMarker": "pancreatic PP cell",
+    "pValue": 7.441272534721026e-86
+  },
+  {
+    "x": 11,
+    "y": 31,
+    "geneName": "MEIS2",
+    "value": 0,
+    "cellGroupValue": "professional antigen presenting cell",
+    "cellGroupValueWhereMarker": "pancreatic PP cell",
+    "pValue": 7.441272534721026e-86
+  },
+  {
+    "x": 10,
+    "y": 31,
+    "geneName": "MEIS2",
+    "value": 3.45926835,
+    "cellGroupValue": "pancreatic stellate cell",
+    "cellGroupValueWhereMarker": "pancreatic PP cell",
+    "pValue": 7.441272534721026e-86
+  },
+  {
+    "x": 6,
+    "y": 31,
+    "geneName": "MEIS2",
+    "value": 435.0974,
+    "cellGroupValue": "pancreatic PP cell",
+    "cellGroupValueWhereMarker": "pancreatic PP cell",
+    "pValue": 7.441272534721026e-86
+  },
+  {
+    "x": 9,
+    "y": 31,
+    "geneName": "MEIS2",
+    "value": 481.80112,
+    "cellGroupValue": "pancreatic epsilon cell",
+    "cellGroupValueWhereMarker": "pancreatic PP cell",
+    "pValue": 7.441272534721026e-86
+  },
+  {
+    "x": 8,
+    "y": 31,
+    "geneName": "MEIS2",
+    "value": 0,
+    "cellGroupValue": "pancreatic endocrine cell",
+    "cellGroupValueWhereMarker": "pancreatic PP cell",
+    "pValue": 7.441272534721026e-86
+  },
+  {
+    "x": 5,
+    "y": 31,
+    "geneName": "MEIS2",
+    "value": 74.58511,
+    "cellGroupValue": "pancreatic D cell",
+    "cellGroupValueWhereMarker": "pancreatic PP cell",
+    "pValue": 7.441272534721026e-86
+  },
+  {
+    "x": 4,
+    "y": 32,
+    "geneName": "PPY2P",
+    "value": 0,
+    "cellGroupValue": "pancreatic A cell",
+    "cellGroupValueWhereMarker": "pancreatic PP cell",
+    "pValue": 3.351509738858331e-82
+  },
+  {
+    "x": 12,
+    "y": 32,
+    "geneName": "PPY2P",
+    "value": 0,
+    "cellGroupValue": "type B pancreatic cell",
+    "cellGroupValueWhereMarker": "pancreatic PP cell",
+    "pValue": 3.351509738858331e-82
+  },
+  {
+    "x": 11,
+    "y": 32,
+    "geneName": "PPY2P",
+    "value": 0,
+    "cellGroupValue": "professional antigen presenting cell",
+    "cellGroupValueWhereMarker": "pancreatic PP cell",
+    "pValue": 3.351509738858331e-82
+  },
+  {
+    "x": 10,
+    "y": 32,
+    "geneName": "PPY2P",
+    "value": 0,
+    "cellGroupValue": "pancreatic stellate cell",
+    "cellGroupValueWhereMarker": "pancreatic PP cell",
+    "pValue": 3.351509738858331e-82
+  },
+  {
+    "x": 6,
+    "y": 32,
+    "geneName": "PPY2P",
+    "value": 219.14742,
+    "cellGroupValue": "pancreatic PP cell",
+    "cellGroupValueWhereMarker": "pancreatic PP cell",
+    "pValue": 3.351509738858331e-82
+  },
+  {
+    "x": 9,
+    "y": 32,
+    "geneName": "PPY2P",
+    "value": 0,
+    "cellGroupValue": "pancreatic epsilon cell",
+    "cellGroupValueWhereMarker": "pancreatic PP cell",
+    "pValue": 3.351509738858331e-82
+  },
+  {
+    "x": 8,
+    "y": 32,
+    "geneName": "PPY2P",
+    "value": 0,
+    "cellGroupValue": "pancreatic endocrine cell",
+    "cellGroupValueWhereMarker": "pancreatic PP cell",
+    "pValue": 3.351509738858331e-82
+  },
+  {
+    "x": 7,
+    "y": 32,
+    "geneName": "PPY2P",
+    "value": 0,
+    "cellGroupValue": "pancreatic ductal cell",
+    "cellGroupValueWhereMarker": "pancreatic PP cell",
+    "pValue": 3.351509738858331e-82
+  },
+  {
+    "x": 5,
+    "y": 32,
+    "geneName": "PPY2P",
+    "value": 0,
+    "cellGroupValue": "pancreatic D cell",
+    "cellGroupValueWhereMarker": "pancreatic PP cell",
+    "pValue": 3.351509738858331e-82
+  },
+  {
+    "x": 3,
+    "y": 32,
+    "geneName": "PPY2P",
+    "value": 0,
+    "cellGroupValue": "mast cell",
+    "cellGroupValueWhereMarker": "pancreatic PP cell",
+    "pValue": 3.351509738858331e-82
+  },
+  {
+    "x": 2,
+    "y": 32,
+    "geneName": "PPY2P",
+    "value": 0,
+    "cellGroupValue": "endothelial cell",
+    "cellGroupValueWhereMarker": "pancreatic PP cell",
+    "pValue": 3.351509738858331e-82
+  },
+  {
+    "x": 1,
+    "y": 32,
+    "geneName": "PPY2P",
+    "value": 0,
+    "cellGroupValue": "co-expression cell",
+    "cellGroupValueWhereMarker": "pancreatic PP cell",
+    "pValue": 3.351509738858331e-82
+  },
+  {
+    "x": 0,
+    "y": 32,
+    "geneName": "PPY2P",
+    "value": 0,
+    "cellGroupValue": "acinar cell",
+    "cellGroupValueWhereMarker": "pancreatic PP cell",
+    "pValue": 3.351509738858331e-82
+  },
+  {
+    "x": 4,
+    "y": 33,
+    "geneName": "ETV1",
+    "value": 6.859396,
+    "cellGroupValue": "pancreatic A cell",
+    "cellGroupValueWhereMarker": "pancreatic PP cell",
+    "pValue": 1.1244285939503626e-59
+  },
+  {
+    "x": 10,
+    "y": 33,
+    "geneName": "ETV1",
+    "value": 11.9963355,
+    "cellGroupValue": "pancreatic stellate cell",
+    "cellGroupValueWhereMarker": "pancreatic PP cell",
+    "pValue": 1.1244285939503626e-59
+  },
+  {
+    "x": 11,
+    "y": 33,
+    "geneName": "ETV1",
+    "value": 0,
+    "cellGroupValue": "professional antigen presenting cell",
+    "cellGroupValueWhereMarker": "pancreatic PP cell",
+    "pValue": 1.1244285939503626e-59
+  },
+  {
+    "x": 12,
+    "y": 33,
+    "geneName": "ETV1",
+    "value": 0,
+    "cellGroupValue": "type B pancreatic cell",
+    "cellGroupValueWhereMarker": "pancreatic PP cell",
+    "pValue": 1.1244285939503626e-59
+  },
+  {
+    "x": 5,
+    "y": 33,
+    "geneName": "ETV1",
+    "value": 43.627434,
+    "cellGroupValue": "pancreatic D cell",
+    "cellGroupValueWhereMarker": "pancreatic PP cell",
+    "pValue": 1.1244285939503626e-59
+  },
+  {
+    "x": 7,
+    "y": 33,
+    "geneName": "ETV1",
+    "value": 0,
+    "cellGroupValue": "pancreatic ductal cell",
+    "cellGroupValueWhereMarker": "pancreatic PP cell",
+    "pValue": 1.1244285939503626e-59
+  },
+  {
+    "x": 8,
+    "y": 33,
+    "geneName": "ETV1",
+    "value": 0,
+    "cellGroupValue": "pancreatic endocrine cell",
+    "cellGroupValueWhereMarker": "pancreatic PP cell",
+    "pValue": 1.1244285939503626e-59
+  },
+  {
+    "x": 9,
+    "y": 33,
+    "geneName": "ETV1",
+    "value": 1.5738688,
+    "cellGroupValue": "pancreatic epsilon cell",
+    "cellGroupValueWhereMarker": "pancreatic PP cell",
+    "pValue": 1.1244285939503626e-59
+  },
+  {
+    "x": 6,
+    "y": 33,
+    "geneName": "ETV1",
+    "value": 284.9033,
+    "cellGroupValue": "pancreatic PP cell",
+    "cellGroupValueWhereMarker": "pancreatic PP cell",
+    "pValue": 1.1244285939503626e-59
+  },
+  {
+    "x": 0,
+    "y": 33,
+    "geneName": "ETV1",
+    "value": 0,
+    "cellGroupValue": "acinar cell",
+    "cellGroupValueWhereMarker": "pancreatic PP cell",
+    "pValue": 1.1244285939503626e-59
+  },
+  {
+    "x": 1,
+    "y": 33,
+    "geneName": "ETV1",
+    "value": 27.603647,
+    "cellGroupValue": "co-expression cell",
+    "cellGroupValueWhereMarker": "pancreatic PP cell",
+    "pValue": 1.1244285939503626e-59
+  },
+  {
+    "x": 2,
+    "y": 33,
+    "geneName": "ETV1",
+    "value": 0,
+    "cellGroupValue": "endothelial cell",
+    "cellGroupValueWhereMarker": "pancreatic PP cell",
+    "pValue": 1.1244285939503626e-59
+  },
+  {
+    "x": 3,
+    "y": 33,
+    "geneName": "ETV1",
+    "value": 0,
+    "cellGroupValue": "mast cell",
+    "cellGroupValueWhereMarker": "pancreatic PP cell",
+    "pValue": 1.1244285939503626e-59
+  },
+  {
+    "x": 4,
+    "y": 34,
+    "geneName": "PAX6",
+    "value": 354.888415,
+    "cellGroupValue": "pancreatic A cell",
+    "cellGroupValueWhereMarker": "pancreatic PP cell",
+    "pValue": 1.674587406736995e-51
+  },
+  {
+    "x": 3,
+    "y": 34,
+    "geneName": "PAX6",
+    "value": 1.9802525,
+    "cellGroupValue": "mast cell",
+    "cellGroupValueWhereMarker": "pancreatic PP cell",
+    "pValue": 1.674587406736995e-51
+  },
+  {
+    "x": 2,
+    "y": 34,
+    "geneName": "PAX6",
+    "value": 0,
+    "cellGroupValue": "endothelial cell",
+    "cellGroupValueWhereMarker": "pancreatic PP cell",
+    "pValue": 1.674587406736995e-51
+  },
+  {
+    "x": 1,
+    "y": 34,
+    "geneName": "PAX6",
+    "value": 457.2315,
+    "cellGroupValue": "co-expression cell",
+    "cellGroupValueWhereMarker": "pancreatic PP cell",
+    "pValue": 1.674587406736995e-51
+  },
+  {
+    "x": 0,
+    "y": 34,
+    "geneName": "PAX6",
+    "value": 0,
+    "cellGroupValue": "acinar cell",
+    "cellGroupValueWhereMarker": "pancreatic PP cell",
+    "pValue": 1.674587406736995e-51
+  },
+  {
+    "x": 12,
+    "y": 34,
+    "geneName": "PAX6",
+    "value": 422.373475,
+    "cellGroupValue": "type B pancreatic cell",
+    "cellGroupValueWhereMarker": "pancreatic PP cell",
+    "pValue": 1.674587406736995e-51
+  },
+  {
+    "x": 11,
+    "y": 34,
+    "geneName": "PAX6",
+    "value": 1.1092436,
+    "cellGroupValue": "professional antigen presenting cell",
+    "cellGroupValueWhereMarker": "pancreatic PP cell",
+    "pValue": 1.674587406736995e-51
+  },
+  {
+    "x": 10,
+    "y": 34,
+    "geneName": "PAX6",
+    "value": 0,
+    "cellGroupValue": "pancreatic stellate cell",
+    "cellGroupValueWhereMarker": "pancreatic PP cell",
+    "pValue": 1.674587406736995e-51
+  },
+  {
+    "x": 6,
+    "y": 34,
+    "geneName": "PAX6",
+    "value": 897.4535,
+    "cellGroupValue": "pancreatic PP cell",
+    "cellGroupValueWhereMarker": "pancreatic PP cell",
+    "pValue": 1.674587406736995e-51
+  },
+  {
+    "x": 9,
+    "y": 34,
+    "geneName": "PAX6",
+    "value": 1.5774168,
+    "cellGroupValue": "pancreatic epsilon cell",
+    "cellGroupValueWhereMarker": "pancreatic PP cell",
+    "pValue": 1.674587406736995e-51
+  },
+  {
+    "x": 8,
+    "y": 34,
+    "geneName": "PAX6",
+    "value": 0,
+    "cellGroupValue": "pancreatic endocrine cell",
+    "cellGroupValueWhereMarker": "pancreatic PP cell",
+    "pValue": 1.674587406736995e-51
+  },
+  {
+    "x": 7,
+    "y": 34,
+    "geneName": "PAX6",
+    "value": 0,
+    "cellGroupValue": "pancreatic ductal cell",
+    "cellGroupValueWhereMarker": "pancreatic PP cell",
+    "pValue": 1.674587406736995e-51
+  },
+  {
+    "x": 5,
+    "y": 34,
+    "geneName": "PAX6",
+    "value": 141.90838,
+    "cellGroupValue": "pancreatic D cell",
+    "cellGroupValueWhereMarker": "pancreatic PP cell",
+    "pValue": 1.674587406736995e-51
+  },
+  {
+    "x": 1,
+    "y": 35,
+    "geneName": "ANXA4",
+    "value": 25.455658,
+    "cellGroupValue": "co-expression cell",
+    "cellGroupValueWhereMarker": "pancreatic ductal cell",
+    "pValue": 1.8904926458990206e-218
+  },
+  {
+    "x": 12,
+    "y": 35,
+    "geneName": "ANXA4",
+    "value": 1.28185285,
+    "cellGroupValue": "type B pancreatic cell",
+    "cellGroupValueWhereMarker": "pancreatic ductal cell",
+    "pValue": 1.8904926458990206e-218
+  },
+  {
+    "x": 11,
+    "y": 35,
+    "geneName": "ANXA4",
+    "value": 72.0922,
+    "cellGroupValue": "professional antigen presenting cell",
+    "cellGroupValueWhereMarker": "pancreatic ductal cell",
+    "pValue": 1.8904926458990206e-218
+  },
+  {
+    "x": 10,
+    "y": 35,
+    "geneName": "ANXA4",
+    "value": 53.7555145,
+    "cellGroupValue": "pancreatic stellate cell",
+    "cellGroupValueWhereMarker": "pancreatic ductal cell",
+    "pValue": 1.8904926458990206e-218
+  },
+  {
+    "x": 6,
+    "y": 35,
+    "geneName": "ANXA4",
+    "value": 11.97436,
+    "cellGroupValue": "pancreatic PP cell",
+    "cellGroupValueWhereMarker": "pancreatic ductal cell",
+    "pValue": 1.8904926458990206e-218
+  },
+  {
+    "x": 9,
+    "y": 35,
+    "geneName": "ANXA4",
+    "value": 23.350193,
+    "cellGroupValue": "pancreatic epsilon cell",
+    "cellGroupValueWhereMarker": "pancreatic ductal cell",
+    "pValue": 1.8904926458990206e-218
+  },
+  {
+    "x": 8,
+    "y": 35,
+    "geneName": "ANXA4",
+    "value": 6.412312,
+    "cellGroupValue": "pancreatic endocrine cell",
+    "cellGroupValueWhereMarker": "pancreatic ductal cell",
+    "pValue": 1.8904926458990206e-218
+  },
+  {
+    "x": 7,
+    "y": 35,
+    "geneName": "ANXA4",
+    "value": 2333.4089,
+    "cellGroupValue": "pancreatic ductal cell",
+    "cellGroupValueWhereMarker": "pancreatic ductal cell",
+    "pValue": 1.8904926458990206e-218
+  },
+  {
+    "x": 5,
+    "y": 35,
+    "geneName": "ANXA4",
+    "value": 5.7955305,
+    "cellGroupValue": "pancreatic D cell",
+    "cellGroupValueWhereMarker": "pancreatic ductal cell",
+    "pValue": 1.8904926458990206e-218
+  },
+  {
+    "x": 4,
+    "y": 35,
+    "geneName": "ANXA4",
+    "value": 50.79678,
+    "cellGroupValue": "pancreatic A cell",
+    "cellGroupValueWhereMarker": "pancreatic ductal cell",
+    "pValue": 1.8904926458990206e-218
+  },
+  {
+    "x": 3,
+    "y": 35,
+    "geneName": "ANXA4",
+    "value": 22.091246,
+    "cellGroupValue": "mast cell",
+    "cellGroupValueWhereMarker": "pancreatic ductal cell",
+    "pValue": 1.8904926458990206e-218
+  },
+  {
+    "x": 2,
+    "y": 35,
+    "geneName": "ANXA4",
+    "value": 20.5224202,
+    "cellGroupValue": "endothelial cell",
+    "cellGroupValueWhereMarker": "pancreatic ductal cell",
+    "pValue": 1.8904926458990206e-218
+  },
+  {
+    "x": 0,
+    "y": 35,
+    "geneName": "ANXA4",
+    "value": 469.0723,
+    "cellGroupValue": "acinar cell",
+    "cellGroupValueWhereMarker": "pancreatic ductal cell",
+    "pValue": 1.8904926458990206e-218
+  },
+  {
+    "x": 6,
+    "y": 36,
+    "geneName": "KRT19",
+    "value": 0,
+    "cellGroupValue": "pancreatic PP cell",
+    "cellGroupValueWhereMarker": "pancreatic ductal cell",
+    "pValue": 1.3410637844932722e-214
+  },
+  {
+    "x": 9,
+    "y": 36,
+    "geneName": "KRT19",
+    "value": 114.07129,
+    "cellGroupValue": "pancreatic epsilon cell",
+    "cellGroupValueWhereMarker": "pancreatic ductal cell",
+    "pValue": 1.3410637844932722e-214
+  },
+  {
+    "x": 8,
+    "y": 36,
+    "geneName": "KRT19",
+    "value": 0,
+    "cellGroupValue": "pancreatic endocrine cell",
+    "cellGroupValueWhereMarker": "pancreatic ductal cell",
+    "pValue": 1.3410637844932722e-214
+  },
+  {
+    "x": 7,
+    "y": 36,
+    "geneName": "KRT19",
+    "value": 1544.34025,
+    "cellGroupValue": "pancreatic ductal cell",
+    "cellGroupValueWhereMarker": "pancreatic ductal cell",
+    "pValue": 1.3410637844932722e-214
+  },
+  {
+    "x": 5,
+    "y": 36,
+    "geneName": "KRT19",
+    "value": 3.7245785,
+    "cellGroupValue": "pancreatic D cell",
+    "cellGroupValueWhereMarker": "pancreatic ductal cell",
+    "pValue": 1.3410637844932722e-214
+  },
+  {
+    "x": 4,
+    "y": 36,
+    "geneName": "KRT19",
+    "value": 0,
+    "cellGroupValue": "pancreatic A cell",
+    "cellGroupValueWhereMarker": "pancreatic ductal cell",
+    "pValue": 1.3410637844932722e-214
+  },
+  {
+    "x": 3,
+    "y": 36,
+    "geneName": "KRT19",
+    "value": 1.1015267,
+    "cellGroupValue": "mast cell",
+    "cellGroupValueWhereMarker": "pancreatic ductal cell",
+    "pValue": 1.3410637844932722e-214
+  },
+  {
+    "x": 2,
+    "y": 36,
+    "geneName": "KRT19",
+    "value": 0,
+    "cellGroupValue": "endothelial cell",
+    "cellGroupValueWhereMarker": "pancreatic ductal cell",
+    "pValue": 1.3410637844932722e-214
+  },
+  {
+    "x": 1,
+    "y": 36,
+    "geneName": "KRT19",
+    "value": 0,
+    "cellGroupValue": "co-expression cell",
+    "cellGroupValueWhereMarker": "pancreatic ductal cell",
+    "pValue": 1.3410637844932722e-214
+  },
+  {
+    "x": 0,
+    "y": 36,
+    "geneName": "KRT19",
+    "value": 11.945719,
+    "cellGroupValue": "acinar cell",
+    "cellGroupValueWhereMarker": "pancreatic ductal cell",
+    "pValue": 1.3410637844932722e-214
+  },
+  {
+    "x": 12,
+    "y": 36,
+    "geneName": "KRT19",
+    "value": 0,
+    "cellGroupValue": "type B pancreatic cell",
+    "cellGroupValueWhereMarker": "pancreatic ductal cell",
+    "pValue": 1.3410637844932722e-214
+  },
+  {
+    "x": 11,
+    "y": 36,
+    "geneName": "KRT19",
+    "value": 1.1033715,
+    "cellGroupValue": "professional antigen presenting cell",
+    "cellGroupValueWhereMarker": "pancreatic ductal cell",
+    "pValue": 1.3410637844932722e-214
+  },
+  {
+    "x": 10,
+    "y": 36,
+    "geneName": "KRT19",
+    "value": 0,
+    "cellGroupValue": "pancreatic stellate cell",
+    "cellGroupValueWhereMarker": "pancreatic ductal cell",
+    "pValue": 1.3410637844932722e-214
+  },
+  {
+    "x": 6,
+    "y": 37,
+    "geneName": "CD24",
+    "value": 4.895046,
+    "cellGroupValue": "pancreatic PP cell",
+    "cellGroupValueWhereMarker": "pancreatic ductal cell",
+    "pValue": 3.8550946654609933e-200
+  },
+  {
+    "x": 9,
+    "y": 37,
+    "geneName": "CD24",
+    "value": 1.776467,
+    "cellGroupValue": "pancreatic epsilon cell",
+    "cellGroupValueWhereMarker": "pancreatic ductal cell",
+    "pValue": 3.8550946654609933e-200
+  },
+  {
+    "x": 8,
+    "y": 37,
+    "geneName": "CD24",
+    "value": 3.0653093,
+    "cellGroupValue": "pancreatic endocrine cell",
+    "cellGroupValueWhereMarker": "pancreatic ductal cell",
+    "pValue": 3.8550946654609933e-200
+  },
+  {
+    "x": 7,
+    "y": 37,
+    "geneName": "CD24",
+    "value": 2282.1998,
+    "cellGroupValue": "pancreatic ductal cell",
+    "cellGroupValueWhereMarker": "pancreatic ductal cell",
+    "pValue": 3.8550946654609933e-200
+  },
+  {
+    "x": 5,
+    "y": 37,
+    "geneName": "CD24",
+    "value": 90.4535105,
+    "cellGroupValue": "pancreatic D cell",
+    "cellGroupValueWhereMarker": "pancreatic ductal cell",
+    "pValue": 3.8550946654609933e-200
+  },
+  {
+    "x": 4,
+    "y": 37,
+    "geneName": "CD24",
+    "value": 38.4246235,
+    "cellGroupValue": "pancreatic A cell",
+    "cellGroupValueWhereMarker": "pancreatic ductal cell",
+    "pValue": 3.8550946654609933e-200
+  },
+  {
+    "x": 3,
+    "y": 37,
+    "geneName": "CD24",
+    "value": 5.886313,
+    "cellGroupValue": "mast cell",
+    "cellGroupValueWhereMarker": "pancreatic ductal cell",
+    "pValue": 3.8550946654609933e-200
+  },
+  {
+    "x": 2,
+    "y": 37,
+    "geneName": "CD24",
+    "value": 1.47571975,
+    "cellGroupValue": "endothelial cell",
+    "cellGroupValueWhereMarker": "pancreatic ductal cell",
+    "pValue": 3.8550946654609933e-200
+  },
+  {
+    "x": 1,
+    "y": 37,
+    "geneName": "CD24",
+    "value": 88.63212,
+    "cellGroupValue": "co-expression cell",
+    "cellGroupValueWhereMarker": "pancreatic ductal cell",
+    "pValue": 3.8550946654609933e-200
+  },
+  {
+    "x": 0,
+    "y": 37,
+    "geneName": "CD24",
+    "value": 1390.4957,
+    "cellGroupValue": "acinar cell",
+    "cellGroupValueWhereMarker": "pancreatic ductal cell",
+    "pValue": 3.8550946654609933e-200
+  },
+  {
+    "x": 12,
+    "y": 37,
+    "geneName": "CD24",
+    "value": 114.023718,
+    "cellGroupValue": "type B pancreatic cell",
+    "cellGroupValueWhereMarker": "pancreatic ductal cell",
+    "pValue": 3.8550946654609933e-200
+  },
+  {
+    "x": 11,
+    "y": 37,
+    "geneName": "CD24",
+    "value": 0,
+    "cellGroupValue": "professional antigen presenting cell",
+    "cellGroupValueWhereMarker": "pancreatic ductal cell",
+    "pValue": 3.8550946654609933e-200
+  },
+  {
+    "x": 10,
+    "y": 37,
+    "geneName": "CD24",
+    "value": 0,
+    "cellGroupValue": "pancreatic stellate cell",
+    "cellGroupValueWhereMarker": "pancreatic ductal cell",
+    "pValue": 3.8550946654609933e-200
+  },
+  {
+    "x": 0,
+    "y": 38,
+    "geneName": "ANXA2",
+    "value": 462.48676,
+    "cellGroupValue": "acinar cell",
+    "cellGroupValueWhereMarker": "pancreatic ductal cell",
+    "pValue": 2.3676036883274085e-192
+  },
+  {
+    "x": 1,
+    "y": 38,
+    "geneName": "ANXA2",
+    "value": 159.56255,
+    "cellGroupValue": "co-expression cell",
+    "cellGroupValueWhereMarker": "pancreatic ductal cell",
+    "pValue": 2.3676036883274085e-192
+  },
+  {
+    "x": 2,
+    "y": 38,
+    "geneName": "ANXA2",
+    "value": 2057.05685,
+    "cellGroupValue": "endothelial cell",
+    "cellGroupValueWhereMarker": "pancreatic ductal cell",
+    "pValue": 2.3676036883274085e-192
+  },
+  {
+    "x": 3,
+    "y": 38,
+    "geneName": "ANXA2",
+    "value": 7.0963254,
+    "cellGroupValue": "mast cell",
+    "cellGroupValueWhereMarker": "pancreatic ductal cell",
+    "pValue": 2.3676036883274085e-192
+  },
+  {
+    "x": 4,
+    "y": 38,
+    "geneName": "ANXA2",
+    "value": 224.6959,
+    "cellGroupValue": "pancreatic A cell",
+    "cellGroupValueWhereMarker": "pancreatic ductal cell",
+    "pValue": 2.3676036883274085e-192
+  },
+  {
+    "x": 5,
+    "y": 38,
+    "geneName": "ANXA2",
+    "value": 1.748037,
+    "cellGroupValue": "pancreatic D cell",
+    "cellGroupValueWhereMarker": "pancreatic ductal cell",
+    "pValue": 2.3676036883274085e-192
+  },
+  {
+    "x": 7,
+    "y": 38,
+    "geneName": "ANXA2",
+    "value": 3999.5165,
+    "cellGroupValue": "pancreatic ductal cell",
+    "cellGroupValueWhereMarker": "pancreatic ductal cell",
+    "pValue": 2.3676036883274085e-192
+  },
+  {
+    "x": 8,
+    "y": 38,
+    "geneName": "ANXA2",
+    "value": 12.517525,
+    "cellGroupValue": "pancreatic endocrine cell",
+    "cellGroupValueWhereMarker": "pancreatic ductal cell",
+    "pValue": 2.3676036883274085e-192
+  },
+  {
+    "x": 9,
+    "y": 38,
+    "geneName": "ANXA2",
+    "value": 37.677025,
+    "cellGroupValue": "pancreatic epsilon cell",
+    "cellGroupValueWhereMarker": "pancreatic ductal cell",
+    "pValue": 2.3676036883274085e-192
+  },
+  {
+    "x": 6,
+    "y": 38,
+    "geneName": "ANXA2",
+    "value": 6.6543846,
+    "cellGroupValue": "pancreatic PP cell",
+    "cellGroupValueWhereMarker": "pancreatic ductal cell",
+    "pValue": 2.3676036883274085e-192
+  },
+  {
+    "x": 10,
+    "y": 38,
+    "geneName": "ANXA2",
+    "value": 1304.62485,
+    "cellGroupValue": "pancreatic stellate cell",
+    "cellGroupValueWhereMarker": "pancreatic ductal cell",
+    "pValue": 2.3676036883274085e-192
+  },
+  {
+    "x": 11,
+    "y": 38,
+    "geneName": "ANXA2",
+    "value": 1714.7562,
+    "cellGroupValue": "professional antigen presenting cell",
+    "cellGroupValueWhereMarker": "pancreatic ductal cell",
+    "pValue": 2.3676036883274085e-192
+  },
+  {
+    "x": 12,
+    "y": 38,
+    "geneName": "ANXA2",
+    "value": 100.616072,
+    "cellGroupValue": "type B pancreatic cell",
+    "cellGroupValueWhereMarker": "pancreatic ductal cell",
+    "pValue": 2.3676036883274085e-192
+  },
+  {
+    "x": 0,
+    "y": 39,
+    "geneName": "LITAF",
+    "value": 60.118637,
+    "cellGroupValue": "acinar cell",
+    "cellGroupValueWhereMarker": "pancreatic ductal cell",
+    "pValue": 5.991005254964756e-169
+  },
+  {
+    "x": 12,
+    "y": 39,
+    "geneName": "LITAF",
+    "value": 0,
+    "cellGroupValue": "type B pancreatic cell",
+    "cellGroupValueWhereMarker": "pancreatic ductal cell",
+    "pValue": 5.991005254964756e-169
+  },
+  {
+    "x": 11,
+    "y": 39,
+    "geneName": "LITAF",
+    "value": 492.82367,
+    "cellGroupValue": "professional antigen presenting cell",
+    "cellGroupValueWhereMarker": "pancreatic ductal cell",
+    "pValue": 5.991005254964756e-169
+  },
+  {
+    "x": 10,
+    "y": 39,
+    "geneName": "LITAF",
+    "value": 288.515945,
+    "cellGroupValue": "pancreatic stellate cell",
+    "cellGroupValueWhereMarker": "pancreatic ductal cell",
+    "pValue": 5.991005254964756e-169
+  },
+  {
+    "x": 6,
+    "y": 39,
+    "geneName": "LITAF",
+    "value": 4.7053294,
+    "cellGroupValue": "pancreatic PP cell",
+    "cellGroupValueWhereMarker": "pancreatic ductal cell",
+    "pValue": 5.991005254964756e-169
+  },
+  {
+    "x": 9,
+    "y": 39,
+    "geneName": "LITAF",
+    "value": 2.5886884,
+    "cellGroupValue": "pancreatic epsilon cell",
+    "cellGroupValueWhereMarker": "pancreatic ductal cell",
+    "pValue": 5.991005254964756e-169
+  },
+  {
+    "x": 8,
+    "y": 39,
+    "geneName": "LITAF",
+    "value": 0,
+    "cellGroupValue": "pancreatic endocrine cell",
+    "cellGroupValueWhereMarker": "pancreatic ductal cell",
+    "pValue": 5.991005254964756e-169
+  },
+  {
+    "x": 7,
+    "y": 39,
+    "geneName": "LITAF",
+    "value": 329.39681,
+    "cellGroupValue": "pancreatic ductal cell",
+    "cellGroupValueWhereMarker": "pancreatic ductal cell",
+    "pValue": 5.991005254964756e-169
+  },
+  {
+    "x": 5,
+    "y": 39,
+    "geneName": "LITAF",
+    "value": 2.88781535,
+    "cellGroupValue": "pancreatic D cell",
+    "cellGroupValueWhereMarker": "pancreatic ductal cell",
+    "pValue": 5.991005254964756e-169
+  },
+  {
+    "x": 4,
+    "y": 39,
+    "geneName": "LITAF",
+    "value": 0,
+    "cellGroupValue": "pancreatic A cell",
+    "cellGroupValueWhereMarker": "pancreatic ductal cell",
+    "pValue": 5.991005254964756e-169
+  },
+  {
+    "x": 3,
+    "y": 39,
+    "geneName": "LITAF",
+    "value": 452.27646,
+    "cellGroupValue": "mast cell",
+    "cellGroupValueWhereMarker": "pancreatic ductal cell",
+    "pValue": 5.991005254964756e-169
+  },
+  {
+    "x": 2,
+    "y": 39,
+    "geneName": "LITAF",
+    "value": 0,
+    "cellGroupValue": "endothelial cell",
+    "cellGroupValueWhereMarker": "pancreatic ductal cell",
+    "pValue": 5.991005254964756e-169
+  },
+  {
+    "x": 1,
+    "y": 39,
+    "geneName": "LITAF",
+    "value": 1.298386,
+    "cellGroupValue": "co-expression cell",
+    "cellGroupValueWhereMarker": "pancreatic ductal cell",
+    "pValue": 5.991005254964756e-169
+  },
+  {
+    "x": 4,
+    "y": 40,
+    "geneName": "MTRNR2L12",
+    "value": 7330.9418,
+    "cellGroupValue": "pancreatic A cell",
+    "cellGroupValueWhereMarker": "pancreatic endocrine cell",
+    "pValue": 0.002129608058954641
+  },
+  {
+    "x": 5,
+    "y": 40,
+    "geneName": "MTRNR2L12",
+    "value": 11800.3215,
+    "cellGroupValue": "pancreatic D cell",
+    "cellGroupValueWhereMarker": "pancreatic endocrine cell",
+    "pValue": 0.002129608058954641
+  },
+  {
+    "x": 7,
+    "y": 40,
+    "geneName": "MTRNR2L12",
+    "value": 16097.9285,
+    "cellGroupValue": "pancreatic ductal cell",
+    "cellGroupValueWhereMarker": "pancreatic endocrine cell",
+    "pValue": 0.002129608058954641
+  },
+  {
+    "x": 8,
+    "y": 40,
+    "geneName": "MTRNR2L12",
+    "value": 42249.465,
+    "cellGroupValue": "pancreatic endocrine cell",
+    "cellGroupValueWhereMarker": "pancreatic endocrine cell",
+    "pValue": 0.002129608058954641
+  },
+  {
+    "x": 9,
+    "y": 40,
+    "geneName": "MTRNR2L12",
+    "value": 8474.752,
+    "cellGroupValue": "pancreatic epsilon cell",
+    "cellGroupValueWhereMarker": "pancreatic endocrine cell",
+    "pValue": 0.002129608058954641
+  },
+  {
+    "x": 6,
+    "y": 40,
+    "geneName": "MTRNR2L12",
+    "value": 8844.09,
+    "cellGroupValue": "pancreatic PP cell",
+    "cellGroupValueWhereMarker": "pancreatic endocrine cell",
+    "pValue": 0.002129608058954641
+  },
+  {
+    "x": 10,
+    "y": 40,
+    "geneName": "MTRNR2L12",
+    "value": 6836.12775,
+    "cellGroupValue": "pancreatic stellate cell",
+    "cellGroupValueWhereMarker": "pancreatic endocrine cell",
+    "pValue": 0.002129608058954641
+  },
+  {
+    "x": 11,
+    "y": 40,
+    "geneName": "MTRNR2L12",
+    "value": 6038.8706,
+    "cellGroupValue": "professional antigen presenting cell",
+    "cellGroupValueWhereMarker": "pancreatic endocrine cell",
+    "pValue": 0.002129608058954641
+  },
+  {
+    "x": 12,
+    "y": 40,
+    "geneName": "MTRNR2L12",
+    "value": 14702.883,
+    "cellGroupValue": "type B pancreatic cell",
+    "cellGroupValueWhereMarker": "pancreatic endocrine cell",
+    "pValue": 0.002129608058954641
+  },
+  {
+    "x": 0,
+    "y": 40,
+    "geneName": "MTRNR2L12",
+    "value": 5931.0396,
+    "cellGroupValue": "acinar cell",
+    "cellGroupValueWhereMarker": "pancreatic endocrine cell",
+    "pValue": 0.002129608058954641
+  },
+  {
+    "x": 1,
+    "y": 40,
+    "geneName": "MTRNR2L12",
+    "value": 10624.175,
+    "cellGroupValue": "co-expression cell",
+    "cellGroupValueWhereMarker": "pancreatic endocrine cell",
+    "pValue": 0.002129608058954641
+  },
+  {
+    "x": 2,
+    "y": 40,
+    "geneName": "MTRNR2L12",
+    "value": 5831.7305,
+    "cellGroupValue": "endothelial cell",
+    "cellGroupValueWhereMarker": "pancreatic endocrine cell",
+    "pValue": 0.002129608058954641
+  },
+  {
+    "x": 3,
+    "y": 40,
+    "geneName": "MTRNR2L12",
+    "value": 6016.7017,
+    "cellGroupValue": "mast cell",
+    "cellGroupValueWhereMarker": "pancreatic endocrine cell",
+    "pValue": 0.002129608058954641
+  },
+  {
+    "x": 12,
+    "y": 41,
+    "geneName": "MT-ND3",
+    "value": 607.87735,
+    "cellGroupValue": "type B pancreatic cell",
+    "cellGroupValueWhereMarker": "pancreatic endocrine cell",
+    "pValue": 0.002321464116392596
+  },
+  {
+    "x": 0,
+    "y": 41,
+    "geneName": "MT-ND3",
+    "value": 242.08788,
+    "cellGroupValue": "acinar cell",
+    "cellGroupValueWhereMarker": "pancreatic endocrine cell",
+    "pValue": 0.002321464116392596
+  },
+  {
+    "x": 1,
+    "y": 41,
+    "geneName": "MT-ND3",
+    "value": 420.39365,
+    "cellGroupValue": "co-expression cell",
+    "cellGroupValueWhereMarker": "pancreatic endocrine cell",
+    "pValue": 0.002321464116392596
+  },
+  {
+    "x": 2,
+    "y": 41,
+    "geneName": "MT-ND3",
+    "value": 117.13474,
+    "cellGroupValue": "endothelial cell",
+    "cellGroupValueWhereMarker": "pancreatic endocrine cell",
+    "pValue": 0.002321464116392596
+  },
+  {
+    "x": 3,
+    "y": 41,
+    "geneName": "MT-ND3",
+    "value": 371.04327,
+    "cellGroupValue": "mast cell",
+    "cellGroupValueWhereMarker": "pancreatic endocrine cell",
+    "pValue": 0.002321464116392596
+  },
+  {
+    "x": 4,
+    "y": 41,
+    "geneName": "MT-ND3",
+    "value": 223.43396,
+    "cellGroupValue": "pancreatic A cell",
+    "cellGroupValueWhereMarker": "pancreatic endocrine cell",
+    "pValue": 0.002321464116392596
+  },
+  {
+    "x": 5,
+    "y": 41,
+    "geneName": "MT-ND3",
+    "value": 390.82492,
+    "cellGroupValue": "pancreatic D cell",
+    "cellGroupValueWhereMarker": "pancreatic endocrine cell",
+    "pValue": 0.002321464116392596
+  },
+  {
+    "x": 7,
+    "y": 41,
+    "geneName": "MT-ND3",
+    "value": 231.95803,
+    "cellGroupValue": "pancreatic ductal cell",
+    "cellGroupValueWhereMarker": "pancreatic endocrine cell",
+    "pValue": 0.002321464116392596
+  },
+  {
+    "x": 8,
+    "y": 41,
+    "geneName": "MT-ND3",
+    "value": 1380.3671,
+    "cellGroupValue": "pancreatic endocrine cell",
+    "cellGroupValueWhereMarker": "pancreatic endocrine cell",
+    "pValue": 0.002321464116392596
+  },
+  {
+    "x": 9,
+    "y": 41,
+    "geneName": "MT-ND3",
+    "value": 565.85364,
+    "cellGroupValue": "pancreatic epsilon cell",
+    "cellGroupValueWhereMarker": "pancreatic endocrine cell",
+    "pValue": 0.002321464116392596
+  },
+  {
+    "x": 6,
+    "y": 41,
+    "geneName": "MT-ND3",
+    "value": 416.35974,
+    "cellGroupValue": "pancreatic PP cell",
+    "cellGroupValueWhereMarker": "pancreatic endocrine cell",
+    "pValue": 0.002321464116392596
+  },
+  {
+    "x": 10,
+    "y": 41,
+    "geneName": "MT-ND3",
+    "value": 139.48252,
+    "cellGroupValue": "pancreatic stellate cell",
+    "cellGroupValueWhereMarker": "pancreatic endocrine cell",
+    "pValue": 0.002321464116392596
+  },
+  {
+    "x": 11,
+    "y": 41,
+    "geneName": "MT-ND3",
+    "value": 254.87881,
+    "cellGroupValue": "professional antigen presenting cell",
+    "cellGroupValueWhereMarker": "pancreatic endocrine cell",
+    "pValue": 0.002321464116392596
+  },
+  {
+    "x": 12,
+    "y": 42,
+    "geneName": "MTRNR2L1",
+    "value": 5119.99685,
+    "cellGroupValue": "type B pancreatic cell",
+    "cellGroupValueWhereMarker": "pancreatic endocrine cell",
+    "pValue": 0.008728981965182993
+  },
+  {
+    "x": 10,
+    "y": 42,
+    "geneName": "MTRNR2L1",
+    "value": 1727.1056,
+    "cellGroupValue": "pancreatic stellate cell",
+    "cellGroupValueWhereMarker": "pancreatic endocrine cell",
+    "pValue": 0.008728981965182993
+  },
+  {
+    "x": 6,
+    "y": 42,
+    "geneName": "MTRNR2L1",
+    "value": 3387.0005,
+    "cellGroupValue": "pancreatic PP cell",
+    "cellGroupValueWhereMarker": "pancreatic endocrine cell",
+    "pValue": 0.008728981965182993
+  },
+  {
+    "x": 9,
+    "y": 42,
+    "geneName": "MTRNR2L1",
+    "value": 2355.7573,
+    "cellGroupValue": "pancreatic epsilon cell",
+    "cellGroupValueWhereMarker": "pancreatic endocrine cell",
+    "pValue": 0.008728981965182993
+  },
+  {
+    "x": 8,
+    "y": 42,
+    "geneName": "MTRNR2L1",
+    "value": 10845.875,
+    "cellGroupValue": "pancreatic endocrine cell",
+    "cellGroupValueWhereMarker": "pancreatic endocrine cell",
+    "pValue": 0.008728981965182993
+  },
+  {
+    "x": 7,
+    "y": 42,
+    "geneName": "MTRNR2L1",
+    "value": 4896.181,
+    "cellGroupValue": "pancreatic ductal cell",
+    "cellGroupValueWhereMarker": "pancreatic endocrine cell",
+    "pValue": 0.008728981965182993
+  },
+  {
+    "x": 5,
+    "y": 42,
+    "geneName": "MTRNR2L1",
+    "value": 4024.4424,
+    "cellGroupValue": "pancreatic D cell",
+    "cellGroupValueWhereMarker": "pancreatic endocrine cell",
+    "pValue": 0.008728981965182993
+  },
+  {
+    "x": 4,
+    "y": 42,
+    "geneName": "MTRNR2L1",
+    "value": 2525.39555,
+    "cellGroupValue": "pancreatic A cell",
+    "cellGroupValueWhereMarker": "pancreatic endocrine cell",
+    "pValue": 0.008728981965182993
+  },
+  {
+    "x": 3,
+    "y": 42,
+    "geneName": "MTRNR2L1",
+    "value": 1090.7665,
+    "cellGroupValue": "mast cell",
+    "cellGroupValueWhereMarker": "pancreatic endocrine cell",
+    "pValue": 0.008728981965182993
+  },
+  {
+    "x": 2,
+    "y": 42,
+    "geneName": "MTRNR2L1",
+    "value": 1639.7242,
+    "cellGroupValue": "endothelial cell",
+    "cellGroupValueWhereMarker": "pancreatic endocrine cell",
+    "pValue": 0.008728981965182993
+  },
+  {
+    "x": 1,
+    "y": 42,
+    "geneName": "MTRNR2L1",
+    "value": 3577.5508,
+    "cellGroupValue": "co-expression cell",
+    "cellGroupValueWhereMarker": "pancreatic endocrine cell",
+    "pValue": 0.008728981965182993
+  },
+  {
+    "x": 0,
+    "y": 42,
+    "geneName": "MTRNR2L1",
+    "value": 1533.2201,
+    "cellGroupValue": "acinar cell",
+    "cellGroupValueWhereMarker": "pancreatic endocrine cell",
+    "pValue": 0.008728981965182993
+  },
+  {
+    "x": 11,
+    "y": 42,
+    "geneName": "MTRNR2L1",
+    "value": 1430.8619,
+    "cellGroupValue": "professional antigen presenting cell",
+    "cellGroupValueWhereMarker": "pancreatic endocrine cell",
+    "pValue": 0.008728981965182993
+  },
+  {
+    "x": 6,
+    "y": 43,
+    "geneName": "MT-ND4",
+    "value": 8794.848,
+    "cellGroupValue": "pancreatic PP cell",
+    "cellGroupValueWhereMarker": "pancreatic endocrine cell",
+    "pValue": 0.009868016939305871
+  },
+  {
+    "x": 0,
+    "y": 43,
+    "geneName": "MT-ND4",
+    "value": 5448.806,
+    "cellGroupValue": "acinar cell",
+    "cellGroupValueWhereMarker": "pancreatic endocrine cell",
+    "pValue": 0.009868016939305871
+  },
+  {
+    "x": 1,
+    "y": 43,
+    "geneName": "MT-ND4",
+    "value": 13621.321,
+    "cellGroupValue": "co-expression cell",
+    "cellGroupValueWhereMarker": "pancreatic endocrine cell",
+    "pValue": 0.009868016939305871
+  },
+  {
+    "x": 2,
+    "y": 43,
+    "geneName": "MT-ND4",
+    "value": 4112.4138,
+    "cellGroupValue": "endothelial cell",
+    "cellGroupValueWhereMarker": "pancreatic endocrine cell",
+    "pValue": 0.009868016939305871
+  },
+  {
+    "x": 3,
+    "y": 43,
+    "geneName": "MT-ND4",
+    "value": 4264.6997,
+    "cellGroupValue": "mast cell",
+    "cellGroupValueWhereMarker": "pancreatic endocrine cell",
+    "pValue": 0.009868016939305871
+  },
+  {
+    "x": 4,
+    "y": 43,
+    "geneName": "MT-ND4",
+    "value": 6189.04425,
+    "cellGroupValue": "pancreatic A cell",
+    "cellGroupValueWhereMarker": "pancreatic endocrine cell",
+    "pValue": 0.009868016939305871
+  },
+  {
+    "x": 5,
+    "y": 43,
+    "geneName": "MT-ND4",
+    "value": 9426.1315,
+    "cellGroupValue": "pancreatic D cell",
+    "cellGroupValueWhereMarker": "pancreatic endocrine cell",
+    "pValue": 0.009868016939305871
+  },
+  {
+    "x": 7,
+    "y": 43,
+    "geneName": "MT-ND4",
+    "value": 7177.87965,
+    "cellGroupValue": "pancreatic ductal cell",
+    "cellGroupValueWhereMarker": "pancreatic endocrine cell",
+    "pValue": 0.009868016939305871
+  },
+  {
+    "x": 8,
+    "y": 43,
+    "geneName": "MT-ND4",
+    "value": 42105.57,
+    "cellGroupValue": "pancreatic endocrine cell",
+    "cellGroupValueWhereMarker": "pancreatic endocrine cell",
+    "pValue": 0.009868016939305871
+  },
+  {
+    "x": 9,
+    "y": 43,
+    "geneName": "MT-ND4",
+    "value": 14645.148,
+    "cellGroupValue": "pancreatic epsilon cell",
+    "cellGroupValueWhereMarker": "pancreatic endocrine cell",
+    "pValue": 0.009868016939305871
+  },
+  {
+    "x": 10,
+    "y": 43,
+    "geneName": "MT-ND4",
+    "value": 3670.63355,
+    "cellGroupValue": "pancreatic stellate cell",
+    "cellGroupValueWhereMarker": "pancreatic endocrine cell",
+    "pValue": 0.009868016939305871
+  },
+  {
+    "x": 11,
+    "y": 43,
+    "geneName": "MT-ND4",
+    "value": 6258.7646,
+    "cellGroupValue": "professional antigen presenting cell",
+    "cellGroupValueWhereMarker": "pancreatic endocrine cell",
+    "pValue": 0.009868016939305871
+  },
+  {
+    "x": 12,
+    "y": 43,
+    "geneName": "MT-ND4",
+    "value": 13899.509,
+    "cellGroupValue": "type B pancreatic cell",
+    "cellGroupValueWhereMarker": "pancreatic endocrine cell",
+    "pValue": 0.009868016939305871
+  },
+  {
+    "x": 12,
+    "y": 44,
+    "geneName": "MT-ATP8",
+    "value": 120.98554,
+    "cellGroupValue": "type B pancreatic cell",
+    "cellGroupValueWhereMarker": "pancreatic endocrine cell",
+    "pValue": 0.014259026490621635
+  },
+  {
+    "x": 11,
+    "y": 44,
+    "geneName": "MT-ATP8",
+    "value": 47.641697,
+    "cellGroupValue": "professional antigen presenting cell",
+    "cellGroupValueWhereMarker": "pancreatic endocrine cell",
+    "pValue": 0.014259026490621635
+  },
+  {
+    "x": 10,
+    "y": 44,
+    "geneName": "MT-ATP8",
+    "value": 46.759121,
+    "cellGroupValue": "pancreatic stellate cell",
+    "cellGroupValueWhereMarker": "pancreatic endocrine cell",
+    "pValue": 0.014259026490621635
+  },
+  {
+    "x": 6,
+    "y": 44,
+    "geneName": "MT-ATP8",
+    "value": 93.3089,
+    "cellGroupValue": "pancreatic PP cell",
+    "cellGroupValueWhereMarker": "pancreatic endocrine cell",
+    "pValue": 0.014259026490621635
+  },
+  {
+    "x": 9,
+    "y": 44,
+    "geneName": "MT-ATP8",
+    "value": 86.56278,
+    "cellGroupValue": "pancreatic epsilon cell",
+    "cellGroupValueWhereMarker": "pancreatic endocrine cell",
+    "pValue": 0.014259026490621635
+  },
+  {
+    "x": 8,
+    "y": 44,
+    "geneName": "MT-ATP8",
+    "value": 198.95879,
+    "cellGroupValue": "pancreatic endocrine cell",
+    "cellGroupValueWhereMarker": "pancreatic endocrine cell",
+    "pValue": 0.014259026490621635
+  },
+  {
+    "x": 7,
+    "y": 44,
+    "geneName": "MT-ATP8",
+    "value": 78.878065,
+    "cellGroupValue": "pancreatic ductal cell",
+    "cellGroupValueWhereMarker": "pancreatic endocrine cell",
+    "pValue": 0.014259026490621635
+  },
+  {
+    "x": 5,
+    "y": 44,
+    "geneName": "MT-ATP8",
+    "value": 104.98979,
+    "cellGroupValue": "pancreatic D cell",
+    "cellGroupValueWhereMarker": "pancreatic endocrine cell",
+    "pValue": 0.014259026490621635
+  },
+  {
+    "x": 4,
+    "y": 44,
+    "geneName": "MT-ATP8",
+    "value": 48.1472605,
+    "cellGroupValue": "pancreatic A cell",
+    "cellGroupValueWhereMarker": "pancreatic endocrine cell",
+    "pValue": 0.014259026490621635
+  },
+  {
+    "x": 3,
+    "y": 44,
+    "geneName": "MT-ATP8",
+    "value": 49.506313,
+    "cellGroupValue": "mast cell",
+    "cellGroupValueWhereMarker": "pancreatic endocrine cell",
+    "pValue": 0.014259026490621635
+  },
+  {
+    "x": 2,
+    "y": 44,
+    "geneName": "MT-ATP8",
+    "value": 50.151455,
+    "cellGroupValue": "endothelial cell",
+    "cellGroupValueWhereMarker": "pancreatic endocrine cell",
+    "pValue": 0.014259026490621635
+  },
+  {
+    "x": 1,
+    "y": 44,
+    "geneName": "MT-ATP8",
+    "value": 122.083565,
+    "cellGroupValue": "co-expression cell",
+    "cellGroupValueWhereMarker": "pancreatic endocrine cell",
+    "pValue": 0.014259026490621635
+  },
+  {
+    "x": 0,
+    "y": 44,
+    "geneName": "MT-ATP8",
+    "value": 56.353878,
+    "cellGroupValue": "acinar cell",
+    "cellGroupValueWhereMarker": "pancreatic endocrine cell",
+    "pValue": 0.014259026490621635
+  },
+  {
+    "x": 0,
+    "y": 45,
+    "geneName": "SPARC",
+    "value": 0,
+    "cellGroupValue": "acinar cell",
+    "cellGroupValueWhereMarker": "pancreatic stellate cell",
+    "pValue": 3.7772774594333077e-51
+  },
+  {
+    "x": 2,
+    "y": 45,
+    "geneName": "SPARC",
+    "value": 2202.7334,
+    "cellGroupValue": "endothelial cell",
+    "cellGroupValueWhereMarker": "pancreatic stellate cell",
+    "pValue": 3.7772774594333077e-51
+  },
+  {
+    "x": 3,
+    "y": 45,
+    "geneName": "SPARC",
+    "value": 0,
+    "cellGroupValue": "mast cell",
+    "cellGroupValueWhereMarker": "pancreatic stellate cell",
+    "pValue": 3.7772774594333077e-51
+  },
+  {
+    "x": 11,
+    "y": 45,
+    "geneName": "SPARC",
+    "value": 0,
+    "cellGroupValue": "professional antigen presenting cell",
+    "cellGroupValueWhereMarker": "pancreatic stellate cell",
+    "pValue": 3.7772774594333077e-51
+  },
+  {
+    "x": 12,
+    "y": 45,
+    "geneName": "SPARC",
+    "value": 0,
+    "cellGroupValue": "type B pancreatic cell",
+    "cellGroupValueWhereMarker": "pancreatic stellate cell",
+    "pValue": 3.7772774594333077e-51
+  },
+  {
+    "x": 4,
+    "y": 45,
+    "geneName": "SPARC",
+    "value": 0,
+    "cellGroupValue": "pancreatic A cell",
+    "cellGroupValueWhereMarker": "pancreatic stellate cell",
+    "pValue": 3.7772774594333077e-51
+  },
+  {
+    "x": 5,
+    "y": 45,
+    "geneName": "SPARC",
+    "value": 0,
+    "cellGroupValue": "pancreatic D cell",
+    "cellGroupValueWhereMarker": "pancreatic stellate cell",
+    "pValue": 3.7772774594333077e-51
+  },
+  {
+    "x": 7,
+    "y": 45,
+    "geneName": "SPARC",
+    "value": 0,
+    "cellGroupValue": "pancreatic ductal cell",
+    "cellGroupValueWhereMarker": "pancreatic stellate cell",
+    "pValue": 3.7772774594333077e-51
+  },
+  {
+    "x": 8,
+    "y": 45,
+    "geneName": "SPARC",
+    "value": 0,
+    "cellGroupValue": "pancreatic endocrine cell",
+    "cellGroupValueWhereMarker": "pancreatic stellate cell",
+    "pValue": 3.7772774594333077e-51
+  },
+  {
+    "x": 9,
+    "y": 45,
+    "geneName": "SPARC",
+    "value": 0,
+    "cellGroupValue": "pancreatic epsilon cell",
+    "cellGroupValueWhereMarker": "pancreatic stellate cell",
+    "pValue": 3.7772774594333077e-51
+  },
+  {
+    "x": 6,
+    "y": 45,
+    "geneName": "SPARC",
+    "value": 0,
+    "cellGroupValue": "pancreatic PP cell",
+    "cellGroupValueWhereMarker": "pancreatic stellate cell",
+    "pValue": 3.7772774594333077e-51
+  },
+  {
+    "x": 10,
+    "y": 45,
+    "geneName": "SPARC",
+    "value": 6890.1768,
+    "cellGroupValue": "pancreatic stellate cell",
+    "cellGroupValueWhereMarker": "pancreatic stellate cell",
+    "pValue": 3.7772774594333077e-51
+  },
+  {
+    "x": 1,
+    "y": 45,
+    "geneName": "SPARC",
+    "value": 0,
+    "cellGroupValue": "co-expression cell",
+    "cellGroupValueWhereMarker": "pancreatic stellate cell",
+    "pValue": 3.7772774594333077e-51
+  },
+  {
+    "x": 7,
+    "y": 46,
+    "geneName": "CALD1",
+    "value": 147.341065,
+    "cellGroupValue": "pancreatic ductal cell",
+    "cellGroupValueWhereMarker": "pancreatic stellate cell",
+    "pValue": 4.02898826096089e-47
+  },
+  {
+    "x": 5,
+    "y": 46,
+    "geneName": "CALD1",
+    "value": 9.5326335,
+    "cellGroupValue": "pancreatic D cell",
+    "cellGroupValueWhereMarker": "pancreatic stellate cell",
+    "pValue": 4.02898826096089e-47
+  },
+  {
+    "x": 4,
+    "y": 46,
+    "geneName": "CALD1",
+    "value": 0,
+    "cellGroupValue": "pancreatic A cell",
+    "cellGroupValueWhereMarker": "pancreatic stellate cell",
+    "pValue": 4.02898826096089e-47
+  },
+  {
+    "x": 3,
+    "y": 46,
+    "geneName": "CALD1",
+    "value": 0,
+    "cellGroupValue": "mast cell",
+    "cellGroupValueWhereMarker": "pancreatic stellate cell",
+    "pValue": 4.02898826096089e-47
+  },
+  {
+    "x": 2,
+    "y": 46,
+    "geneName": "CALD1",
+    "value": 151.235845,
+    "cellGroupValue": "endothelial cell",
+    "cellGroupValueWhereMarker": "pancreatic stellate cell",
+    "pValue": 4.02898826096089e-47
+  },
+  {
+    "x": 1,
+    "y": 46,
+    "geneName": "CALD1",
+    "value": 11.083303,
+    "cellGroupValue": "co-expression cell",
+    "cellGroupValueWhereMarker": "pancreatic stellate cell",
+    "pValue": 4.02898826096089e-47
+  },
+  {
+    "x": 0,
+    "y": 46,
+    "geneName": "CALD1",
+    "value": 6.474127,
+    "cellGroupValue": "acinar cell",
+    "cellGroupValueWhereMarker": "pancreatic stellate cell",
+    "pValue": 4.02898826096089e-47
+  },
+  {
+    "x": 8,
+    "y": 46,
+    "geneName": "CALD1",
+    "value": 0,
+    "cellGroupValue": "pancreatic endocrine cell",
+    "cellGroupValueWhereMarker": "pancreatic stellate cell",
+    "pValue": 4.02898826096089e-47
+  },
+  {
+    "x": 9,
+    "y": 46,
+    "geneName": "CALD1",
+    "value": 310.6426,
+    "cellGroupValue": "pancreatic epsilon cell",
+    "cellGroupValueWhereMarker": "pancreatic stellate cell",
+    "pValue": 4.02898826096089e-47
+  },
+  {
+    "x": 6,
+    "y": 46,
+    "geneName": "CALD1",
+    "value": 0,
+    "cellGroupValue": "pancreatic PP cell",
+    "cellGroupValueWhereMarker": "pancreatic stellate cell",
+    "pValue": 4.02898826096089e-47
+  },
+  {
+    "x": 10,
+    "y": 46,
+    "geneName": "CALD1",
+    "value": 1303.60295,
+    "cellGroupValue": "pancreatic stellate cell",
+    "cellGroupValueWhereMarker": "pancreatic stellate cell",
+    "pValue": 4.02898826096089e-47
+  },
+  {
+    "x": 11,
+    "y": 46,
+    "geneName": "CALD1",
+    "value": 0,
+    "cellGroupValue": "professional antigen presenting cell",
+    "cellGroupValueWhereMarker": "pancreatic stellate cell",
+    "pValue": 4.02898826096089e-47
+  },
+  {
+    "x": 12,
+    "y": 46,
+    "geneName": "CALD1",
+    "value": 0,
+    "cellGroupValue": "type B pancreatic cell",
+    "cellGroupValueWhereMarker": "pancreatic stellate cell",
+    "pValue": 4.02898826096089e-47
+  },
+  {
+    "x": 12,
+    "y": 47,
+    "geneName": "COL1A2",
+    "value": 0,
+    "cellGroupValue": "type B pancreatic cell",
+    "cellGroupValueWhereMarker": "pancreatic stellate cell",
+    "pValue": 7.236295175408774e-36
+  },
+  {
+    "x": 11,
+    "y": 47,
+    "geneName": "COL1A2",
+    "value": 0,
+    "cellGroupValue": "professional antigen presenting cell",
+    "cellGroupValueWhereMarker": "pancreatic stellate cell",
+    "pValue": 7.236295175408774e-36
+  },
+  {
+    "x": 10,
+    "y": 47,
+    "geneName": "COL1A2",
+    "value": 8372.473,
+    "cellGroupValue": "pancreatic stellate cell",
+    "cellGroupValueWhereMarker": "pancreatic stellate cell",
+    "pValue": 7.236295175408774e-36
+  },
+  {
+    "x": 6,
+    "y": 47,
+    "geneName": "COL1A2",
+    "value": 0,
+    "cellGroupValue": "pancreatic PP cell",
+    "cellGroupValueWhereMarker": "pancreatic stellate cell",
+    "pValue": 7.236295175408774e-36
+  },
+  {
+    "x": 9,
+    "y": 47,
+    "geneName": "COL1A2",
+    "value": 0,
+    "cellGroupValue": "pancreatic epsilon cell",
+    "cellGroupValueWhereMarker": "pancreatic stellate cell",
+    "pValue": 7.236295175408774e-36
+  },
+  {
+    "x": 8,
+    "y": 47,
+    "geneName": "COL1A2",
+    "value": 0,
+    "cellGroupValue": "pancreatic endocrine cell",
+    "cellGroupValueWhereMarker": "pancreatic stellate cell",
+    "pValue": 7.236295175408774e-36
+  },
+  {
+    "x": 7,
+    "y": 47,
+    "geneName": "COL1A2",
+    "value": 0,
+    "cellGroupValue": "pancreatic ductal cell",
+    "cellGroupValueWhereMarker": "pancreatic stellate cell",
+    "pValue": 7.236295175408774e-36
+  },
+  {
+    "x": 5,
+    "y": 47,
+    "geneName": "COL1A2",
+    "value": 0,
+    "cellGroupValue": "pancreatic D cell",
+    "cellGroupValueWhereMarker": "pancreatic stellate cell",
+    "pValue": 7.236295175408774e-36
+  },
+  {
+    "x": 4,
+    "y": 47,
+    "geneName": "COL1A2",
+    "value": 0,
+    "cellGroupValue": "pancreatic A cell",
+    "cellGroupValueWhereMarker": "pancreatic stellate cell",
+    "pValue": 7.236295175408774e-36
+  },
+  {
+    "x": 3,
+    "y": 47,
+    "geneName": "COL1A2",
+    "value": 0,
+    "cellGroupValue": "mast cell",
+    "cellGroupValueWhereMarker": "pancreatic stellate cell",
+    "pValue": 7.236295175408774e-36
+  },
+  {
+    "x": 2,
+    "y": 47,
+    "geneName": "COL1A2",
+    "value": 0,
+    "cellGroupValue": "endothelial cell",
+    "cellGroupValueWhereMarker": "pancreatic stellate cell",
+    "pValue": 7.236295175408774e-36
+  },
+  {
+    "x": 1,
+    "y": 47,
+    "geneName": "COL1A2",
+    "value": 0,
+    "cellGroupValue": "co-expression cell",
+    "cellGroupValueWhereMarker": "pancreatic stellate cell",
+    "pValue": 7.236295175408774e-36
+  },
+  {
+    "x": 0,
+    "y": 47,
+    "geneName": "COL1A2",
+    "value": 0,
+    "cellGroupValue": "acinar cell",
+    "cellGroupValueWhereMarker": "pancreatic stellate cell",
+    "pValue": 7.236295175408774e-36
+  },
+  {
+    "x": 5,
+    "y": 48,
+    "geneName": "COL3A1",
+    "value": 0,
+    "cellGroupValue": "pancreatic D cell",
+    "cellGroupValueWhereMarker": "pancreatic stellate cell",
+    "pValue": 2.1325365829992376e-35
+  },
+  {
+    "x": 3,
+    "y": 48,
+    "geneName": "COL3A1",
+    "value": 0,
+    "cellGroupValue": "mast cell",
+    "cellGroupValueWhereMarker": "pancreatic stellate cell",
+    "pValue": 2.1325365829992376e-35
+  },
+  {
+    "x": 2,
+    "y": 48,
+    "geneName": "COL3A1",
+    "value": 0,
+    "cellGroupValue": "endothelial cell",
+    "cellGroupValueWhereMarker": "pancreatic stellate cell",
+    "pValue": 2.1325365829992376e-35
+  },
+  {
+    "x": 0,
+    "y": 48,
+    "geneName": "COL3A1",
+    "value": 0,
+    "cellGroupValue": "acinar cell",
+    "cellGroupValueWhereMarker": "pancreatic stellate cell",
+    "pValue": 2.1325365829992376e-35
+  },
+  {
+    "x": 1,
+    "y": 48,
+    "geneName": "COL3A1",
+    "value": 0,
+    "cellGroupValue": "co-expression cell",
+    "cellGroupValueWhereMarker": "pancreatic stellate cell",
+    "pValue": 2.1325365829992376e-35
+  },
+  {
+    "x": 12,
+    "y": 48,
+    "geneName": "COL3A1",
+    "value": 0,
+    "cellGroupValue": "type B pancreatic cell",
+    "cellGroupValueWhereMarker": "pancreatic stellate cell",
+    "pValue": 2.1325365829992376e-35
+  },
+  {
+    "x": 11,
+    "y": 48,
+    "geneName": "COL3A1",
+    "value": 0,
+    "cellGroupValue": "professional antigen presenting cell",
+    "cellGroupValueWhereMarker": "pancreatic stellate cell",
+    "pValue": 2.1325365829992376e-35
+  },
+  {
+    "x": 10,
+    "y": 48,
+    "geneName": "COL3A1",
+    "value": 5068.6065,
+    "cellGroupValue": "pancreatic stellate cell",
+    "cellGroupValueWhereMarker": "pancreatic stellate cell",
+    "pValue": 2.1325365829992376e-35
+  },
+  {
+    "x": 6,
+    "y": 48,
+    "geneName": "COL3A1",
+    "value": 0,
+    "cellGroupValue": "pancreatic PP cell",
+    "cellGroupValueWhereMarker": "pancreatic stellate cell",
+    "pValue": 2.1325365829992376e-35
+  },
+  {
+    "x": 9,
+    "y": 48,
+    "geneName": "COL3A1",
+    "value": 0,
+    "cellGroupValue": "pancreatic epsilon cell",
+    "cellGroupValueWhereMarker": "pancreatic stellate cell",
+    "pValue": 2.1325365829992376e-35
+  },
+  {
+    "x": 8,
+    "y": 48,
+    "geneName": "COL3A1",
+    "value": 0,
+    "cellGroupValue": "pancreatic endocrine cell",
+    "cellGroupValueWhereMarker": "pancreatic stellate cell",
+    "pValue": 2.1325365829992376e-35
+  },
+  {
+    "x": 7,
+    "y": 48,
+    "geneName": "COL3A1",
+    "value": 0,
+    "cellGroupValue": "pancreatic ductal cell",
+    "cellGroupValueWhereMarker": "pancreatic stellate cell",
+    "pValue": 2.1325365829992376e-35
+  },
+  {
+    "x": 4,
+    "y": 48,
+    "geneName": "COL3A1",
+    "value": 0,
+    "cellGroupValue": "pancreatic A cell",
+    "cellGroupValueWhereMarker": "pancreatic stellate cell",
+    "pValue": 2.1325365829992376e-35
+  },
+  {
+    "x": 4,
+    "y": 49,
+    "geneName": "LGALS1",
+    "value": 0,
+    "cellGroupValue": "pancreatic A cell",
+    "cellGroupValueWhereMarker": "pancreatic stellate cell",
+    "pValue": 2.4090028922925482e-34
+  },
+  {
+    "x": 0,
+    "y": 49,
+    "geneName": "LGALS1",
+    "value": 2.7124057,
+    "cellGroupValue": "acinar cell",
+    "cellGroupValueWhereMarker": "pancreatic stellate cell",
+    "pValue": 2.4090028922925482e-34
+  },
+  {
+    "x": 1,
+    "y": 49,
+    "geneName": "LGALS1",
+    "value": 0,
+    "cellGroupValue": "co-expression cell",
+    "cellGroupValueWhereMarker": "pancreatic stellate cell",
+    "pValue": 2.4090028922925482e-34
+  },
+  {
+    "x": 2,
+    "y": 49,
+    "geneName": "LGALS1",
+    "value": 775.9482,
+    "cellGroupValue": "endothelial cell",
+    "cellGroupValueWhereMarker": "pancreatic stellate cell",
+    "pValue": 2.4090028922925482e-34
+  },
+  {
+    "x": 3,
+    "y": 49,
+    "geneName": "LGALS1",
+    "value": 354.4652,
+    "cellGroupValue": "mast cell",
+    "cellGroupValueWhereMarker": "pancreatic stellate cell",
+    "pValue": 2.4090028922925482e-34
+  },
+  {
+    "x": 5,
+    "y": 49,
+    "geneName": "LGALS1",
+    "value": 0,
+    "cellGroupValue": "pancreatic D cell",
+    "cellGroupValueWhereMarker": "pancreatic stellate cell",
+    "pValue": 2.4090028922925482e-34
+  },
+  {
+    "x": 7,
+    "y": 49,
+    "geneName": "LGALS1",
+    "value": 9.285129,
+    "cellGroupValue": "pancreatic ductal cell",
+    "cellGroupValueWhereMarker": "pancreatic stellate cell",
+    "pValue": 2.4090028922925482e-34
+  },
+  {
+    "x": 8,
+    "y": 49,
+    "geneName": "LGALS1",
+    "value": 0,
+    "cellGroupValue": "pancreatic endocrine cell",
+    "cellGroupValueWhereMarker": "pancreatic stellate cell",
+    "pValue": 2.4090028922925482e-34
+  },
+  {
+    "x": 9,
+    "y": 49,
+    "geneName": "LGALS1",
+    "value": 0,
+    "cellGroupValue": "pancreatic epsilon cell",
+    "cellGroupValueWhereMarker": "pancreatic stellate cell",
+    "pValue": 2.4090028922925482e-34
+  },
+  {
+    "x": 6,
+    "y": 49,
+    "geneName": "LGALS1",
+    "value": 0,
+    "cellGroupValue": "pancreatic PP cell",
+    "cellGroupValueWhereMarker": "pancreatic stellate cell",
+    "pValue": 2.4090028922925482e-34
+  },
+  {
+    "x": 10,
+    "y": 49,
+    "geneName": "LGALS1",
+    "value": 1180.29575,
+    "cellGroupValue": "pancreatic stellate cell",
+    "cellGroupValueWhereMarker": "pancreatic stellate cell",
+    "pValue": 2.4090028922925482e-34
+  },
+  {
+    "x": 11,
+    "y": 49,
+    "geneName": "LGALS1",
+    "value": 624.9468,
+    "cellGroupValue": "professional antigen presenting cell",
+    "cellGroupValueWhereMarker": "pancreatic stellate cell",
+    "pValue": 2.4090028922925482e-34
+  },
+  {
+    "x": 12,
+    "y": 49,
+    "geneName": "LGALS1",
+    "value": 0,
+    "cellGroupValue": "type B pancreatic cell",
+    "cellGroupValueWhereMarker": "pancreatic stellate cell",
+    "pValue": 2.4090028922925482e-34
+  },
+  {
+    "x": 9,
+    "y": 50,
+    "geneName": "HCLS1",
+    "value": 0,
+    "cellGroupValue": "pancreatic epsilon cell",
+    "cellGroupValueWhereMarker": "professional antigen presenting cell",
+    "pValue": 0.04724341082056449
+  },
+  {
+    "x": 0,
+    "y": 50,
+    "geneName": "HCLS1",
+    "value": 0,
+    "cellGroupValue": "acinar cell",
+    "cellGroupValueWhereMarker": "professional antigen presenting cell",
+    "pValue": 0.04724341082056449
+  },
+  {
+    "x": 1,
+    "y": 50,
+    "geneName": "HCLS1",
+    "value": 0,
+    "cellGroupValue": "co-expression cell",
+    "cellGroupValueWhereMarker": "professional antigen presenting cell",
+    "pValue": 0.04724341082056449
+  },
+  {
+    "x": 2,
+    "y": 50,
+    "geneName": "HCLS1",
+    "value": 194.652455,
+    "cellGroupValue": "endothelial cell",
+    "cellGroupValueWhereMarker": "professional antigen presenting cell",
+    "pValue": 0.04724341082056449
+  },
+  {
+    "x": 3,
+    "y": 50,
+    "geneName": "HCLS1",
+    "value": 184.26079,
+    "cellGroupValue": "mast cell",
+    "cellGroupValueWhereMarker": "professional antigen presenting cell",
+    "pValue": 0.04724341082056449
+  },
+  {
+    "x": 12,
+    "y": 50,
+    "geneName": "HCLS1",
+    "value": 0,
+    "cellGroupValue": "type B pancreatic cell",
+    "cellGroupValueWhereMarker": "professional antigen presenting cell",
+    "pValue": 0.04724341082056449
+  },
+  {
+    "x": 11,
+    "y": 50,
+    "geneName": "HCLS1",
+    "value": 203.02036,
+    "cellGroupValue": "professional antigen presenting cell",
+    "cellGroupValueWhereMarker": "professional antigen presenting cell",
+    "pValue": 0.04724341082056449
+  },
+  {
+    "x": 10,
+    "y": 50,
+    "geneName": "HCLS1",
+    "value": 19.049965,
+    "cellGroupValue": "pancreatic stellate cell",
+    "cellGroupValueWhereMarker": "professional antigen presenting cell",
+    "pValue": 0.04724341082056449
+  },
+  {
+    "x": 6,
+    "y": 50,
+    "geneName": "HCLS1",
+    "value": 0,
+    "cellGroupValue": "pancreatic PP cell",
+    "cellGroupValueWhereMarker": "professional antigen presenting cell",
+    "pValue": 0.04724341082056449
+  },
+  {
+    "x": 4,
+    "y": 50,
+    "geneName": "HCLS1",
+    "value": 0,
+    "cellGroupValue": "pancreatic A cell",
+    "cellGroupValueWhereMarker": "professional antigen presenting cell",
+    "pValue": 0.04724341082056449
+  },
+  {
+    "x": 5,
+    "y": 50,
+    "geneName": "HCLS1",
+    "value": 0,
+    "cellGroupValue": "pancreatic D cell",
+    "cellGroupValueWhereMarker": "professional antigen presenting cell",
+    "pValue": 0.04724341082056449
+  },
+  {
+    "x": 7,
+    "y": 50,
+    "geneName": "HCLS1",
+    "value": 0,
+    "cellGroupValue": "pancreatic ductal cell",
+    "cellGroupValueWhereMarker": "professional antigen presenting cell",
+    "pValue": 0.04724341082056449
+  },
+  {
+    "x": 8,
+    "y": 50,
+    "geneName": "HCLS1",
+    "value": 0,
+    "cellGroupValue": "pancreatic endocrine cell",
+    "cellGroupValueWhereMarker": "professional antigen presenting cell",
+    "pValue": 0.04724341082056449
+  },
+  {
+    "x": 12,
+    "y": 51,
+    "geneName": "INS",
+    "value": 100166.4625,
+    "cellGroupValue": "type B pancreatic cell",
+    "cellGroupValueWhereMarker": "type B pancreatic cell",
+    "pValue": 1.2136834506569203e-187
+  },
+  {
+    "x": 11,
+    "y": 51,
+    "geneName": "INS",
+    "value": 5.5168576,
+    "cellGroupValue": "professional antigen presenting cell",
+    "cellGroupValueWhereMarker": "type B pancreatic cell",
+    "pValue": 1.2136834506569203e-187
+  },
+  {
+    "x": 10,
+    "y": 51,
+    "geneName": "INS",
+    "value": 12.6892895,
+    "cellGroupValue": "pancreatic stellate cell",
+    "cellGroupValueWhereMarker": "type B pancreatic cell",
+    "pValue": 1.2136834506569203e-187
+  },
+  {
+    "x": 6,
+    "y": 51,
+    "geneName": "INS",
+    "value": 36.931545,
+    "cellGroupValue": "pancreatic PP cell",
+    "cellGroupValueWhereMarker": "type B pancreatic cell",
+    "pValue": 1.2136834506569203e-187
+  },
+  {
+    "x": 9,
+    "y": 51,
+    "geneName": "INS",
+    "value": 28.475573,
+    "cellGroupValue": "pancreatic epsilon cell",
+    "cellGroupValueWhereMarker": "type B pancreatic cell",
+    "pValue": 1.2136834506569203e-187
+  },
+  {
+    "x": 8,
+    "y": 51,
+    "geneName": "INS",
+    "value": 400.16782,
+    "cellGroupValue": "pancreatic endocrine cell",
+    "cellGroupValueWhereMarker": "type B pancreatic cell",
+    "pValue": 1.2136834506569203e-187
+  },
+  {
+    "x": 7,
+    "y": 51,
+    "geneName": "INS",
+    "value": 5.66233585,
+    "cellGroupValue": "pancreatic ductal cell",
+    "cellGroupValueWhereMarker": "type B pancreatic cell",
+    "pValue": 1.2136834506569203e-187
+  },
+  {
+    "x": 5,
+    "y": 51,
+    "geneName": "INS",
+    "value": 67.751293,
+    "cellGroupValue": "pancreatic D cell",
+    "cellGroupValueWhereMarker": "type B pancreatic cell",
+    "pValue": 1.2136834506569203e-187
+  },
+  {
+    "x": 4,
+    "y": 51,
+    "geneName": "INS",
+    "value": 31.3276445,
+    "cellGroupValue": "pancreatic A cell",
+    "cellGroupValueWhereMarker": "type B pancreatic cell",
+    "pValue": 1.2136834506569203e-187
+  },
+  {
+    "x": 3,
+    "y": 51,
+    "geneName": "INS",
+    "value": 34.42982,
+    "cellGroupValue": "mast cell",
+    "cellGroupValueWhereMarker": "type B pancreatic cell",
+    "pValue": 1.2136834506569203e-187
+  },
+  {
+    "x": 2,
+    "y": 51,
+    "geneName": "INS",
+    "value": 22.4225695,
+    "cellGroupValue": "endothelial cell",
+    "cellGroupValueWhereMarker": "type B pancreatic cell",
+    "pValue": 1.2136834506569203e-187
+  },
+  {
+    "x": 1,
+    "y": 51,
+    "geneName": "INS",
+    "value": 58335.777,
+    "cellGroupValue": "co-expression cell",
+    "cellGroupValueWhereMarker": "type B pancreatic cell",
+    "pValue": 1.2136834506569203e-187
+  },
+  {
+    "x": 0,
+    "y": 51,
+    "geneName": "INS",
+    "value": 17.809967,
+    "cellGroupValue": "acinar cell",
+    "cellGroupValueWhereMarker": "type B pancreatic cell",
+    "pValue": 1.2136834506569203e-187
+  },
+  {
+    "x": 12,
+    "y": 52,
+    "geneName": "HADH",
+    "value": 891.34565,
+    "cellGroupValue": "type B pancreatic cell",
+    "cellGroupValueWhereMarker": "type B pancreatic cell",
+    "pValue": 7.653932360215006e-143
+  },
+  {
+    "x": 0,
+    "y": 52,
+    "geneName": "HADH",
+    "value": 58.948048,
+    "cellGroupValue": "acinar cell",
+    "cellGroupValueWhereMarker": "type B pancreatic cell",
+    "pValue": 7.653932360215006e-143
+  },
+  {
+    "x": 1,
+    "y": 52,
+    "geneName": "HADH",
+    "value": 635.1155,
+    "cellGroupValue": "co-expression cell",
+    "cellGroupValueWhereMarker": "type B pancreatic cell",
+    "pValue": 7.653932360215006e-143
+  },
+  {
+    "x": 2,
+    "y": 52,
+    "geneName": "HADH",
+    "value": 1.4250277,
+    "cellGroupValue": "endothelial cell",
+    "cellGroupValueWhereMarker": "type B pancreatic cell",
+    "pValue": 7.653932360215006e-143
+  },
+  {
+    "x": 3,
+    "y": 52,
+    "geneName": "HADH",
+    "value": 3.7485974,
+    "cellGroupValue": "mast cell",
+    "cellGroupValueWhereMarker": "type B pancreatic cell",
+    "pValue": 7.653932360215006e-143
+  },
+  {
+    "x": 4,
+    "y": 52,
+    "geneName": "HADH",
+    "value": 2.53689995,
+    "cellGroupValue": "pancreatic A cell",
+    "cellGroupValueWhereMarker": "type B pancreatic cell",
+    "pValue": 7.653932360215006e-143
+  },
+  {
+    "x": 5,
+    "y": 52,
+    "geneName": "HADH",
+    "value": 692.4245,
+    "cellGroupValue": "pancreatic D cell",
+    "cellGroupValueWhereMarker": "type B pancreatic cell",
+    "pValue": 7.653932360215006e-143
+  },
+  {
+    "x": 7,
+    "y": 52,
+    "geneName": "HADH",
+    "value": 74.294262,
+    "cellGroupValue": "pancreatic ductal cell",
+    "cellGroupValueWhereMarker": "type B pancreatic cell",
+    "pValue": 7.653932360215006e-143
+  },
+  {
+    "x": 8,
+    "y": 52,
+    "geneName": "HADH",
+    "value": 3.3900838,
+    "cellGroupValue": "pancreatic endocrine cell",
+    "cellGroupValueWhereMarker": "type B pancreatic cell",
+    "pValue": 7.653932360215006e-143
+  },
+  {
+    "x": 9,
+    "y": 52,
+    "geneName": "HADH",
+    "value": 51.937668,
+    "cellGroupValue": "pancreatic epsilon cell",
+    "cellGroupValueWhereMarker": "type B pancreatic cell",
+    "pValue": 7.653932360215006e-143
+  },
+  {
+    "x": 6,
+    "y": 52,
+    "geneName": "HADH",
+    "value": 8.17191,
+    "cellGroupValue": "pancreatic PP cell",
+    "cellGroupValueWhereMarker": "type B pancreatic cell",
+    "pValue": 7.653932360215006e-143
+  },
+  {
+    "x": 10,
+    "y": 52,
+    "geneName": "HADH",
+    "value": 24.7137245,
+    "cellGroupValue": "pancreatic stellate cell",
+    "cellGroupValueWhereMarker": "type B pancreatic cell",
+    "pValue": 7.653932360215006e-143
+  },
+  {
+    "x": 11,
+    "y": 52,
+    "geneName": "HADH",
+    "value": 0,
+    "cellGroupValue": "professional antigen presenting cell",
+    "cellGroupValueWhereMarker": "type B pancreatic cell",
+    "pValue": 7.653932360215006e-143
+  },
+  {
+    "x": 3,
+    "y": 53,
+    "geneName": "IAPP",
+    "value": 0.4599452,
+    "cellGroupValue": "mast cell",
+    "cellGroupValueWhereMarker": "type B pancreatic cell",
+    "pValue": 2.2139100095488188e-104
+  },
+  {
+    "x": 2,
+    "y": 53,
+    "geneName": "IAPP",
+    "value": 0.30476455,
+    "cellGroupValue": "endothelial cell",
+    "cellGroupValueWhereMarker": "type B pancreatic cell",
+    "pValue": 2.2139100095488188e-104
+  },
+  {
+    "x": 0,
+    "y": 53,
+    "geneName": "IAPP",
+    "value": 1.9707541,
+    "cellGroupValue": "acinar cell",
+    "cellGroupValueWhereMarker": "type B pancreatic cell",
+    "pValue": 2.2139100095488188e-104
+  },
+  {
+    "x": 1,
+    "y": 53,
+    "geneName": "IAPP",
+    "value": 2851.0154,
+    "cellGroupValue": "co-expression cell",
+    "cellGroupValueWhereMarker": "type B pancreatic cell",
+    "pValue": 2.2139100095488188e-104
+  },
+  {
+    "x": 12,
+    "y": 53,
+    "geneName": "IAPP",
+    "value": 3949.65455,
+    "cellGroupValue": "type B pancreatic cell",
+    "cellGroupValueWhereMarker": "type B pancreatic cell",
+    "pValue": 2.2139100095488188e-104
+  },
+  {
+    "x": 11,
+    "y": 53,
+    "geneName": "IAPP",
+    "value": 0,
+    "cellGroupValue": "professional antigen presenting cell",
+    "cellGroupValueWhereMarker": "type B pancreatic cell",
+    "pValue": 2.2139100095488188e-104
+  },
+  {
+    "x": 10,
+    "y": 53,
+    "geneName": "IAPP",
+    "value": 0,
+    "cellGroupValue": "pancreatic stellate cell",
+    "cellGroupValueWhereMarker": "type B pancreatic cell",
+    "pValue": 2.2139100095488188e-104
+  },
+  {
+    "x": 6,
+    "y": 53,
+    "geneName": "IAPP",
+    "value": 4.0842304,
+    "cellGroupValue": "pancreatic PP cell",
+    "cellGroupValueWhereMarker": "type B pancreatic cell",
+    "pValue": 2.2139100095488188e-104
+  },
+  {
+    "x": 9,
+    "y": 53,
+    "geneName": "IAPP",
+    "value": 3.6350453,
+    "cellGroupValue": "pancreatic epsilon cell",
+    "cellGroupValueWhereMarker": "type B pancreatic cell",
+    "pValue": 2.2139100095488188e-104
+  },
+  {
+    "x": 8,
+    "y": 53,
+    "geneName": "IAPP",
+    "value": 13.29142,
+    "cellGroupValue": "pancreatic endocrine cell",
+    "cellGroupValueWhereMarker": "type B pancreatic cell",
+    "pValue": 2.2139100095488188e-104
+  },
+  {
+    "x": 7,
+    "y": 53,
+    "geneName": "IAPP",
+    "value": 0,
+    "cellGroupValue": "pancreatic ductal cell",
+    "cellGroupValueWhereMarker": "type B pancreatic cell",
+    "pValue": 2.2139100095488188e-104
+  },
+  {
+    "x": 5,
+    "y": 53,
+    "geneName": "IAPP",
+    "value": 2.6078591,
+    "cellGroupValue": "pancreatic D cell",
+    "cellGroupValueWhereMarker": "type B pancreatic cell",
+    "pValue": 2.2139100095488188e-104
+  },
+  {
+    "x": 4,
+    "y": 53,
+    "geneName": "IAPP",
+    "value": 1.55418605,
+    "cellGroupValue": "pancreatic A cell",
+    "cellGroupValueWhereMarker": "type B pancreatic cell",
+    "pValue": 2.2139100095488188e-104
+  },
+  {
+    "x": 5,
+    "y": 54,
+    "geneName": "PFKFB2",
+    "value": 25.9346335,
+    "cellGroupValue": "pancreatic D cell",
+    "cellGroupValueWhereMarker": "type B pancreatic cell",
+    "pValue": 5.4778857919216356e-90
+  },
+  {
+    "x": 4,
+    "y": 54,
+    "geneName": "PFKFB2",
+    "value": 2.39157415,
+    "cellGroupValue": "pancreatic A cell",
+    "cellGroupValueWhereMarker": "type B pancreatic cell",
+    "pValue": 5.4778857919216356e-90
+  },
+  {
+    "x": 3,
+    "y": 54,
+    "geneName": "PFKFB2",
+    "value": 0,
+    "cellGroupValue": "mast cell",
+    "cellGroupValueWhereMarker": "type B pancreatic cell",
+    "pValue": 5.4778857919216356e-90
+  },
+  {
+    "x": 2,
+    "y": 54,
+    "geneName": "PFKFB2",
+    "value": 0,
+    "cellGroupValue": "endothelial cell",
+    "cellGroupValueWhereMarker": "type B pancreatic cell",
+    "pValue": 5.4778857919216356e-90
+  },
+  {
+    "x": 1,
+    "y": 54,
+    "geneName": "PFKFB2",
+    "value": 201.25507,
+    "cellGroupValue": "co-expression cell",
+    "cellGroupValueWhereMarker": "type B pancreatic cell",
+    "pValue": 5.4778857919216356e-90
+  },
+  {
+    "x": 0,
+    "y": 54,
+    "geneName": "PFKFB2",
+    "value": 0,
+    "cellGroupValue": "acinar cell",
+    "cellGroupValueWhereMarker": "type B pancreatic cell",
+    "pValue": 5.4778857919216356e-90
+  },
+  {
+    "x": 12,
+    "y": 54,
+    "geneName": "PFKFB2",
+    "value": 352.338425,
+    "cellGroupValue": "type B pancreatic cell",
+    "cellGroupValueWhereMarker": "type B pancreatic cell",
+    "pValue": 5.4778857919216356e-90
+  },
+  {
+    "x": 11,
+    "y": 54,
+    "geneName": "PFKFB2",
+    "value": 1.4100554,
+    "cellGroupValue": "professional antigen presenting cell",
+    "cellGroupValueWhereMarker": "type B pancreatic cell",
+    "pValue": 5.4778857919216356e-90
+  },
+  {
+    "x": 10,
+    "y": 54,
+    "geneName": "PFKFB2",
+    "value": 0,
+    "cellGroupValue": "pancreatic stellate cell",
+    "cellGroupValueWhereMarker": "type B pancreatic cell",
+    "pValue": 5.4778857919216356e-90
+  },
+  {
+    "x": 6,
+    "y": 54,
+    "geneName": "PFKFB2",
+    "value": 0.7735376,
+    "cellGroupValue": "pancreatic PP cell",
+    "cellGroupValueWhereMarker": "type B pancreatic cell",
+    "pValue": 5.4778857919216356e-90
+  },
+  {
+    "x": 9,
+    "y": 54,
+    "geneName": "PFKFB2",
+    "value": 0,
+    "cellGroupValue": "pancreatic epsilon cell",
+    "cellGroupValueWhereMarker": "type B pancreatic cell",
+    "pValue": 5.4778857919216356e-90
+  },
+  {
+    "x": 8,
+    "y": 54,
+    "geneName": "PFKFB2",
+    "value": 0,
+    "cellGroupValue": "pancreatic endocrine cell",
+    "cellGroupValueWhereMarker": "type B pancreatic cell",
+    "pValue": 5.4778857919216356e-90
+  },
+  {
+    "x": 7,
+    "y": 54,
+    "geneName": "PFKFB2",
+    "value": 5.78518075,
+    "cellGroupValue": "pancreatic ductal cell",
+    "cellGroupValueWhereMarker": "type B pancreatic cell",
+    "pValue": 5.4778857919216356e-90
+  },
+  {
+    "x": 6,
+    "y": 55,
+    "geneName": "G6PC2",
+    "value": 110.185356,
+    "cellGroupValue": "pancreatic PP cell",
+    "cellGroupValueWhereMarker": "type B pancreatic cell",
+    "pValue": 8.357546454085612e-88
+  },
+  {
+    "x": 0,
+    "y": 55,
+    "geneName": "G6PC2",
+    "value": 0,
+    "cellGroupValue": "acinar cell",
+    "cellGroupValueWhereMarker": "type B pancreatic cell",
+    "pValue": 8.357546454085612e-88
+  },
+  {
+    "x": 1,
+    "y": 55,
+    "geneName": "G6PC2",
+    "value": 1068.4304,
+    "cellGroupValue": "co-expression cell",
+    "cellGroupValueWhereMarker": "type B pancreatic cell",
+    "pValue": 8.357546454085612e-88
+  },
+  {
+    "x": 2,
+    "y": 55,
+    "geneName": "G6PC2",
+    "value": 0,
+    "cellGroupValue": "endothelial cell",
+    "cellGroupValueWhereMarker": "type B pancreatic cell",
+    "pValue": 8.357546454085612e-88
+  },
+  {
+    "x": 3,
+    "y": 55,
+    "geneName": "G6PC2",
+    "value": 1.9802525,
+    "cellGroupValue": "mast cell",
+    "cellGroupValueWhereMarker": "type B pancreatic cell",
+    "pValue": 8.357546454085612e-88
+  },
+  {
+    "x": 4,
+    "y": 55,
+    "geneName": "G6PC2",
+    "value": 199.48764,
+    "cellGroupValue": "pancreatic A cell",
+    "cellGroupValueWhereMarker": "type B pancreatic cell",
+    "pValue": 8.357546454085612e-88
+  },
+  {
+    "x": 5,
+    "y": 55,
+    "geneName": "G6PC2",
+    "value": 0,
+    "cellGroupValue": "pancreatic D cell",
+    "cellGroupValueWhereMarker": "type B pancreatic cell",
+    "pValue": 8.357546454085612e-88
+  },
+  {
+    "x": 7,
+    "y": 55,
+    "geneName": "G6PC2",
+    "value": 0,
+    "cellGroupValue": "pancreatic ductal cell",
+    "cellGroupValueWhereMarker": "type B pancreatic cell",
+    "pValue": 8.357546454085612e-88
+  },
+  {
+    "x": 8,
+    "y": 55,
+    "geneName": "G6PC2",
+    "value": 3.8710477,
+    "cellGroupValue": "pancreatic endocrine cell",
+    "cellGroupValueWhereMarker": "type B pancreatic cell",
+    "pValue": 8.357546454085612e-88
+  },
+  {
+    "x": 9,
+    "y": 55,
+    "geneName": "G6PC2",
+    "value": 1.5658641,
+    "cellGroupValue": "pancreatic epsilon cell",
+    "cellGroupValueWhereMarker": "type B pancreatic cell",
+    "pValue": 8.357546454085612e-88
+  },
+  {
+    "x": 10,
+    "y": 55,
+    "geneName": "G6PC2",
+    "value": 0,
+    "cellGroupValue": "pancreatic stellate cell",
+    "cellGroupValueWhereMarker": "type B pancreatic cell",
+    "pValue": 8.357546454085612e-88
+  },
+  {
+    "x": 11,
+    "y": 55,
+    "geneName": "G6PC2",
+    "value": 0,
+    "cellGroupValue": "professional antigen presenting cell",
+    "cellGroupValueWhereMarker": "type B pancreatic cell",
+    "pValue": 8.357546454085612e-88
+  },
+  {
+    "x": 12,
+    "y": 55,
+    "geneName": "G6PC2",
+    "value": 1382.2006,
+    "cellGroupValue": "type B pancreatic cell",
+    "cellGroupValueWhereMarker": "type B pancreatic cell",
+    "pValue": 8.357546454085612e-88
+  }
+]

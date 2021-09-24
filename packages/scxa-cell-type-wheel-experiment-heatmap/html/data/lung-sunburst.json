@@ -1,0 +1,694 @@
+[
+  {
+    "name": "lung",
+    "id": "lung",
+    "parent": "",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-6308",
+      "E-HCAD-8",
+      "E-HCAD-1",
+      "E-GEOD-86618",
+      "E-CURD-11",
+      "E-GEOD-130148",
+      "E-GEOD-135922",
+      "E-MTAB-7678",
+      "E-MTAB-8077",
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "Homo sapiens",
+    "id": "Homo sapiens",
+    "parent": "lung",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-6308",
+      "E-HCAD-8",
+      "E-HCAD-1",
+      "E-GEOD-86618",
+      "E-CURD-11",
+      "E-GEOD-130148",
+      "E-GEOD-135922"
+    ]
+  },
+  {
+    "name": "bronchiole",
+    "id": "Homo sapiens#bronchiole",
+    "parent": "Homo sapiens",
+    "value": 1,
+    "experimentAccessions": [
+      "E-CURD-11"
+    ]
+  },
+  {
+    "name": "epithelial cell",
+    "id": "Homo sapiens#bronchiole#epithelial cell",
+    "parent": "Homo sapiens#bronchiole",
+    "value": 1,
+    "experimentAccessions": [
+      "E-CURD-11"
+    ]
+  },
+  {
+    "name": "lung",
+    "id": "Homo sapiens#lung",
+    "parent": "Homo sapiens",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-6308",
+      "E-HCAD-8",
+      "E-HCAD-1",
+      "E-GEOD-86618",
+      "E-CURD-11"
+    ]
+  },
+  {
+    "name": "lung parenchyma",
+    "id": "Homo sapiens#lung parenchyma",
+    "parent": "Homo sapiens",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-130148"
+    ]
+  },
+  {
+    "name": "B cell",
+    "id": "Homo sapiens#lung parenchyma#B cell",
+    "parent": "Homo sapiens#lung parenchyma",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-130148"
+    ]
+  },
+  {
+    "name": "fibroblast of lung",
+    "id": "Homo sapiens#lung parenchyma#fibroblast of lung",
+    "parent": "Homo sapiens#lung parenchyma",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-130148"
+    ]
+  },
+  {
+    "name": "lung ciliated cell",
+    "id": "Homo sapiens#lung parenchyma#lung ciliated cell",
+    "parent": "Homo sapiens#lung parenchyma",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-130148"
+    ]
+  },
+  {
+    "name": "lung endothelial cell",
+    "id": "Homo sapiens#lung parenchyma#lung endothelial cell",
+    "parent": "Homo sapiens#lung parenchyma",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-130148"
+    ]
+  },
+  {
+    "name": "lung macrophage",
+    "id": "Homo sapiens#lung parenchyma#lung macrophage",
+    "parent": "Homo sapiens#lung parenchyma",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-130148"
+    ]
+  },
+  {
+    "name": "lung secretory cell",
+    "id": "Homo sapiens#lung parenchyma#lung secretory cell",
+    "parent": "Homo sapiens#lung parenchyma",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-130148"
+    ]
+  },
+  {
+    "name": "lymphocyte",
+    "id": "Homo sapiens#lung parenchyma#lymphocyte",
+    "parent": "Homo sapiens#lung parenchyma",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-130148"
+    ]
+  },
+  {
+    "name": "mast cell",
+    "id": "Homo sapiens#lung parenchyma#mast cell",
+    "parent": "Homo sapiens#lung parenchyma",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-130148"
+    ]
+  },
+  {
+    "name": "natural killer cell",
+    "id": "Homo sapiens#lung parenchyma#natural killer cell",
+    "parent": "Homo sapiens#lung parenchyma",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-130148"
+    ]
+  },
+  {
+    "name": "T cell",
+    "id": "Homo sapiens#lung parenchyma#T cell",
+    "parent": "Homo sapiens#lung parenchyma",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-130148"
+    ]
+  },
+  {
+    "name": "transformed epithelial cell",
+    "id": "Homo sapiens#lung parenchyma#transformed epithelial cell",
+    "parent": "Homo sapiens#lung parenchyma",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-130148"
+    ]
+  },
+  {
+    "name": "type I pneumocyte",
+    "id": "Homo sapiens#lung parenchyma#type I pneumocyte",
+    "parent": "Homo sapiens#lung parenchyma",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-130148"
+    ]
+  },
+  {
+    "name": "type II pneumocyte",
+    "id": "Homo sapiens#lung parenchyma#type II pneumocyte",
+    "parent": "Homo sapiens#lung parenchyma",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-130148"
+    ]
+  },
+  {
+    "name": "activated CD4-positive, alpha-beta T cell",
+    "id": "Homo sapiens#lung#activated CD4-positive, alpha-beta T cell",
+    "parent": "Homo sapiens#lung",
+    "value": 1,
+    "experimentAccessions": [
+      "E-HCAD-8"
+    ]
+  },
+  {
+    "name": "B cell",
+    "id": "Homo sapiens#lung#B cell",
+    "parent": "Homo sapiens#lung",
+    "value": 1,
+    "experimentAccessions": [
+      "E-HCAD-1"
+    ]
+  },
+  {
+    "name": "blood vessel endothelial cell",
+    "id": "Homo sapiens#lung#blood vessel endothelial cell",
+    "parent": "Homo sapiens#lung",
+    "value": 1,
+    "experimentAccessions": [
+      "E-HCAD-1"
+    ]
+  },
+  {
+    "name": "CD4-positive, alpha-beta T cell",
+    "id": "Homo sapiens#lung#CD4-positive, alpha-beta T cell",
+    "parent": "Homo sapiens#lung",
+    "value": 1,
+    "experimentAccessions": [
+      "E-HCAD-1",
+      "E-HCAD-8"
+    ]
+  },
+  {
+    "name": "CD8-positive, alpha-beta cytotoxic T cell",
+    "id": "Homo sapiens#lung#CD8-positive, alpha-beta cytotoxic T cell",
+    "parent": "Homo sapiens#lung",
+    "value": 1,
+    "experimentAccessions": [
+      "E-HCAD-1"
+    ]
+  },
+  {
+    "name": "CD8-positive, alpha-beta T cell",
+    "id": "Homo sapiens#lung#CD8-positive, alpha-beta T cell",
+    "parent": "Homo sapiens#lung",
+    "value": 1,
+    "experimentAccessions": [
+      "E-HCAD-8"
+    ]
+  },
+  {
+    "name": "conventional dendritic cell",
+    "id": "Homo sapiens#lung#conventional dendritic cell",
+    "parent": "Homo sapiens#lung",
+    "value": 1,
+    "experimentAccessions": [
+      "E-HCAD-1"
+    ]
+  },
+  {
+    "name": "dendritic cell",
+    "id": "Homo sapiens#lung#dendritic cell",
+    "parent": "Homo sapiens#lung",
+    "value": 1,
+    "experimentAccessions": [
+      "E-HCAD-1"
+    ]
+  },
+  {
+    "name": "dendritic cell/dividing monocyte",
+    "id": "Homo sapiens#lung#dendritic cell/dividing monocyte",
+    "parent": "Homo sapiens#lung",
+    "value": 1,
+    "experimentAccessions": [
+      "E-HCAD-1"
+    ]
+  },
+  {
+    "name": "endothelial cell",
+    "id": "Homo sapiens#lung#endothelial cell",
+    "parent": "Homo sapiens#lung",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-6308"
+    ]
+  },
+  {
+    "name": "epithelial cell",
+    "id": "Homo sapiens#lung#epithelial cell",
+    "parent": "Homo sapiens#lung",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-86618"
+    ]
+  },
+  {
+    "name": "fibroblast of lung",
+    "id": "Homo sapiens#lung#fibroblast of lung",
+    "parent": "Homo sapiens#lung",
+    "value": 1,
+    "experimentAccessions": [
+      "E-HCAD-1"
+    ]
+  },
+  {
+    "name": "lung ciliated cell",
+    "id": "Homo sapiens#lung#lung ciliated cell",
+    "parent": "Homo sapiens#lung",
+    "value": 1,
+    "experimentAccessions": [
+      "E-HCAD-1"
+    ]
+  },
+  {
+    "name": "lymphatic vessel",
+    "id": "Homo sapiens#lung#lymphatic vessel",
+    "parent": "Homo sapiens#lung",
+    "value": 1,
+    "experimentAccessions": [
+      "E-HCAD-1"
+    ]
+  },
+  {
+    "name": "macrophage",
+    "id": "Homo sapiens#lung#macrophage",
+    "parent": "Homo sapiens#lung",
+    "value": 1,
+    "experimentAccessions": [
+      "E-HCAD-1"
+    ]
+  },
+  {
+    "name": "mast cell",
+    "id": "Homo sapiens#lung#mast cell",
+    "parent": "Homo sapiens#lung",
+    "value": 1,
+    "experimentAccessions": [
+      "E-HCAD-1"
+    ]
+  },
+  {
+    "name": "monocyte",
+    "id": "Homo sapiens#lung#monocyte",
+    "parent": "Homo sapiens#lung",
+    "value": 1,
+    "experimentAccessions": [
+      "E-HCAD-1"
+    ]
+  },
+  {
+    "name": "muscle cell",
+    "id": "Homo sapiens#lung#muscle cell",
+    "parent": "Homo sapiens#lung",
+    "value": 1,
+    "experimentAccessions": [
+      "E-HCAD-1"
+    ]
+  },
+  {
+    "name": "natural killer cell",
+    "id": "Homo sapiens#lung#natural killer cell",
+    "parent": "Homo sapiens#lung",
+    "value": 1,
+    "experimentAccessions": [
+      "E-HCAD-1"
+    ]
+  },
+  {
+    "name": "not applicable",
+    "id": "Homo sapiens#lung#not applicable",
+    "parent": "Homo sapiens#lung",
+    "value": 1,
+    "experimentAccessions": [
+      "E-CURD-11"
+    ]
+  },
+  {
+    "name": "plasma cell",
+    "id": "Homo sapiens#lung#plasma cell",
+    "parent": "Homo sapiens#lung",
+    "value": 1,
+    "experimentAccessions": [
+      "E-HCAD-1"
+    ]
+  },
+  {
+    "name": "plasmacytoid dendritic cell",
+    "id": "Homo sapiens#lung#plasmacytoid dendritic cell",
+    "parent": "Homo sapiens#lung",
+    "value": 1,
+    "experimentAccessions": [
+      "E-HCAD-1"
+    ]
+  },
+  {
+    "name": "regulatory T cell",
+    "id": "Homo sapiens#lung#regulatory T cell",
+    "parent": "Homo sapiens#lung",
+    "value": 1,
+    "experimentAccessions": [
+      "E-HCAD-1"
+    ]
+  },
+  {
+    "name": "respiratory system blood vessel",
+    "id": "Homo sapiens#lung#respiratory system blood vessel",
+    "parent": "Homo sapiens#lung",
+    "value": 1,
+    "experimentAccessions": [
+      "E-HCAD-1"
+    ]
+  },
+  {
+    "name": "respiratory system lymphatic vessel",
+    "id": "Homo sapiens#lung#respiratory system lymphatic vessel",
+    "parent": "Homo sapiens#lung",
+    "value": 1,
+    "experimentAccessions": [
+      "E-HCAD-1"
+    ]
+  },
+  {
+    "name": "T cell",
+    "id": "Homo sapiens#lung#T cell",
+    "parent": "Homo sapiens#lung",
+    "value": 1,
+    "experimentAccessions": [
+      "E-HCAD-8",
+      "E-HCAD-1"
+    ]
+  },
+  {
+    "name": "type I pneumocyte",
+    "id": "Homo sapiens#lung#type I pneumocyte",
+    "parent": "Homo sapiens#lung",
+    "value": 1,
+    "experimentAccessions": [
+      "E-HCAD-1"
+    ]
+  },
+  {
+    "name": "type II pneumocyte",
+    "id": "Homo sapiens#lung#type II pneumocyte",
+    "parent": "Homo sapiens#lung",
+    "value": 1,
+    "experimentAccessions": [
+      "E-HCAD-1"
+    ]
+  },
+  {
+    "name": "middle lobe of right lung",
+    "id": "Homo sapiens#middle lobe of right lung",
+    "parent": "Homo sapiens",
+    "value": 1,
+    "experimentAccessions": [
+      "E-CURD-11"
+    ]
+  },
+  {
+    "name": "not applicable",
+    "id": "Homo sapiens#middle lobe of right lung#not applicable",
+    "parent": "Homo sapiens#middle lobe of right lung",
+    "value": 1,
+    "experimentAccessions": [
+      "E-CURD-11"
+    ]
+  },
+  {
+    "name": "pigmented layer of retina and optic choroid",
+    "id": "Homo sapiens#pigmented layer of retina and optic choroid",
+    "parent": "Homo sapiens",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-135922"
+    ]
+  },
+  {
+    "name": "capillary endothelial cell",
+    "id": "Homo sapiens#pigmented layer of retina and optic choroid#capillary endothelial cell",
+    "parent": "Homo sapiens#pigmented layer of retina and optic choroid",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-135922"
+    ]
+  },
+  {
+    "name": "endothelial cell of artery",
+    "id": "Homo sapiens#pigmented layer of retina and optic choroid#endothelial cell of artery",
+    "parent": "Homo sapiens#pigmented layer of retina and optic choroid",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-135922"
+    ]
+  },
+  {
+    "name": "fibroblast",
+    "id": "Homo sapiens#pigmented layer of retina and optic choroid#fibroblast",
+    "parent": "Homo sapiens#pigmented layer of retina and optic choroid",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-135922"
+    ]
+  },
+  {
+    "name": "leukocyte/other",
+    "id": "Homo sapiens#pigmented layer of retina and optic choroid#leukocyte/other",
+    "parent": "Homo sapiens#pigmented layer of retina and optic choroid",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-135922"
+    ]
+  },
+  {
+    "name": "macrophage",
+    "id": "Homo sapiens#pigmented layer of retina and optic choroid#macrophage",
+    "parent": "Homo sapiens#pigmented layer of retina and optic choroid",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-135922"
+    ]
+  },
+  {
+    "name": "pericyte",
+    "id": "Homo sapiens#pigmented layer of retina and optic choroid#pericyte",
+    "parent": "Homo sapiens#pigmented layer of retina and optic choroid",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-135922"
+    ]
+  },
+  {
+    "name": "retinal pigment epithelial cell/retinal rod cell/melanocyte",
+    "id": "Homo sapiens#pigmented layer of retina and optic choroid#retinal pigment epithelial cell/retinal rod cell/melanocyte",
+    "parent": "Homo sapiens#pigmented layer of retina and optic choroid",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-135922"
+    ]
+  },
+  {
+    "name": "Schwann cell",
+    "id": "Homo sapiens#pigmented layer of retina and optic choroid#Schwann cell",
+    "parent": "Homo sapiens#pigmented layer of retina and optic choroid",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-135922"
+    ]
+  },
+  {
+    "name": "vein endothelial cell",
+    "id": "Homo sapiens#pigmented layer of retina and optic choroid#vein endothelial cell",
+    "parent": "Homo sapiens#pigmented layer of retina and optic choroid",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-135922"
+    ]
+  },
+  {
+    "name": "Mus musculus",
+    "id": "Mus musculus",
+    "parent": "lung",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-7678",
+      "E-MTAB-8077",
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "lung",
+    "id": "Mus musculus#lung",
+    "parent": "Mus musculus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-7678",
+      "E-MTAB-8077",
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "B cell",
+    "id": "Mus musculus#lung#B cell",
+    "parent": "Mus musculus#lung",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "ciliated columnar cell of tracheobronchial tree",
+    "id": "Mus musculus#lung#ciliated columnar cell of tracheobronchial tree",
+    "parent": "Mus musculus#lung",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "classical monocyte",
+    "id": "Mus musculus#lung#classical monocyte",
+    "parent": "Mus musculus#lung",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-7678",
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "endothelial cell",
+    "id": "Mus musculus#lung#endothelial cell",
+    "parent": "Mus musculus#lung",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-8077"
+    ]
+  },
+  {
+    "name": "epithelial cell of lung",
+    "id": "Mus musculus#lung#epithelial cell of lung",
+    "parent": "Mus musculus#lung",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "leukocyte",
+    "id": "Mus musculus#lung#leukocyte",
+    "parent": "Mus musculus#lung",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "lung endothelial cell",
+    "id": "Mus musculus#lung#lung endothelial cell",
+    "parent": "Mus musculus#lung",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "lung macrophage",
+    "id": "Mus musculus#lung#lung macrophage",
+    "parent": "Mus musculus#lung",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-7678"
+    ]
+  },
+  {
+    "name": "monocyte",
+    "id": "Mus musculus#lung#monocyte",
+    "parent": "Mus musculus#lung",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "myeloid cell",
+    "id": "Mus musculus#lung#myeloid cell",
+    "parent": "Mus musculus#lung",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "natural killer cell",
+    "id": "Mus musculus#lung#natural killer cell",
+    "parent": "Mus musculus#lung",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "stromal cell",
+    "id": "Mus musculus#lung#stromal cell",
+    "parent": "Mus musculus#lung",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "T cell",
+    "id": "Mus musculus#lung#T cell",
+    "parent": "Mus musculus#lung",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  }
+]

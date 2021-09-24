@@ -8,7 +8,7 @@ import lungany from './data/lung-any-sunburst.json'
 import lung from './data/lung-sunburst.json'
 import pancreas from './data/pancreas-sunburst.json'
 import covid19 from './data/covid19-sunburst.json'
-import leukocyte from './data/leukocyte-sunburst.json'
+import leukocyte from './data/local-leukocyte-sunburst.json'
 import cancer from './data/cancer-sunburst.json'
 import tcell from './data/tcell-sunburst.json'
 

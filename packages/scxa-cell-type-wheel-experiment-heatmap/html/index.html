@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Single Cell Expression Atlas Cell Type Wheel Experiment Heatmap demo</title>
+
+    <link rel="stylesheet" href="https://www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/libraries/foundation-6/css/foundation.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="https://www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/css/ebi-global.css" type="text/css" media="all" />
+
+    <style>
+        /* Override EBI VF styles for components that use React Select */
+        #widget-without-controls input, #widget-with-controls input {
+            height: unset;
+            box-shadow: none;
+            margin: 0;
+        }
+        /* Fix for Highcharts tooltip being clipped */
+        .highcharts-container {
+            overflow: visible !important;
+        }
+        svg {
+            overflow: visible !important;
+        }
+    </style>
+</head>
+
+<body>
+<div class="row-expanded">
+    <h2 class="text-center">Cell Type Wheel Experiment Heatmap</h2>
+    <div id="target"></div>
+</div>
+</body>
+
+<script src="/dist/vendors.bundle.js"></script>
+<script src="/dist/CellTypeWheelExperimentHeatmapDemo.bundle.js"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function(event) {
+        CellTypeWheelExperimentHeatmapDemo.render({}, 'target');
+    })
+</script>
+
+</html>

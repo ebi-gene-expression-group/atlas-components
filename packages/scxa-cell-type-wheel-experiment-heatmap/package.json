@@ -1,10 +1,10 @@
 {
-  "name": "@ebi-gene-expression-group/scxa-cell-type-wheel",
+  "name": "@ebi-gene-expression-group/scxa-cell-type-wheel-heatmap",
   "version": "0.0.1",
   "publishConfig": {
     "access": "public"
   },
-  "description": "Cell type wheel chart",
+  "description": "My package does some neat things",
   "main": "lib/index.js",
   "scripts": {
     "prepare": "rm -rf lib && babel src -d lib --copy-files",
@@ -25,8 +25,7 @@
   },
   "author": "Expression Atlas developers <arrayexpress-atlas@ebi.ac.uk>",
   "collaborators": [
-    "Haider Iqbal <haider@ebi.ac.uk>",
-    "Alfonso Muñoz-Pomer Fuentes <amunoz@ebi.ac.uk>"
+    "Haider Iqbal <haideri@ebi.ac.uk>"
   ],
   "license": "Apache-2.0",
   "repository": {
@@ -34,34 +33,41 @@
     "url": "https://github.com/atlas-components.git"
   },
   "dependencies": {
+    "@ebi-gene-expression-group/scxa-marker-gene-heatmap": "^2.0.0",
+    "@ebi-gene-expression-group/scxa-cell-type-wheel": "^0.0.1",
     "highcharts": "^9.1.0",
     "highcharts-react-official": "^3.0.0",
     "lodash": "^4.17.21",
     "prop-types": "^15.7.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-select": "^3.1.0",
     "styled-components": "^5.3.0",
     "urijs": "^1.19.6"
   },
   "devDependencies": {
     "@babel/cli": "^7.14.3",
     "@babel/core": "^7.14.3",
+    "@babel/plugin-proposal-class-properties": "^7.10.1",
+    "@babel/polyfill": "^7.12.1",
     "@babel/preset-env": "^7.14.2",
     "@babel/preset-react": "^7.13.13",
     "@ebi-gene-expression-group/eslint-config": "^2.3.0",
     "@testing-library/jest-dom": "^5.12.0",
     "@testing-library/react": "^11.2.7",
-    "@webpack-cli/serve": "^1.4.0",
-    "babel-loader": "^8.2.2",
+    "babel-loader": "^8.1.0",
+    "clean-webpack-plugin": "^3.0.0",
     "core-js": "^3.12.1",
     "coveralls": "^3.1.0",
     "eslint": "^7.27.0",
     "fetch-mock": "^9.11.0",
+    "file-loader": "^6.1.1",
     "jest": "^26.6.3",
     "node-fetch": "^2.6.1",
     "react-test-renderer": "^17.0.2",
     "regenerator-runtime": "^0.13.7",
-    "webpack": "^5.37.1",
-    "webpack-dev-server": "^4.0.0-beta.3"
+    "webpack": "^4.42.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
   }
 }

@@ -58,7 +58,7 @@ Highcharts.SVGRenderer.prototype.symbols.download = (x, y, w, h) => [
 
 const MarkerGeneHeatmap = (props) => {
   const { host, chartHeight, hasDynamicHeight, heatmapRowHeight, heatmapType, species } = props
-  const { data, xAxisCategories, yAxisCategories } = props
+  const { cellType, data, xAxisCategories, yAxisCategories } = props
   const totalNumberOfRows = Object.keys(_.groupBy(data, `geneName`)).length
   const groupedData = _.groupBy(data, `cellGroupValueWhereMarker`)
 
@@ -138,7 +138,7 @@ const MarkerGeneHeatmap = (props) => {
       enabled: false
     },
     title: {
-      text: heatmapOptionsProvider[heatmapType].title,
+      text: heatmapOptionsProvider[heatmapType].title(cellType),
       style: {
         fontSize: `25px`,
         fontWeight: `bold`
@@ -300,12 +300,14 @@ MarkerGeneHeatmap.propTypes = {
   heatmapRowHeight: PropTypes.number.isRequired,
   species: PropTypes.string.isRequired,
   heatmapType: PropTypes.oneOf(Object.keys(heatmapOptionsProvider)).isRequired,
-  host: PropTypes.string
+  host: PropTypes.string,
+  cellType: PropTypes.string
 }
 
 MarkerGeneHeatmap.defaultProps = {
   chartHeight: 300,
-  host: `https://www.ebi.ac.uk/gxa/sc/`
+  host: `https://www.ebi.ac.uk/gxa/sc/`,
+  cellType: `Cell type`
 }
 
 export default MarkerGeneHeatmap

@@ -1,0 +1,156 @@
+[
+  {
+    "name": "leukocyte",
+    "id": "leukocyte",
+    "parent": "",
+    "value": 1,
+    "experimentAccessions": [
+      "E-EHCA-2",
+      "E-MTAB-5061"
+    ]
+  },
+  {
+    "name": "Homo sapiens",
+    "id": "Homo sapiens",
+    "parent": "leukocyte",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-5061"
+    ]
+  },
+  {
+    "name": "pancreas",
+    "id": "Homo sapiens#pancreas",
+    "parent": "Homo sapiens",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-5061"
+    ]
+  },
+  {
+    "name": "mast cell",
+    "id": "Homo sapiens#pancreas#mast cell",
+    "parent": "Homo sapiens#pancreas",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-5061"
+    ]
+  },
+  {
+    "name": "Mus musculus",
+    "id": "Mus musculus",
+    "parent": "leukocyte",
+    "value": 1,
+    "experimentAccessions": [
+      "E-EHCA-2"
+    ]
+  },
+  {
+    "name": "lymph node",
+    "id": "Mus musculus#lymph node",
+    "parent": "Mus musculus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-EHCA-2"
+    ]
+  },
+  {
+    "name": "B cell",
+    "id": "Mus musculus#lymph node#B cell",
+    "parent": "Mus musculus#lymph node",
+    "value": 1,
+    "experimentAccessions": [
+      "E-EHCA-2"
+    ]
+  },
+  {
+    "name": "conventional dendritic cell 1",
+    "id": "Mus musculus#lymph node#conventional dendritic cell 1",
+    "parent": "Mus musculus#lymph node",
+    "value": 1,
+    "experimentAccessions": [
+      "E-EHCA-2"
+    ]
+  },
+  {
+    "name": "conventional dendritic cell 2",
+    "id": "Mus musculus#lymph node#conventional dendritic cell 2",
+    "parent": "Mus musculus#lymph node",
+    "value": 1,
+    "experimentAccessions": [
+      "E-EHCA-2"
+    ]
+  },
+  {
+    "name": "natural killer cell",
+    "id": "Mus musculus#lymph node#natural killer cell",
+    "parent": "Mus musculus#lymph node",
+    "value": 1,
+    "experimentAccessions": [
+      "E-EHCA-2"
+    ]
+  },
+  {
+    "name": "plasmacytoid dendritic cell",
+    "id": "Mus musculus#lymph node#plasmacytoid dendritic cell",
+    "parent": "Mus musculus#lymph node",
+    "value": 1,
+    "experimentAccessions": [
+      "E-EHCA-2"
+    ]
+  },
+  {
+    "name": "skin",
+    "id": "Mus musculus#skin",
+    "parent": "Mus musculus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-EHCA-2"
+    ]
+  },
+  {
+    "name": "B cell",
+    "id": "Mus musculus#skin#B cell",
+    "parent": "Mus musculus#skin",
+    "value": 1,
+    "experimentAccessions": [
+      "E-EHCA-2"
+    ]
+  },
+  {
+    "name": "conventional dendritic cell 1",
+    "id": "Mus musculus#skin#conventional dendritic cell 1",
+    "parent": "Mus musculus#skin",
+    "value": 1,
+    "experimentAccessions": [
+      "E-EHCA-2"
+    ]
+  },
+  {
+    "name": "conventional dendritic cell 2",
+    "id": "Mus musculus#skin#conventional dendritic cell 2",
+    "parent": "Mus musculus#skin",
+    "value": 1,
+    "experimentAccessions": [
+      "E-EHCA-2"
+    ]
+  },
+  {
+    "name": "natural killer cell",
+    "id": "Mus musculus#skin#natural killer cell",
+    "parent": "Mus musculus#skin",
+    "value": 1,
+    "experimentAccessions": [
+      "E-EHCA-2"
+    ]
+  },
+  {
+    "name": "plasmacytoid dendritic cell",
+    "id": "Mus musculus#skin#plasmacytoid dendritic cell",
+    "parent": "Mus musculus#skin",
+    "value": 1,
+    "experimentAccessions": [
+      "E-EHCA-2"
+    ]
+  }
+]

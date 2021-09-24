@@ -1,4 +1,6 @@
 import React from 'react'
+import PropTypes from 'prop-types'
+
 import HighchartsReact from 'highcharts-react-official'
 import Highcharts from 'highcharts'
 import highchartsSunburst from 'highcharts/modules/sunburst'
@@ -15,8 +17,12 @@ class CellTypeWheel extends React.Component {
 
     this.state = {
       chartOptions: {
+        credits: {
+          enabled: false
+        },
+
         chart: {
-          height: `75%`
+          height: `100%`
         },
 
         // Let the center circle be transparent
@@ -34,7 +40,11 @@ class CellTypeWheel extends React.Component {
         ],
 
         title: {
-          text: `Cell types`
+          text: `Cell type results of ${props.searchTerm}`,
+          style: {
+            fontSize: `25px`,
+            fontWeight: `bold`
+          }
         },
 
         series: [{
@@ -79,6 +89,11 @@ class CellTypeWheel extends React.Component {
       </div>
     )
   }
+}
+
+CellTypeWheel.propTypes = {
+  searchTerm: PropTypes.string.isRequired,
+  data: PropTypes.object.isRequired
 }
 
 export default CellTypeWheel
