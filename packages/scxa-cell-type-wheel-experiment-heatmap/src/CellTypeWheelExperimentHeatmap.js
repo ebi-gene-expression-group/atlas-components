@@ -1,8 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import CellTypeHeatmap from '@ebi-gene-expression-group/scxa-cell-type-marker-gene-heatmap'
-import CellTypeWheel from 'expression-atlas-my-package'
+import _ from 'lodash'
+
+import MarkerGeneHeatmap from '@ebi-gene-expression-group/scxa-marker-gene-heatmap/lib/MarkerGeneHeatmap'
+import CellTypeWheel from '@ebi-gene-expression-group/scxa-cell-type-wheel'
 
 class CellTypeWheelExperimentHeatmap extends React.Component {
   constructor(props) {
@@ -10,29 +12,30 @@ class CellTypeWheelExperimentHeatmap extends React.Component {
   }
 
   render() {
-
-    const {cellTypeWheelData, cellTypeHeatmapData} = this.props
-
-    const heatMapProps = {
-      resource: ``,
-      host: `https://gist.githubusercontent.com/haideriqbal/70170f9b03a9de271829854a13d7854d/raw/ca14d3dfa773ffc7feaf4bfe8d126c11d8ce97f3/test.json`,
-      type:`cellType`,
-      props: {
-        species: `Homo sapiens`,
-        hasDynamicHeight: true,
-        heatmapRowHeight: 20,
-        wrapperClassName: `row expanded`,
-        data: cellTypeHeatmapData
-      }
+    const { cellTypeWheelData, cellTypeWheelSearchTerm, cellTypeHeatmapSearchTerm, cellTypeHeatmapData } = this.props
+    const heatmapProps = {
+      hasDynamicHeight: true
     }
 
     return (
-      <div className={`row`}>
+      <div className={`row-expanded`}>
         <div className={`small-12 medium-6 columns`}>
-          <CellTypeWheel data = {cellTypeWheelData} />
+          <CellTypeWheel
+            data = {cellTypeWheelData}
+            searchTerm = {cellTypeWheelSearchTerm}
+          />
         </div>
         <div className={`small-12 medium-6 columns`}>
-          <CellTypeHeatmap {...heatMapProps}/>
+          <MarkerGeneHeatmap
+            cellType={cellTypeHeatmapSearchTerm}
+            data={cellTypeHeatmapData}
+            xAxisCategories={_.chain(cellTypeHeatmapData).uniqBy(`x`).sortBy(`x`).map(`cellGroupValue`).value()}
+            yAxisCategories={_.chain(cellTypeHeatmapData).uniqBy(`y`).sortBy(`y`).map(`geneName`).value()}
+            hasDynamicHeight={_.chain(cellTypeHeatmapData).map(`geneName`).uniq().value().length > 5 ? heatmapProps.hasDynamicHeight : false}
+            heatmapRowHeight={40}
+            species={`Homo sapiens`}
+            heatmapType={`celltypes`}
+          />
         </div>
       </div>
     )
@@ -40,14 +43,11 @@ class CellTypeWheelExperimentHeatmap extends React.Component {
 }
 
 CellTypeWheelExperimentHeatmap.propTypes = {
-  cellTypeHeatmapData: PropTypes.arrayOf(PropTypes.shape({
-    x: PropTypes.number.isRequired,
-    y: PropTypes.number.isRequired,
-    geneName: PropTypes.string.isRequired,
-    value: PropTypes.number.isRequired,
-    cellGroupValueWhereMarker: PropTypes.string.isRequired,
-    cellGroupValue: PropTypes.string.isRequired
-  })).isRequired,
+  // cellTypeHeatmapData: PropTypes.arrayOf(PropTypes.shape({
+  //   data: PropTypes.object.isRequired,
+  //   species: PropTypes.string.isRequired,
+  // })).isRequired,
+  cellTypeWheelSearchTerm: PropTypes.string.isRequired,
   cellTypeWheelData: PropTypes.arrayOf(PropTypes.shape({
     name: PropTypes.string.isRequired,
     id: PropTypes.string.isRequired,
