@@ -17,8 +17,12 @@ class CellTypeWheel extends React.Component {
 
     this.state = {
       chartOptions: {
+        credits: {
+          enabled: false
+        },
+
         chart: {
-          height: `75%`
+          height: `100%`
         },
 
         // Let the center circle be transparent
@@ -36,7 +40,11 @@ class CellTypeWheel extends React.Component {
         ],
 
         title: {
-          text: `Cell types`
+          text: `Cell type results of ${props.searchTerm}`,
+          style: {
+            fontSize: `25px`,
+            fontWeight: `bold`
+          }
         },
 
         series: [{
