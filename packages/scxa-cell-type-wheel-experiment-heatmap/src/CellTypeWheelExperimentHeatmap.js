@@ -43,17 +43,25 @@ class CellTypeWheelExperimentHeatmap extends React.Component {
 }
 
 CellTypeWheelExperimentHeatmap.propTypes = {
-  // cellTypeHeatmapData: PropTypes.arrayOf(PropTypes.shape({
-  //   data: PropTypes.object.isRequired,
-  //   species: PropTypes.string.isRequired,
-  // })).isRequired,
   cellTypeWheelSearchTerm: PropTypes.string.isRequired,
-  cellTypeWheelData: PropTypes.arrayOf(PropTypes.shape({
-    name: PropTypes.string.isRequired,
-    id: PropTypes.string.isRequired,
-    parent: PropTypes.string.isRequired,
-    value: PropTypes.number
-  })).isRequired
+  cellTypeWheelData: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      id: PropTypes.string.isRequired,
+      parent: PropTypes.string.isRequired,
+      value: PropTypes.number
+    })).isRequired,
+  cellTypeHeatmapSearchTerm: PropTypes.string.isRequired,
+  cellTypeHeatmapData: PropTypes.arrayOf(
+    PropTypes.shape({
+      x: PropTypes.number.isRequired,
+      y: PropTypes.number.isRequired,
+      geneName: PropTypes.string.isRequired,
+      value: PropTypes.number.isRequired,
+      cellGroupValue: PropTypes.string.isRequired,
+      cellGroupValueWhereMarker: PropTypes.string.isRequired,
+      pValue: PropTypes.number.isRequired
+    })).isRequired
 }
 
 export default CellTypeWheelExperimentHeatmap
