@@ -17,7 +17,7 @@ const heatmapOptionsProvider = {
         }
       }
     },
-    title: `Cell type marker genes`,
+    title: cellType => `${cellType} marker genes`,
     labelsFormatter: label => label,
     noData: `No marker genes found for the selected organ or region. Try selecting another organism part.`
   },
@@ -46,7 +46,7 @@ const heatmapOptionsProvider = {
         }
       }
     },
-    title: `Cluster marker genes`,
+    title: () => `Cluster marker genes`,
     labelsFormatter: label => `Cluster ${label}`,
     noData: `There are no marker genes for this k value. Try selecting another k.`
   }
