@@ -28,15 +28,15 @@ class CellTypeWheel extends React.Component {
         // Let the center circle be transparent
         colors: [
           `transparent`,
-          "#7cb5ec",
-          "#90ed7d",
-          "#8085e9",
-          "#f7a35c",
-          "#f15c80",
-          "#e4d354",
-          "#2b908f",
-          "#f45b5b",
-          "#91e8e1"
+          `#7cb5ec`,
+          `#90ed7d`,
+          `#8085e9`,
+          `#f7a35c`,
+          `#f15c80`,
+          `#e4d354`,
+          `#2b908f`,
+          `#f45b5b`,
+          `#91e8e1`
         ],
 
         title: {
@@ -52,6 +52,16 @@ class CellTypeWheel extends React.Component {
           data: props.data,
           allowDrillToNode: true,
           cursor: `pointer`,
+          point: {
+            events: {
+              click: function () {
+                let clickedLevel = this.node.level
+                if (clickedLevel === 4)
+                  alert(`Last level was click with id: ` + this.name)
+                props.onCellTypeWheelClick(this.name)
+              }
+            }
+          },
           dataLabels: {
             format: `{point.name}`,
             rotationMode: `circular`
@@ -93,7 +103,8 @@ class CellTypeWheel extends React.Component {
 
 CellTypeWheel.propTypes = {
   searchTerm: PropTypes.string.isRequired,
-  data: PropTypes.object.isRequired
+  data: PropTypes.object.isRequired,
+  onCellTypeWheelClick: PropTypes.func
 }
 
 export default CellTypeWheel
