@@ -25,7 +25,7 @@ class CellTypeWheelExperimentHeatmap extends React.Component {
   }
 
   render() {
-    const { cellTypeHeatmapSearchTerm, cellTypeHeatmapData } = this.state
+    const { cellTypeHeatmapSearchTerm } = this.state
     const { atlasUrl, heatmapResource, cellTypeWheelData, cellTypeWheelSearchTerm } = this.props
     const heatmapProps = {
       hasDynamicHeight: true
@@ -46,13 +46,13 @@ class CellTypeWheelExperimentHeatmap extends React.Component {
               host={atlasUrl}
               resource={heatmapResource + cellTypeHeatmapSearchTerm}
               cellType={cellTypeHeatmapSearchTerm}
-              fulfilledPayloadProvider={data => ({
-                cellTypeHeatmapData: data
+              fulfilledPayloadProvider={heatmapData => ({
+                data: heatmapData,
+                xAxisCategories: _.chain(heatmapData).uniqBy(`x`).sortBy(`x`).map(`cellGroupValue`).value(),
+                yAxisCategories: _.chain(heatmapData).uniqBy(`y`).sortBy(`y`).map(`geneName`).value(),
+                hasDynamicHeight: _.chain(heatmapData).map(`geneName`).uniq().value().length > 5 ? heatmapProps.hasDynamicHeight : false
               })
               }
-              xAxisCategories={_.chain(cellTypeHeatmapData).uniqBy(`x`).sortBy(`x`).map(`cellGroupValue`).value()}
-              yAxisCategories={_.chain(cellTypeHeatmapData).uniqBy(`y`).sortBy(`y`).map(`geneName`).value()}
-              hasDynamicHeight={_.chain(cellTypeHeatmapData).map(`geneName`).uniq().value().length > 5 ? heatmapProps.hasDynamicHeight : false}
               heatmapRowHeight={40}
               species={`Homo sapiens`}
               heatmapType={`celltypes`}
@@ -78,17 +78,6 @@ CellTypeWheelExperimentHeatmap.propTypes = {
       parent: PropTypes.string.isRequired,
       value: PropTypes.number
     })).isRequired
-  /*cellTypeHeatmapSearchTerm: PropTypes.string.isRequired,
-  cellTypeHeatmapData: PropTypes.arrayOf(
-    PropTypes.shape({
-      x: PropTypes.number.isRequired,
-      y: PropTypes.number.isRequired,
-      geneName: PropTypes.string.isRequired,
-      value: PropTypes.number.isRequired,
-      cellGroupValue: PropTypes.string.isRequired,
-      cellGroupValueWhereMarker: PropTypes.string.isRequired,
-      pValue: PropTypes.number.isRequired
-    })).isRequired*/
 }
 
 CellTypeWheelExperimentHeatmap.defaultProps = {

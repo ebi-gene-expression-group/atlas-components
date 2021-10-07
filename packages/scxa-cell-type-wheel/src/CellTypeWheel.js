@@ -57,8 +57,7 @@ class CellTypeWheel extends React.Component {
               click: function () {
                 let clickedLevel = this.node.level
                 if (clickedLevel === 4)
-                  alert(`Last level was click with id: ` + this.name)
-                props.onCellTypeWheelClick(this.name)
+                  props.onCellTypeWheelClick(this.name)
               }
             }
           },
