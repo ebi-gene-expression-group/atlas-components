@@ -17,7 +17,7 @@ const heatmapOptionsProvider = {
       }
     },
     title: cellType => `${cellType} marker genes`,
-    labelsFormatter: label => ``,
+    labelsFormatter: label => label,
     noData: `No marker genes found for the selected organ or region. Try selecting another organism part.`
   },
 
