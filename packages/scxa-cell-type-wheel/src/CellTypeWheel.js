@@ -47,6 +47,12 @@ class CellTypeWheel extends React.Component {
           }
         },
 
+        tooltip: {
+          formatter: function () {
+            return this.point.name
+          }
+        },
+
         series: [{
           type: `sunburst`,
           data: props.data,
