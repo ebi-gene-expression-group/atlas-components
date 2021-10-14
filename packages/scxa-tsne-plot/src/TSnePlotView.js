@@ -59,13 +59,17 @@ class TSnePlotView extends React.Component {
     {atlasUrl, experimentAccession, accessKey, selectedColourBy, selectedColourByCategory, selectedPlotType, selectedPlotOptionLabel}) {
     const resource = selectedColourByCategory === `clusters` ?
       URI(`json/cell-plots/${experimentAccession}/clusters/k/${selectedColourBy}`)
-        .query({plotMethod: selectedPlotType})
-        .query({accessKey: accessKey})
+        .query({
+          plotMethod: selectedPlotType,
+          accessKey: accessKey
+        })
         .toString()
         .concat(`&${selectedPlotOptionLabel.replace(`: `, `=`)}`) :
       URI(`json/cell-plots/${experimentAccession}/clusters/metadata/${selectedColourBy}`)
-        .query({plotMethod: selectedPlotType})
-        .query({accessKey: accessKey})
+        .query({
+          plotMethod: selectedPlotType,
+          accessKey: accessKey
+        })
         .toString()
         .concat(`&${selectedPlotOptionLabel.replace(`: `, `=`)}`)
 
@@ -75,8 +79,10 @@ class TSnePlotView extends React.Component {
 
   _fetchAndSetStateGeneId({atlasUrl, experimentAccession, accessKey, selectedPlotOptionLabel, geneId, selectedPlotType}) {
     const resource = URI(`json/cell-plots/${experimentAccession}/expression/${geneId}`)
-      .query({plotMethod:selectedPlotType})
-      .query({accessKey: accessKey})
+      .query({
+        plotMethod: selectedPlotType,
+        accessKey: accessKey
+      })
       .toString()
       .concat(`&${selectedPlotOptionLabel.replace(`: `, `=`)}`)
 
