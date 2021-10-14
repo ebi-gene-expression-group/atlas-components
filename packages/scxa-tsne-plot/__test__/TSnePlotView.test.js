@@ -68,12 +68,12 @@ describe(`TSnePlotView`, () => {
     expect(tree).toMatchSnapshot()
   })
 
-  test(`whether accessKey prop is passed or not`, async () => {
+  test(`updates its state with the JSON payload after a successful request`, async () => {
     const payload = {
-      series: []
+      series: [`foo`, `bar`]
     }
 
-    fetchMock.get(`/foo/json/cell-plots/` + accession + `/clusters/metadata/20?accessKey=` + accessKey + `&` , JSON.stringify(payload))
+    fetchMock.get(`foo/json/cell-plots/` + accession + `/clusters/k/20?plotMethod=umap&accessKey=` + accessKey + `&` , JSON.stringify(payload))
 
     const wrapper = shallow(
       <TSnePlotView
@@ -83,6 +83,72 @@ describe(`TSnePlotView`, () => {
         suggesterEndpoint={`json/suggestions`}
         ks={ks}
         selectedColourBy={`20`}
+        selectedColourByCategory={`clusters`}
+        selectedPlotType={`umap`}
+        species={species}
+        experimentAccession={accession}
+        selectedPlotOption={5}
+        plotTypeDropdown={plotTypeDropdown}
+        selectedPlotOptionLabel={``}
+      />
+    )
+
+    expect(wrapper.state(`loadingCellClusters`)).toEqual(true)
+
+    await wrapper.instance().componentDidMount()
+    await fetchMock.flush(true) // necessary to wait for all the fetch promises to be resolved before making any assertions
+
+    expect(wrapper.state(`cellClustersData`)).toEqual(payload)
+  })
+
+  test(`does not updates its state with the JSON payload after a unsuccessful request`, async () => {
+    const payload = {
+      series: [`foo`, `bar`, `horse`]
+    }
+
+    fetchMock.get(`foo/json/cell-plots/` + accession + `/clusters/k/20?plotMethod=umap&` , JSON.stringify(payload))
+
+    const wrapper = shallow(
+      <TSnePlotView
+        atlasUrl={`foo/`}
+        metadata={metadata}
+        accessKey={accessKey}
+        suggesterEndpoint={`json/suggestions`}
+        ks={ks}
+        selectedColourBy={`20`}
+        selectedColourByCategory={`clusters`}
+        selectedPlotType={`umap`}
+        species={species}
+        experimentAccession={accession}
+        selectedPlotOption={5}
+        plotTypeDropdown={plotTypeDropdown}
+        selectedPlotOptionLabel={``}
+      />
+    )
+
+    await wrapper.instance().componentDidMount()
+    await fetchMock.flush(true) // necessary to wait for all the fetch promises to be resolved before making any assertions
+
+    expect(wrapper.state(`cellClustersData`)).not.toMatchObject(payload)
+  })
+
+
+  test(`the accessKey prop is used as a query parameter`, async () => {
+    const payload = {
+      series: [`foo`, `bar`]
+    }
+
+    fetchMock.get(`/foo/json/cell-plots/` + accession + `/clusters/k/20?plotMethod=umap&accessKey=` + accessKey + `&` , JSON.stringify(payload))
+
+    const wrapper = shallow(
+      <TSnePlotView
+        atlasUrl={`foo/`}
+        metadata={metadata}
+        accessKey={accessKey}
+        suggesterEndpoint={`json/suggestions`}
+        ks={ks}
+        selectedColourBy={`20`}
+        selectedColourByCategory={`clusters`}
         selectedPlotType={`umap`}
         species={species}
         experimentAccession={accession}
@@ -94,7 +160,7 @@ describe(`TSnePlotView`, () => {
 
     await wrapper.instance().componentDidMount()
 
-    expect(wrapper.state(`cellClustersData`)).toEqual(payload)
+    expect(fetchMock.called(`/foo/json/cell-plots/E-MTAB-5061/clusters/k/20?plotMethod=umap&accessKey=f60a21b8-990a-49d9-95aa-623c10865faa&`)).toEqual(true)
   })
 
 })
