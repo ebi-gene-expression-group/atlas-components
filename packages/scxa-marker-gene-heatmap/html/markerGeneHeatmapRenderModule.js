@@ -16,6 +16,7 @@ const render = ({ data, species, heatmapType, defaultHeatmapHeight, hasDynamicHe
       heatmapRowHeight={heatmapRowHeight}
       species={species}
       heatmapType={heatmapType}
+      cellType={`Very Long Cell Type Title`}
     />, document.getElementById(target))
 }
 

@@ -122,7 +122,29 @@ const MarkerGeneHeatmap = (props) => {
       animation: false,
       marginRight: data.length !== 0 ? 100 : 0,
       plotBackgroundColor: `#eaeaea`,
-      spacingBottom: 0
+      spacingBottom: 0,
+      events: {
+        load: function () {
+          this.title.on(`mouseover`, e => {
+            this.myLabel = this.renderer.label(props.cellType, e.x, e.y, `rectangle`)
+                .css({
+                  color: `#FFFFFF`
+                })
+                .attr({
+                  fill: `rgba(0, 0, 0, 0.75)`,
+                  padding: 8,
+                  r: 4,
+                })
+                .add()
+                .toFront()
+          })
+          this.title.on(`mouseout`, e => {
+            if(this.myLabel){
+              this.myLabel.destroy()
+            }
+          })
+        }
+      }
     },
     lang: {
       noData: heatmapOptionsProvider[heatmapType].noData,
@@ -138,7 +160,7 @@ const MarkerGeneHeatmap = (props) => {
       enabled: false
     },
     title: {
-      text: heatmapOptionsProvider[heatmapType].title(cellType),
+      text: _.truncate(heatmapOptionsProvider[heatmapType].title(cellType)),
       style: {
         fontSize: `25px`,
         fontWeight: `bold`
