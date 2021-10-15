@@ -24,7 +24,7 @@ const data = {
 }
 
 const render = (options, dataKey, target) => {
-  ReactDOM.render(<CellTypeWheel {...options} data={data[dataKey]} />, document.getElementById(target))
+  ReactDOM.render(<CellTypeWheel {...options} searchTerm={dataKey} data={data[dataKey]} />, document.getElementById(target))
 }
 
 export { render }

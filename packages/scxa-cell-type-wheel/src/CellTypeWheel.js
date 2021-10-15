@@ -41,6 +41,7 @@ class CellTypeWheel extends React.Component {
 
         title: {
           text: `Cell type results of ${props.searchTerm}`,
+          widthAdjust: -250,
           style: {
             fontSize: `25px`,
             fontWeight: `bold`

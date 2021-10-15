@@ -139,6 +139,7 @@ const MarkerGeneHeatmap = (props) => {
     },
     title: {
       text: heatmapOptionsProvider[heatmapType].title(cellType),
+      widthAdjust: -250,
       style: {
         fontSize: `25px`,
         fontWeight: `bold`
