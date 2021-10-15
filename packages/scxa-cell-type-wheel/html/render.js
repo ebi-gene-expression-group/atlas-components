@@ -23,8 +23,8 @@ const data = {
   tcell: tcell
 }
 
-const render = (options, searchTerm, dataKey, target) => {
-  ReactDOM.render(<CellTypeWheel {...options} searchTerm={searchTerm} data={data[dataKey]} />, document.getElementById(target))
+const render = (options, dataKey, target) => {
+  ReactDOM.render(<CellTypeWheel {...options} searchTerm={dataKey} data={data[dataKey]} />, document.getElementById(target))
 }
 
 export { render }
