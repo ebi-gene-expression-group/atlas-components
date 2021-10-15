@@ -23,30 +23,7 @@ class CellTypeWheel extends React.Component {
         },
 
         chart: {
-          height: `100%`,
-          events: {
-            load: function () {
-              this.title.on(`mouseover`, e => {
-                this.myLabel = this.renderer.label(props.searchTerm, e.x - 20, e.y + 45, `rectangle`)
-                  .css({
-                    color: `#FFFFFF`
-                  })
-                  .attr({
-                    fill: `rgba(0, 0, 0, 0.75)`,
-                    padding: 8,
-                    r: 4,
-                  })
-                  .add()
-                  .toFront()
-              })
-
-              this.title.on(`mouseout`, e => {
-                if(this.myLabel){
-                  this.myLabel.destroy()
-                }
-              })
-            }
-          }
+          height: `100%`
         },
 
         // Let the center circle be transparent
@@ -64,7 +41,8 @@ class CellTypeWheel extends React.Component {
         ],
 
         title: {
-          text: _.truncate(`Cell type results of ${props.searchTerm}`),
+          text: `Cell type results of ${props.searchTerm}`,
+          widthAdjust: -250,
           style: {
             fontSize: `25px`,
             fontWeight: `bold`
