@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import TsnePlotView from '../src/index'
-import {find as _find} from "lodash";
+import {find as _find} from "lodash"
 
 // Tabula Muris: 53 759 cells
 const experiment1 = {
@@ -78,6 +78,7 @@ const experiment5 = {
 // Number of cells: 101,843
 const experiment6 = {
   accession: `E-MTAB-5061`,
+  accessKey: `f60a21b8-990a-49d9-95aa-623c10865faa`,
   species: `Homo sapiens`,
   ks: [20],
   metadata: [
@@ -118,7 +119,7 @@ const experimentOmega = {
   ]
 }
 
-const { accession, ks, metadata, species, plotTypesAndOptions } = experiment6
+const { accession, accessKey, ks, metadata, species, plotTypesAndOptions } = experiment6
 
 const plotTypeDropdown =  [
   {
@@ -184,11 +185,12 @@ class Demo extends React.Component {
 
   render() {
     return(
-       <div className={`row column expanded`}>
+      <div className={`row column expanded`}>
         <TsnePlotView
-          atlasUrl={`http://wwwdev.ebi.ac.uk/gxa/sc/`}
+          atlasUrl={`https://wwwdev.ebi.ac.uk/gxa/sc/`}
           suggesterEndpoint={`json/suggestions`}
           experimentAccession={this.state.experimentAccession}
+          accessKey={accessKey}
           wrapperClassName={`row expanded`}
           clusterPlotClassName={`small-12 large-6 columns`}
           expressionPlotClassName={`small-12 large-6 columns`}

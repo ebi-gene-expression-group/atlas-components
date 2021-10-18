@@ -5,8 +5,8 @@ import URI from 'urijs'
 
 import ClusterTSnePlot from './ClusterTSnePlot'
 import GeneExpressionTSnePlot from './GeneExpressionTSnePlot'
-import PlotSettingsDropdown from "./PlotSettingsDropdown";
-import {find as _find} from "lodash";
+import PlotSettingsDropdown from "./PlotSettingsDropdown"
+import {find as _find} from "lodash"
 
 class TSnePlotView extends React.Component {
   constructor(props) {
@@ -56,25 +56,33 @@ class TSnePlotView extends React.Component {
   }
 
   _fetchAndSetStateCellClusters(
-    {atlasUrl, experimentAccession, selectedColourBy, selectedColourByCategory, selectedPlotType, selectedPlotOptionLabel}) {
+    {atlasUrl, experimentAccession, accessKey, selectedColourBy, selectedColourByCategory, selectedPlotType, selectedPlotOptionLabel}) {
     const resource = selectedColourByCategory === `clusters` ?
       URI(`json/cell-plots/${experimentAccession}/clusters/k/${selectedColourBy}`)
-        .query({plotMethod: selectedPlotType})
+        .query({
+          plotMethod: selectedPlotType,
+          accessKey: accessKey
+        })
         .toString()
         .concat(`&${selectedPlotOptionLabel.replace(`: `, `=`)}`) :
       URI(`json/cell-plots/${experimentAccession}/clusters/metadata/${selectedColourBy}`)
-        .query({plotMethod: selectedPlotType})
+        .query({
+          plotMethod: selectedPlotType,
+          accessKey: accessKey
+        })
         .toString()
         .concat(`&${selectedPlotOptionLabel.replace(`: `, `=`)}`)
-
 
     this._fetchAndSetState(
       resource, atlasUrl, `cellClustersData`, `cellClustersErrorMessage`, `loadingCellClusters`)
   }
 
-  _fetchAndSetStateGeneId({atlasUrl, experimentAccession, selectedPlotOptionLabel, geneId, selectedPlotType}) {
+  _fetchAndSetStateGeneId({atlasUrl, experimentAccession, accessKey, selectedPlotOptionLabel, geneId, selectedPlotType}) {
     const resource = URI(`json/cell-plots/${experimentAccession}/expression/${geneId}`)
-      .query({plotMethod:selectedPlotType})
+      .query({
+        plotMethod: selectedPlotType,
+        accessKey: accessKey
+      })
       .toString()
       .concat(`&${selectedPlotOptionLabel.replace(`: `, `=`)}`)
 
@@ -114,15 +122,18 @@ class TSnePlotView extends React.Component {
     const plot = _find(plotTypeDropdown, (plot) => plot.plotType.toLowerCase() === selectedPlotType)
 
     const plotOptionsValues = plot.plotOptions.map((option) =>
-        ({value: Object.values(option)[0], label: Object.keys(option)[0]+`: `+Object.values(option)[0]}))
+      ({value: Object.values(option)[0], label: Object.keys(option)[0]+`: `+Object.values(option)[0]}))
 
     const plotTypesOptions = plotTypeDropdown.map((plot) => ({
-          value: plot.plotType.toLowerCase(),
-          label: plot.plotType
-        }))
+      value: plot.plotType.toLowerCase(),
+      label: plot.plotType
+    }))
 
     const getTooltipContent = async (cellId) => {
-      const url = URI(`json/experiment/${this.props.experimentAccession}/cell/${cellId}/metadata`, atlasUrl).toString()
+      const url = URI(`json/experiment/${this.props.experimentAccession}/cell/${cellId}/metadata`, atlasUrl)
+        .query({accessKey: this.props.accessKey})
+        .toString()
+
       try {
         const response = await fetch(url)
 
@@ -219,6 +230,7 @@ TSnePlotView.propTypes = {
   selectedPlotOption: PropTypes.number.isRequired,
   suggesterEndpoint: PropTypes.string.isRequired,
   experimentAccession: PropTypes.string.isRequired,
+  accessKey: PropTypes.string,
   ks: PropTypes.arrayOf(PropTypes.number).isRequired,
   showControls: PropTypes.bool,
 
@@ -257,6 +269,7 @@ TSnePlotView.defaultProps = {
   expressionPlotClassName: `small-12 medium-6 columns`,
   geneId: ``,
   speciesName: ``,
+  accessKey: ``,
   height: 800,
   onSelectGeneId: () => {},
   onChangeColourBy: () => {},
