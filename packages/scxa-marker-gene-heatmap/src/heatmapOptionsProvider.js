@@ -1,5 +1,5 @@
 const heatmapOptionsProvider = {
-  cellmultiexperiment: {
+  multiexperimentcelltypes: {
     tooltip: {
       // followPointer: true,
       formatter: function () {
@@ -9,7 +9,7 @@ const heatmapOptionsProvider = {
         }
         else {
           const text =
-              `<b>Cell marker gene from experiment:</b> ${this.point.cellGroupValueWhereMarker}<br/>` +
+              `<b>Marker gene in experiment:</b> ${this.point.cellGroupValueWhereMarker}<br/>` +
               `<b>Gene ID:</b> ${this.point.geneName}<br/>` +
               `<b>Expression:</b> ${+this.point.value.toFixed(3)} CPM`
           return text
@@ -18,7 +18,7 @@ const heatmapOptionsProvider = {
     },
     title: cellType => `${cellType} marker genes`,
     labelsFormatter: label => label,
-    noData: `No marker genes found for the selected organ or region. Try selecting another organism part.`
+    noData: `No marker enes found for the selected cell type. Try selecting a different cell type.`
   },
 
   celltypes: {
