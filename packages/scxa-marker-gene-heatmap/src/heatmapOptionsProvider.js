@@ -18,7 +18,7 @@ const heatmapOptionsProvider = {
     },
     title: cellType => `${cellType} marker genes`,
     labelsFormatter: label => label,
-    noData: `No marker enes found for the selected cell type. Try selecting a different cell type.`
+    noData: `No marker genes found for the selected cell type. Try selecting a different cell type.`
   },
 
   celltypes: {
