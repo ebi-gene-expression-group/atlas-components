@@ -55,7 +55,7 @@ class CellTypeWheelExperimentHeatmap extends React.Component {
               }
               heatmapRowHeight={40}
               species={`Homo sapiens`}
-              heatmapType={`celltypes`}
+              heatmapType={`multiexperimentcelltypes`}
             />
             : <div className={`medium-text-center`}>
                   This is placeholder. When you click outer ring of Cell Type then the Heatmap will be displayed here

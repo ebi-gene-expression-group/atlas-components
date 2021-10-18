@@ -1,0 +1,163 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HeatmapView matches snapshot when heatmap type is celltypes 1`] = `
+<HeatmapView
+  defaultHeatmapHeight={300}
+  hasDynamicHeight={true}
+  heatmapRowHeight={20}
+  heatmapType="celltypes"
+  host="foo/"
+  plotWrapperClassName=""
+  resource="bar"
+  species="species"
+  wrapperClassName=""
+>
+  <CalloutAlert
+    error={
+      Object {
+        "description": "There was a problem communicating with the server. Please try again later.",
+        "message": "fetch is not defined",
+        "name": "ReferenceError",
+      }
+    }
+  >
+    <div
+      className="row"
+    >
+      <div
+        className="columns large-9 large-centered"
+      >
+        <div
+          className="callout alert small"
+        >
+          <h5>
+            Oops!
+          </h5>
+          <p>
+            There was a problem communicating with the server. Please try again later.
+            <br />
+            If the error persists, in order to help us debug the issue, please copy the URL and this message and send it to us via 
+            <a
+              href="https://www.ebi.ac.uk/support/gxasc"
+            >
+              the EBI Support & Feedback system
+            </a>
+            :
+          </p>
+          <code>
+            ReferenceError: fetch is not defined
+          </code>
+        </div>
+      </div>
+    </div>
+  </CalloutAlert>
+</HeatmapView>
+`;
+
+exports[`HeatmapView matches snapshot when heatmap type is clusters 1`] = `
+<HeatmapView
+  defaultHeatmapHeight={300}
+  hasDynamicHeight={true}
+  heatmapRowHeight={20}
+  heatmapType="clusters"
+  host="foo/"
+  plotWrapperClassName=""
+  resource="bar"
+  species="species"
+  wrapperClassName=""
+>
+  <CalloutAlert
+    error={
+      Object {
+        "description": "There was a problem communicating with the server. Please try again later.",
+        "message": "fetch is not defined",
+        "name": "ReferenceError",
+      }
+    }
+  >
+    <div
+      className="row"
+    >
+      <div
+        className="columns large-9 large-centered"
+      >
+        <div
+          className="callout alert small"
+        >
+          <h5>
+            Oops!
+          </h5>
+          <p>
+            There was a problem communicating with the server. Please try again later.
+            <br />
+            If the error persists, in order to help us debug the issue, please copy the URL and this message and send it to us via 
+            <a
+              href="https://www.ebi.ac.uk/support/gxasc"
+            >
+              the EBI Support & Feedback system
+            </a>
+            :
+          </p>
+          <code>
+            ReferenceError: fetch is not defined
+          </code>
+        </div>
+      </div>
+    </div>
+  </CalloutAlert>
+</HeatmapView>
+`;
+
+exports[`HeatmapView matches snapshot when heatmap type is multiexperimentcelltypes 1`] = `
+<HeatmapView
+  defaultHeatmapHeight={300}
+  hasDynamicHeight={true}
+  heatmapRowHeight={20}
+  heatmapType="multiexperimentcelltypes"
+  host="foo/"
+  plotWrapperClassName=""
+  resource="bar"
+  species="species"
+  wrapperClassName=""
+>
+  <CalloutAlert
+    error={
+      Object {
+        "description": "There was a problem communicating with the server. Please try again later.",
+        "message": "fetch is not defined",
+        "name": "ReferenceError",
+      }
+    }
+  >
+    <div
+      className="row"
+    >
+      <div
+        className="columns large-9 large-centered"
+      >
+        <div
+          className="callout alert small"
+        >
+          <h5>
+            Oops!
+          </h5>
+          <p>
+            There was a problem communicating with the server. Please try again later.
+            <br />
+            If the error persists, in order to help us debug the issue, please copy the URL and this message and send it to us via 
+            <a
+              href="https://www.ebi.ac.uk/support/gxasc"
+            >
+              the EBI Support & Feedback system
+            </a>
+            :
+          </p>
+          <code>
+            ReferenceError: fetch is not defined
+          </code>
+        </div>
+      </div>
+    </div>
+  </CalloutAlert>
+</HeatmapView>
+`;
