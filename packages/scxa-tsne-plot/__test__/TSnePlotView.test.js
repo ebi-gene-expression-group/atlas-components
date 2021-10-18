@@ -101,7 +101,7 @@ describe(`TSnePlotView`, () => {
     expect(wrapper.state(`cellClustersData`)).toEqual(payload)
   })
 
-  test(`does not updates its state with the JSON payload after a unsuccessful request`, async () => {
+  test(`does not update its state with the JSON payload after an unsuccessful request`, async () => {
     const payload = {
       series: [`foo`, `bar`, `horse`]
     }
