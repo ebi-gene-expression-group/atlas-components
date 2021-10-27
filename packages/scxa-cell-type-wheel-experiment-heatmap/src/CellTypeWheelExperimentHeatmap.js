@@ -14,18 +14,20 @@ class CellTypeWheelExperimentHeatmap extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      cellTypeHeatmapSearchTerm: ``
+      cellTypeHeatmapSearchTerm: ``,
+      species: ``
     }
   }
 
-  _onCellTypeWheelClick(cellType) {
+  _onCellTypeWheelClick(cellType, species) {
     this.setState({
-      cellTypeHeatmapSearchTerm: cellType
+      cellTypeHeatmapSearchTerm: cellType,
+      species: species
     })
   }
 
   render() {
-    const { cellTypeHeatmapSearchTerm } = this.state
+    const { cellTypeHeatmapSearchTerm, species } = this.state
     const { atlasUrl, heatmapResource, cellTypeWheelData, cellTypeWheelSearchTerm } = this.props
     const heatmapProps = {
       hasDynamicHeight: true
@@ -37,7 +39,7 @@ class CellTypeWheelExperimentHeatmap extends React.Component {
           <CellTypeWheel
             data = {cellTypeWheelData}
             searchTerm = {cellTypeWheelSearchTerm}
-            onCellTypeWheelClick={(cellType) => this._onCellTypeWheelClick(cellType)}
+            onCellTypeWheelClick={(cellType, species) => this._onCellTypeWheelClick(cellType, species)}
           />
         </div>
         <div className={`small-12 medium-6 columns`}>
@@ -54,7 +56,7 @@ class CellTypeWheelExperimentHeatmap extends React.Component {
               })
               }
               heatmapRowHeight={40}
-              species={`Homo sapiens`}
+              species={species}
               heatmapType={`multiexperimentcelltypes`}
             />
             : <div className={`medium-text-center`}>
@@ -81,7 +83,7 @@ CellTypeWheelExperimentHeatmap.propTypes = {
 }
 
 CellTypeWheelExperimentHeatmap.defaultProps = {
-  atlasUrl: `http://localhost:8080/gxa/sc/`,
+  atlasUrl: `https://wwwdev.ebi.ac.uk/gxa/sc/`,
   heatmapResource: `json/cell-type-marker-genes/`
 }
 

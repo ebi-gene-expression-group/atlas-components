@@ -5,6 +5,8 @@ import HighchartsReact from 'highcharts-react-official'
 import Highcharts from 'highcharts'
 import highchartsSunburst from 'highcharts/modules/sunburst'
 
+import _ from 'lodash'
+
 highchartsSunburst(Highcharts)
 
 // SUPER HACK!
@@ -63,8 +65,10 @@ class CellTypeWheel extends React.Component {
             events: {
               click: function () {
                 let clickedLevel = this.node.level
-                if (clickedLevel === 4)
-                  props.onCellTypeWheelClick(this.name)
+                if (clickedLevel === 4) {
+                  const species = _.split(this.id,`#`,1)
+                  props.onCellTypeWheelClick(this.name, species[0])
+                }
               }
             }
           },
