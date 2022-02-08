@@ -49,7 +49,7 @@ class Demo extends React.Component {
         {value:	"disease",
         label:	"Disease"}
       ],
-      cellTypes: [`mast cell`],
+      cellTypes: [`mast cell`, `endothelial cell`],
       selectedClusterId: null
   }}
 
@@ -61,7 +61,9 @@ class Demo extends React.Component {
           resource={
             this.state.selectedColourByCategory == `metadata` ?
                 URI(`json/experiments/${this.state.experimentAccession}/marker-genes-heatmap/cell-types`)
-                    .search({cellGroupType: this.state.selectedColourBy, cellType: this.state.cellTypes[0]})
+                    .search({cellGroupType: this.state.selectedColourBy,
+                      cellType: this.state.selectedClusterId && this.state.selectedClusterId.value !== `all` ?
+                          this.state.selectedClusterId.value : this.state.cellTypes })
                     .toString() :
                 URI(`json/experiments/${this.state.experimentAccession}/marker-genes/clusters`)
                   .search({k: this.state.selectedColourBy})
