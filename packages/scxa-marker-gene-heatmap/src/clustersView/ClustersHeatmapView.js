@@ -78,7 +78,7 @@ class HeatmapView extends React.Component {
   render() {
     const { data, filteredData, isLoading, hasError } = this.state
     const { wrapperClassName, plotWrapperClassName } = this.props
-    const { ks, ksWithMarkers, selectedColourBy, onChangeColourBy, metadata, cellTypes, selectedColourByCategory, selectedClusterId} = this.props
+    const { ks, ksWithMarkers, selectedColourBy, onChangeMarkerGeneFor, onChangeColourBy, metadata, cellTypes, selectedColourByCategory, selectedClusterId} = this.props
     const { hasDynamicHeight, defaultHeatmapHeight, heatmapRowHeight, species, host } = this.props
 
     const kOptions = ks
@@ -112,29 +112,23 @@ class HeatmapView extends React.Component {
         {value: selectedColourBy}
     )
 
-    const allClusterIds = selectedColourByCategory == `clusters` ?
-        _.range(1, parseInt(selectedColourBy) + 1) :
-        cellTypes
+    const allClusterIds = selectedColourByCategory == `metadata` ? cellTypes :
+        _.range(1, parseInt(selectedColourBy) + 1)
+
 
     //TODO
     const clusterIdsWithMarkers = data && _.uniq(data.map(x => parseInt(x.cellGroupValueWhereMarker)))
 
-    const clusterIdOptions = selectedColourByCategory == `clusters` ?
-        allClusterIds
-          .sort((a, b) => a-b)
-          .map((clusterId) => ({
-            value: clusterId.toString(),
-            label: `Cluster ${clusterId}`,
-            isDisabled: clusterIdsWithMarkers ? !clusterIdsWithMarkers.includes(clusterId) : false
-          })) :
-        allClusterIds
-          .sort((a, b) => a-b)
-          .map((clusterId) => ({
-            value: clusterId.toLowerCase(),
-            label: clusterId,
-            isDisabled: clusterIdsWithMarkers ? !clusterIdsWithMarkers.includes(clusterId) : false
-          }))
+    const clusterIdOptions = allClusterIds
+      .sort((a, b) => a-b)
+      .map((clusterId) => ({
+        value: selectedColourByCategory == `metadata` ? clusterId.toLowerCase() : clusterId.toString(),
+        label: selectedColourByCategory == `metadata` ? clusterId : `Cluster ${clusterId}`,
+        isDisabled: false //clusterIdsWithMarkers ? !clusterIdsWithMarkers.includes(clusterId) : false
+      }))
 
+
+console.log(clusterIdOptions, selectedClusterId)
 
     // Add default "All clusters" option at the start of the options array
     clusterIdOptions.unshift({
@@ -162,12 +156,12 @@ class HeatmapView extends React.Component {
                 labelText={`Show marker genes for:`}
                 options={clusterIdOptions}
                 onSelect={(selectedOption) => {
+                  onChangeMarkerGeneFor(selectedOption)
                   this.setState((state) => ({
                     data: _.cloneDeep(state.data),
                     filteredData: selectedOption.value === `all` ?
                       _.cloneDeep(state.data) :
-                      _.filter(state.data, {'cellGroupValueWhereMarker': selectedOption.value}),
-                    selectedClusterId: selectedOption
+                      _.filter(state.data, {'cellGroupValueWhereMarker': selectedOption.value})
                   }))
                 }}
                 value={selectedClusterId || clusterIdOptions[0]}

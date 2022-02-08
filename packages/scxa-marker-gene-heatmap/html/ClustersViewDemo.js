@@ -50,9 +50,8 @@ class Demo extends React.Component {
         label:	"Disease"}
       ],
       cellTypes: [`mast cell`],
-      selectedClusterId: [`mast cell`]
-    }
-  }
+      selectedClusterId: null
+  }}
 
   render() {
     return (
@@ -60,12 +59,12 @@ class Demo extends React.Component {
         <HeatmapView
           wrapperClassName={`row expanded`}
           resource={
-            this.state.selectedColourByCategory == `clusters` ?
+            this.state.selectedColourByCategory == `metadata` ?
+                URI(`json/experiments/${this.state.experimentAccession}/marker-genes-heatmap/cell-types`)
+                    .search({cellGroupType: this.state.selectedColourBy, cellType: this.state.cellTypes[0]})
+                    .toString() :
                 URI(`json/experiments/${this.state.experimentAccession}/marker-genes/clusters`)
                   .search({k: this.state.selectedColourBy})
-                  .toString() :
-                URI(`json/experiments/${this.state.experimentAccession}/marker-genes-heatmap/cell-types`)
-                  .search({cellGroupType: this.state.selectedColourBy, cellType: this.state.selectedClusterId})
                   .toString()
           }
           host={`http://localhost:8080/gxa/sc/`}
@@ -75,18 +74,21 @@ class Demo extends React.Component {
           selectedColourBy={this.state.selectedColourBy}
           selectedClusterId={this.state.selectedClusterId}
           cellTypes={this.state.cellTypes}
-          onChangeColourBy={
-          (colourByCategory, colourByValue) => {
+          onChangeColourBy={(colourByCategory, colourByValue) => {
             this.setState({
               selectedColourBy : colourByValue,
-              selectedColourByCategory : colourByCategory
-
+              selectedColourByCategory : colourByCategory,
+              selectedClusterId: null
             })
             this._resetHighlightClusters()
-          }
-        }
-        metadata={this.state.metadata}
-        species={`Homo sapiens`}
+          }}
+          onChangeMarkerGeneFor={(selectedOption) => {
+            this.setState((state) => ({
+              selectedClusterId: selectedOption
+            }))
+          }}
+          metadata={this.state.metadata}
+          species={`Homo sapiens`}
         />
       </div>
     )
