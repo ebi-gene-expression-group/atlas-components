@@ -14,11 +14,11 @@ class AtlasInformationBanner extends React.Component {
       <div className={`row`} style={{display: this.state.visibility}}>
         <div className={`columns small-11`}>
           <p>
-            <b>We need your help!</b>
+            <b>Help us improve Expression Atlas!</b>
           </p>
           <p>
-            If you’ve ever found our data helpful, please take our impact survey (15 min). Your replies will
-            help keep the data flowing to the scientific community.
+						We are continuously developing the resource to deliver the best possible service for the community.
+						Please take two minutes to fill out our user survey and help us make Expression Atlas even better.
           </p>
           <a target={`_blank`} href={`https://www.surveymonkey.co.uk/r/EAsurvey22`} className={`button`}>Take survey</a>
         </div>
