@@ -124,11 +124,8 @@ class HeatmapView extends React.Component {
       .map((clusterId) => ({
         value: selectedColourByCategory == `metadata` ? clusterId.toLowerCase() : clusterId.toString(),
         label: selectedColourByCategory == `metadata` ? clusterId : `Cluster ${clusterId}`,
-        isDisabled: false //clusterIdsWithMarkers ? !clusterIdsWithMarkers.includes(clusterId) : false
+        isDisabled: selectedColourByCategory == `clusters` && clusterIdsWithMarkers ? !clusterIdsWithMarkers.includes(clusterId) : false
       }))
-
-
-console.log(clusterIdOptions, selectedClusterId)
 
     // Add default "All clusters" option at the start of the options array
     clusterIdOptions.unshift({

@@ -5,7 +5,7 @@ import URI from 'urijs'
 import HeatmapView from '../src/clustersView/ClustersHeatmapView'
 
 // K values for E-MTAB-5061
-const ks = [9, 14, 18, 20, 24, 34, 41, 44, 50]
+const ks = ['8','11','19','21','25']
 
 // K values for E-EHCA-2
 // const ks = [8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18]
@@ -28,18 +28,19 @@ class Demo extends React.Component {
       // experimentAccession: `E-GEOD-93593`,
       ks: ks,
       //https://www.ebi.ac.uk/gxa/sc/json/experiments/E-MTAB-5061/metadata/tsneplot
-      ksWithMarkers: ['9','14','18','20','24'],
+      ksWithMarkers: ['8','11','19','21','25'],
       // ksWithMarkers: [8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18],
       // ksWithMarkers: [4, 7, 9],
       // ksWithMarkers: [36, 37, 38, 39, 40, 41, 42, 42, 43, 44, 45, 46],
-      selectedColourBy: 'inferred_cell_type_-_ontology_labels',
+      selectedColourBy: 'inferred cell type - ontology labels',
       selectedColourByCategory: `metadata`,
       metadata: [
-        {value:	"inferred_cell_type_-_ontology_labels",
-        label:	"Inferred cell type - ontology labels"
+        {
+          value:	"inferred cell type - ontology labels",
+          label:	"Inferred cell type - ontology labels"
         },
         {
-          value:    "inferred_cell_type_-_authors_labels",
+          value:    "inferred cell_type - authors labels",
           label:    "Inferred cell type - authors labels"
         },
         {
@@ -49,7 +50,8 @@ class Demo extends React.Component {
         {value:	"disease",
         label:	"Disease"}
       ],
-      cellTypes: [`mast cell`, `endothelial cell`],
+      //endpoint: http://localhost:8080/gxa/sc//json/experiments/E-MTAB-5061/marker-genes-heatmap/cellTypeGroups?cellGroupType=inferred%20cell%20type%20-%20ontology%20labels
+      cellTypes: ["Not available","acinar cell","co-expression cell","endothelial cell","mast cell","pancreatic A cell","pancreatic D cell","pancreatic PP cell","pancreatic ductal cell","pancreatic endocrine cell","pancreatic epsilon cell","pancreatic stellate cell","professional antigen presenting cell","type B pancreatic cell"].sort(),
       selectedClusterId: null
   }}
 
@@ -61,9 +63,8 @@ class Demo extends React.Component {
           resource={
             this.state.selectedColourByCategory == `metadata` ?
                 URI(`json/experiments/${this.state.experimentAccession}/marker-genes-heatmap/cell-types`)
-                    .search({cellGroupType: this.state.selectedColourBy,
-                      cellType: this.state.selectedClusterId && this.state.selectedClusterId.value !== `all` ?
-                          this.state.selectedClusterId.value : this.state.cellTypes })
+                    //sort() is very important here! Otherwise, it will fetch though the values in list are not changed
+                    .search({cellGroupType: this.state.selectedColourBy, cellType: this.state.cellTypes.sort() })
                     .toString() :
                 URI(`json/experiments/${this.state.experimentAccession}/marker-genes/clusters`)
                   .search({k: this.state.selectedColourBy})
@@ -82,7 +83,6 @@ class Demo extends React.Component {
               selectedColourByCategory : colourByCategory,
               selectedClusterId: null
             })
-            this._resetHighlightClusters()
           }}
           onChangeMarkerGeneFor={(selectedOption) => {
             this.setState((state) => ({
