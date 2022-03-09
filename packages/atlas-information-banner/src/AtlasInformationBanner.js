@@ -14,13 +14,13 @@ class AtlasInformationBanner extends React.Component {
       <div className={`row`} style={{display: this.state.visibility}}>
         <div className={`columns small-11`}>
           <p>
-            <b>Help us improve Expression Atlas!</b>
+            <b>Help us improve Single Cell Expression Atlas!</b>
           </p>
           <p>
-						We are continuously developing the resource to deliver the best possible service for the community.
-						Please take two minutes to fill out our user survey and help us make Expression Atlas even better.
+						We are continuously developing the resource to deliver the best possible service for the community;
+						please take two minutes to fill out our user survey and help us make Single Cell Expression Atlas even better.
           </p>
-          <a target={`_blank`} href={`https://www.surveymonkey.co.uk/r/EAsurvey22`} className={`button`}>Take survey</a>
+          <a target={`_blank`} href={`https://www.surveymonkey.co.uk/r/SCEAsurvey22`} className={`button`}>Take survey</a>
         </div>
         <div className={`columns small-1`}>
           <a href={`#`} onClick={ () => this.setState({visibility: `none`}) } style={{fontSize:`xx-large`, border: `none`}}>&times;</a>
