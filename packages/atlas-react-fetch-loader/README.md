@@ -56,3 +56,29 @@ Besides the new props coming from the `fetch` request, you can add a `fulfilledP
 the payload as an argument and returns an object which, again, is destructured and added as props to the wrapped
 component. Additionally, you can rename fields from the JSON object with the `renameDataKeys` prop: any key is renamed
 to the string value.
+
+### Raw text
+By default the component will parse the response as JSON but a boolean prop `raw` can be set to `true`, in which case 
+the payload will be parsed as plain text. In this case `renameDataKeys` will be ignored but you can use the 
+`fulfilledPayloadProvider` to store the response in a prop of your choice for the wrapped component.
+
+A real use case is the Single Cell Expression Atlas Information Banner:
+```javascript
+import { withFetchLoader } from '@ebi-gene-expression-group/atlas-react-fetch-loader'
+import AtlasInformationBanner from '@ebi-gene-expression-group/atlas-information-banner'
+
+const AtlasInformationBannerWithFetchLoader = withFetchLoader(AtlasInformationBanner)
+const render = (options, target) => {
+    ReactDOM.render(
+      <AtlasInformationBannerWithFetchLoader
+        {...options}
+        host={`https://ebi-gene-expression-group.github.io/`}
+        resource={`scxa-motd.md`}
+        errorPayloadProvider={ () => {} }
+        loadingPayloadProvider={ () => {} }
+        fulfilledPayloadProvider={ data => ({ motd: data }) }
+        raw={true}
+      />,
+      document.getElementById(target))
+}
+```
