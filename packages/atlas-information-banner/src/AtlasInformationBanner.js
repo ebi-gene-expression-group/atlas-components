@@ -21,7 +21,11 @@ const AtlasInformationBanner = ({motd}) => {
 }
 
 AtlasInformationBanner.propTypes = {
-  motd: PropTypes.string.isRequired
+  motd: PropTypes.string
+}
+
+AtlasInformationBanner.defaultProps = {
+  motd: ``
 }
 
 export default AtlasInformationBanner
