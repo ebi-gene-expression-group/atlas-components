@@ -1,12 +1,10 @@
 {
   "name": "@ebi-gene-expression-group/atlas-react-fetch-loader",
-  "version": "3.7.0",
+  "version": "3.8.0-beta1",
   "description": "A HOC React component that enables other components to remotely fetch data from an endpoint",
   "main": "lib/index.js",
   "scripts": {
-    "prepare": "rm -rf lib && babel src -d lib --copy-files",
-    "test": "jest",
-    "posttest": "jest --coverage --coverageReporters=text-lcov | coveralls"
+    "prepare": "rm -rf lib && babel src -d lib --copy-files"
   },
   "jest": {
     "setupFilesAfterEnv": [
