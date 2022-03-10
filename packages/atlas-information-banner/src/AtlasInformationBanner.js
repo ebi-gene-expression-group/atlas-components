@@ -10,7 +10,7 @@ import rehypeRaw from 'rehype-raw'
 const AtlasInformationBanner = ({motd}) => {
   return (typeof motd === `string` && motd.trim().length > 0) ?
     (
-      <div className={`callout`} data-closable={``} role={`complementary`}>
+      <div className={`callout margin-bottom-none`} data-closable={``} role={`complementary`}>
         <ReactMarkdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeRaw]}>{motd}</ReactMarkdown>
         <button className={`close-button`} aria-label={`Dismiss information banner`} type={`button`} data-close={``}>
           <span aria-hidden={true}>&times;</span>

@@ -2,7 +2,7 @@
 
 exports[`AtlasInformationBanner matches snapshot with a typical MOTD 1`] = `
 <div
-  className="callout"
+  className="callout margin-bottom-none"
   data-closable=""
   role="complementary"
 >
