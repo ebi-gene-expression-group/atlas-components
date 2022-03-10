@@ -6,7 +6,7 @@ import rehypeRaw from 'rehype-raw'
 
 // We’re leveraging EBI Visual Framework (i.e. Foundation) to make the component functional. See this package’s
 // html/index.html for a working example with all the necessary boilerplate.
-// For vanilla HTML see version 1 of this component.
+// For vanilla HTML see version 1 of this component, which tracked visibility in its state.
 const AtlasInformationBanner = ({motd}) => {
   return (typeof motd === `string` && motd.trim().length > 0) ?
     (
