@@ -6,7 +6,7 @@ const vendorsBundleName = `vendors`
 
 module.exports = {
   entry: {
-    atlasInformationBannerDemo: [`@babel/polyfill`, `./html/render.js`],
+    atlasInformationBannerDemo: [`./html/render.js`],
   },
 
   plugins: [
@@ -58,10 +58,9 @@ module.exports = {
   },
 
   devServer: {
+    // injectClient: false, // webpack-dev-server@3 https://github.com/webpack/webpack-dev-server/issues/2484
     port: 9000,
-    contentBase: path.resolve(__dirname, `html`),
-    publicPath: commonPublicPath
-    // Add if developing a SPA to redirect non-matching routes known by WDS (i.e. no document in /html) to the router
-    // historyApiFallback: true
+    static: `./html`,
+    compress: true
   }
 }
