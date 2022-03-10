@@ -33,6 +33,7 @@ The component supports [GitHub Flavoured Markdown](https://github.github.com/gfm
 For a correct presentational and functional behaviour the 
 [EBI Visual Framework](https://www.ebi.ac.uk/style-lab/websites/) must be loaded in the document.  See 
 `html/index.html` for a fully working example and a real use case. The current version has only been tested with v1.3
-but other minor versions should work as well.
+but other minor versions should work as well. In particular it uses the 
+[Foundation Close Button](https://get.foundation/sites/docs/close-button.html).
 
 Other than removing the bottom margin from the callout, all other layout options are left to the client.
