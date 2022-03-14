@@ -171,6 +171,24 @@ describe(`FetchLoader`, () => {
     expect(wrapper.find(MyComponent)).toHaveProp(`resultsLength`, payload.results.length)
   })
 
+  test(`can fetch raw text data and assign it to a prop`, async () => {
+    const markdownPayload = [
+      `**Help us improve Single Cell Expression Atlas**`,
+      ``,
+      `We are continuously developing the resource to deliver the best possible service for the community;`,
+      `Please take two minutes to fill out our user survey and help us make Expression Atlas even better.`,
+      ``,
+      `<a target={_blank} href="https://www.surveymonkey.co.uk/r/SCEAsurvey22" class="button">Take survey</a>`
+    ].join(`\n`)
+
+    fetchMock.get(`/foo/bar`, markdownPayload)
+    const wrapper = shallow(<ComponentWithFetchLoader {...props} raw={true} fulfilledPayloadProvider={ data => ({ motd: data }) }/>)
+
+    await wrapper.instance().componentDidMount()
+    expect(wrapper).toHaveState(`data`, markdownPayload)
+    expect(wrapper.find(MyComponent)).toHaveProp(`motd`, markdownPayload)
+  })
+
   test(`when host/resource change, the component is reset and reloads`, async () => {
     const firstPayload = {
       results: [{ title: `Foobar` }]

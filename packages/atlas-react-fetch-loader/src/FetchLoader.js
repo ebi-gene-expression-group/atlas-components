@@ -66,16 +66,19 @@ const withFetchLoader = (WrappedComponent) => {
           throw new Error(`${url} => ${response.status}`)
         }
 
-        const data = await response.json()
-        Object.keys(this.props.renameDataKeys)
-          .forEach(key => {
-            // Defend against accidental same-value fields: { foo: "foo" }
-            if (data[key]) {
-              const dataKey = data[key]
-              delete data[key]
-              Object.assign(data, {[this.props.renameDataKeys[key]]: dataKey })
-            }
-          })
+        const data = this.props.raw ? await response.text() : await response.json()
+
+        if (!this.props.raw) {
+          Object.keys(this.props.renameDataKeys)
+            .forEach(key => {
+              // Defend against accidental same-value fields: { foo: "foo" }
+              if (data[key]) {
+                const dataKey = data[key]
+                delete data[key]
+                Object.assign(data, {[this.props.renameDataKeys[key]]: dataKey })
+              }
+            })
+        }
 
         this.setState({
           data: data,
@@ -130,14 +133,16 @@ const withFetchLoader = (WrappedComponent) => {
     loadingPayloadProvider: PropTypes.func,
     errorPayloadProvider: PropTypes.func,
     fulfilledPayloadProvider: PropTypes.func,
-    renameDataKeys: PropTypes.objectOf(PropTypes.string)
+    renameDataKeys: PropTypes.objectOf(PropTypes.string),
+    raw: PropTypes.bool
   }
 
   FetchLoader.defaultProps = {
     loadingPayloadProvider: null,
     errorPayloadProvider: null,
     fulfilledPayloadProvider: () => {},
-    renameDataKeys: {}
+    renameDataKeys: {},
+    raw: false
   }
 
   return FetchLoader
