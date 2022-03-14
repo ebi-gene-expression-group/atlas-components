@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AtlasInformationBanner matches snapshot with a typical MOTD 1`] = `
+<div
+  className="callout margin-bottom-none"
+  data-closable=""
+  role="complementary"
+>
+  **Help us improve Single Cell Expression Atlas**
+
+We are continuously developing the resource to deliver the best possible service for the community;
+Please take two minutes to fill out our user survey and help us make Expression Atlas even better.
+
+&lt;a target={_blank} href="https://www.surveymonkey.co.uk/r/SCEAsurvey22" class="button"&gt;Take survey&lt;/a&gt;
+  <button
+    aria-label="Dismiss information banner"
+    className="close-button"
+    data-close=""
+    type="button"
+  >
+    <span
+      aria-hidden={true}
+    >
+      ×
+    </span>
+  </button>
+</div>
+`;

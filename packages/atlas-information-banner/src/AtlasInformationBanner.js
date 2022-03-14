@@ -1,33 +1,31 @@
 import React from 'react'
+import PropTypes from 'prop-types'
+import ReactMarkdown from 'react-markdown'
+import remarkGfm from 'remark-gfm'
+import rehypeRaw from 'rehype-raw'
 
-class AtlasInformationBanner extends React.Component {
-  constructor(props) {
-    super(props)
-
-    this.state = {
-      visibility: ``
-    }
-  }
-
-  render() {
-    return(
-      <div className={`row`} style={{display: this.state.visibility}}>
-        <div className={`columns small-11`}>
-          <p>
-            <b>Help us improve Single Cell Expression Atlas!</b>
-          </p>
-          <p>
-						We are continuously developing the resource to deliver the best possible service for the community;
-						please take two minutes to fill out our user survey and help us make Single Cell Expression Atlas even better.
-          </p>
-          <a target={`_blank`} href={`https://www.surveymonkey.co.uk/r/SCEAsurvey22`} className={`button`}>Take survey</a>
-        </div>
-        <div className={`columns small-1`}>
-          <a href={`#`} onClick={ () => this.setState({visibility: `none`}) } style={{fontSize:`xx-large`, border: `none`}}>&times;</a>
-        </div>
+// We’re leveraging EBI Visual Framework (i.e. Foundation) to make the component functional. See this package’s
+// html/index.html for a working example with all the necessary boilerplate.
+// For vanilla HTML see version 1 of this component, which tracked visibility in its state.
+const AtlasInformationBanner = ({motd}) => {
+  return (typeof motd === `string` && motd.trim().length > 0) ?
+    (
+      <div className={`callout margin-bottom-none`} data-closable={``} role={`complementary`}>
+        <ReactMarkdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeRaw]}>{motd}</ReactMarkdown>
+        <button className={`close-button`} aria-label={`Dismiss information banner`} type={`button`} data-close={``}>
+          <span aria-hidden={true}>&times;</span>
+        </button>
       </div>
-    )
-  }
+    ) :
+    null
+}
+
+AtlasInformationBanner.propTypes = {
+  motd: PropTypes.string
+}
+
+AtlasInformationBanner.defaultProps = {
+  motd: ``
 }
 
 export default AtlasInformationBanner
