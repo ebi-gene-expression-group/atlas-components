@@ -1,6 +1,6 @@
 {
   "name": "@ebi-gene-expression-group/scxa-cell-type-wheel",
-  "version": "1.1.0-beta",
+  "version": "1.1.0-beta1",
   "publishConfig": {
     "access": "public"
   },
@@ -48,7 +48,7 @@
     "@babel/core": "^7.14.3",
     "@babel/preset-env": "^7.14.2",
     "@babel/preset-react": "^7.13.13",
-    "@ebi-gene-expression-group/eslint-config": "^2.3.0",
+    "@ebi-gene-expression-group/eslint-config": "^2.4.0",
     "@testing-library/jest-dom": "^5.12.0",
     "@testing-library/react": "^11.2.7",
     "@webpack-cli/serve": "^1.4.0",
