@@ -870,6 +870,7 @@
     "view": "airway",
     "parent": "lung",
     "ids": [
+      "UBERON_8410043",
       "CL_0002633",
       "CL_1001567",
       "CL_1000271",
