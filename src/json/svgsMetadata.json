@@ -848,6 +848,9 @@
     "view": "alveoli_section",
     "parent": "alveoli_fin",
     "ids": [
+      "CL_4028001",
+      "CL_0009086",
+      "CL_0009089",
       "CL_0002062",
       "CL_0002063",
       "UBERON_0003456",
