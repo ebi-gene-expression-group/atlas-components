@@ -22,7 +22,7 @@ const render = (options, target) => {
   ReactDOM.render(<AnatomogramExperimentTableWithFetchLoader
     {...options}
     host={options.dataHost}
-    resource={`json/experiments/hca/human/`}
+    resource={`json/experiments/hca/human?organismPart=${options.species}`}
     showIds={getAllIds(options.species)}
     description={`Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Et tortor consequat id porta nibh venenatis cras. Eu facilisis sed odio morbi quis commodo odio aenean. Nibh praesent tristique magna sit.`} />,
     document.getElementById(target))

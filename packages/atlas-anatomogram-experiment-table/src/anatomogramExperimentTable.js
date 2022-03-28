@@ -7,11 +7,6 @@ import URI from 'urijs'
 
 const capitalizeFirstLetter = (str) => str.charAt(0).toUpperCase() + str.slice(1)
 
-const ontologyAccessionToOntologyUri = (accession) => {
-  return accession.startsWith(`EFO`) ?
-    `http://www.ebi.ac.uk/efo/${accession}` :
-    `http://purl.obolibrary.org/obo/${accession}`
-}
 
 
 class AnatomogramExperimentTable extends React.Component {
@@ -24,7 +19,8 @@ class AnatomogramExperimentTable extends React.Component {
       highlightIds: [],
       selectIds: [],
       selectAllIds: [],
-      selectedOrganId: ``
+      selectedOrganId: ``,
+      resource: props.resource
     }
 
     this._addRemoveFromSelectIds = this._addRemoveFromSelectIds.bind(this)
@@ -52,20 +48,20 @@ class AnatomogramExperimentTable extends React.Component {
       this.setState({
         selectIds: ids,
         resource:
-          URI(`json/experiments/${this.props.experimentAccession}/marker-genes/cell-types`, this.props.host)
-            .search({ organismPart: ids.map(ontologyAccessionToOntologyUri).join(`,`) })
+          URI(`json/experiments/hca/human`, this.props.host)
+            .search({ organismPart: ids })
             .toString()
       })
     }
-    this.getExperimentsAndUpdateState(this.props)
+    this.getExperimentsAndUpdateState()
   }
 
-  async getExperimentsAndUpdateState({ resource, host }) {
+  async getExperimentsAndUpdateState() {
     this.setState({
       isLoading: true
     })
 
-    const url = URI(resource, host).toString()
+    const url = URI(this.props.resource, this.props.host).toString()
     try {
       const response = await fetch(url)
 
@@ -149,8 +145,8 @@ class AnatomogramExperimentTable extends React.Component {
 
     this.setState({
       resource:
-        URI(`json/experiments/${this.props.experimentAccession}/marker-genes/cell-types`, this.props.host)
-          .search({ organismPart: requestOntologyIds.map(ontologyAccessionToOntologyUri).join(`,`) })
+        URI(`json/experiments/hca/human`, this.props.host)
+          .search({ organismPart: ids })
           .toString()
     })
   }
@@ -229,8 +225,8 @@ class AnatomogramExperimentTable extends React.Component {
                 {
                   label: `Species`,
                   dataKey: `species`,
-                  searchable: true,
-                  sortable: true
+                  searchable: false,
+                  sortable: false
                 },
                 {
                   label: `Title`,
@@ -258,10 +254,6 @@ class AnatomogramExperimentTable extends React.Component {
                 }
               ]}
               dropdownFilters={[
-                {
-                  label: `Kingdom`,
-                  dataKey: `kingdom`
-                },
                 {
                   label: `Experiment Project`,
                   dataKey: `experimentProjects`
