@@ -20,7 +20,8 @@ class AnatomogramExperimentTable extends React.Component {
       selectIds: [],
       selectAllIds: [],
       selectedOrganId: ``,
-      resource: props.resource
+      resource: props.resource,
+      host: props.host
     }
 
     this._addRemoveFromSelectIds = this._addRemoveFromSelectIds.bind(this)
@@ -61,7 +62,7 @@ class AnatomogramExperimentTable extends React.Component {
       isLoading: true
     })
 
-    const url = URI(this.props.resource, this.props.host).toString()
+    const url = URI(this.state.resource, this.state.host).toString()
     try {
       const response = await fetch(url)
 
@@ -173,7 +174,7 @@ class AnatomogramExperimentTable extends React.Component {
   }
 
   render() {
-    const { anatomogramHost, dataHost, organs, description } = this.props
+    const { anatomogramHost, organs, description } = this.props
     return (
       <div>
         <div className={`row`}>
@@ -211,7 +212,7 @@ class AnatomogramExperimentTable extends React.Component {
 
           <div>
             <TableManager
-              host={dataHost}
+              host={this.state.host}
               resource={this.state.resource}
               dataRows={this.state.experiments}
 
