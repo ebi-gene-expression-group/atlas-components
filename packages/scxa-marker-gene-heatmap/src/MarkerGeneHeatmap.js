@@ -62,13 +62,17 @@ const MarkerGeneHeatmap = (props) => {
   const totalNumberOfRows = Object.keys(_.groupBy(data, `geneName`)).length
   const groupedData = _.groupBy(data, `cellGroupValueWhereMarker`)
 
-  const heatmapData = filteredData.map(cell => ({
-    ...cell,
-    value: cell.value <= 0 ? null : cell.value
-  }))
+  const heatmapData = filteredData ? filteredData.map(cell => ({
+      ...cell,
+      value: cell.value <= 0 ? null : cell.value
+    })) :
+    data.map(cell => ({
+      ...cell,
+      value: cell.value <= 0 ? null : cell.value
+    }))
 
   const plotLines = []
-  const cellTypes = Object.keys(_.groupBy(filteredData, `cellGroupValueWhereMarker`))
+  const cellTypes = Object.keys(_.groupBy(filteredData ? filteredData : data, `cellGroupValueWhereMarker`))
 
   // 175px = title + legend + X axis labels; 8 is the height of a plot line separating the clusters
   const dynamicHeight = (totalNumberOfRows * heatmapRowHeight) + (xAxisCategories.length * 8) + 175
@@ -109,7 +113,7 @@ const MarkerGeneHeatmap = (props) => {
       }
     })
   })
-console.log(`plotLines`, plotLines)
+
   const options = {
     chart: {
       type: `heatmap`,
