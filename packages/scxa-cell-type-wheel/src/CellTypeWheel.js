@@ -64,10 +64,9 @@ class CellTypeWheel extends React.Component {
           point: {
             events: {
               click: function () {
-                let clickedLevel = this.node.level
-                if (clickedLevel === 4) {
-                  const species = _.split(this.id,`#`,1)
-                  props.onCellTypeWheelClick(this.name, species[0])
+                if (this.node.level === 4) {
+                  const species = _.split(this.id, `#`, 1)
+                  props.onCellTypeWheelClick(this.name, species[0], this.experimentAccessions)
                 }
               }
             }
