@@ -1,13 +1,12 @@
 {
   "name": "@ebi-gene-expression-group/eslint-config",
-  "version": "2.4.0",
-  "description": "",
+  "version": "3.0.0",
+  "description": "ESLint config common to all JavaScript projects of the EBI Gene Expression group",
   "keywords": [
     "eslint",
-    "eslint-config"
+    "eslintconfig"
   ],
   "main": "index.js",
-  "scripts": {},
   "author": "Expression Atlas developers <atlas-developers@ebi.ac.uk>",
   "collaborators": [
     "Monica Jianu <monica@ebi.ac.uk>",
@@ -15,13 +14,8 @@
   ],
   "license": "Apache-2.0",
   "peerDependencies": {
-    "eslint-plugin-import": ">= 2",
+    "eslint": ">= 8",
+    "eslint-config-standard": ">= 17",
     "eslint-plugin-react": ">= 7"
-  },
-  "gitHead": "7e03f78b4db84dbcf8247a040490afe00d57d105",
-  "dependencies": {
-    "@babel/eslint-parser": "^7.14.3",
-    "eslint": "^7.27.0",
-    "eslint-import-resolver-webpack": "^0.13.1"
   }
 }
