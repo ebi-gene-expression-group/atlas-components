@@ -96,12 +96,15 @@ class CellTypeWheel extends React.Component {
     const { chartOptions } = this.state
 
     return (
-      <div>
+      <figure>
         <HighchartsReact
           highcharts={Highcharts}
           options={chartOptions}
         />
-      </div>
+        <figcaption style={ { visibility: `hidden` } }>
+          {this.state.chartOptions.title.text}
+        </figcaption>
+      </figure>
     )
   }
 }
