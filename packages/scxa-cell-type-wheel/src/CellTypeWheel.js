@@ -9,10 +9,6 @@ import _ from 'lodash'
 
 highchartsSunburst(Highcharts)
 
-// SUPER HACK!
-// https://github.com/highcharts/highcharts/issues/4994
-window.Highcharts = Highcharts
-
 class CellTypeWheel extends React.Component {
   constructor (props) {
     super(props)
