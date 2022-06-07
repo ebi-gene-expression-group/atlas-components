@@ -14,7 +14,7 @@ highchartsSunburst(Highcharts)
 window.Highcharts = Highcharts
 
 class CellTypeWheel extends React.Component {
-  constructor(props) {
+  constructor (props) {
     super(props)
 
     this.state = {
@@ -96,7 +96,7 @@ class CellTypeWheel extends React.Component {
     }
   }
 
-  render() {
+  render () {
     const { chartOptions } = this.state
 
     return (
@@ -112,7 +112,14 @@ class CellTypeWheel extends React.Component {
 
 CellTypeWheel.propTypes = {
   searchTerm: PropTypes.string.isRequired,
-  data: PropTypes.object.isRequired,
+  data: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+      parent: PropTypes.string.isRequired,
+      value: PropTypes.number.isRequired,
+      experimentAccessions: PropTypes.arrayOf(PropTypes.string)
+    })).isRequired,
   onCellTypeWheelClick: PropTypes.func
 }
 
