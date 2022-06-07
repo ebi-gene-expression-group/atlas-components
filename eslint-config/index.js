@@ -39,8 +39,7 @@ module.exports = {
 
   overrides: [{
     files: ['*.test.js'],
-    rules: {
-      'react/react-in-jsx-scope': 0
-    }
+    plugins: ['jest'],
+    extends: ['plugin:jest/recommended']
   }]
 }

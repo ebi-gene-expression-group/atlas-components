@@ -1,6 +1,6 @@
 {
   "name": "@ebi-gene-expression-group/eslint-config",
-  "version": "3.0.0",
+  "version": "3.1.0",
   "description": "ESLint config common to all JavaScript projects of the EBI Gene Expression group",
   "keywords": [
     "eslint",
@@ -16,6 +16,7 @@
   "peerDependencies": {
     "eslint": ">= 8",
     "eslint-config-standard": ">= 17",
-    "eslint-plugin-react": ">= 7"
+    "eslint-plugin-react": ">= 7",
+    "eslint-plugin-jest": ">= 26"
   }
 }
