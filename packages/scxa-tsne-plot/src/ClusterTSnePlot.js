@@ -15,6 +15,7 @@ const _colourizeClusters = (highlightSeries) =>
         return {
           name: aSeries.name,
           data: aSeries.data,
+          zIndex: -1,
           color: Color(`lightgrey`).alpha(0.65).rgb().toString()
         }
       } else return aSeries
@@ -23,6 +24,7 @@ const _colourizeClusters = (highlightSeries) =>
       return {
         name: aSeries.name,
         data: aSeries.data,
+        zIndex: 1,
         color: Color(`lightgrey`).alpha(0.65).rgb().toString()
       }
     }
