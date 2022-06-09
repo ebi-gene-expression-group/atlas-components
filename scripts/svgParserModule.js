@@ -1,9 +1,9 @@
 const fs = require(`fs`)
 const fastXmlParser = require(`fast-xml-parser`)
 
-module.exports = (svgData) => {
+module.exports = (filename, svgData) => {
   if (fastXmlParser.validate(svgData) !== true) {
-    throw new Error(`Invalid XML input\n`)
+    throw new Error(`${filename}: Invalid XML input\n`)
   }
 
   // fast-xml-parser default, can be changed
@@ -16,13 +16,19 @@ module.exports = (svgData) => {
   const requiredAttributes = [`width`, `height`, `viewBox`]
   requiredAttributes.forEach((attr) => {
     if (!svgObj[`${attrPrefix}${attr}`]) {
-      throw new Error(`Missing required attribute: ${attr}`)
+      throw new Error(`${filename}: Missing required attribute: ${attr}`)
     }
   })
 
-  if (svgObj[`${attrPrefix}viewBox`].split(/\s+/)[2] !== svgObj[`${attrPrefix}width`].toString() ||
-      svgObj[`${attrPrefix}viewBox`].split(/\s+/)[3] !== svgObj[`${attrPrefix}height`].toString()) {
-    throw new Error(`viewBox does not match width/height`)
+
+
+  if ((svgObj[`${attrPrefix}viewBox`].split(/\s+/)[2] !== svgObj[`${attrPrefix}width`].toString() &&
+        svgObj[`${attrPrefix}viewBox`].split(/\s+/)[2] !== svgObj[`${attrPrefix}width`].toString().slice(0, -2))
+    ||
+    (svgObj[`${attrPrefix}viewBox`].split(/\s+/)[3] !== svgObj[`${attrPrefix}height`].toString() &&
+      svgObj[`${attrPrefix}viewBox`].split(/\s+/)[3] !== svgObj[`${attrPrefix}height`].toString().slice(0, -2))
+  ) {
+    throw new Error(`${filename}: viewBox does not match width/height`)
   }
 
   const layers = svgObj.g ?

@@ -8,7 +8,6 @@ exports[`AnatomogramSvg should not render for an unsupported species 1`] = `
     loading={null}
     onInjected={[Function]}
     renumerateIRIElements={true}
-    src="test-file-stub.svg"
     svgClassName={null}
     svgStyle={
       Object {
@@ -30,7 +29,6 @@ exports[`AnatomogramSvg should render for a supported species 1`] = `
     loading={null}
     onInjected={[Function]}
     renumerateIRIElements={true}
-    src="test-file-stub.svg"
     svgClassName={null}
     svgStyle={
       Object {

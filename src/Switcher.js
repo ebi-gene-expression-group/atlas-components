@@ -5,8 +5,8 @@ import styled from 'styled-components'
 
 import {getAnatomogramViews} from './Assets'
 
-const loadIcon = (view, selectedView) => require(`./img/${view}.${view === selectedView ? `` : `un`}selected.png`)
-const resolve = (uri, baseUrl) => URI(uri).is(`absolute`) ? URI(uri) : URI(uri, baseUrl)
+const loadIcon = (view, selectedView) =>
+  require(`./img/${view}.${view === selectedView ? `` : `un`}selected.png`).default
 
 const IconWrapperDiv = styled.div`
   display: inline-block;
@@ -30,25 +30,31 @@ const IconImg = styled.img`
   }
 `
 
-const Switcher = ({atlasUrl, species, selectedView, onChangeView}) =>
-  <IconWrapperDiv>
-    {getAnatomogramViews(species).map((view) =>
-      <IconImg
-        key={view}
-        onClick={() => onChangeView(view)}
-        src={resolve(loadIcon(view, selectedView), atlasUrl).toString()} />
-    )}
-  </IconWrapperDiv>
+const Switcher = ({species, parentView, selectedView, onChangeView}) => {
+  return <IconWrapperDiv>
+    {
+      [`kidney`, `pancreas`, `lung`, `liver`, `placenta`, `gut`].includes(species) ?
+        parentView && <IconImg
+          key={parentView}
+          onClick={() => onChangeView(species, parentView)}
+          src={loadIcon(parentView, selectedView)} />
+        :
+        getAnatomogramViews(species).map((view) =>
+          <IconImg
+            key={view}
+            onClick={() => onChangeView(species, view)}
+            src={loadIcon(view, selectedView)} />
+        )
+    }
 
-Switcher.propTypes = {
-  atlasUrl: PropTypes.string.isRequired,
-  species: PropTypes.string.isRequired,
-  selectedView: PropTypes.string,
-  onChangeView: PropTypes.func.isRequired
+  </IconWrapperDiv>
 }
 
-Switcher.defaultProps = {
-  atlasUrl: `https://www.ebi.ac.uk/gxa/`
+Switcher.propTypes = {
+  species: PropTypes.string.isRequired,
+  selectedView: PropTypes.string,
+  onChangeView: PropTypes.func.isRequired,
+  parentView: PropTypes.string
 }
 
 export default Switcher

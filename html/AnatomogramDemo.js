@@ -29,20 +29,24 @@ class AnatomogramDemo extends React.Component {
   constructor(props) {
     super(props)
 
-    const selectedSpecies = allSpecies.includes(`homo_sapiens`) ? `homo_sapiens` : allSpecies[0]
+    const selectedSpecies = allSpecies.includes(`gut`) ? `gut` : allSpecies[0]
 
     this.state = {
       selectedSpecies: selectedSpecies,
       allIds: getAllIds(selectedSpecies),
       showIds: [],
       highlightIds: [],
-      selectIds: []
+      selectIds: [],
+      selectAllIds: []
     }
 
     this._handleSelectOnChange = this._handleSelectOnChange.bind(this)
     this._handleCheckboxOnChange = this._handleCheckboxOnChange.bind(this)
     this._handleOnClick = this._handleOnClick.bind(this)
     this._addRemoveFromSelectIds = this._addRemoveFromSelectIds.bind(this)
+    this._clearSelectedIds = this._clearSelectedIds.bind(this)
+    this._showLinkBoxIds = this._showLinkBoxIds.bind(this)
+
   }
 
   _handleSelectOnChange(event) {
@@ -67,22 +71,38 @@ class AnatomogramDemo extends React.Component {
     this.setState({
       [stateField]: allOrNone ? Array.from(this.state.allIds) : []
     })
+    if(stateField===`selectAllIds`) {this.setState({selectIds: []})}
   }
 
   _addRemoveFromSelectIds(ids) {
 
     this.setState({
-      selectIds: xor(this.state.selectIds, ids)
+      selectIds: ids
     })
   }
 
+  _showLinkBoxIds(id){
+    this.setState({
+      showIds: [...new Set(id.concat(this.state.showIds))]
+    })
+  }
+
+  _clearSelectedIds() {
+    this.setState({
+      showIds: [],
+      selectIds: [],
+      highlightIds:[]
+    })
+  }
   render() {
     return (
       <div className={`row`}>
         <div className={`row`}>
           <div className={`small-3 small-centered columns`}>
             <select value={this.state.selectedSpecies} onChange={this._handleSelectOnChange}>
-              {[...allSpecies, `foobar`].map((species) => <option key={species} value={species}>{capitalizeFirstLetter(species.replace(`_`, ` `))}</option>)}
+              {[`test`, ...allSpecies].map((species) => {
+                return <option key={species} value={species}>{capitalizeFirstLetter(species.replace(`_`, ` `))}</option>
+              })}
             </select>
           </div>
         </div>
@@ -95,7 +115,10 @@ class AnatomogramDemo extends React.Component {
               showIds={this.state.showIds}
               highlightIds={this.state.highlightIds}
               selectIds={this.state.selectIds}
-              onClick={this._addRemoveFromSelectIds} />
+              selectAllIds={this.state.selectAllIds}
+              clearSelectedIds={this._clearSelectedIds}
+              onClick={this._addRemoveFromSelectIds}
+              showLinkBoxIds={this._showLinkBoxIds}/>
           </div>
 
           <div className={`small-8 columns`}>
@@ -109,8 +132,8 @@ class AnatomogramDemo extends React.Component {
                 <button className={`button`} onClick={() => {this._handleOnClick(false, `highlightIds`)}}>Unhighlight all</button>
               </div>
               <div className={`small-4 columns`}>
-                <button className={`button`} onClick={() => {this._handleOnClick(true, `selectIds`)}}>Select all</button>
-                <button className={`button`} onClick={() => {this._handleOnClick(false, `selectIds`)}}>Unselect all</button>
+                <button className={`button`} onClick={() => {this._handleOnClick(true, `selectAllIds`)}}>Select all</button>
+                <button className={`button`} onClick={() => {this._handleOnClick(false, `selectAllIds`)}}>Unselect all</button>
               </div>
             </div>
 
@@ -137,7 +160,7 @@ class AnatomogramDemo extends React.Component {
                   <input type={`checkbox`}
                     name={`selectIds`} value={id}
                     onChange={(e) => {this._handleCheckboxOnChange(e, `selectIds`)}}
-                    checked={this.state.selectIds.includes(id)}/>
+                    checked={this.state.selectAllIds.includes(id) || this.state.selectIds.includes(id)}/>
                   <label>{id}</label>
                 </div>)}
             </div>
@@ -147,11 +170,6 @@ class AnatomogramDemo extends React.Component {
       </div>
     )
   }
-}
-
-AnatomogramDemo.propTypes = {
-  atlasUrl: PropTypes.string,
-  pathToResources: PropTypes.string
 }
 
 const render = function (options, target) {

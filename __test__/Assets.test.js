@@ -3,7 +3,7 @@ import fs from 'fs'
 import path from 'path'
 
 const unique = (value, index, self) => self.indexOf(value) === index
-
+const organs = [`kidney`, `pancreas`, `liver`, `lung`, `gut`, `placenta`]
 describe(`Assets module`, () => {
 
   const expectedSpecies =
@@ -41,6 +41,11 @@ describe(`Assets module`, () => {
 
   test(`default view for unknown species is undefined`, () => {
     expect(getDefaultView(`foobar`)).toBe(undefined)
+  })
+
+  test(`default view for organ anatomogram is the top level`, () => {
+    const species = organs[Math.floor(Math.random * organs.length)]
+    expect(getDefaultView(species)).toBe(species)
   })
 
   test(`anatomogram views for single-view species is an empty array`, () => {

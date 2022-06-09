@@ -18,7 +18,7 @@ const parseSvgFile = (filename) => {
     filename: path.basename(filename),
     species: species,
     view: view ? view : ``,
-    ids: parseSvg(fs.readFileSync(filename, {encoding: `utf8`}))
+    ids: parseSvg(path.basename(filename), fs.readFileSync(filename, {encoding: `utf8`}))
   }
 }
 
@@ -26,7 +26,7 @@ if (process.argv[2] === `-`) {
   const chunks = []
   process.stdin.on(`data`, (chunk) => { chunks.push(chunk) })
   process.stdin.on(`end`, () => {
-    process.stdout.write(JSON.stringify(parseSvg(Buffer.concat(chunks).toString()), null, 2))
+    process.stdout.write(JSON.stringify(parseSvg(filename, Buffer.concat(chunks).toString()), null, 2))
   })
 }
 else {

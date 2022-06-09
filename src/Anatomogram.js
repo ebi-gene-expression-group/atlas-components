@@ -3,20 +3,36 @@ import PropTypes from 'prop-types'
 
 import Switcher from './Switcher'
 import AnatomogramSvg from './AnatomogramSvg'
-import {getDefaultView, supportedSpecies} from './Assets'
+import {getDefaultView, getParentView, supportedSpecies} from './Assets'
 
 class Anatomogram extends React.Component {
   constructor(props) {
     super(props)
-
     this.state = {
-      selectedView: getDefaultView(props.species)
+      selectedView: getDefaultView(props.species),
+      parentView: getParentView(props.species, getDefaultView(props.species))
     }
     this._switchAnatomogramView = this._switchAnatomogramView.bind(this)
   }
 
-  _switchAnatomogramView(anatomogramView) {
-    this.setState({ selectedView: anatomogramView })
+  componentDidUpdate(prevProps) {
+    if (this.props.species !== prevProps.species) {
+      this.setState({
+        selectedView: getDefaultView(this.props.species),
+        parentView: getParentView(this.props.species, getDefaultView(this.props.species))
+      })
+    }
+  }
+
+  _switchAnatomogramView(species, anatomogramView) {
+    this.props.onClick([])
+    this.setState({
+      selectedView: anatomogramView,
+      parentView: getParentView(species, anatomogramView),
+      showIds: [],
+      selectIds: [],
+      highlightIds:[]
+    }, this.props.afterSwitchView(species, anatomogramView))
   }
 
   static getDerivedStateFromProps(props, state) {
@@ -30,31 +46,30 @@ class Anatomogram extends React.Component {
   }
 
   render() {
+    const { parentView, selectedView } = this.state
+    const { species, showLinkBoxIds } = this.props
     return (
-      supportedSpecies.includes(this.props.species) &&
+      supportedSpecies.includes(species) &&
         <div>
           <Switcher
-            atlasUrl={this.props.atlasUrl}
-            species={this.props.species}
-            selectedView={this.state.selectedView}
+            species={species}
+            parentView={parentView}
+            selectedView={selectedView}
             onChangeView={this._switchAnatomogramView} />
 
           <AnatomogramSvg
-            atlasUrl={this.props.atlasUrl}
             {...this.props}
-            selectedView={this.state.selectedView} />
+            showLinkBoxIds={showLinkBoxIds}
+            onChangeView={this._switchAnatomogramView}
+            selectedView={selectedView} />
         </div>
     )
   }
 }
 
 Anatomogram.propTypes = {
-  atlasUrl: PropTypes.string,
-  species: PropTypes.string.isRequired
-}
-
-Anatomogram.defaultProps = {
-  atlasUrl: `https://www.ebi.ac.uk/gxa/`
+  species: PropTypes.string.isRequired,
+  showLinkBoxIds: PropTypes.func.isRequired
 }
 
 export default Anatomogram

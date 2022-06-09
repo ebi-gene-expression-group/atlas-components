@@ -1,4 +1,4 @@
-# IntelliJ IDEA projectf iles
+# IntelliJ IDEA project iles
 .idea/
 
 # https://github.com/github/gitignore/blob/master/Node.gitignore
@@ -63,5 +63,7 @@ typings/
 .env
 
 # Build files
-dist/*
 lib/*
+dist/*
+
+**/.DS_Store

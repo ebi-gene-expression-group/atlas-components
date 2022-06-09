@@ -7,11 +7,11 @@ describe(`AnatomogramSvg`, () => {
   test(`should render for a supported species`, () => {
     expect(
       shallow(<AnatomogramSvg
-        atlasUrl={``}
         idsWithMarkup={[]}
         onClick={jest.fn()}
         onMouseOut={jest.fn()}
         onMouseOver={jest.fn()}
+        showLinkBoxIds={jest.fn()}
         species={`mus_musculus`}
       />)
     ).toMatchSnapshot()
@@ -20,11 +20,11 @@ describe(`AnatomogramSvg`, () => {
   test(`should not render for an unsupported species`, () => {
     expect(
       shallow(<AnatomogramSvg
-        atlasUrl={``}
         idsWithMarkup={[]}
         onClick={jest.fn()}
         onMouseOut={jest.fn()}
         onMouseOver={jest.fn()}
+        showLinkBoxIds={jest.fn()}
         species={`ovis_aries`}
       />)
     ).toMatchSnapshot()
@@ -39,12 +39,12 @@ describe(`AnatomogramSvg`, () => {
     })
 
     mount(<AnatomogramSvg
-      atlasUrl={`https://www.ebi.ac.uk/gxa/`}
       idsWithMarkup={[]}
       onClick={jest.fn()}
       onInjected={onInjectedSpy}
       onMouseOut={jest.fn()}
       onMouseOver={jest.fn()}
+      showLinkBoxIds={jest.fn()}
       species={`mus_musculus`}
     />)
   })

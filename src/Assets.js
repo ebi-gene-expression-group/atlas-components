@@ -33,8 +33,15 @@ const getAnatomogramViews = (species) => {
 
 const getDefaultView = (species) => {
   if (supportedSpecies.includes(species)) {
-    return getAnatomogramViews(species)[0] || null
+    return getAnatomogramViews(species).indexOf(species) >=0 ? species : getAnatomogramViews(species)[0] || null
   }
 }
 
-export {getAnatomogramViews, getDefaultView, supportedSpecies}
+const getParentView = (species, view) => {
+  if (supportedSpecies.includes(species)) {
+    const parentPath = svgsMetadata.filter(svgMetadata => svgMetadata.view === view)[0]
+    return parentPath ? parentPath.parent : null
+  }
+}
+
+export {getAnatomogramViews, getDefaultView, unique, getParentView, supportedSpecies}

@@ -1,5 +1,5 @@
 const path = require(`path`)
-const CleanWebpackPlugin = require(`clean-webpack-plugin`)
+const { CleanWebpackPlugin } = require(`clean-webpack-plugin`)
 
 const commonPublicPath = `/dist/`
 const vendorsBundleName = `vendors`
@@ -10,15 +10,14 @@ module.exports = {
   },
 
   plugins: [
-    new CleanWebpackPlugin({
-      cleanOnceBeforeBuildPatterns: `dist`
-    })
+    new CleanWebpackPlugin()
   ],
 
   output: {
     library: `[name]`,
     filename: `[name].bundle.js`,
-    publicPath: commonPublicPath
+    publicPath: commonPublicPath,
+    devtoolNamespace: `firefox`
   },
 
   resolve: {
@@ -53,16 +52,14 @@ module.exports = {
       {
         test: /\.(jpe?g|png|gif)$/i,
         use: [
-          { loader: `file-loader` },
+          `file-loader`,
           {
             loader: `image-webpack-loader`,
             options: {
-              query: {
-                bypassOnDebug: true,
-                mozjpeg: { progressive: true },
-                gifsicle: { interlaced: true },
-                optipng: { optimizationLevel: 7 }
-              }
+              bypassOnDebug: true,
+              mozjpeg: { progressive: true },
+              gifsicle: { interlaced: true },
+              optipng: { optimizationLevel: 7 }
             }
           }
         ]

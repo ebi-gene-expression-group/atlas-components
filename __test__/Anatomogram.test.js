@@ -11,12 +11,16 @@ describe(`Anatomogram`, () => {
       onClick={jest.fn()}
       onMouseOut={jest.fn()}
       onMouseOver={jest.fn()}
+      parentView={`parent`}
       species={`mus_musculus`}
+      initShowIds={() => {}}
+      clearSelectIds={() => {}}
     />)).toMatchSnapshot()
   })
 
   test(`should not render for an unsupported species`, () => {
-    expect(shallow(<Anatomogram atlasUrl={``} species={`ovis_aries`} />).children()).toHaveLength(0)
+    expect(shallow(<Anatomogram species={`ovis_aries`}
+      initShowIds={() => {}} clearSelectIds={() => {}}/>).children()).toHaveLength(0)
   })
 
 })

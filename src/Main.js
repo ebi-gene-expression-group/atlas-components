@@ -11,36 +11,54 @@ const arrayDifference = (arr1, arr2) =>
 
 const elementMarkup = (colour, opacity) => ({fill: colour, opacity: opacity})
 
+const paintInitialSvgElement = (id, svgMetadata) => {
+  const colour =  svgMetadata.colours ?
+    svgMetadata.colours[svgMetadata.ids.findIndex(elementid => elementid === id)] :
+    `grey`
+  return ({fill: colour, opacity: 1.0})
+}
+
 const idsWithMarkupAccordingToCurrentColoringScheme = ({
   showIds,
+  linkColour,
   showColour,
   showOpacity,
   highlightIds,
   highlightColour,
   highlightOpacity,
   selectIds,
+  selectAllIds,
   selectColour,
   selectOpacity}) => {
-  const uniqueShowIds = arrayDifference(showIds, [...highlightIds, ...selectIds])
-  const uniqueHighlightIds = arrayDifference(highlightIds, selectIds)
-
-
+  const uniqueShowIds = arrayDifference(showIds, [...highlightIds, ...selectIds, ...selectAllIds])
+  const uniqueHighlightIds = arrayDifference(highlightIds, [...selectIds, ...selectAllIds])
   //Given an element and its ids, we take the first element of this array having one of the ids
   return [].concat(
-    selectIds.map(id => ({
-      id,
-      markupNormal: elementMarkup(selectColour, selectOpacity),
-      markupUnderFocus: elementMarkup(selectColour, selectOpacity+0.2)
-    })),
+    selectIds.length !== 0 ?
+      selectIds.map(id => ({
+        id,
+        markupNormal: () => elementMarkup(selectColour, selectOpacity),
+        markupUnderFocus: elementMarkup(selectColour, selectOpacity+0.2),
+        onClick: showIds=[]
+      })) :
+      selectAllIds.map(id => ({
+        id,
+        markupNormal: () => elementMarkup(selectColour, selectOpacity),
+        markupUnderFocus: elementMarkup(selectColour, selectOpacity+0.2),
+        onClick: showIds=[]
+      })),
     uniqueHighlightIds.map(id => ({
       id,
-      markupNormal: elementMarkup(highlightColour, highlightOpacity),
-      markupUnderFocus: elementMarkup(highlightColour, highlightOpacity+0.2)
+      markupNormal: () => elementMarkup(highlightColour, highlightOpacity),
+      markupUnderFocus: elementMarkup(highlightColour, highlightOpacity+0.2),
     })),
     uniqueShowIds.map(id => ({
       id,
-      markupNormal: elementMarkup(showColour, showOpacity),
-      markupUnderFocus: elementMarkup(highlightColour, highlightOpacity+0.2)
+      markupNormal: (svgMetadata, overlapId) => overlapId ?
+        paintInitialSvgElement(overlapId, svgMetadata) :
+        paintInitialSvgElement(id, svgMetadata),
+      markupUnderFocus: elementMarkup(highlightColour, highlightOpacity+0.2),
+      markupLink: elementMarkup(linkColour, showOpacity)
     })),
   )
 }
@@ -51,11 +69,13 @@ const addColoringScheme  = compose(
     highlightIds: [],
     selectIds: [],
     showColour: `grey`,
+    linkColour: `blue`,
     highlightColour: `red`,
     selectColour: `purple`,
     showOpacity: 0.4,
-    highlightOpacity: 0.4,
-    selectOpacity: 0.4}),
+    highlightOpacity: 1.0,
+    selectOpacity: 1.0
+  }),
   withPropsOnChange(negate(isEqual),
     props => ({idsWithMarkup: idsWithMarkupAccordingToCurrentColoringScheme(props)})
   )
@@ -68,11 +88,11 @@ const normaliseSpecies = mapProps(
 const addDefaultCallbacks = defaultProps({
   onMouseOver: () => {},
   onMouseOut: () => {},
-  onClick: () => {}
+  onClick: () => {},
+  afterSwitchView: () => {}
 })
 
 const definePropTypes = setPropTypes({
-  atlasUrl: PropTypes.string.isRequired,
   species: PropTypes.string.isRequired,
   idsWithMarkup: PropTypes.arrayOf(PropTypes.shape({
     id: PropTypes.string.isRequired,
@@ -84,8 +104,4 @@ const definePropTypes = setPropTypes({
   onClick: PropTypes.func.isRequired
 })
 
-const defineDefaultProps = defaultProps({
-  atlasUrl: `https://www.ebi.ac.uk/gxa/`
-})
-
-export default compose(addColoringScheme, onlyUpdateForPropTypes, definePropTypes, defineDefaultProps, addDefaultCallbacks, normaliseSpecies)(Anatomogram)
+export default compose(addColoringScheme, onlyUpdateForPropTypes, definePropTypes, addDefaultCallbacks, normaliseSpecies)(Anatomogram)
