@@ -2,7 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import MarkerGeneHeatmap from '../MarkerGeneHeatmap'
 import PlotSettingsDropdown from './PlotSettingsDropdown'
-import PlotSettingsDropdown2 from './PlotSettingsDropdown2'
 import LoadingOverlay from '../LoadingOverlay'
 import CalloutAlert from '../CalloutAlert'
 
@@ -140,10 +139,10 @@ class HeatmapView extends React.Component {
         <div>
           <div className={wrapperClassName}>
             <div className={`small-12 medium-6 columns`}>
-              <PlotSettingsDropdown2
+              <PlotSettingsDropdown
                   labelText={`Colour plot by:`}
                   options={metadata ? options : kOptions} // Some experiments don't have metadata in Solr, although they should do. Leaving this check in for now so we don't break the entire experiment page.
-                  defaultValue={defaultValue}
+                  value={defaultValue}
                   onSelect={(selectedOption) => {
                     onChangeColourBy(selectedOption.group, selectedOption.value)
                   }}/>
