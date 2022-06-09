@@ -3,7 +3,6 @@
   "private": true,
   "devDependencies": {
     "@ebi-gene-expression-group/atlas-react-fetch-loader": "file:packages/atlas-react-fetch-loader",
-    "@ebi-gene-expression-group/eslint-config": "file:packages/eslint-config",
     "@ebi-gene-expression-group/highcharts-series-generator": "file:packages/highcharts-series-generator",
     "lerna": "^3.20.2"
   }
