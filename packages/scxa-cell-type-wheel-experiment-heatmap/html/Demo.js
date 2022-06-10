@@ -2,21 +2,20 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 
 import CellTypeWheelExperimentHeatmap from '../src/index.js'
+import { withFetchLoader } from '@ebi-gene-expression-group/atlas-react-fetch-loader'
 
-import cellTypeWheelData from './data/leukocyte-sunburst.json'
-const cellTypeWheelTitle = `leukocyte`
-
-//import cellTypeWheelData from './data/lung-sunburst.json'
-//import heatmapData from './data/cd.json'
-//const cellTypeWheelTitle = `lung`
-//const heatmapTitle = `CD4-positive, alpha-beta T cell`
+const CellTypeWheelExperimentHeatmapWithFetchLoader = withFetchLoader(CellTypeWheelExperimentHeatmap)
 
 const render = (options, target) => {
   ReactDOM.render(
-    <CellTypeWheelExperimentHeatmap
+    <CellTypeWheelExperimentHeatmapWithFetchLoader
       {...options}
-      cellTypeWheelSearchTerm={cellTypeWheelTitle}
-      cellTypeWheelData={cellTypeWheelData}
+      host={`https://wwwdev.ebi.ac.uk/gxa/sc/`}
+      resource={`json/cell-type-wheel/pancreas`}
+      fulfilledPayloadProvider={
+        data => ({ cellTypeWheelData: data })
+      }
+      cellTypeWheelSearchTerm={`pancreas`}
     />, document.getElementById(target)
   )
 }
