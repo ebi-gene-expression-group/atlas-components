@@ -32,8 +32,8 @@ function CellTypeWheelExperimentHeatmap (props) {
   })
 
   return (
-    <div className={`row-expanded`}>
-      <div className={`small-12 medium-6 columns`}>
+    <div className={`row-expanded`} aria-label={`Cell type wheel and heatmap of top-scoring genes of cell types in ${props.searchTerm}`}>
+      <div className={`small-12 medium-6 columns`} aria-label={`Cell type wheel`}>
         <CellTypeWheelFetchLoader
           host={props.host}
           resource={URI(props.searchTerm, props.cellTypeWheelResource).toString()}
@@ -42,7 +42,7 @@ function CellTypeWheelExperimentHeatmap (props) {
           onCellTypeWheelClick={onCellTypeWheelClick}
         />
       </div>
-      <div className={`small-12 medium-6 columns`}>
+      <div className={`small-12 medium-6 columns`} aria-label={`Heatmap of top-scoring genes`}>
         {heatmapSelection.cellType ?
           <MarkerGeneHeatmapFetchLoader
             host={props.host}
@@ -54,9 +54,9 @@ function CellTypeWheelExperimentHeatmap (props) {
             species={heatmapSelection.species}
             heatmapType={`multiexperimentcelltypes`}
           /> :
-          <div className={`medium-text-center`}>
+          <div className={`medium-text-center`} aria-label={`No cell type selected`}>
             <h4>
-            Please click on a cell type to see a detailed view of the expression profile of marker genes across experiments.
+            Please click on a cell type to see a detailed view of the expression profile of top-scoring genes across experiments.
             </h4>
           </div>
         }
