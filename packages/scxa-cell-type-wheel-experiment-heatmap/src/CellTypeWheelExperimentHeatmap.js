@@ -4,18 +4,18 @@ import URI from 'urijs'
 
 import _ from 'lodash'
 
-import MarkerGeneHeatmap from '@ebi-gene-expression-group/scxa-marker-gene-heatmap/lib/MarkerGeneHeatmap'
-import CellTypeWheel from '@ebi-gene-expression-group/scxa-cell-type-wheel'
-
 import { withFetchLoader } from '@ebi-gene-expression-group/atlas-react-fetch-loader'
+import CellTypeWheel from '@ebi-gene-expression-group/scxa-cell-type-wheel'
+import MarkerGeneHeatmap from '@ebi-gene-expression-group/scxa-marker-gene-heatmap/lib/MarkerGeneHeatmap'
 
+const CellTypeWheelFetchLoader = withFetchLoader(CellTypeWheel)
 const MarkerGeneHeatmapFetchLoader = withFetchLoader(MarkerGeneHeatmap)
 
 class CellTypeWheelExperimentHeatmap extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
-      cellTypeHeatmapSearchTerm: ``,
+      cellType: ``,
       species: ``,
       experimentAccessions: []
     }
@@ -23,15 +23,16 @@ class CellTypeWheelExperimentHeatmap extends React.Component {
 
   _onCellTypeWheelClick (cellType, species, experimentAccessions) {
     this.setState({
-      cellTypeHeatmapSearchTerm: cellType,
+      cellType,
       species,
       experimentAccessions
     })
   }
 
   render () {
-    const { cellTypeHeatmapSearchTerm, species, experimentAccessions } = this.state
-    const { host, heatmapResource, cellTypeWheelData, cellTypeWheelSearchTerm } = this.props
+    const { host, cellTypeWheelResource, heatmapResource, searchTerm } = this.props
+    const { cellType, species, experimentAccessions } = this.state
+    const onCellTypeWheelClick = this._onCellTypeWheelClick.bind(this)
     const heatmapProps = {
       hasDynamicHeight: true
     }
@@ -39,19 +40,19 @@ class CellTypeWheelExperimentHeatmap extends React.Component {
     return (
       <div className={`row-expanded`}>
         <div className={`small-12 medium-6 columns`}>
-          <CellTypeWheel
-            data = {cellTypeWheelData}
-            searchTerm = {cellTypeWheelSearchTerm}
-            onCellTypeWheelClick={(cellType, species, experimentAccessions) => this._onCellTypeWheelClick(cellType, species, experimentAccessions)}
+          <CellTypeWheelFetchLoader
+            host={host}
+            resource={URI(searchTerm, cellTypeWheelResource).toString()}
+            fulfilledPayloadProvider={ cellTypeWheelData => ({ data: cellTypeWheelData }) }
+            searchTerm = {searchTerm}
+            onCellTypeWheelClick={onCellTypeWheelClick}
           />
         </div>
         <div className={`small-12 medium-6 columns`}>
-          {cellTypeHeatmapSearchTerm ?
+          {cellType ?
             <MarkerGeneHeatmapFetchLoader
               host={host}
-              resource={URI(cellTypeHeatmapSearchTerm, heatmapResource).toString()}
-              query={{ experimentAccessions }}
-              cellType={cellTypeHeatmapSearchTerm}
+              resource={URI(cellType, heatmapResource).toString()}
               fulfilledPayloadProvider={
                 heatmapData => ({
                   data: heatmapData,
@@ -60,14 +61,16 @@ class CellTypeWheelExperimentHeatmap extends React.Component {
                   hasDynamicHeight: _.chain(heatmapData).map(`geneName`).uniq().value().length > 5 ? heatmapProps.hasDynamicHeight : false
                 })
               }
+              query={{ experimentAccessions }}
+              cellType={cellType}
               heatmapRowHeight={40}
               species={species}
               heatmapType={`multiexperimentcelltypes`}
             /> :
             <div className={`medium-text-center`}>
-              <h2>
+              <h4>
               Please click on a cell type to see a detailed view of the expression profile of marker genes across experiments.
-              </h2>
+              </h4>
             </div>
           }
         </div>
@@ -78,19 +81,14 @@ class CellTypeWheelExperimentHeatmap extends React.Component {
 
 CellTypeWheelExperimentHeatmap.propTypes = {
   host: PropTypes.string,
-  heatmapResource: PropTypes.string.isRequired,
-  cellTypeWheelSearchTerm: PropTypes.string.isRequired,
-  cellTypeWheelData: PropTypes.arrayOf(
-    PropTypes.shape({
-      name: PropTypes.string.isRequired,
-      id: PropTypes.string.isRequired,
-      parent: PropTypes.string.isRequired,
-      value: PropTypes.number
-    })).isRequired
+  cellTypeWheelResource: PropTypes.string,
+  heatmapResource: PropTypes.string,
+  searchTerm: PropTypes.string.isRequired
 }
 
 CellTypeWheelExperimentHeatmap.defaultProps = {
   host: `/gxa/sc/`,
+  cellTypeWheelResource: `json/cell-type-wheel/`,
   heatmapResource: `json/cell-type-marker-genes/`
 }
 
