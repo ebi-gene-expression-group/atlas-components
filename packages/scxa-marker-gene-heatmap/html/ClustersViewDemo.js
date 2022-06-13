@@ -33,7 +33,7 @@ class Demo extends React.Component {
       // ksWithMarkers: [4, 7, 9],
       // ksWithMarkers: [36, 37, 38, 39, 40, 41, 42, 42, 43, 44, 45, 46],
       selectedColourBy: 'inferred cell type - ontology labels',
-      selectedPlotTypeCategory: `metadata`,
+      selectedClusterCategory: `metadata`,
       metadata: [
         {
           value:	"inferred cell type - ontology labels",
@@ -61,7 +61,7 @@ class Demo extends React.Component {
         <HeatmapView
           wrapperClassName={`row expanded`}
           resource={
-            this.state.selectedPlotTypeCategory == `metadata` ?
+            this.state.selectedClusterCategory == `metadata` ?
                 URI(`json/experiments/${this.state.experimentAccession}/marker-genes-heatmap/cell-types`)
                     //sort() is very important here! Otherwise, it will fetch though the values in list are not changed
                     .search({cellGroupType: this.state.selectedColourBy, cellType: this.state.cellTypes.sort() })
@@ -73,11 +73,11 @@ class Demo extends React.Component {
           host={`https://wwwdev.ebi.ac.uk/gxa/sc/`}
           ks={this.state.ks}
           ksWithMarkers={this.state.ksWithMarkers}
-          selectedPlotTypeCategory={this.state.selectedPlotTypeCategory}
-          selectedPlotType={this.state.selectedColourBy}
+          selectedClusterCategory={this.state.selectedClusterCategory}
+          selectedClusterId={this.state.selectedColourBy}
           selectedClusterId={this.state.selectedClusterId}
           cellTypes={this.state.cellTypes}
-          onChangePlotType={(colourByCategory, colourByValue) => {
+          onChangeClusterId={(colourByCategory, colourByValue) => {
             this.setState({
               selectedColourBy : colourByValue,
               selectedColourByCategory : colourByCategory,

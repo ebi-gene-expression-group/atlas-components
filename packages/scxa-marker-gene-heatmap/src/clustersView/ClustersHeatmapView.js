@@ -77,7 +77,7 @@ class HeatmapView extends React.Component {
   render() {
     const { data, filteredData, isLoading, hasError } = this.state
     const { wrapperClassName, plotWrapperClassName } = this.props
-    const { ks, ksWithMarkers, selectedPlotType, onChangeMarkerGeneFor, onChangePlotType, metadata, cellTypes, selectedPlotTypeCategory, selectedClusterId} = this.props
+    const { ks, ksWithMarkers, selectedClusterId, onChangeMarkerGeneFor, onChangeClusterId, metadata, cellTypes, selectedClusterCategory, selectedClusterId} = this.props
     const { hasDynamicHeight, defaultHeatmapHeight, heatmapRowHeight, species, host } = this.props
 
     const kOptions = ks
@@ -108,10 +108,10 @@ class HeatmapView extends React.Component {
         _flatten(
             options.map((item) => (item.options))
         ),
-        {value: selectedPlotType}
+        {value: selectedClusterId}
     )
 
-    const allClusterIds = selectedPlotTypeCategory == `metadata` ? cellTypes :
+    const allClusterIds = selectedClusterCategory == `metadata` ? cellTypes :
         _.range(1, parseInt(selectedColourBy) + 1)
 
     const clusterIdsWithMarkers = data && _.uniq(data.map(x => parseInt(x.cellGroupValueWhereMarker)))
@@ -119,9 +119,9 @@ class HeatmapView extends React.Component {
     const clusterIdOptions = allClusterIds
       .sort((a, b) => a-b)
       .map((clusterId) => ({
-        value: selectedPlotTypeCategory == `metadata` ? clusterId.toLowerCase() : clusterId.toString(),
-        label: selectedPlotTypeCategory == `metadata` ? clusterId : `Cluster ${clusterId}`,
-        isDisabled: selectedPlotTypeCategory == `clusters` && clusterIdsWithMarkers ? !clusterIdsWithMarkers.includes(clusterId) : false
+        value: selectedClusterCategory == `metadata` ? clusterId.toLowerCase() : clusterId.toString(),
+        label: selectedClusterCategory == `metadata` ? clusterId : `Cluster ${clusterId}`,
+        isDisabled: selectedClusterCategory == `clusters` && clusterIdsWithMarkers ? !clusterIdsWithMarkers.includes(clusterId) : false
       }))
 
     // Add default "All clusters" option at the start of the options array
@@ -138,11 +138,11 @@ class HeatmapView extends React.Component {
           <div className={wrapperClassName}>
             <div className={`small-12 medium-6 columns`}>
               <PlotSettingsDropdown
-                  labelText={`Metadata or cluster plot by:`}
+                  labelText={`Select a metadata or k value:`}
                   options={metadata ? options : kOptions} // Some experiments don't have metadata in Solr, although they should do. Leaving this check in for now so we don't break the entire experiment page.
                   value={defaultValue}
                   onSelect={(selectedOption) => {
-                    onChangePlotType(selectedOption.group, selectedOption.value)
+                    onChangeClusterId(selectedOption.group, selectedOption.value)
                   }}/>
             </div>
             <div className={`small-12 medium-6 columns`}>
@@ -191,8 +191,9 @@ HeatmapView.propTypes = {
   resource: PropTypes.string.isRequired,
   ks: PropTypes.arrayOf(PropTypes.number).isRequired,
   ksWithMarkers: PropTypes.arrayOf(PropTypes.string),
-  selectedPlotType: PropTypes.string.isRequired,
-  selectedPlotTypeCategory: PropTypes.string.isRequired,
+  selectedClusterId: PropTypes.string.isRequired,
+  selectedClusterCategory: PropTypes.string.isRequired,
+  onChangeClusterId: PropTypes.func.isRequired,
   onSelectK: PropTypes.func,
   wrapperClassName: PropTypes.string,
   plotWrapperClassName: PropTypes.string,
