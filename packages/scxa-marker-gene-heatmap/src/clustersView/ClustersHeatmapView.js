@@ -6,7 +6,7 @@ import LoadingOverlay from '../LoadingOverlay'
 import CalloutAlert from '../CalloutAlert'
 
 import URI from 'urijs'
-import _ from 'lodash'
+import {find as _find, flatten as _flatten} from 'lodash'
 
 class HeatmapView extends React.Component {
   constructor(props) {
@@ -15,7 +15,6 @@ class HeatmapView extends React.Component {
     this.state = {
       data: [],
       filteredData: [],
-      selectedClusterId: null,
       isLoading: true,
       hasError: null
     }
@@ -29,7 +28,7 @@ class HeatmapView extends React.Component {
     const url = URI(resource, host).toString()
 
     try {
-      const response = await fetch(url)
+      const response = await fetch([url])
 
       if (!response.ok) {
         throw new Error(`${url} => ${response.status}`)
@@ -39,7 +38,6 @@ class HeatmapView extends React.Component {
       this.setState({
         data: await jsonData,
         filteredData: await jsonData,
-        selectedClusterId: null,
         isLoading: false,
         hasError: null
       })
@@ -77,9 +75,9 @@ class HeatmapView extends React.Component {
   }
 
   render() {
-    const { data, filteredData, selectedClusterId, isLoading, hasError } = this.state
+    const { data, filteredData, isLoading, hasError } = this.state
     const { wrapperClassName, plotWrapperClassName } = this.props
-    const { ks, ksWithMarkers, selectedK, onSelectK } = this.props
+    const { ks, ksWithMarkers, selectedClusterId, onChangeMarkerGeneFor, onChangeClusterId, metadata, cellTypes, selectedClusterCategory, selectedClusterId} = this.props
     const { hasDynamicHeight, defaultHeatmapHeight, heatmapRowHeight, species, host } = this.props
 
     const kOptions = ks
@@ -90,21 +88,46 @@ class HeatmapView extends React.Component {
         isDisabled: ksWithMarkers ? !ksWithMarkers.includes(k.toString()) : false
       }))
 
-    const allClusterIds = _.range(1, parseInt(selectedK) + 1)
+    const metadataOptions = metadata.map((metadata) => ({
+      ...metadata,
+      group: `metadata`
+    }))
+
+    const options = [
+      {
+        label: `Metadata`,
+        options: metadataOptions,
+      },
+      {
+        label: `Number of clusters`,
+        options: kOptions,
+      },
+    ]
+
+    const defaultValue = _find(
+        _flatten(
+            options.map((item) => (item.options))
+        ),
+        {value: selectedClusterId}
+    )
+
+    const allClusterIds = selectedClusterCategory == `metadata` ? cellTypes :
+        _.range(1, parseInt(selectedColourBy) + 1)
+
     const clusterIdsWithMarkers = data && _.uniq(data.map(x => parseInt(x.cellGroupValueWhereMarker)))
 
     const clusterIdOptions = allClusterIds
       .sort((a, b) => a-b)
       .map((clusterId) => ({
-        value: clusterId.toString(),
-        label: `Cluster ${clusterId}`,
-        isDisabled: clusterIdsWithMarkers ? !clusterIdsWithMarkers.includes(clusterId) : false
+        value: selectedClusterCategory == `metadata` ? clusterId.toLowerCase() : clusterId.toString(),
+        label: selectedClusterCategory == `metadata` ? clusterId : `Cluster ${clusterId}`,
+        isDisabled: selectedClusterCategory == `clusters` && clusterIdsWithMarkers ? !clusterIdsWithMarkers.includes(clusterId) : false
       }))
 
     // Add default "All clusters" option at the start of the options array
     clusterIdOptions.unshift({
       value: `all`,
-      label: `All clusters`,
+      label: `All`,
       isDisabled: false // always show this option
     })
 
@@ -115,23 +138,24 @@ class HeatmapView extends React.Component {
           <div className={wrapperClassName}>
             <div className={`small-12 medium-6 columns`}>
               <PlotSettingsDropdown
-                labelText={`Number of clusters:`}
-                options={kOptions}
-                onSelect={(selectedOption) => onSelectK(selectedOption.value)}
-                value={{value: selectedK, label: `k = ${selectedK}`}}
-              />
+                  labelText={`Select a metadata or k value:`}
+                  options={metadata ? options : kOptions} // Some experiments don't have metadata in Solr, although they should do. Leaving this check in for now so we don't break the entire experiment page.
+                  value={defaultValue}
+                  onSelect={(selectedOption) => {
+                    onChangeClusterId(selectedOption.group, selectedOption.value)
+                  }}/>
             </div>
             <div className={`small-12 medium-6 columns`}>
               <PlotSettingsDropdown
                 labelText={`Show marker genes for:`}
                 options={clusterIdOptions}
                 onSelect={(selectedOption) => {
+                  onChangeMarkerGeneFor(selectedOption)
                   this.setState((state) => ({
                     data: _.cloneDeep(state.data),
                     filteredData: selectedOption.value === `all` ?
                       _.cloneDeep(state.data) :
-                      _.filter(state.data, {'cellGroupValueWhereMarker': selectedOption.value}),
-                    selectedClusterId: selectedOption
+                      _.filter(state.data, {'cellGroupValueWhereMarker': selectedOption.value})
                   }))
                 }}
                 value={selectedClusterId || clusterIdOptions[0]}
@@ -167,7 +191,9 @@ HeatmapView.propTypes = {
   resource: PropTypes.string.isRequired,
   ks: PropTypes.arrayOf(PropTypes.number).isRequired,
   ksWithMarkers: PropTypes.arrayOf(PropTypes.string),
-  selectedK: PropTypes.string.isRequired,
+  selectedClusterId: PropTypes.string.isRequired,
+  selectedClusterCategory: PropTypes.string.isRequired,
+  onChangeClusterId: PropTypes.func.isRequired,
   onSelectK: PropTypes.func,
   wrapperClassName: PropTypes.string,
   plotWrapperClassName: PropTypes.string,
