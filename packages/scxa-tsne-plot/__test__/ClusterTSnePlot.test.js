@@ -53,7 +53,7 @@ describe(`ClusterTSnePlot colourize function`, () => {
     const randomSeries = randomHighchartsSeriesWithNamesAndMaxPoints([...seriesNames, `Not available`], maxPointsPerSeries)
     _colourizeClusters([], `lightgrey`)(randomSeries).forEach((series) => {
       if(series.name === `Not available`) {
-        expect(series).toHaveProperty(`zIndex`)
+        expect(series).toHaveProperty(`zIndex`, -1)
       } else {
         expect(series).not.toHaveProperty(`zIndex`)
       }
