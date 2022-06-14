@@ -6,7 +6,7 @@ import LoadingOverlay from '../LoadingOverlay'
 import CalloutAlert from '../CalloutAlert'
 
 import URI from 'urijs'
-import _, {find as _find, flatten as _flatten} from 'lodash'
+import {find as _find, flatten as _flatten} from 'lodash'
 
 class HeatmapView extends React.Component {
   constructor(props) {
@@ -77,7 +77,7 @@ class HeatmapView extends React.Component {
   render() {
     const { data, filteredData, isLoading, hasError } = this.state
     const { wrapperClassName, plotWrapperClassName } = this.props
-    const { ks, ksWithMarkers, selectedClusterId, selectedClusterIdOption, onChangeMarkerGeneFor, onChangeClusterId, metadata, selectedClusterByCategory} = this.props
+    const { ks, ksWithMarkers, selectedClusterId, onChangeMarkerGeneFor, onChangeClusterId, metadata, cellTypes, selectedClusterCategory } = this.props
     const { hasDynamicHeight, defaultHeatmapHeight, heatmapRowHeight, species, host } = this.props
 
     const kOptions = ks
@@ -111,18 +111,17 @@ class HeatmapView extends React.Component {
         {value: selectedClusterId}
     )
 
-    const allClusterIds = selectedClusterByCategory == `metadata` ?
-        _.chain(data).uniqBy(`x`).sortBy(`x`).map(`cellGroupValue`).value() :
-        _.range(1, parseInt(selectedClusterId) + 1)
+    const allClusterIds = selectedClusterCategory == `metadata` ? cellTypes :
+        _.range(1, parseInt(selectedColourBy) + 1)
 
     const clusterIdsWithMarkers = data && _.uniq(data.map(x => parseInt(x.cellGroupValueWhereMarker)))
 
     const clusterIdOptions = allClusterIds
       .sort((a, b) => a-b)
       .map((clusterId) => ({
-        value: selectedClusterByCategory == `metadata` ? clusterId.toLowerCase() : clusterId.toString(),
-        label: selectedClusterByCategory == `metadata` ? clusterId : `Cluster ${clusterId}`,
-        isDisabled: selectedClusterByCategory == `clusters` && clusterIdsWithMarkers ? !clusterIdsWithMarkers.includes(clusterId) : false
+        value: selectedClusterCategory == `metadata` ? clusterId.toLowerCase() : clusterId.toString(),
+        label: selectedClusterCategory == `metadata` ? clusterId : `Cluster ${clusterId}`,
+        isDisabled: selectedClusterCategory == `clusters` && clusterIdsWithMarkers ? !clusterIdsWithMarkers.includes(clusterId) : false
       }))
 
     // Add default "All clusters" option at the start of the options array
@@ -159,7 +158,7 @@ class HeatmapView extends React.Component {
                       _.filter(state.data, {'cellGroupValueWhereMarker': selectedOption.value})
                   }))
                 }}
-                value={selectedClusterIdOption || clusterIdOptions[0]}
+                value={selectedClusterId || clusterIdOptions[0]}
               />
             </div>
           </div>
@@ -175,7 +174,7 @@ class HeatmapView extends React.Component {
                 heatmapRowHeight={heatmapRowHeight}
                 species={species}
                 host={host}
-                heatmapType={selectedClusterByCategory == `metadata` ? `celltypes` : `clusters`}
+                heatmapType={`clusters`}
               />
               <LoadingOverlay
                 show={isLoading}
@@ -193,7 +192,7 @@ HeatmapView.propTypes = {
   ks: PropTypes.arrayOf(PropTypes.number).isRequired,
   ksWithMarkers: PropTypes.arrayOf(PropTypes.string),
   selectedClusterId: PropTypes.string.isRequired,
-  selectedClusterByCategory: PropTypes.string.isRequired,
+  selectedClusterCategory: PropTypes.string.isRequired,
   onChangeClusterId: PropTypes.func.isRequired,
   onSelectK: PropTypes.func,
   wrapperClassName: PropTypes.string,
