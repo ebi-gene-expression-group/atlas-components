@@ -16,9 +16,9 @@ const heatmapOptionsProvider = {
         }
       }
     },
-    title: cellType => `${cellType} marker genes`,
+    title: cellType => `${cellType}<br>top genes`,
     labelsFormatter: label => label,
-    noData: `No marker genes found for the selected cell type. Try selecting a different cell type.`
+    noData: `No high-scoring genes found for the selected cell type.`
   },
 
   celltypes: {
@@ -39,7 +39,7 @@ const heatmapOptionsProvider = {
         }
       }
     },
-    title: cellType => `${cellType} marker genes`,
+    title: cellType => `${cellType}<br>marker genes`,
     labelsFormatter: label => label,
     noData: `No marker genes found for the selected organ or region. Try selecting another organism part.`
   },

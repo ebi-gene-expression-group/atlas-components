@@ -81,7 +81,7 @@ describe(`FetchLoader`, () => {
     expect(wrapper.find(CalloutAlert)).toHaveLength(0)
   })
 
-  test(`additional pass-through are added to the JSON payload`, async () => {
+  test(`additional pass-through props are added to the JSON payload`, async () => {
     fetchMock.get(`/foo/bar`, `{"results":[]}`)
     const wrapper = shallow(<ComponentWithFetchLoader {...props} />)
 
@@ -90,7 +90,7 @@ describe(`FetchLoader`, () => {
     expect(wrapper.find(MyComponent)).toHaveProp(`results`, [])
   })
 
-  test(`can inject a loading payload provided instead of rendering the loading message`, () => {
+  test(`can inject a loading payload provider instead of rendering the loading message`, () => {
     // We need to return a callback from the request to simulate a pending promise
     fetchMock.get(`/foo/bar`, () => {})
     const wrapper =
@@ -211,7 +211,35 @@ describe(`FetchLoader`, () => {
     await wrapper.instance().componentDidMount()
     expect(wrapper).toHaveState({ isLoading: false, data: firstPayload })
 
-    wrapper.setProps({ host:`bar/`, resource: `foo`})
+    wrapper.setProps({ host: `bar/`, resource: `foo`})
+    expect(wrapper).toHaveState({ isLoading: true, data: null })
+    await wrapper.instance().componentDidMount()
+    expect(wrapper).toHaveState({ isLoading: false, data: secondPayload })
+  })
+
+  test(`when query changes, the component is reset and reloads`, async () => {
+    const firstPayload = {
+      results: [{ title: `Foobar` }]
+    }
+    const secondPayload = {
+      results: [{ title: `Barfoo`}]
+    }
+
+    fetchMock.get(`/foo/bar`, JSON.stringify(firstPayload))
+    fetchMock.get(`/foo/bar?query=foobar`, JSON.stringify(secondPayload))
+
+    const wrapper =
+        shallow(
+            <ComponentWithFetchLoader
+                host={`foo/`}
+                resource={`bar`}
+            />)
+
+    expect(wrapper).toHaveState({ isLoading: true, data: null })
+    await wrapper.instance().componentDidMount()
+    expect(wrapper).toHaveState({ isLoading: false, data: firstPayload })
+
+    wrapper.setProps({ host: `foo/`, resource: `bar`, query: { query: `foobar` } })
     expect(wrapper).toHaveState({ isLoading: true, data: null })
     await wrapper.instance().componentDidMount()
     expect(wrapper).toHaveState({ isLoading: false, data: secondPayload })

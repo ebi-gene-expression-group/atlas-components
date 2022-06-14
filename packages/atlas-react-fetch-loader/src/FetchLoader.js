@@ -32,7 +32,7 @@ const withFetchLoader = (WrappedComponent) => {
     }
 
     static getDerivedStateFromProps(props, state) {
-      const url = URI(props.resource, props.host).toString()
+      const url = URI(props.resource, props.host).query(props.query).toString()
       // Store URL in state so we can compare when props change.
       // Clear out previously-loaded data (so we don't render stale stuff).
       if (url !== state.url) {
@@ -50,12 +50,12 @@ const withFetchLoader = (WrappedComponent) => {
 
     async componentDidUpdate(/*prevProps, prevState*/) {
       if (this.state.data === null && this.state.error === null) {
-        await this._loadAsyncData(URI(this.props.resource, this.props.host).toString())
+        await this._loadAsyncData(URI(this.props.resource, this.props.host).query(this.props.query).toString())
       }
     }
 
     async componentDidMount() {
-      await this._loadAsyncData(URI(this.props.resource, this.props.host).toString())
+      await this._loadAsyncData(URI(this.props.resource, this.props.host).query(this.props.query).toString())
     }
 
     async _loadAsyncData(url) {
@@ -130,6 +130,7 @@ const withFetchLoader = (WrappedComponent) => {
   FetchLoader.propTypes = {
     host: PropTypes.string.isRequired,
     resource: PropTypes.string.isRequired,
+    query: PropTypes.object,
     loadingPayloadProvider: PropTypes.func,
     errorPayloadProvider: PropTypes.func,
     fulfilledPayloadProvider: PropTypes.func,
@@ -138,6 +139,7 @@ const withFetchLoader = (WrappedComponent) => {
   }
 
   FetchLoader.defaultProps = {
+    query: {},
     loadingPayloadProvider: null,
     errorPayloadProvider: null,
     fulfilledPayloadProvider: () => {},
