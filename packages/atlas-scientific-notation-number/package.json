@@ -7,9 +7,7 @@
   "description": "Format numbers nicely",
   "main": "lib/index.js",
   "scripts": {
-    "prepare": "rm -rf lib && babel src -d lib --copy-files",
-    "test": "jest",
-    "posttest": "jest --coverage --coverageReporters=text-lcov | coveralls"
+    "prepare": "rm -rf lib && babel src -d lib --copy-files"
   },
   "jest": {
     "setupFilesAfterEnv": [

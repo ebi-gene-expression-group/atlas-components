@@ -1,25 +1,28 @@
-// If you get ReferenceError: regeneratorRuntime is not defined use this in your tests:
-// import 'core-js/stable'
-// import 'regenerator-runtime/runtime'
+/**
+ * @jest-environment jsdom
+ */
+
 import React from 'react'
-import renderer from 'react-test-renderer'
-import { render, screen } from '@testing-library/react'
+import { render } from '@testing-library/react'
 
 import CellTypeWheel from '../src/CellTypeWheel'
 
+const props = {
+  searchTerm: `foobar`,
+  data: [],
+  // {
+  //   id: `level1#level2#level3`,,
+  //   name: `level3`,
+  //   parent: `level1#level2`,
+  //   value: 1,
+  //   experimentAccessions: [`E-EHCA-2`, `E-MTAB-5061`]
+  // }
+  onCellTypeWheelClick: () => {}
+}
+
 describe(`CellTypeWheel`, () => {
-  test(`should mount in a full DOM`, () => {
-    render(<CellTypeWheel />)
-    expect(screen.getByRole(`heading`)).toBeInTheDocument()
-  })
-
-  test(`should render to static HTML`, () => {
-    render(<CellTypeWheel />)
-    expect(screen.getByRole(`heading`)).toHaveTextContent(`Bar`)
-  })
-
-  test(`matches snapshot`, () => {
-    const tree = renderer.create(<CellTypeWheel />).toJSON()
-    expect(tree).toMatchSnapshot()
+  test(`renders properly with no data`, () => {
+    const { getByRole } = render(<CellTypeWheel {...props} />)
+    expect(getByRole(`figure`)).not.toBeEmptyDOMElement()
   })
 })

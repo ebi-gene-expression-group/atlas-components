@@ -9,12 +9,8 @@ import _ from 'lodash'
 
 highchartsSunburst(Highcharts)
 
-// SUPER HACK!
-// https://github.com/highcharts/highcharts/issues/4994
-window.Highcharts = Highcharts
-
 class CellTypeWheel extends React.Component {
-  constructor(props) {
+  constructor (props) {
     super(props)
 
     this.state = {
@@ -64,10 +60,9 @@ class CellTypeWheel extends React.Component {
           point: {
             events: {
               click: function () {
-                let clickedLevel = this.node.level
-                if (clickedLevel === 4) {
-                  const species = _.split(this.id,`#`,1)
-                  props.onCellTypeWheelClick(this.name, species[0])
+                if (this.node.level === 4) {
+                  const species = _.split(this.id, `#`, 1)
+                  props.onCellTypeWheelClick(this.name, species[0], this.experimentAccessions)
                 }
               }
             }
@@ -97,23 +92,33 @@ class CellTypeWheel extends React.Component {
     }
   }
 
-  render() {
+  render () {
     const { chartOptions } = this.state
 
     return (
-      <div>
+      <figure>
         <HighchartsReact
           highcharts={Highcharts}
           options={chartOptions}
         />
-      </div>
+        <figcaption style={ { visibility: `hidden` } }>
+          {this.state.chartOptions.title.text}
+        </figcaption>
+      </figure>
     )
   }
 }
 
 CellTypeWheel.propTypes = {
   searchTerm: PropTypes.string.isRequired,
-  data: PropTypes.object.isRequired,
+  data: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+      parent: PropTypes.string.isRequired,
+      value: PropTypes.number.isRequired,
+      experimentAccessions: PropTypes.arrayOf(PropTypes.string)
+    })).isRequired,
   onCellTypeWheelClick: PropTypes.func
 }
 
