@@ -77,7 +77,7 @@ class HeatmapView extends React.Component {
   render() {
     const { data, filteredData, isLoading, hasError } = this.state
     const { wrapperClassName, plotWrapperClassName } = this.props
-    const { ks, ksWithMarkers, selectedClusterId, onChangeMarkerGeneFor, onChangeClusterId, metadata, cellTypes, selectedClusterCategory, selectedClusterId} = this.props
+    const { ks, ksWithMarkers, selectedClusterId, onChangeMarkerGeneFor, onChangeClusterId, metadata, cellTypes, selectedClusterCategory } = this.props
     const { hasDynamicHeight, defaultHeatmapHeight, heatmapRowHeight, species, host } = this.props
 
     const kOptions = ks
