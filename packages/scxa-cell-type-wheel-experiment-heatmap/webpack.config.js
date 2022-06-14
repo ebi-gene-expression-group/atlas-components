@@ -1,4 +1,3 @@
-const { CleanWebpackPlugin } = require(`clean-webpack-plugin`)
 const path = require(`path`)
 
 const vendorsBundleName = `vendors`
@@ -9,15 +8,11 @@ module.exports = {
     CellTypeWheelExperimentHeatmapDemo: [`@babel/polyfill`, `./html/Demo.js`],
   },
 
-  plugins: [
-    new CleanWebpackPlugin()
-  ],
-
   output: {
     library: `[name]`,
     filename: `[name].bundle.js`,
-    publicPath: commonPublicPath,
-    devtoolNamespace: `firefox`
+    devtoolNamespace: `webpack`,
+    clean: true
   },
 
   resolve: {
@@ -67,12 +62,14 @@ module.exports = {
       }
     ]
   },
-
   devServer: {
     port: 9000,
-    contentBase: path.resolve(__dirname, `html`),
-    publicPath: commonPublicPath
+    static: `./html`,
+    devMiddleware: {
+      publicPath: `/dist`
+    }
     // Add if developing a SPA to redirect non-matching routes known by WDS (i.e. no document in /html) to the router
     // historyApiFallback: true
   }
 }
+

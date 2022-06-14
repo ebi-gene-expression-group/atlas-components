@@ -1,6 +1,6 @@
 {
   "name": "@ebi-gene-expression-group/scxa-cell-type-wheel-heatmap",
-  "version": "1.1.0-beta1",
+  "version": "1.1.0-beta2",
   "publishConfig": {
     "access": "public"
   },
@@ -14,18 +14,12 @@
   "jest": {
     "setupFilesAfterEnv": [
       "@testing-library/jest-dom"
-    ],
-    "moduleNameMapper": {
-      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
-      "\\.(css|less)$": "<rootDir>/__mocks__/styleMock.js"
-    },
-    "setupFiles": [
-      "<rootDir>/__mocks__/requestAnimationFrame.js"
     ]
   },
   "author": "Expression Atlas developers <arrayexpress-atlas@ebi.ac.uk>",
   "collaborators": [
-    "Haider Iqbal <haideri@ebi.ac.uk>"
+    "Haider Iqbal <haideri@ebi.ac.uk>",
+    "Alfonso Muñoz-Pomer Fuentes <amunoz@ebi.ac.uk>"
   ],
   "license": "Apache-2.0",
   "repository": {
@@ -33,41 +27,34 @@
     "url": "https://github.com/atlas-components.git"
   },
   "dependencies": {
-    "@ebi-gene-expression-group/scxa-cell-type-wheel": "^1.1.0-beta1",
-    "@ebi-gene-expression-group/scxa-marker-gene-heatmap": "^2.2.0",
-    "highcharts": "^9.1.0",
-    "highcharts-react-official": "^3.0.0",
+    "@ebi-gene-expression-group/atlas-react-fetch-loader": "^3.9.0-beta1",
+    "@ebi-gene-expression-group/scxa-cell-type-wheel": "^1.1.0-beta",
+    "@ebi-gene-expression-group/scxa-marker-gene-heatmap": "^2.1.0",
+    "highcharts": "^10.1.0",
+    "highcharts-react-official": "^3.1.0",
     "lodash": "^4.17.21",
-    "prop-types": "^15.7.2",
+    "prop-types": "^15.8.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-select": "^3.1.0",
-    "styled-components": "^5.3.0",
-    "urijs": "^1.19.6"
+    "urijs": "^1.19.11"
   },
   "devDependencies": {
-    "@babel/cli": "^7.14.3",
-    "@babel/core": "^7.14.3",
-    "@babel/plugin-proposal-class-properties": "^7.10.1",
-    "@babel/polyfill": "^7.12.1",
-    "@babel/preset-env": "^7.14.2",
-    "@babel/preset-react": "^7.13.13",
-    "@ebi-gene-expression-group/eslint-config": "^2.4.0",
-    "@testing-library/jest-dom": "^5.12.0",
-    "@testing-library/react": "^11.2.7",
-    "babel-loader": "^8.1.0",
-    "clean-webpack-plugin": "^3.0.0",
-    "core-js": "^3.12.1",
-    "coveralls": "^3.1.0",
-    "eslint": "^7.27.0",
-    "fetch-mock": "^9.11.0",
-    "file-loader": "^6.1.1",
-    "jest": "^26.6.3",
-    "node-fetch": "^2.6.1",
+    "@babel/cli": "^7.17.10",
+    "@babel/core": "^7.18.2",
+    "@babel/preset-env": "^7.18.2",
+    "@babel/preset-react": "^7.17.12",
+    "@ebi-gene-expression-group/eslint-config": "^3.1.0",
+    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/react": "^12.1.5",
+    "babel-loader": "^8.2.5",
+    "eslint": "^8.17.0",
+    "file-loader": "^6.2.0",
+    "jest": "^28.1.1",
+    "jest-environment-jsdom": "^28.1.1",
     "react-test-renderer": "^17.0.2",
-    "regenerator-runtime": "^0.13.7",
-    "webpack": "^4.42.0",
-    "webpack-cli": "^3.3.11",
-    "webpack-dev-server": "^3.10.3"
+    "regenerator-runtime": "^0.13.9",
+    "webpack": "^5.73.0",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.9.2"
   }
 }
