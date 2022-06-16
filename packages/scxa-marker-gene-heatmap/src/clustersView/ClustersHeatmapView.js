@@ -6,7 +6,7 @@ import LoadingOverlay from '../LoadingOverlay'
 import CalloutAlert from '../CalloutAlert'
 
 import URI from 'urijs'
-import {find as _find, flatten as _flatten} from 'lodash'
+import _, {find as _find, flatten as _flatten} from 'lodash'
 
 class HeatmapView extends React.Component {
   constructor(props) {
@@ -77,7 +77,7 @@ class HeatmapView extends React.Component {
   render() {
     const { data, filteredData, isLoading, hasError } = this.state
     const { wrapperClassName, plotWrapperClassName } = this.props
-    const { ks, ksWithMarkers, selectedClusterId, onChangeMarkerGeneFor, onChangeClusterId, metadata, cellTypes, selectedClusterCategory, selectedClusterId} = this.props
+    const { ks, ksWithMarkers, selectedClusterId, onChangeMarkerGeneFor, onChangeClusterId, metadata, selectedColourBy, selectedClusterCategory} = this.props
     const { hasDynamicHeight, defaultHeatmapHeight, heatmapRowHeight, species, host } = this.props
 
     const kOptions = ks
@@ -111,7 +111,8 @@ class HeatmapView extends React.Component {
         {value: selectedClusterId}
     )
 
-    const allClusterIds = selectedClusterCategory == `metadata` ? cellTypes :
+    const allClusterIds = selectedClusterCategory == `metadata` ?
+        _.chain(data).uniqBy(`x`).sortBy(`x`).map(`cellGroupValue`).value() :
         _.range(1, parseInt(selectedColourBy) + 1)
 
     const clusterIdsWithMarkers = data && _.uniq(data.map(x => parseInt(x.cellGroupValueWhereMarker)))
@@ -174,7 +175,7 @@ class HeatmapView extends React.Component {
                 heatmapRowHeight={heatmapRowHeight}
                 species={species}
                 host={host}
-                heatmapType={`clusters`}
+                heatmapType={selectedClusterCategory == `metadata` ? `celltypes` : `clusters`}
               />
               <LoadingOverlay
                 show={isLoading}
