@@ -48,7 +48,7 @@ function CellTypeWheelExperimentHeatmap (props) {
             host={props.host}
             resource={URI(heatmapSelection.cellType, props.heatmapResource).toString()}
             fulfilledPayloadProvider={heatmapFulfilledPayloadProvider}
-            query={heatmapSelection.experimentAccessions}
+            query={{ [`experiment-accessions`]: heatmapSelection.experimentAccessions }}
             cellType={heatmapSelection.cellType}
             heatmapRowHeight={40}
             species={heatmapSelection.species}
