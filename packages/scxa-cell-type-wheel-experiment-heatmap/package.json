@@ -1,6 +1,6 @@
 {
   "name": "@ebi-gene-expression-group/scxa-cell-type-wheel-heatmap",
-  "version": "1.1.0-beta2",
+  "version": "1.1.0",
   "publishConfig": {
     "access": "public"
   },
@@ -27,9 +27,9 @@
     "url": "https://github.com/atlas-components.git"
   },
   "dependencies": {
-    "@ebi-gene-expression-group/atlas-react-fetch-loader": "^3.9.0-beta1",
-    "@ebi-gene-expression-group/scxa-cell-type-wheel": "^1.1.0-beta",
-    "@ebi-gene-expression-group/scxa-marker-gene-heatmap": "^2.1.0",
+    "@ebi-gene-expression-group/atlas-react-fetch-loader": "^3.9.0",
+    "@ebi-gene-expression-group/scxa-cell-type-wheel": "^1.1.0",
+    "@ebi-gene-expression-group/scxa-marker-gene-heatmap": "^2.3.0",
     "highcharts": "^10.1.0",
     "highcharts-react-official": "^3.1.0",
     "lodash": "^4.17.21",
