@@ -32,8 +32,7 @@ class Demo extends React.Component {
       // ksWithMarkers: [8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18],
       // ksWithMarkers: [4, 7, 9],
       // ksWithMarkers: [36, 37, 38, 39, 40, 41, 42, 42, 43, 44, 45, 46],
-      selectedColourBy: 'inferred cell type - ontology labels',
-      selectedColourByCategory: `metadata`,
+      selectedClusterByCategory: `metadata`,
       metadata: [
         {
           value:	"inferred cell type - ontology labels",
@@ -50,7 +49,7 @@ class Demo extends React.Component {
         {value:	"disease",
         label:	"Disease"}
       ],
-      selectedClusterId: null
+      selectedClusterId: 'inferred cell type - ontology labels',
   }}
 
   render() {
@@ -59,31 +58,28 @@ class Demo extends React.Component {
         <HeatmapView
           wrapperClassName={`row expanded`}
           resource={
-            this.state.selectedColourByCategory == `metadata` ?
+            this.state.selectedClusterByCategory == `metadata` ?
                 URI(`json/experiments/${this.state.experimentAccession}/marker-genes-heatmap/cell-types`)
-                    .search({cellGroupType: this.state.selectedColourBy})
+                    .search({cellGroupType: this.state.selectedClusterId})
                     .toString() :
                 URI(`json/experiments/${this.state.experimentAccession}/marker-genes/clusters`)
-                  .search({k: this.state.selectedColourBy})
+                  .search({k: this.state.selectedClusterId})
                   .toString()
           }
           host={`http://localhost:8080/gxa/sc/`}
           ks={this.state.ks}
           ksWithMarkers={this.state.ksWithMarkers}
-          selectedClusterCategory={this.state.selectedColourByCategory}
-          selectedColourBy={this.state.selectedColourBy}
+          selectedClusterByCategory={this.state.selectedClusterByCategory}
           selectedClusterId={this.state.selectedClusterId}
-          cellTypes={this.state.cellTypes}
           onChangeClusterId={(colourByCategory, colourByValue) => {
             this.setState({
-              selectedColourBy : colourByValue,
-              selectedColourByCategory : colourByCategory,
-              selectedClusterId: null
+              selectedClusterId : colourByValue,
+              selectedClusterByCategory : colourByCategory
             })
           }}
           onChangeMarkerGeneFor={(selectedOption) => {
             this.setState((state) => ({
-              selectedClusterId: selectedOption
+              selectedClusterIdOption: selectedOption
             }))
           }}
           metadata={this.state.metadata}
