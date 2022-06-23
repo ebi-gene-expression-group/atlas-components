@@ -729,6 +729,10 @@
     "view": "cells",
     "parent": "placenta",
     "ids": [
+      "CL_0009092",
+      "CL_0009095",
+      "CL_0009087",
+      "CL_0009084",
       "CL_2000002",
       "EFO_0010710",
       "CL_3000001",
@@ -762,6 +766,9 @@
     "view": "lobule",
     "parent": "liver",
     "ids": [
+      "CL_0019022",
+      "CL_0019021",
+      "CL_0009094",
       "CL_0000182",
       "CL_0000632",
       "UBERON_0001282",
@@ -845,6 +852,9 @@
     "view": "alveoli_section",
     "parent": "alveoli_fin",
     "ids": [
+      "CL_4028001",
+      "CL_0009086",
+      "CL_0009089",
       "CL_0002062",
       "CL_0002063",
       "UBERON_0003456",
@@ -867,6 +877,8 @@
     "view": "airway",
     "parent": "lung",
     "ids": [
+      "UBERON_8410077",
+      "UBERON_8410043",
       "CL_0002633",
       "CL_1001567",
       "CL_1000271",
