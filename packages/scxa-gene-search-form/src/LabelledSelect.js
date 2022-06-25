@@ -61,8 +61,7 @@ class LabelledSelect extends React.Component {
     const capitalisedName = name.charAt(0).toUpperCase() + name.slice(1)
 
     return (
-      <div>
-        <label htmlFor={name}>{capitalisedName}</label>
+      <label>{capitalisedName}
         <Select
           name={name}
           components={{ IndicatorSeparator: null, DropdownIndicator: ebiVfReactSelectReplacements.DropdownIndicator }}
@@ -74,7 +73,7 @@ class LabelledSelect extends React.Component {
           isDisabled={isDisabled}
           placeholder={isDisabled ? statusMessage : null}
           value={isDisabled ? null : selectedOption} />
-      </div>
+      </label>
     )
   }
 }
