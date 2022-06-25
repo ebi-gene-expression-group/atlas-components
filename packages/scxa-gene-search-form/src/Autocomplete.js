@@ -29,7 +29,7 @@ function Autocomplete (props) {
       label: defaultValue.term.trim(),
       value: defaultValue.category && defaultValue.category.trim() ?
         JSON.stringify(defaultValue) :
-        JSON.stringify({term: defaultValue.term.trim(), category: `q`})
+        JSON.stringify({ term: defaultValue.term.trim(), category: `q` })
     } :
     null
 
@@ -50,7 +50,7 @@ function Autocomplete (props) {
         isValidNewOption={(inputValue) => inputValue.trim() !== ``}
         getNewOptionData={(inputValue) => ({
           label: inputValue,
-          value: JSON.stringify({term: inputValue, category: `q`})
+          value: JSON.stringify({ term: inputValue, category: `q` })
         })}
         placeholder={``}
         defaultValue={_defaultValue}/>
