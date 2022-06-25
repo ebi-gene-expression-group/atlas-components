@@ -5,8 +5,9 @@ import URI from 'urijs'
 import AsyncCreatableSelect from 'react-select/async-creatable'
 import ebiVfReactSelectReplacements from './ebiVfReactSelectReplacements'
 
-const _asyncFetchOptions = (host, suggesterEndpoint, selectedSpecies, allSpecies) =>
-  async (inputValue) => {
+// Return a function to retrieve suggestions from an endpoint
+function _asyncFetchOptions (host, suggesterEndpoint, selectedSpecies, allSpecies) {
+  return async (inputValue) => {
     const suggesterUrl = URI(suggesterEndpoint, host).search({
       query: inputValue,
       species: selectedSpecies || allSpecies.join(`,`)
@@ -18,13 +19,11 @@ const _asyncFetchOptions = (host, suggesterEndpoint, selectedSpecies, allSpecies
     }
     throw new Error(`${suggesterUrl} => ${response.status}`)
   }
+}
 
-const Autocomplete = (
-  {
-    host, suggesterEndpoint,
-    selectedSpecies, allSpecies, onChange, defaultValue,
-    labelText
-  }) => {
+function Autocomplete (props) {
+  const { host, suggesterEndpoint, selectedSpecies, allSpecies, onChange, defaultValue, labelText } = props
+
   const _defaultValue = defaultValue.term && defaultValue.term.trim() ?
     {
       label: defaultValue.term.trim(),
