@@ -1,8 +1,12 @@
-import React from 'react'
-import renderer from 'react-test-renderer'
-import { shallow } from 'enzyme'
+/**
+ * @jest-environment jsdom
+ */
 
-import Select from 'react-select'
+import React from 'react'
+
+import { render, screen } from '@testing-library/react'
+import userEvent from '@testing-library/user-event'
+
 import LabelledSelect from '../src/LabelledSelect'
 
 import * as species from './utils/species'
@@ -13,60 +17,84 @@ const props = {
   bottomGroup: species.getAll(),
   bottomGroupLabel: `All species`,
   statusMessage: null,
-  onChange: ()=> {}
+  onChange: () => {}
 }
 
 describe(`LabelledSelect`, () => {
-  test(`is made up of a label and a React Select component`, () => {
-    const wrapper = shallow(<LabelledSelect {...props} />)
-    expect(wrapper.first().find(`label`)).toHaveLength(1)
-    expect(wrapper.first().find(`label`).text()).toEqual(props.name)
-    expect(wrapper.last().find(Select)).toHaveLength(1)
-  })
-
   test(`is disabled when a statusMessage (i.e. an error message) is passed in and it is displayed`, () => {
     const errorMessage = `Any schwifty, non-empty string`
-    const wrapper = shallow(<LabelledSelect {...props} statusMessage={errorMessage} />)
-    expect(wrapper.find(Select).prop(`isDisabled`)).toEqual(true)
-    expect(wrapper.find(Select).prop(`placeholder`)).toEqual(errorMessage)
+    render(
+      <LabelledSelect
+        {...props}
+        statusMessage={errorMessage}
+      />)
+
+    const input = screen.getByRole(`combobox`)
+    expect(input).toBeDisabled()
+    expect(screen.getByText(errorMessage)).toBeInTheDocument()
   })
 
   test(`is enabled when statusMessage is null`, () => {
-    const wrapper = shallow(<LabelledSelect {...props} />)
-    expect(wrapper.find(Select).prop(`isDisabled`)).toEqual(false)
+    render(
+      <LabelledSelect
+        {...props}
+      />)
+
+    const input = screen.getByRole(`combobox`)
+    expect(input).toBeEnabled()
   })
 
   test(`selects Any by default`, () => {
-    const wrapper = shallow(<LabelledSelect {...props} />)
-    expect(wrapper.find(Select).prop(`value`)).toHaveProperty(`value`, ``)
-    expect(wrapper.find(Select).prop(`value`)).toHaveProperty(`label`, `Any`)
+    render(
+      <LabelledSelect
+        {...props}
+      />)
+
+    expect(screen.getByText(`Any`)).toBeInTheDocument()
+    species.getAll().forEach(_species => expect(screen.queryByText(_species)).not.toBeInTheDocument())
   })
 
   test(`can select an option via props`, () => {
     const selectedSpecies = species.getRandom()
-    const wrapper = shallow(<LabelledSelect {...props} value={selectedSpecies}/>)
-    expect(wrapper.find(Select).prop(`value`)).toHaveProperty(`value`, selectedSpecies)
+    render(
+      <LabelledSelect
+        {...props}
+        value={selectedSpecies}/>)
+
+    expect(screen.getByText(selectedSpecies)).toBeInTheDocument()
   })
 
   test(`selects Any if value doesn’t match any in option in topGroup or bottomGroup`, () => {
-    const wrapper = shallow(<LabelledSelect {...props} selectedSpecies={`Human`}/>)
-    expect(wrapper.find(Select).prop(`value`)).toHaveProperty(`value`, ``)
-    expect(wrapper.find(Select).prop(`value`)).toHaveProperty(`label`, `Any`)
+    render(
+      <LabelledSelect
+        {...props}
+        value={`Human`}/>)
+
+    expect(screen.getByText(`Any`)).toBeInTheDocument()
+    expect(screen.queryByText(`Human`)).not.toBeInTheDocument()
   })
 
-  test(`changing the value in the React Select component fires the onChange prop function`, () => {
+  test(`changing the value in the React Select component fires the onChange prop function`, async () => {
+    const user = userEvent.setup()
     const onChangeMock = jest.fn()
-    const wrapper = shallow(<LabelledSelect {...props} onChange={onChangeMock} />)
 
+    render(
+      <LabelledSelect
+        {...props}
+        onChange={onChangeMock} />
+    )
+
+    // Open the selection with all the options
+    const input = screen.getByRole(`combobox`)
+    await user.click(input)
+
+    // Choose a random species
     const speciesToSelect = species.getRandom()
-    wrapper.find(Select).simulate(`change`, { value: speciesToSelect, label: speciesToSelect })
+    // We nedd to use findAllByText because an option can appear twice: in the top group and in all below
+    const options = await screen.findAllByText(speciesToSelect)
+    await user.click(options[0])
 
     expect(onChangeMock.mock.calls).toHaveLength(1)
     expect(onChangeMock.mock.calls[0][0]).toEqual({ value: speciesToSelect, label: speciesToSelect })
-  })
-
-  test(`matches snapshot`, () => {
-    const tree = renderer.create(<LabelledSelect {...props}/>).toJSON()
-    expect(tree).toMatchSnapshot()
   })
 })

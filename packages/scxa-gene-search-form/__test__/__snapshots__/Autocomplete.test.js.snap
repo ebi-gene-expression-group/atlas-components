@@ -1,116 +1,65 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Autocomplete matches snapshot 1`] = `
+exports[`Autocomplete renders correctly 1`] = `
 <div>
-  <label
-    htmlFor="geneQuery"
-  >
-    Foobar:
-  </label>
-  <div
-    className=" css-2b097c-container"
-    onKeyDown={[Function]}
-  >
+  <label>
+    Foobar
     <div
-      className=" css-15r8ym2-Control"
-      onMouseDown={[Function]}
-      onTouchEnd={[Function]}
+      class=" css-b62m3t-container"
     >
+      <span
+        class="css-1f43avz-a11yText-A11yText"
+        id="react-select-8-live-region"
+      />
+      <span
+        aria-atomic="false"
+        aria-live="polite"
+        aria-relevant="additions text"
+        class="css-1f43avz-a11yText-A11yText"
+      />
       <div
-        className=" css-g1d714-ValueContainer"
+        class=" css-15r8ym2-Control"
       >
         <div
-          className=" css-1uccc91-singleValue"
-        >
-          foo
-        </div>
-        <div
-          className="css-b8ldur-Input"
+          class=" css-319lph-ValueContainer"
         >
           <div
-            className=""
-            style={
-              Object {
-                "display": "inline-block",
-              }
-            }
+            class=" css-14el2xx-placeholder"
+            id="react-select-8-placeholder"
+          />
+          <div
+            class=" css-6j8wv5-Input"
+            data-value=""
           >
             <input
               aria-autocomplete="list"
-              autoCapitalize="none"
-              autoComplete="off"
-              autoCorrect="off"
-              disabled={false}
+              aria-describedby="react-select-8-placeholder"
+              aria-expanded="false"
+              aria-haspopup="true"
+              autocapitalize="none"
+              autocomplete="off"
+              autocorrect="off"
+              class=""
               id="gene-input"
-              onBlur={[Function]}
-              onChange={[Function]}
-              onFocus={[Function]}
-              spellCheck="false"
-              style={
-                Object {
-                  "background": 0,
-                  "border": 0,
-                  "boxSizing": "content-box",
-                  "color": "inherit",
-                  "fontSize": "inherit",
-                  "label": "input",
-                  "opacity": 1,
-                  "outline": 0,
-                  "padding": 0,
-                  "width": "1px",
-                }
-              }
-              tabIndex="0"
+              role="combobox"
+              spellcheck="false"
+              style="opacity: 1; width: 100%; grid-area: 1 / 2; min-width: 2px; border: 0px; margin: 0px; outline: 0; padding: 0px;"
+              tabindex="0"
               type="text"
               value=""
             />
-            <div
-              style={
-                Object {
-                  "height": 0,
-                  "left": 0,
-                  "overflow": "scroll",
-                  "position": "absolute",
-                  "top": 0,
-                  "visibility": "hidden",
-                  "whiteSpace": "pre",
-                }
-              }
-            >
-              
-            </div>
           </div>
         </div>
-      </div>
-      <div
-        className=" css-1hb7zxy-IndicatorsContainer"
-      >
         <div
-          aria-hidden="true"
-          className=" css-tlfecz-indicatorContainer"
-          onMouseDown={[Function]}
-          onTouchEnd={[Function]}
-        >
-          <svg
-            aria-hidden="true"
-            className="css-6q0nyr-Svg"
-            focusable="false"
-            height={20}
-            viewBox="0 0 20 20"
-            width={20}
-          >
-            <path
-              d="M14.348 14.849c-0.469 0.469-1.229 0.469-1.697 0l-2.651-3.030-2.651 3.029c-0.469 0.469-1.229 0.469-1.697 0-0.469-0.469-0.469-1.229 0-1.697l2.758-3.15-2.759-3.152c-0.469-0.469-0.469-1.228 0-1.697s1.228-0.469 1.697 0l2.652 3.031 2.651-3.031c0.469-0.469 1.228-0.469 1.697 0s0.469 1.229 0 1.697l-2.758 3.152 2.758 3.15c0.469 0.469 0.469 1.229 0 1.698z"
-            />
-          </svg>
-        </div>
+          class=" css-1hb7zxy-IndicatorsContainer"
+        />
       </div>
+      <input
+        name="geneQuery"
+        type="hidden"
+        value=""
+      />
     </div>
-    <input
-      name="geneQuery"
-      type="hidden"
-      value="{\\"term\\":\\"foo\\",\\"category\\":\\"bar\\"}"
-    />
-  </div>
+  </label>
 </div>
 `;
