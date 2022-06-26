@@ -151,7 +151,7 @@ const MarkerGeneHeatmap = (props) => {
       labels: {
         useHtml: true,
         formatter: function() {
-          return heatmapOptionsProvider[heatmapType].labelsFormatter(this.value, URI(host).segment([`experiments`, this.value]).toString())
+          return heatmapOptionsProvider[heatmapType].labelsFormatter(this.value, URI(`experiments`, host).segment(this.value).toString())
         }
       },
       endOnTick: false,
