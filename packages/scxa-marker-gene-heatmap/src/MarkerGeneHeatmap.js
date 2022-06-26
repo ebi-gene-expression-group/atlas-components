@@ -104,7 +104,7 @@ const MarkerGeneHeatmap = (props) => {
       width: 2,
       value: plotLineAxisPosition,
       zIndex: zIndex,
-      label: heatmapType !== `cellmultiexperiment` && {
+      label: heatmapType !== `multiexperimentcelltypes` && {
         text: splitCellTypeLabel.join(`<br/>`),
         align: `right`,
         textAlign: `left`,
