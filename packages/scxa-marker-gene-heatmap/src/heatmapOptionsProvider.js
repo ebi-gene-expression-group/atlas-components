@@ -17,7 +17,8 @@ const heatmapOptionsProvider = {
       }
     },
     title: cellType => `${cellType}<br>top genes`,
-    labelsFormatter: label => label,
+    // Label in this heatmap type is an experiment accession
+    labelsFormatter: (label, link) => `<a href="${link}" style="border: none; color: #148ff3">${label}</a>`,
     noData: `No high-scoring genes found for the selected cell type.`
   },
 
