@@ -110,10 +110,7 @@ const MarkerGeneHeatmap = (props) => {
       zIndex: zIndex,
       label: heatmapType !== `cellmultiexperiment` && {
         useHTML: true,
-        text:  checkIfAnnDataExperiment(splitCellTypeLabel) ?
-            `<img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/External_link_font_awesome.svg" alt="external_link_image" width="11px"/>` +
-            splitCellTypeLabel.join(`<br/>`) :
-            splitCellTypeLabel.join(`<br/>`),
+        text: splitCellTypeLabel.join(`<br/>`),
         align: `right`,
         textAlign: `left`,
         x: 15,
