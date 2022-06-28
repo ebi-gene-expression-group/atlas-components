@@ -1,3 +1,7 @@
+const checkIfAnnDataExperiment = (experiment_accession) => {
+  return new RegExp(`E-ANND-\d*`).test(experiment_accession);
+}
+
 const heatmapOptionsProvider = {
   multiexperimentcelltypes: {
     tooltip: {
@@ -17,7 +21,10 @@ const heatmapOptionsProvider = {
       }
     },
     title: cellType => `${cellType}<br>top genes`,
-    labelsFormatter: label => label,
+    labelsFormatter: label => {
+      return checkIfAnnDataExperiment(label) ?
+          `<img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/External_link_font_awesome.svg" alt="external_link_image" width="11px"/> ` + label : label
+    },
     noData: `No high-scoring genes found for the selected cell type.`
   },
 

@@ -41,10 +41,6 @@ const splitPhrase = (phrase, maxLineLength = 12) => {
   return splitPhrase
 }
 
-const checkIfAnnDataExperiment = (experiment_accession) => {
-  return new RegExp(`E-ANND-\d*`).test(experiment_accession);
-}
-
 Highcharts.SVGRenderer.prototype.symbols.download = (x, y, w, h) => [
   // Arrow stem
   `M`, x + w * 0.5, y,
@@ -156,10 +152,7 @@ const MarkerGeneHeatmap = (props) => {
       labels: {
         useHTML: true,
         formatter: function() {
-          return checkIfAnnDataExperiment(this.value) ?
-              `<img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/External_link_font_awesome.svg" alt="external_link_image" width="11px"/> ` +
-              heatmapOptionsProvider[heatmapType].labelsFormatter(this.value) :
-              heatmapOptionsProvider[heatmapType].labelsFormatter(this.value)
+          return heatmapOptionsProvider[heatmapType].labelsFormatter(this.value)
         }
       },
       endOnTick: false,
