@@ -1,13 +1,14 @@
+import URI from 'urijs'
+
 const heatmapOptionsProvider = {
   multiexperimentcelltypes: {
     tooltip: {
       // followPointer: true,
       formatter: function () {
-        if(this.point.value === null) {
+        if (this.point.value === null) {
           return `<b>Gene ID:</b> ${this.point.geneName}<br/>` +
               `<b>Expression:</b> Not expressed<br/>`
-        }
-        else {
+        } else {
           const text =
               `<b>Marker gene in experiment:</b> ${this.point.cellGroupValueWhereMarker}<br/>` +
               `<b>Gene ID:</b> ${this.point.geneName}<br/>` +
@@ -17,7 +18,10 @@ const heatmapOptionsProvider = {
       }
     },
     title: cellType => `${cellType}<br>top genes`,
-    labelsFormatter: label => label,
+    labelsFormatter:
+      (experimentAccession, host) =>
+        `<a href="${URI(`experiments`, host).segment(experimentAccession).toString()}"` +
+        `style="border: none; color: #148ff3; z-index: -1;">${experimentAccession}</a>`,
     noData: `No high-scoring genes found for the selected cell type.`
   },
 

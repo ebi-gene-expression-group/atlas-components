@@ -1,38 +1,33 @@
-const { CleanWebpackPlugin } = require(`clean-webpack-plugin`)
 const path = require(`path`)
-
-const vendorsBundleName = `vendors`
 
 module.exports = {
   entry: {
-    heatmapViewRenderModule: [`@babel/polyfill`, `./html/heatmapViewRenderModule.js`],
-    markerGeneHeatmapRenderModule: [`@babel/polyfill`, `./html/markerGeneHeatmapRenderModule.js`],
-    clustersViewDemo: [`@babel/polyfill`, `./html/ClustersViewDemo.js`]
+    heatmapViewRenderModule: `./html/heatmapViewRenderModule.js`,
+    markerGeneHeatmapRenderModule: `./html/markerGeneHeatmapRenderModule.js`,
+    clustersViewDemo: `./html/ClustersViewDemo.js`
   },
-
-  plugins: [
-    new CleanWebpackPlugin()
-  ],
-
 
   output: {
     library: `[name]`,
-    path: path.resolve(__dirname, `dist`),
     filename: `[name].bundle.js`,
-    publicPath: `/html/`,
-    devtoolNamespace: `firefox`
+    clean: true
+  },
+
+  resolve: {
+    // These aliases are helpful if you integrate other components which use React
+    alias: {
+      "react": path.resolve(`./node_modules/react`),
+      "react-dom": path.resolve(`./node_modules/react-dom`)
+    },
   },
 
   optimization: {
-    runtimeChunk: {
-      name: vendorsBundleName
-    },
     splitChunks: {
       cacheGroups: {
         commons: {
           test: /[\\/]node_modules[\\/]/,
-          name: vendorsBundleName,
-          chunks: 'all'
+          name: `vendors`,
+          chunks: `all`
         }
       }
     }
@@ -65,7 +60,11 @@ module.exports = {
 
   devServer: {
     port: 9000,
-    contentBase: path.resolve(__dirname, `html`),
-    publicPath: `/html`
+    static: `./html`,
+    devMiddleware: {
+      publicPath: `/dist`
+    }
+    // Add if developing a SPA to redirect non-matching routes known by WDS (i.e. no document in /html) to the router
+    // historyApiFallback: true
   }
 }
