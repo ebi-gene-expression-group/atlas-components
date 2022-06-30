@@ -21,7 +21,7 @@ const _makeOption = (str) => {
 }
 
 class LabelledSelect extends React.Component {
-  constructor(props) {
+  constructor (props) {
     super(props)
 
     this.state = {
@@ -31,13 +31,13 @@ class LabelledSelect extends React.Component {
     this.onChange = this._onChange.bind(this)
   }
 
-  _onChange(selectedOption) {
+  _onChange (selectedOption) {
     this.setState({ value: selectedOption.value })
     this.props.onChange(selectedOption)
   }
 
-  render() {
-    const { name, topGroup, bottomGroup, bottomGroupLabel, onChange, statusMessage } = this.props
+  render () {
+    const { name, topGroup, bottomGroup, bottomGroupLabel, statusMessage } = this.props
 
     const isDisabled = Boolean(statusMessage)
 
@@ -61,8 +61,7 @@ class LabelledSelect extends React.Component {
     const capitalisedName = name.charAt(0).toUpperCase() + name.slice(1)
 
     return (
-      <div>
-        <label htmlFor={name}>{capitalisedName}</label>
+      <label>{capitalisedName}
         <Select
           name={name}
           components={{ IndicatorSeparator: null, DropdownIndicator: ebiVfReactSelectReplacements.DropdownIndicator }}
@@ -74,7 +73,7 @@ class LabelledSelect extends React.Component {
           isDisabled={isDisabled}
           placeholder={isDisabled ? statusMessage : null}
           value={isDisabled ? null : selectedOption} />
-      </div>
+      </label>
     )
   }
 }
@@ -86,7 +85,7 @@ LabelledSelect.propTypes = {
   bottomGroupLabel: PropTypes.string,
   value: PropTypes.string,
   onChange: PropTypes.func.isRequired,
-  statusMessage: PropTypes.string,
+  statusMessage: PropTypes.string
 }
 
 LabelledSelect.defaultProps = {

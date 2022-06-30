@@ -1,96 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Single Cell Expression Atlas Gene Search Form demo</title>
-    <link rel="stylesheet" href="https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/css/ebi-global.css" type="text/css" media="all" />
-    <link rel="stylesheet" href="https://ebi.emblstatic.net/web_guidelines/EBI-Icon-fonts/v1.2/fonts.css" type="text/css" media="all" />
-    <link rel="stylesheet" href="https://www.ebi.ac.uk/gxa/resources/css/foundation/atlas.css" type="text/css" media="all">
+  <title>Single Cell Expression Atlas Gene Search Form demo</title>
+  <link rel="stylesheet" href="https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/css/ebi-global.css"
+        type="text/css" media="all"/>
+  <link rel="stylesheet" href="https://ebi.emblstatic.net/web_guidelines/EBI-Icon-fonts/v1.2/fonts.css" type="text/css"
+        media="all"/>
+  <link rel="stylesheet" href="https://www.ebi.ac.uk/gxa/resources/css/foundation/atlas.css" type="text/css"
+        media="all">
 
-    <style type="text/css">
-      #select input,
-      #search input,
-      #search-callback input,
-      #no_species_select input,
-      #no_species_select_human input,
-      #no_species_select_mouse input  {
-        height: unset;
-        box-shadow: none;
-        margin: 0;
-      }
-    </style>
+  <style type="text/css">
+    #select input,
+    #search input,
+    #search-callback input,
+    #no_species_select input,
+    #no_species_select_human input,
+    #no_species_select_mouse input {
+      height: unset;
+      box-shadow: none;
+      margin: 0;
+    }
+  </style>
 </head>
 
 <body>
-  <h1 class="text-center">Single Cell Expression Atlas front page gene search</h1>
+<h1 class="text-center">Single Cell Expression Atlas front page gene search</h1>
 
-  <div class="row expanded column">
-    <h2 class="margin-top-xlarge">Full component</h2>
-    <ul class="tabs" data-tabs id="search-tabs">
-      <li class="tabs-title is-active"><a href="#search-atlas" aria-selected="true">Search</a></li>
-    </ul>
+<div class="row expanded column">
+  <h2 class="margin-top-xlarge">Full component</h2>
+  <ul class="tabs" data-tabs id="search-tabs-1">
+    <li class="tabs-title is-active"><a href="#search-atlas-1" aria-selected="true">Search</a></li>
+  </ul>
 
-    <div class="tabs-content" data-tabs-content="search-tabs">
-        <div class="tabs-panel is-active " id="search-atlas" style="background-color: #e6e6e6;">
-          <div id="search"></div>
-        </div>
+  <div class="tabs-content" data-tabs-content="search-tabs-1">
+    <div class="tabs-panel is-active " id="search-atlas-1" style="background-color: #e6e6e6;">
+      <div id="search"></div>
     </div>
   </div>
+</div>
 
 <hr>
 
-  <div class="row expanded column">
-    <h2 class="margin-top-xlarge">Full component with callback (open the console for full effect)</h2>
-    <ul class="tabs" data-tabs id="search-tabs">
-      <li class="tabs-title is-active"><a href="#search-atlas" aria-selected="true">Search</a></li>
-    </ul>
+<div class="row expanded column">
+  <h2 class="margin-top-xlarge">Full component with callback (open the console for full effect)</h2>
+  <ul class="tabs" data-tabs id="search-tabs-2">
+    <li class="tabs-title is-active"><a href="#search-atlas-2" aria-selected="true">Search</a></li>
+  </ul>
 
-    <div class="tabs-content" data-tabs-content="search-tabs">
-        <div class="tabs-panel is-active " id="search-atlas" style="background-color: #e6e6e6;">
-          <div id="search-callback"></div>
-        </div>
+  <div class="tabs-content" data-tabs-content="search-tabs-2">
+    <div class="tabs-panel is-active " id="search-atlas-2" style="background-color: #e6e6e6;">
+      <div id="search-callback"></div>
     </div>
   </div>
+</div>
 
-  <div class="row expanded column">
-      <h2 class="margin-top-xlarge">Select component</h2>
+<div class="row expanded column">
+  <h2 class="margin-top-xlarge">Select component</h2>
 
-      <h3>Normal</h3>
-      <div class="row expanded">
-        <div id="select"></div>
-      </div>
-
-      <h3>With a species pre-selected (Greebybobe)</h3>
-      <div class="row expanded">
-        <div id="select-with-default-value"></div>
-      </div>
-
-      <h3>Error signaling</h3>
-      <div class="row expanded">
-        <div id="select-error"></div>
-      </div>
+  <h3>Normal</h3>
+  <div class="row expanded">
+    <div id="select"></div>
   </div>
 
-  <div class="row expanded column">
-    <h2>Component without species selection</h1>
-
-    <div class="row column">
-      <h3>All species available in SCEA</h2>
-      <h3><code>defaultSpecies: undefined</code></h3>
-      <div id="no_species_select"></div>
-    </div>
-
-    <div class="row column">
-      <h3>Human</h2>
-      <h3><code>defaultSpecies: 'Homo sapiens'</code></h3>
-      <div id="no_species_select_human"></div>
-    </div>
-
-    <div class="row column">
-      <h3>Mouse, with initial value</h2>
-      <h3><code>defaultSpecies: 'Mus musculus'</code></h3>
-      <div id="no_species_select_mouse"></div>
-    </div>
+  <h3>With a species pre-selected (Greebybobe)</h3>
+  <div class="row expanded">
+    <div id="select-with-default-value"></div>
   </div>
+
+  <h3>Error signaling</h3>
+  <div class="row expanded">
+    <div id="select-error"></div>
+  </div>
+</div>
+
+<div class="row expanded column">
+  <h2>Component without species selection</h2>
+
+  <div class="row column">
+    <h3>All species available in SCEA</h3>
+    <h3><code>defaultSpecies: undefined</code></h3>
+    <div id="no_species_select"></div>
+  </div>
+
+  <div class="row column">
+    <h3>Human</h3>
+    <h3><code>defaultSpecies: 'Homo sapiens'</code></h3>
+    <div id="no_species_select_human"></div>
+  </div>
+
+  <div class="row column">
+    <h3>Mouse, with initial value</h3>
+    <h3><code>defaultSpecies: 'Mus musculus'</code></h3>
+    <div id="no_species_select_mouse"></div>
+  </div>
+</div>
 
 </body>
 
@@ -110,33 +113,7 @@
 
   function getRandomInt(max) {
     return Math.floor(Math.random() * Math.floor(max));
-  };
-
-  geneSearchFormDemo.renderLabelledSelect({
-    name: 'Species',
-    topGroup: allSpecies.filter(function() {return Math.random() > 0.5}),
-    bottomGroup: allSpecies,
-    bottomGroupLabel: `All species`,
-    onChange: function() {}
-  }, 'select');
-
-  geneSearchFormDemo.renderLabelledSelect({
-    name: 'Species',
-    topGroup: allSpecies.filter(function() {return Math.random() > 0.5}),
-    bottomGroup: allSpecies,
-    bottomGroupLabel: `All species`,
-    value: `Greebybobe`,
-    onChange: function() {}
-  }, 'select-with-default-value');
-
-  geneSearchFormDemo.renderLabelledSelect({
-    name: 'Species',
-    topGroup: allSpecies.filter(function() {return Math.random() > 0.5}),
-    bottomGroup: allSpecies,
-    bottomGroupLabel: `All species`,
-    statusMessage:'An error occurred somewhere along the InterWebz pipes!',
-    onChange: function() {}
-  }, 'select-error');
+  }
 
   geneSearchFormDemo.render({
     host: 'http://localhost:8080/gxa/sc/',
@@ -175,6 +152,7 @@
   geneSearchFormDemo.render({
     host: 'http://localhost:8080/gxa/sc/',
     resource: 'json/suggestions/species',
+    autocompleteLabel: '',
     wrapperClassName: 'row expanded',
     actionEndpoint: 'search',
     onSubmit: function(event, query, species) {event.preventDefault() ; console.log(event); console.log(query); console.log(species);},
@@ -183,6 +161,32 @@
     enableSpeciesSelect: true,
     speciesSelectClassName: 'small-4 columns'
   }, 'search-callback');
+
+  geneSearchFormDemo.renderLabelledSelect({
+    name: 'Species',
+    topGroup: allSpecies.filter(function() {return Math.random() > 0.5}),
+    bottomGroup: allSpecies,
+    bottomGroupLabel: `All species`,
+    onChange: function() {}
+  }, 'select');
+
+  geneSearchFormDemo.renderLabelledSelect({
+    name: 'Species',
+    topGroup: allSpecies.filter(function() {return Math.random() > 0.5}),
+    bottomGroup: allSpecies,
+    bottomGroupLabel: `All species`,
+    value: `Greebybobe`,
+    onChange: function() {}
+  }, 'select-with-default-value');
+
+  geneSearchFormDemo.renderLabelledSelect({
+    name: 'Species',
+    topGroup: allSpecies.filter(function() {return Math.random() > 0.5}),
+    bottomGroup: allSpecies,
+    bottomGroupLabel: `All species`,
+    statusMessage:'An error occurred somewhere along the InterWebz pipes!',
+    onChange: function() {}
+  }, 'select-error');
 
   geneSearchFormDemo.render({
     host: 'http://localhost:8080/gxa/sc/',
