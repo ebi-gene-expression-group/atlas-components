@@ -1,0 +1,469 @@
+[
+  {
+    "name": "pancreas",
+    "id": "pancreas",
+    "parent": "",
+    "value": 1,
+    "experimentAccessions": [
+      "E-HCAD-31",
+      "E-MTAB-5061",
+      "E-GEOD-83139",
+      "E-GEOD-81608",
+      "E-GEOD-81547",
+      "E-ENAD-27",
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "Homo sapiens",
+    "id": "Homo sapiens",
+    "parent": "pancreas",
+    "value": 1,
+    "experimentAccessions": [
+      "E-HCAD-31",
+      "E-MTAB-5061",
+      "E-GEOD-83139",
+      "E-GEOD-81608",
+      "E-GEOD-81547",
+      "E-ENAD-27"
+    ]
+  },
+  {
+    "name": "islet of Langerhans",
+    "id": "Homo sapiens#islet of Langerhans",
+    "parent": "Homo sapiens",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-81608",
+      "E-GEOD-81547",
+      "E-ENAD-27"
+    ]
+  },
+  {
+    "name": "acinar cell",
+    "id": "Homo sapiens#islet of Langerhans#acinar cell",
+    "parent": "Homo sapiens#islet of Langerhans",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-81547",
+      "E-ENAD-27"
+    ]
+  },
+  {
+    "name": "mesenchymal cell",
+    "id": "Homo sapiens#islet of Langerhans#mesenchymal cell",
+    "parent": "Homo sapiens#islet of Langerhans",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-81547"
+    ]
+  },
+  {
+    "name": "pancreatic A cell",
+    "id": "Homo sapiens#islet of Langerhans#pancreatic A cell",
+    "parent": "Homo sapiens#islet of Langerhans",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-81608",
+      "E-GEOD-81547",
+      "E-ENAD-27"
+    ]
+  },
+  {
+    "name": "pancreatic D cell",
+    "id": "Homo sapiens#islet of Langerhans#pancreatic D cell",
+    "parent": "Homo sapiens#islet of Langerhans",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-81608",
+      "E-GEOD-81547",
+      "E-ENAD-27"
+    ]
+  },
+  {
+    "name": "pancreatic ductal cell",
+    "id": "Homo sapiens#islet of Langerhans#pancreatic ductal cell",
+    "parent": "Homo sapiens#islet of Langerhans",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-81547",
+      "E-ENAD-27"
+    ]
+  },
+  {
+    "name": "pancreatic PP cell",
+    "id": "Homo sapiens#islet of Langerhans#pancreatic PP cell",
+    "parent": "Homo sapiens#islet of Langerhans",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-81608",
+      "E-ENAD-27"
+    ]
+  },
+  {
+    "name": "pancreatic stellate cell",
+    "id": "Homo sapiens#islet of Langerhans#pancreatic stellate cell",
+    "parent": "Homo sapiens#islet of Langerhans",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-27"
+    ]
+  },
+  {
+    "name": "type B pancreatic cell",
+    "id": "Homo sapiens#islet of Langerhans#type B pancreatic cell",
+    "parent": "Homo sapiens#islet of Langerhans",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-81608",
+      "E-ENAD-27",
+      "E-GEOD-81547"
+    ]
+  },
+  {
+    "name": "pancreas",
+    "id": "Homo sapiens#pancreas",
+    "parent": "Homo sapiens",
+    "value": 1,
+    "experimentAccessions": [
+      "E-HCAD-31",
+      "E-MTAB-5061",
+      "E-GEOD-83139"
+    ]
+  },
+  {
+    "name": "acinar cell",
+    "id": "Homo sapiens#pancreas#acinar cell",
+    "parent": "Homo sapiens#pancreas",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-5061",
+      "E-GEOD-83139"
+    ]
+  },
+  {
+    "name": "co-expression cell",
+    "id": "Homo sapiens#pancreas#co-expression cell",
+    "parent": "Homo sapiens#pancreas",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-5061"
+    ]
+  },
+  {
+    "name": "endothelial cell",
+    "id": "Homo sapiens#pancreas#endothelial cell",
+    "parent": "Homo sapiens#pancreas",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-5061"
+    ]
+  },
+  {
+    "name": "islet of Langerhans",
+    "id": "Homo sapiens#pancreas#islet of Langerhans",
+    "parent": "Homo sapiens#pancreas",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-5061",
+      "E-GEOD-83139"
+    ]
+  },
+  {
+    "name": "mast cell",
+    "id": "Homo sapiens#pancreas#mast cell",
+    "parent": "Homo sapiens#pancreas",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-5061"
+    ]
+  },
+  {
+    "name": "mesenchymal cell",
+    "id": "Homo sapiens#pancreas#mesenchymal cell",
+    "parent": "Homo sapiens#pancreas",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-83139"
+    ]
+  },
+  {
+    "name": "pancreatic A cell",
+    "id": "Homo sapiens#pancreas#pancreatic A cell",
+    "parent": "Homo sapiens#pancreas",
+    "value": 1,
+    "experimentAccessions": [
+      "E-HCAD-31",
+      "E-MTAB-5061",
+      "E-GEOD-83139"
+    ]
+  },
+  {
+    "name": "pancreatic acinar cell",
+    "id": "Homo sapiens#pancreas#pancreatic acinar cell",
+    "parent": "Homo sapiens#pancreas",
+    "value": 1,
+    "experimentAccessions": [
+      "E-HCAD-31"
+    ]
+  },
+  {
+    "name": "pancreatic B cell",
+    "id": "Homo sapiens#pancreas#pancreatic B cell",
+    "parent": "Homo sapiens#pancreas",
+    "value": 1,
+    "experimentAccessions": [
+      "E-HCAD-31"
+    ]
+  },
+  {
+    "name": "pancreatic D cell",
+    "id": "Homo sapiens#pancreas#pancreatic D cell",
+    "parent": "Homo sapiens#pancreas",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-5061",
+      "E-GEOD-83139"
+    ]
+  },
+  {
+    "name": "pancreatic ductal cell",
+    "id": "Homo sapiens#pancreas#pancreatic ductal cell",
+    "parent": "Homo sapiens#pancreas",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-5061",
+      "E-GEOD-83139"
+    ]
+  },
+  {
+    "name": "pancreatic endocrine cell",
+    "id": "Homo sapiens#pancreas#pancreatic endocrine cell",
+    "parent": "Homo sapiens#pancreas",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-5061"
+    ]
+  },
+  {
+    "name": "pancreatic epsilon cell",
+    "id": "Homo sapiens#pancreas#pancreatic epsilon cell",
+    "parent": "Homo sapiens#pancreas",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-5061",
+      "E-HCAD-31"
+    ]
+  },
+  {
+    "name": "pancreatic PP cell",
+    "id": "Homo sapiens#pancreas#pancreatic PP cell",
+    "parent": "Homo sapiens#pancreas",
+    "value": 1,
+    "experimentAccessions": [
+      "E-HCAD-31",
+      "E-MTAB-5061",
+      "E-GEOD-83139"
+    ]
+  },
+  {
+    "name": "pancreatic stellate cell",
+    "id": "Homo sapiens#pancreas#pancreatic stellate cell",
+    "parent": "Homo sapiens#pancreas",
+    "value": 1,
+    "experimentAccessions": [
+      "E-HCAD-31",
+      "E-MTAB-5061"
+    ]
+  },
+  {
+    "name": "professional antigen presenting cell",
+    "id": "Homo sapiens#pancreas#professional antigen presenting cell",
+    "parent": "Homo sapiens#pancreas",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-5061"
+    ]
+  },
+  {
+    "name": "type B pancreatic cell",
+    "id": "Homo sapiens#pancreas#type B pancreatic cell",
+    "parent": "Homo sapiens#pancreas",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-5061",
+      "E-GEOD-83139"
+    ]
+  },
+  {
+    "name": "unclassified cell",
+    "id": "Homo sapiens#pancreas#unclassified cell",
+    "parent": "Homo sapiens#pancreas",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-5061"
+    ]
+  },
+  {
+    "name": "Mus musculus",
+    "id": "Mus musculus",
+    "parent": "pancreas",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "endocrine pancreas",
+    "id": "Mus musculus#endocrine pancreas",
+    "parent": "Mus musculus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "endothelial cell",
+    "id": "Mus musculus#endocrine pancreas#endothelial cell",
+    "parent": "Mus musculus#endocrine pancreas",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "leukocyte",
+    "id": "Mus musculus#endocrine pancreas#leukocyte",
+    "parent": "Mus musculus#endocrine pancreas",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "pancreatic A cell",
+    "id": "Mus musculus#endocrine pancreas#pancreatic A cell",
+    "parent": "Mus musculus#endocrine pancreas",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "pancreatic acinar cell",
+    "id": "Mus musculus#endocrine pancreas#pancreatic acinar cell",
+    "parent": "Mus musculus#endocrine pancreas",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "pancreatic D cell",
+    "id": "Mus musculus#endocrine pancreas#pancreatic D cell",
+    "parent": "Mus musculus#endocrine pancreas",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "pancreatic ductal cell",
+    "id": "Mus musculus#endocrine pancreas#pancreatic ductal cell",
+    "parent": "Mus musculus#endocrine pancreas",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "pancreatic PP cell",
+    "id": "Mus musculus#endocrine pancreas#pancreatic PP cell",
+    "parent": "Mus musculus#endocrine pancreas",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "pancreatic stellate cell",
+    "id": "Mus musculus#endocrine pancreas#pancreatic stellate cell",
+    "parent": "Mus musculus#endocrine pancreas",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "type B pancreatic cell",
+    "id": "Mus musculus#endocrine pancreas#type B pancreatic cell",
+    "parent": "Mus musculus#endocrine pancreas",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "exocrine pancreas",
+    "id": "Mus musculus#exocrine pancreas",
+    "parent": "Mus musculus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "pancreatic A cell",
+    "id": "Mus musculus#exocrine pancreas#pancreatic A cell",
+    "parent": "Mus musculus#exocrine pancreas",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "pancreatic D cell",
+    "id": "Mus musculus#exocrine pancreas#pancreatic D cell",
+    "parent": "Mus musculus#exocrine pancreas",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "pancreatic ductal cell",
+    "id": "Mus musculus#exocrine pancreas#pancreatic ductal cell",
+    "parent": "Mus musculus#exocrine pancreas",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "pancreatic PP cell",
+    "id": "Mus musculus#exocrine pancreas#pancreatic PP cell",
+    "parent": "Mus musculus#exocrine pancreas",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "pancreatic stellate cell",
+    "id": "Mus musculus#exocrine pancreas#pancreatic stellate cell",
+    "parent": "Mus musculus#exocrine pancreas",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "type B pancreatic cell",
+    "id": "Mus musculus#exocrine pancreas#type B pancreatic cell",
+    "parent": "Mus musculus#exocrine pancreas",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  }
+]

@@ -2,7 +2,7 @@ const path = require(`path`)
 
 module.exports = {
   entry: {
-    myPackageDemo: [`./html/render.js`],
+    cellTypeWheelDemo: [`./html/render.js`],
   },
 
   output: {
@@ -13,11 +13,10 @@ module.exports = {
   },
 
   resolve: {
-    // These aliases are helpful if you integrate other components which use React or styled-components
+    // These aliases are helpful if you integrate other components which use React
     alias: {
       "react": path.resolve(`./node_modules/react`),
-      "react-dom": path.resolve(`./node_modules/react-dom`),
-      "styled-components": path.resolve(`./node_modules/styled-components`)
+      "react-dom": path.resolve(`./node_modules/react-dom`)
     },
   },
 

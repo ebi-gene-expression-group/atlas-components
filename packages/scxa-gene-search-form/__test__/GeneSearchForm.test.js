@@ -1,21 +1,26 @@
-import React from 'react'
-import renderer from 'react-test-renderer'
-import { shallow } from 'enzyme'
+/**
+ * @jest-environment jsdom
+ */
 
-import '@babel/polyfill'
+import React from 'react'
+
+import { render, screen } from '@testing-library/react'
+import userEvent from '@testing-library/user-event'
+
+import { server } from './fetch-mocks/server'
+
 import GeneSearchForm from '../src/GeneSearchForm'
-import Autocomplete from '../src/Autocomplete'
-import LabelledSelect from '../src/LabelledSelect'
-import SearchExamples from '../src/SearchExamples'
 
 import * as species from './utils/species'
 import searchExamples from './utils/searchExamples'
 
 const props = {
-  host: `foo/`,
-  actionEndpoint: `bar`,
+  host: `gxa/sc/`,
+  actionEndpoint: `search`,
   suggesterEndpoint: `suggest`,
   enableSpeciesSelect: true,
+  allSpecies: species.getAll(),
+  topSpecies: species.getRandomSet(),
   searchExamples: searchExamples
 }
 
@@ -38,108 +43,143 @@ const generateEmptyString = () => {
   return blankString
 }
 
+beforeAll(() => {
+  // Enable the mocking in tests
+  server.listen()
+})
+
+afterEach(() => {
+  // Reset any runtime handlers tests may use
+  server.resetHandlers()
+})
+
+afterAll(() => {
+  // Clean up once the tests are done
+  server.close()
+})
+
 describe(`GeneSearchForm`, () => {
   test(`search button is initially disabled`, () => {
-    const wrapper = shallow(<GeneSearchForm {...props}/>)
-    expect(wrapper.find(`button`).at(0).props()).toHaveProperty(`disabled`, true)
+    render(<GeneSearchForm {...props}/>)
+    const button = screen.getByRole(`button`)
+    expect(button).toBeDisabled()
   })
 
   test(`search button with invalid default value (i.e. empty term) is disabled`, () => {
     const emptyString = generateEmptyString()
     expect(emptyString).toMatch(/\s*/)
 
-    const wrapper = shallow(<GeneSearchForm {...props} defaultValue={{term: emptyString, category: `q`}}/>)
-    expect(wrapper.find(`button`).at(0).props()).toHaveProperty(`disabled`, true)
+    render(
+      <GeneSearchForm
+        {...props}
+        defaultValue={{ term: emptyString, category: `q` }}/>)
+    const button = screen.getByRole(`button`)
+    expect(button).toBeDisabled()
   })
 
   test(`search button with valid default value is enabled`, () => {
-    const wrapper = shallow(<GeneSearchForm {...props} defaultValue={defaultValue}/>)
-    expect(wrapper.find(`button`).at(0).props()).toHaveProperty(`disabled`, false)
+    render(
+      <GeneSearchForm
+        {...props}
+        defaultValue={defaultValue}/>)
+    const button = screen.getByRole(`button`)
+    expect(button).toBeEnabled()
   })
 
-  test(`defaults to category 'q' (after 'query') if none is given in the default value`, () => {
-    const defaultValue = {term: `foo`}
-    const wrapper = shallow(<GeneSearchForm {...props} defaultValue={defaultValue}/>)
-    expect(wrapper.state(`query`)).toEqual({...defaultValue, category: `q`})
+  test(`runs onSubmit when the Search button is clicked and the query is passed as arg`, async () => {
+    const user = userEvent.setup()
+    const onSubmitMock = jest.fn()
+    const searchTerm = `some search term`
+
+    render(
+      <GeneSearchForm
+        {...props}
+        onSubmit={onSubmitMock}
+      />)
+
+    const autocomplete = screen.getAllByRole(`combobox`)[0]
+    autocomplete.focus()
+    // Pressing Enter bypasses the suggestions and sets the value of the input to the typed text as-is
+    await user.keyboard(`${searchTerm}[Enter]`)
+
+    const button = screen.getByRole(`button`)
+    await user.click(button)
+
+    // onSubmitMock.mock.calls[0][0] is the event, passed as first argument to onSubmit
+    expect(onSubmitMock.mock.calls[0][1]).toEqual({ term: searchTerm, category: `q` })
   })
 
-  test(`defaults to category 'q' (after 'query') if an empty category is passed in the default value`, () => {
+  // TODO Rewrite this test modifying handlers.js and verifying you get a filtered list of suggestions
+  test(`runs onSubmit when the Search button is clicked and the selected species is passed as arg`, async () => {
+    const user = userEvent.setup()
+    const onSubmitMock = jest.fn()
+    const searchTerm = `some search term`
+    const selectedSpecies = species.getRandom()
+
+    render(
+      <GeneSearchForm
+        {...props}
+        onSubmit={onSubmitMock}
+      />)
+
+    const autocomplete = screen.getAllByRole(`combobox`)[0]
+    autocomplete.focus()
+    // Pressing Enter bypasses the suggestions and sets the value of the input to the typed text as-is
+    await user.keyboard(`${searchTerm}[Enter]`)
+
+    const speciesSelect = screen.getAllByRole(`combobox`)[1]
+    await user.click(speciesSelect)
+    await user.click(screen.getAllByText(selectedSpecies)[0])
+
+    const button = screen.getByRole(`button`)
+    await user.click(button)
+
+    console.log(onSubmitMock.mock.calls)
+    // onSubmitMock.mock.calls[0][0] is the event, passed as first argument to onSubmit
+    expect(onSubmitMock.mock.calls[0][2]).toEqual(selectedSpecies)
+  })
+
+  test(`defaults to category 'q' (after 'query') if the default value doesn’t have the category field`, async () => {
+    const user = userEvent.setup()
+    const onSubmitMock = jest.fn()
+
+    const defaultValue = { term: `foo` }
+    render(
+      <GeneSearchForm
+        {...props}
+        defaultValue={defaultValue}
+        onSubmit={onSubmitMock}
+      />)
+    const button = screen.getByRole(`button`)
+    await user.click(button)
+
+    // onSubmitMock.mock.calls[0][0] is the event, passed as first argument to onSubmit
+    expect(onSubmitMock.mock.calls[0][1]).toEqual({ term: defaultValue.term, category: `q` })
+  })
+
+  test(`defaults to category 'q' (after 'query') if the default value has an empty category`, async () => {
+    const user = userEvent.setup()
+    const onSubmitMock = jest.fn()
+
     const emptyString = generateEmptyString()
     expect(emptyString).toMatch(/\s*/)
+    const defaultValue = { term: `foo`, category: emptyString }
+    render(
+      <GeneSearchForm
+        {...props}
+        defaultValue={defaultValue}
+        onSubmit={onSubmitMock}
+      />)
+    const button = screen.getByRole(`button`)
+    await user.click(button)
 
-    const defaultValue = {term: `foo`, category: emptyString}
-    const wrapper = shallow(<GeneSearchForm {...props} defaultValue={defaultValue}/>)
-    expect(wrapper.state(`query`)).toEqual({...defaultValue, category: `q`})
+    // onSubmitMock.mock.calls[0][0] is the event, passed as first argument to onSubmit
+    expect(onSubmitMock.mock.calls[0][1]).toEqual({ term: defaultValue.term, category: `q` })
   })
 
-  test(`a change in species updates the state`, () => {
-    const speciesToSelect = species.getRandom()
-    const wrapper = shallow(<GeneSearchForm {...props} defaultValue={defaultValue}/>)
-    wrapper.find(LabelledSelect).simulate(`change`, {label: speciesToSelect, value: speciesToSelect})
-    expect(wrapper.state(`selectedSpecies`)).toEqual(speciesToSelect)
-  })
-
-  test(`a change in the gene query search box updates the state`, () => {
-    const optionValueToSelect = {
-      term: `foo`,
-      category: `bar`
-    }
-    const wrapper = shallow(<GeneSearchForm {...props} defaultValue={defaultValue}/>)
-
-    // Select an element from the suggestions
-    wrapper.find(Autocomplete)
-      .simulate(
-        `change`,
-        {
-          label: `foo`,
-          value: JSON.stringify(optionValueToSelect)
-        })
-    expect(wrapper.state(`query`)).toEqual(optionValueToSelect)
-
-    // Clear the search term
-    wrapper.find(Autocomplete)
-      .simulate(`change`, null)
-    expect(wrapper.state(`query`)).toEqual({})
-    expect(wrapper.find(`button`).at(0).props()).toHaveProperty(`disabled`, true)
-  })
-
-  test(`if a function is passed via onSubmit, it is run when the Search button is clicked and the query is passed as args`, () => {
-    const onSubmitMock = jest.fn()
-    const wrapper = shallow(<GeneSearchForm {...props} onSubmit={onSubmitMock} />)
-
-    const optionValueToSelect = {
-      term: `foo`,
-      category: `bar`
-    }
-    wrapper.find(Autocomplete)
-      .simulate(
-        `change`,
-        {
-          label: `foo`,
-          value: JSON.stringify(optionValueToSelect)
-        })
-
-    const speciesToSelect = species.getRandom()
-    wrapper.find(LabelledSelect).simulate(`change`, {label: speciesToSelect, value: speciesToSelect})
-
-    const event = {
-      target: `some-DOM-node`
-    }
-    wrapper.find(`button`).at(0).simulate(`click`, event)
-
-    expect(onSubmitMock.mock.calls).toHaveLength(1)
-    expect(onSubmitMock.mock.calls[0][0]).toEqual(event)
-    expect(onSubmitMock.mock.calls[0][1]).toEqual(optionValueToSelect)
-    expect(onSubmitMock.mock.calls[0][2]).toEqual(speciesToSelect)
-  })
-
-  test(`can optionally display search examples`, () => {
-    expect(shallow(<GeneSearchForm {...props} />).find(SearchExamples)).toHaveLength(1)
-    expect(shallow(<GeneSearchForm {...props} searchExamples={undefined} />).find(SearchExamples)).toHaveLength(0)
-  })
-
-  test(`matches snapshot`, () => {
-    const tree = renderer.create(<GeneSearchForm {...props}/>).toJSON()
+  test(`renders correctly`, () => {
+    // The randomised set in topSpecies doesn’t affect the snapshot because the drop-down is initially closed
+    const tree = render(<GeneSearchForm {...props}/>)
     expect(tree).toMatchSnapshot()
   })
 })

@@ -1,234 +1,452 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`GeneSearchForm matches snapshot 1`] = `
-<form
-  action="foo/bar"
-  method="post"
->
-  <div
-    className=""
-  >
-    <div
-      className=""
-    >
-      <div>
-        <label
-          htmlFor="geneQuery"
-        >
-          Gene ID or gene symbol
-        </label>
+exports[`GeneSearchForm renders correctly 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <form
+        action="gxa/sc/search"
+        method="post"
+      >
         <div
-          className=" css-2b097c-container"
-          onKeyDown={[Function]}
+          class=""
         >
           <div
-            className=" css-15r8ym2-Control"
-            onMouseDown={[Function]}
-            onTouchEnd={[Function]}
+            class=""
           >
-            <div
-              className=" css-g1d714-ValueContainer"
-            >
+            <label>
+              Gene ID or gene symbol
               <div
-                className=" css-1wa3eu0-placeholder"
+                class=" css-b62m3t-container"
               >
-                
-              </div>
-              <div
-                className="css-b8ldur-Input"
-              >
+                <span
+                  class="css-1f43avz-a11yText-A11yText"
+                  id="react-select-16-live-region"
+                />
+                <span
+                  aria-atomic="false"
+                  aria-live="polite"
+                  aria-relevant="additions text"
+                  class="css-1f43avz-a11yText-A11yText"
+                />
                 <div
-                  className=""
-                  style={
-                    Object {
-                      "display": "inline-block",
-                    }
-                  }
+                  class=" css-15r8ym2-Control"
                 >
-                  <input
-                    aria-autocomplete="list"
-                    autoCapitalize="none"
-                    autoComplete="off"
-                    autoCorrect="off"
-                    disabled={false}
-                    id="gene-input"
-                    onBlur={[Function]}
-                    onChange={[Function]}
-                    onFocus={[Function]}
-                    spellCheck="false"
-                    style={
-                      Object {
-                        "background": 0,
-                        "border": 0,
-                        "boxSizing": "content-box",
-                        "color": "inherit",
-                        "fontSize": "inherit",
-                        "label": "input",
-                        "opacity": 1,
-                        "outline": 0,
-                        "padding": 0,
-                        "width": "1px",
-                      }
-                    }
-                    tabIndex="0"
-                    type="text"
-                    value=""
-                  />
                   <div
-                    style={
-                      Object {
-                        "height": 0,
-                        "left": 0,
-                        "overflow": "scroll",
-                        "position": "absolute",
-                        "top": 0,
-                        "visibility": "hidden",
-                        "whiteSpace": "pre",
-                      }
-                    }
+                    class=" css-319lph-ValueContainer"
                   >
-                    
+                    <div
+                      class=" css-14el2xx-placeholder"
+                      id="react-select-16-placeholder"
+                    />
+                    <div
+                      class=" css-6j8wv5-Input"
+                      data-value=""
+                    >
+                      <input
+                        aria-autocomplete="list"
+                        aria-describedby="react-select-16-placeholder"
+                        aria-expanded="false"
+                        aria-haspopup="true"
+                        autocapitalize="none"
+                        autocomplete="off"
+                        autocorrect="off"
+                        class=""
+                        id="gene-input"
+                        role="combobox"
+                        spellcheck="false"
+                        style="opacity: 1; width: 100%; grid-area: 1 / 2; min-width: 2px; border: 0px; margin: 0px; outline: 0; padding: 0px;"
+                        tabindex="0"
+                        type="text"
+                        value=""
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class=" css-1hb7zxy-IndicatorsContainer"
+                  />
+                </div>
+                <input
+                  name="geneQuery"
+                  type="hidden"
+                  value=""
+                />
+              </div>
+            </label>
+          </div>
+          <div
+            class=""
+          >
+            <label>
+              Species
+              <div
+                class=" css-b62m3t-container"
+              >
+                <span
+                  class="css-1f43avz-a11yText-A11yText"
+                  id="react-select-17-live-region"
+                />
+                <span
+                  aria-atomic="false"
+                  aria-live="polite"
+                  aria-relevant="additions text"
+                  class="css-1f43avz-a11yText-A11yText"
+                />
+                <div
+                  class=" css-15r8ym2-Control"
+                >
+                  <div
+                    class=" css-319lph-ValueContainer"
+                  >
+                    <div
+                      class=" css-qc6sy-singleValue"
+                    >
+                      Any
+                    </div>
+                    <input
+                      aria-autocomplete="list"
+                      aria-expanded="false"
+                      aria-haspopup="true"
+                      aria-readonly="true"
+                      class="css-mohuvp-dummyInput-DummyInput"
+                      id="species-input"
+                      inputmode="none"
+                      role="combobox"
+                      tabindex="0"
+                      value=""
+                    />
+                  </div>
+                  <div
+                    class=" css-1hb7zxy-IndicatorsContainer"
+                  >
+                    <span
+                      class="sc-bczRLJ dDZqze"
+                    />
                   </div>
                 </div>
+                <input
+                  name="species"
+                  type="hidden"
+                  value=""
+                />
               </div>
-            </div>
-            <div
-              className=" css-1hb7zxy-IndicatorsContainer"
-            />
+            </label>
           </div>
-          <input
-            name="geneQuery"
-            type="hidden"
-            value=""
-          />
+          <div
+            class="small-12 columns"
+          >
+            <p
+              style="font-size: smaller;"
+            >
+              Examples:
+              <span>
+                 
+                <a
+                  href="http://rickandmorty.wikia.com/wiki/Special:Search?query=Rick+Sanchez"
+                >
+                  Rick Sanchez
+                </a>
+                , 
+              </span>
+              <span>
+                <a
+                  href="http://rickandmorty.wikia.com/wiki/Special:Search?query=Unity"
+                >
+                  Unity
+                </a>
+                , 
+              </span>
+              <span>
+                <a
+                  href="http://rickandmorty.wikia.com/wiki/Special:Search?query=Galactic+Federation"
+                >
+                  Galactic Federation
+                </a>
+                , 
+              </span>
+              <span>
+                <a
+                  href="http://rickandmorty.wikia.com/wiki/Special:Search?query=Blemflarck"
+                >
+                  Blemflarck
+                </a>
+                , 
+              </span>
+              <span>
+                <a
+                  href="http://rickandmorty.wikia.com/wiki/Special:Search?query=anatomy"
+                >
+                  anatomy
+                </a>
+              </span>
+            </p>
+          </div>
         </div>
-      </div>
-    </div>
-    <div
-      className=""
-    >
-      <div>
-        <label
-          htmlFor="species"
-        >
-          Species
-        </label>
         <div
-          className=" css-2b097c-container"
-          onKeyDown={[Function]}
+          class=""
         >
           <div
-            className=" css-15r8ym2-Control"
-            onMouseDown={[Function]}
-            onTouchEnd={[Function]}
+            class="small-12 columns"
           >
-            <div
-              className=" css-g1d714-ValueContainer"
+            <button
+              class="button"
+              disabled=""
+              type="Submit"
             >
+              Search
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </body>,
+  "container": <div>
+    <form
+      action="gxa/sc/search"
+      method="post"
+    >
+      <div
+        class=""
+      >
+        <div
+          class=""
+        >
+          <label>
+            Gene ID or gene symbol
+            <div
+              class=" css-b62m3t-container"
+            >
+              <span
+                class="css-1f43avz-a11yText-A11yText"
+                id="react-select-16-live-region"
+              />
+              <span
+                aria-atomic="false"
+                aria-live="polite"
+                aria-relevant="additions text"
+                class="css-1f43avz-a11yText-A11yText"
+              />
               <div
-                className=" css-1uccc91-singleValue"
+                class=" css-15r8ym2-Control"
               >
-                Any
+                <div
+                  class=" css-319lph-ValueContainer"
+                >
+                  <div
+                    class=" css-14el2xx-placeholder"
+                    id="react-select-16-placeholder"
+                  />
+                  <div
+                    class=" css-6j8wv5-Input"
+                    data-value=""
+                  >
+                    <input
+                      aria-autocomplete="list"
+                      aria-describedby="react-select-16-placeholder"
+                      aria-expanded="false"
+                      aria-haspopup="true"
+                      autocapitalize="none"
+                      autocomplete="off"
+                      autocorrect="off"
+                      class=""
+                      id="gene-input"
+                      role="combobox"
+                      spellcheck="false"
+                      style="opacity: 1; width: 100%; grid-area: 1 / 2; min-width: 2px; border: 0px; margin: 0px; outline: 0; padding: 0px;"
+                      tabindex="0"
+                      type="text"
+                      value=""
+                    />
+                  </div>
+                </div>
+                <div
+                  class=" css-1hb7zxy-IndicatorsContainer"
+                />
               </div>
               <input
-                aria-autocomplete="list"
-                className="css-62g3xt-dummyInput"
-                disabled={false}
-                id="species-input"
-                onBlur={[Function]}
-                onChange={[Function]}
-                onFocus={[Function]}
-                readOnly={true}
-                tabIndex="0"
+                name="geneQuery"
+                type="hidden"
                 value=""
               />
             </div>
+          </label>
+        </div>
+        <div
+          class=""
+        >
+          <label>
+            Species
             <div
-              className=" css-1hb7zxy-IndicatorsContainer"
+              class=" css-b62m3t-container"
             >
               <span
-                className="sc-AxjAm bxcukt"
-                cx={[Function]}
+                class="css-1f43avz-a11yText-A11yText"
+                id="react-select-17-live-region"
+              />
+              <span
+                aria-atomic="false"
+                aria-live="polite"
+                aria-relevant="additions text"
+                class="css-1f43avz-a11yText-A11yText"
+              />
+              <div
+                class=" css-15r8ym2-Control"
+              >
+                <div
+                  class=" css-319lph-ValueContainer"
+                >
+                  <div
+                    class=" css-qc6sy-singleValue"
+                  >
+                    Any
+                  </div>
+                  <input
+                    aria-autocomplete="list"
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-readonly="true"
+                    class="css-mohuvp-dummyInput-DummyInput"
+                    id="species-input"
+                    inputmode="none"
+                    role="combobox"
+                    tabindex="0"
+                    value=""
+                  />
+                </div>
+                <div
+                  class=" css-1hb7zxy-IndicatorsContainer"
+                >
+                  <span
+                    class="sc-bczRLJ dDZqze"
+                  />
+                </div>
+              </div>
+              <input
+                name="species"
+                type="hidden"
+                value=""
               />
             </div>
-          </div>
-          <input
-            name="species"
-            type="hidden"
-            value=""
-          />
+          </label>
+        </div>
+        <div
+          class="small-12 columns"
+        >
+          <p
+            style="font-size: smaller;"
+          >
+            Examples:
+            <span>
+               
+              <a
+                href="http://rickandmorty.wikia.com/wiki/Special:Search?query=Rick+Sanchez"
+              >
+                Rick Sanchez
+              </a>
+              , 
+            </span>
+            <span>
+              <a
+                href="http://rickandmorty.wikia.com/wiki/Special:Search?query=Unity"
+              >
+                Unity
+              </a>
+              , 
+            </span>
+            <span>
+              <a
+                href="http://rickandmorty.wikia.com/wiki/Special:Search?query=Galactic+Federation"
+              >
+                Galactic Federation
+              </a>
+              , 
+            </span>
+            <span>
+              <a
+                href="http://rickandmorty.wikia.com/wiki/Special:Search?query=Blemflarck"
+              >
+                Blemflarck
+              </a>
+              , 
+            </span>
+            <span>
+              <a
+                href="http://rickandmorty.wikia.com/wiki/Special:Search?query=anatomy"
+              >
+                anatomy
+              </a>
+            </span>
+          </p>
         </div>
       </div>
-    </div>
-    <div
-      className="small-12 columns"
-    >
-      <p
-        style={
-          Object {
-            "fontSize": "smaller",
-          }
-        }
+      <div
+        class=""
       >
-        Examples:
-        <span>
-           
-          <a
-            href="http://rickandmorty.wikia.com/wiki/Special:Search?query=Rick+Sanchez"
+        <div
+          class="small-12 columns"
+        >
+          <button
+            class="button"
+            disabled=""
+            type="Submit"
           >
-            Rick Sanchez
-          </a>
-          , 
-        </span>
-        <span>
-          <a
-            href="http://rickandmorty.wikia.com/wiki/Special:Search?query=Unity"
-          >
-            Unity
-          </a>
-          , 
-        </span>
-        <span>
-          <a
-            href="http://rickandmorty.wikia.com/wiki/Special:Search?query=Galactic+Federation"
-          >
-            Galactic Federation
-          </a>
-          , 
-        </span>
-        <span>
-          <a
-            href="http://rickandmorty.wikia.com/wiki/Special:Search?query=Blemflarck"
-          >
-            Blemflarck
-          </a>
-          , 
-        </span>
-        <span>
-          <a
-            href="http://rickandmorty.wikia.com/wiki/Special:Search?query=anatomy"
-          >
-            anatomy
-          </a>
-        </span>
-      </p>
-    </div>
-  </div>
-  <div
-    className=""
-  >
-    <div
-      className="small-12 columns"
-    >
-      <button
-        className="button"
-        disabled={true}
-        onClick={null}
-        type="Submit"
-      >
-        Search
-      </button>
-    </div>
-  </div>
-</form>
+            Search
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
 `;
