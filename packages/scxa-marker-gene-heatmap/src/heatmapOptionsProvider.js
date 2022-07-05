@@ -22,7 +22,7 @@ const heatmapOptionsProvider = {
       (experimentAccession, host) => {
         const annDataIconUrl = URI(`/wikipedia/commons/6/6a/External_link_font_awesome.svg`, `https://upload.wikimedia.org`).toString()
         const experimentLinkText = checkIfAnnDataExperiment(experimentAccession) ?
-          `<img src="${annDataIconUrl}" alt="AnnData experiment icon" width="11px"/>${experimentAccession}` :
+          `<img src="${annDataIconUrl}" alt="AnnData experiment icon" width="11px"/> ${experimentAccession}` :
           experimentAccession
 
         return `<a href="${URI(`experiments`, host).segment(experimentAccession).toString()}"` +
