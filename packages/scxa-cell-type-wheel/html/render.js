@@ -3,28 +3,31 @@ import ReactDOM from 'react-dom'
 
 import CellTypeWheel from '../src/index'
 
-import cftr from './data/cftr-sunburst.json'
-import lungany from './data/lung-any-sunburst.json'
-import lung from './data/lung-sunburst.json'
-import pancreas from './data/pancreas-sunburst.json'
-import covid19 from './data/covid19-sunburst.json'
-import leukocyte from './data/local-leukocyte-sunburst.json'
-import cancer from './data/cancer-sunburst.json'
-import tcell from './data/tcell-sunburst.json'
+import cancer from './data/cancer.json'
+import covid19 from './data/covid-19.json'
+import lung from './data/lung.json'
+import pancreas from './data/pancreas.json'
+import leukocyte from './data/leukocyte.json'
+import tcell from './data/t_cell.json'
 
 const data = {
-  cftr: cftr,
-  lungany: lungany,
   lung: lung,
   pancreas: pancreas,
-  covid19: covid19,
+  "COVID-19": covid19,
   leukocyte: leukocyte,
   cancer: cancer,
-  tcell: tcell
+  "T cell": tcell
 }
 
 const render = (options, dataKey, target) => {
-  ReactDOM.render(<CellTypeWheel {...options} searchTerm={dataKey} data={data[dataKey]} />, document.getElementById(target))
+  ReactDOM.render(
+      <CellTypeWheel
+          {...options}
+          searchTerm={dataKey}
+          data={data[dataKey]}
+          onCellTypeWheelClick={
+            (name, species, experimentAccessions) => console.log(name, species, experimentAccessions)}
+      />, document.getElementById(target))
 }
 
 export { render }

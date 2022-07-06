@@ -15,7 +15,7 @@ import URI from 'urijs'
 import heatmapOptionsProvider from './heatmapOptionsProvider'
 
 // initialise modules
-async function addModules() {
+async function addModules () {
   HighchartsHeatmap(Highcharts)
   HighchartsNoData(Highcharts)
   HighchartsExporting(Highcharts)
@@ -121,7 +121,7 @@ const MarkerGeneHeatmap = (props) => {
       spacingBottom: 0
     },
     lang: {
-      noData: heatmapOptionsProvider[heatmapType].noData,
+      noData: heatmapOptionsProvider[heatmapType].noData
     },
     noData: {
       style: {
@@ -145,16 +145,16 @@ const MarkerGeneHeatmap = (props) => {
       opposite: true,
       categories: xAxisCategories,
       labels: {
-        useHtml: true,
-        formatter: function() {
-          return heatmapOptionsProvider[heatmapType].labelsFormatter(this.value)
+        useHTML: true,
+        formatter: function () {
+          return heatmapOptionsProvider[heatmapType].labelsFormatter(this.value, host)
         }
       },
       endOnTick: false,
       gridLineWidth: 0,
       minorGridLineWidth: 0,
       min: 0,
-      max: xAxisCategories.length-1,
+      max: xAxisCategories.length - 1,
       showEmpty: false,
       visible: data.length !== 0
     },
@@ -177,9 +177,9 @@ const MarkerGeneHeatmap = (props) => {
       visible: data.length !== 0,
       labels: {
         formatter: function () {
-          return `<a href="${URI(`search`, host).search({q: this.value, species: species}).toString()}" ` +
+          return `<a href="${URI(`search`, host).search({ q: this.value, species: species }).toString()}" ` +
             `style="border: none; color: #148ff3">${this.value}</a>`
-          }
+        }
       }
     },
 
@@ -191,17 +191,17 @@ const MarkerGeneHeatmap = (props) => {
       max: 1000000,
       stops: [
         [0, `#d7ffff`],
-        [1/7 * 1, `#d4e4fb`],
-        [1/7 * 2, `#95adde`],
-        [1/7 * 3, `#6077bf`],
-        [1/7 * 4, `#1151d1`],
-        [1/7 * 5, `#35419b`],
-        [1/7 * 6, `#0e0573`],
+        [1 / 7 * 1, `#d4e4fb`],
+        [1 / 7 * 2, `#95adde`],
+        [1 / 7 * 3, `#6077bf`],
+        [1 / 7 * 4, `#1151d1`],
+        [1 / 7 * 5, `#35419b`],
+        [1 / 7 * 6, `#0e0573`],
         [1, `#07004c`]
       ],
       marker: {
         color: `#e96b23`
-      },
+      }
     },
 
     legend: {

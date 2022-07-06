@@ -14,6 +14,7 @@ ReactDOM.render(
   <MyComponentWithFetchLoader
     host={`https://domain.tld/path/`}
     resource={`json/endpoint`}
+    query={ {foo: [`qwerty`, `asdf`], bar: 42 } /* Will be parsed as ?foobar=qwerty&foobar=asdf&bar=42 */ }
     errorPayloadProvider={ error => /* some object with error info for the wrapped component */ }
     loadingPayloadProvider={ data => /* some object to display feedback while the component is loading */ }
     fulfilledPayloadProvider={ data => /* some object that is added as props */ }
@@ -58,8 +59,8 @@ component. Additionally, you can rename fields from the JSON object with the `re
 to the string value.
 
 ### Raw text
-By default the component will parse the response as JSON but a boolean prop `raw` can be set to `true`, in which case 
-the payload will be parsed as plain text. In this case `renameDataKeys` will be ignored but you can use the 
+The component will parse the response as JSON but a boolean prop `raw` can be set to `true`, in which case the payload
+will be parsed as plain text. In this case `renameDataKeys` will be ignored, but you can use the 
 `fulfilledPayloadProvider` to store the response in a prop of your choice for the wrapped component.
 
 A real use case is the Single Cell Expression Atlas Information Banner:

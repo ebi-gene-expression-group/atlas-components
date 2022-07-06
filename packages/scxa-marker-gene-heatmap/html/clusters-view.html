@@ -8,30 +8,25 @@
 
   <link rel="stylesheet" href="https://www.ebi.ac.uk/gxa/resources/css/foundation/atlas.css" type="text/css" media="all">
 
-  <style type="text/css">
-      #target input {
-          height: unset;
-          box-shadow: none;
-          margin: 0;
-      }
-
-      div.highcharts-button span {
-          pointer-events: none;
-      }
+  <style>
+    div.highcharts-button span {
+      pointer-events: none;
+    }
   </style>
 </head>
 
 <body>
 <div id="wrapper" class="row expanded">
-  <div id="content" class="small-12 columns">
+  <div id="content" class="small-12 columns small-centered">
+    <h1 style="text-align: center">Clusters marker gene heatmap – Data passed as <code>options.data</code></h1>
     <div id="target">
     </div>
   </div>
 </div>
 </body>
 
-<script src="/html/vendors.bundle.js"></script>
-<script src="/html/clustersViewDemo.bundle.js"></script>
+<script src="../dist/vendors.bundle.js"></script>
+<script src="../dist/clustersViewDemo.bundle.js"></script>
 
 <!-- Set to http://localhost:8080/gxa/ or http://localhost:8080/gxa/sc/ -- Remember the trailing slash! -->
 <script>

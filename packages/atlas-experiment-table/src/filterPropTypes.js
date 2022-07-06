@@ -10,8 +10,8 @@ const filterPropTypes = {
 const tableHeaderPropTypes =
   PropTypes.shape({
     ...filterPropTypes,
-    searchable: PropTypes.boolean,
-    sortable: PropTypes.boolean,
+    searchable: PropTypes.bool,
+    sortable: PropTypes.bool,
     image: PropTypes.objectOf(
       PropTypes.shape({
         src: PropTypes.string,

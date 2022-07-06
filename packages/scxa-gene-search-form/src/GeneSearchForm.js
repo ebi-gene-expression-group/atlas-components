@@ -7,14 +7,15 @@ import LabelledSelect from './LabelledSelect'
 import SearchExamples from './SearchExamples'
 
 class GeneSearchForm extends React.Component {
-  constructor(props) {
+  constructor (props) {
     super(props)
 
     const defaultValue = props.defaultValue.term && props.defaultValue.term.trim() ?
       {
         term: props.defaultValue.term.trim(),
         category: props.defaultValue.category && props.defaultValue.category.trim() ?
-          props.defaultValue.category : `q`
+          props.defaultValue.category :
+          `q`
       } :
       {}
 
@@ -28,7 +29,7 @@ class GeneSearchForm extends React.Component {
     this.autocompleteOnChange = this._autocompleteOnChange.bind(this)
   }
 
-  _autocompleteOnChange(selectedItem) {
+  _autocompleteOnChange (selectedItem) {
     this.setState({
       query: selectedItem ?
         JSON.parse(selectedItem.value) :
@@ -36,17 +37,17 @@ class GeneSearchForm extends React.Component {
     })
   }
 
-  _speciesSelectOnChange(selectedItem) {
+  _speciesSelectOnChange (selectedItem) {
     this.setState({ selectedSpecies: selectedItem.value })
   }
 
-  render() {
-    const {wrapperClassName, actionEndpoint, onSubmit, searchExamples} = this.props
+  render () {
+    const { wrapperClassName, actionEndpoint, onSubmit, searchExamples } = this.props
 
-    const {autocompleteClassName, host, suggesterEndpoint, defaultValue, autocompleteLabel} = this.props
+    const { autocompleteClassName, host, suggesterEndpoint, defaultValue, autocompleteLabel } = this.props
 
-    const {enableSpeciesSelect, speciesSelectClassName, speciesSelectStatusMessage} = this.props
-    const {allSpecies, topSpecies} = this.props
+    const { enableSpeciesSelect, speciesSelectClassName, speciesSelectStatusMessage } = this.props
+    const { allSpecies, topSpecies } = this.props
 
     return (
       <form action={URI(actionEndpoint, host).toString()} method={`post`}>

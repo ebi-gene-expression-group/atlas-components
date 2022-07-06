@@ -1,6 +1,6 @@
 {
   "name": "@ebi-gene-expression-group/scxa-tsne-widget",
-  "version": "2.2.8",
+  "version": "2.3.1",
   "description": "tSNE widget visualizes Single Cell Expression Atlas data",
   "main": "lib/index.js",
   "scripts": {
@@ -35,7 +35,7 @@
     "url": "git+https://github.com/ebi-gene-expression-group/atlas-components.git"
   },
   "dependencies": {
-    "@ebi-gene-expression-group/scxa-tsne-plot": "^5.3.6",
+    "@ebi-gene-expression-group/scxa-tsne-plot": "*",
     "expression-atlas-autocomplete": "^3.2.0",
     "prop-types": "^15.7.2",
     "react": "^17.0.0",
@@ -51,14 +51,10 @@
     "babel-loader": "^8.1.0",
     "clean-webpack-plugin": "^3.0.0",
     "coveralls": "^3.1.0",
-    "enzyme": "^3.11.0",
-    "enzyme-adapter-react-16": "^1.15.3",
     "eslint": "^7.6.0",
     "fetch-mock": "^9.10.6",
     "file-loader": "^6.0.0",
     "jest": "^26.4.0",
-    "jest-environment-enzyme": "^7.1.2",
-    "jest-enzyme": "^7.1.2",
     "react-test-renderer": "^17.0.0",
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12",
