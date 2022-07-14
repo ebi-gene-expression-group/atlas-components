@@ -15,7 +15,7 @@ import URI from 'urijs'
 import heatmapOptionsProvider from './heatmapOptionsProvider'
 
 // initialise modules
-async function addModules () {
+async function addModules() {
   HighchartsHeatmap(Highcharts)
   HighchartsNoData(Highcharts)
   HighchartsExporting(Highcharts)
@@ -61,9 +61,9 @@ const MarkerGeneHeatmap = (props) => {
   const { cellType, data, xAxisCategories, yAxisCategories } = props
 
   const heatmapData = data.map(cell => ({
-      ...cell,
-      value: cell.value <= 0 ? null : cell.value
-    }))
+    ...cell,
+    value: cell.value <= 0 ? null : cell.value
+  }))
 
   const plotLines = []
   const cellTypesOrClusterIds = Object.keys(_.groupBy(data, `cellGroupValueWhereMarker`))
@@ -74,17 +74,18 @@ const MarkerGeneHeatmap = (props) => {
 
   const groupedData = _.groupBy(data, `cellGroupValueWhereMarker`)
   let plotLineAxisPosition = -0.5
+  console.log(heatmapType)
 
   cellTypesOrClusterIds.length == 1 ? plotLines.push({
-        color: `#FFFFFF`,
+        color: `#000000`,
         width: 2,
         value: data[0].y,
         zIndex: 0,
-        label: heatmapType !== `cellmultiexperiment` && {
+        label: heatmapType !== `multiexperimentcelltypes` && {
           text: splitPhrase(heatmapOptionsProvider[heatmapType].labelsFormatter(cellTypesOrClusterIds[0])).join(`<br/>`),
           align: `right`,
           textAlign: `left`,
-          x: 15,
+          x: 0,
           y: 30,
         }
       }) :
@@ -100,11 +101,11 @@ const MarkerGeneHeatmap = (props) => {
           width: 2,
           value: plotLineAxisPosition,
           zIndex: zIndex,
-          label: heatmapType !== `cellmultiexperiment` && {
+          label: heatmapType !== `multiexperimentcelltypes` && {
             text: splitCellTypeLabel.join(`<br/>`),
             align: `right`,
             textAlign: `left`,
-            x: 15,
+            x: 0,
             y: yOffset - Math.max(splitCellTypeLabel.length - 3, 0) * heatmapRowHeight / 2,  // Move very long labels slightly up
           }
         })
@@ -121,7 +122,7 @@ const MarkerGeneHeatmap = (props) => {
       spacingBottom: 0
     },
     lang: {
-      noData: heatmapOptionsProvider[heatmapType].noData
+      noData: heatmapOptionsProvider[heatmapType].noData,
     },
     noData: {
       style: {
@@ -145,16 +146,16 @@ const MarkerGeneHeatmap = (props) => {
       opposite: true,
       categories: xAxisCategories,
       labels: {
-        useHTML: true,
-        formatter: function () {
-          return heatmapOptionsProvider[heatmapType].labelsFormatter(this.value, host)
+        useHtml: true,
+        formatter: function() {
+          return heatmapOptionsProvider[heatmapType].labelsFormatter(this.value)
         }
       },
       endOnTick: false,
       gridLineWidth: 0,
       minorGridLineWidth: 0,
       min: 0,
-      max: xAxisCategories.length - 1,
+      max: xAxisCategories.length-1,
       showEmpty: false,
       visible: data.length !== 0
     },
@@ -177,8 +178,8 @@ const MarkerGeneHeatmap = (props) => {
       visible: data.length !== 0,
       labels: {
         formatter: function () {
-          return `<a href="${URI(`search`, host).search({ q: this.value, species: species }).toString()}" ` +
-            `style="border: none; color: #148ff3">${this.value}</a>`
+          return `<a href="${URI(`search`, host).search({q: this.value, species: species}).toString()}" ` +
+              `style="border: none; color: #148ff3">${this.value}</a>`
         }
       }
     },
@@ -191,17 +192,17 @@ const MarkerGeneHeatmap = (props) => {
       max: 1000000,
       stops: [
         [0, `#d7ffff`],
-        [1 / 7 * 1, `#d4e4fb`],
-        [1 / 7 * 2, `#95adde`],
-        [1 / 7 * 3, `#6077bf`],
-        [1 / 7 * 4, `#1151d1`],
-        [1 / 7 * 5, `#35419b`],
-        [1 / 7 * 6, `#0e0573`],
+        [1/7 * 1, `#d4e4fb`],
+        [1/7 * 2, `#95adde`],
+        [1/7 * 3, `#6077bf`],
+        [1/7 * 4, `#1151d1`],
+        [1/7 * 5, `#35419b`],
+        [1/7 * 6, `#0e0573`],
         [1, `#07004c`]
       ],
       marker: {
         color: `#e96b23`
-      }
+      },
     },
 
     legend: {
@@ -274,10 +275,10 @@ const MarkerGeneHeatmap = (props) => {
   }
 
   return (
-    <HighchartsReact
-      highcharts={Highcharts}
-      options={options}
-    />
+      <HighchartsReact
+          highcharts={Highcharts}
+          options={options}
+      />
   )
 }
 
