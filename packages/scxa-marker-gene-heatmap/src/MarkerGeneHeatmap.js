@@ -15,7 +15,7 @@ import URI from 'urijs'
 import heatmapOptionsProvider from './heatmapOptionsProvider'
 
 // initialise modules
-async function addModules() {
+async function addModules () {
   HighchartsHeatmap(Highcharts)
   HighchartsNoData(Highcharts)
   HighchartsExporting(Highcharts)
@@ -74,42 +74,41 @@ const MarkerGeneHeatmap = (props) => {
 
   const groupedData = _.groupBy(data, `cellGroupValueWhereMarker`)
   let plotLineAxisPosition = -0.5
-  console.log(heatmapType)
 
-  cellTypesOrClusterIds.length == 1 ? plotLines.push({
-        color: `#000000`,
+  cellTypesOrClusterIds.length === 1 ? plotLines.push({
+    color: `#000000`,
+    width: 2,
+    value: data[0].y,
+    zIndex: 0,
+    label: heatmapType !== `multiexperimentcelltypes` && {
+      text: splitPhrase(heatmapOptionsProvider[heatmapType].labelsFormatter(cellTypesOrClusterIds[0])).join(`<br/>`),
+      align: `right`,
+      textAlign: `left`,
+      x: 0,
+      y: 30
+    }
+  }) :
+    cellTypesOrClusterIds.map((cellTypeOrClusterId) => {
+      const numberOfRows = Object.keys(_.groupBy(groupedData[cellTypeOrClusterId.toString()], `y`)).length // how many marker genes per cluster
+      plotLineAxisPosition = plotLineAxisPosition + numberOfRows
+      const yOffset = -numberOfRows * heatmapRowHeight / 2
+      const color = `#000000`
+      const zIndex = 5
+      const splitCellTypeLabel = splitPhrase(heatmapOptionsProvider[heatmapType].labelsFormatter(cellTypeOrClusterId))
+      plotLines.push({
+        color,
         width: 2,
-        value: data[0].y,
-        zIndex: 0,
+        value: plotLineAxisPosition,
+        zIndex,
         label: heatmapType !== `multiexperimentcelltypes` && {
-          text: splitPhrase(heatmapOptionsProvider[heatmapType].labelsFormatter(cellTypesOrClusterIds[0])).join(`<br/>`),
+          text: splitCellTypeLabel.join(`<br/>`),
           align: `right`,
           textAlign: `left`,
           x: 0,
-          y: 30,
+          y: yOffset - Math.max(splitCellTypeLabel.length - 3, 0) * heatmapRowHeight / 2 // Move very long labels slightly up
         }
-      }) :
-      cellTypesOrClusterIds.map((cellTypeOrClusterId) => {
-        const numberOfRows = Object.keys(_.groupBy(groupedData[cellTypeOrClusterId.toString()], `y`)).length // how many marker genes per cluster
-        plotLineAxisPosition = plotLineAxisPosition + numberOfRows
-        const yOffset = -numberOfRows * heatmapRowHeight/2
-        let color = `#000000`
-        let zIndex = 5
-        const splitCellTypeLabel = splitPhrase(heatmapOptionsProvider[heatmapType].labelsFormatter(cellTypeOrClusterId))
-        plotLines.push({
-          color: color,
-          width: 2,
-          value: plotLineAxisPosition,
-          zIndex: zIndex,
-          label: heatmapType !== `multiexperimentcelltypes` && {
-            text: splitCellTypeLabel.join(`<br/>`),
-            align: `right`,
-            textAlign: `left`,
-            x: 0,
-            y: yOffset - Math.max(splitCellTypeLabel.length - 3, 0) * heatmapRowHeight / 2,  // Move very long labels slightly up
-          }
-        })
       })
+    })
 
   const options = {
     chart: {
@@ -122,7 +121,7 @@ const MarkerGeneHeatmap = (props) => {
       spacingBottom: 0
     },
     lang: {
-      noData: heatmapOptionsProvider[heatmapType].noData,
+      noData: heatmapOptionsProvider[heatmapType].noData
     },
     noData: {
       style: {
@@ -147,7 +146,7 @@ const MarkerGeneHeatmap = (props) => {
       categories: xAxisCategories,
       labels: {
         useHtml: true,
-        formatter: function() {
+        formatter: function () {
           return heatmapOptionsProvider[heatmapType].labelsFormatter(this.value)
         }
       },
@@ -155,7 +154,7 @@ const MarkerGeneHeatmap = (props) => {
       gridLineWidth: 0,
       minorGridLineWidth: 0,
       min: 0,
-      max: xAxisCategories.length-1,
+      max: xAxisCategories.length - 1,
       showEmpty: false,
       visible: data.length !== 0
     },
@@ -173,12 +172,12 @@ const MarkerGeneHeatmap = (props) => {
       endOnTick: false,
       gridLineWidth: 0,
       minorGridLineWidth: 0,
-      plotLines: plotLines,
+      plotLines,
       showEmpty: false,
       visible: data.length !== 0,
       labels: {
         formatter: function () {
-          return `<a href="${URI(`search`, host).search({q: this.value, species: species}).toString()}" ` +
+          return `<a href="${URI(`search`, host).search({ q: this.value, species }).toString()}" ` +
               `style="border: none; color: #148ff3">${this.value}</a>`
         }
       }
@@ -192,17 +191,17 @@ const MarkerGeneHeatmap = (props) => {
       max: 1000000,
       stops: [
         [0, `#d7ffff`],
-        [1/7 * 1, `#d4e4fb`],
-        [1/7 * 2, `#95adde`],
-        [1/7 * 3, `#6077bf`],
-        [1/7 * 4, `#1151d1`],
-        [1/7 * 5, `#35419b`],
-        [1/7 * 6, `#0e0573`],
+        [1 / 7 * 1, `#d4e4fb`],
+        [1 / 7 * 2, `#95adde`],
+        [1 / 7 * 3, `#6077bf`],
+        [1 / 7 * 4, `#1151d1`],
+        [1 / 7 * 5, `#35419b`],
+        [1 / 7 * 6, `#0e0573`],
         [1, `#07004c`]
       ],
       marker: {
         color: `#e96b23`
-      },
+      }
     },
 
     legend: {
@@ -275,10 +274,10 @@ const MarkerGeneHeatmap = (props) => {
   }
 
   return (
-      <HighchartsReact
-          highcharts={Highcharts}
-          options={options}
-      />
+    <HighchartsReact
+      highcharts={Highcharts}
+      options={options}
+    />
   )
 }
 
