@@ -75,20 +75,21 @@ const MarkerGeneHeatmap = (props) => {
   const groupedData = _.groupBy(data, `cellGroupValueWhereMarker`)
   let plotLineAxisPosition = -0.5
 
-  cellTypesOrClusterIds.length === 1 ? plotLines.push({
-    color: `#000000`,
-    width: 2,
-    value: data[0].y,
-    zIndex: 0,
-    label: heatmapType !== `multiexperimentcelltypes` && {
-      text: splitPhrase(heatmapOptionsProvider[heatmapType].labelsFormatter(cellTypesOrClusterIds[0])).join(`<br/>`),
-      align: `right`,
-      textAlign: `left`,
-      x: 0,
-      y: 30
-    }
-  }) :
-    cellTypesOrClusterIds.map((cellTypeOrClusterId) => {
+  cellTypesOrClusterIds.length === 1 ?
+    plotLines.push({
+      color: `#000000`,
+      width: 2,
+      value: data[0].y,
+      zIndex: 0,
+      label: heatmapType !== `multiexperimentcelltypes` && {
+        text: splitPhrase(heatmapOptionsProvider[heatmapType].labelsFormatter(cellTypesOrClusterIds[0])).join(`<br/>`),
+        align: `right`,
+        textAlign: `left`,
+        x: 0,
+        y: 30
+      }
+    }) :
+    cellTypesOrClusterIds.forEach((cellTypeOrClusterId) => {
       const numberOfRows = Object.keys(_.groupBy(groupedData[cellTypeOrClusterId.toString()], `y`)).length // how many marker genes per cluster
       plotLineAxisPosition = plotLineAxisPosition + numberOfRows
       const yOffset = -numberOfRows * heatmapRowHeight / 2
@@ -145,7 +146,7 @@ const MarkerGeneHeatmap = (props) => {
       opposite: true,
       categories: xAxisCategories,
       labels: {
-        useHtml: true,
+        useHTML: true,
         formatter: function () {
           return heatmapOptionsProvider[heatmapType].labelsFormatter(this.value)
         }
