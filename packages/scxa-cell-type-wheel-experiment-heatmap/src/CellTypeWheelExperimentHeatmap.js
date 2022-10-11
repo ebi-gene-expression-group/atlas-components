@@ -7,9 +7,11 @@ import _ from 'lodash'
 import { withFetchLoader } from '@ebi-gene-expression-group/atlas-react-fetch-loader'
 import CellTypeWheel from '@ebi-gene-expression-group/scxa-cell-type-wheel'
 import MarkerGeneHeatmap from '@ebi-gene-expression-group/scxa-marker-gene-heatmap/lib/MarkerGeneHeatmap'
+import GeneSearchForm from '@ebi-gene-expression-group/scxa-gene-search-form'
 
 const CellTypeWheelFetchLoader = withFetchLoader(CellTypeWheel)
 const MarkerGeneHeatmapFetchLoader = withFetchLoader(MarkerGeneHeatmap)
+const GeneSearchFormFetchLoader = withFetchLoader(GeneSearchForm)
 
 function CellTypeWheelExperimentHeatmap (props) {
   const [heatmapSelection, setHeatmapSelection] = useState({
@@ -33,33 +35,49 @@ function CellTypeWheelExperimentHeatmap (props) {
 
   return (
     <div className={`row-expanded`} aria-label={`Cell type wheel and heatmap of top-scoring genes of cell types in ${props.searchTerm}`}>
-      <div className={`small-12 medium-6 columns`} aria-label={`Cell type wheel`}>
-        <CellTypeWheelFetchLoader
-          host={props.host}
-          resource={URI(props.searchTerm, props.cellTypeWheelResource).toString()}
-          fulfilledPayloadProvider={ cellTypeWheelData => ({ data: cellTypeWheelData }) }
-          searchTerm={props.searchTerm}
-          onCellTypeWheelClick={onCellTypeWheelClick}
-        />
-      </div>
-      <div className={`small-12 medium-6 columns`} aria-label={`Heatmap of top-scoring genes`}>
-        {heatmapSelection.cellType ?
-          <MarkerGeneHeatmapFetchLoader
+      <GeneSearchFormFetchLoader
+        host={props.host}
+        resource={props.searchFormResource}
+        loadingPayloadProvider={ () => ({ speciesSelectStatusMessage: `Fetching species…` }) }
+        errorPayloadProvider={ () => ({ speciesSelectStatusMessage: `Failed fetching species` }) }
+        wrapperClassName={`row-expanded small-12 columns`}
+        autocompleteClassName={`small-8 columns`}
+        actionEndpoint={props.actionEndpoint}
+        suggesterEndpoint={props.suggesterEndpoint}
+        autocompleteLabel={`Search term`}
+        defaultValue={ { term: props.searchTerm, category: `metadata` } }
+        enableSpeciesSelect={true}
+        speciesSelectClassName={`small-4 columns`}
+      />
+      <div className={`row-expanded small-12 columns`}>
+        <div className={`small-12 medium-6 columns`} aria-label={`Cell type wheel`}>
+          <CellTypeWheelFetchLoader
             host={props.host}
-            resource={URI(heatmapSelection.cellType, props.heatmapResource).toString()}
-            fulfilledPayloadProvider={heatmapFulfilledPayloadProvider}
-            query={{ [`experiment-accessions`]: heatmapSelection.experimentAccessions }}
-            cellType={heatmapSelection.cellType}
-            heatmapRowHeight={40}
-            species={heatmapSelection.species}
-            heatmapType={`multiexperimentcelltypes`}
-          /> :
-          <div className={`medium-text-center`} aria-label={`No cell type selected`}>
-            <h4>
-            Please click on a cell type to see a detailed view of the expression profile of top-scoring genes across experiments.
-            </h4>
-          </div>
-        }
+            resource={URI(props.searchTerm, props.cellTypeWheelResource).toString()}
+            fulfilledPayloadProvider={ cellTypeWheelData => ({ data: cellTypeWheelData }) }
+            searchTerm={props.searchTerm}
+            onCellTypeWheelClick={onCellTypeWheelClick}
+          />
+        </div>
+        <div className={`small-12 medium-6 columns`} aria-label={`Heatmap of top-scoring genes`}>
+          {heatmapSelection.cellType ?
+            <MarkerGeneHeatmapFetchLoader
+              host={props.host}
+              resource={URI(heatmapSelection.cellType, props.heatmapResource).toString()}
+              fulfilledPayloadProvider={heatmapFulfilledPayloadProvider}
+              query={{ [`experiment-accessions`]: heatmapSelection.experimentAccessions }}
+              cellType={heatmapSelection.cellType}
+              heatmapRowHeight={40}
+              species={heatmapSelection.species}
+              heatmapType={`multiexperimentcelltypes`}
+            /> :
+            <div className={`medium-text-center`} aria-label={`No cell type selected`}>
+              <h4>
+                Please click on a cell type to see a detailed view of the expression profile of top-scoring genes across experiments.
+              </h4>
+            </div>
+          }
+        </div>
       </div>
     </div>
   )
@@ -67,6 +85,9 @@ function CellTypeWheelExperimentHeatmap (props) {
 
 CellTypeWheelExperimentHeatmap.propTypes = {
   host: PropTypes.string,
+  searchFormResource: PropTypes.string.isRequired,
+  actionEndpoint: PropTypes.string.isRequired,
+  suggesterEndpoint: PropTypes.string.isRequired,
   cellTypeWheelResource: PropTypes.string,
   heatmapResource: PropTypes.string,
   searchTerm: PropTypes.string.isRequired
@@ -74,6 +95,9 @@ CellTypeWheelExperimentHeatmap.propTypes = {
 
 CellTypeWheelExperimentHeatmap.defaultProps = {
   host: `/gxa/sc/`,
+  searchFormResource: `json/suggestions/species`,
+  actionEndpoint: `search`,
+  suggesterEndpoint: `json/suggestions/gene_ids`,
   cellTypeWheelResource: `json/cell-type-wheel/`,
   heatmapResource: `json/cell-type-marker-genes/`
 }

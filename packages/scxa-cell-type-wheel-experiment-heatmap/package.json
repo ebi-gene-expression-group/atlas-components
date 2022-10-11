@@ -29,6 +29,7 @@
   "dependencies": {
     "@ebi-gene-expression-group/atlas-react-fetch-loader": "*",
     "@ebi-gene-expression-group/scxa-cell-type-wheel": "*",
+    "@ebi-gene-expression-group/scxa-gene-search-form": "*",
     "@ebi-gene-expression-group/scxa-marker-gene-heatmap": "*",
     "highcharts": "^10.1.0",
     "highcharts-react-official": "^3.1.0",
