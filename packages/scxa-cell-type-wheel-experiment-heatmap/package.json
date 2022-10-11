@@ -4,12 +4,10 @@
   "publishConfig": {
     "access": "public"
   },
-  "description": "My package does some neat things",
+  "description": "Cell type wheel with heatmap and search box for Single Cell Expression Atlas",
   "main": "lib/index.js",
   "scripts": {
-    "prepare": "rm -rf lib && babel src -d lib --copy-files",
-    "test": "jest",
-    "posttest": "jest --coverage --coverageReporters=text-lcov | coveralls"
+    "prepare": "rm -rf lib && babel src -d lib --copy-files"
   },
   "jest": {
     "setupFilesAfterEnv": [

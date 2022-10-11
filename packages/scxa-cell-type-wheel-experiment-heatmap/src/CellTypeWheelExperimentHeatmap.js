@@ -85,9 +85,9 @@ function CellTypeWheelExperimentHeatmap (props) {
 
 CellTypeWheelExperimentHeatmap.propTypes = {
   host: PropTypes.string,
-  searchFormResource: PropTypes.string.isRequired,
-  actionEndpoint: PropTypes.string.isRequired,
-  suggesterEndpoint: PropTypes.string.isRequired,
+  searchFormResource: PropTypes.string,
+  actionEndpoint: PropTypes.string,
+  suggesterEndpoint: PropTypes.string,
   cellTypeWheelResource: PropTypes.string,
   heatmapResource: PropTypes.string,
   searchTerm: PropTypes.string.isRequired
