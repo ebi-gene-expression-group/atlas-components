@@ -2,7 +2,7 @@ const path = require(`path`)
 
 module.exports = {
   entry: {
-    cellTypeWheelDemo: [`./html/render.js`],
+    cellTypeWheelDemo: [`./html/render.js`]
   },
 
   output: {
