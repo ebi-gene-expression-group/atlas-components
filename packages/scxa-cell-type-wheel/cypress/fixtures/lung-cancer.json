@@ -1,0 +1,190 @@
+[
+  {
+    "name": "lung cancer",
+    "id": "lung cancer",
+    "parent": "",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-6308",
+      "E-CURD-95",
+      "E-CURD-11",
+      "E-GEOD-135922"
+    ]
+  },
+  {
+    "name": "Homo sapiens",
+    "id": "Homo sapiens",
+    "parent": "lung cancer",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-6308",
+      "E-CURD-95",
+      "E-CURD-11",
+      "E-GEOD-135922"
+    ]
+  },
+  {
+    "name": "bronchiole",
+    "id": "Homo sapiens#bronchiole",
+    "parent": "Homo sapiens",
+    "value": 1,
+    "experimentAccessions": [
+      "E-CURD-11"
+    ]
+  },
+  {
+    "name": "epithelial cell",
+    "id": "Homo sapiens#bronchiole#epithelial cell",
+    "parent": "Homo sapiens#bronchiole",
+    "value": 1,
+    "experimentAccessions": [
+      "E-CURD-11"
+    ]
+  },
+  {
+    "name": "lung",
+    "id": "Homo sapiens#lung",
+    "parent": "Homo sapiens",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-6308",
+      "E-CURD-95",
+      "E-CURD-11"
+    ]
+  },
+  {
+    "name": "endothelial cell",
+    "id": "Homo sapiens#lung#endothelial cell",
+    "parent": "Homo sapiens#lung",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-6308"
+    ]
+  },
+  {
+    "name": "not applicable",
+    "id": "Homo sapiens#lung#not applicable",
+    "parent": "Homo sapiens#lung",
+    "value": 1,
+    "experimentAccessions": [
+      "E-CURD-11"
+    ]
+  },
+  {
+    "name": "T cell",
+    "id": "Homo sapiens#lung#T cell",
+    "parent": "Homo sapiens#lung",
+    "value": 1,
+    "experimentAccessions": [
+      "E-CURD-95"
+    ]
+  },
+  {
+    "name": "middle lobe of right lung",
+    "id": "Homo sapiens#middle lobe of right lung",
+    "parent": "Homo sapiens",
+    "value": 1,
+    "experimentAccessions": [
+      "E-CURD-11"
+    ]
+  },
+  {
+    "name": "not applicable",
+    "id": "Homo sapiens#middle lobe of right lung#not applicable",
+    "parent": "Homo sapiens#middle lobe of right lung",
+    "value": 1,
+    "experimentAccessions": [
+      "E-CURD-11"
+    ]
+  },
+  {
+    "name": "pigmented layer of retina and optic choroid",
+    "id": "Homo sapiens#pigmented layer of retina and optic choroid",
+    "parent": "Homo sapiens",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-135922"
+    ]
+  },
+  {
+    "name": "capillary endothelial cell",
+    "id": "Homo sapiens#pigmented layer of retina and optic choroid#capillary endothelial cell",
+    "parent": "Homo sapiens#pigmented layer of retina and optic choroid",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-135922"
+    ]
+  },
+  {
+    "name": "endothelial cell of artery",
+    "id": "Homo sapiens#pigmented layer of retina and optic choroid#endothelial cell of artery",
+    "parent": "Homo sapiens#pigmented layer of retina and optic choroid",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-135922"
+    ]
+  },
+  {
+    "name": "fibroblast",
+    "id": "Homo sapiens#pigmented layer of retina and optic choroid#fibroblast",
+    "parent": "Homo sapiens#pigmented layer of retina and optic choroid",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-135922"
+    ]
+  },
+  {
+    "name": "leukocyte/other",
+    "id": "Homo sapiens#pigmented layer of retina and optic choroid#leukocyte/other",
+    "parent": "Homo sapiens#pigmented layer of retina and optic choroid",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-135922"
+    ]
+  },
+  {
+    "name": "macrophage",
+    "id": "Homo sapiens#pigmented layer of retina and optic choroid#macrophage",
+    "parent": "Homo sapiens#pigmented layer of retina and optic choroid",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-135922"
+    ]
+  },
+  {
+    "name": "pericyte",
+    "id": "Homo sapiens#pigmented layer of retina and optic choroid#pericyte",
+    "parent": "Homo sapiens#pigmented layer of retina and optic choroid",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-135922"
+    ]
+  },
+  {
+    "name": "retinal pigment epithelial cell/retinal rod cell/melanocyte",
+    "id": "Homo sapiens#pigmented layer of retina and optic choroid#retinal pigment epithelial cell/retinal rod cell/melanocyte",
+    "parent": "Homo sapiens#pigmented layer of retina and optic choroid",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-135922"
+    ]
+  },
+  {
+    "name": "Schwann cell",
+    "id": "Homo sapiens#pigmented layer of retina and optic choroid#Schwann cell",
+    "parent": "Homo sapiens#pigmented layer of retina and optic choroid",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-135922"
+    ]
+  },
+  {
+    "name": "vein endothelial cell",
+    "id": "Homo sapiens#pigmented layer of retina and optic choroid#vein endothelial cell",
+    "parent": "Homo sapiens#pigmented layer of retina and optic choroid",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-135922"
+    ]
+  }
+]
