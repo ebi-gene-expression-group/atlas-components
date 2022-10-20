@@ -7,7 +7,7 @@ npx cypress run --component
 
 If you want to omit video recording:
 ```bash
-npx cypress run --component
+npx cypress run --component --record false
 ```
 
 Find coverage reports at:
