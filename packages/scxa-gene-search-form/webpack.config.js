@@ -2,7 +2,7 @@ const vendorsBundleName = `vendors`
 
 module.exports = {
   entry: {
-    geneSearchFormDemo: `./html/Demo.js`
+    geneSearchFormDemo: `./html/render.js`
   },
 
   output: {
