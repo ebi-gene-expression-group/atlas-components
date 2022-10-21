@@ -36,7 +36,12 @@ module.exports = {
     indent: ['error', 2], // Enforce indentation using 2 spaces
     'no-console': ['warn', { allow: ['warn', 'error'] }], // Allow console.warn and console.error statements
     'multiline-ternary': ['error', 'always-multiline'],
-    'operator-linebreak': ['error', 'after']
+    'operator-linebreak': ['error', 'after'],
+    'space-before-function-paren': ['error', {
+      anonymous: 'always',
+      named: 'never',
+      asyncArrow: 'always'
+    }]
   },
 
   overrides: [{
