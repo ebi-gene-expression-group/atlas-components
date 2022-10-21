@@ -1,7 +1,7 @@
 import React from "react"
 
 import CellTypeWheelExperimentHeatmap from '../../src'
-import speciesResponse from '../fixtures/speciesRespone.json'
+import speciesResponse from '../fixtures/speciesResponse.json'
 import cellTypeWheelData from '../fixtures/CellTypeDataForWheelResponse.json'
 import heatMapTCellResponse from '../fixtures/heatMapRegulatoryTCellResponse.json'
 
@@ -32,7 +32,7 @@ describe(`CellTypeWheelExperimentHeatmap`, () => {
     />)
   })
 
-  it(`mounts with data`, () => {
+  it(`mounts with data and displays a heatmap when a cell type label is clicked`, () => {
     cy.intercept(`GET`, `/gxa/sc/json/suggestions/species`,
       speciesResponse)
     cy.intercept(`GET`, `/gxa/sc/json/cell-type-marker-genes/regulatory%20T%20cell?experiment-accessions=E-ENAD-15`,
@@ -43,10 +43,8 @@ describe(`CellTypeWheelExperimentHeatmap`, () => {
     />)
     const ringElement = cy.contains(`regulatory T cell`)
     ringElement.click({ force: true })
-    cy.contains(`H2-Q7`)
-    cy.contains(`Cd3g`)
-    cy.contains(`Ltb`)
-    cy.contains(`Trac`)
-    cy.contains(`Shisa5`)
+    heatMapTCellResponse.map((cell) => cell.geneName).forEach(
+      geneName => cy.contains(geneName)
+    )
   })
 })
