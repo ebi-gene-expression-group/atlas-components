@@ -1,6 +1,6 @@
 import React from "react"
 
-import CellTypeWheelExperimentHeatmap from '../../src'
+import CellTypeWheelExperimentHeatmap from '../../src/CellTypeWheelExperimentHeatmap'
 import speciesResponse from '../fixtures/speciesResponse.json'
 import cellTypeWheelData from '../fixtures/CellTypeDataForWheelResponse.json'
 import heatMapTCellResponse from '../fixtures/heatMapRegulatoryTCellResponse.json'
