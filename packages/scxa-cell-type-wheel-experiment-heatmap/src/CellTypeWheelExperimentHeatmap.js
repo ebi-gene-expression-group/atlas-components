@@ -51,17 +51,17 @@ function CellTypeWheelExperimentHeatmap (props) {
       />
       <div className={`row-expanded small-12 columns`}>
         <div className={`small-12 medium-6 columns`} aria-label={`Cell type wheel`}>
-          {props.searchTerm.length > 0 ?
+          {props.searchTerm.trim() ?
             <CellTypeWheelFetchLoader
               host={props.host}
               resource={URI(props.searchTerm, props.cellTypeWheelResource).toString()}
-              fulfilledPayloadProvider={cellTypeWheelData => ({data: cellTypeWheelData})}
+              fulfilledPayloadProvider={cellTypeWheelData => ({ data: cellTypeWheelData })}
               searchTerm={props.searchTerm}
               onCellTypeWheelClick={onCellTypeWheelClick}
             /> :
             <div className={`medium-text-center`} aria-label={`Empty search term`}>
               <h4>
-                Please enter a search term to be able to see the cell type wheel.
+                Please enter a search term to be able to see the distribution of cell types across species.
               </h4>
             </div>
           }
@@ -77,7 +77,7 @@ function CellTypeWheelExperimentHeatmap (props) {
               heatmapRowHeight={40}
               species={heatmapSelection.species}
               heatmapType={`multiexperimentcelltypes`}
-            /> : props.searchTerm.length > 0 ?
+            /> : props.searchTerm.trim() ?
               <div className={`medium-text-center`} aria-label={`No cell type selected`}>
                 <h4>
                   Please click on a cell type to see a detailed view of the expression profile of top-scoring genes across experiments.

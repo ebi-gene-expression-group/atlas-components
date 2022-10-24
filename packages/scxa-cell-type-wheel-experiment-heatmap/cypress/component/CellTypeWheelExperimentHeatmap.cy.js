@@ -37,7 +37,9 @@ describe(`CellTypeWheelExperimentHeatmap`, () => {
     cy.mount(<CellTypeWheelExperimentHeatmap
       {...props}
     />)
-    cy.get(emptySearchTermSelector).should(`have.text`, `Please enter a search term to be able to see the cell type wheel.`)
+    cy.get(emptySearchTermSelector)
+      .should(`have.text`,
+        `Please enter a search term to be able to see the distribution of cell types across species.`)
   })
 
   it(`mounts with data and check if the cell type wheel is displayed`, () => {
@@ -66,8 +68,8 @@ describe(`CellTypeWheelExperimentHeatmap`, () => {
 
     const ringElement = cy.contains(`regulatory T cell`)
     ringElement.click({ force: true })
-    heatMapTCellResponse.map((cell) => cell.geneName).forEach(
-      geneName => cy.contains(geneName)
+    heatMapTCellResponse.forEach(
+      cell => cy.contains(cell.geneName)
     )
   })
 })
