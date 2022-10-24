@@ -51,13 +51,20 @@ function CellTypeWheelExperimentHeatmap (props) {
       />
       <div className={`row-expanded small-12 columns`}>
         <div className={`small-12 medium-6 columns`} aria-label={`Cell type wheel`}>
-          <CellTypeWheelFetchLoader
-            host={props.host}
-            resource={URI(props.searchTerm, props.cellTypeWheelResource).toString()}
-            fulfilledPayloadProvider={ cellTypeWheelData => ({ data: cellTypeWheelData }) }
-            searchTerm={props.searchTerm}
-            onCellTypeWheelClick={onCellTypeWheelClick}
-          />
+          {props.searchTerm.length > 0 ?
+            <CellTypeWheelFetchLoader
+              host={props.host}
+              resource={URI(props.searchTerm, props.cellTypeWheelResource).toString()}
+              fulfilledPayloadProvider={cellTypeWheelData => ({data: cellTypeWheelData})}
+              searchTerm={props.searchTerm}
+              onCellTypeWheelClick={onCellTypeWheelClick}
+            /> :
+            <div className={`medium-text-center`} aria-label={`Empty search term`}>
+              <h4>
+                Please enter a search term to be able to see the cell type wheel.
+              </h4>
+            </div>
+          }
         </div>
         <div className={`small-12 medium-6 columns`} aria-label={`Heatmap of top-scoring genes`}>
           {heatmapSelection.cellType ?
@@ -70,12 +77,13 @@ function CellTypeWheelExperimentHeatmap (props) {
               heatmapRowHeight={40}
               species={heatmapSelection.species}
               heatmapType={`multiexperimentcelltypes`}
-            /> :
-            <div className={`medium-text-center`} aria-label={`No cell type selected`}>
-              <h4>
-                Please click on a cell type to see a detailed view of the expression profile of top-scoring genes across experiments.
-              </h4>
-            </div>
+            /> : props.searchTerm.length > 0 ?
+              <div className={`medium-text-center`} aria-label={`No cell type selected`}>
+                <h4>
+                  Please click on a cell type to see a detailed view of the expression profile of top-scoring genes across experiments.
+                </h4>
+              </div> :
+              <div/>
           }
         </div>
       </div>
