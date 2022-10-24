@@ -10,11 +10,12 @@ function firstWordMatcherOf (str) {
 }
 
 describe(`CellTypeWheelExperimentHeatmap`, () => {
-  const props = {
-    searchTerm: `t cell`
-  }
+  let props = {}
 
   beforeEach(() => {
+    props = {
+      searchTerm: `t cell`
+    }
     cy.intercept(`GET`, `/gxa/sc/json/cell-type-wheel/t%20cell`,
       cellTypeWheelData)
   })
@@ -25,6 +26,18 @@ describe(`CellTypeWheelExperimentHeatmap`, () => {
       {...props}
     />)
     cy.contains(`Failed fetching species`)
+  })
+
+  it(`when the search term is empty then the cell type wheel is not displayed`, () => {
+    props.searchTerm = ``
+    cy.intercept(`GET`, `/gxa/sc/json/suggestions/species`,
+      speciesResponse)
+    const emptySearchTermSelector = `[aria-label='Empty search term']`
+    cy.viewport(800, 1000)
+    cy.mount(<CellTypeWheelExperimentHeatmap
+      {...props}
+    />)
+    cy.get(emptySearchTermSelector).should(`have.text`, `Please enter a search term to be able to see the cell type wheel.`)
   })
 
   it(`mounts with data and check if the cell type wheel is displayed`, () => {
