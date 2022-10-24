@@ -5,7 +5,7 @@ const commonPublicPath = `/dist/`
 
 module.exports = {
   entry: {
-    CellTypeWheelExperimentHeatmapDemo: [`@babel/polyfill`, `./html/Demo.js`],
+    CellTypeWheelExperimentHeatmapDemo: `./html/Demo.js`
   },
 
   output: {

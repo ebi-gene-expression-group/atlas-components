@@ -1,0 +1,47 @@
+[
+  {
+    "x": 0,
+    "y": 0,
+    "geneName": "H2-Q7",
+    "value": 2815.5964,
+    "cellGroupValue": "E-ENAD-15",
+    "cellGroupValueWhereMarker": "E-ENAD-15",
+    "pValue": 3.7732137469767057E-13
+  },
+  {
+    "x": 0,
+    "y": 1,
+    "geneName": "Cd3g",
+    "value": 744.5712,
+    "cellGroupValue": "E-ENAD-15",
+    "cellGroupValueWhereMarker": "E-ENAD-15",
+    "pValue": 3.7732137469767057E-13
+  },
+  {
+    "x": 0,
+    "y": 2,
+    "geneName": "Ltb",
+    "value": 1068.4293,
+    "cellGroupValue": "E-ENAD-15",
+    "cellGroupValueWhereMarker": "E-ENAD-15",
+    "pValue": 9.24021693114348E-13
+  },
+  {
+    "x": 0,
+    "y": 3,
+    "geneName": "Trac",
+    "value": 1103.439,
+    "cellGroupValue": "E-ENAD-15",
+    "cellGroupValueWhereMarker": "E-ENAD-15",
+    "pValue": 1.3548007742156037E-12
+  },
+  {
+    "x": 0,
+    "y": 4,
+    "geneName": "Shisa5",
+    "value": 3256.464,
+    "cellGroupValue": "E-ENAD-15",
+    "cellGroupValueWhereMarker": "E-ENAD-15",
+    "pValue": 1.7440081553185913E-12
+  }
+]
