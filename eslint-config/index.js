@@ -5,12 +5,14 @@ module.exports = {
   },
 
   plugins: [
-    'react'
+    'react',
+    'cypress'
   ],
 
   extends: [
     'eslint:recommended',
     'plugin:react/recommended',
+    'plugin:cypress/recommended',
     'standard'
   ],
 
