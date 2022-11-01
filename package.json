@@ -2,7 +2,6 @@
   "name": "root",
   "private": true,
   "devDependencies": {
-    "babel": "^6.23.0",
     "lerna": "^5.1.2"
   }
 }
