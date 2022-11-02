@@ -12,15 +12,10 @@
 
   <style>
     /* Override EBI VF styles for components that use React Select */
-    #widget-without-controls input, #widget-with-controls input {
+    #target input {
       height: unset;
       box-shadow: none;
       margin: 0;
-    }
-
-    /* Fix for Highcharts tooltip being clipped */
-    .highcharts-container {
-      overflow: visible !important;
     }
 
     svg {
@@ -40,7 +35,7 @@
 <script src="/dist/CellTypeWheelExperimentHeatmapDemo.bundle.js"></script>
 
 <script>
-  document.addEventListener('DOMContentLoaded', function (event) {
+  document.addEventListener('DOMContentLoaded', function () {
     CellTypeWheelExperimentHeatmapDemo.render({}, 'target');
   })
 </script>
