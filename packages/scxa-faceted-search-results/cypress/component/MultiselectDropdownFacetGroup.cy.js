@@ -5,18 +5,10 @@ import MultiselectDropdownFacetGroup from '../../src/facetgroups/MultiselectDrop
 import {getFacetTooltip, getPropsWithoutTooltip, getPropsWithTooltip} from "./TestUtils";
 
 describe(`MultiselectDropdownFacetGroup`, () => {
-
-  let propsWithTooltip = {}
-  let propsWithoutTooltip = {}
-  let facetTooltip
-
-  beforeEach(() => {
-    facetTooltip = getFacetTooltip()
-    propsWithTooltip = getPropsWithTooltip(facetTooltip)
-    propsWithoutTooltip = getPropsWithoutTooltip()
-  })
-
   it(`displays the expected tooltip if it exists`, () => {
+    const facetTooltip = getFacetTooltip()
+    const propsWithTooltip = getPropsWithTooltip(facetTooltip)
+
     cy.mount(<MultiselectDropdownFacetGroup {...propsWithTooltip}/>)
     cy.get(`div.padding-bottom-xlarge h4 sup span`)
       .should(`have.class`, `icon icon-generic`)
@@ -25,6 +17,8 @@ describe(`MultiselectDropdownFacetGroup`, () => {
   })
 
   it(`doesn’t display tooltip if not present`, () => {
+    const propsWithoutTooltip = getPropsWithoutTooltip()
+
     cy.mount(<MultiselectDropdownFacetGroup {...propsWithoutTooltip}/>)
     cy.get(`div.padding-bottom-xlarge h4`)
       .children()
