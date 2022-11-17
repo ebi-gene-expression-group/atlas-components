@@ -119,7 +119,7 @@ class TSnePlotView extends React.Component {
     const {loadingGeneExpression, geneExpressionData, geneExpressionErrorMessage} = this.state
     const {loadingCellClusters, cellClustersData, cellClustersErrorMessage} = this.state
 
-    const plot = _find(plotTypeDropdown, (plot) => plot.plotType.toLowerCase() === selectedPlotType)
+    const plot = _find(plotTypeDropdown, (plot) => plot.plotType.toLowerCase() === selectedPlotType.toLowerCase())
 
     const plotOptionsValues = plot.plotOptions.map((option) =>
       ({value: Object.values(option)[0], label: Object.keys(option)[0]+`: `+Object.values(option)[0]}))
@@ -156,7 +156,7 @@ class TSnePlotView extends React.Component {
                 options={plotTypesOptions}
                 defaultValue={{value: selectedPlotType, label: plot.plotType}}
                 onSelect={(selectedPlotType) => {
-                  onChangePlotTypes(selectedPlotType.value)
+                  onChangePlotTypes(selectedPlotType)
                 }}/>
           </div>
           <div className={`small-12 medium-6 columns`}>
