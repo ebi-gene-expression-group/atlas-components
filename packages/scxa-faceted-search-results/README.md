@@ -29,7 +29,25 @@ The sidebar disables/hides options in order to avoid combinations that would pro
 100% foolproof since you can arrive at a no results state by unchecking options, but disabling an already chosen
 facet can potentially lock the user without no apparent reason, resulting in bad UX.
 
-# Try it out
+# Requirements
+
+You should have node version at least 7 or later.
+You can check your current installed version executing this command.
+```shell
+npm --version
+8.5.6
+```
+
+# How to execute the unit tests with Cypress
+
+We are using the [Cypress framework](https://docs.cypress.io/guides/overview/why-cypress) for unit testing this package.
+You can execute the existing tests in the following way:
+1. Type `npx cypress open` in the terminal in the root folder of this package.
+2. In the appearing browser window you have to click on `Component Testing`,
+select a browser and click on `Start Component Testing in <browser name>`.
+3. In the appearing list just click on the test you would like to run and check the results on the screen.
+
+# Try out the component with a given example
 Just run [webpack-dev-server](https://github.com/webpack/webpack-dev-server):
 ```
 npx webpack-dev-server -d
