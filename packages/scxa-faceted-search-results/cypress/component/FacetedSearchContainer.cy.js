@@ -80,15 +80,22 @@ describe(`FacetedSearchContainer`, () => {
       })
 
     let dropdownTitles = []
-    cy.get(`h4 sup`).parent().each((title) => {
-      dropdownTitles.push(title[0].innerText)
-    }).then(() => {
-      dropdownTitles.forEach((title) => {
-        cy.contains(title).siblings().find(`input`)
-        // TODO: get the dropdown list,
-        // but they are not there in the generated HTML
+    cy.get(`div.css-qbdosj-Input`).first().click()
+    cy.get(`div.css-dzz542-menu`).then(() => {
+      cy.get(`div.css-1n6sfyn-MenuList`).then((selectedTitles) => {
+        Object.values(selectedTitles)[0].childNodes.forEach(node => {
+          let label = dropdownTitles.push(node.innerText)
+          if (!dropdownTitles.includes(label)) {
+            dropdownTitles.push(label)
+          } else {
+            uniqueness = false
+          }
+        })
       })
+    }).then(() => {
+      expect(uniqueness).is.true
     })
+    
     // TODO: code fragement from the original (broken) test case
     // wrapper.find(MultiselectDropdownFacetGroup).forEach(
     //   (facetGroup) =>
