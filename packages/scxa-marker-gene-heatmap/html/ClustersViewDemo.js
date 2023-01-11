@@ -59,6 +59,7 @@ class Demo extends React.Component {
           wrapperClassName={`row expanded`}
           resource={
             this.state.selectedClusterByCategory == `metadata` ?
+                //http://localhost:8080/gxa/sc/json/experiments/E-MTAB-5061/marker-genes-heatmap/cell-types?cellGroupType=inferred%20cell%20type%20-%20ontology%20labels
                 URI(`json/experiments/${this.state.experimentAccession}/marker-genes-heatmap/cell-types`)
                     .search({cellGroupType: this.state.selectedClusterId})
                     .toString() :
@@ -66,7 +67,7 @@ class Demo extends React.Component {
                   .search({k: this.state.selectedClusterId})
                   .toString()
           }
-          host={`https://wwwdev.ebi.ac.uk:8080/gxa/sc/`}
+          host={`https://wwwdev.ebi.ac.uk/gxa/sc/`}
           ks={this.state.ks}
           ksWithMarkers={this.state.ksWithMarkers}
           selectedClusterByCategory={this.state.selectedClusterByCategory}
