@@ -2,6 +2,7 @@ import React from 'react'
 import CellTypeWheel from '../../src/CellTypeWheel'
 
 import cellTypeWheelData from '../fixtures/lung-cancer.json'
+import bigCellTypeWheelData from '../fixtures/cancer.json'
 
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
 function getRandomInt(max) {
@@ -88,5 +89,27 @@ describe(`<CellTypeWheel>`, () => {
     outerRingTextPath.click()
 
     cy.get(`@onCellTypeWheelClick`).should(`not.have.been.called`)
+  })
+
+  it(`should show data labels properly while zooming in from an inner cell`, () => {
+    const callbackWrapper = {
+      onCellTypeWheelClick: function (cellType, species, experimentAccessions) {
+      }
+    }
+    cy.mount(
+        <CellTypeWheel
+            data={bigCellTypeWheelData}
+            onCellTypeWheelClick={callbackWrapper.onCellTypeWheelClick}
+        />)
+    let innerRingElement = cy.contains(`Homo sapiens`)
+    innerRingElement.click({ force: true })
+    const ringElement = cy.contains(`brain`)
+    ringElement.click({ force: true })
+    cy.contains(`astrocyte`)
+
+    cy.get(`.highcharts-data-labels`).find(`text`).each(label =>
+        cy.get(label[0].attributes.visibility).should(`not.exist`)
+    )
+
   })
 })
