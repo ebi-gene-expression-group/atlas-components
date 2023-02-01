@@ -1,5 +1,24 @@
 [
   {
+    "experimentAccession": "E-ANND-10",
+    "experimentDescription": "Single-cell transcriptome profiling for metastatic renal cell carcinoma patient-derived cells and xenografts",
+    "species": "Homo sapiens",
+    "kingdom": "animals",
+    "loadDate": "25-09-2019",
+    "lastUpdate": "25-09-2019",
+    "numberOfAssays": 118,
+    "rawExperimentType": "SINGLE_CELL_RNASEQ_MRNA_BASELINE",
+    "experimentType": "Baseline",
+    "technologyType": [
+      "smart-like"
+    ],
+    "experimentalFactors": [
+      "single cell identifier",
+      "growth condition"
+    ],
+    "experimentProjects": []
+  },
+  {
     "experimentAccession": "E-CURD-10",
     "experimentDescription": "Single-cell transcriptome profiling for metastatic renal cell carcinoma patient-derived cells and xenografts",
     "species": "Homo sapiens",
