@@ -31,6 +31,24 @@
         {
           tableHeaders: [
             {
+              label: 'Type',
+              dataKey: 'experimentAccession',
+              sortable: true,
+              width: 0.5,
+              image: {
+                  anndata: {
+                      src: 'https://www.ebi.ac.uk/gxa/resources/images/experiments-table/differential.png',
+                      alt: 'Anndata experiment',
+                      title: 'Anndata experiment'
+                  },
+                  nonAnndata: {
+                      src: 'https://www.ebi.ac.uk/gxa/resources/images/experiments-table/baseline.png',
+                      alt: 'Non-anndata experiment',
+                      title: 'Non-anndata experiment'
+                  }
+              }
+            },
+            {
               label: 'Load date',
               dataKey: 'loadDate',
               sortable: true,
