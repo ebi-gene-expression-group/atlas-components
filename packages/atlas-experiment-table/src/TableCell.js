@@ -11,6 +11,10 @@ const TableCell = ({ dataRow, dataKey, image, linkTo, host, width }) => {
     if (image[dataRow[dataKey]]) {
       cellItem = <img {...image[dataRow[dataKey]]}/>
     }
+    else if(Object.keys(image).includes(`anndata`)){
+      let ifAnndata = dataRow[dataKey].substring(0,6) === `E-ANND` ? `anndata` : `nonAnndata`
+      cellItem= <img {...image[ifAnndata]}/>
+    }
     else {
       cellItem = `❔`
     }
