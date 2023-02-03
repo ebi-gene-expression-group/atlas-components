@@ -63,6 +63,32 @@ describe(`TableCell`, () => {
     expect(wrapper.find(Table.Cell).find(`img`)).toHaveProp({src: `imageUrl`, alt: `altText`})
   })
 
+  test.each(
+      [`E-ANND-12`, `testExperimentAccession`, `E-MTAB-12`]
+  )(`is an image and check if it is an Anndata experiment or else`, (arrayDataKey) => {
+      const image = {
+            anndata: {
+              // tbc
+              src: `anndata image source`,
+              alt: `Anndata experiment`,
+              title: `Anndata experiment`
+            },
+            nonAnndata: {
+              src: `nonAnndata image source`,
+              alt: `Non-anndata experiment`,
+              title: `Non-anndata experiment`
+            }
+      }
+      props.dataRow.string = arrayDataKey
+    
+      const wrapper = shallow(<TableCell {...props} image={image} dataKey={`string`} />)
+0
+      expect(wrapper.find(Table.Cell)).toContainExactlyOneMatchingElement(`img`)
+      arrayDataKey.substring(0, 6) === `E-ANND` ? 
+          expect(wrapper.find(Table.Cell).find(`img`)).toHaveProp({src: `anndata image source`, alt: `Anndata experiment`}) :
+          expect(wrapper.find(Table.Cell).find(`img`)).toHaveProp({src: `nonAnndata image source`, alt: `Non-anndata experiment`})
+    })
+
   test(`defaults to a fallback icon if a suitable image can’t be found`, () => {
     const image = {}
     const wrapper = shallow(<TableCell {...props} image={image} dataKey={`string`}/>)
