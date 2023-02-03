@@ -1,15 +1,13 @@
 {
   "name": "@ebi-gene-expression-group/scxa-cell-type-wheel-heatmap",
-  "version": "1.1.0-beta2",
+  "version": "1.3.2",
   "publishConfig": {
     "access": "public"
   },
-  "description": "My package does some neat things",
+  "description": "Cell type wheel with heatmap and search box for Single Cell Expression Atlas",
   "main": "lib/index.js",
   "scripts": {
-    "prepare": "rm -rf lib && babel src -d lib --copy-files",
-    "test": "jest",
-    "posttest": "jest --coverage --coverageReporters=text-lcov | coveralls"
+    "prepare": "rm -rf lib && babel src -d lib --copy-files"
   },
   "jest": {
     "setupFilesAfterEnv": [
@@ -27,9 +25,10 @@
     "url": "https://github.com/atlas-components.git"
   },
   "dependencies": {
-    "@ebi-gene-expression-group/atlas-react-fetch-loader": "^3.9.0-beta1",
-    "@ebi-gene-expression-group/scxa-cell-type-wheel": "^1.1.0-beta",
-    "@ebi-gene-expression-group/scxa-marker-gene-heatmap": "^2.1.0",
+    "@ebi-gene-expression-group/atlas-react-fetch-loader": "*",
+    "@ebi-gene-expression-group/scxa-cell-type-wheel": "^1.1.2",
+    "@ebi-gene-expression-group/scxa-gene-search-form": "*",
+    "@ebi-gene-expression-group/scxa-marker-gene-heatmap": "^2.5.1",
     "highcharts": "^10.1.0",
     "highcharts-react-official": "^3.1.0",
     "lodash": "^4.17.21",
@@ -43,10 +42,14 @@
     "@babel/core": "^7.18.2",
     "@babel/preset-env": "^7.18.2",
     "@babel/preset-react": "^7.17.12",
-    "@ebi-gene-expression-group/eslint-config": "^3.1.0",
+    "@cypress/code-coverage": "^3.10.0",
+    "@ebi-gene-expression-group/eslint-config": "^3.5.1",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^12.1.5",
     "babel-loader": "^8.2.5",
+    "babel-plugin-istanbul": "^6.1.1",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "cypress": "^10.10.0",
     "eslint": "^8.17.0",
     "file-loader": "^6.2.0",
     "jest": "^28.1.1",

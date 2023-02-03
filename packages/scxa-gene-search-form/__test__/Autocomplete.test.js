@@ -1,97 +1,149 @@
+/**
+ * @jest-environment jsdom
+ */
+
 import React from 'react'
-import renderer from 'react-test-renderer'
-import { shallow } from 'enzyme'
-import fetchMock from 'fetch-mock'
 import URI from 'urijs'
 
-import '@babel/polyfill'
+import { render, screen } from '@testing-library/react'
+import { getDefaultNormalizer } from '@testing-library/dom'
+import userEvent from '@testing-library/user-event'
+
+import { server, waitForRequest } from './fetch-mocks/server'
 import Autocomplete from '../src/Autocomplete'
-import AsyncCreatableSelect from 'react-select/async-creatable'
 
 const getRandomInt = (max) => Math.floor(Math.random() * Math.floor(max))
 
-const props = {
-  host: `foo/`,
-  suggesterEndpoint: `suggest`,
-  onChange: () => {},
-  labelText: `Foobar:`
-}
-
-const defaultValue = {
-  term: `foo`,
-  category: `bar`
-}
-
-const species = [
-  `Meeseek`,
-  `Gromflomite`,
-  `Cromulon`,
-  `Zigerion`,
-  `Moopian`,
-  `Bliznarvian`,
-  `Greebybobe`
-]
-
-describe(`Autocomplete`, () => {
-  test(`displays the default value`, () => {
-    const wrapper = shallow(<Autocomplete {...props} defaultValue={defaultValue} />)
-    expect(wrapper.find(AsyncCreatableSelect).props().defaultValue).toEqual({
-      label: defaultValue.term,
-      value: JSON.stringify(defaultValue)
-    })
-  })
-
-  test(`matches snapshot`, () => {
-    const tree =
-      renderer
-        .create(<Autocomplete Autocomplete {...props} defaultValue={defaultValue} allSpecies={species} />)
-        .toJSON()
-    expect(tree).toMatchSnapshot()
-  })
+beforeAll(() => {
+  // Enable the mocking in tests
+  server.listen()
 })
 
-describe(`Autocomplete suggestions fetch`, () => {
-  beforeEach(() => {
-    fetchMock.restore()
+afterEach(() => {
+  // Reset any runtime handlers tests may use
+  server.resetHandlers()
+})
+
+afterAll(() => {
+  // Clean up once the tests are done
+  server.close()
+})
+
+const props = {
+  host: `gxa/sc/`,
+  suggesterEndpoint: `suggest`,
+  allSpecies: [
+    `Meeseek`,
+    `Gromflomite`,
+    `Cromulon`,
+    `Zigerion`,
+    `Moopian`,
+    `Bliznarvian`,
+    `Greebybobe`
+  ],
+  onChange: () => {},
+  labelText: `Foobar`
+}
+
+describe(`Autocomplete`, () => {
+  test(`displays term of default value`, () => {
+    const defaultValue = {
+      term: `Morty`,
+      category: `Main characters`
+    }
+
+    render(
+      <Autocomplete
+        {...props}
+        defaultValue={defaultValue}
+      />)
+    expect(screen.getByText(defaultValue.term)).toBeInTheDocument()
   })
 
-  test(`calls suggester with selected species as request parameter`, () => {
-    fetchMock.get(`*`, [])
+  // MSW advises against request assertions in https://mswjs.io/docs/recipes/request-assertions, but testing the proper
+  // display of the options in React Select is something that falls under the latter’s responsibility and shouldn’t be
+  // our concern. Another (better?) option could be to export _asyncFetchOptions and test the function in isolation.
+  test(`uses entered text as query for suggestions`, async () => {
+    const user = userEvent.setup()
+    render(
+      <Autocomplete
+        {...props}
+      />)
+    const input = await screen.findByRole(`combobox`)
+    input.focus()
 
-    const randomSpecies = species[getRandomInt(species.length)]
-    const wrapper =
-      shallow(<Autocomplete {...props} selectedSpecies={randomSpecies} />)
-        .find(AsyncCreatableSelect).dive()
-
-    wrapper.simulate(`inputChange`, `yeah`)
-
-    expect(fetchMock.calls()).toHaveLength(1)
-    expect(URI(fetchMock.lastUrl()).search(true)).toHaveProperty(`species`, randomSpecies)
+    const query = [`f`, `o`, `o`, `b`, `a`, `r`]
+    // Unfortunately and unexpectedly, forEach doesn’t work and the request ends up having the whole word in the first
+    // iteration, probably beacuse the function is explictly async
+    for (let i = 0; i < query.length; i++) {
+      const keystroke = query[i]
+      const pendingRequest = waitForRequest(`GET`, URI(props.suggesterEndpoint, props.host).toString())
+      user.keyboard(`{${keystroke}}`)
+      const request = await pendingRequest
+      expect(URI(request.url.toString()).query(true)).toHaveProperty(`query`, query.slice(0, i + 1).join(``))
+    }
   })
 
-  test(`calls suggester with all species as request parameter if no selected species is provided`, () => {
-    fetchMock.get(`*`, [])
+  test(`uses selected species as a request parameter to filter suggestions`, async () => {
+    const user = userEvent.setup()
+    const randomSpecies = props.allSpecies[getRandomInt(props.allSpecies.length)]
+    render(
+      <Autocomplete
+        {...props}
+        selectedSpecies = {randomSpecies}
+      />)
+    const input = await screen.findByRole(`combobox`)
+    input.focus()
 
-    const wrapper =
-      shallow(<Autocomplete {...props} allSpecies={species} />)
-        .find(AsyncCreatableSelect).dive()
-
-    wrapper.simulate(`inputChange`, `yeah`)
-
-    expect(fetchMock.calls()).toHaveLength(1)
-    expect(URI(fetchMock.lastUrl()).search(true)).toHaveProperty(`species`, species.join(`,`))
+    const pendingRequest = waitForRequest(`GET`, URI(props.suggesterEndpoint, props.host).toString())
+    user.keyboard(`{a}`)
+    const request = await pendingRequest
+    expect(URI(request.url.toString()).query(true)).toHaveProperty(`species`, randomSpecies)
   })
 
-  test(`can hide the label if we pass an empty string`, () => {
-    const wrapper = shallow(<Autocomplete {...props} labelText={``} />)
+  test(`uses all species to filter suggestions if no species is selected`, async () => {
+    const user = userEvent.setup()
+    render(
+      <Autocomplete
+        {...props}
+      />)
+    const input = await screen.findByRole(`combobox`)
+    input.focus()
 
-    expect(wrapper).not.toContainMatchingElement(`label`)
+    const pendingRequest = waitForRequest(`GET`, URI(props.suggesterEndpoint, props.host).toString())
+    user.keyboard(`{a}`)
+    const request = await pendingRequest
+    expect(URI(request.url.toString()).query(true)).toHaveProperty(`species`, props.allSpecies.join(`,`))
   })
 
-  test(`can customise the label`, () => {
-    const labelText = `COVID-19 UK lockdown day 2`
-    const wrapper = shallow(<Autocomplete {...props} labelText={labelText} />)
+  test(`shows an empty label if it’s explicitly set to an empty string`, () => {
+    render(
+      <Autocomplete
+        {...props}
+        labelText={``}
+      />)
 
-    expect(wrapper.find(`label`)).toHaveText(labelText)
+    expect(
+      screen.getByLabelText(
+        ` `,
+        { normalizer: getDefaultNormalizer({ trim: false }) }
+      )
+    ).toBeInTheDocument()
+  })
+
+  test(`can customise the label to any non-empty text`, () => {
+    const labelText = `Elvis has left the building`
+    render(
+      <Autocomplete
+        {...props}
+        labelText={labelText}
+      />)
+
+    expect(screen.getByLabelText(labelText)).toBeInTheDocument()
+  })
+
+  test(`renders correctly`, () => {
+    const { container } = render(<Autocomplete {...props} />)
+    expect(container).toMatchSnapshot()
   })
 })

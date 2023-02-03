@@ -1,6 +1,10 @@
+/**
+ * @jest-environment jsdom
+ */
+
 import React from 'react'
-import renderer from 'react-test-renderer'
-import { shallow } from 'enzyme'
+
+import { render, screen } from '@testing-library/react'
 
 import SearchExamples from '../src/SearchExamples'
 import searchExamples from './utils/searchExamples'
@@ -11,15 +15,14 @@ const props = {
 
 describe(`SearchExamples`, () => {
   test(`renders one link per element`, () => {
-    const wrapper = shallow(<SearchExamples {...props} />)
-    expect(wrapper.find(`a`)).toHaveLength(props.links.length)
+    render(<SearchExamples {...props} />)
+    props.links.forEach(link => {
+      expect(screen.getByText(link.text)).toBeInTheDocument()
+    })
   })
 
   test(`matches snapshot`, () => {
-    const tree =
-      renderer
-        .create(<SearchExamples links={searchExamples} />)
-        .toJSON()
-    expect(tree).toMatchSnapshot()
+    const { container } = render(<SearchExamples links={searchExamples} />)
+    expect(container).toMatchSnapshot()
   })
 })

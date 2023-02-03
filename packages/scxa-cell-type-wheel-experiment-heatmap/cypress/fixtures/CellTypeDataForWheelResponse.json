@@ -1,0 +1,2082 @@
+[
+  {
+    "name": "t cell",
+    "id": "t cell",
+    "parent": "",
+    "value": 1,
+    "experimentAccessions": [
+      "E-HCAD-4",
+      "E-HCAD-8",
+      "E-CURD-112",
+      "E-MTAB-9801",
+      "E-CURD-85",
+      "E-MTAB-6701",
+      "E-MTAB-9221",
+      "E-MTAB-6678",
+      "E-MTAB-8911",
+      "E-GEOD-111727",
+      "E-MTAB-7606",
+      "E-MTAB-8498",
+      "E-CURD-97",
+      "E-GEOD-106540",
+      "E-MTAB-6379",
+      "E-MTAB-4850",
+      "E-CURD-95",
+      "E-HCAD-15",
+      "E-HCAD-1",
+      "E-MTAB-10553",
+      "E-HCAD-9",
+      "E-CURD-46",
+      "E-MTAB-8142",
+      "E-MTAB-8410",
+      "E-CURD-89",
+      "E-HCAD-10",
+      "E-GEOD-130148",
+      "E-HCAD-35",
+      "E-HCAD-13",
+      "E-MTAB-8002",
+      "E-MTAB-7311",
+      "E-CURD-96",
+      "E-MTAB-4888",
+      "E-MTAB-4388",
+      "E-ENAD-15",
+      "E-MTAB-6051",
+      "E-MTAB-4619",
+      "E-MTAB-10196",
+      "E-EHCA-2",
+      "E-MTAB-7704",
+      "E-MTAB-6945",
+      "E-MTAB-8810",
+      "E-CURD-52",
+      "E-GEOD-100911"
+    ]
+  },
+  {
+    "name": "Danio rerio",
+    "id": "Danio rerio",
+    "parent": "t cell",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-100911"
+    ]
+  },
+  {
+    "name": "head kidney",
+    "id": "Danio rerio#head kidney",
+    "parent": "Danio rerio",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-100911"
+    ]
+  },
+  {
+    "name": "mature T cell",
+    "id": "Danio rerio#head kidney#mature T cell",
+    "parent": "Danio rerio#head kidney",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-100911"
+    ]
+  },
+  {
+    "name": "Homo sapiens",
+    "id": "Homo sapiens",
+    "parent": "t cell",
+    "value": 1,
+    "experimentAccessions": [
+      "E-HCAD-4",
+      "E-HCAD-8",
+      "E-CURD-112",
+      "E-MTAB-9801",
+      "E-CURD-85",
+      "E-MTAB-6701",
+      "E-MTAB-9221",
+      "E-MTAB-6678",
+      "E-MTAB-8911",
+      "E-GEOD-111727",
+      "E-MTAB-7606",
+      "E-MTAB-8498",
+      "E-CURD-97",
+      "E-GEOD-106540",
+      "E-MTAB-6379",
+      "E-MTAB-4850",
+      "E-CURD-95",
+      "E-HCAD-15",
+      "E-HCAD-1",
+      "E-MTAB-10553",
+      "E-HCAD-9",
+      "E-CURD-46",
+      "E-MTAB-8142",
+      "E-MTAB-8410",
+      "E-CURD-89",
+      "E-HCAD-10",
+      "E-GEOD-130148",
+      "E-HCAD-35",
+      "E-HCAD-13"
+    ]
+  },
+  {
+    "name": "ascending colon",
+    "id": "Homo sapiens#ascending colon",
+    "parent": "Homo sapiens",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-8410"
+    ]
+  },
+  {
+    "name": "CD4-positive, alpha-beta T cell",
+    "id": "Homo sapiens#ascending colon#CD4-positive, alpha-beta T cell",
+    "parent": "Homo sapiens#ascending colon",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-8410"
+    ]
+  },
+  {
+    "name": "CD8-positive, alpha-beta T cell",
+    "id": "Homo sapiens#ascending colon#CD8-positive, alpha-beta T cell",
+    "parent": "Homo sapiens#ascending colon",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-8410"
+    ]
+  },
+  {
+    "name": "blood",
+    "id": "Homo sapiens#blood",
+    "parent": "Homo sapiens",
+    "value": 1,
+    "experimentAccessions": [
+      "E-CURD-85",
+      "E-MTAB-6701",
+      "E-HCAD-8",
+      "E-MTAB-9221",
+      "E-MTAB-6678",
+      "E-MTAB-8911",
+      "E-GEOD-111727",
+      "E-MTAB-7606",
+      "E-MTAB-8498",
+      "E-CURD-97",
+      "E-GEOD-106540",
+      "E-MTAB-6379",
+      "E-MTAB-4850"
+    ]
+  },
+  {
+    "name": "activated CD4-positive, alpha-beta T cell",
+    "id": "Homo sapiens#blood#activated CD4-positive, alpha-beta T cell",
+    "parent": "Homo sapiens#blood",
+    "value": 1,
+    "experimentAccessions": [
+      "E-HCAD-8"
+    ]
+  },
+  {
+    "name": "CD4-positive helper T cell",
+    "id": "Homo sapiens#blood#CD4-positive helper T cell",
+    "parent": "Homo sapiens#blood",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-8911",
+      "E-GEOD-111727"
+    ]
+  },
+  {
+    "name": "CD4-positive, alpha-beta T cell",
+    "id": "Homo sapiens#blood#CD4-positive, alpha-beta T cell",
+    "parent": "Homo sapiens#blood",
+    "value": 1,
+    "experimentAccessions": [
+      "E-HCAD-8"
+    ]
+  },
+  {
+    "name": "CD4-positive, CD25-positive, alpha-beta regulatory T cell",
+    "id": "Homo sapiens#blood#CD4-positive, CD25-positive, alpha-beta regulatory T cell",
+    "parent": "Homo sapiens#blood",
+    "value": 1,
+    "experimentAccessions": [
+      "E-CURD-97"
+    ]
+  },
+  {
+    "name": "CD8-Positive T-Lymphocytes",
+    "id": "Homo sapiens#blood#CD8-Positive T-Lymphocytes",
+    "parent": "Homo sapiens#blood",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-6379",
+      "E-MTAB-4850"
+    ]
+  },
+  {
+    "name": "CD8-positive, alpha-beta T cell",
+    "id": "Homo sapiens#blood#CD8-positive, alpha-beta T cell",
+    "parent": "Homo sapiens#blood",
+    "value": 1,
+    "experimentAccessions": [
+      "E-HCAD-8",
+      "E-MTAB-7606"
+    ]
+  },
+  {
+    "name": "central memory CD4-positive, alpha-beta T cell",
+    "id": "Homo sapiens#blood#central memory CD4-positive, alpha-beta T cell",
+    "parent": "Homo sapiens#blood",
+    "value": 1,
+    "experimentAccessions": [
+      "E-CURD-97"
+    ]
+  },
+  {
+    "name": "cytotrophoblast",
+    "id": "Homo sapiens#blood#cytotrophoblast",
+    "parent": "Homo sapiens#blood",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-6678"
+    ]
+  },
+  {
+    "name": "decidual natural killer cell",
+    "id": "Homo sapiens#blood#decidual natural killer cell",
+    "parent": "Homo sapiens#blood",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-6678"
+    ]
+  },
+  {
+    "name": "dendritic cell",
+    "id": "Homo sapiens#blood#dendritic cell",
+    "parent": "Homo sapiens#blood",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-8498"
+    ]
+  },
+  {
+    "name": "effector memory CD4-positive, alpha-beta T cell",
+    "id": "Homo sapiens#blood#effector memory CD4-positive, alpha-beta T cell",
+    "parent": "Homo sapiens#blood",
+    "value": 1,
+    "experimentAccessions": [
+      "E-CURD-97"
+    ]
+  },
+  {
+    "name": "natural killer cell",
+    "id": "Homo sapiens#blood#natural killer cell",
+    "parent": "Homo sapiens#blood",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-6678"
+    ]
+  },
+  {
+    "name": "peripheral blood mononuclear cell",
+    "id": "Homo sapiens#blood#peripheral blood mononuclear cell",
+    "parent": "Homo sapiens#blood",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-106540"
+    ]
+  },
+  {
+    "name": "plasma cell",
+    "id": "Homo sapiens#blood#plasma cell",
+    "parent": "Homo sapiens#blood",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-6678"
+    ]
+  },
+  {
+    "name": "plasmacytoid dendritic cell",
+    "id": "Homo sapiens#blood#plasmacytoid dendritic cell",
+    "parent": "Homo sapiens#blood",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-6701",
+      "E-MTAB-8498",
+      "E-MTAB-6678"
+    ]
+  },
+  {
+    "name": "T cell",
+    "id": "Homo sapiens#blood#T cell",
+    "parent": "Homo sapiens#blood",
+    "value": 1,
+    "experimentAccessions": [
+      "E-CURD-85",
+      "E-MTAB-6701",
+      "E-HCAD-8",
+      "E-MTAB-9221",
+      "E-MTAB-6678"
+    ]
+  },
+  {
+    "name": "bone marrow",
+    "id": "Homo sapiens#bone marrow",
+    "parent": "Homo sapiens",
+    "value": 1,
+    "experimentAccessions": [
+      "E-HCAD-4",
+      "E-HCAD-8",
+      "E-CURD-112",
+      "E-MTAB-9801"
+    ]
+  },
+  {
+    "name": "activated CD4-positive, alpha-beta T cell",
+    "id": "Homo sapiens#bone marrow#activated CD4-positive, alpha-beta T cell",
+    "parent": "Homo sapiens#bone marrow",
+    "value": 1,
+    "experimentAccessions": [
+      "E-HCAD-8"
+    ]
+  },
+  {
+    "name": "CD4-positive, alpha-beta T cell",
+    "id": "Homo sapiens#bone marrow#CD4-positive, alpha-beta T cell",
+    "parent": "Homo sapiens#bone marrow",
+    "value": 1,
+    "experimentAccessions": [
+      "E-HCAD-8",
+      "E-CURD-112"
+    ]
+  },
+  {
+    "name": "CD8-positive, alpha-beta T cell",
+    "id": "Homo sapiens#bone marrow#CD8-positive, alpha-beta T cell",
+    "parent": "Homo sapiens#bone marrow",
+    "value": 1,
+    "experimentAccessions": [
+      "E-HCAD-4",
+      "E-HCAD-8",
+      "E-CURD-112"
+    ]
+  },
+  {
+    "name": "cytotoxic T cell",
+    "id": "Homo sapiens#bone marrow#cytotoxic T cell",
+    "parent": "Homo sapiens#bone marrow",
+    "value": 1,
+    "experimentAccessions": [
+      "E-HCAD-4"
+    ]
+  },
+  {
+    "name": "helper T cell",
+    "id": "Homo sapiens#bone marrow#helper T cell",
+    "parent": "Homo sapiens#bone marrow",
+    "value": 1,
+    "experimentAccessions": [
+      "E-HCAD-4"
+    ]
+  },
+  {
+    "name": "mature NK T cell",
+    "id": "Homo sapiens#bone marrow#mature NK T cell",
+    "parent": "Homo sapiens#bone marrow",
+    "value": 1,
+    "experimentAccessions": [
+      "E-CURD-112"
+    ]
+  },
+  {
+    "name": "naive thymus-derived CD4-positive, alpha-beta T cell",
+    "id": "Homo sapiens#bone marrow#naive thymus-derived CD4-positive, alpha-beta T cell",
+    "parent": "Homo sapiens#bone marrow",
+    "value": 1,
+    "experimentAccessions": [
+      "E-HCAD-4"
+    ]
+  },
+  {
+    "name": "plasmacytoid dendritic cell",
+    "id": "Homo sapiens#bone marrow#plasmacytoid dendritic cell",
+    "parent": "Homo sapiens#bone marrow",
+    "value": 1,
+    "experimentAccessions": [
+      "E-HCAD-4",
+      "E-CURD-112",
+      "E-MTAB-9801"
+    ]
+  },
+  {
+    "name": "regulatory T cell",
+    "id": "Homo sapiens#bone marrow#regulatory T cell",
+    "parent": "Homo sapiens#bone marrow",
+    "value": 1,
+    "experimentAccessions": [
+      "E-CURD-112"
+    ]
+  },
+  {
+    "name": "T cell",
+    "id": "Homo sapiens#bone marrow#T cell",
+    "parent": "Homo sapiens#bone marrow",
+    "value": 1,
+    "experimentAccessions": [
+      "E-HCAD-8"
+    ]
+  },
+  {
+    "name": "brain",
+    "id": "Homo sapiens#brain",
+    "parent": "Homo sapiens",
+    "value": 1,
+    "experimentAccessions": [
+      "E-HCAD-35"
+    ]
+  },
+  {
+    "name": "T cell",
+    "id": "Homo sapiens#brain#T cell",
+    "parent": "Homo sapiens#brain",
+    "value": 1,
+    "experimentAccessions": [
+      "E-HCAD-35"
+    ]
+  },
+  {
+    "name": "caecum",
+    "id": "Homo sapiens#caecum",
+    "parent": "Homo sapiens",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-8410",
+      "E-CURD-89"
+    ]
+  },
+  {
+    "name": "CD4-positive, alpha-beta T cell",
+    "id": "Homo sapiens#caecum#CD4-positive, alpha-beta T cell",
+    "parent": "Homo sapiens#caecum",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-8410"
+    ]
+  },
+  {
+    "name": "CD8-positive, alpha-beta T cell",
+    "id": "Homo sapiens#caecum#CD8-positive, alpha-beta T cell",
+    "parent": "Homo sapiens#caecum",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-8410"
+    ]
+  },
+  {
+    "name": "gamma-delta T cell",
+    "id": "Homo sapiens#caecum#gamma-delta T cell",
+    "parent": "Homo sapiens#caecum",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-8410"
+    ]
+  },
+  {
+    "name": "regulatory T cell",
+    "id": "Homo sapiens#caecum#regulatory T cell",
+    "parent": "Homo sapiens#caecum",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-8410"
+    ]
+  },
+  {
+    "name": "T cell",
+    "id": "Homo sapiens#caecum#T cell",
+    "parent": "Homo sapiens#caecum",
+    "value": 1,
+    "experimentAccessions": [
+      "E-CURD-89",
+      "E-MTAB-8410"
+    ]
+  },
+  {
+    "name": "T follicular helper cell",
+    "id": "Homo sapiens#caecum#T follicular helper cell",
+    "parent": "Homo sapiens#caecum",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-8410"
+    ]
+  },
+  {
+    "name": "T-helper 17 cell",
+    "id": "Homo sapiens#caecum#T-helper 17 cell",
+    "parent": "Homo sapiens#caecum",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-8410"
+    ]
+  },
+  {
+    "name": "colon",
+    "id": "Homo sapiens#colon",
+    "parent": "Homo sapiens",
+    "value": 1,
+    "experimentAccessions": [
+      "E-CURD-95",
+      "E-CURD-97"
+    ]
+  },
+  {
+    "name": "CD4-positive, CD25-positive, alpha-beta regulatory T cell",
+    "id": "Homo sapiens#colon#CD4-positive, CD25-positive, alpha-beta regulatory T cell",
+    "parent": "Homo sapiens#colon",
+    "value": 1,
+    "experimentAccessions": [
+      "E-CURD-97"
+    ]
+  },
+  {
+    "name": "central memory CD4-positive, alpha-beta T cell",
+    "id": "Homo sapiens#colon#central memory CD4-positive, alpha-beta T cell",
+    "parent": "Homo sapiens#colon",
+    "value": 1,
+    "experimentAccessions": [
+      "E-CURD-97"
+    ]
+  },
+  {
+    "name": "effector memory CD4-positive, alpha-beta T cell",
+    "id": "Homo sapiens#colon#effector memory CD4-positive, alpha-beta T cell",
+    "parent": "Homo sapiens#colon",
+    "value": 1,
+    "experimentAccessions": [
+      "E-CURD-97"
+    ]
+  },
+  {
+    "name": "T cell",
+    "id": "Homo sapiens#colon#T cell",
+    "parent": "Homo sapiens#colon",
+    "value": 1,
+    "experimentAccessions": [
+      "E-CURD-95"
+    ]
+  },
+  {
+    "name": "decidua",
+    "id": "Homo sapiens#decidua",
+    "parent": "Homo sapiens",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-6678",
+      "E-MTAB-6701"
+    ]
+  },
+  {
+    "name": "cytotrophoblast",
+    "id": "Homo sapiens#decidua#cytotrophoblast",
+    "parent": "Homo sapiens#decidua",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-6678"
+    ]
+  },
+  {
+    "name": "decidual cell",
+    "id": "Homo sapiens#decidua#decidual cell",
+    "parent": "Homo sapiens#decidua",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-6678"
+    ]
+  },
+  {
+    "name": "decidual natural killer cell",
+    "id": "Homo sapiens#decidua#decidual natural killer cell",
+    "parent": "Homo sapiens#decidua",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-6678"
+    ]
+  },
+  {
+    "name": "granulocyte",
+    "id": "Homo sapiens#decidua#granulocyte",
+    "parent": "Homo sapiens#decidua",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-6678"
+    ]
+  },
+  {
+    "name": "Hofbauer cell",
+    "id": "Homo sapiens#decidua#Hofbauer cell",
+    "parent": "Homo sapiens#decidua",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-6678"
+    ]
+  },
+  {
+    "name": "innate lymphoid cell",
+    "id": "Homo sapiens#decidua#innate lymphoid cell",
+    "parent": "Homo sapiens#decidua",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-6678"
+    ]
+  },
+  {
+    "name": "macrophage",
+    "id": "Homo sapiens#decidua#macrophage",
+    "parent": "Homo sapiens#decidua",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-6678"
+    ]
+  },
+  {
+    "name": "natural killer cell",
+    "id": "Homo sapiens#decidua#natural killer cell",
+    "parent": "Homo sapiens#decidua",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-6678"
+    ]
+  },
+  {
+    "name": "plasmacytoid dendritic cell",
+    "id": "Homo sapiens#decidua#plasmacytoid dendritic cell",
+    "parent": "Homo sapiens#decidua",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-6701"
+    ]
+  },
+  {
+    "name": "syncytiotrophoblast",
+    "id": "Homo sapiens#decidua#syncytiotrophoblast",
+    "parent": "Homo sapiens#decidua",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-6678"
+    ]
+  },
+  {
+    "name": "T cell",
+    "id": "Homo sapiens#decidua#T cell",
+    "parent": "Homo sapiens#decidua",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-6678",
+      "E-MTAB-6701"
+    ]
+  },
+  {
+    "name": "ileal mucosa",
+    "id": "Homo sapiens#ileal mucosa",
+    "parent": "Homo sapiens",
+    "value": 1,
+    "experimentAccessions": [
+      "E-CURD-46"
+    ]
+  },
+  {
+    "name": "activated CD8-positive, alpha-beta T cell",
+    "id": "Homo sapiens#ileal mucosa#activated CD8-positive, alpha-beta T cell",
+    "parent": "Homo sapiens#ileal mucosa",
+    "value": 1,
+    "experimentAccessions": [
+      "E-CURD-46"
+    ]
+  },
+  {
+    "name": "CD8-positive, alpha-beta cytotoxic T cell",
+    "id": "Homo sapiens#ileal mucosa#CD8-positive, alpha-beta cytotoxic T cell",
+    "parent": "Homo sapiens#ileal mucosa",
+    "value": 1,
+    "experimentAccessions": [
+      "E-CURD-46"
+    ]
+  },
+  {
+    "name": "CD8-positive, alpha-beta memory T cell",
+    "id": "Homo sapiens#ileal mucosa#CD8-positive, alpha-beta memory T cell",
+    "parent": "Homo sapiens#ileal mucosa",
+    "value": 1,
+    "experimentAccessions": [
+      "E-CURD-46"
+    ]
+  },
+  {
+    "name": "central memory CD8-positive, alpha-beta T cell",
+    "id": "Homo sapiens#ileal mucosa#central memory CD8-positive, alpha-beta T cell",
+    "parent": "Homo sapiens#ileal mucosa",
+    "value": 1,
+    "experimentAccessions": [
+      "E-CURD-46"
+    ]
+  },
+  {
+    "name": "conventional dendritic cell",
+    "id": "Homo sapiens#ileal mucosa#conventional dendritic cell",
+    "parent": "Homo sapiens#ileal mucosa",
+    "value": 1,
+    "experimentAccessions": [
+      "E-CURD-46"
+    ]
+  },
+  {
+    "name": "cytotoxic T cell",
+    "id": "Homo sapiens#ileal mucosa#cytotoxic T cell",
+    "parent": "Homo sapiens#ileal mucosa",
+    "value": 1,
+    "experimentAccessions": [
+      "E-CURD-46"
+    ]
+  },
+  {
+    "name": "gamma-delta T cell",
+    "id": "Homo sapiens#ileal mucosa#gamma-delta T cell",
+    "parent": "Homo sapiens#ileal mucosa",
+    "value": 1,
+    "experimentAccessions": [
+      "E-CURD-46"
+    ]
+  },
+  {
+    "name": "memory T cell",
+    "id": "Homo sapiens#ileal mucosa#memory T cell",
+    "parent": "Homo sapiens#ileal mucosa",
+    "value": 1,
+    "experimentAccessions": [
+      "E-CURD-46"
+    ]
+  },
+  {
+    "name": "naive T cell",
+    "id": "Homo sapiens#ileal mucosa#naive T cell",
+    "parent": "Homo sapiens#ileal mucosa",
+    "value": 1,
+    "experimentAccessions": [
+      "E-CURD-46"
+    ]
+  },
+  {
+    "name": "plasmacytoid dendritic cell",
+    "id": "Homo sapiens#ileal mucosa#plasmacytoid dendritic cell",
+    "parent": "Homo sapiens#ileal mucosa",
+    "value": 1,
+    "experimentAccessions": [
+      "E-CURD-46"
+    ]
+  },
+  {
+    "name": "regulatory T cell",
+    "id": "Homo sapiens#ileal mucosa#regulatory T cell",
+    "parent": "Homo sapiens#ileal mucosa",
+    "value": 1,
+    "experimentAccessions": [
+      "E-CURD-46"
+    ]
+  },
+  {
+    "name": "T-helper 17 cell",
+    "id": "Homo sapiens#ileal mucosa#T-helper 17 cell",
+    "parent": "Homo sapiens#ileal mucosa",
+    "value": 1,
+    "experimentAccessions": [
+      "E-CURD-46"
+    ]
+  },
+  {
+    "name": "kidney",
+    "id": "Homo sapiens#kidney",
+    "parent": "Homo sapiens",
+    "value": 1,
+    "experimentAccessions": [
+      "E-HCAD-10"
+    ]
+  },
+  {
+    "name": "CD4-positive, alpha-beta T cell",
+    "id": "Homo sapiens#kidney#CD4-positive, alpha-beta T cell",
+    "parent": "Homo sapiens#kidney",
+    "value": 1,
+    "experimentAccessions": [
+      "E-HCAD-10"
+    ]
+  },
+  {
+    "name": "CD8-positive, alpha-beta T cell",
+    "id": "Homo sapiens#kidney#CD8-positive, alpha-beta T cell",
+    "parent": "Homo sapiens#kidney",
+    "value": 1,
+    "experimentAccessions": [
+      "E-HCAD-10"
+    ]
+  },
+  {
+    "name": "plasmacytoid dendritic cell",
+    "id": "Homo sapiens#kidney#plasmacytoid dendritic cell",
+    "parent": "Homo sapiens#kidney",
+    "value": 1,
+    "experimentAccessions": [
+      "E-HCAD-10"
+    ]
+  },
+  {
+    "name": "liver",
+    "id": "Homo sapiens#liver",
+    "parent": "Homo sapiens",
+    "value": 1,
+    "experimentAccessions": [
+      "E-CURD-95",
+      "E-MTAB-10553",
+      "E-HCAD-9"
+    ]
+  },
+  {
+    "name": "alpha-beta T cell",
+    "id": "Homo sapiens#liver#alpha-beta T cell",
+    "parent": "Homo sapiens#liver",
+    "value": 1,
+    "experimentAccessions": [
+      "E-HCAD-9"
+    ]
+  },
+  {
+    "name": "gamma-delta T cell",
+    "id": "Homo sapiens#liver#gamma-delta T cell",
+    "parent": "Homo sapiens#liver",
+    "value": 1,
+    "experimentAccessions": [
+      "E-HCAD-9"
+    ]
+  },
+  {
+    "name": "T cell",
+    "id": "Homo sapiens#liver#T cell",
+    "parent": "Homo sapiens#liver",
+    "value": 1,
+    "experimentAccessions": [
+      "E-CURD-95",
+      "E-MTAB-10553"
+    ]
+  },
+  {
+    "name": "lung",
+    "id": "Homo sapiens#lung",
+    "parent": "Homo sapiens",
+    "value": 1,
+    "experimentAccessions": [
+      "E-CURD-95",
+      "E-HCAD-8",
+      "E-HCAD-15",
+      "E-HCAD-1"
+    ]
+  },
+  {
+    "name": "lung parenchyma",
+    "id": "Homo sapiens#lung parenchyma",
+    "parent": "Homo sapiens",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-130148"
+    ]
+  },
+  {
+    "name": "T cell",
+    "id": "Homo sapiens#lung parenchyma#T cell",
+    "parent": "Homo sapiens#lung parenchyma",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-130148"
+    ]
+  },
+  {
+    "name": "activated CD4-positive, alpha-beta T cell",
+    "id": "Homo sapiens#lung#activated CD4-positive, alpha-beta T cell",
+    "parent": "Homo sapiens#lung",
+    "value": 1,
+    "experimentAccessions": [
+      "E-HCAD-8"
+    ]
+  },
+  {
+    "name": "CD4-positive, alpha-beta T cell",
+    "id": "Homo sapiens#lung#CD4-positive, alpha-beta T cell",
+    "parent": "Homo sapiens#lung",
+    "value": 1,
+    "experimentAccessions": [
+      "E-HCAD-1",
+      "E-HCAD-8"
+    ]
+  },
+  {
+    "name": "CD8-positive, alpha-beta cytotoxic T cell",
+    "id": "Homo sapiens#lung#CD8-positive, alpha-beta cytotoxic T cell",
+    "parent": "Homo sapiens#lung",
+    "value": 1,
+    "experimentAccessions": [
+      "E-HCAD-1"
+    ]
+  },
+  {
+    "name": "CD8-positive, alpha-beta T cell",
+    "id": "Homo sapiens#lung#CD8-positive, alpha-beta T cell",
+    "parent": "Homo sapiens#lung",
+    "value": 1,
+    "experimentAccessions": [
+      "E-HCAD-8"
+    ]
+  },
+  {
+    "name": "dendritic cell",
+    "id": "Homo sapiens#lung#dendritic cell",
+    "parent": "Homo sapiens#lung",
+    "value": 1,
+    "experimentAccessions": [
+      "E-HCAD-1"
+    ]
+  },
+  {
+    "name": "plasmacytoid dendritic cell",
+    "id": "Homo sapiens#lung#plasmacytoid dendritic cell",
+    "parent": "Homo sapiens#lung",
+    "value": 1,
+    "experimentAccessions": [
+      "E-HCAD-15",
+      "E-HCAD-1"
+    ]
+  },
+  {
+    "name": "regulatory T cell",
+    "id": "Homo sapiens#lung#regulatory T cell",
+    "parent": "Homo sapiens#lung",
+    "value": 1,
+    "experimentAccessions": [
+      "E-HCAD-1"
+    ]
+  },
+  {
+    "name": "T cell",
+    "id": "Homo sapiens#lung#T cell",
+    "parent": "Homo sapiens#lung",
+    "value": 1,
+    "experimentAccessions": [
+      "E-CURD-95",
+      "E-HCAD-8",
+      "E-HCAD-15",
+      "E-HCAD-1"
+    ]
+  },
+  {
+    "name": "lymph node",
+    "id": "Homo sapiens#lymph node",
+    "parent": "Homo sapiens",
+    "value": 1,
+    "experimentAccessions": [
+      "E-HCAD-8"
+    ]
+  },
+  {
+    "name": "activated CD4-positive, alpha-beta T cell",
+    "id": "Homo sapiens#lymph node#activated CD4-positive, alpha-beta T cell",
+    "parent": "Homo sapiens#lymph node",
+    "value": 1,
+    "experimentAccessions": [
+      "E-HCAD-8"
+    ]
+  },
+  {
+    "name": "CD4-positive, alpha-beta T cell",
+    "id": "Homo sapiens#lymph node#CD4-positive, alpha-beta T cell",
+    "parent": "Homo sapiens#lymph node",
+    "value": 1,
+    "experimentAccessions": [
+      "E-HCAD-8"
+    ]
+  },
+  {
+    "name": "CD8-positive, alpha-beta T cell",
+    "id": "Homo sapiens#lymph node#CD8-positive, alpha-beta T cell",
+    "parent": "Homo sapiens#lymph node",
+    "value": 1,
+    "experimentAccessions": [
+      "E-HCAD-8"
+    ]
+  },
+  {
+    "name": "T cell",
+    "id": "Homo sapiens#lymph node#T cell",
+    "parent": "Homo sapiens#lymph node",
+    "value": 1,
+    "experimentAccessions": [
+      "E-HCAD-8"
+    ]
+  },
+  {
+    "name": "mesenteric lymph node",
+    "id": "Homo sapiens#mesenteric lymph node",
+    "parent": "Homo sapiens",
+    "value": 1,
+    "experimentAccessions": [
+      "E-CURD-89"
+    ]
+  },
+  {
+    "name": "T cell",
+    "id": "Homo sapiens#mesenteric lymph node#T cell",
+    "parent": "Homo sapiens#mesenteric lymph node",
+    "value": 1,
+    "experimentAccessions": [
+      "E-CURD-89"
+    ]
+  },
+  {
+    "name": "oesophagus",
+    "id": "Homo sapiens#oesophagus",
+    "parent": "Homo sapiens",
+    "value": 1,
+    "experimentAccessions": [
+      "E-HCAD-1"
+    ]
+  },
+  {
+    "name": "CD4-positive, alpha-beta T cell",
+    "id": "Homo sapiens#oesophagus#CD4-positive, alpha-beta T cell",
+    "parent": "Homo sapiens#oesophagus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-HCAD-1"
+    ]
+  },
+  {
+    "name": "CD8-positive, alpha-beta T cell",
+    "id": "Homo sapiens#oesophagus#CD8-positive, alpha-beta T cell",
+    "parent": "Homo sapiens#oesophagus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-HCAD-1"
+    ]
+  },
+  {
+    "name": "placenta",
+    "id": "Homo sapiens#placenta",
+    "parent": "Homo sapiens",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-6701"
+    ]
+  },
+  {
+    "name": "plasmacytoid dendritic cell",
+    "id": "Homo sapiens#placenta#plasmacytoid dendritic cell",
+    "parent": "Homo sapiens#placenta",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-6701"
+    ]
+  },
+  {
+    "name": "T cell",
+    "id": "Homo sapiens#placenta#T cell",
+    "parent": "Homo sapiens#placenta",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-6701"
+    ]
+  },
+  {
+    "name": "rectosigmoid junction",
+    "id": "Homo sapiens#rectosigmoid junction",
+    "parent": "Homo sapiens",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-8410"
+    ]
+  },
+  {
+    "name": "CD4-positive, alpha-beta T cell",
+    "id": "Homo sapiens#rectosigmoid junction#CD4-positive, alpha-beta T cell",
+    "parent": "Homo sapiens#rectosigmoid junction",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-8410"
+    ]
+  },
+  {
+    "name": "CD8-positive, alpha-beta T cell",
+    "id": "Homo sapiens#rectosigmoid junction#CD8-positive, alpha-beta T cell",
+    "parent": "Homo sapiens#rectosigmoid junction",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-8410"
+    ]
+  },
+  {
+    "name": "gamma-delta T cell",
+    "id": "Homo sapiens#rectosigmoid junction#gamma-delta T cell",
+    "parent": "Homo sapiens#rectosigmoid junction",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-8410"
+    ]
+  },
+  {
+    "name": "regulatory T cell",
+    "id": "Homo sapiens#rectosigmoid junction#regulatory T cell",
+    "parent": "Homo sapiens#rectosigmoid junction",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-8410"
+    ]
+  },
+  {
+    "name": "T cell",
+    "id": "Homo sapiens#rectosigmoid junction#T cell",
+    "parent": "Homo sapiens#rectosigmoid junction",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-8410"
+    ]
+  },
+  {
+    "name": "T follicular helper cell",
+    "id": "Homo sapiens#rectosigmoid junction#T follicular helper cell",
+    "parent": "Homo sapiens#rectosigmoid junction",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-8410"
+    ]
+  },
+  {
+    "name": "T-helper 17 cell",
+    "id": "Homo sapiens#rectosigmoid junction#T-helper 17 cell",
+    "parent": "Homo sapiens#rectosigmoid junction",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-8410"
+    ]
+  },
+  {
+    "name": "sigmoid colon",
+    "id": "Homo sapiens#sigmoid colon",
+    "parent": "Homo sapiens",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-8410",
+      "E-CURD-89"
+    ]
+  },
+  {
+    "name": "CD4-positive, alpha-beta T cell",
+    "id": "Homo sapiens#sigmoid colon#CD4-positive, alpha-beta T cell",
+    "parent": "Homo sapiens#sigmoid colon",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-8410"
+    ]
+  },
+  {
+    "name": "CD8-positive, alpha-beta T cell",
+    "id": "Homo sapiens#sigmoid colon#CD8-positive, alpha-beta T cell",
+    "parent": "Homo sapiens#sigmoid colon",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-8410"
+    ]
+  },
+  {
+    "name": "gamma-delta T cell",
+    "id": "Homo sapiens#sigmoid colon#gamma-delta T cell",
+    "parent": "Homo sapiens#sigmoid colon",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-8410"
+    ]
+  },
+  {
+    "name": "regulatory T cell",
+    "id": "Homo sapiens#sigmoid colon#regulatory T cell",
+    "parent": "Homo sapiens#sigmoid colon",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-8410"
+    ]
+  },
+  {
+    "name": "T cell",
+    "id": "Homo sapiens#sigmoid colon#T cell",
+    "parent": "Homo sapiens#sigmoid colon",
+    "value": 1,
+    "experimentAccessions": [
+      "E-CURD-89",
+      "E-MTAB-8410"
+    ]
+  },
+  {
+    "name": "T follicular helper cell",
+    "id": "Homo sapiens#sigmoid colon#T follicular helper cell",
+    "parent": "Homo sapiens#sigmoid colon",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-8410"
+    ]
+  },
+  {
+    "name": "T-helper 17 cell",
+    "id": "Homo sapiens#sigmoid colon#T-helper 17 cell",
+    "parent": "Homo sapiens#sigmoid colon",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-8410"
+    ]
+  },
+  {
+    "name": "skin",
+    "id": "Homo sapiens#skin",
+    "parent": "Homo sapiens",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-8142",
+      "E-MTAB-8498",
+      "E-CURD-97"
+    ]
+  },
+  {
+    "name": "skin epidermis",
+    "id": "Homo sapiens#skin epidermis",
+    "parent": "Homo sapiens",
+    "value": 1,
+    "experimentAccessions": [
+      "E-HCAD-13"
+    ]
+  },
+  {
+    "name": "plasmacytoid dendritic cell",
+    "id": "Homo sapiens#skin epidermis#plasmacytoid dendritic cell",
+    "parent": "Homo sapiens#skin epidermis",
+    "value": 1,
+    "experimentAccessions": [
+      "E-HCAD-13"
+    ]
+  },
+  {
+    "name": "CD4-positive, CD25-positive, alpha-beta regulatory T cell",
+    "id": "Homo sapiens#skin#CD4-positive, CD25-positive, alpha-beta regulatory T cell",
+    "parent": "Homo sapiens#skin",
+    "value": 1,
+    "experimentAccessions": [
+      "E-CURD-97"
+    ]
+  },
+  {
+    "name": "central memory CD4-positive, alpha-beta T cell",
+    "id": "Homo sapiens#skin#central memory CD4-positive, alpha-beta T cell",
+    "parent": "Homo sapiens#skin",
+    "value": 1,
+    "experimentAccessions": [
+      "E-CURD-97"
+    ]
+  },
+  {
+    "name": "cytotoxic T cell",
+    "id": "Homo sapiens#skin#cytotoxic T cell",
+    "parent": "Homo sapiens#skin",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-8142"
+    ]
+  },
+  {
+    "name": "dendritic cell",
+    "id": "Homo sapiens#skin#dendritic cell",
+    "parent": "Homo sapiens#skin",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-8498"
+    ]
+  },
+  {
+    "name": "effector memory CD4-positive, alpha-beta T cell",
+    "id": "Homo sapiens#skin#effector memory CD4-positive, alpha-beta T cell",
+    "parent": "Homo sapiens#skin",
+    "value": 1,
+    "experimentAccessions": [
+      "E-CURD-97"
+    ]
+  },
+  {
+    "name": "helper T cell",
+    "id": "Homo sapiens#skin#helper T cell",
+    "parent": "Homo sapiens#skin",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-8142"
+    ]
+  },
+  {
+    "name": "monocyte",
+    "id": "Homo sapiens#skin#monocyte",
+    "parent": "Homo sapiens#skin",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-8498"
+    ]
+  },
+  {
+    "name": "plasmacytoid dendritic cell",
+    "id": "Homo sapiens#skin#plasmacytoid dendritic cell",
+    "parent": "Homo sapiens#skin",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-8142",
+      "E-MTAB-8498"
+    ]
+  },
+  {
+    "name": "regulatory T cell",
+    "id": "Homo sapiens#skin#regulatory T cell",
+    "parent": "Homo sapiens#skin",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-8142"
+    ]
+  },
+  {
+    "name": "spleen",
+    "id": "Homo sapiens#spleen",
+    "parent": "Homo sapiens",
+    "value": 1,
+    "experimentAccessions": [
+      "E-HCAD-1"
+    ]
+  },
+  {
+    "name": "activated CD8-positive, alpha-beta T cell",
+    "id": "Homo sapiens#spleen#activated CD8-positive, alpha-beta T cell",
+    "parent": "Homo sapiens#spleen",
+    "value": 1,
+    "experimentAccessions": [
+      "E-HCAD-1"
+    ]
+  },
+  {
+    "name": "CD4-positive, alpha-beta T cell",
+    "id": "Homo sapiens#spleen#CD4-positive, alpha-beta T cell",
+    "parent": "Homo sapiens#spleen",
+    "value": 1,
+    "experimentAccessions": [
+      "E-HCAD-1"
+    ]
+  },
+  {
+    "name": "CD4-positive, CD25-positive, alpha-beta regulatory T cell",
+    "id": "Homo sapiens#spleen#CD4-positive, CD25-positive, alpha-beta regulatory T cell",
+    "parent": "Homo sapiens#spleen",
+    "value": 1,
+    "experimentAccessions": [
+      "E-HCAD-1"
+    ]
+  },
+  {
+    "name": "CD8-alpha alpha positive, gamma-delta intraepithelial T cell",
+    "id": "Homo sapiens#spleen#CD8-alpha alpha positive, gamma-delta intraepithelial T cell",
+    "parent": "Homo sapiens#spleen",
+    "value": 1,
+    "experimentAccessions": [
+      "E-HCAD-1"
+    ]
+  },
+  {
+    "name": "CD8-positive, alpha-beta T cell",
+    "id": "Homo sapiens#spleen#CD8-positive, alpha-beta T cell",
+    "parent": "Homo sapiens#spleen",
+    "value": 1,
+    "experimentAccessions": [
+      "E-HCAD-1"
+    ]
+  },
+  {
+    "name": "dendritic cell",
+    "id": "Homo sapiens#spleen#dendritic cell",
+    "parent": "Homo sapiens#spleen",
+    "value": 1,
+    "experimentAccessions": [
+      "E-HCAD-1"
+    ]
+  },
+  {
+    "name": "naive thymus-derived CD4-positive, alpha-beta T cell",
+    "id": "Homo sapiens#spleen#naive thymus-derived CD4-positive, alpha-beta T cell",
+    "parent": "Homo sapiens#spleen",
+    "value": 1,
+    "experimentAccessions": [
+      "E-HCAD-1"
+    ]
+  },
+  {
+    "name": "plasmacytoid dendritic cell",
+    "id": "Homo sapiens#spleen#plasmacytoid dendritic cell",
+    "parent": "Homo sapiens#spleen",
+    "value": 1,
+    "experimentAccessions": [
+      "E-HCAD-1"
+    ]
+  },
+  {
+    "name": "T cell",
+    "id": "Homo sapiens#spleen#T cell",
+    "parent": "Homo sapiens#spleen",
+    "value": 1,
+    "experimentAccessions": [
+      "E-HCAD-1"
+    ]
+  },
+  {
+    "name": "T follicular helper cell",
+    "id": "Homo sapiens#spleen#T follicular helper cell",
+    "parent": "Homo sapiens#spleen",
+    "value": 1,
+    "experimentAccessions": [
+      "E-HCAD-1"
+    ]
+  },
+  {
+    "name": "synovial fluid",
+    "id": "Homo sapiens#synovial fluid",
+    "parent": "Homo sapiens",
+    "value": 1,
+    "experimentAccessions": [
+      "E-CURD-85"
+    ]
+  },
+  {
+    "name": "T cell",
+    "id": "Homo sapiens#synovial fluid#T cell",
+    "parent": "Homo sapiens#synovial fluid",
+    "value": 1,
+    "experimentAccessions": [
+      "E-CURD-85"
+    ]
+  },
+  {
+    "name": "transverse colon",
+    "id": "Homo sapiens#transverse colon",
+    "parent": "Homo sapiens",
+    "value": 1,
+    "experimentAccessions": [
+      "E-CURD-89"
+    ]
+  },
+  {
+    "name": "T cell",
+    "id": "Homo sapiens#transverse colon#T cell",
+    "parent": "Homo sapiens#transverse colon",
+    "value": 1,
+    "experimentAccessions": [
+      "E-CURD-89"
+    ]
+  },
+  {
+    "name": "umbilical cord blood",
+    "id": "Homo sapiens#umbilical cord blood",
+    "parent": "Homo sapiens",
+    "value": 1,
+    "experimentAccessions": [
+      "E-HCAD-4"
+    ]
+  },
+  {
+    "name": "CD4-positive, alpha-beta T cell",
+    "id": "Homo sapiens#umbilical cord blood#CD4-positive, alpha-beta T cell",
+    "parent": "Homo sapiens#umbilical cord blood",
+    "value": 1,
+    "experimentAccessions": [
+      "E-HCAD-4"
+    ]
+  },
+  {
+    "name": "CD8-positive, alpha-beta T cell",
+    "id": "Homo sapiens#umbilical cord blood#CD8-positive, alpha-beta T cell",
+    "parent": "Homo sapiens#umbilical cord blood",
+    "value": 1,
+    "experimentAccessions": [
+      "E-HCAD-4"
+    ]
+  },
+  {
+    "name": "naive T cell",
+    "id": "Homo sapiens#umbilical cord blood#naive T cell",
+    "parent": "Homo sapiens#umbilical cord blood",
+    "value": 1,
+    "experimentAccessions": [
+      "E-HCAD-4"
+    ]
+  },
+  {
+    "name": "T-helper 1 cell",
+    "id": "Homo sapiens#umbilical cord blood#T-helper 1 cell",
+    "parent": "Homo sapiens#umbilical cord blood",
+    "value": 1,
+    "experimentAccessions": [
+      "E-HCAD-4"
+    ]
+  },
+  {
+    "name": "T-helper 2 cell",
+    "id": "Homo sapiens#umbilical cord blood#T-helper 2 cell",
+    "parent": "Homo sapiens#umbilical cord blood",
+    "value": 1,
+    "experimentAccessions": [
+      "E-HCAD-4"
+    ]
+  },
+  {
+    "name": "Mus musculus",
+    "id": "Mus musculus",
+    "parent": "t cell",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-8002",
+      "E-MTAB-7311",
+      "E-CURD-96",
+      "E-MTAB-4888",
+      "E-MTAB-4388",
+      "E-ENAD-15",
+      "E-MTAB-6051",
+      "E-MTAB-4619",
+      "E-MTAB-10196",
+      "E-EHCA-2",
+      "E-MTAB-7704",
+      "E-MTAB-6945",
+      "E-MTAB-8810",
+      "E-CURD-52"
+    ]
+  },
+  {
+    "name": "bone marrow",
+    "id": "Mus musculus#bone marrow",
+    "parent": "Mus musculus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "regulatory T cell",
+    "id": "Mus musculus#bone marrow#regulatory T cell",
+    "parent": "Mus musculus#bone marrow",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "brachial lymph node",
+    "id": "Mus musculus#brachial lymph node",
+    "parent": "Mus musculus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-CURD-96"
+    ]
+  },
+  {
+    "name": "CD4-positive, alpha-beta memory T cell",
+    "id": "Mus musculus#brachial lymph node#CD4-positive, alpha-beta memory T cell",
+    "parent": "Mus musculus#brachial lymph node",
+    "value": 1,
+    "experimentAccessions": [
+      "E-CURD-96"
+    ]
+  },
+  {
+    "name": "CD4-positive, CD25-positive, alpha-beta regulatory T cell",
+    "id": "Mus musculus#brachial lymph node#CD4-positive, CD25-positive, alpha-beta regulatory T cell",
+    "parent": "Mus musculus#brachial lymph node",
+    "value": 1,
+    "experimentAccessions": [
+      "E-CURD-96"
+    ]
+  },
+  {
+    "name": "colon",
+    "id": "Mus musculus#colon",
+    "parent": "Mus musculus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-7311",
+      "E-CURD-96"
+    ]
+  },
+  {
+    "name": "CD4-positive, alpha-beta memory T cell",
+    "id": "Mus musculus#colon#CD4-positive, alpha-beta memory T cell",
+    "parent": "Mus musculus#colon",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-7311",
+      "E-CURD-96"
+    ]
+  },
+  {
+    "name": "CD4-positive, CD25-positive, alpha-beta regulatory T cell",
+    "id": "Mus musculus#colon#CD4-positive, CD25-positive, alpha-beta regulatory T cell",
+    "parent": "Mus musculus#colon",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-7311",
+      "E-CURD-96"
+    ]
+  },
+  {
+    "name": "gonadal fat pad",
+    "id": "Mus musculus#gonadal fat pad",
+    "parent": "Mus musculus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "T cell",
+    "id": "Mus musculus#gonadal fat pad#T cell",
+    "parent": "Mus musculus#gonadal fat pad",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "heart",
+    "id": "Mus musculus#heart",
+    "parent": "Mus musculus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-8810"
+    ]
+  },
+  {
+    "name": "T cell",
+    "id": "Mus musculus#heart#T cell",
+    "parent": "Mus musculus#heart",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-8810"
+    ]
+  },
+  {
+    "name": "interscapular brown adipose tissue",
+    "id": "Mus musculus#interscapular brown adipose tissue",
+    "parent": "Mus musculus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "T cell",
+    "id": "Mus musculus#interscapular brown adipose tissue#T cell",
+    "parent": "Mus musculus#interscapular brown adipose tissue",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "kidney",
+    "id": "Mus musculus#kidney",
+    "parent": "Mus musculus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-8002"
+    ]
+  },
+  {
+    "name": "T cell",
+    "id": "Mus musculus#kidney#T cell",
+    "parent": "Mus musculus#kidney",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-8002"
+    ]
+  },
+  {
+    "name": "limb muscle",
+    "id": "Mus musculus#limb muscle",
+    "parent": "Mus musculus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "T cell",
+    "id": "Mus musculus#limb muscle#T cell",
+    "parent": "Mus musculus#limb muscle",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "lung",
+    "id": "Mus musculus#lung",
+    "parent": "Mus musculus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15",
+      "E-MTAB-4619"
+    ]
+  },
+  {
+    "name": "T cell",
+    "id": "Mus musculus#lung#T cell",
+    "parent": "Mus musculus#lung",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "T-helper 2 cell",
+    "id": "Mus musculus#lung#T-helper 2 cell",
+    "parent": "Mus musculus#lung",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-4619"
+    ]
+  },
+  {
+    "name": "lymph node",
+    "id": "Mus musculus#lymph node",
+    "parent": "Mus musculus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-7311",
+      "E-MTAB-10196",
+      "E-EHCA-2"
+    ]
+  },
+  {
+    "name": "CD4-positive, alpha-beta memory T cell",
+    "id": "Mus musculus#lymph node#CD4-positive, alpha-beta memory T cell",
+    "parent": "Mus musculus#lymph node",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-7311"
+    ]
+  },
+  {
+    "name": "CD4-positive, CD25-positive, alpha-beta regulatory T cell",
+    "id": "Mus musculus#lymph node#CD4-positive, CD25-positive, alpha-beta regulatory T cell",
+    "parent": "Mus musculus#lymph node",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-7311"
+    ]
+  },
+  {
+    "name": "plasmacytoid dendritic cell",
+    "id": "Mus musculus#lymph node#plasmacytoid dendritic cell",
+    "parent": "Mus musculus#lymph node",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-10196",
+      "E-EHCA-2"
+    ]
+  },
+  {
+    "name": "T cell",
+    "id": "Mus musculus#lymph node#T cell",
+    "parent": "Mus musculus#lymph node",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-10196"
+    ]
+  },
+  {
+    "name": "mediastinal lymph node",
+    "id": "Mus musculus#mediastinal lymph node",
+    "parent": "Mus musculus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-4619"
+    ]
+  },
+  {
+    "name": "T-helper 2 cell",
+    "id": "Mus musculus#mediastinal lymph node#T-helper 2 cell",
+    "parent": "Mus musculus#mediastinal lymph node",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-4619"
+    ]
+  },
+  {
+    "name": "mesenteric adipose tissue",
+    "id": "Mus musculus#mesenteric adipose tissue",
+    "parent": "Mus musculus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "T cell",
+    "id": "Mus musculus#mesenteric adipose tissue#T cell",
+    "parent": "Mus musculus#mesenteric adipose tissue",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "mesenteric lymph node",
+    "id": "Mus musculus#mesenteric lymph node",
+    "parent": "Mus musculus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-7311",
+      "E-CURD-96",
+      "E-MTAB-4619"
+    ]
+  },
+  {
+    "name": "CD4-positive, alpha-beta memory T cell",
+    "id": "Mus musculus#mesenteric lymph node#CD4-positive, alpha-beta memory T cell",
+    "parent": "Mus musculus#mesenteric lymph node",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-7311",
+      "E-CURD-96"
+    ]
+  },
+  {
+    "name": "CD4-positive, CD25-positive, alpha-beta regulatory T cell",
+    "id": "Mus musculus#mesenteric lymph node#CD4-positive, CD25-positive, alpha-beta regulatory T cell",
+    "parent": "Mus musculus#mesenteric lymph node",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-7311",
+      "E-CURD-96"
+    ]
+  },
+  {
+    "name": "T-helper 2 cell",
+    "id": "Mus musculus#mesenteric lymph node#T-helper 2 cell",
+    "parent": "Mus musculus#mesenteric lymph node",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-4619"
+    ]
+  },
+  {
+    "name": "nasal cavity mucosa",
+    "id": "Mus musculus#nasal cavity mucosa",
+    "parent": "Mus musculus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-CURD-52"
+    ]
+  },
+  {
+    "name": "T cell",
+    "id": "Mus musculus#nasal cavity mucosa#T cell",
+    "parent": "Mus musculus#nasal cavity mucosa",
+    "value": 1,
+    "experimentAccessions": [
+      "E-CURD-52"
+    ]
+  },
+  {
+    "name": "skin",
+    "id": "Mus musculus#skin",
+    "parent": "Mus musculus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-CURD-96",
+      "E-EHCA-2"
+    ]
+  },
+  {
+    "name": "skin of body",
+    "id": "Mus musculus#skin of body",
+    "parent": "Mus musculus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-7311"
+    ]
+  },
+  {
+    "name": "CD4-positive, alpha-beta memory T cell",
+    "id": "Mus musculus#skin of body#CD4-positive, alpha-beta memory T cell",
+    "parent": "Mus musculus#skin of body",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-7311"
+    ]
+  },
+  {
+    "name": "CD4-positive, CD25-positive, alpha-beta regulatory T cell",
+    "id": "Mus musculus#skin of body#CD4-positive, CD25-positive, alpha-beta regulatory T cell",
+    "parent": "Mus musculus#skin of body",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-7311"
+    ]
+  },
+  {
+    "name": "CD4-positive, alpha-beta memory T cell",
+    "id": "Mus musculus#skin#CD4-positive, alpha-beta memory T cell",
+    "parent": "Mus musculus#skin",
+    "value": 1,
+    "experimentAccessions": [
+      "E-CURD-96"
+    ]
+  },
+  {
+    "name": "CD4-positive, CD25-positive, alpha-beta regulatory T cell",
+    "id": "Mus musculus#skin#CD4-positive, CD25-positive, alpha-beta regulatory T cell",
+    "parent": "Mus musculus#skin",
+    "value": 1,
+    "experimentAccessions": [
+      "E-CURD-96"
+    ]
+  },
+  {
+    "name": "plasmacytoid dendritic cell",
+    "id": "Mus musculus#skin#plasmacytoid dendritic cell",
+    "parent": "Mus musculus#skin",
+    "value": 1,
+    "experimentAccessions": [
+      "E-EHCA-2"
+    ]
+  },
+  {
+    "name": "spleen",
+    "id": "Mus musculus#spleen",
+    "parent": "Mus musculus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-7311",
+      "E-CURD-96",
+      "E-MTAB-4888",
+      "E-MTAB-4388",
+      "E-ENAD-15",
+      "E-MTAB-6051"
+    ]
+  },
+  {
+    "name": "CD4-positive, alpha-beta memory T cell",
+    "id": "Mus musculus#spleen#CD4-positive, alpha-beta memory T cell",
+    "parent": "Mus musculus#spleen",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-7311",
+      "E-CURD-96"
+    ]
+  },
+  {
+    "name": "CD4-positive, CD25-positive, alpha-beta regulatory T cell",
+    "id": "Mus musculus#spleen#CD4-positive, CD25-positive, alpha-beta regulatory T cell",
+    "parent": "Mus musculus#spleen",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-7311",
+      "E-CURD-96"
+    ]
+  },
+  {
+    "name": "CD8-positive, alpha-beta T cell",
+    "id": "Mus musculus#spleen#CD8-positive, alpha-beta T cell",
+    "parent": "Mus musculus#spleen",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-6051"
+    ]
+  },
+  {
+    "name": "effector memory CD4-positive, alpha-beta T cell",
+    "id": "Mus musculus#spleen#effector memory CD4-positive, alpha-beta T cell",
+    "parent": "Mus musculus#spleen",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-4888"
+    ]
+  },
+  {
+    "name": "helper T cell",
+    "id": "Mus musculus#spleen#helper T cell",
+    "parent": "Mus musculus#spleen",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-4388"
+    ]
+  },
+  {
+    "name": "naive thymus-derived CD4-positive, alpha-beta T cell",
+    "id": "Mus musculus#spleen#naive thymus-derived CD4-positive, alpha-beta T cell",
+    "parent": "Mus musculus#spleen",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-4888"
+    ]
+  },
+  {
+    "name": "T cell",
+    "id": "Mus musculus#spleen#T cell",
+    "parent": "Mus musculus#spleen",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "subcutaneous adipose tissue",
+    "id": "Mus musculus#subcutaneous adipose tissue",
+    "parent": "Mus musculus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "T cell",
+    "id": "Mus musculus#subcutaneous adipose tissue#T cell",
+    "parent": "Mus musculus#subcutaneous adipose tissue",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "thymus",
+    "id": "Mus musculus#thymus",
+    "parent": "Mus musculus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-7704",
+      "E-MTAB-6945"
+    ]
+  },
+  {
+    "name": "CD8-Positive T-Lymphocytes",
+    "id": "Mus musculus#thymus#CD8-Positive T-Lymphocytes",
+    "parent": "Mus musculus#thymus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-6945"
+    ]
+  },
+  {
+    "name": "mucosal invariant T cell",
+    "id": "Mus musculus#thymus#mucosal invariant T cell",
+    "parent": "Mus musculus#thymus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-7704"
+    ]
+  }
+]

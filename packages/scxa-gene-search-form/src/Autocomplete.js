@@ -5,8 +5,9 @@ import URI from 'urijs'
 import AsyncCreatableSelect from 'react-select/async-creatable'
 import ebiVfReactSelectReplacements from './ebiVfReactSelectReplacements'
 
-const _asyncFetchOptions = (host, suggesterEndpoint, selectedSpecies, allSpecies) =>
-  async (inputValue) => {
+// Return a function to retrieve suggestions from an endpoint
+function _asyncFetchOptions (host, suggesterEndpoint, selectedSpecies, allSpecies) {
+  return async (inputValue) => {
     const suggesterUrl = URI(suggesterEndpoint, host).search({
       query: inputValue,
       species: selectedSpecies || allSpecies.join(`,`)
@@ -18,25 +19,22 @@ const _asyncFetchOptions = (host, suggesterEndpoint, selectedSpecies, allSpecies
     }
     throw new Error(`${suggesterUrl} => ${response.status}`)
   }
+}
 
-const Autocomplete = (
-  {
-    host, suggesterEndpoint,
-    selectedSpecies, allSpecies, onChange, defaultValue,
-    labelText
-  }) => {
+function Autocomplete (props) {
+  const { host, suggesterEndpoint, selectedSpecies, allSpecies, onChange, defaultValue, labelText } = props
+
   const _defaultValue = defaultValue.term && defaultValue.term.trim() ?
     {
       label: defaultValue.term.trim(),
       value: defaultValue.category && defaultValue.category.trim() ?
         JSON.stringify(defaultValue) :
-        JSON.stringify({term: defaultValue.term.trim(), category: `q`})
+        JSON.stringify({ term: defaultValue.term.trim(), category: `q` })
     } :
     null
 
   return (
-    <div>
-      {labelText && <label htmlFor={`geneQuery`}>{labelText}</label>}
+    <label>{labelText || <>&nbsp;</>}
       <AsyncCreatableSelect
         name={`geneQuery`}
         components={{ DropdownIndicator: null, IndicatorSeparator: null }}
@@ -52,11 +50,11 @@ const Autocomplete = (
         isValidNewOption={(inputValue) => inputValue.trim() !== ``}
         getNewOptionData={(inputValue) => ({
           label: inputValue,
-          value: JSON.stringify({term: inputValue, category: `q`})
+          value: JSON.stringify({ term: inputValue, category: `q` })
         })}
         placeholder={``}
         defaultValue={_defaultValue}/>
-    </div>
+    </label>
   )
 }
 

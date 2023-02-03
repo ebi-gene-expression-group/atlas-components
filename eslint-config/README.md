@@ -1,1 +1,1 @@
-# ESLint Configuration for Atlas Javascript projects
+# ESLint Configuration for Atlas JavaScript projects
