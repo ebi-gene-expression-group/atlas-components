@@ -77,7 +77,7 @@ class ExperimentCard extends React.Component {
     return (
       <CardContainerDiv onClick={this._goToExperiment.bind(this, url)}>
           <SmallIconDiv>
-              <span data-tip={`${type}`} data-html={true} className={`icon icon-functional`}>
+              <span data-tip={type} data-html={true} className={`icon icon-functional`}>
                   {
                       experimentAccession.substring(0,6) === ANNDATA ?
                           //tbc
