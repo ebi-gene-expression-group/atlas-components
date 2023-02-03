@@ -21,6 +21,12 @@ const CardContainerDiv = styled.div`
   }
 `
 
+const SmallIconDiv = styled.div`
+  width: 5%;
+  text-align: center;
+  font-size: 3rem;
+`
+
 const IconDiv = styled.div`
   width: 15%;
   text-align: center;
@@ -48,6 +54,8 @@ const CountDiv = styled.div`
   text-align: center;
 `
 
+const ANNDATA = `E-ANND`
+
 class ExperimentCard extends React.Component {
   constructor(props) {
     super(props)
@@ -58,7 +66,7 @@ class ExperimentCard extends React.Component {
   }
 
   render() {
-    const {url, species, experimentDescription, markerGenes, numberOfAssays, factors} = this.props
+    const {url, species, experimentDescription, markerGenes, numberOfAssays, experimentAccession, type, factors} = this.props
 
     const markerGeneLinks = markerGenes ? markerGenes.map((markerGene) =>
       <li key={`marker-gene-${markerGene.k}`}>
@@ -68,6 +76,16 @@ class ExperimentCard extends React.Component {
 
     return (
       <CardContainerDiv onClick={this._goToExperiment.bind(this, url)}>
+          <SmallIconDiv>
+              <span data-tip={`${type}`} data-html={true} className={`icon icon-functional`}>
+                  {
+                      experimentAccession.substring(0,6) === ANNDATA ?
+                          //tbc
+                          <img src={`https://user-images.githubusercontent.com/33519183/203308460-aee477fa-c8ab-4561-be46-34254bfa1731.png`} /> :
+                          <img src={`https://www.ebi.ac.uk/gxa/resources/images/expression-atlas.png`)}`} />
+                  }
+              </span>
+          </SmallIconDiv>
         <IconDiv>
           <EbiSpeciesIcon species={species}/>
           <h6>{species}</h6>
