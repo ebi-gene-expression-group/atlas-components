@@ -82,7 +82,7 @@ class ExperimentCard extends React.Component {
                       experimentAccession.substring(0,6) === ANNDATA ?
                           //tbc
                           <img src={`https://user-images.githubusercontent.com/33519183/203308460-aee477fa-c8ab-4561-be46-34254bfa1731.png`} /> :
-                          <img src={`https://www.ebi.ac.uk/gxa/resources/images/expression-atlas.png`)}`} />
+                          <img src={`https://www.ebi.ac.uk/gxa/resources/images/expression-atlas.png`} />
                   }
               </span>
           </SmallIconDiv>
