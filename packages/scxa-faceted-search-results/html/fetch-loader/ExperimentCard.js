@@ -128,7 +128,9 @@ ExperimentCard.propTypes = {
     url: PropTypes.string.isRequired
   })),
   numberOfAssays: PropTypes.number.isRequired,
-  factors: PropTypes.array.isRequired
+  factors: PropTypes.array.isRequired,
+  experimentAccession: PropTypes.string.isRequired
+  type: PropTypes.string.isRequired
 }
 
 export default ExperimentCard
