@@ -91,7 +91,7 @@ const experiment6 = {
       label: `inferred cell type - ontology labels`
     }
   ],
-  defaultPlotTypeAndParameterisation: {"t-SNE": {"perplexity": 50}, "UMAP": {"n_neighbors": 100}},
+  defaultPlotTypeAndParameterisation: {"tsne": {"perplexity": 50}, "umap": {"n_neighbors": 100}},
   plotTypesAndOptions: {
     "tsne": [{ "perplexity": 40 }, { "perplexity": 25 }, { "perplexity": 45 },{ "perplexity": 1 },{ "perplexity": 30 },
     {"perplexity": 10 },{ "perplexity": 15 },{ "perplexity": 50 },{ "perplexity": 35 },{ "perplexity": 20 },{ "perplexity": 5 }],
@@ -128,7 +128,7 @@ const plotTypeDropdown =  [
     plotOptions: plotTypesAndOptions.umap
   },
   {
-    plotType: `t-SNE`,
+    plotType: `tSNE`,
     plotOptions: plotTypesAndOptions.tsne
   }
 ]
@@ -205,10 +205,10 @@ class Demo extends React.Component {
           onChangePlotTypes={
               (plotOption) => {
                 this.setState({
-                  selectedPlotType: plotOption.label,
-                  selectedPlotOption: defaultPlotTypeAndParameterisation[plotOption.label],
-                  selectedPlotOptionLabel: Object.keys(defaultPlotTypeAndParameterisation[plotOption.label])[0]
-                      + ": " + Object.values(defaultPlotTypeAndParameterisation[plotOption.label])[0],
+                  selectedPlotType: plotOption.value,
+                  selectedPlotOption: defaultPlotTypeAndParameterisation[plotOption.value],
+                  selectedPlotOptionLabel: Object.keys(defaultPlotTypeAndParameterisation[plotOption.value])[0]
+                      + ": " + Object.values(defaultPlotTypeAndParameterisation[plotOption.value])[0],
                 })}
           }
           onChangePlotOptions={
