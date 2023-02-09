@@ -188,7 +188,7 @@ class Demo extends React.Component {
     return(
       <div className={`row column expanded`}>
         <TsnePlotView
-          atlasUrl={`http://localhost:8080/gxa/sc/`}
+          atlasUrl={`https://wwwdev.ebi.ac.uk:8080/gxa/sc/`}
           suggesterEndpoint={`json/suggestions`}
           experimentAccession={this.state.experimentAccession}
           accessKey={accessKey}
