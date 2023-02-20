@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import {find as _find} from "lodash"
 
 import URI from 'urijs'
 
@@ -11,13 +12,17 @@ class TSnePlotWidget extends React.Component {
     this.state = {
       plotdata: {
         metadata: [],
-        perplexities: []
+        plotTypesAndOptions: [], 
+        defaultPlotMethodAndParameterisation: []
       },
-      selectedGeneId: this.props.geneId,
-      selectedColourBy: `inferred_cell_type`,
+      selectedColourBy: ``,
       selectedColourByCategory: `metadata`,
       metadataErrorMessage: null,
       loadingMetadata: false,
+      selectedPlotType: ``,
+      geneId: this.props.geneId,
+      selectedPlotOption: ``,
+      selectedPlotOptionLabel: ``
     }
   }
 
@@ -40,13 +45,6 @@ class TSnePlotWidget extends React.Component {
         [errorMessageField]: null,
         [loadingField]: false,
       })
-
-      if (!(this.state.plotdata.metadata.indexOf(`inferred_cell_type`) > -1)) {
-        this.setState({
-          selectedColourBy: this.state.plotdata.metadata[0].value //selects first element of metadata array if inferred_cell_type is not present
-        })
-      }
-
     } catch (e) {
       this.setState({
         [errorMessageField]: `${e.name}: ${e.message}`,
@@ -70,7 +68,7 @@ class TSnePlotWidget extends React.Component {
     })
   }
 
-  componentDidMount() {
+  componentWillMount() {
     this._fetchAndSetStateMetadata(this.props)
   }
 
@@ -78,11 +76,19 @@ class TSnePlotWidget extends React.Component {
     const {height, atlasUrl, suggesterEndpoint} = this.props
     const {wrapperClassName, clusterPlotClassName, expressionPlotClassName} = this.props
     const {geneIds, speciesName, ks, experimentAccession, showControls} = this.props
-    const {metadata, perplexities} = this.state.plotdata
-    const {selectedColourBy, selectedColourByCategory, loadingMetadata, selectedGeneId} = this.state
+    const {loadingMetadata, geneId, selectedColourBy, selectedPlotOption, selectedPlotType, selectedPlotOptionLabel, onChangePlotTypes} = this.state
+    const {plotTypesAndOptions, defaultPlotMethodAndParameterisation, metadata} = this.state.plotdata
 
-    const perplexitiesOrdered = perplexities.sort((a, b) => a - b)
-
+    const plotTypeDropdown =  [
+      {
+        plotType: `UMAP`,
+        plotOptions: plotTypesAndOptions.umap
+      },
+      {
+        plotType: `tSNE`,
+        plotOptions: plotTypesAndOptions.tsne
+      }
+    ]
     // ks -> for future use
     // selectedColourBy -> used default k value as we are not showing widget controls for now
     // selectedColourByCategory -> Is the plot coloured by clusters or metadata (as we not showing controls so used 'clusters' as default selected category
@@ -102,19 +108,40 @@ class TSnePlotWidget extends React.Component {
             speciesName={speciesName}
             experimentAccession={experimentAccession}
             ks={ks}
+            plotTypeDropdown={plotTypeDropdown}
+            //by default it is a tsne plot
+            selectedPlotOption={selectedPlotOption == `` ? defaultPlotMethodAndParameterisation.tsne : selectedPlotOption}
+            selectedPlotType={selectedPlotType== `` ? `tsne` : selectedPlotType}
+            selectedPlotOptionLabel={selectedPlotOptionLabel == `` ?
+                Object.keys(defaultPlotMethodAndParameterisation.tsne)[0] + `: ` +
+                Object.values(defaultPlotMethodAndParameterisation.tsne)[0] :
+                selectedPlotOptionLabel}
             metadata={metadata}
-            selectedColourBy={selectedColourBy}
-            selectedColourByCategory={selectedColourByCategory}
-            perplexities={perplexities}
-            selectedPerplexity={perplexitiesOrdered[Math.round((perplexitiesOrdered.length - 1) / 2)]}
-            onChangePerplexity={() => {}}
-            geneId={selectedGeneId}
+            selectedColourBy={metadata.map(meta => meta.label).indexOf(`inferred cell type - authors labels`) == -1 ?
+                metadata[0].label : `inferred cell type - authors labels`}
+            onChangePlotTypes={
+              (plotOption) => {
+                this.setState({
+                  selectedPlotType: plotOption,
+                  selectedPlotOption: defaultPlotMethodAndParameterisation[plotOption],
+                  selectedPlotOptionLabel: Object.keys(defaultPlotMethodAndParameterisation[plotOption])[0] + `: ` +
+                      Object.values(defaultPlotMethodAndParameterisation[plotOption])[0]
+                })}
+            }
+            onChangePlotOptions={
+              (plotOption) => {
+                this.setState({
+                  selectedPlotOption: plotOption.value,
+                  selectedPlotOptionLabel: plotOption.label
+                })}
+            }
+            geneId={geneId}
             geneIds={geneIds}
             height={height}
             onChangeColourBy={(colourByCategory, colourByValue) =>
               this._onChangeColourBy(colourByCategory, colourByValue)
             }
-            onSelectGeneId={(geneId) => this.setState({ selectedGeneId: geneId.value })}
+            onSelectGeneId={(geneId) => this.setState({ geneId: geneId.value })}
             showControls={showControls}
           />
           <p>
@@ -142,7 +169,7 @@ TSnePlotWidget.propTypes = {
 
 
 TSnePlotWidget.defaultProps = {
-  atlasUrl: `https://www.ebi.ac.uk/gxa/sc/`,
+  atlasUrl: `http://localhost:8080/gxa/sc/`,
   suggesterEndpoint: `json/suggestions`,
   wrapperClassName: `row expanded`,
   clusterPlotClassName: `small-12 large-6 columns`,
