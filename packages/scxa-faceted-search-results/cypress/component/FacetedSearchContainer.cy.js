@@ -59,12 +59,6 @@ describe(`FacetedSearchContainer`, () => {
   it(`doesn’t display duplicated facets`, () => {
     cy.mount(<FacetedSearchContainer {...props}/>)
 
-    // TODO: simplify this messy code
-    // TODO: code fragement from the original (broken) test case
-    // wrapper.find(CheckboxFacetGroup).forEach(
-    //   (facetGroup) =>
-    //     expect(facetGroup.props().facets)
-    // .toHaveLength(uniqueFacetsByGroup[facetGroup.props().facetGroupName].length))
     let checkboxLabels = []
     let uniqueness = true
     cy.contains(facetGroupTitles).siblings().get(`label`)
@@ -80,9 +74,19 @@ describe(`FacetedSearchContainer`, () => {
       })
 
     let dropdownTitles = []
-    cy.get(`div.css-qbdosj-Input`).first().click()
-    cy.get(`div.css-dzz542-menu`).then(() => {
-      cy.get(`div.css-1n6sfyn-MenuList`).then((selectedTitles) => {
+
+    cy.get(`input#facetGroupMultiSelectDropdown`)
+      .first()
+      .as(`selectedDropdown`)
+
+    cy.get(`@selectedDropdown`)
+      .click()
+
+    cy.get(`@selectedDropdown`)
+      .invoke(`attr`, `aria-controls`)
+      .as(`dropdownMenuId`)
+
+    cy.get(`@dropdownMenuId`).get(`div`).then((selectedTitles) => {
         Object.values(selectedTitles)[0].childNodes.forEach(node => {
           let label = dropdownTitles.push(node.innerText)
           if (!dropdownTitles.includes(label)) {
@@ -91,15 +95,8 @@ describe(`FacetedSearchContainer`, () => {
             uniqueness = false
           }
         })
-      })
-    }).then(() => {
+      }).then(() => {
       expect(uniqueness).is.true
     })
-    
-    // TODO: code fragement from the original (broken) test case
-    // wrapper.find(MultiselectDropdownFacetGroup).forEach(
-    //   (facetGroup) =>
-    //       expect(facetGroup.props().facets)
-            // .toHaveLength(uniqueFacetsByGroup[facetGroup.props().facetGroupName].length))
   })
 })
