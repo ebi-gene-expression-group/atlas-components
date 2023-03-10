@@ -7,7 +7,7 @@ import randomWords from 'random-words'
 describe(`TooltipIcon`, () => {
   const maxLineLength = 40
   it(`inserts line breaks to the texts when tooltip longer than max line length`, () => {
-    const longText = randomWords({maxLength: 100}).join(` `)
+    const longText = randomWords(100).join(` `)
     cy.mount(<TooltipIcon tooltipText={longText} />)
     cy.get(`span`)
       .should(`have.attr`, `data-tip`)
