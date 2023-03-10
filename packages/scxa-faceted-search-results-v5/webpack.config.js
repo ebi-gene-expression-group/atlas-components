@@ -50,10 +50,15 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js$/i,
-        exclude: /node_modules\//,
+        test: /\.js$/,
+        exclude: /node_modules/,
         use: `babel-loader`
-      }
+      },
+      {
+        test: /\.ts$/,
+        exclude: /node_modules/,
+        use: 'ts-loader'
+      },
     ]
   },
 
