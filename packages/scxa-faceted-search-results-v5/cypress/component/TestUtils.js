@@ -1,47 +1,22 @@
-// import episodes from '../fixtures/episodes.json'
+import checkboxFacetGroups from '../fixtures/checkbox_facet_groups.json'
+import checkboxes from '../fixtures/vindicators.json'
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import React from "react";
 
-// const facets = () => {
-//   return episodes.reduce((acc, episode) => acc.concat(episode.facets), [])
-// }
+const getPropsWithTooltip = () => {
+  return Cypress._.shuffle(checkboxFacetGroups).pop()
+}
 
-// const getUniqueFacets = () => {
-//   const allFacets = facets()
-//   return allFacets
-//     .filter((facet, index) => allFacets.findIndex((thatFacet) => facet.value === thatFacet.value) === index)
-//     .map((facet) => ({
-//       ...facet,
-//       disabled: false
-//     }))
-// }
+const getPropsWithoutTooltip = () => {
+  let props = getPropsWithTooltip()
+  props.facetGroupDescription = ``
+  return props
+}
 
-// const getFacetTooltip = () => {
-//   return Cypress._.shuffle(getUniqueFacets()).find(facet => facet.description)
-// }
-//
-// const getFacetWithoutTooltip = () => {
-//   return Cypress._.shuffle(getUniqueFacets()).find(facet => !facet.description)
-// }
-
-// const getPropsWithTooltip = (facetTooltip) => {
-//   return {
-//     facetGroupName: facetTooltip.group,
-//     facetGroupNameDescription: facetTooltip.description,
-//     facets: getUniqueFacets().filter(facet => facet.group === facetTooltip.group),
-//     onChange: () => {}
-//   }
-// }
-
-// const getPropsWithoutTooltip = () => {
-//   const facetWithoutTooltip = getFacetWithoutTooltip()
-//   return {
-//     facetGroupName: facetWithoutTooltip.group,
-//     facets: getUniqueFacets().filter(facet => facet.group === facetWithoutTooltip.group),
-//     onChange: () => {}
-//   }
-// }
+const getFacets = () => {
+  return checkboxes
+}
 
 const ExperimentTableCard = ({title}) =>
   <div>
@@ -88,7 +63,4 @@ const getRandomInt = (min, max) => {
   return Math.floor(Math.random() * (max - min)) + min //The maximum is exclusive and the minimum is inclusive
 }
 
-export { getRandomInt, ExperimentTableCard, ExperimentTableHeader }
-
-// export { episodes, getRandomInt, getUniqueFacets, getFacetTooltip, getPropsWithTooltip, getPropsWithoutTooltip,
-//   ExperimentTableCard, ExperimentTableHeader }
+export { getRandomInt, getFacets, getPropsWithTooltip, getPropsWithoutTooltip, ExperimentTableCard, ExperimentTableHeader }

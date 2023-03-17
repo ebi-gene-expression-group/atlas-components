@@ -68,7 +68,7 @@ CheckboxFacetGroup.propTypes = {
       value: PropTypes.string.required,
       disabled: PropTypes.bool.isRequired,
     })
-  ),
+  ).isRequired,
   onChange: PropTypes.func.isRequired
 }
 
