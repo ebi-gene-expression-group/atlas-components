@@ -1,11 +1,17 @@
 import checkboxFacetGroups from '../fixtures/checkbox_facet_groups.json'
 import checkboxes from '../fixtures/vindicators.json'
+import markerGeneFacets from '../fixtures/marker_gene_facet_values.json'
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import React from "react";
 
 const getPropsWithTooltip = () => {
   return Cypress._.shuffle(checkboxFacetGroups).pop()
+}
+
+const getPropsForMarkerGeneFacet = () => {
+  const markerGeneName = `Marker genes`;
+  return checkboxFacetGroups.find(facet => facet.facetGroupName === markerGeneName)
 }
 
 const getPropsWithoutTooltip = () => {
@@ -15,7 +21,11 @@ const getPropsWithoutTooltip = () => {
 }
 
 const getFacets = () => {
-  return checkboxes
+  return Cypress._.shuffle(checkboxes).filter(() => Math.random() > 0.5)
+}
+
+const getMarkerGeneFacets = () => {
+  return markerGeneFacets
 }
 
 const ExperimentTableCard = ({title}) =>
@@ -63,4 +73,5 @@ const getRandomInt = (min, max) => {
   return Math.floor(Math.random() * (max - min)) + min //The maximum is exclusive and the minimum is inclusive
 }
 
-export { getRandomInt, getFacets, getPropsWithTooltip, getPropsWithoutTooltip, ExperimentTableCard, ExperimentTableHeader }
+export { getRandomInt, getFacets, getPropsWithTooltip, getPropsWithoutTooltip, getPropsForMarkerGeneFacet,
+  getMarkerGeneFacets, ExperimentTableCard, ExperimentTableHeader }

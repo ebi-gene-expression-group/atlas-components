@@ -34,7 +34,7 @@ class CheckboxFacetGroup extends React.Component {
   _handleChange(facet) {
     this.setState(
       { checkedFacets: _xorBy(this.state.checkedFacets, [facet], `value`) },
-      () => this.props.onChange(facet.group, this.state.checkedFacets))
+      () => this.props.onChange(props.facetGroupName, this.state.checkedFacets))
   }
 
   render() {
@@ -51,7 +51,7 @@ class CheckboxFacetGroup extends React.Component {
           <CheckboxOption {...facet}
             checked={checkedFacets.some((checkedFacet) => checkedFacet.value === facet.value)}
             onChange={this._handleChange}
-            // key={value}
+            key={facet.value}
           />
         )}
       </div>

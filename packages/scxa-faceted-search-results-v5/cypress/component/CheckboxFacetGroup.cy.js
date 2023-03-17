@@ -10,7 +10,7 @@ describe(`CheckboxFacetGroup`, () => {
     const facetTooltip = propsWithTooltip.facetGroupDescription.toString()
     const props = {
       ...propsWithTooltip,
-      facets: [getFacets]
+      facets: getFacets()
     }
 
     cy.mount(<CheckboxFacetGroup {...props }/>)
@@ -26,9 +26,10 @@ describe(`CheckboxFacetGroup`, () => {
   })
 
   it(`doesn't display tooltip if not present`, () => {
-    const propsWithoutTooltip = getPropsWithoutTooltip()
-    propsWithoutTooltip.facets = [getFacets]
-
+    const propsWithoutTooltip = {
+      ...getPropsWithoutTooltip(),
+      facets: getFacets()
+    }
     cy.mount(<CheckboxFacetGroup {...propsWithoutTooltip}/>)
     cy.get(`div.padding-bottom-xlarge h4`)
       .children()
