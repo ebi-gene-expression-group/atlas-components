@@ -68,8 +68,7 @@ class CellTypeWheel extends React.Component {
             }
           },
           dataLabels: {
-            format: `{point.name}`,
-            rotationMode: `circular`
+            format: `{point.name}`
           },
           levels: [{
             level: 2,

@@ -1,7 +1,6 @@
 const path = require(`path`)
 const { CleanWebpackPlugin } = require(`clean-webpack-plugin`)
 
-const commonPublicPath = `/dist/`
 const vendorsBundleName = `vendors`
 
 module.exports = {
@@ -20,8 +19,8 @@ module.exports = {
   output: {
     library: `[name]`,
     filename: `[name].bundle.js`,
-    publicPath: commonPublicPath,
-    devtoolNamespace: `firefox`
+    devtoolNamespace: `webpack`,
+    clean:true
   },
 
   resolve: {
@@ -59,7 +58,9 @@ module.exports = {
 
   devServer: {
     port: 9000,
-    contentBase: path.resolve(__dirname, `html`),
-    publicPath: commonPublicPath
+    static: `./html`,
+    devMiddleware: {
+      publicPath: `/dist`
+    }
   }
 }

@@ -13,6 +13,15 @@ const CardContainerDiv = styled.div`
   font-size: 0.9rem;
 `
 
+const SmallIconDiv = styled.div`
+  width: 5%;
+  text-align: center;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: 0.3s;
+  :hover {opacity: 1};
+`
+
 const IconDiv = styled.div`
   width: 15%;
   text-align: center;
@@ -57,9 +66,9 @@ const CountDiv = styled.div`
 
 const ExperimentTableHeaderBasic = () =>
   ({
-    'titles': [`Species`, `Marker genes`, `Title`, `Experimental variables`, `Number of assays`],
-    'styles': [IconDiv, MarkerDiv, TitleDiv, VariableDiv, CountDiv],
-    'attributes': [`species`, `markerGenes`, `experimentDescription`, null, `numberOfAssays`]
+    'titles': [`Experiment type`, `Species`, `Marker genes`, `Title`, `Experimental variables`, `Number of assays`],
+    'styles': [SmallIconDiv, IconDiv, MarkerDiv, TitleDiv, VariableDiv, CountDiv],
+    'attributes': [`experimentAccession`, `species`, `markerGenes`, `experimentDescription`, null, `numberOfAssays`]
   })
 
 
