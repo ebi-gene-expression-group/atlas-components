@@ -1,0 +1,179 @@
+[
+  {
+    "element": {
+      "title": "Raising Gazorpazorp",
+      "meow": "rasperry",
+      "wowWow": "blueberry"
+    },
+
+    "facets": [
+      {
+        "group": "Planet",
+        "value": "gazorpazorp",
+        "label": "Gazorpazorp",
+        "description": "Planets in this episode"
+      },
+      {
+        "group": "Guest character",
+        "value": "gwendolyn",
+        "label": "Gwendolyn",
+        "description": "Guest characters in this episodes"
+      },
+      {
+        "group": "Guest character",
+        "value": "ma-sha",
+        "label": "Ma-Sha",
+        "description": "Guest characters in this episodes"
+      },
+      {
+        "group": "Season",
+        "value": "1",
+        "label": "Season 1"
+      },
+      {
+        "group": "Show",
+        "value": "rick-morty",
+        "label": "Rick & Morty"
+      }
+    ]
+  },
+  {
+    "element": {
+      "title": "The wedding squanchers",
+      "meow": "rasperry",
+      "wowWow": "blueberry"
+    },
+
+    "facets": [
+      {
+        "group": "Planet",
+        "value": "squanch",
+        "label": "Squanch",
+        "description": "Planets in this episode"
+      },
+      {
+        "group": "Guest character",
+        "value": "birdperson",
+        "label": "Birdperson",
+        "description": "Guest characters in this episodes"
+      },
+      {
+        "group": "Guest character",
+        "value": "squanchy",
+        "label": "Squanchy",
+        "description": "Guest characters in this episodes"
+      },
+      {
+        "group": "Season",
+        "value": "2",
+        "label": "Season 2"
+      },
+      {
+        "group": "Show",
+        "value": "rick-morty",
+        "label": "Rick & Morty"
+      }
+    ]
+  },
+  {
+    "element": {
+      "title": "The Rickshank redemption",
+      "meow": "rasperry",
+      "wowWow": "blueberry"
+    },
+
+    "facets": [
+      {
+        "group": "Guest character",
+        "value": "birdperson",
+        "label": "Birdperson",
+        "description": "Guest characters in this episodes"
+      },
+      {
+        "group": "Planet",
+        "value": "buttworld",
+        "label": "Buttworld",
+        "description": "Planets in this episode"
+      },
+      {
+        "group": "Season",
+        "value": "3",
+        "label": "Season 3"
+      },
+      {
+        "group": "Show",
+        "value": "rick-morty",
+        "label": "Rick & Morty"
+      }
+    ]
+  },
+  {
+    "element": {
+      "title": "Ricksy business",
+      "meow": "rasperry",
+      "wowWow": "blueberry"
+    },
+
+    "facets": [
+      {
+        "group": "Guest character",
+        "value": "squanchy",
+        "label": "Squanchy",
+        "description": "Guest characters in this episodes"
+      },
+      {
+        "group": "Guest character",
+        "value": "abradolf_lincler",
+        "label": "Abradolf Lincler",
+        "description": "Guest characters in this episodes"
+      },
+      {
+        "group": "Season",
+        "value": "1",
+        "label": "Season 1"
+      },
+      {
+        "group": "Show",
+        "value": "rick-morty",
+        "label": "Rick & Morty"
+      }
+    ]
+  },
+  {
+    "element": {
+      "title": "Close Rick-counters of the Rick kind",
+      "meow": "rasperry",
+      "wowWow": "blueberry"
+    },
+    "facets": [
+      {
+        "group": "Guest character",
+        "value": "ricktiminus_sancheziminius",
+        "label": "Ricktiminus Sancheziminius",
+        "description": "Guest characters in this episodes"
+      },
+      {
+        "group": "Guest character",
+        "value": "abradolf_lincler",
+        "label": "Abradolf Lincler",
+        "description": "Guest characters in this episodes"
+      },
+      {
+        "group": "Planet",
+        "value": "buttworld",
+        "label": "Buttworld",
+        "description": "Planets in this episode"
+      },
+      {
+        "group": "Season",
+        "value": "1",
+        "label": "Season 1"
+      },
+      {
+        "group": "Show",
+        "value": "rick-morty",
+        "label": "Rick & Morty"
+      }
+    ]
+  }
+]
