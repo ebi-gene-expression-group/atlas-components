@@ -34,35 +34,34 @@ class CheckboxFacetGroup extends React.Component {
   _handleChange(facet) {
     this.setState(
       { checkedFacets: _xorBy(this.state.checkedFacets, [facet], `value`) },
-      () => this.props.onChange(props.facetGroupName, this.state.checkedFacets))
+      () => this.props.onChange(this.props.facetGroupName, this.state.checkedFacets))
   }
 
   render() {
-    const { facetGroupName, facetGroupDescription, facets } = this.props
+    const { name, description, facets } = this.props
     const { checkedFacets } = this.state
 
-    return (
-      <div className={`padding-bottom-xlarge`}>
-        <h4>
-          { facetGroupName }
-          { facetGroupDescription && <TooltipIcon tooltipText={facetGroupDescription}/> }
-        </h4>
-        {facets.map((facet) =>
-          <CheckboxOption {...facet}
-            checked={checkedFacets.some((checkedFacet) => checkedFacet.value === facet.value)}
-            onChange={this._handleChange}
-            key={facet.value}
-          />
-        )}
-      </div>
-    )
+      return (facets.length > 0 && (<div className={`padding-bottom-xlarge`}>
+          <h4>
+            {name}
+            {description && <TooltipIcon tooltipText={description}/>}
+          </h4>
+          {facets.map((facet) =>
+            <CheckboxOption {...facet}
+                            checked={checkedFacets.some((checkedFacet) => checkedFacet.value === facet.value)}
+                            onChange={this._handleChange}
+                            key={facet.value}
+            />
+          )}
+        </div>
+      ))
+
   }
 }
 
 CheckboxFacetGroup.propTypes = {
-  facetGroupName: PropTypes.string.isRequired,
-  facetGroupDescription: PropTypes.string,
-  endpoint: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  description: PropTypes.string,
   facets: PropTypes.arrayOf(
     PropTypes.shape({
       value: PropTypes.string.required,

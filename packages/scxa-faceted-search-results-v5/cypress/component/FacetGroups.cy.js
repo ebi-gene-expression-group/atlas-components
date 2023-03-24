@@ -6,8 +6,8 @@ import vindicators from '../fixtures/vindicators.json'
 import { getRandomInt } from './TestUtils'
 
 const props = {
-  facetGroupName: `Vindicators`,
-  facetGroupNameDescription: `Show the vindicators`,
+  name: `Vindicators`,
+  description: `Show the vindicators`,
   facets: []
 }
 
@@ -30,7 +30,7 @@ describe(`CheckboxFacetGroup`, () => {
       expect(checkboxes.length).to.equal(props.facets.length)
     })
     cy.get(`h4`).invoke(`text`).then((headerText) => {
-      expect(headerText).to.equal(props.facetGroupName)
+      expect(headerText).to.equal(props.name)
     })
     cy.get(`input`).should(`not.have.attr`, `disabled`)
     cy.get(`label`).should(`not.have.attr`, `color`)
@@ -59,7 +59,7 @@ describe(`CheckboxFacetGroup`, () => {
     cy.get(`input[type="checkbox"]`).eq(randomCheckboxIndex).click()
     cy.get(`@onChange`)
       .should(`have.been.calledOnceWithExactly`,
-        props.facets[randomCheckboxIndex].group,
+        props.facetGroupName,
         [props.facets[randomCheckboxIndex]]
       )
 
@@ -67,7 +67,7 @@ describe(`CheckboxFacetGroup`, () => {
     cy.get(`@onChange`)
       .should(`have.been.callCount`, 2)
       .should(`calledWithExactly`,
-        props.facets[randomCheckboxIndex].group, []
+        props.facetGroupName, []
       )
   })
 })

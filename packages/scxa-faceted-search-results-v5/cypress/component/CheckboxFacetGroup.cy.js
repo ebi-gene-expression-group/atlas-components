@@ -7,7 +7,7 @@ import { getFacets, getPropsWithTooltip, getPropsWithoutTooltip } from './TestUt
 describe(`CheckboxFacetGroup`, () => {
   it(`displays the expected tooltip if it exists`, () => {
     const propsWithTooltip = getPropsWithTooltip()
-    const facetTooltip = propsWithTooltip.facetGroupDescription.toString()
+    const facetTooltip = propsWithTooltip.description
     const props = {
       ...propsWithTooltip,
       facets: getFacets()
