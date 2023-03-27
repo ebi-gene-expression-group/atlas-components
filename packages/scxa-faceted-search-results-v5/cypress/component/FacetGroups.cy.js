@@ -4,8 +4,9 @@ import CheckboxFacetGroup from '../../src/facetgroups/CheckboxFacetGroup'
 
 import vindicators from '../fixtures/vindicators.json'
 import { getRandomInt } from './TestUtils'
+import MultiselectDropdownFacetGroup from "../../src/facetgroups/MultiselectDropdownFacetGroup";
 
-const props = {
+let props = {
   name: `Vindicators`,
   description: `Show the vindicators`,
   facets: []
@@ -68,6 +69,32 @@ describe(`CheckboxFacetGroup`, () => {
       .should(`have.been.callCount`, 2)
       .should(`calledWithExactly`,
         props.facetGroupName, []
+      )
+  })
+})
+
+describe(`MultiselectDropdownFacetGroup`, () => {
+
+  beforeEach(() => {
+    props.facets = vindicators
+  })
+
+  it(`callback includes facet name in arguments`, () => {
+    const mockCallbackWrapper = {
+      onChange: function(facetGroup, checkedFacets) {
+      }
+    }
+    cy.spy(mockCallbackWrapper, `onChange`).as(`onChange`)
+    const randomIndex = getRandomInt(0, props.facets.length)
+    const valueToType = vindicators[randomIndex].value
+
+    cy.mount(<MultiselectDropdownFacetGroup {...props} onChange={mockCallbackWrapper.onChange} />)
+    cy.get(`input#facetGroupMultiSelectDropdown`)
+      .type(`${valueToType}{enter}`, {force: true})
+
+    cy.get(`@onChange`)
+      .should(`have.been.calledOnceWithExactly`,
+        props.name, [props.facets[randomIndex]]
       )
   })
 })

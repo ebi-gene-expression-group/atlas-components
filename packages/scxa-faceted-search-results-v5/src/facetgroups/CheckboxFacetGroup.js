@@ -5,15 +5,16 @@ import TooltipIcon from './TooltipIcon'
 import {xorBy as _xorBy} from "lodash";
 import FacetGroupPropTypes from "./FacetGroupPropTypes";
 
-const CheckboxOption = ({value, disabled, checked, onChange}) =>
+const CheckboxOption = ({value, label, disabled, checked, onChange}) =>
   <div>
     <input type={`checkbox`} {...{value, checked, disabled}}
-           onChange={() => onChange({value, disabled})}/>
-    <label style={disabled ? {color: `lightgrey`} : {}}>{value}</label>
+           onChange={() => onChange({label, value, disabled})}/>
+    <label style={disabled ? {color: `lightgrey`} : {}}>{label}</label>
   </div>
 
 CheckboxOption.propTypes = {
   value: PropTypes.string.isRequired,
+  label: PropTypes.string.isRequired,
   disabled: PropTypes.bool.isRequired,
   checked: PropTypes.bool.isRequired,
   onChange: PropTypes.func.isRequired
