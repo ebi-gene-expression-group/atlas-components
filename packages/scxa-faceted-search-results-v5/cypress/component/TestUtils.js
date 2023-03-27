@@ -1,11 +1,17 @@
-import checkboxes from '../fixtures/vindicators.json'
+import facets from '../fixtures/vindicators.json'
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import React from "react";
 import CheckboxFacetGroupsDefaultProps from "../../src/facetgroups/CheckboxFacetGroupsDefaultProps";
+import MultiSelectDropdownFacetGroupsDefaultProps
+  from "../../src/facetgroups/MultiSelectDropdownFacetGroupsDefaultProps";
 
-const getPropsWithTooltip = () => {
+const getPropsForCheckBoxGroupWithTooltip = () => {
   return Cypress._.shuffle(CheckboxFacetGroupsDefaultProps).pop()
+}
+
+const getPropsForMultiSelectDropdownGroupWithTooltip = () => {
+  return Cypress._.shuffle(MultiSelectDropdownFacetGroupsDefaultProps).pop()
 }
 
 const getPropsForMarkerGeneFacet = () => {
@@ -14,13 +20,13 @@ const getPropsForMarkerGeneFacet = () => {
 }
 
 const getPropsWithoutTooltip = () => {
-  let props = getPropsWithTooltip()
+  let props = getPropsForCheckBoxGroupWithTooltip()
   props.description = ``
   return props
 }
 
 const getFacets = () => {
-  return Cypress._.shuffle(checkboxes).filter(() => Math.random() > 0.5)
+  return Cypress._.shuffle(facets).filter(() => Math.random() > 0.5)
 }
 
 const ExperimentTableCard = ({title}) =>
@@ -68,5 +74,6 @@ const getRandomInt = (min, max) => {
   return Math.floor(Math.random() * (max - min)) + min //The maximum is exclusive and the minimum is inclusive
 }
 
-export { getRandomInt, getFacets, getPropsWithTooltip, getPropsWithoutTooltip, getPropsForMarkerGeneFacet,
+export { getRandomInt, getFacets, getPropsForCheckBoxGroupWithTooltip, getPropsForMultiSelectDropdownGroupWithTooltip,
+  getPropsWithoutTooltip, getPropsForMarkerGeneFacet,
   ExperimentTableCard, ExperimentTableHeader }

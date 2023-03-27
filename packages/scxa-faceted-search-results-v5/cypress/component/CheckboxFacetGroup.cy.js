@@ -2,11 +2,11 @@ import React from "react"
 
 import CheckboxFacetGroup from '../../src/facetgroups/CheckboxFacetGroup'
 
-import { getFacets, getPropsWithTooltip, getPropsWithoutTooltip } from './TestUtils'
+import { getFacets, getPropsForCheckBoxGroupWithTooltip, getPropsWithoutTooltip } from './TestUtils'
 
 describe(`CheckboxFacetGroup`, () => {
   it(`displays the expected tooltip if it exists`, () => {
-    const propsWithTooltip = getPropsWithTooltip()
+    const propsWithTooltip = getPropsForCheckBoxGroupWithTooltip()
     const facetTooltip = propsWithTooltip.description
     const props = {
       ...propsWithTooltip,

@@ -4,16 +4,17 @@ import PropTypes from 'prop-types'
 import FilterSidebar from './FilterSidebar'
 
 import CheckboxFacetGroupsDefaultProps from './facetgroups/CheckboxFacetGroupsDefaultProps'
+import MultiSelectDropdownFacetGroupsDefaultProps from "./facetgroups/MultiSelectDropdownFacetGroupsDefaultProps";
 
 class FacetedSearchContainer extends React.Component {
 
   render() {
-    const { checkboxFacetGroups, host, queryParams, onChange } = this.props
+    const { checkboxFacetGroups, multiSelectDropdownFacetGroups, host, queryParams, onChange } = this.props
 
     return(
       <div className={`row expanded`}>
         <div className={`small-12 medium-4 large-3 columns`}>
-          <FilterSidebar {...{checkboxFacetGroups, host, queryParams, onChange}}/>
+          <FilterSidebar {...{checkboxFacetGroups, multiSelectDropdownFacetGroups, host, queryParams, onChange}}/>
         </div>
       </div>
     )
@@ -23,6 +24,13 @@ class FacetedSearchContainer extends React.Component {
 FacetedSearchContainer.propTypes = {
   host: PropTypes.string.isRequired,
   checkboxFacetGroups: PropTypes.arrayOf(PropTypes.shape({
+      name: PropTypes.string.required,
+      description: PropTypes.string.required,
+      endpoint: PropTypes.string.isRequired,
+      payloadConversion: PropTypes.func
+    })
+  ),
+  multiSelectDropdownFacetGroups: PropTypes.arrayOf(PropTypes.shape({
       name: PropTypes.string.required,
       description: PropTypes.string.required,
       endpoint: PropTypes.string.isRequired,
@@ -39,7 +47,8 @@ FacetedSearchContainer.propTypes = {
 }
 
 FacetedSearchContainer.defaultProps = {
-  checkboxFacetGroups: CheckboxFacetGroupsDefaultProps
+  checkboxFacetGroups: CheckboxFacetGroupsDefaultProps,
+  multiSelectDropdownFacetGroups: MultiSelectDropdownFacetGroupsDefaultProps
 }
 
 export default FacetedSearchContainer

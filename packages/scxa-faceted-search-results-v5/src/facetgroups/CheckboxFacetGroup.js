@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 
 import TooltipIcon from './TooltipIcon'
 import {xorBy as _xorBy} from "lodash";
+import FacetGroupPropTypes from "./FacetGroupPropTypes";
 
 const CheckboxOption = ({value, disabled, checked, onChange}) =>
   <div>
@@ -59,16 +60,6 @@ class CheckboxFacetGroup extends React.Component {
   }
 }
 
-CheckboxFacetGroup.propTypes = {
-  name: PropTypes.string.isRequired,
-  description: PropTypes.string,
-  facets: PropTypes.arrayOf(
-    PropTypes.shape({
-      value: PropTypes.string.required,
-      disabled: PropTypes.bool.isRequired,
-    })
-  ).isRequired,
-  onChange: PropTypes.func.isRequired
-}
+CheckboxFacetGroup.propTypes = FacetGroupPropTypes
 
 export default CheckboxFacetGroup
