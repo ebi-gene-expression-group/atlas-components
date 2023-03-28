@@ -79,7 +79,7 @@ describe(`MultiselectDropdownFacetGroup`, () => {
     props.facets = vindicators
   })
 
-  it(`callback includes facet name in arguments`, () => {
+  it(`callback includes user typed facet name in arguments`, () => {
     const mockCallbackWrapper = {
       onChange: function(facetGroup, checkedFacets) {
       }

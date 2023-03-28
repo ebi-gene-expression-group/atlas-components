@@ -9,6 +9,7 @@ const CheckboxFacetGroupsDefaultProps = [
         facets.push(
           {
             value: `Experiments with marker genes`,
+            label: `Experiments with marker genes`,
             disabled: false
           }
         )
@@ -27,6 +28,7 @@ const CheckboxFacetGroupsDefaultProps = [
         facets.push(
           {
             value: checkboxValue,
+            label: checkboxValue,
             disabled: false
           }
         )

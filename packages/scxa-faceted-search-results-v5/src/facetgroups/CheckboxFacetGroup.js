@@ -43,20 +43,20 @@ class CheckboxFacetGroup extends React.Component {
     const { name, description, facets } = this.props
     const { checkedFacets } = this.state
 
-      return (facets.length > 0 && (<div className={`padding-bottom-xlarge`}>
-          <h4>
-            {name}
-            {description && <TooltipIcon tooltipText={description}/>}
-          </h4>
-          {facets.map((facet) =>
-            <CheckboxOption {...facet}
-                            checked={checkedFacets.some((checkedFacet) => checkedFacet.value === facet.value)}
-                            onChange={this._handleChange}
-                            key={facet.value}
-            />
-          )}
-        </div>
-      ))
+    return (facets.length > 0 && (<div className={`padding-bottom-xlarge`}>
+        <h4>
+          {name}
+          {description && <TooltipIcon tooltipText={description}/>}
+        </h4>
+        {facets.map((facet) =>
+          <CheckboxOption {...facet}
+                          checked={checkedFacets.some((checkedFacet) => checkedFacet.value === facet.value)}
+                          onChange={this._handleChange}
+                          key={facet.value}
+          />
+        )}
+      </div>
+    ))
 
   }
 }
