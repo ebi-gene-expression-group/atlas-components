@@ -1,4 +1,8 @@
 import facets from '../fixtures/vindicators.json'
+import organismParts from '../fixtures/organismParts.json'
+import cellTypes from '../fixtures/cellTypes.json'
+import species from '../fixtures/species.json'
+
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import React from "react";
@@ -27,6 +31,18 @@ const getPropsWithoutTooltip = () => {
 
 const getFacets = () => {
   return Cypress._.shuffle(facets).filter(() => Math.random() > 0.5)
+}
+
+const getRandomSpecies = () => {
+  return Cypress._.shuffle(species).filter(() => Math.random() > 0.5)
+}
+
+const getRandomOrganismParts = () => {
+  return Cypress._.shuffle(organismParts).filter(() => Math.random() > 0.5)
+}
+
+const getRandomCellTypes = () => {
+  return Cypress._.shuffle(cellTypes).filter(() => Math.random() > 0.5)
 }
 
 const ExperimentTableCard = ({title}) =>
@@ -74,6 +90,7 @@ const getRandomInt = (min, max) => {
   return Math.floor(Math.random() * (max - min)) + min //The maximum is exclusive and the minimum is inclusive
 }
 
-export { getRandomInt, getFacets, getPropsForCheckBoxGroupWithTooltip, getPropsForMultiSelectDropdownGroupWithTooltip,
+export { getRandomInt, getFacets, getRandomOrganismParts, getRandomCellTypes, getRandomSpecies,
+  getPropsForCheckBoxGroupWithTooltip, getPropsForMultiSelectDropdownGroupWithTooltip,
   getPropsWithoutTooltip, getPropsForMarkerGeneFacet,
   ExperimentTableCard, ExperimentTableHeader }

@@ -23,8 +23,8 @@ class FilterSidebar extends React.Component {
             resource={facetGroup.endpoint}
             query={queryParams}
             fulfilledPayloadProvider={facetGroup.payloadConversion}
-            facetGroupName={facetGroup.name}
-            facetGroupDescription={facetGroup.description}
+            name={facetGroup.name}
+            description={facetGroup.description}
 
             onChange={onChange}/>
         ),
@@ -34,8 +34,8 @@ class FilterSidebar extends React.Component {
             resource={facetGroup.endpoint}
             query={queryParams}
             fulfilledPayloadProvider={facetGroup.payloadConversion}
-            facetGroupName={facetGroup.name}
-            facetGroupDescription={facetGroup.description}
+            name={facetGroup.name}
+            description={facetGroup.description}
 
             onChange={onChange}/>
         )

@@ -2,9 +2,10 @@ import React from "react"
 
 import FilterSidebar from "../../src/FilterSidebar"
 
-import CheckboxFacetGroupsDefaultProps from "../../src/facetgroups/CheckboxFacetGroupsDefaultProps";
+import CheckboxFacetGroupsDefaultProps from "../../src/facetgroups/CheckboxFacetGroupsDefaultProps"
 import MultiSelectDropdownFacetGroupsDefaultProps
-  from "../../src/facetgroups/MultiSelectDropdownFacetGroupsDefaultProps";
+  from "../../src/facetgroups/MultiSelectDropdownFacetGroupsDefaultProps"
+import {getRandomOrganismParts, getRandomCellTypes, getRandomSpecies} from './TestUtils'
 
 let propsForFilterSideBar = {
   host: `/gxa/sc/`,
@@ -12,8 +13,6 @@ let propsForFilterSideBar = {
 }
 
 const emptyPayload = []
-const organismParts = [`Aorta`, `Bone marrow`, `Cerebellum`]
-const cellTypes = [`Bladder cell`, `B cell`, `Neuron`]
 
 describe('FilterSidebar', () => {
 
@@ -34,14 +33,7 @@ describe('FilterSidebar', () => {
 
   it(`should loads "species" facet group when there are couple of species exists for the given term`, () => {
     const markerGenePayload = `false`
-    const speciesPayload = [
-      `Arabidopsis_thaliana`,
-      `Callithrix jacchus`,
-      `Danio rerio`,
-      `Gallus gallus`,
-      `Homo sapiens`,
-      `Mus musculus`,
-    ]
+    const speciesPayload = getRandomSpecies()
 
     cy.intercept(`GET`, `/gxa/sc/json/gene-search/marker-genes`, markerGenePayload)
     cy.intercept(`GET`, `/gxa/sc/json/gene-search/species`, speciesPayload)
@@ -57,14 +49,7 @@ describe('FilterSidebar', () => {
 
   it(`should loads "species" and "is marker genes" facet groups when there are couple of species exists for the given term`, () => {
     const markerGenePayload = `true`
-    const speciesPayload = [
-      `Arabidopsis_thaliana`,
-      `Callithrix jacchus`,
-      `Danio rerio`,
-      `Gallus gallus`,
-      `Homo sapiens`,
-      `Mus musculus`,
-    ]
+    const speciesPayload = getRandomSpecies()
     const nbOfIsMarkerGeneCheckboxes = 1
     const expectedNbOfCheckboxes = speciesPayload.length + nbOfIsMarkerGeneCheckboxes
 
@@ -94,7 +79,7 @@ describe('FilterSidebar', () => {
   })
 
   it(`should load "organism part" facet group when there is at least 1 marker gene`, () => {
-    const organismPartsPayload = organismParts
+    const organismPartsPayload = getRandomOrganismParts()
     const cellTypePayload = emptyPayload
     cy.intercept(`GET`, `/gxa/sc/json/gene-search/organism-parts`, organismPartsPayload)
     cy.intercept(`GET`, `/gxa/sc/json/gene-search/cell-types`, cellTypePayload)
@@ -126,7 +111,7 @@ describe('FilterSidebar', () => {
 
   it(`should load "cell types" facet group when there is at least 1 marker gene`, () => {
     const organismPartsPayload = emptyPayload
-    const cellTypePayload = cellTypes
+    const cellTypePayload = getRandomCellTypes()
     cy.intercept(`GET`, `/gxa/sc/json/gene-search/organism-parts`, organismPartsPayload)
     cy.intercept(`GET`, `/gxa/sc/json/gene-search/cell-types`, cellTypePayload)
 
@@ -156,8 +141,8 @@ describe('FilterSidebar', () => {
   })
 
   it(`should load both "organism part" and "cell types" facet groups when there is at least 1 marker gene`, () => {
-    const organismPartsPayload = organismParts
-    const cellTypePayload = cellTypes
+    const organismPartsPayload = getRandomOrganismParts()
+    const cellTypePayload = getRandomCellTypes()
     cy.intercept(`GET`, `/gxa/sc/json/gene-search/organism-parts`, organismPartsPayload)
     cy.intercept(`GET`, `/gxa/sc/json/gene-search/cell-types`, cellTypePayload)
 
@@ -204,5 +189,66 @@ describe('FilterSidebar', () => {
         })
       })
   })
-  // TODO: MultiDDFG only, CBFG & MultiDDFG together
+
+  it(`should load both "is marker gene", "species", "organism part" and "cell types" facet groups when there is at least 1 marker gene`, () => {
+    const markerGenePayload = `true`
+    const speciesPayload = getRandomSpecies()
+    const organismPartsPayload = getRandomOrganismParts()
+    const cellTypePayload = getRandomCellTypes()
+
+    const nbOfIsMarkerGeneCheckboxes = 1
+    const expectedNbOfCheckboxes = speciesPayload.length + nbOfIsMarkerGeneCheckboxes
+
+    cy.intercept(`GET`, `/gxa/sc/json/gene-search/marker-genes`, markerGenePayload)
+    cy.intercept(`GET`, `/gxa/sc/json/gene-search/species`, speciesPayload)
+    cy.intercept(`GET`, `/gxa/sc/json/gene-search/organism-parts`, organismPartsPayload)
+    cy.intercept(`GET`, `/gxa/sc/json/gene-search/cell-types`, cellTypePayload)
+
+    propsForFilterSideBar.checkboxFacetGroups = CheckboxFacetGroupsDefaultProps
+    propsForFilterSideBar.multiSelectDropdownFacetGroups = MultiSelectDropdownFacetGroupsDefaultProps
+
+    cy.mount(<FilterSidebar {...propsForFilterSideBar} />)
+
+    cy.get(`input[type="checkbox"]`).should((inputs) => {
+      expect(inputs.length).to.equal(expectedNbOfCheckboxes)
+    })
+
+    cy.get(`input#facetGroupMultiSelectDropdown`)
+      .first()
+      .as(`cellTypeDropdown`)
+
+    cy.get(`@cellTypeDropdown`)
+      .click({force: true})
+
+    cy.get(`@cellTypeDropdown`)
+      .invoke(`attr`, `aria-controls`)
+      .as(`cellTypeDropdownMenuId`)
+
+    cy.get(`@cellTypeDropdownMenuId`)
+      .get(`div[class$="-MenuList"]`)
+      .then((labels) => {
+        Object.values(labels)[0].childNodes.forEach(node => {
+          expect(cellTypePayload).to.contains(node.innerText)
+        })
+      })
+
+    cy.get(`input#facetGroupMultiSelectDropdown`)
+      .last()
+      .as(`organismPartDropdown`)
+
+    cy.get(`@organismPartDropdown`)
+      .click({force: true})
+
+    cy.get(`@organismPartDropdown`)
+      .invoke(`attr`, `aria-controls`)
+      .as(`organismPartDropdownMenuId`)
+
+    cy.get(`@organismPartDropdownMenuId`)
+      .get(`div[class$="-MenuList"]`)
+      .then((labels) => {
+        Object.values(labels)[0].childNodes.forEach(node => {
+          expect(organismPartsPayload).to.contains(node.innerText)
+        })
+      })
+  })
 })
