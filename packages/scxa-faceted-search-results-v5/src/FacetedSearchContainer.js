@@ -5,16 +5,66 @@ import FilterSidebar from './FilterSidebar'
 
 import CheckboxFacetGroupsDefaultProps from './facetgroups/CheckboxFacetGroupsDefaultProps'
 import MultiSelectDropdownFacetGroupsDefaultProps from "./facetgroups/MultiSelectDropdownFacetGroupsDefaultProps";
+import {withFetchLoader} from "@ebi-gene-expression-group/atlas-react-fetch-loader";
+import FilterList from "./FilterList";
+
+const FilterListWithFetchLoader = withFetchLoader(FilterList)
 
 class FacetedSearchContainer extends React.Component {
 
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      queryParams: props.queryParams
+    }
+    this.onChange = this.onChange.bind(this)
+  }
+
+  onChange(termName, termValues) {
+
+    termValues.map((termValue) => {
+      const changedTerm = {
+        name: termName,
+        value: termValue.label
+      }
+
+      this.setState({
+        queryParams: this.state.queryParams.indexOf(changedTerm) !== -1 ?
+          this.state.queryParams.splice(this.state.queryParams.indexOf(changedTerm), 1) :
+        this.state.queryParams.push(changedTerm)
+        }
+      )
+    })
+  }
+
   render() {
-    const { checkboxFacetGroups, multiSelectDropdownFacetGroups, host, queryParams, onChange } = this.props
+    const { checkboxFacetGroups, multiSelectDropdownFacetGroups, host, filterListEndpoint,
+      ResultsHeaderClass, ResultElementClass,
+      sortTitle } = this.props
+    const queryParams = this.state.queryParams
 
     return(
       <div className={`row expanded`}>
         <div className={`small-12 medium-4 large-3 columns`}>
-          <FilterSidebar {...{checkboxFacetGroups, multiSelectDropdownFacetGroups, host, queryParams, onChange}}/>
+          <FilterSidebar onChange={this.onChange}
+                         {...{checkboxFacetGroups, multiSelectDropdownFacetGroups, host, queryParams}}/>
+        </div>
+        <div className={`small-12 medium-8 large-9 columns`}>
+          <FilterListWithFetchLoader
+            host={host}
+            resource={filterListEndpoint}
+            query={queryParams}
+            fulfilledPayloadProvider={ (payload) => (
+              {
+                filteredResults: payload.results,
+                resultMessage: payload.resultMessage
+              }
+            )
+
+            }
+            {...{ResultElementClass, ResultsHeaderClass, sortTitle}}
+          />
         </div>
       </div>
     )
@@ -43,7 +93,7 @@ FacetedSearchContainer.propTypes = {
       value: PropTypes.string.required,
     })
   ),
-  onChange: PropTypes.func.isRequired,
+  filterListEndpoint: PropTypes.string.isRequired,
 }
 
 FacetedSearchContainer.defaultProps = {

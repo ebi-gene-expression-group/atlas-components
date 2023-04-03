@@ -2,7 +2,7 @@ import React from 'react'
 
 import CheckboxFacetGroup from '../../src/facetgroups/CheckboxFacetGroup'
 
-import vindicators from '../fixtures/vindicators.json'
+import vindicators from '../fixtures/vindicatorsResponse.json'
 import { getRandomInt } from './TestUtils'
 import MultiselectDropdownFacetGroup from "../../src/facetgroups/MultiselectDropdownFacetGroup";
 

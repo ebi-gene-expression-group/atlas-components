@@ -26,7 +26,7 @@ class FilterList extends React.Component {
     const sortedElements = this.state.ascending ? filteredElements :  filteredElements.reverse()
 
     return (
-      <div>
+      <div id={`filterList`}>
         <h4>{resultsMessage}</h4>
         { sortedElements.length && <ResultsHeaderClass onClick={this.sortEntries}/> }
         { sortedElements.map((element, index) => <div key={index}><ResultElementClass {...element}/></div>) }

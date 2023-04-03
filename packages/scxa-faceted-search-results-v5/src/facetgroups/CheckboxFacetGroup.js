@@ -36,14 +36,14 @@ class CheckboxFacetGroup extends React.Component {
   _handleChange(facet) {
     this.setState(
       { checkedFacets: _xorBy(this.state.checkedFacets, [facet], `value`) },
-      () => this.props.onChange(this.props.facetGroupName, this.state.checkedFacets))
+      () => this.props.onChange(this.props.name, this.state.checkedFacets))
   }
 
   render() {
     const { name, description, facets } = this.props
     const { checkedFacets } = this.state
 
-    return (facets.length > 0 && (<div className={`padding-bottom-xlarge`}>
+    return (facets.length > 0 && (<div id={`facetGroupCheckBox`} className={`padding-bottom-xlarge`}>
         <h4>
           {name}
           {description && <TooltipIcon tooltipText={description}/>}

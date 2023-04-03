@@ -1,7 +1,7 @@
-import facets from '../fixtures/vindicators.json'
-import organismParts from '../fixtures/organismParts.json'
-import cellTypes from '../fixtures/cellTypes.json'
-import species from '../fixtures/species.json'
+import facets from '../fixtures/vindicatorsResponse.json'
+import organismParts from '../fixtures/organismPartsResponse.json'
+import cellTypes from '../fixtures/cellTypesResponse.json'
+import species from '../fixtures/speciesResponse.json'
 
 import PropTypes from "prop-types";
 import styled from "styled-components";

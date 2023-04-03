@@ -2,7 +2,7 @@ import React from "react"
 
 import FilterList from '../../src/FilterList'
 
-import episodes from '../fixtures/episodes.json'
+import episodes from '../fixtures/episodesResponse.json'
 import { ExperimentTableHeader, ExperimentTableCard } from './TestUtils'
 
 describe(`FilterList`, () => {

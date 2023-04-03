@@ -10,10 +10,15 @@ const MultiselectDropdownFacetGroupWithFetchLoader = withFetchLoader(Multiselect
 class FilterSidebar extends React.Component {
   constructor(props) {
     super(props)
+
+    this.state = {
+      queryParams: props.queryParams
+    }
   }
 
   render() {
-    const { checkboxFacetGroups, multiSelectDropdownFacetGroups, host, queryParams, onChange } = this.props
+    const { checkboxFacetGroups, multiSelectDropdownFacetGroups, host, onChange } = this.props
+    const queryParams = this.state.queryParams
 
     return(
       [
@@ -25,7 +30,6 @@ class FilterSidebar extends React.Component {
             fulfilledPayloadProvider={facetGroup.payloadConversion}
             name={facetGroup.name}
             description={facetGroup.description}
-
             onChange={onChange}/>
         ),
         multiSelectDropdownFacetGroups.map((facetGroup) =>
@@ -36,7 +40,6 @@ class FilterSidebar extends React.Component {
             fulfilledPayloadProvider={facetGroup.payloadConversion}
             name={facetGroup.name}
             description={facetGroup.description}
-
             onChange={onChange}/>
         )
       ]
@@ -59,6 +62,14 @@ FilterSidebar.propTypes = {
       payloadConversion: PropTypes.func,
     })
   ),
+  host: PropTypes.string.required,
+  queryParams: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string.required,
+      value: PropTypes.string.required,
+    })
+  ),
+  onChange: PropTypes.func.isRequired,
 }
 
 FilterSidebar.defaultProps = {
