@@ -60,7 +60,7 @@ describe(`CheckboxFacetGroup`, () => {
     cy.get(`input[type="checkbox"]`).eq(randomCheckboxIndex).click()
     cy.get(`@onChange`)
       .should(`have.been.calledOnceWithExactly`,
-        props.facetGroupName,
+        props.name,
         [props.facets[randomCheckboxIndex]]
       )
 
@@ -68,7 +68,7 @@ describe(`CheckboxFacetGroup`, () => {
     cy.get(`@onChange`)
       .should(`have.been.callCount`, 2)
       .should(`calledWithExactly`,
-        props.facetGroupName, []
+        props.name, []
       )
   })
 })

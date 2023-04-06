@@ -6,6 +6,7 @@ import { ExperimentTableHeader, ExperimentTableCard,
   getRandomSpecies, getRandomOrganismParts, getRandomCellTypes } from './TestUtils'
 import episodes from '../fixtures/episodesResponse.json'
 import selectedEpisodes from '../fixtures/selectedEpisodesResponse.json'
+import lessSelectedEpisodes from '../fixtures/lessSelectedEpisodesResponse.json'
 
 describe(`FacetedSearchContainer`, () => {
   const props = {
@@ -16,16 +17,18 @@ describe(`FacetedSearchContainer`, () => {
     ResultsHeaderClass: ExperimentTableHeader,
     ResultElementClass: ExperimentTableCard
   }
-  const markerGenePayload = `true`
+  const markerGenePayloadTrue = `true`
+  const markerGenePayloadFalse = `false`
   const speciesPayload = getRandomSpecies()
   const organismPartsPayload = getRandomOrganismParts()
   const cellTypePayload = getRandomCellTypes()
   const resultList = { results: episodes }
-  const selectedResultList = { results: selectedEpisodes }
+  const resultListBySelection = { results: selectedEpisodes }
+  const resultListWithLessResult = { results: lessSelectedEpisodes }
   const emptyResponse = []
 
   beforeEach(() => {
-      cy.intercept(`GET`, `/gxa/sc/json/gene-search/marker-genes`, markerGenePayload)
+      cy.intercept(`GET`, `/gxa/sc/json/gene-search/marker-genes`, markerGenePayloadTrue)
       cy.intercept(`GET`, `/gxa/sc/json/gene-search/species`, speciesPayload)
       cy.intercept(`GET`, `/gxa/sc/json/gene-search/organism-parts`, organismPartsPayload)
       cy.intercept(`GET`, `/gxa/sc/json/gene-search/cell-types`, cellTypePayload)
@@ -42,7 +45,7 @@ describe(`FacetedSearchContainer`, () => {
   })
 
   it(`when results have no facets only the results list is displayed`, () => {
-    cy.intercept(`GET`, `/gxa/sc/json/gene-search/marker-genes`, `false`)
+    cy.intercept(`GET`, `/gxa/sc/json/gene-search/marker-genes`, markerGenePayloadFalse)
     cy.intercept(`GET`, `/gxa/sc/json/gene-search/species`, emptyResponse)
     cy.intercept(`GET`, `/gxa/sc/json/gene-search/organism-parts`, emptyResponse)
     cy.intercept(`GET`, `/gxa/sc/json/gene-search/cell-types`, emptyResponse)
@@ -55,46 +58,65 @@ describe(`FacetedSearchContainer`, () => {
   })
 
   it(`clicking to select/unselect a single facet in a group works`, () => {
-    const selectedSpecies = speciesPayload.at(0)
-
     cy.intercept(`GET`, `/gxa/sc/json/gene-search`, resultList)
     cy.intercept(
       {
         method: `GET`,
         pathname: `/gxa/sc/json/gene-search`,
         query: {
-          species: selectedSpecies,
+          isMarkerGenes: markerGenePayloadTrue,
         }
       },
-      selectedResultList
+      resultListBySelection
     )
 
     cy.mount(<FacetedSearchContainer {...props} />)
-    // cy.get(`input[type="checkbox"]`).first().click()
-    cy.get(':nth-child(2) > :nth-child(2) > label').click()
-    cy.get(`div.small-12.medium-8.large-9.columns>div>div>div>p`)
-      .as(`selectedTitles`)
-      .should((selectedTitles) => {
-        expect(selectedTitles.length).to.be.lessThan(resultList.results.length)
-      })
     cy.get(`input[type="checkbox"]`).first().click()
+    // cy.get(':nth-child(2) > :nth-child(2) > label').click()
     cy.get(`div.small-12.medium-8.large-9.columns>div>div>div>p`)
-      .as(`selectedTitles`)
-      .should((selectedTitles) => {
-        expect(selectedTitles.length).to.equal(props.results.length)
+      .then((selectedTitles) => {
+        expect(selectedTitles.length).to.be.lessThan(resultList.results.length)
+        cy.get(`input[type="checkbox"]`).first().click()
+        cy.get(`div.small-12.medium-8.large-9.columns>div>div>div>p`)
+          .then( (selectedTitles2) => {
+            expect(selectedTitles2.length).to.equal(resultList.results.length)
+          })
       })
   })
 
   it(`clicking on a second facet works`, () => {
+    cy.intercept(`GET`, `/gxa/sc/json/gene-search`, resultList)
+    cy.intercept(
+      {
+        method: `GET`,
+        pathname: `/gxa/sc/json/gene-search`,
+        query: {
+          isMarkerGenes: markerGenePayloadTrue,
+        }
+      },
+      resultListBySelection
+    )
+    cy.intercept(
+      {
+        method: `GET`,
+        pathname: `/gxa/sc/json/gene-search`,
+        query: {
+          isMarkerGenes: markerGenePayloadTrue,
+          species: speciesPayload[0],
+        }
+      },
+      resultListWithLessResult
+    )
+
     cy.mount(<FacetedSearchContainer {...props} />)
-    cy.get(`input[type="checkbox"]`).first().click()
+    cy.get(`input[type="checkbox"]`).first().click({force:true})
     cy.get(`div.small-12.medium-8.large-9.columns>div>div>div>p`)
       .then((selectedTitles) => {
         cy.get(`input[type="checkbox"]`).eq(1).click().then(() => {
           cy.get(`div.small-12.medium-8.large-9.columns>div>div>div>p`)
-            .then((moreSelectedTitles) => {
-              expect(moreSelectedTitles.length)
-                .to.be.greaterThan(selectedTitles.length)
+            .then((lessSelectedTitles) => {
+              expect(lessSelectedTitles.length)
+                .to.be.lessThan(selectedTitles.length)
             })
         })
       })

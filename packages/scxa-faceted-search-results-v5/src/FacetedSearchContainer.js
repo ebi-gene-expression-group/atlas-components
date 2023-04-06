@@ -16,26 +16,55 @@ class FacetedSearchContainer extends React.Component {
     super(props)
 
     this.state = {
-      queryParams: props.queryParams
+      queryParams: props.queryParams,
     }
     this.onChange = this.onChange.bind(this)
   }
 
-  onChange(termName, termValues) {
+  convertQueryStringToObject(queryString) {
+    return Object.fromEntries(new URLSearchParams(queryString))
+  }
 
-    termValues.map((termValue) => {
-      const changedTerm = {
-        name: termName,
-        value: termValue.label
+  convertQueryStringFromObject(queryStringObject) {
+    return new URLSearchParams(queryStringObject).toString()
+  }
+
+  onChange(termName, termValues) {
+    const values = [...new Set(termValues.map(value => value.label))]
+    const name = [...new Set(termValues.map(value => value.value))].at(0)
+    if (values.length > 0) {
+      const termValue = values[0]
+
+      let queryStringObject = this.convertQueryStringToObject(this.state.queryParams)
+
+      let currentTermStr = queryStringObject[name]
+
+      if (typeof currentTermStr !== `undefined`) {
+        let currentTerms = currentTermStr.split(`,`)
+        if (currentTerms.indexOf(termValue) !== -1) {
+          currentTerms.splice(currentTerms.indexOf(termValue))
+        } else {
+          if (name === `isMarkerGenes`) {
+            currentTerms.push(`true`)
+          } else {
+            currentTerms.push(termValue)
+          }
+        }
+        currentTermStr = currentTerms.join(`,`)
+      } else {
+        if (name === `isMarkerGenes`) {
+          currentTermStr = `true`
+        } else {
+          currentTermStr = termValue
+        }
       }
 
+      queryStringObject[name] = currentTermStr
+
       this.setState({
-        queryParams: this.state.queryParams.indexOf(changedTerm) !== -1 ?
-          this.state.queryParams.splice(this.state.queryParams.indexOf(changedTerm), 1) :
-        this.state.queryParams.push(changedTerm)
-        }
-      )
-    })
+        queryParams: this.convertQueryStringFromObject(queryStringObject)
+      })
+    }
   }
 
   render() {

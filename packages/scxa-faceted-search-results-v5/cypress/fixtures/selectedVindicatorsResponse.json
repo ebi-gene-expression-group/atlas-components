@@ -1,0 +1,32 @@
+[
+  {
+    "value": "vance_maximus",
+    "label": "Vance Maximus",
+    "disabled": false
+  },
+  {
+    "value": "alan_rails",
+    "label": "Alan Rails",
+    "disabled": false
+  },
+  {
+    "value": "morty_smith",
+    "label": "Morty Smith",
+    "disabled": false
+  },
+  {
+    "value": "rick_sanchez",
+    "label": "Rick Sanchez",
+    "disabled": false
+  },
+  {
+    "value": "lady_katana",
+    "label": "Lady Katana",
+    "disabled": false
+  },
+  {
+    "value": "diablo_verde",
+    "label": "Diablo Verde",
+    "disabled": false
+  }
+]

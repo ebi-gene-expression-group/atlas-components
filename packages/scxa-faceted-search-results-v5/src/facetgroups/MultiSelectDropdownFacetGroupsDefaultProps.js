@@ -8,7 +8,7 @@ const MultiSelectDropdownFacetGroupsDefaultProps = [
       payload.forEach((dropdownValue) => {
         facets.push(
           {
-            value: dropdownValue,
+            value: `cellTypes`,
             label: dropdownValue,
             disabled: false
           }
@@ -27,7 +27,7 @@ const MultiSelectDropdownFacetGroupsDefaultProps = [
       payload.forEach((dropdownValue) => {
         facets.push(
           {
-            value: dropdownValue,
+            value: `organism-parts`,
             label: dropdownValue,
             disabled: false
           }
