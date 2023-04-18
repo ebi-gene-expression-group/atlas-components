@@ -91,6 +91,7 @@ const experiment6 = {
       label: `inferred cell type - ontology labels`
     }
   ],
+  defaultPlotTypeAndParameterisation: {"tsne": {"perplexity": 50}, "umap": {"n_neighbors": 100}},
   plotTypesAndOptions: {
     "tsne": [{ "perplexity": 40 }, { "perplexity": 25 }, { "perplexity": 45 },{ "perplexity": 1 },{ "perplexity": 30 },
     {"perplexity": 10 },{ "perplexity": 15 },{ "perplexity": 50 },{ "perplexity": 35 },{ "perplexity": 20 },{ "perplexity": 5 }],
@@ -119,7 +120,7 @@ const experimentOmega = {
   ]
 }
 
-const { accession, accessKey, ks, metadata, species, plotTypesAndOptions } = experiment6
+const { accession, accessKey, ks, metadata, species, plotTypesAndOptions, defaultPlotTypeAndParameterisation} = experiment6
 
 const plotTypeDropdown =  [
   {
@@ -137,10 +138,10 @@ class Demo extends React.Component {
     super(props)
 
     this.state = {
-      selectedPlotType: plotTypeDropdown[0].plotType.toLowerCase(),
+      selectedPlotType: Object.keys(defaultPlotTypeAndParameterisation)[0],
       geneId: ``,
-      selectedPlotOption: Object.values(plotTypeDropdown[0].plotOptions[0])[0],
-      selectedPlotOptionLabel: Object.keys(plotTypeDropdown[0].plotOptions[0])[0] + `: ` + Object.values(plotTypeDropdown[0].plotOptions[0])[0],
+      selectedPlotOption: Object.values(Object.values(defaultPlotTypeAndParameterisation)[0])[0],
+      selectedPlotOptionLabel: Object.keys(Object.values(defaultPlotTypeAndParameterisation)[0])[0] + ": " + Object.values(Object.values(defaultPlotTypeAndParameterisation)[0])[0],
       selectedColourBy: ks[Math.round((ks.length -1) / 2)].toString(),
       highlightClusters: [],
       experimentAccession: accession,
@@ -187,7 +188,7 @@ class Demo extends React.Component {
     return(
       <div className={`row column expanded`}>
         <TsnePlotView
-          atlasUrl={`https://wwwdev.ebi.ac.uk/gxa/sc/`}
+          atlasUrl={`https://wwwdev.ebi.ac.uk:8080/gxa/sc/`}
           suggesterEndpoint={`json/suggestions`}
           experimentAccession={this.state.experimentAccession}
           accessKey={accessKey}
@@ -204,13 +205,10 @@ class Demo extends React.Component {
           onChangePlotTypes={
               (plotOption) => {
                 this.setState({
-                  selectedPlotType: plotOption,
-                  selectedPlotOption: Object.values(_find(plotTypeDropdown,
-                      (plot) => plot.plotType.toLowerCase() === plotOption).plotOptions[0])[0],
-                  selectedPlotOptionLabel: Object.keys(_find(plotTypeDropdown,
-                      (plot) => plot.plotType.toLowerCase() === plotOption).plotOptions[0])[0] + `: ` +
-                      Object.values(_find(plotTypeDropdown,
-                      (plot) => plot.plotType.toLowerCase() === plotOption).plotOptions[0])[0]
+                  selectedPlotType: plotOption.value,
+                  selectedPlotOption: defaultPlotTypeAndParameterisation[plotOption.value],
+                  selectedPlotOptionLabel: Object.keys(defaultPlotTypeAndParameterisation[plotOption.value])[0]
+                      + ": " + Object.values(defaultPlotTypeAndParameterisation[plotOption.value])[0],
                 })}
           }
           onChangePlotOptions={
