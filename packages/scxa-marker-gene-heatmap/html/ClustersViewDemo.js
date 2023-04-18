@@ -46,7 +46,7 @@ class Demo extends React.Component {
               .search({k: this.state.selectedK})
               .toString()
           }
-          host={`http://localhost:8080/gxa/sc/`}
+          host={`https://wwwdev.ebi.ac.uk:8080/gxa/sc/`}
           ks={this.state.ks}
           ksWithMarkers={this.state.ksWithMarkers}
           selectedK={this.state.selectedK}
