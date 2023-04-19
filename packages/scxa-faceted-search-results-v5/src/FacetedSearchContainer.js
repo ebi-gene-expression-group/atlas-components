@@ -32,10 +32,11 @@ class FacetedSearchContainer extends React.Component {
   onChange(termName, termValues) {
     const values = [...new Set(termValues.map(value => value.label))]
     const name = [...new Set(termValues.map(value => value.value))].at(0)
+    let queryStringObject = this.convertQueryStringToObject(this.state.queryParams)
+    let queryParams = ""
+
     if (values.length > 0) {
       const termValue = values[0]
-
-      let queryStringObject = this.convertQueryStringToObject(this.state.queryParams)
 
       let currentTermStr = queryStringObject[name]
 
@@ -60,11 +61,12 @@ class FacetedSearchContainer extends React.Component {
       }
 
       queryStringObject[name] = currentTermStr
-
-      this.setState({
-        queryParams: this.convertQueryStringFromObject(queryStringObject)
-      })
+      queryParams = this.convertQueryStringFromObject(queryStringObject)
     }
+
+    this.setState({
+      queryParams: queryParams
+    })
   }
 
   render() {
