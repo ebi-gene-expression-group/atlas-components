@@ -16,6 +16,12 @@ class FilterSidebar extends React.Component {
     }
   }
 
+  _queryParamsByFacetGroupName(facetGroupName) {
+    const queryObject = Object.fromEntries(new URLSearchParams(this.state.queryParams))
+
+    return queryObject[facetGroupName]
+  }
+
   render() {
     const { checkboxFacetGroups, multiSelectDropdownFacetGroups, host, onChange } = this.props
     const queryParams = this.state.queryParams
@@ -27,6 +33,7 @@ class FilterSidebar extends React.Component {
             host={host}
             resource={facetGroup.endpoint}
             query={queryParams}
+            queryParams={this._queryParamsByFacetGroupName(facetGroup.name)}
             fulfilledPayloadProvider={facetGroup.payloadConversion}
             name={facetGroup.name}
             description={facetGroup.description}

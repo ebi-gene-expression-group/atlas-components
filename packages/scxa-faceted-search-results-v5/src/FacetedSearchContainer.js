@@ -29,38 +29,34 @@ class FacetedSearchContainer extends React.Component {
     return new URLSearchParams(queryStringObject).toString()
   }
 
-  onChange(termName, termValues) {
-    const values = [...new Set(termValues.map(value => value.label))]
-    const name = [...new Set(termValues.map(value => value.value))].at(0)
-    let queryStringObject = this.convertQueryStringToObject(this.state.queryParams)
+  onChange(termName, changedFacet) {
+    const value = changedFacet.label
     let queryParams = ""
 
-    if (values.length > 0) {
-      const termValue = values[0]
-
+    if (value !== undefined) {
+      const name = changedFacet.value
+      let queryStringObject = this.convertQueryStringToObject(this.state.queryParams)
+      const termValue = name === `isMarkerGenes` ? `true` : value
       let currentTermStr = queryStringObject[name]
 
       if (typeof currentTermStr !== `undefined`) {
         let currentTerms = currentTermStr.split(`,`)
         if (currentTerms.indexOf(termValue) !== -1) {
-          currentTerms.splice(currentTerms.indexOf(termValue))
+          currentTerms.splice(currentTerms.indexOf(termValue), 1)
         } else {
-          if (name === `isMarkerGenes`) {
-            currentTerms.push(`true`)
-          } else {
-            currentTerms.push(termValue)
-          }
+          currentTerms.push(termValue)
         }
-        currentTermStr = currentTerms.join(`,`)
+        currentTermStr = currentTerms.length === 0 ? `` : currentTerms.join(`,`)
       } else {
-        if (name === `isMarkerGenes`) {
-          currentTermStr = `true`
-        } else {
-          currentTermStr = termValue
-        }
+        currentTermStr = termValue
       }
 
-      queryStringObject[name] = currentTermStr
+      if (currentTermStr === ``) {
+        delete queryStringObject[name]
+      } else {
+        queryStringObject[name] = currentTermStr
+      }
+
       queryParams = this.convertQueryStringFromObject(queryStringObject)
     }
 

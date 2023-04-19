@@ -6,6 +6,8 @@ import { ExperimentTableHeader, ExperimentTableCard,
   getRandomSpecies, getRandomOrganismParts, getRandomCellTypes } from './TestUtils'
 import episodes from '../fixtures/episodesResponse.json'
 import selectedEpisodes from '../fixtures/selectedEpisodesResponse.json'
+import selectedEpisodesAndOneSpecies from '../fixtures/selectedEpisodesAndOneSpeciesResponse.json'
+import selectedEpisodesAndTwoSpecies from '../fixtures/selectedEpisodesAndTwoSpeciesResponse.json'
 import lessSelectedEpisodes from '../fixtures/lessSelectedEpisodesResponse.json'
 
 describe(`FacetedSearchContainer`, () => {
@@ -24,6 +26,8 @@ describe(`FacetedSearchContainer`, () => {
   const cellTypePayload = getRandomCellTypes()
   const resultList = { results: episodes }
   const resultListBySelection = { results: selectedEpisodes }
+  const resultListBySelectionAndOneSpecies = { results: selectedEpisodesAndOneSpecies }
+  const resultListBySelectionAndTwoSpecies = { results: selectedEpisodesAndTwoSpecies }
   const resultListWithLessResult = { results: lessSelectedEpisodes }
   const emptyResponse = []
 
@@ -57,7 +61,7 @@ describe(`FacetedSearchContainer`, () => {
     cy.get(`div#filterList`).should(`have.length`, 1)
   })
 
-  it(`clicking to select/unselect a single facet in a group works`, () => {
+  it(`clicking to select/unselect facets in checkbox groups works`, () => {
     cy.intercept(`GET`, `/gxa/sc/json/gene-search`, resultList)
     cy.intercept(
       {
@@ -69,19 +73,66 @@ describe(`FacetedSearchContainer`, () => {
       },
       resultListBySelection
     )
+    cy.intercept(
+      {
+        method: `GET`,
+        pathname: `/gxa/sc/json/gene-search`,
+        query: {
+          isMarkerGenes: markerGenePayloadTrue,
+          species: speciesPayload[0]
+        }
+      },
+      resultListBySelectionAndOneSpecies
+    )
+    cy.intercept(
+      {
+        method: `GET`,
+        pathname: `/gxa/sc/json/gene-search`,
+        query: {
+          isMarkerGenes: markerGenePayloadTrue,
+          species: speciesPayload[0] + `,` + speciesPayload[1]
+        }
+      },
+      resultListBySelectionAndTwoSpecies
+    )
 
     cy.mount(<FacetedSearchContainer {...props} />)
+
+    // click on is marker gene
     cy.get(`input[type="checkbox"]`).first().click()
-    // cy.get(':nth-child(2) > :nth-child(2) > label').click()
-    cy.get(`div.small-12.medium-8.large-9.columns>div>div>div>p`)
-      .then((selectedTitles) => {
-        expect(selectedTitles.length).to.be.lessThan(resultList.results.length)
-        cy.get(`input[type="checkbox"]`).first().click()
-        cy.get(`div.small-12.medium-8.large-9.columns>div>div>div>p`)
-          .then( (selectedTitles2) => {
-            expect(selectedTitles2.length).to.equal(resultList.results.length)
+    cy.get(`div.small-12.medium-8.large-9.columns>div>div>div>p`).its(`length`)
+      .then((selectedTitlesByMarkerGeneLength) => {
+        expect(selectedTitlesByMarkerGeneLength).to.be.lessThan(resultList.results.length)
+
+        // click on the 1st species checkbox
+        cy.get(`div#facetGroupCheckBox:nth-child(2) > :nth-child(2) > input[type="checkbox"]`).click()
+
+        cy.get(`div.small-12.medium-8.large-9.columns>div>div>div>p`).its(`length`)
+          .then((selectedTitlesByMarkerGeneAndOneSpecies) => {
+            expect(selectedTitlesByMarkerGeneAndOneSpecies).to.be.lessThan(resultList.results.length)
+            expect(selectedTitlesByMarkerGeneAndOneSpecies).to.be.lessThan(selectedTitlesByMarkerGeneLength)
+
+            // click on the 2nd species checkbox
+            cy.get(`div#facetGroupCheckBox:nth-child(2) > :nth-child(3) > input[type="checkbox"]`).click()
+
+            cy.get(`div.small-12.medium-8.large-9.columns>div>div>div>p`).its(`length`)
+              .then((selectedTitlesByMarkerGeneAndTwoSpecies) => {
+                expect(selectedTitlesByMarkerGeneAndTwoSpecies).to.be.lessThan(resultList.results.length)
+                expect(selectedTitlesByMarkerGeneAndTwoSpecies).to.be.lessThan(selectedTitlesByMarkerGeneAndOneSpecies)
+                expect(selectedTitlesByMarkerGeneAndTwoSpecies).to.be.lessThan(selectedTitlesByMarkerGeneLength)
+              })
           })
       })
+
+    // revert the form to its initial state (no selections)
+    cy.get(`input[type="checkbox"]`).first().click()
+    cy.get(`div#facetGroupCheckBox:nth-child(2) > :nth-child(2) > input[type="checkbox"]`).click()
+    cy.get(`div#facetGroupCheckBox:nth-child(2) > :nth-child(3) > input[type="checkbox"]`).click()
+
+    cy.get(`div.small-12.medium-8.large-9.columns>div>div>div>p`)
+      .then( (selectedTitles2) => {
+        expect(selectedTitles2.length).to.equal(resultList.results.length)
+    })
   })
 
   it(`clicking on a second facet works`, () => {
