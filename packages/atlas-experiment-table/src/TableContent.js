@@ -17,7 +17,7 @@ const ebiVfLargeMinWidth = 1024
 const TableContent =
   ({
     // Presentational props
-    dataRows, tableHeaders,
+    dataRows, tableHeaders, tableSecondHeaders,
     // Filter handling
     filters, tableHeaderCellOnChange,
     // Ordering
@@ -31,9 +31,28 @@ const TableContent =
         <Table
           minWidth={ebiVfLargeMinWidth}
           border>
+          {tableSecondHeaders && <Table.Head
+            height={majorScale(6)}
+            paddingRight={0}
+            >
+            {
+                tableSecondHeaders.map((tableHeader, index) =>
+                    <TableHeaderCell
+                        key={index}
+                        {...tableHeader}
+                        value={filters[tableHeader.dataKey] || ``}
+                        columnIndex={index}
+                        sortColumnIndex={sortColumnIndex}
+                        ascendingOrder={ascendingOrder}
+                        onClick={tableHeaderCellOnClick}
+                        onChange={tableHeaderCellOnChange}/>
+                )
+            }
+          </Table.Head>
+          }
 
           <Table.Head
-            height={majorScale(6)}
+            height={majorScale(tableSecondHeaders ? 3 : 6)}
             paddingRight={0}>
             {
               tableHeaders.map((tableHeader, index) =>
