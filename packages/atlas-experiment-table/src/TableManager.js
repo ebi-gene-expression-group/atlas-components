@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import _ from 'lodash'
 
+import URI from 'urijs'
 import { tableHeaderPropTypes, filterPropTypes } from './filterPropTypes'
 import TablePreamble from './TablePreamble'
 import TableContent from './TableContent'
@@ -62,7 +63,8 @@ export default class TableManager extends React.Component {
     host: ``,
     rowSelectionColumn: null,
     className: `row expanded`,
-    afterStateUpdate: () => {}
+    afterStateUpdate: () => {},
+    tableSecondHeaders: null
   }
 
   constructor(props) {
@@ -128,6 +130,45 @@ export default class TableManager extends React.Component {
     this.updateSearchAll = this.updateSearchAll.bind(this)
     this.updateRowsPerPage = this.updateRowsPerPage.bind(this)
     this.updateSortColumn = this.updateSortColumn.bind(this)
+    this._fetchAndSetState = this._fetchAndSetState.bind(this)
+  }
+
+  async _fetchAndSetState(resource, baseUrl, dataField, errorMessageField, loadingField) {
+    this.setState({
+      [loadingField]: true
+    })
+
+    const url = URI(resource, baseUrl).toString()
+
+    try {
+      const response = await fetch(url)
+      if (!response.ok) {
+        throw new Error(`${url} => ${response.status}`)
+      }
+
+      this.setState({
+        [dataField]: await response.json(),
+        [errorMessageField]: null,
+        [loadingField]: false,
+      })
+    } catch (e) {
+      this.setState({
+        [errorMessageField]: `${e.name}: ${e.message}`,
+        [loadingField]: false
+      })
+    }
+  }
+
+  _fetchAndSetStateExperimentDesign(currentPage) {
+    // TBC resource with backend endpoint
+    const resource = currentPage === 1 ?
+       `https://gist.githubusercontent.com/lingyun1010/2c64c3a405f06983d7ee609099547219/raw/2ec16265c13224e6285cd25230ca744b3af10ad8/experiment-design-01.json` :
+       `https://gist.githubusercontent.com/lingyun1010/3344ad6b1506e78da3636394ffccaac5/raw/9b3dfc92c3aedaf59d29ae57c6adc95b178d49df/experiment-design-02.json`
+    this._fetchAndSetState(resource, ``, `filteredSortedDataRows`, `errorMessage`, `loading`)
+  }
+
+  componentDidMount() {
+    this.props.numberOfRows && this._fetchAndSetStateExperimentDesign(this.state.currentPage)
   }
 
   updateSelectedRows(rowId) {
@@ -217,9 +258,11 @@ export default class TableManager extends React.Component {
 
   render() {
     const { rowsPerPage, currentPage } = this.state
-    const currentPageDataRows = rowsPerPage ?
-      this.state.filteredSortedDataRows.slice(rowsPerPage * (currentPage - 1), rowsPerPage * currentPage) :
-      this.state.filteredSortedDataRows
+    const currentPageDataRows = 
+        this.props.numberOfRows ? this.state.filteredSortedDataRows :
+        rowsPerPage ?
+        this.state.filteredSortedDataRows.slice(rowsPerPage * (currentPage - 1), rowsPerPage * currentPage) :
+        this.state.filteredSortedDataRows
 
     return (
       <div className={this.props.className}>
@@ -235,6 +278,7 @@ export default class TableManager extends React.Component {
 
         <TableContent
           dataRows={currentPageDataRows}
+          tableSecondHeaders={this.props.tableSecondHeaders}
           tableHeaders={this.props.tableHeaders}
           filters={this.state.filters}
           tableHeaderCellOnChange={this.updateFilters}
@@ -247,11 +291,14 @@ export default class TableManager extends React.Component {
           selectOnChange={this.updateSelectedRows}/>
 
         <TableFooter
-          dataRowsLength={this.props.dataRows.length}
-          filteredDataRowsLength={this.state.filteredSortedDataRows.length}
+          dataRowsLength={this.props.numberOfRows || this.props.dataRows.length}
+          filteredDataRowsLength={this.props.numberOfRows || this.state.filteredSortedDataRows.length}
           currentPage={this.state.currentPage}
           rowsPerPage={this.state.rowsPerPage}
-          onChange={i => this.setState({ currentPage: i })}/>
+          onChange={i => {
+            this.setState({ currentPage: i })
+            this._fetchAndSetStateExperimentDesign(i)
+          }}/>
       </div>
     )
   }
