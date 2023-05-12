@@ -9,6 +9,7 @@ const FacetGroupPropTypes = {
       disabled: PropTypes.bool.isRequired,
     })
   ).isRequired,
+  queryParams: PropTypes.string,
   onChange: PropTypes.func.isRequired
 }
 

@@ -9,14 +9,14 @@ import {getRandomOrganismParts, getRandomCellTypes, getRandomSpecies} from './Te
 
 let propsForFilterSideBar = {
   host: `/gxa/sc/`,
-  query: `q=aGeneId`,
+  queryParams: {},
 }
 
 const emptyPayload = []
 
 describe('FilterSidebar', () => {
 
-  it(`should load "is marker genes" facet group when there is at least 1 marker gene`, () => {
+  it(`Should load "is marker genes" facet group when there is at least 1 marker gene`, () => {
     const markerGenePayload = `true`
     const speciesPayload = emptyPayload
     cy.intercept(`GET`, `/gxa/sc/json/gene-search/marker-genes`, markerGenePayload)

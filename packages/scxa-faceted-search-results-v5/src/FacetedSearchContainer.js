@@ -16,7 +16,7 @@ class FacetedSearchContainer extends React.Component {
     super(props)
 
     this.state = {
-      queryParams: props.queryParams,
+      queryParams: this.convertQueryStringToObject(props.queryParams)
     }
     this.onChange = this.onChange.bind(this)
   }
@@ -31,37 +31,34 @@ class FacetedSearchContainer extends React.Component {
 
   onChange(termName, changedFacet) {
     const value = changedFacet.label
-    let queryParams = ""
+    let queryStringObject = this.state.queryParams
 
     if (value !== undefined) {
-      const name = changedFacet.value
-      let queryStringObject = this.convertQueryStringToObject(this.state.queryParams)
-      const termValue = name === `isMarkerGenes` ? `true` : value
-      let currentTermStr = queryStringObject[name]
+      const type = changedFacet.value
+      const termType = type === `isMarkerGenes` ? `true` : value
+      let currentTermStr = queryStringObject[type]
 
       if (typeof currentTermStr !== `undefined`) {
         let currentTerms = currentTermStr.split(`,`)
-        if (currentTerms.indexOf(termValue) !== -1) {
-          currentTerms.splice(currentTerms.indexOf(termValue), 1)
+        if (currentTerms.indexOf(termType) !== -1) {
+          currentTerms.splice(currentTerms.indexOf(termType), 1)
         } else {
-          currentTerms.push(termValue)
+          currentTerms.push(termType)
         }
         currentTermStr = currentTerms.length === 0 ? `` : currentTerms.join(`,`)
       } else {
-        currentTermStr = termValue
+        currentTermStr = termType
       }
 
       if (currentTermStr === ``) {
-        delete queryStringObject[name]
+        delete queryStringObject[type]
       } else {
-        queryStringObject[name] = currentTermStr
+        queryStringObject[type] = currentTermStr
       }
-
-      queryParams = this.convertQueryStringFromObject(queryStringObject)
     }
 
     this.setState({
-      queryParams: queryParams
+      queryParams: queryStringObject
     })
   }
 
@@ -114,12 +111,7 @@ FacetedSearchContainer.propTypes = {
       payloadConversion: PropTypes.func
     })
   ),
-  queryParams: PropTypes.arrayOf(
-    PropTypes.shape({
-      name: PropTypes.string.required,
-      value: PropTypes.string.required,
-    })
-  ),
+  queryParams: PropTypes.string,
   filterListEndpoint: PropTypes.string.isRequired,
 }
 

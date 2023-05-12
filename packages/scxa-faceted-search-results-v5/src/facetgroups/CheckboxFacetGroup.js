@@ -23,28 +23,11 @@ CheckboxOption.propTypes = {
 // function that will ultimately call onChange(facetGroupName, facets); this allows us to have the same API as
 // React-Select and reuse the same callback for both checkbox-style and multiselect facet groups
 class CheckboxFacetGroup extends React.Component {
-  constructor(props) {
-    super(props)
 
-    this.state = {
-      checkedFacets: this._getCheckedFacets(props.queryParams)
-    }
-    this._handleChange = this._handleChange.bind(this)
-  }
-
-  _getCheckedFacets(queryParams) {
-    return queryParams === undefined ? [] : queryParams.split(`,`)
-  }
-
-  _handleChange(changedFacet) {
-    this.setState(
-      () => this.props.onChange(this.props.name, changedFacet)
-    )
-  }
 
   render() {
-    const { name, description, facets } = this.props
-    const { checkedFacets } = this.state
+    const { name, description, facets, queryParams } = this.props
+    const checkedFacets = queryParams === undefined ? [] : queryParams.split(`,`)
 
     return (facets.length > 0 && (<div id={`facetGroupCheckBox`} className={`padding-bottom-xlarge`}>
         <h4>
@@ -54,8 +37,8 @@ class CheckboxFacetGroup extends React.Component {
         {facets.map((facet) =>
           <CheckboxOption {...facet}
                           checked={checkedFacets.some((checkedFacet) => checkedFacet.value === facet.value)}
-                          onChange={this._handleChange}
-                          key={facet.value}
+                          onChange={(changedFacet) => this.props.onChange(name, changedFacet)}
+                          key={facet.label}
           />
         )}
       </div>

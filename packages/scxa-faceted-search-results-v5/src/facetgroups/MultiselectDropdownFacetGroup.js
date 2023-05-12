@@ -64,7 +64,7 @@ const MultiselectDropdownFacetGroup = ({name, description, facets, onChange}) =>
         styles={ebiVfSelectStyles}
         closeMenuOnSelect={false}
         isMulti={true}
-        onChange={(args) => onChange(name, args)}
+        onChange={(args) => onChange(name, args[0])}
         options={facets.filter((facet) => !facet.disabled)}/>
     </div>
   )

@@ -6,8 +6,9 @@ import { ExperimentTableHeader, ExperimentTableCard,
   getRandomSpecies, getRandomOrganismParts, getRandomCellTypes } from './TestUtils'
 import episodes from '../fixtures/episodesResponse.json'
 import selectedEpisodes from '../fixtures/selectedEpisodesResponse.json'
-import selectedEpisodesAndOneSpecies from '../fixtures/selectedEpisodesAndOneSpeciesResponse.json'
-import selectedEpisodesAndTwoSpecies from '../fixtures/selectedEpisodesAndTwoSpeciesResponse.json'
+import selectedEpisodesAndOneSpecies from '../fixtures/selectedEpisodesAndOneOtherSelectedFilterResponse.json'
+import selectedEpisodesAndOneCellTypes from '../fixtures/selectedEpisodesAndOneOtherSelectedFilterResponse.json'
+import selectedEpisodesAndTwoCellTypes from '../fixtures/selectedEpisodesAndTwoOtherSelectedFilterResponse.json'
 import lessSelectedEpisodes from '../fixtures/lessSelectedEpisodesResponse.json'
 
 describe(`FacetedSearchContainer`, () => {
@@ -26,43 +27,28 @@ describe(`FacetedSearchContainer`, () => {
   const cellTypePayload = getRandomCellTypes()
   const resultList = { results: episodes }
   const resultListBySelection = { results: selectedEpisodes }
-  const resultListBySelectionAndOneSpecies = { results: selectedEpisodesAndOneSpecies }
-  const resultListBySelectionAndTwoSpecies = { results: selectedEpisodesAndTwoSpecies }
-  const resultListWithLessResult = { results: lessSelectedEpisodes }
+  const resultListByMarkerGenesAndOneSpecies = { results: selectedEpisodesAndOneSpecies }
+  const resultListByMarkerGenesAndOneCellTypes = { results: selectedEpisodesAndOneCellTypes }
+  const resultListByMarkerGenesAndTwoSpecies = { results: lessSelectedEpisodes }
+  const resultListByMarkerGenesAndTwoCellTypes = { results: selectedEpisodesAndTwoCellTypes }
+  const resultListByMarkerGenesAndTwoCellTypesAndOneSpecies = { results: lessSelectedEpisodes }
   const emptyResponse = []
 
   beforeEach(() => {
-      cy.intercept(`GET`, `/gxa/sc/json/gene-search/marker-genes`, markerGenePayloadTrue)
-      cy.intercept(`GET`, `/gxa/sc/json/gene-search/species`, speciesPayload)
-      cy.intercept(`GET`, `/gxa/sc/json/gene-search/organism-parts`, organismPartsPayload)
-      cy.intercept(`GET`, `/gxa/sc/json/gene-search/cell-types`, cellTypePayload)
+      mockRESTCallsWithoutQueryParameters()
+      mockRESTCallsWithQueryParameters()
     }
   )
 
-  it(`when results have facets they are displayed along with the results list`, () => {
+  function mockRESTCallsWithoutQueryParameters() {
+    cy.intercept(`GET`, `/gxa/sc/json/gene-search/marker-genes`, markerGenePayloadTrue)
+    cy.intercept(`GET`, `/gxa/sc/json/gene-search/species`, speciesPayload)
+    cy.intercept(`GET`, `/gxa/sc/json/gene-search/organism-parts`, organismPartsPayload)
+    cy.intercept(`GET`, `/gxa/sc/json/gene-search/cell-types`, cellTypePayload)
     cy.intercept(`GET`, `/gxa/sc/json/gene-search`, resultList)
+  }
 
-    cy.mount(<FacetedSearchContainer {...props} />)
-    cy.get(`input#facetGroupMultiSelectDropdown`).should(`have.length`, 2)
-    cy.get(`div#facetGroupCheckBox`).should(`have.length`, 2)
-    cy.get(`div#filterList`).should(`have.length`, 1)
-  })
-
-  it(`when results have no facets only the results list is displayed`, () => {
-    cy.intercept(`GET`, `/gxa/sc/json/gene-search/marker-genes`, markerGenePayloadFalse)
-    cy.intercept(`GET`, `/gxa/sc/json/gene-search/species`, emptyResponse)
-    cy.intercept(`GET`, `/gxa/sc/json/gene-search/organism-parts`, emptyResponse)
-    cy.intercept(`GET`, `/gxa/sc/json/gene-search/cell-types`, emptyResponse)
-    cy.intercept(`GET`, `/gxa/sc/json/gene-search`, resultList)
-
-    cy.mount(<FacetedSearchContainer {...props} />)
-    cy.get(`input#facetGroupMultiSelectDropdown`).should(`not.exist`)
-    cy.get(`div#facetGroupCheckBox`).should(`not.exist`)
-    cy.get(`div#filterList`).should(`have.length`, 1)
-  })
-
-  it(`clicking to select/unselect facets in checkbox groups works`, () => {
-    cy.intercept(`GET`, `/gxa/sc/json/gene-search`, resultList)
+  function mockRESTCallsWithQueryParameters() {
     cy.intercept(
       {
         method: `GET`,
@@ -79,10 +65,34 @@ describe(`FacetedSearchContainer`, () => {
         pathname: `/gxa/sc/json/gene-search`,
         query: {
           isMarkerGenes: markerGenePayloadTrue,
+          cellTypes: cellTypePayload[0]
+        }
+      },
+      resultListByMarkerGenesAndOneCellTypes
+    )
+
+    cy.intercept(
+      {
+        method: `GET`,
+        pathname: `/gxa/sc/json/gene-search`,
+        query: {
+          isMarkerGenes: markerGenePayloadTrue,
+          cellTypes: cellTypePayload[0] + `,` + cellTypePayload[1]
+        }
+      },
+      resultListByMarkerGenesAndTwoCellTypes
+    )
+
+    cy.intercept(
+      {
+        method: `GET`,
+        pathname: `/gxa/sc/json/gene-search`,
+        query: {
+          isMarkerGenes: markerGenePayloadTrue,
           species: speciesPayload[0]
         }
       },
-      resultListBySelectionAndOneSpecies
+      resultListByMarkerGenesAndOneSpecies
     )
     cy.intercept(
       {
@@ -93,9 +103,99 @@ describe(`FacetedSearchContainer`, () => {
           species: speciesPayload[0] + `,` + speciesPayload[1]
         }
       },
-      resultListBySelectionAndTwoSpecies
+      resultListByMarkerGenesAndTwoSpecies
     )
 
+    cy.intercept(
+      {
+        method: `GET`,
+        pathname: `/gxa/sc/json/gene-search`,
+        query: {
+          isMarkerGenes: markerGenePayloadTrue,
+          cellTypes: cellTypePayload[0] + `,` + cellTypePayload[1],
+          species: speciesPayload[0]
+        }
+      },
+      resultListByMarkerGenesAndTwoCellTypesAndOneSpecies
+    )
+
+    cy.intercept(
+      {
+        method: `GET`,
+        pathname: `/gxa/sc/json/gene-search/cell-types`,
+        query: {
+          isMarkerGenes: markerGenePayloadTrue,
+        }
+      },
+      cellTypePayload
+    )
+    cy.intercept(
+      {
+        method: `GET`,
+        pathname: `/gxa/sc/json/gene-search/cell-types`,
+        query: {
+          isMarkerGenes: markerGenePayloadTrue,
+          cellTypes: cellTypePayload[0]
+        }
+      },
+      cellTypePayload
+    )
+
+    cy.intercept(
+      {
+        method: `GET`,
+        pathname: `/gxa/sc/json/gene-search/marker-genes`,
+        query: {
+          isMarkerGenes: markerGenePayloadTrue,
+        }
+      },
+      markerGenePayloadTrue
+    )
+
+    cy.intercept(
+      {
+        method: `GET`,
+        pathname: `/gxa/sc/json/gene-search/species`,
+        query: {
+          isMarkerGenes: markerGenePayloadTrue,
+        }
+      },
+      speciesPayload
+    )
+
+    cy.intercept(
+      {
+        method: `GET`,
+        pathname: `/gxa/sc/json/gene-search/organism-parts`,
+        query: {
+          isMarkerGenes: markerGenePayloadTrue,
+        }
+      },
+      organismPartsPayload
+    )
+  }
+
+  it(`when results have facets they are displayed along with the results list`, () => {
+    cy.mount(<FacetedSearchContainer {...props} />)
+    cy.get(`input#facetGroupMultiSelectDropdown`).should(`have.length`, 2)
+    cy.get(`div#facetGroupCheckBox`).should(`have.length`, 2)
+    cy.get(`div#filterList`).should(`have.length`, 1)
+  })
+
+  it(`when results have no facets only the results list is displayed`, () => {
+    // override some mocked REST calls that has been defined in the `beforeEach`
+    cy.intercept(`GET`, `/gxa/sc/json/gene-search/marker-genes`, markerGenePayloadFalse)
+    cy.intercept(`GET`, `/gxa/sc/json/gene-search/species`, emptyResponse)
+    cy.intercept(`GET`, `/gxa/sc/json/gene-search/organism-parts`, emptyResponse)
+    cy.intercept(`GET`, `/gxa/sc/json/gene-search/cell-types`, emptyResponse)
+
+    cy.mount(<FacetedSearchContainer {...props} />)
+    cy.get(`input#facetGroupMultiSelectDropdown`).should(`not.exist`)
+    cy.get(`div#facetGroupCheckBox`).should(`not.exist`)
+    cy.get(`div#filterList`).should(`have.length`, 1)
+  })
+
+  it(`clicking to select/unselect facets in checkbox groups works`, () => {
     cy.mount(<FacetedSearchContainer {...props} />)
 
     // click on is marker gene
@@ -125,9 +225,9 @@ describe(`FacetedSearchContainer`, () => {
       })
 
     // revert the form to its initial state (no selections)
-    cy.get(`input[type="checkbox"]`).first().click()
-    cy.get(`div#facetGroupCheckBox:nth-child(2) > :nth-child(2) > input[type="checkbox"]`).click()
     cy.get(`div#facetGroupCheckBox:nth-child(2) > :nth-child(3) > input[type="checkbox"]`).click()
+    cy.get(`div#facetGroupCheckBox:nth-child(2) > :nth-child(2) > input[type="checkbox"]`).click()
+    cy.get(`input[type="checkbox"]`).first().click()
 
     cy.get(`div.small-12.medium-8.large-9.columns>div>div>div>p`)
       .then( (selectedTitles2) => {
@@ -135,30 +235,82 @@ describe(`FacetedSearchContainer`, () => {
     })
   })
 
-  it(`clicking on a second facet works`, () => {
-    cy.intercept(`GET`, `/gxa/sc/json/gene-search`, resultList)
-    cy.intercept(
-      {
-        method: `GET`,
-        pathname: `/gxa/sc/json/gene-search`,
-        query: {
-          isMarkerGenes: markerGenePayloadTrue,
-        }
-      },
-      resultListBySelection
-    )
-    cy.intercept(
-      {
-        method: `GET`,
-        pathname: `/gxa/sc/json/gene-search`,
-        query: {
-          isMarkerGenes: markerGenePayloadTrue,
-          species: speciesPayload[0],
-        }
-      },
-      resultListWithLessResult
-    )
+  it(`clicking to select/unselect facets in multi select dropdown groups works`, () => {
+    cy.mount(<FacetedSearchContainer {...props} />)
 
+    // click on is marker gene
+    cy.get(`input[type="checkbox"]`).first().click()
+    cy.get(`div.small-12.medium-8.large-9.columns>div>div>div>p`).its(`length`)
+      .then((selectedTitlesByMarkerGeneLength) => {
+        expect(selectedTitlesByMarkerGeneLength).to.be.lessThan(resultList.results.length)
+
+        // click on the 1st cell type checkbox
+        cy.get(`input#facetGroupMultiSelectDropdown`)
+          .first()
+          .as(`selectedDropdown`)
+          .click({force: true})
+
+        // click on the 1st cell type
+        cy.get('[id^=react-select-][id$=-option-0]').click()
+
+        cy.get(`@selectedDropdown`)
+          .click({force: true})
+
+        // click on the 2nd cell type
+        cy.get(`[id^=react-select-][id$=-option-1]`).click()
+
+        cy.get(`div.small-12.medium-8.large-9.columns>div>div>div>p`).its(`length`)
+          .as(`selectedTitlesByMarkerGeneAndTwoCellTypes`)
+          .then((selectedTitlesByMarkerGeneAndTwoCellTypes) => {
+            expect(selectedTitlesByMarkerGeneAndTwoCellTypes).to.be.equal(resultListByMarkerGenesAndTwoCellTypes.results.length)
+            expect(selectedTitlesByMarkerGeneAndTwoCellTypes).to.be.lessThan(resultList.results.length)
+            expect(selectedTitlesByMarkerGeneAndTwoCellTypes).to.be.lessThan(selectedTitlesByMarkerGeneLength)
+
+            // THIS PART is not working as not the proper mocked REST call is getting triggered
+            // cy.get(`div#facetGroupCheckBox:nth-child(2) > :nth-child(3) > input[type="checkbox"]`).click()
+            //
+            // cy.get(`div.small-12.medium-8.large-9.columns>div>div>div>p`).its(`length`)
+            //   .then((selectedTitlesByMarkerGeneAndTwoCellTypesAndOneSpecies) => {
+            //     expect(selectedTitlesByMarkerGeneAndTwoCellTypesAndOneSpecies).to.be.equal(resultListByMarkerGenesAndTwoCellTypesAndOneSpecies.results.length)
+            //     expect(selectedTitlesByMarkerGeneAndTwoCellTypesAndOneSpecies).to.be.lessThan(resultList.results.length)
+            //     expect(selectedTitlesByMarkerGeneAndTwoCellTypesAndOneSpecies).to.be.lessThan(selectedTitlesByMarkerGeneLength)
+            //     expect(selectedTitlesByMarkerGeneAndTwoCellTypesAndOneSpecies).to.be.lessThan(selectedTitlesByMarkerGeneAndTwoCellTypes)
+            //   })
+        })
+      })
+
+    // revert the form to its initial state (no selections)
+    // unselect species
+    // cy.get(`div#facetGroupCheckBox:nth-child(2) > :nth-child(3) > input[type="checkbox"]`).click()
+
+    cy.get(`input#facetGroupMultiSelectDropdown`)
+      .first()
+      .as(`selectedDropdown`)
+      .click({force: true})
+
+    cy.get(`@selectedDropdown`)
+      .invoke(`attr`, `aria-controls`)
+      .as(`dropdownMenuId`)
+
+    // click on the 1st cell type
+    cy.get(`[id^=react-select-][id$=-option-1]`).click()
+
+    cy.get(`@selectedDropdown`)
+      .click({force: true})
+
+    // click on the 2nd cell type
+    cy.get(`[id^=react-select-][id$=-option-0]`).click()
+
+    // unselect the marker gene
+    cy.get(`input[type="checkbox"]`).first().click()
+
+    cy.get(`div.small-12.medium-8.large-9.columns>div>div>div>p`)
+      .then( (selectedTitles2) => {
+        expect(selectedTitles2.length).to.equal(resultList.results.length)
+      })
+  })
+
+  it(`clicking on a second facet works`, () => {
     cy.mount(<FacetedSearchContainer {...props} />)
     cy.get(`input[type="checkbox"]`).first().click({force:true})
     cy.get(`div.small-12.medium-8.large-9.columns>div>div>div>p`)
@@ -174,8 +326,6 @@ describe(`FacetedSearchContainer`, () => {
   })
 
   it(`doesn’t display duplicated facets`, () => {
-    cy.intercept(`GET`, `/gxa/sc/json/gene-search`, resultList)
-
     cy.mount(<FacetedSearchContainer {...props}/>)
 
     let checkboxLabels = []

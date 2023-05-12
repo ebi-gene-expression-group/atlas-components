@@ -16,12 +16,6 @@ class FilterSidebar extends React.Component {
     }
   }
 
-  _queryParamsByFacetGroupName(facetGroupName) {
-    const queryObject = Object.fromEntries(new URLSearchParams(this.state.queryParams))
-
-    return queryObject[facetGroupName]
-  }
-
   render() {
     const { checkboxFacetGroups, multiSelectDropdownFacetGroups, host, onChange } = this.props
     const queryParams = this.state.queryParams
@@ -30,10 +24,11 @@ class FilterSidebar extends React.Component {
       [
         checkboxFacetGroups.map((facetGroup) =>
           <CheckboxFacetGroupWithFetchLoader
+            key={facetGroup.name}
             host={host}
             resource={facetGroup.endpoint}
             query={queryParams}
-            queryParams={this._queryParamsByFacetGroupName(facetGroup.name)}
+            queryParams={this.props.queryParams[facetGroup.name]}
             fulfilledPayloadProvider={facetGroup.payloadConversion}
             name={facetGroup.name}
             description={facetGroup.description}
@@ -41,9 +36,11 @@ class FilterSidebar extends React.Component {
         ),
         multiSelectDropdownFacetGroups.map((facetGroup) =>
           <MultiselectDropdownFacetGroupWithFetchLoader
+            key={facetGroup.name}
             host={host}
             resource={facetGroup.endpoint}
             query={queryParams}
+            queryParams={this.props.queryParams[facetGroup.name]}
             fulfilledPayloadProvider={facetGroup.payloadConversion}
             name={facetGroup.name}
             description={facetGroup.description}
@@ -70,12 +67,7 @@ FilterSidebar.propTypes = {
     })
   ),
   host: PropTypes.string.required,
-  queryParams: PropTypes.arrayOf(
-    PropTypes.shape({
-      name: PropTypes.string.required,
-      value: PropTypes.string.required,
-    })
-  ),
+  queryParams: PropTypes.object,
   onChange: PropTypes.func.isRequired,
 }
 
