@@ -97,10 +97,12 @@ class FacetedSearchContainer extends React.Component {
 
 FacetedSearchContainer.propTypes = {
   host: PropTypes.string.isRequired,
+  queryParams: PropTypes.string,
   checkboxFacetGroups: PropTypes.arrayOf(PropTypes.shape({
       name: PropTypes.string.required,
       description: PropTypes.string.required,
       endpoint: PropTypes.string.isRequired,
+      queryParamName: PropTypes.string.isRequired,
       payloadConversion: PropTypes.func
     })
   ),
@@ -108,11 +110,15 @@ FacetedSearchContainer.propTypes = {
       name: PropTypes.string.required,
       description: PropTypes.string.required,
       endpoint: PropTypes.string.isRequired,
+      queryParamName: PropTypes.string.isRequired,
       payloadConversion: PropTypes.func
     })
   ),
-  queryParams: PropTypes.string,
   filterListEndpoint: PropTypes.string.isRequired,
+  // Must be classes that extends React.Component, sadly there’s no such prop type :(
+  // See also https://stackoverflow.com/questions/45315918/react-proptypes-component-class
+  ResultsHeaderClass: PropTypes.func.isRequired,
+  ResultElementClass: PropTypes.func.isRequired,
 }
 
 FacetedSearchContainer.defaultProps = {

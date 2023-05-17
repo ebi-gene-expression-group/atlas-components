@@ -28,7 +28,7 @@ class FilterSidebar extends React.Component {
             host={host}
             resource={facetGroup.endpoint}
             query={queryParams}
-            queryParams={this.props.queryParams[facetGroup.name]}
+            queryParams={this.props.queryParams[facetGroup.queryParamName]}
             fulfilledPayloadProvider={facetGroup.payloadConversion}
             name={facetGroup.name}
             description={facetGroup.description}

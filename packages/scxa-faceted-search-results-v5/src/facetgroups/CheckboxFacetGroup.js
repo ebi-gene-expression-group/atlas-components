@@ -36,7 +36,8 @@ class CheckboxFacetGroup extends React.Component {
         </h4>
         {facets.map((facet) =>
           <CheckboxOption {...facet}
-                          checked={checkedFacets.some((checkedFacet) => checkedFacet.value === facet.value)}
+                          checked={
+                            checkedFacets.some((checkedFacet) => checkedFacet === `true` || checkedFacet === facet.label)}
                           onChange={(changedFacet) => this.props.onChange(name, changedFacet)}
                           key={facet.label}
           />
