@@ -20,15 +20,12 @@ CheckboxOption.propTypes = {
   onChange: PropTypes.func.isRequired
 }
 
-// In principle we don’t need this component to be stateful, but in doing so we can create a custom _handleChange
-// function that will ultimately call onChange(facetGroupName, facets); this allows us to have the same API as
-// React-Select and reuse the same callback for both checkbox-style and multiselect facet groups
 class CheckboxFacetGroup extends React.Component {
 
   getSelectedFacets(checkedFacets, changedFacetLabel) {
-    // if (changedFacetGroup === `isMarkerGenes`) {
-    //   changedFacetLabel = `true`
-    // }
+    if (checkedFacets.indexOf(`true`) !== -1) {
+      checkedFacets = this.props.facets.map(facet => facet.label)
+    }
 
     if (checkedFacets.length === 0) {
       checkedFacets.push(changedFacetLabel)
@@ -38,8 +35,6 @@ class CheckboxFacetGroup extends React.Component {
       } else {
         checkedFacets.push(changedFacetLabel)
       }
-
-      // selectedFacets = checkedFacets.filter( checkedFacet => checkedFacet !== changedFacetLabel)
     }
 
     return this.props.facets.filter( facet => checkedFacets.includes(facet.label))
