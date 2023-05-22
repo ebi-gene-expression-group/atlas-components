@@ -51,7 +51,7 @@ const ebiVfSelectStyles = {
   })
 }
 
-const MultiselectDropdownFacetGroup = ({name, description, facets, onChange}) => (
+const MultiselectDropdownFacetGroup = ({name, description, facets, onChange, queryParams}) => (
   facets.length > 0 && (
     <div className={`padding-bottom-xlarge`}>
       <h4>
@@ -63,8 +63,10 @@ const MultiselectDropdownFacetGroup = ({name, description, facets, onChange}) =>
         components={{DropdownIndicator, IndicatorSeparator: null}}
         styles={ebiVfSelectStyles}
         closeMenuOnSelect={false}
-        isMulti={true}
-        onChange={(args) => onChange(name, args[0])}
+        defaultValue={queryParams}
+        isClearable={true}
+        isMulti
+        onChange={(selectedFacets) => onChange(facets.map(facet => facet.group)[0], selectedFacets)}
         options={facets.filter((facet) => !facet.disabled)}/>
     </div>
   )

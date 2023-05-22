@@ -29,33 +29,52 @@ class FacetedSearchContainer extends React.Component {
     return new URLSearchParams(queryStringObject).toString()
   }
 
-  onChange(termName, changedFacet) {
-    const value = changedFacet.label
+  onChange(filterType, selectedFacets) {
     let queryStringObject = this.state.queryParams
 
-    if (value !== undefined) {
-      const type = changedFacet.value
-      const termType = type === `isMarkerGenes` ? `true` : value
-      let currentTermStr = queryStringObject[type]
-
-      if (typeof currentTermStr !== `undefined`) {
-        let currentTerms = currentTermStr.split(`,`)
-        if (currentTerms.indexOf(termType) !== -1) {
-          currentTerms.splice(currentTerms.indexOf(termType), 1)
-        } else {
-          currentTerms.push(termType)
-        }
-        currentTermStr = currentTerms.length === 0 ? `` : currentTerms.join(`,`)
+    if (selectedFacets.length > 0) {
+      // otherwise iterate over the selected facets and replace the query params by type with the values
+      let selectedValuesString
+      if (filterType === `isMarkerGenes`) {
+        selectedValuesString = `true`
       } else {
-        currentTermStr = termType
+        const selectedValues = selectedFacets.map(selectedFacet => selectedFacet.value)
+        selectedValuesString = selectedValues.length === 0 ? `` : selectedValues.join(`,`)
       }
-
-      if (currentTermStr === ``) {
-        delete queryStringObject[type]
-      } else {
-        queryStringObject[type] = currentTermStr
-      }
+      queryStringObject[filterType] = selectedValuesString
+    } else {
+      // if selectedFacets empty, then delete the type from query params
+      delete queryStringObject[filterType]
     }
+
+
+    // for (const changedFacet of selectedFacets) {
+    //   const value = changedFacet.label
+    //
+    //   if (value !== undefined) {
+    //     const type = changedFacet.group
+    //     const termType = type === `isMarkerGenes` ? `true` : value
+    //     let currentTermStr = queryStringObject[type]
+    //
+    //     if (typeof currentTermStr !== `undefined`) {
+    //       let currentTerms = currentTermStr.split(`,`)
+    //       if (currentTerms.indexOf(termType) !== -1) {
+    //         currentTerms.splice(currentTerms.indexOf(termType), 1)
+    //       } else {
+    //         currentTerms.push(termType)
+    //       }
+    //       currentTermStr = currentTerms.length === 0 ? `` : currentTerms.join(`,`)
+    //     } else {
+    //       currentTermStr = termType
+    //     }
+    //
+    //     if (currentTermStr === ``) {
+    //       delete queryStringObject[type]
+    //     } else {
+    //       queryStringObject[type] = currentTermStr
+    //     }
+    //   }
+    // }
 
     this.setState({
       queryParams: queryStringObject
@@ -97,7 +116,7 @@ class FacetedSearchContainer extends React.Component {
 
 FacetedSearchContainer.propTypes = {
   host: PropTypes.string.isRequired,
-  queryParams: PropTypes.string,
+  queryParams: PropTypes.object,
   checkboxFacetGroups: PropTypes.arrayOf(PropTypes.shape({
       name: PropTypes.string.required,
       description: PropTypes.string.required,

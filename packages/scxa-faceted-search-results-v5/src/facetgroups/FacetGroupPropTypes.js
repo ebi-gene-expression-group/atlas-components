@@ -5,11 +5,15 @@ const FacetGroupPropTypes = {
   description: PropTypes.string,
   facets: PropTypes.arrayOf(
     PropTypes.shape({
+      group: PropTypes.string.required,
       value: PropTypes.string.required,
+      label: PropTypes.string.isRequired,
       disabled: PropTypes.bool.isRequired,
     })
   ).isRequired,
-  queryParams: PropTypes.string,
+  queryParams: PropTypes.arrayOf(
+    PropTypes.string
+  ),
   onChange: PropTypes.func.isRequired
 }
 

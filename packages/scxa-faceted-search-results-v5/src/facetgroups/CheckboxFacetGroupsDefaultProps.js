@@ -9,7 +9,8 @@ const CheckboxFacetGroupsDefaultProps = [
       if (data === true) {
         facets.push(
           {
-            value: `isMarkerGenes`,
+            group: `isMarkerGenes`,
+            value: `Experiments with marker genes`,
             label: `Experiments with marker genes`,
             disabled: false
           }
@@ -29,7 +30,8 @@ const CheckboxFacetGroupsDefaultProps = [
       data.forEach((checkboxValue) => {
         facets.push(
           {
-            value: `species`,
+            group: `species`,
+            value: checkboxValue,
             label: checkboxValue,
             disabled: false
           }

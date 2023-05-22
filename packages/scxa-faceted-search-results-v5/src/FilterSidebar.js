@@ -18,7 +18,9 @@ class FilterSidebar extends React.Component {
 
   render() {
     const { checkboxFacetGroups, multiSelectDropdownFacetGroups, host, onChange } = this.props
-    const queryParams = this.state.queryParams
+    const queryParamsObject = this.state.queryParams
+    // const queryParamsString = this.props.queryParams[facetGroup.queryParamName]
+    // const selectedValues = queryParamsString === undefined ? [] : queryParamsString.split(`,`)
 
     return(
       [
@@ -27,8 +29,11 @@ class FilterSidebar extends React.Component {
             key={facetGroup.name}
             host={host}
             resource={facetGroup.endpoint}
-            query={queryParams}
-            queryParams={this.props.queryParams[facetGroup.queryParamName]}
+            query={queryParamsObject}
+            queryParams={
+              this.props.queryParams[facetGroup.queryParamName] === undefined ?
+                [] : this.props.queryParams[facetGroup.queryParamName].split(`,`)
+            }
             fulfilledPayloadProvider={facetGroup.payloadConversion}
             name={facetGroup.name}
             description={facetGroup.description}
@@ -39,8 +44,12 @@ class FilterSidebar extends React.Component {
             key={facetGroup.name}
             host={host}
             resource={facetGroup.endpoint}
-            query={queryParams}
-            queryParams={this.props.queryParams[facetGroup.name]}
+            query={queryParamsObject}
+            queryParams={
+              this.props.queryParams[facetGroup.queryParamName] === undefined ?
+                [] : this.props.queryParams[facetGroup.queryParamName].split(`,`)
+              // this.props.queryParams[facetGroup.queryParamName]
+            }
             fulfilledPayloadProvider={facetGroup.payloadConversion}
             name={facetGroup.name}
             description={facetGroup.description}
