@@ -33,7 +33,7 @@ class FacetedSearchContainer extends React.Component {
     let queryStringObject = this.state.queryParams
 
     if (selectedFacets.length > 0) {
-      // otherwise iterate over the selected facets and replace the query params by type with the values
+      // iterate over the selected facets and replace the query params by type with the values
       let selectedValuesString
       if (filterType === `isMarkerGenes`) {
         selectedValuesString = `true`
@@ -46,35 +46,6 @@ class FacetedSearchContainer extends React.Component {
       // if selectedFacets empty, then delete the type from query params
       delete queryStringObject[filterType]
     }
-
-
-    // for (const changedFacet of selectedFacets) {
-    //   const value = changedFacet.label
-    //
-    //   if (value !== undefined) {
-    //     const type = changedFacet.group
-    //     const termType = type === `isMarkerGenes` ? `true` : value
-    //     let currentTermStr = queryStringObject[type]
-    //
-    //     if (typeof currentTermStr !== `undefined`) {
-    //       let currentTerms = currentTermStr.split(`,`)
-    //       if (currentTerms.indexOf(termType) !== -1) {
-    //         currentTerms.splice(currentTerms.indexOf(termType), 1)
-    //       } else {
-    //         currentTerms.push(termType)
-    //       }
-    //       currentTermStr = currentTerms.length === 0 ? `` : currentTerms.join(`,`)
-    //     } else {
-    //       currentTermStr = termType
-    //     }
-    //
-    //     if (currentTermStr === ``) {
-    //       delete queryStringObject[type]
-    //     } else {
-    //       queryStringObject[type] = currentTermStr
-    //     }
-    //   }
-    // }
 
     this.setState({
       queryParams: queryStringObject
@@ -99,12 +70,11 @@ class FacetedSearchContainer extends React.Component {
             resource={filterListEndpoint}
             query={queryParams}
             fulfilledPayloadProvider={ (payload) => (
-              {
-                filteredResults: payload.results,
-                resultMessage: payload.resultMessage
-              }
-            )
-
+                {
+                  filteredResults: payload.results,
+                  resultMessage: payload.resultMessage
+                }
+              )
             }
             {...{ResultElementClass, ResultsHeaderClass, sortTitle}}
           />
