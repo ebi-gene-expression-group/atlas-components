@@ -41,7 +41,7 @@ class CheckboxFacetGroup extends React.Component {
   }
   render() {
     const { name, description, facets, queryParams } = this.props
-    const checkedFacets = queryParams //=== undefined ? [] : queryParams.split(`,`)
+    const checkedFacets = queryParams
 
     return (facets.length > 0 && (<div id={`facetGroupCheckBox`} className={`padding-bottom-xlarge`}>
         <h4>
