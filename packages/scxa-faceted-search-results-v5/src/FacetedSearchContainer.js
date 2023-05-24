@@ -32,7 +32,7 @@ class FacetedSearchContainer extends React.Component {
   onChange(filterType, selectedFacets) {
     let queryStringObject = this.state.queryParams
 
-    if (selectedFacets.length > 0) {
+    if (selectedFacets !== null && selectedFacets.length > 0) {
       // iterate over the selected facets and replace the query params by type with the values
       let selectedValuesString
       if (filterType === `isMarkerGenes`) {
