@@ -16,17 +16,9 @@ class FacetedSearchContainer extends React.Component {
     super(props)
 
     this.state = {
-      queryParams: this.convertQueryStringToObject(props.queryParams)
+      queryParams: props.queryParams
     }
     this.onChange = this.onChange.bind(this)
-  }
-
-  convertQueryStringToObject(queryString) {
-    return Object.fromEntries(new URLSearchParams(queryString))
-  }
-
-  convertQueryStringFromObject(queryStringObject) {
-    return new URLSearchParams(queryStringObject).toString()
   }
 
   onChange(filterType, selectedFacets) {
@@ -34,14 +26,13 @@ class FacetedSearchContainer extends React.Component {
 
     if (selectedFacets !== null && selectedFacets.length > 0) {
       // iterate over the selected facets and replace the query params by type with the values
-      let selectedValuesString
+      let selectedValues
       if (filterType === `isMarkerGenes`) {
-        selectedValuesString = `true`
+        selectedValues = `true`
       } else {
-        const selectedValues = selectedFacets.map(selectedFacet => selectedFacet.value)
-        selectedValuesString = selectedValues.length === 0 ? `` : selectedValues.join(`,`)
+        selectedValues = selectedFacets.map(selectedFacet => selectedFacet.value)
       }
-      queryStringObject[filterType] = selectedValuesString
+      queryStringObject[filterType] = selectedValues
     } else {
       // if selectedFacets empty, then delete the type from query params
       delete queryStringObject[filterType]

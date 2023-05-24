@@ -17,7 +17,7 @@ class FilterSidebar extends React.Component {
   }
 
   getQueryParamsByFacetGroupsAsString(queryParams, facetGroupName) {
-    return queryParams[facetGroupName] === undefined ? [] : queryParams[facetGroupName].split(`,`)
+    return queryParams[facetGroupName] === undefined ? [] : queryParams[facetGroupName]
   }
 
   render() {
