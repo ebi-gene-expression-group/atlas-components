@@ -9,7 +9,8 @@ import MultiselectDropdownFacetGroup from "../../src/facetgroups/MultiselectDrop
 let props = {
   name: `Vindicators`,
   description: `Show the vindicators`,
-  facets: []
+  facets: [],
+  queryParams: []
 }
 
 describe(`CheckboxFacetGroup`, () => {
@@ -61,15 +62,17 @@ describe(`CheckboxFacetGroup`, () => {
     cy.get(`@onChange`)
       .should(`have.been.calledOnceWithExactly`,
         props.name,
-        props.facets[randomCheckboxIndex]
+        [props.facets[randomCheckboxIndex]]
       )
 
     cy.get(`input[type="checkbox"]`).eq(randomCheckboxIndex).click()
     cy.get(`@onChange`)
       .should(`have.been.callCount`, 2)
-      .should(`have.always.been.calledWithExactly`,
-
-          props.name, props.facets[randomCheckboxIndex]
+      .should(`have.been.calledWith`,
+        props.name, [props.facets[randomCheckboxIndex]]
+      )
+      .should(`have.been.calledWith`,
+        props.name, []
       )
   })
 })
@@ -95,7 +98,7 @@ describe(`MultiselectDropdownFacetGroup`, () => {
 
     cy.get(`@onChange`)
       .should(`have.been.calledOnceWithExactly`,
-        props.name, props.facets[randomIndex]
+        props.name, [props.facets[randomIndex]]
       )
   })
 })

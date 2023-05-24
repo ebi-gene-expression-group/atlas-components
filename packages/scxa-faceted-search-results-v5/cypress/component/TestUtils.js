@@ -11,7 +11,10 @@ import MultiSelectDropdownFacetGroupsDefaultProps
   from "../../src/facetgroups/MultiSelectDropdownFacetGroupsDefaultProps";
 
 const getPropsForCheckBoxGroupWithTooltip = () => {
-  return Cypress._.shuffle(CheckboxFacetGroupsDefaultProps).pop()
+  let props =  Cypress._.shuffle(CheckboxFacetGroupsDefaultProps).pop()
+  props.queryParams = []
+
+  return props
 }
 
 const getPropsForMultiSelectDropdownGroupWithTooltip = () => {
