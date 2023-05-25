@@ -6,8 +6,7 @@ const vendorsBundleName = `vendors`
 
 module.exports = {
   entry: {
-    facetedSearchContainerWithFetchLoaderDemo: [`@babel/polyfill`, `./html/fetch-loader/demo.js`],
-    facetedSearchContainerDemo: [`@babel/polyfill`, `./html/container/demo.js`]
+    facetedSearchContainerDemo: [`@babel/polyfill`, `./html/fetch-loader/demo.js`],
   },
 
   plugins: [
@@ -59,6 +58,11 @@ module.exports = {
 
   devServer: {
     port: 9000,
+    headers: {
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, PATCH, OPTIONS",
+      "Access-Control-Allow-Headers": "X-Requested-With, content-type, Authorization"
+    },
     contentBase: path.resolve(__dirname, `html`),
     publicPath: commonPublicPath
   }
