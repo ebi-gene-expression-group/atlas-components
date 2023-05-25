@@ -265,45 +265,19 @@ describe(`FacetedSearchContainer`, () => {
             expect(selectedTitlesByMarkerGeneAndTwoCellTypes).to.be.equal(resultListByMarkerGenesAndTwoCellTypes.results.length)
             expect(selectedTitlesByMarkerGeneAndTwoCellTypes).to.be.lessThan(resultList.results.length)
             expect(selectedTitlesByMarkerGeneAndTwoCellTypes).to.be.lessThan(selectedTitlesByMarkerGeneLength)
-
-            // THIS PART is not working as not the proper mocked REST call is getting triggered
-            // cy.get(`div#facetGroupCheckBox:nth-child(2) > :nth-child(3) > input[type="checkbox"]`).click()
-            //
-            // cy.get(`div.small-12.medium-8.large-9.columns>div>div>div>p`).its(`length`)
-            //   .then((selectedTitlesByMarkerGeneAndTwoCellTypesAndOneSpecies) => {
-            //     expect(selectedTitlesByMarkerGeneAndTwoCellTypesAndOneSpecies).to.be.equal(resultListByMarkerGenesAndTwoCellTypesAndOneSpecies.results.length)
-            //     expect(selectedTitlesByMarkerGeneAndTwoCellTypesAndOneSpecies).to.be.lessThan(resultList.results.length)
-            //     expect(selectedTitlesByMarkerGeneAndTwoCellTypesAndOneSpecies).to.be.lessThan(selectedTitlesByMarkerGeneLength)
-            //     expect(selectedTitlesByMarkerGeneAndTwoCellTypesAndOneSpecies).to.be.lessThan(selectedTitlesByMarkerGeneAndTwoCellTypes)
-            //   })
         })
       })
 
     // revert the form to its initial state (no selections)
-    // unselect species
-    // cy.get(`div#facetGroupCheckBox:nth-child(2) > :nth-child(3) > input[type="checkbox"]`).click()
 
-    cy.get(`input#facetGroupMultiSelectDropdown`)
-      .first()
-      .as(`selectedDropdown`)
-      .click({force: true})
-
-    cy.get(`@selectedDropdown`)
-      .invoke(`attr`, `aria-controls`)
-      .as(`dropdownMenuId`)
-
-    // click on the 1st cell type
-    cy.get(`[id^=react-select-][id$=-option-1]`).click()
-
-    cy.get(`@selectedDropdown`)
-      .click({force: true})
-
-    // click on the 2nd cell type
-    cy.get(`[id^=react-select-][id$=-option-0]`).click()
+    // unselect cell types
+    cy.get(`[class$=-multiValue]>div>svg`).first().click()
+    cy.get(`[class$=-multiValue]>div>svg`).first().click()
 
     // unselect the marker gene
     cy.get(`input[type="checkbox"]`).first().click()
 
+    // assert if we got back the initial state
     cy.get(`div.small-12.medium-8.large-9.columns>div>div>div>p`)
       .then( (selectedTitles2) => {
         expect(selectedTitles2.length).to.equal(resultList.results.length)

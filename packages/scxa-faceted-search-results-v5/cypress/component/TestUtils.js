@@ -18,7 +18,10 @@ const getPropsForCheckBoxGroupWithTooltip = () => {
 }
 
 const getPropsForMultiSelectDropdownGroupWithTooltip = () => {
-  return Cypress._.shuffle(MultiSelectDropdownFacetGroupsDefaultProps).pop()
+  let props =   Cypress._.shuffle(MultiSelectDropdownFacetGroupsDefaultProps).pop()
+  props.queryParams = []
+
+  return props
 }
 
 const getPropsForMarkerGeneFacet = () => {
