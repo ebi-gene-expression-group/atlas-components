@@ -62,7 +62,8 @@ describe(`CheckboxFacetGroup`, () => {
     cy.get(`@onChange`)
       .should(`have.been.calledOnceWithExactly`,
         props.name,
-        [props.facets[randomCheckboxIndex]]
+        [props.facets[randomCheckboxIndex]],
+        props.facets
       )
 
     cy.get(`input[type="checkbox"]`).eq(randomCheckboxIndex).click()
@@ -72,7 +73,7 @@ describe(`CheckboxFacetGroup`, () => {
         props.name, [props.facets[randomCheckboxIndex]]
       )
       .should(`have.been.calledWith`,
-        props.name, []
+        props.name, [], props.facets
       )
   })
 })
@@ -98,7 +99,7 @@ describe(`MultiselectDropdownFacetGroup`, () => {
 
     cy.get(`@onChange`)
       .should(`have.been.calledOnceWithExactly`,
-        props.name, [props.facets[randomIndex]]
+        props.name, [props.facets[randomIndex]], props.facets
       )
   })
 })

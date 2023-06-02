@@ -70,7 +70,7 @@ const MultiselectDropdownFacetGroup = ({name, description, facets, onChange, que
         defaultValue={getSelectedFacets(queryParams, facets)}
         isClearable={true}
         isMulti={true}
-        onChange={(selectedFacets) => onChange(facets.map(facet => facet.group)[0], selectedFacets)}
+        onChange={(selectedFacets) => onChange(facets.map(facet => facet.group)[0], selectedFacets, facets)}
         options={facets.filter((facet) => !facet.disabled)}/>
     </div>
   )

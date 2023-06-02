@@ -16,16 +16,17 @@ class FacetedSearchContainer extends React.Component {
     super(props)
 
     this.state = {
-      queryParams: props.queryParams
+      queryParams: props.queryParams,
+      changedFacetGroup: null,
+      facetsOfChangedGroup: []
     }
     this.onChange = this.onChange.bind(this)
   }
 
-  onChange(filterType, selectedFacets) {
+  onChange(filterType, selectedFacets, facetsOfChangedGroup = []) {
     let queryStringObject = this.state.queryParams
 
     if (selectedFacets !== null && selectedFacets.length > 0) {
-      // iterate over the selected facets and replace the query params by type with the values
       let selectedValues
       if (filterType === `isMarkerGenes`) {
         selectedValues = [`true`]
@@ -39,21 +40,25 @@ class FacetedSearchContainer extends React.Component {
     }
 
     this.setState({
-      queryParams: queryStringObject
+      queryParams: queryStringObject,
+      changedFacetGroup: filterType,
+      facetsOfChangedGroup: facetsOfChangedGroup
     })
   }
 
   render() {
     const { checkboxFacetGroups, multiSelectDropdownFacetGroups, host, filterListEndpoint,
-      ResultsHeaderClass, ResultElementClass,
-      sortTitle } = this.props
+      ResultsHeaderClass, ResultElementClass, sortTitle } = this.props
     const queryParams = this.state.queryParams
+    const changedFacetGroup = this.state.changedFacetGroup
+    const facetsOfChangedGroup = this.state.facetsOfChangedGroup
 
     return(
       <div className={`row expanded`}>
         <div className={`small-12 medium-4 large-3 columns`}>
           <FilterSidebar onChange={this.onChange}
-                         {...{checkboxFacetGroups, multiSelectDropdownFacetGroups, host, queryParams}}/>
+                         {...{checkboxFacetGroups, multiSelectDropdownFacetGroups, host, queryParams,
+                           changedFacetGroup, facetsOfChangedGroup}}/>
         </div>
         <div className={`small-12 medium-8 large-9 columns`}>
           <FilterListWithFetchLoader
