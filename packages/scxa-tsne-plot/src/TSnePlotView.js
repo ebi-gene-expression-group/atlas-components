@@ -125,7 +125,7 @@ class TSnePlotView extends React.Component {
       ({value: Object.values(option)[0], label: Object.keys(option)[0]+`: `+Object.values(option)[0]}))
 
     const plotTypesOptions = plotTypeDropdown.map((plot) => ({
-      value: plot.plotType.toLowerCase(),
+      value: plot.plotType,
       label: plot.plotType
     }))
 

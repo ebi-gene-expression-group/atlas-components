@@ -91,11 +91,11 @@ const experiment6 = {
       label: `inferred cell type - ontology labels`
     }
   ],
-  defaultPlotTypeAndParameterisation: {"tsne": {"perplexity": 50}, "umap": {"n_neighbors": 100}},
+  defaultPlotTypeAndParameterisation: {"t-SNE": {"perplexity": 50}, "UMAP": {"n_neighbors": 100}},
   plotTypesAndOptions: {
-    "tsne": [{ "perplexity": 40 }, { "perplexity": 25 }, { "perplexity": 45 },{ "perplexity": 1 },{ "perplexity": 30 },
+    "t-SNE": [{ "perplexity": 40 }, { "perplexity": 25 }, { "perplexity": 45 },{ "perplexity": 1 },{ "perplexity": 30 },
     {"perplexity": 10 },{ "perplexity": 15 },{ "perplexity": 50 },{ "perplexity": 35 },{ "perplexity": 20 },{ "perplexity": 5 }],
-    "umap": [{"n_neighbors": 5},{"n_neighbors": 100},{"n_neighbors": 50},{"n_neighbors": 10},{"n_neighbors": 30},{"n_neighbors": 15},{"n_neighbors": 3}]
+    "UMAP": [{"n_neighbors": 5},{"n_neighbors": 100},{"n_neighbors": 50},{"n_neighbors": 10},{"n_neighbors": 30},{"n_neighbors": 15},{"n_neighbors": 3}]
   }
 }
 
@@ -120,16 +120,16 @@ const experimentOmega = {
   ]
 }
 
-const { accession, accessKey, ks, metadata, species, plotTypesAndOptions, defaultPlotTypeAndParameterisation} = experiment6
+const { accession, accessKey, ks, metadata, species, plotTypesAndOptions, defaultPlotMethodAndParameterisation} = experiment6
 
 const plotTypeDropdown =  [
   {
     plotType: `UMAP`,
-    plotOptions: plotTypesAndOptions.umap
+    plotOptions: plotTypesAndOptions[`UMAP`]
   },
   {
-    plotType: `tSNE`,
-    plotOptions: plotTypesAndOptions.tsne
+    plotType: `t-SNE`,
+    plotOptions: plotTypesAndOptions[`t-SNE`]
   }
 ]
 
