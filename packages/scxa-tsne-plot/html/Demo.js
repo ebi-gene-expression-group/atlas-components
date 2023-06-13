@@ -91,7 +91,7 @@ const experiment6 = {
       label: `inferred cell type - ontology labels`
     }
   ],
-  defaultPlotTypeAndParameterisation: {"t-SNE": {"perplexity": 50}, "UMAP": {"n_neighbors": 100}},
+  defaultPlotMethodAndParameterisation: {"t-SNE": {"perplexity": 50}, "UMAP": {"n_neighbors": 100}},
   plotTypesAndOptions: {
     "t-SNE": [{ "perplexity": 40 }, { "perplexity": 25 }, { "perplexity": 45 },{ "perplexity": 1 },{ "perplexity": 30 },
     {"perplexity": 10 },{ "perplexity": 15 },{ "perplexity": 50 },{ "perplexity": 35 },{ "perplexity": 20 },{ "perplexity": 5 }],
@@ -138,10 +138,10 @@ class Demo extends React.Component {
     super(props)
 
     this.state = {
-      selectedPlotType: Object.keys(defaultPlotTypeAndParameterisation)[0],
+      selectedPlotType: Object.keys(defaultPlotMethodAndParameterisation)[0],
       geneId: ``,
-      selectedPlotOption: Object.values(Object.values(defaultPlotTypeAndParameterisation)[0])[0],
-      selectedPlotOptionLabel: Object.keys(Object.values(defaultPlotTypeAndParameterisation)[0])[0] + ": " + Object.values(Object.values(defaultPlotTypeAndParameterisation)[0])[0],
+      selectedPlotOption: Object.values(Object.values(defaultPlotMethodAndParameterisation)[0])[0],
+      selectedPlotOptionLabel: Object.keys(Object.values(defaultPlotMethodAndParameterisation)[0])[0] + ": " + Object.values(Object.values(defaultPlotMethodAndParameterisation)[0])[0],
       selectedColourBy: ks[Math.round((ks.length -1) / 2)].toString(),
       highlightClusters: [],
       experimentAccession: accession,
@@ -206,9 +206,9 @@ class Demo extends React.Component {
               (plotOption) => {
                 this.setState({
                   selectedPlotType: plotOption.value,
-                  selectedPlotOption: defaultPlotTypeAndParameterisation[plotOption.value],
-                  selectedPlotOptionLabel: Object.keys(defaultPlotTypeAndParameterisation[plotOption.value])[0]
-                      + ": " + Object.values(defaultPlotTypeAndParameterisation[plotOption.value])[0],
+                  selectedPlotOption: defaultPlotMethodAndParameterisation[plotOption.value],
+                  selectedPlotOptionLabel: Object.keys(defaultPlotMethodAndParameterisation[plotOption.value])[0]
+                      + ": " + Object.values(defaultPlotMethodAndParameterisation[plotOption.value])[0],
                 })}
           }
           onChangePlotOptions={
