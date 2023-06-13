@@ -124,12 +124,12 @@ const { accession, accessKey, ks, metadata, species, plotTypesAndOptions, defaul
 
 const plotTypeDropdown =  [
   {
-    plotType: `UMAP`,
-    plotOptions: plotTypesAndOptions[`UMAP`]
+    plotType: Object.keys(defaultPlotMethodAndParameterisation)[0],
+    plotOptions: plotTypesAndOptions[Object.keys(defaultPlotMethodAndParameterisation)[0]]
   },
   {
-    plotType: `t-SNE`,
-    plotOptions: plotTypesAndOptions[`t-SNE`]
+    plotType: Object.keys(defaultPlotMethodAndParameterisation)[1],
+    plotOptions: plotTypesAndOptions[Object.keys(defaultPlotMethodAndParameterisation)[1]]
   }
 ]
 
@@ -188,7 +188,7 @@ class Demo extends React.Component {
     return(
       <div className={`row column expanded`}>
         <TsnePlotView
-          atlasUrl={`https://wwwdev.ebi.ac.uk:8080/gxa/sc/`}
+          atlasUrl={`https://wwwdev.ebi.ac.uk/gxa/sc/`}
           suggesterEndpoint={`json/suggestions`}
           experimentAccession={this.state.experimentAccession}
           accessKey={accessKey}
