@@ -2,13 +2,18 @@ import React from "react"
 
 import MultiselectDropdownFacetGroup from '../../src/facetgroups/MultiselectDropdownFacetGroup'
 
-import {getFacets, getPropsWithoutTooltip, getPropsForMultiSelectDropdownGroupWithTooltip} from "./TestUtils";
+import {
+  getFacets,
+  getPropsWithoutTooltip,
+  getPropsForMultiSelectDropdownGroupWithTooltip,
+  getRandomInt
+} from "./TestUtils";
+
+import vindicators from "../fixtures/vindicatorsResponse.json";
 
 describe(`MultiselectDropdownFacetGroup`, () => {
-  it(`displays the expected tooltip if it exists`, () => {
-    // const facetTooltip = getFacetTooltip()
-    // const propsWithTooltip = getPropsWithTooltip(facetTooltip)
 
+  it(`displays the expected tooltip if it exists`, () => {
     const propsWithTooltip = getPropsForMultiSelectDropdownGroupWithTooltip()
     const facetTooltip = propsWithTooltip.description
     const props = {
@@ -38,5 +43,32 @@ describe(`MultiselectDropdownFacetGroup`, () => {
     cy.get(`div.padding-bottom-xlarge h4`)
       .children()
       .should(`have.length`, 0)
+  })
+
+  it(`callback includes user typed facet name in arguments`, () => {
+
+    let props = {
+      name: `Vindicators`,
+      description: `Show the vindicators`,
+      facets: vindicators,
+      queryParams: []
+    }
+
+    const mockCallbackWrapper = {
+      onChange: function(facetGroup, checkedFacets) {
+      }
+    }
+    cy.spy(mockCallbackWrapper, `onChange`).as(`onChange`)
+    const randomIndex = getRandomInt(0, props.facets.length)
+    const valueToType = vindicators[randomIndex].value
+
+    cy.mount(<MultiselectDropdownFacetGroup {...props} onChange={mockCallbackWrapper.onChange} />)
+    cy.get(`input#facetGroupMultiSelectDropdown`)
+      .type(`${valueToType}{enter}`, {force: true})
+
+    cy.get(`@onChange`)
+      .should(`have.been.calledOnceWithExactly`,
+        props.name, [props.facets[randomIndex]], props.facets
+      )
   })
 })
