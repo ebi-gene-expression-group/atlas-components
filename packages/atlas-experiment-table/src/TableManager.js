@@ -54,7 +54,8 @@ export default class TableManager extends React.Component {
       width: PropTypes.number
     }),
     className: PropTypes.string,
-    afterStateUpdate: PropTypes.func
+    afterStateUpdate: PropTypes.func,
+    numberOfRows: PropTypes.number
   }
 
   static defaultProps = {
@@ -145,9 +146,8 @@ export default class TableManager extends React.Component {
       if (!response.ok) {
         throw new Error(`${url} => ${response.status}`)
       }
-
       this.setState({
-        [dataField]: await response.json(),
+        [dataField]: (await response.json()).data,
         [errorMessageField]: null,
         [loadingField]: false,
       })
@@ -159,19 +159,18 @@ export default class TableManager extends React.Component {
     }
   }
 
-  _fetchAndSetStateExperimentDesign(currentPage) {
+  _fetchAndSetStateExperimentDesign(currentPage, rowsPerPage) {
     // TBC resource with backend endpoint
-    const resource = currentPage === 1 ?
-       `https://gist.githubusercontent.com/lingyun1010/2c64c3a405f06983d7ee609099547219/raw/2ec16265c13224e6285cd25230ca744b3af10ad8/experiment-design-01.json` :
-       `https://gist.githubusercontent.com/lingyun1010/3344ad6b1506e78da3636394ffccaac5/raw/9b3dfc92c3aedaf59d29ae57c6adc95b178d49df/experiment-design-02.json`
-    this._fetchAndSetState(resource, ``, `filteredSortedDataRows`, `errorMessage`, `loading`)
+    const resource = `gxa/sc/json/experiment-design/E-GEOD-71585?pageNo=${currentPage}&pageSize=${rowsPerPage}`
+       //`https://gist.githubusercontent.com/lingyun1010/3344ad6b1506e78da3636394ffccaac5/raw/9b3dfc92c3aedaf59d29ae57c6adc95b178d49df/experiment-design-02.json`
+    this._fetchAndSetState(resource, `http://localhost:8080`, `filteredSortedDataRows`, `errorMessage`, `loading`)
   }
 
   componentDidMount() {
-    this.props.numberOfRows && this._fetchAndSetStateExperimentDesign(this.state.currentPage)
+    this.props.numberOfRows && this._fetchAndSetStateExperimentDesign(this.state.currentPage, this.state.rowsPerPage)
   }
 
-  updateSelectedRows(rowId) {
+  updateSelectedRows(rowId) {this._fetchAndSetStateExperimentDesign(this.state.currentPage, this.state.rowsPerPage)
     this.setState({
       selectedRows:
         _.chain(this.state.selectedRows)
@@ -227,6 +226,8 @@ export default class TableManager extends React.Component {
       rowsPerPage: rowsPerPage,
       currentPage: 1
     })
+    this.props.numberOfRows && rowsPerPage ? this._fetchAndSetStateExperimentDesign(this.state.currentPage, rowsPerPage) :
+        this._fetchAndSetStateExperimentDesign(this.state.currentPage, this.props.numberOfRows)
   }
 
   // If the columnIndex is the same we flip the order between ascending/descending
@@ -258,7 +259,7 @@ export default class TableManager extends React.Component {
 
   render() {
     const { rowsPerPage, currentPage } = this.state
-    const currentPageDataRows = 
+    const currentPageDataRows =
         this.props.numberOfRows ? this.state.filteredSortedDataRows :
         rowsPerPage ?
         this.state.filteredSortedDataRows.slice(rowsPerPage * (currentPage - 1), rowsPerPage * currentPage) :
@@ -269,12 +270,14 @@ export default class TableManager extends React.Component {
         <TablePreamble
           dropdowns={this.state.dropdownFilters}
           dropdownOnChange={this.updateFilters}
-          rowsCount={this.state.filteredSortedDataRows.length}
+          rowsCount={this.props.numberOfRows ? this.props.numberOfRows : this.state.filteredSortedDataRows.length}
           rowsPerPageOptions={this.rowsPerPageOptions}
           rowsPerPage={this.state.rowsPerPage}
           rowsPerPageOnChange={this.updateRowsPerPage}
           searchAll={this.state.searchAll}
-          searchAllOnChange={this.updateSearchAll}/>
+          searchAllOnChange={this.updateSearchAll}
+          searchAllVisibility={this.props.numberOfRows ? `hidden` : `visible`}
+        />
 
         <TableContent
           dataRows={currentPageDataRows}
@@ -297,7 +300,7 @@ export default class TableManager extends React.Component {
           rowsPerPage={this.state.rowsPerPage}
           onChange={i => {
             this.setState({ currentPage: i })
-            this._fetchAndSetStateExperimentDesign(i)
+            this._fetchAndSetStateExperimentDesign(i, this.state.rowsPerPage)
           }}/>
       </div>
     )
