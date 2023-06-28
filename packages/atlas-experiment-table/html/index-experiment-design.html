@@ -25,8 +25,6 @@
 <script src="../dist/vendors.bundle.js"></script>
 <script src="../dist/experimentTable.bundle.js"></script>
 <script>
-  $.getJSON('./experiment-design.json').done(
-    function(data) {
       experimentTable.render(
         {
             tableSecondHeaders: [
@@ -54,69 +52,124 @@
               label: 'Run',
               dataKey: 'run',
               sortable: true,
-              width: 0.5,
+              width: 1,
             },
             {
-              label: 'Organism',
+              label: 'organism',
               dataKey: 'organism',
               sortable: true,
-              width: 2
+              width: 1
             },
             {
-              label: 'Individual',
+              label: 'individual',
               dataKey: 'individual',
             },
             {
-              label: 'Age',
+              label: 'age',
               dataKey: 'age',
               sortable: true,
               width: 0.5
             },
             {
-              label: 'Developmental stage',
-              dataKey: 'developmentalStage',
+              label: 'developmental stage',
+              dataKey: 'developmental stage',
               width: 0.5
             },
             {
-              label: 'Sex',
+              label: 'sex',
               dataKey: 'sex',
               sortable: true,
               width: 0.5
             },
           {
-              label: 'Sample disease',
-              dataKey: 'sampleDisease',
+              label: 'sample disease',
+              dataKey: 'disease',
               sortable: true,
               width: 2
           },
           {
-              label: 'Organism part',
-              dataKey: 'organismPart',
+              label: 'organism part',
+              dataKey: 'organism part',
               sortable: true,
               width: 2
           },
           {
-              label: 'Experimental disease',
-              dataKey: 'experimentalDisease',
+              label: 'experimental disease',
+              dataKey: 'disease',
               sortable: true,
               width: 2
           },
           {
-              label: 'Clinical information',
-              dataKey: 'clinicalInformation',
+              label: 'clinical information',
+              dataKey: 'clinical information',
               sortable: true,
               width: 2
           },
+              {
+                  label: 'Run',
+                  dataKey: 'run',
+                  sortable: true,
+                  width: 1,
+              },
+              {
+                  label: 'organism',
+                  dataKey: 'organism',
+                  sortable: true,
+                  width: 1
+              },
+              {
+                  label: 'individual',
+                  dataKey: 'individual',
+              },
+              {
+                  label: 'age',
+                  dataKey: 'age',
+                  sortable: true,
+                  width: 0.5
+              },
+              {
+                  label: 'developmental stage',
+                  dataKey: 'developmental stage',
+                  width: 0.5
+              },
+              {
+                  label: 'sex',
+                  dataKey: 'sex',
+                  sortable: true,
+                  width: 0.5
+              },
+              {
+                  label: 'sample disease',
+                  dataKey: 'disease',
+                  sortable: true,
+                  width: 2
+              },
+              {
+                  label: 'organism part',
+                  dataKey: 'organism part',
+                  sortable: true,
+                  width: 2
+              },
+              {
+                  label: 'experimental disease',
+                  dataKey: 'disease',
+                  sortable: true,
+                  width: 2
+              },
+              {
+                  label: 'clinical information',
+                  dataKey: 'clinical information',
+                  sortable: true,
+                  width: 2
+              },
 
           ],
           dropdownFilters:[],
-          dataRows: data,
+          dataRows: [],
           numberOfRows: 24,
           host: 'https://www.ebi.ac.uk/gxa/'
         },
         'target'
       );
-    }
-  );
 </script>
 </html>
