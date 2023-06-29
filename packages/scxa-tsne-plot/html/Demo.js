@@ -78,9 +78,8 @@ const experiment5 = {
 // Number of cells: 101,843
 const experiment6 = {
   accession: `E-MTAB-5061`,
-  accessKey: `f60a21b8-990a-49d9-95aa-623c10865faa`,
   species: `Homo sapiens`,
-  ks: [20],
+  ks: [8,11,19,21],
   metadata: [
     {
       value: `inferred cell type - authors labels`,
