@@ -7,9 +7,8 @@ import { ExperimentTableHeader, ExperimentTableCard,
 import episodes from '../fixtures/episodesResponse.json'
 import selectedEpisodes from '../fixtures/selectedEpisodesResponse.json'
 import selectedEpisodesAndOneSpecies from '../fixtures/selectedEpisodesAndOneOtherSelectedFilterResponse.json'
-import selectedEpisodesAndOneCellTypes from '../fixtures/selectedEpisodesAndOneOtherSelectedFilterResponse.json'
 import selectedEpisodesAndTwoCellTypes from '../fixtures/selectedEpisodesAndTwoOtherSelectedFilterResponse.json'
-import lessSelectedEpisodes from '../fixtures/lessSelectedEpisodesResponse.json'
+import fewerSelectedEpisodes from '../fixtures/lessSelectedEpisodesResponse.json'
 
 describe(`FacetedSearchContainer`, () => {
   const props = {
@@ -28,19 +27,19 @@ describe(`FacetedSearchContainer`, () => {
   const resultList = { results: episodes }
   const resultListBySelection = { results: selectedEpisodes }
   const resultListByMarkerGenesAndOneSpecies = { results: selectedEpisodesAndOneSpecies }
-  const resultListByMarkerGenesAndOneCellTypes = { results: selectedEpisodesAndOneCellTypes }
-  const resultListByMarkerGenesAndTwoSpecies = { results: lessSelectedEpisodes }
+  const resultListByMarkerGenesAndOneCellTypes = { results: selectedEpisodesAndTwoCellTypes }
+  const resultListByMarkerGenesAndTwoSpecies = { results: fewerSelectedEpisodes }
   const resultListByMarkerGenesAndTwoCellTypes = { results: selectedEpisodesAndTwoCellTypes }
-  const resultListByMarkerGenesAndTwoCellTypesAndOneSpecies = { results: lessSelectedEpisodes }
+  const resultListByMarkerGenesAndTwoCellTypesAndOneSpecies = { results: fewerSelectedEpisodes }
   const emptyResponse = []
 
   beforeEach(() => {
-      mockRESTCallsWithoutQueryParameters()
-      mockRESTCallsWithQueryParameters()
+      mockRestCallsWithoutQueryParameters()
+      mockRestCallsWithQueryParameters()
     }
   )
 
-  function mockRESTCallsWithoutQueryParameters() {
+  function mockRestCallsWithoutQueryParameters() {
     cy.intercept(`GET`, `/gxa/sc/json/gene-search/marker-genes`, markerGenePayloadTrue)
     cy.intercept(`GET`, `/gxa/sc/json/gene-search/species`, speciesPayload)
     cy.intercept(`GET`, `/gxa/sc/json/gene-search/organism-parts`, organismPartsPayload)
@@ -48,7 +47,7 @@ describe(`FacetedSearchContainer`, () => {
     cy.intercept(`GET`, `/gxa/sc/json/gene-search`, resultList)
   }
 
-  function mockRESTCallsWithQueryParameters() {
+  function mockRestCallsWithQueryParameters() {
     cy.intercept(
       {
         method: `GET`,
