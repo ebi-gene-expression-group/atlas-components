@@ -78,9 +78,8 @@ const experiment5 = {
 // Number of cells: 101,843
 const experiment6 = {
   accession: `E-MTAB-5061`,
-  accessKey: `f60a21b8-990a-49d9-95aa-623c10865faa`,
   species: `Homo sapiens`,
-  ks: [20],
+  ks: [8,11,19,21],
   metadata: [
     {
       value: `inferred cell type - authors labels`,
@@ -91,11 +90,11 @@ const experiment6 = {
       label: `inferred cell type - ontology labels`
     }
   ],
-  defaultPlotTypeAndParameterisation: {"tsne": {"perplexity": 50}, "umap": {"n_neighbors": 100}},
+  defaultPlotMethodAndParameterisation: {"t-SNE": {"perplexity": 50}, "UMAP": {"n_neighbors": 100}},
   plotTypesAndOptions: {
-    "tsne": [{ "perplexity": 40 }, { "perplexity": 25 }, { "perplexity": 45 },{ "perplexity": 1 },{ "perplexity": 30 },
+    "t-SNE": [{ "perplexity": 40 }, { "perplexity": 25 }, { "perplexity": 45 },{ "perplexity": 1 },{ "perplexity": 30 },
     {"perplexity": 10 },{ "perplexity": 15 },{ "perplexity": 50 },{ "perplexity": 35 },{ "perplexity": 20 },{ "perplexity": 5 }],
-    "umap": [{"n_neighbors": 5},{"n_neighbors": 100},{"n_neighbors": 50},{"n_neighbors": 10},{"n_neighbors": 30},{"n_neighbors": 15},{"n_neighbors": 3}]
+    "UMAP": [{"n_neighbors": 5},{"n_neighbors": 100},{"n_neighbors": 50},{"n_neighbors": 10},{"n_neighbors": 30},{"n_neighbors": 15},{"n_neighbors": 3}]
   }
 }
 
@@ -120,16 +119,16 @@ const experimentOmega = {
   ]
 }
 
-const { accession, accessKey, ks, metadata, species, plotTypesAndOptions, defaultPlotTypeAndParameterisation} = experiment6
+const { accession, accessKey, ks, metadata, species, plotTypesAndOptions, defaultPlotMethodAndParameterisation} = experiment6
 
 const plotTypeDropdown =  [
   {
-    plotType: `UMAP`,
-    plotOptions: plotTypesAndOptions.umap
+    plotType: Object.keys(defaultPlotMethodAndParameterisation)[0],
+    plotOptions: plotTypesAndOptions[Object.keys(defaultPlotMethodAndParameterisation)[0]]
   },
   {
-    plotType: `tSNE`,
-    plotOptions: plotTypesAndOptions.tsne
+    plotType: Object.keys(defaultPlotMethodAndParameterisation)[1],
+    plotOptions: plotTypesAndOptions[Object.keys(defaultPlotMethodAndParameterisation)[1]]
   }
 ]
 
@@ -138,10 +137,10 @@ class Demo extends React.Component {
     super(props)
 
     this.state = {
-      selectedPlotType: Object.keys(defaultPlotTypeAndParameterisation)[0],
+      selectedPlotType: Object.keys(defaultPlotMethodAndParameterisation)[0],
       geneId: ``,
-      selectedPlotOption: Object.values(Object.values(defaultPlotTypeAndParameterisation)[0])[0],
-      selectedPlotOptionLabel: Object.keys(Object.values(defaultPlotTypeAndParameterisation)[0])[0] + ": " + Object.values(Object.values(defaultPlotTypeAndParameterisation)[0])[0],
+      selectedPlotOption: Object.values(Object.values(defaultPlotMethodAndParameterisation)[0])[0],
+      selectedPlotOptionLabel: Object.keys(Object.values(defaultPlotMethodAndParameterisation)[0])[0] + ": " + Object.values(Object.values(defaultPlotMethodAndParameterisation)[0])[0],
       selectedColourBy: ks[Math.round((ks.length -1) / 2)].toString(),
       highlightClusters: [],
       experimentAccession: accession,
@@ -188,7 +187,7 @@ class Demo extends React.Component {
     return(
       <div className={`row column expanded`}>
         <TsnePlotView
-          atlasUrl={`https://wwwdev.ebi.ac.uk:8080/gxa/sc/`}
+          atlasUrl={`https://wwwdev.ebi.ac.uk/gxa/sc/`}
           suggesterEndpoint={`json/suggestions`}
           experimentAccession={this.state.experimentAccession}
           accessKey={accessKey}
@@ -206,9 +205,9 @@ class Demo extends React.Component {
               (plotOption) => {
                 this.setState({
                   selectedPlotType: plotOption.value,
-                  selectedPlotOption: defaultPlotTypeAndParameterisation[plotOption.value],
-                  selectedPlotOptionLabel: Object.keys(defaultPlotTypeAndParameterisation[plotOption.value])[0]
-                      + ": " + Object.values(defaultPlotTypeAndParameterisation[plotOption.value])[0],
+                  selectedPlotOption: defaultPlotMethodAndParameterisation[plotOption.value],
+                  selectedPlotOptionLabel: Object.keys(defaultPlotMethodAndParameterisation[plotOption.value])[0]
+                      + ": " + Object.values(defaultPlotMethodAndParameterisation[plotOption.value])[0],
                 })}
           }
           onChangePlotOptions={
