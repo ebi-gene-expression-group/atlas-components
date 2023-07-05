@@ -3,25 +3,29 @@ import organismParts from '../fixtures/organismPartsResponse.json'
 import cellTypes from '../fixtures/cellTypesResponse.json'
 import species from '../fixtures/speciesResponse.json'
 
-import PropTypes from "prop-types";
-import styled from "styled-components";
-import React from "react";
-import CheckboxFacetGroupsDefaultProps from "../../src/facetgroups/CheckboxFacetGroupsDefaultProps";
+import PropTypes from 'prop-types'
+import styled from 'styled-components'
+import React from 'react'
+import CheckboxFacetGroupsDefaultProps from '../../src/facetgroups/CheckboxFacetGroupsDefaultProps'
 import MultiSelectDropdownFacetGroupsDefaultProps
-  from "../../src/facetgroups/MultiSelectDropdownFacetGroupsDefaultProps";
+  from '../../src/facetgroups/MultiSelectDropdownFacetGroupsDefaultProps'
 
 const getPropsForCheckBoxGroupWithTooltip = () => {
-  let props =  Cypress._.shuffle(CheckboxFacetGroupsDefaultProps).pop()
-  props.queryParams = []
-
-  return props
+  return (
+    {
+      ...Cypress._.shuffle(CheckboxFacetGroupsDefaultProps).pop(),
+      queryParams: []
+    }
+  )
 }
 
 const getPropsForMultiSelectDropdownGroupWithTooltip = () => {
-  let props =   Cypress._.shuffle(MultiSelectDropdownFacetGroupsDefaultProps).pop()
-  props.queryParams = []
-
-  return props
+  return (
+    {
+      ...Cypress._.shuffle(MultiSelectDropdownFacetGroupsDefaultProps).pop(),
+      queryParams: []
+    }
+  )
 }
 
 const getPropsForMarkerGeneFacet = () => {
@@ -30,9 +34,12 @@ const getPropsForMarkerGeneFacet = () => {
 }
 
 const getPropsWithoutTooltip = () => {
-  let props = getPropsForCheckBoxGroupWithTooltip()
-  props.description = ``
-  return props
+  return (
+    {
+      ...getPropsForCheckBoxGroupWithTooltip(),
+      description: ``
+    }
+  )
 }
 
 const getFacets = () => {
@@ -51,7 +58,7 @@ const getRandomCellTypes = () => {
   return Cypress._.shuffle(cellTypes).filter(() => Math.random() > 0.5)
 }
 
-const ExperimentTableCard = ({title}) =>
+const ExperimentTableCard = ({ title }) =>
   <div>
     <p>{title}</p>
   </div>
@@ -64,7 +71,7 @@ const IconDiv = styled.div`
   width: 15%;
   text-align: center;
 `
-IconDiv.displayName = 'IconDiv'
+IconDiv.displayName = `IconDiv`
 
 const BitDiv = styled.div`
   width: 25%;
@@ -75,12 +82,12 @@ const DoveDiv = styled.div`
   text-align: center;
 `
 
-const ExperimentTableHeader = ({onClick}) =>
+const ExperimentTableHeader = ({ onClick }) =>
   <DoveDiv>
-    <IconDiv onClick={()=>onClick(`test`)}>
+    <IconDiv onClick={() => onClick(`test`)}>
       Meow
     </IconDiv>
-    <BitDiv onClick={()=>onClick(`test`)}>
+    <BitDiv onClick={() => onClick(`test`)}>
       Wow wow
     </BitDiv>
   </DoveDiv>
@@ -93,10 +100,12 @@ ExperimentTableHeader.propTypes = {
 const getRandomInt = (min, max) => {
   min = Math.ceil(min)
   max = Math.floor(max)
-  return Math.floor(Math.random() * (max - min)) + min //The maximum is exclusive and the minimum is inclusive
+  return Math.floor(Math.random() * (max - min)) + min // The maximum is exclusive and the minimum is inclusive
 }
 
-export { getRandomInt, getFacets, getRandomOrganismParts, getRandomCellTypes, getRandomSpecies,
+export {
+  getRandomInt, getFacets, getRandomOrganismParts, getRandomCellTypes, getRandomSpecies,
   getPropsForCheckBoxGroupWithTooltip, getPropsForMultiSelectDropdownGroupWithTooltip,
   getPropsWithoutTooltip, getPropsForMarkerGeneFacet,
-  ExperimentTableCard, ExperimentTableHeader }
+  ExperimentTableCard, ExperimentTableHeader
+}

@@ -1,8 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import CheckboxFacetGroup from './facetgroups/CheckboxFacetGroup'
-import {withFetchLoader} from "@ebi-gene-expression-group/atlas-react-fetch-loader";
-import MultiselectDropdownFacetGroup from "./facetgroups/MultiselectDropdownFacetGroup";
+import { withFetchLoader } from '@ebi-gene-expression-group/atlas-react-fetch-loader'
+import MultiselectDropdownFacetGroup from './facetgroups/MultiselectDropdownFacetGroup'
 
 const CheckboxFacetGroupWithFetchLoader = withFetchLoader(CheckboxFacetGroup)
 const MultiselectDropdownFacetGroupWithFetchLoader = withFetchLoader(MultiselectDropdownFacetGroup)
@@ -23,7 +23,7 @@ class FilterSidebar extends React.Component {
 
   initialiseFacetGroups(checkboxFacetGroups, multiSelectDropdownFacetGroups, changedFacetGroup, facetsOfChangedGroup) {
     checkboxFacetGroups = checkboxFacetGroups
-      .map(facetGroup => ({...facetGroup, refreshGroup: true}))
+      .map(facetGroup => ({ ...facetGroup, refreshGroup: true }))
 
     checkboxFacetGroups
       .filter(facetGroup => facetGroup.queryParamName === changedFacetGroup)
@@ -33,7 +33,7 @@ class FilterSidebar extends React.Component {
       })
 
     multiSelectDropdownFacetGroups = multiSelectDropdownFacetGroups
-      .map(facetGroup => ({...facetGroup, refreshGroup: true}))
+      .map(facetGroup => ({ ...facetGroup, refreshGroup: true }))
 
     multiSelectDropdownFacetGroups
       .filter(facetGroup => facetGroup.queryParamName === changedFacetGroup)
@@ -43,19 +43,19 @@ class FilterSidebar extends React.Component {
       })
 
     return {
-      checkboxFacetGroups: checkboxFacetGroups,
-      multiSelectDropdownFacetGroups: multiSelectDropdownFacetGroups
+      checkboxFacetGroups,
+      multiSelectDropdownFacetGroups
     }
   }
 
   render() {
     const { host, onChange } = this.props
-    const queryParamsObject = this.state.queryParams
-    const {checkboxFacetGroups, multiSelectDropdownFacetGroups} =
+    const queryParams = this.state.queryParams
+    const { checkboxFacetGroups, multiSelectDropdownFacetGroups } =
       this.initialiseFacetGroups(this.props.checkboxFacetGroups, this.props.multiSelectDropdownFacetGroups,
         this.props.changedFacetGroup, this.props.facetsOfChangedGroup)
 
-    return(
+    return (
       [
         checkboxFacetGroups.map((facetGroup) =>
           (
@@ -64,13 +64,12 @@ class FilterSidebar extends React.Component {
                 key={facetGroup.name}
                 host={host}
                 resource={facetGroup.endpoint}
-                query={queryParamsObject}
+                query={queryParams}
                 queryParams={this.getQueryParamsByFacetGroupsAsString(this.props.queryParams, facetGroup.queryParamName)}
                 fulfilledPayloadProvider={facetGroup.payloadConversion}
                 name={facetGroup.name}
                 description={facetGroup.description}
-                onChange={onChange}/>
-              :
+                onChange={onChange}/> :
               <CheckboxFacetGroup
                 key={facetGroup.name}
                 queryParams={this.getQueryParamsByFacetGroupsAsString(this.props.queryParams, facetGroup.queryParamName)}
@@ -87,13 +86,12 @@ class FilterSidebar extends React.Component {
                 key={facetGroup.name}
                 host={host}
                 resource={facetGroup.endpoint}
-                query={queryParamsObject}
+                query={queryParams}
                 queryParams={this.getQueryParamsByFacetGroupsAsString(this.props.queryParams, facetGroup.queryParamName)}
                 fulfilledPayloadProvider={facetGroup.payloadConversion}
                 name={facetGroup.name}
                 description={facetGroup.description}
-                onChange={onChange}/>
-              :
+                onChange={onChange}/> :
               <MultiselectDropdownFacetGroup
                 key={facetGroup.name}
                 queryParams={this.getQueryParamsByFacetGroupsAsString(this.props.queryParams, facetGroup.queryParamName)}
@@ -110,26 +108,26 @@ class FilterSidebar extends React.Component {
 
 FilterSidebar.propTypes = {
   checkboxFacetGroups: PropTypes.arrayOf(PropTypes.shape({
-      name: PropTypes.string.required,
-      description: PropTypes.string.required,
-      endpoint: PropTypes.string.isRequired,
-      payloadConversion: PropTypes.func,
-      refreshGroup: PropTypes.bool
-    })
+    name: PropTypes.string.required,
+    description: PropTypes.string.required,
+    endpoint: PropTypes.string.isRequired,
+    payloadConversion: PropTypes.func,
+    refreshGroup: PropTypes.bool
+  })
   ),
   multiSelectDropdownFacetGroups: PropTypes.arrayOf(PropTypes.shape({
-      name: PropTypes.string.required,
-      description: PropTypes.string.required,
-      endpoint: PropTypes.string.isRequired,
-      payloadConversion: PropTypes.func,
-      refreshGroup: PropTypes.bool
-    })
+    name: PropTypes.string.required,
+    description: PropTypes.string.required,
+    endpoint: PropTypes.string.isRequired,
+    payloadConversion: PropTypes.func,
+    refreshGroup: PropTypes.bool
+  })
   ),
   host: PropTypes.string.required,
   queryParams: PropTypes.object,
   changedFacetGroup: PropTypes.string,
   facetsOfChangedGroup: PropTypes.array,
-  onChange: PropTypes.func.isRequired,
+  onChange: PropTypes.func.isRequired
 }
 
 FilterSidebar.defaultProps = {

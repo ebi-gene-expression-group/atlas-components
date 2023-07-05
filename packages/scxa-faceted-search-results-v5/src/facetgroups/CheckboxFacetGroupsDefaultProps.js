@@ -5,20 +5,19 @@ const CheckboxFacetGroupsDefaultProps = [
     endpoint: `json/gene-search/marker-genes`,
     queryParamName: `isMarkerGenes`,
     payloadConversion: (data) => {
-      let facets = []
-      if (data === true) {
-        facets.push(
-          {
-            group: `isMarkerGenes`,
-            value: `Experiments with marker genes`,
-            label: `Experiments with marker genes`,
-            disabled: false
-          }
-        )
-      }
-
-      return { facets: facets }
-    },
+      return data === true ?
+        {
+          facets: [
+            {
+              group: `isMarkerGenes`,
+              value: `Experiments with marker genes`,
+              label: `Experiments with marker genes`,
+              disabled: false
+            }
+          ]
+        } :
+        { facets: [] }
+    }
   },
   {
     name: `Species`,
@@ -26,20 +25,18 @@ const CheckboxFacetGroupsDefaultProps = [
     endpoint: `json/gene-search/species`,
     queryParamName: `species`,
     payloadConversion: (data) => {
-      let facets = []
-      data.forEach((checkboxValue) => {
-        facets.push(
-          {
-            group: `species`,
-            value: checkboxValue,
-            label: checkboxValue,
-            disabled: false
-          }
-        )
-      })
+      const facets = []
+      data.map(checkboxValue => facets.push(
+        {
+          group: `species`,
+          value: checkboxValue,
+          label: checkboxValue,
+          disabled: false
+        }
+      ))
 
-      return { facets: facets }
-    },
+      return { facets }
+    }
   }
 ]
 

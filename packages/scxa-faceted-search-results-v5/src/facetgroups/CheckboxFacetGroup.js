@@ -2,13 +2,13 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import TooltipIcon from './TooltipIcon'
-import FacetGroupPropTypes from "./FacetGroupPropTypes";
+import FacetGroupPropTypes from "./FacetGroupPropTypes"
 
-const CheckboxOption = ({group, value, label, disabled, checked, onChange}) =>
+const CheckboxOption = ({ group, value, label, disabled, checked, onChange }) =>
   <div>
-    <input type={`checkbox`} {...{value, checked, disabled}}
-           onChange={() => onChange({label, group, disabled})}/>
-    <label style={disabled ? {color: `lightgrey`} : {}}>{label}</label>
+    <input type={`checkbox`} {...{ value, checked, disabled }}
+      onChange={() => onChange({ label, group, disabled })}/>
+    <label style={disabled ? { color: `lightgrey` } : {}}>{label}</label>
   </div>
 
 CheckboxOption.propTypes = {
@@ -21,9 +21,8 @@ CheckboxOption.propTypes = {
 }
 
 class CheckboxFacetGroup extends React.Component {
-
   getSelectedFacets(checkedFacets, changedFacetLabel) {
-    if (checkedFacets.indexOf(`true`) !== -1) {
+    if (checkedFacets.some(e => e === `true`)) {
       checkedFacets = this.props.facets.map(facet => facet.label)
     }
 
@@ -37,30 +36,32 @@ class CheckboxFacetGroup extends React.Component {
       }
     }
 
-    return this.props.facets.filter( facet => checkedFacets.includes(facet.label))
+    return this.props.facets.filter(facet => checkedFacets.includes(facet.label))
   }
+
   render() {
     const { name, description, facets, queryParams } = this.props
     const checkedFacets = queryParams
 
     return (facets.length > 0 && (<div id={`facetGroupCheckBox`} className={`padding-bottom-xlarge`}>
-        <h4>
-          {name}
-          {description && <TooltipIcon tooltipText={description}/>}
-        </h4>
-        {facets.map((facet) =>
-          <CheckboxOption {...facet}
-                          checked={
-                            checkedFacets.some((checkedFacet) => checkedFacet === `true` || checkedFacet === facet.label)}
-                          onChange={(changedFacet) =>
-                            this.props.onChange(changedFacet.group,
-                              this.getSelectedFacets(checkedFacets, changedFacet.label), this.props.facets)}
-                          key={facet.label}
-          />
-        )}
-      </div>
+      <h4>
+        {name}
+        {description && <TooltipIcon tooltipText={description}/>}
+      </h4>
+      {facets.map((facet) =>
+        <CheckboxOption {...facet}
+          checked={checkedFacets.some((checkedFacet) => checkedFacet === `true` || checkedFacet === facet.label)}
+          onChange={(changedFacet) =>
+            this.props.onChange(
+              changedFacet.group,
+              this.getSelectedFacets(checkedFacets, changedFacet.label),
+              this.props.facets)
+          }
+          key={facet.label}
+        />
+      )}
+    </div>
     ))
-
   }
 }
 
