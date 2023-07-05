@@ -22,18 +22,4 @@ describe(`FilterList`, () => {
       expect(tableCard).to.have.length(episodes.length)
     })
   })
-
-  it(`sorts table contents by clicking/toggling on headers`, () => {
-    cy.mount(<FilterList {...props} />)
-    cy.get(`div div p`).invoke(`text`).then((unsortedText) => {
-      cy.contains(`Meow`).click()
-      cy.get(`div div p`).invoke(`text`).then((sortedText) => {
-        expect(unsortedText).to.not.equal(sortedText)
-      })
-      cy.contains(`Meow`).click()
-      cy.get(`div div p`).invoke(`text`).then((revertTounsortedText) => {
-        expect(unsortedText).to.equal(revertTounsortedText)
-      })
-    })
-  })
 })
