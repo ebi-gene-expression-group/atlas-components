@@ -22,7 +22,7 @@ results the server returns a field `reason` you could have something like this:
 
 # Requirements
 
-You should have node version at least 7 or later.
+You should have at least Node 16 LTS with NPM 8 or later.
 You can check your current installed version executing this command.
 ```shell
 npm --version
