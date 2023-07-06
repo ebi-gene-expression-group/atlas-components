@@ -55,16 +55,16 @@ const getSelectedFacets = (queryParams, allFacets) => {
   return allFacets.filter(facet => queryParams.includes(facet.label))
 }
 
-const MultiselectDropdownFacetGroup = ({name, description, facets, onChange, queryParams}) => (
+const MultiselectDropdownFacetGroup = ({ name, description, facets, onChange, queryParams }) => (
   facets.length > 0 && (
-    <div id={`facetGroupMultiSelectDropdown`}  className={`padding-bottom-xlarge`}>
+    <div role={`facetGroupMultiSelectDropdown`} className={`padding-bottom-xlarge`}>
       <h4>
         {name}
         {description && <TooltipIcon tooltipText={description}/>}
       </h4>
       <Select
         inputId={`facetGroupMultiSelectDropdown`}
-        components={{DropdownIndicator, IndicatorSeparator: null}}
+        components={{ DropdownIndicator, IndicatorSeparator: null }}
         styles={ebiVfSelectStyles}
         closeMenuOnSelect={false}
         defaultValue={getSelectedFacets(queryParams, facets)}

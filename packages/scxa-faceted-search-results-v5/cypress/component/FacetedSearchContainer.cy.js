@@ -2,8 +2,10 @@ import React from "react"
 
 import FacetedSearchContainer from '../../src/FacetedSearchContainer'
 
-import { ExperimentTableHeader, ExperimentTableCard,
-  getRandomSpecies, getRandomOrganismParts, getRandomCellTypes } from './TestUtils'
+import {
+  ExperimentTableHeader, ExperimentTableCard,
+  getRandomSpecies, getRandomOrganismParts, getRandomCellTypes
+} from './TestUtils'
 import episodes from '../fixtures/episodesResponse.json'
 import selectedEpisodes from '../fixtures/selectedEpisodesResponse.json'
 import selectedEpisodesAndOneSpecies from '../fixtures/selectedEpisodesAndOneOtherSelectedFilterResponse.json'
@@ -34,9 +36,9 @@ describe(`FacetedSearchContainer`, () => {
   const emptyResponse = []
 
   beforeEach(() => {
-      mockRestCallsWithoutQueryParameters()
-      mockRestCallsWithQueryParameters()
-    }
+    mockRestCallsWithoutQueryParameters()
+    mockRestCallsWithQueryParameters()
+  }
   )
 
   function mockRestCallsWithoutQueryParameters() {
@@ -53,7 +55,7 @@ describe(`FacetedSearchContainer`, () => {
         method: `GET`,
         pathname: `/gxa/sc/json/gene-search`,
         query: {
-          isMarkerGenes: markerGenePayloadTrue,
+          isMarkerGenes: markerGenePayloadTrue
         }
       },
       resultListBySelection
@@ -123,7 +125,7 @@ describe(`FacetedSearchContainer`, () => {
         method: `GET`,
         pathname: `/gxa/sc/json/gene-search/cell-types`,
         query: {
-          isMarkerGenes: markerGenePayloadTrue,
+          isMarkerGenes: markerGenePayloadTrue
         }
       },
       cellTypePayload
@@ -145,7 +147,7 @@ describe(`FacetedSearchContainer`, () => {
         method: `GET`,
         pathname: `/gxa/sc/json/gene-search/marker-genes`,
         query: {
-          isMarkerGenes: markerGenePayloadTrue,
+          isMarkerGenes: markerGenePayloadTrue
         }
       },
       markerGenePayloadTrue
@@ -156,7 +158,7 @@ describe(`FacetedSearchContainer`, () => {
         method: `GET`,
         pathname: `/gxa/sc/json/gene-search/species`,
         query: {
-          isMarkerGenes: markerGenePayloadTrue,
+          isMarkerGenes: markerGenePayloadTrue
         }
       },
       speciesPayload
@@ -167,7 +169,7 @@ describe(`FacetedSearchContainer`, () => {
         method: `GET`,
         pathname: `/gxa/sc/json/gene-search/organism-parts`,
         query: {
-          isMarkerGenes: markerGenePayloadTrue,
+          isMarkerGenes: markerGenePayloadTrue
         }
       },
       organismPartsPayload
@@ -176,9 +178,9 @@ describe(`FacetedSearchContainer`, () => {
 
   it(`when results have facets they are displayed along with the results list`, () => {
     cy.mount(<FacetedSearchContainer {...props} />)
-    cy.get(`input#facetGroupMultiSelectDropdown`).should(`have.length`, 2)
-    cy.get(`div#facetGroupCheckBox`).should(`have.length`, 2)
-    cy.get(`div#filterList`).should(`have.length`, 1)
+    cy.findAllByRole(`facetGroupMultiSelectDropdown`).should(`have.length`, 2)
+    cy.findAllByRole(`facetGroupCheckBox`).should(`have.length`, 2)
+    cy.findAllByRole(`filterList`).should(`have.length`, 1)
   })
 
   it(`when results have no facets only the results list is displayed`, () => {
@@ -189,9 +191,9 @@ describe(`FacetedSearchContainer`, () => {
     cy.intercept(`GET`, `/gxa/sc/json/gene-search/cell-types`, emptyResponse)
 
     cy.mount(<FacetedSearchContainer {...props} />)
-    cy.get(`input#facetGroupMultiSelectDropdown`).should(`not.exist`)
-    cy.get(`div#facetGroupCheckBox`).should(`not.exist`)
-    cy.get(`div#filterList`).should(`have.length`, 1)
+    cy.findAllByRole(`facetGroupMultiSelectDropdown`).should(`not.exist`)
+    cy.findAllByRole(`facetGroupCheckBox`).should(`not.exist`)
+    cy.findAllByRole(`filterList`).should(`have.length`, 1)
   })
 
   it(`clicking to select/unselect facets in checkbox groups works`, () => {
@@ -204,7 +206,7 @@ describe(`FacetedSearchContainer`, () => {
         expect(selectedTitlesByMarkerGeneLength).to.be.lessThan(resultList.results.length)
 
         // click on the 1st species checkbox
-        cy.get(`div#facetGroupCheckBox:nth-child(2) > :nth-child(2) > input[type="checkbox"]`).click()
+        cy.get(`:nth-child(2) > :nth-child(2) > input[type="checkbox"]`).click()
 
         cy.get(`div.small-12.medium-8.large-9.columns>div>div>div>p`).its(`length`)
           .then((selectedTitlesByMarkerGeneAndOneSpecies) => {
@@ -212,7 +214,7 @@ describe(`FacetedSearchContainer`, () => {
             expect(selectedTitlesByMarkerGeneAndOneSpecies).to.be.lessThan(selectedTitlesByMarkerGeneLength)
 
             // click on the 2nd species checkbox
-            cy.get(`div#facetGroupCheckBox:nth-child(2) > :nth-child(3) > input[type="checkbox"]`).click()
+            cy.get(`:nth-child(2) > :nth-child(3) > input[type="checkbox"]`).click()
 
             cy.get(`div.small-12.medium-8.large-9.columns>div>div>div>p`).its(`length`)
               .then((selectedTitlesByMarkerGeneAndTwoSpecies) => {
@@ -224,14 +226,14 @@ describe(`FacetedSearchContainer`, () => {
       })
 
     // revert the form to its initial state (no selections)
-    cy.get(`div#facetGroupCheckBox:nth-child(2) > :nth-child(3) > input[type="checkbox"]`).click()
-    cy.get(`div#facetGroupCheckBox:nth-child(2) > :nth-child(2) > input[type="checkbox"]`).click()
+    cy.get(`:nth-child(2) > :nth-child(3) > input[type="checkbox"]`).click()
+    cy.get(`:nth-child(2) > :nth-child(2) > input[type="checkbox"]`).click()
     cy.get(`input[type="checkbox"]`).first().click()
 
     cy.get(`div.small-12.medium-8.large-9.columns>div>div>div>p`)
-      .then( (selectedTitles2) => {
+      .then((selectedTitles2) => {
         expect(selectedTitles2.length).to.equal(resultList.results.length)
-    })
+      })
   })
 
   it(`clicking to select/unselect facets in multi select dropdown groups works`, () => {
@@ -247,13 +249,13 @@ describe(`FacetedSearchContainer`, () => {
         cy.get(`input#facetGroupMultiSelectDropdown`)
           .first()
           .as(`selectedDropdown`)
-          .click({force: true})
+          .click({ force: true })
 
         // click on the 1st cell type
-        cy.get('[id^=react-select-][id$=-option-0]').click()
+        cy.get(`[id^=react-select-][id$=-option-0]`).click()
 
         cy.get(`@selectedDropdown`)
-          .click({force: true})
+          .click({ force: true })
 
         // click on the 2nd cell type
         cy.get(`[id^=react-select-][id$=-option-1]`).click()
@@ -264,7 +266,7 @@ describe(`FacetedSearchContainer`, () => {
             expect(selectedTitlesByMarkerGeneAndTwoCellTypes).to.be.equal(resultListByMarkerGenesAndTwoCellTypes.results.length)
             expect(selectedTitlesByMarkerGeneAndTwoCellTypes).to.be.lessThan(resultList.results.length)
             expect(selectedTitlesByMarkerGeneAndTwoCellTypes).to.be.lessThan(selectedTitlesByMarkerGeneLength)
-        })
+          })
       })
 
     // revert the form to its initial state (no selections)
@@ -278,14 +280,14 @@ describe(`FacetedSearchContainer`, () => {
 
     // assert if we got back the initial state
     cy.get(`div.small-12.medium-8.large-9.columns>div>div>div>p`)
-      .then( (selectedTitles2) => {
+      .then((selectedTitles2) => {
         expect(selectedTitles2.length).to.equal(resultList.results.length)
       })
   })
 
   it(`clicking on a second facet works`, () => {
     cy.mount(<FacetedSearchContainer {...props} />)
-    cy.get(`input[type="checkbox"]`).first().click({force:true})
+    cy.get(`input[type="checkbox"]`).first().click({ force: true })
     cy.get(`div.small-12.medium-8.large-9.columns>div>div>div>p`)
       .then((selectedTitles) => {
         cy.get(`input[type="checkbox"]`).eq(1).click().then(() => {
@@ -301,7 +303,7 @@ describe(`FacetedSearchContainer`, () => {
   it(`doesn’t display duplicated facets`, () => {
     cy.mount(<FacetedSearchContainer {...props}/>)
 
-    let checkboxLabels = []
+    const checkboxLabels = []
     let uniqueness = true
     cy.contains(`Species`).siblings().get(`label`)
       .each((label) => {
@@ -315,29 +317,29 @@ describe(`FacetedSearchContainer`, () => {
         expect(uniqueness).is.true
       })
 
-    let dropdownTitles = []
+    const dropdownTitles = []
 
     cy.get(`input#facetGroupMultiSelectDropdown`)
       .first()
       .as(`selectedDropdown`)
 
     cy.get(`@selectedDropdown`)
-      .click({force: true})
+      .click({ force: true })
 
     cy.get(`@selectedDropdown`)
       .invoke(`attr`, `aria-controls`)
       .as(`dropdownMenuId`)
 
     cy.get(`@dropdownMenuId`).get(`div[class$="-MenuList"]`).first().then((selectedTitles) => {
-        Object.values(selectedTitles)[0].childNodes.forEach(node => {
-          let label = dropdownTitles.push(node.innerText)
-          if (!dropdownTitles.includes(label)) {
-            dropdownTitles.push(label)
-          } else {
-            uniqueness = false
-          }
-        })
-      }).then(() => {
+      Object.values(selectedTitles)[0].childNodes.forEach(node => {
+        const label = dropdownTitles.push(node.innerText)
+        if (!dropdownTitles.includes(label)) {
+          dropdownTitles.push(label)
+        } else {
+          uniqueness = false
+        }
+      })
+    }).then(() => {
       expect(uniqueness).is.true
     })
   })
