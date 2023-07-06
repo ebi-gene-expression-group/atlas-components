@@ -20,50 +20,45 @@ CheckboxOption.propTypes = {
   onChange: PropTypes.func.isRequired
 }
 
-class CheckboxFacetGroup extends React.Component {
-  getSelectedFacets(checkedFacets, changedFacetLabel) {
-    if (checkedFacets.some(e => e === `true`)) {
-      checkedFacets = this.props.facets.map(facet => facet.label)
-    }
+const getSelectedFacets = (facets, checkedFacets, changedFacetLabel) => {
+  if (checkedFacets.some(e => e === `true`)) {
+    checkedFacets = facets.map(facet => facet.label)
+  }
 
-    if (checkedFacets.length === 0) {
-      checkedFacets.push(changedFacetLabel)
+  if (checkedFacets.length === 0) {
+    checkedFacets.push(changedFacetLabel)
+  } else {
+    if (checkedFacets.indexOf(changedFacetLabel) !== -1) {
+      checkedFacets.splice(checkedFacets.indexOf(changedFacetLabel), 1)
     } else {
-      if (checkedFacets.indexOf(changedFacetLabel) !== -1) {
-        checkedFacets.splice(checkedFacets.indexOf(changedFacetLabel), 1)
-      } else {
-        checkedFacets.push(changedFacetLabel)
-      }
+      checkedFacets.push(changedFacetLabel)
     }
-
-    return this.props.facets.filter(facet => checkedFacets.includes(facet.label))
   }
 
-  render() {
-    const { name, description, facets, queryParams } = this.props
-    const checkedFacets = queryParams
-
-    return (facets.length > 0 && (<div id={`facetGroupCheckBox`} className={`padding-bottom-xlarge`}>
-      <h4>
-        {name}
-        {description && <TooltipIcon tooltipText={description}/>}
-      </h4>
-      {facets.map((facet) =>
-        <CheckboxOption {...facet}
-          checked={checkedFacets.some((checkedFacet) => checkedFacet === `true` || checkedFacet === facet.label)}
-          onChange={(changedFacet) =>
-            this.props.onChange(
-              changedFacet.group,
-              this.getSelectedFacets(checkedFacets, changedFacet.label),
-              this.props.facets)
-          }
-          key={facet.label}
-        />
-      )}
-    </div>
-    ))
-  }
+  return facets.filter(facet => checkedFacets.includes(facet.label))
 }
+
+const CheckboxFacetGroup = ({ name, description, facets, onChange, queryParams: checkedFacets }) => (
+  facets.length > 0 && (<div role={`facetGroupCheckBox`} className={`padding-bottom-xlarge`}>
+    <h4>
+      {name}
+      {description && <TooltipIcon tooltipText={description}/>}
+    </h4>
+    {facets.map((facet) =>
+      <CheckboxOption {...facet}
+        checked={checkedFacets.some((checkedFacet) => checkedFacet === `true` || checkedFacet === facet.label)}
+        onChange={(changedFacet) =>
+          onChange(
+            changedFacet.group,
+            getSelectedFacets(facets, checkedFacets, changedFacet.label),
+            facets)
+        }
+        key={facet.label}
+      />
+    )}
+  </div>
+  )
+)
 
 CheckboxFacetGroup.propTypes = FacetGroupPropTypes
 
