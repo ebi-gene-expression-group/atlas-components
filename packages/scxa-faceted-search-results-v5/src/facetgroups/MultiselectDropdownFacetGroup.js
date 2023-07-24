@@ -63,7 +63,6 @@ const MultiselectDropdownFacetGroup = ({ name, description, facets, onChange, qu
         {description && <TooltipIcon tooltipText={description}/>}
       </h4>
       <Select
-        inputId={`facetGroupMultiSelectDropdown`}
         components={{ DropdownIndicator, IndicatorSeparator: null }}
         styles={ebiVfSelectStyles}
         closeMenuOnSelect={false}

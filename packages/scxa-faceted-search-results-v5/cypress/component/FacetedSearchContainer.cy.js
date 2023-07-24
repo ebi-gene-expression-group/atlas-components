@@ -16,7 +16,7 @@ describe(`FacetedSearchContainer`, () => {
   const props = {
     results: episodes,
     host: `/gxa/sc/`,
-    queryParams: [],
+    queryParams: {},
     filterListEndpoint: `json/gene-search`,
     ResultsHeaderClass: ExperimentTableHeader,
     ResultElementClass: ExperimentTableCard
@@ -246,7 +246,8 @@ describe(`FacetedSearchContainer`, () => {
         expect(selectedTitlesByMarkerGeneLength).to.be.lessThan(resultList.results.length)
 
         // click on the 1st cell type checkbox
-        cy.get(`input#facetGroupMultiSelectDropdown`)
+        cy.findAllByRole(`facetGroupMultiSelectDropdown`)
+          .get(`div[class$='ValueContainer']`)
           .first()
           .as(`selectedDropdown`)
           .click({ force: true })
@@ -319,7 +320,8 @@ describe(`FacetedSearchContainer`, () => {
 
     const dropdownTitles = []
 
-    cy.get(`input#facetGroupMultiSelectDropdown`)
+    cy.findAllByRole(`facetGroupMultiSelectDropdown`)
+      .get(`div[class$='ValueContainer']`)
       .first()
       .as(`selectedDropdown`)
 

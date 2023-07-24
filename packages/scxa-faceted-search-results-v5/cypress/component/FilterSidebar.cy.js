@@ -5,17 +5,17 @@ import FilterSidebar from "../../src/FilterSidebar"
 import CheckboxFacetGroupsDefaultProps from "../../src/facetgroups/CheckboxFacetGroupsDefaultProps"
 import MultiSelectDropdownFacetGroupsDefaultProps
   from "../../src/facetgroups/MultiSelectDropdownFacetGroupsDefaultProps"
-import {getRandomOrganismParts, getRandomCellTypes, getRandomSpecies} from './TestUtils'
+import { getRandomOrganismParts, getRandomCellTypes, getRandomSpecies } from './TestUtils'
 
-let propsForFilterSideBar = {
+const propsForFilterSideBar = {
   host: `/gxa/sc/`,
-  queryParams: {},
+  onchange: {},
+  queryParams: {}
 }
 
 const emptyPayload = []
 
-describe('FilterSidebar', () => {
-
+describe(`FilterSidebar`, () => {
   it(`Should load "is marker genes" facet group when there is at least 1 marker gene`, () => {
     const markerGenePayload = `true`
     const speciesPayload = emptyPayload
@@ -89,12 +89,13 @@ describe('FilterSidebar', () => {
 
     cy.mount(<FilterSidebar {...propsForFilterSideBar} />)
 
-    cy.get(`input#facetGroupMultiSelectDropdown`)
+    cy.findAllByRole(`facetGroupMultiSelectDropdown`)
       .first()
+      .get(`div[class$='ValueContainer']`)
       .as(`selectedDropdown`)
 
     cy.get(`@selectedDropdown`)
-      .click({force: true})
+      .click({ force: true })
 
     cy.get(`@selectedDropdown`)
       .invoke(`attr`, `aria-controls`)
@@ -120,18 +121,19 @@ describe('FilterSidebar', () => {
 
     cy.mount(<FilterSidebar {...propsForFilterSideBar} />)
 
-    cy.get(`input#facetGroupMultiSelectDropdown`)
+    cy.findAllByRole(`facetGroupMultiSelectDropdown`)
       .first()
+      .get(`div[class$='ValueContainer']`)
       .as(`selectedDropdown`)
 
     cy.get(`@selectedDropdown`)
-      .click({force: true})
+      .click({ force: true })
 
     cy.get(`@selectedDropdown`)
       .invoke(`attr`, `aria-controls`)
       .as(`dropdownMenuId`)
 
-    cy.get(`@dropdownMenuId`)
+    cy.get(`@selectedDropdown`)
       .get(`div[class$="-MenuList"]`)
       .then((labels) => {
         Object.values(labels)[0].childNodes.forEach(node => {
@@ -151,12 +153,13 @@ describe('FilterSidebar', () => {
 
     cy.mount(<FilterSidebar {...propsForFilterSideBar} />)
 
-    cy.get(`input#facetGroupMultiSelectDropdown`)
+    cy.findAllByRole(`facetGroupMultiSelectDropdown`)
+      .get(`div[class$='ValueContainer']`)
       .first()
       .as(`cellTypeDropdown`)
 
     cy.get(`@cellTypeDropdown`)
-      .click({force: true})
+      .click({ force: true })
 
     cy.get(`@cellTypeDropdown`)
       .invoke(`attr`, `aria-controls`)
@@ -170,12 +173,13 @@ describe('FilterSidebar', () => {
         })
       })
 
-    cy.get(`input#facetGroupMultiSelectDropdown`)
+    cy.findAllByRole(`facetGroupMultiSelectDropdown`)
+      .get(`div[class$='ValueContainer']`)
       .last()
       .as(`organismPartDropdown`)
 
     cy.get(`@organismPartDropdown`)
-      .click({force: true})
+      .click({ force: true })
 
     cy.get(`@organismPartDropdown`)
       .invoke(`attr`, `aria-controls`)
@@ -213,12 +217,13 @@ describe('FilterSidebar', () => {
       expect(inputs.length).to.equal(expectedNbOfCheckboxes)
     })
 
-    cy.get(`input#facetGroupMultiSelectDropdown`)
+    cy.findAllByRole(`facetGroupMultiSelectDropdown`)
+      .get(`div[class$='ValueContainer']`)
       .first()
       .as(`cellTypeDropdown`)
 
     cy.get(`@cellTypeDropdown`)
-      .click({force: true})
+      .click({ force: true })
 
     cy.get(`@cellTypeDropdown`)
       .invoke(`attr`, `aria-controls`)
@@ -232,12 +237,13 @@ describe('FilterSidebar', () => {
         })
       })
 
-    cy.get(`input#facetGroupMultiSelectDropdown`)
+    cy.findAllByRole(`facetGroupMultiSelectDropdown`)
+      .get(`div[class$='ValueContainer']`)
       .last()
       .as(`organismPartDropdown`)
 
     cy.get(`@organismPartDropdown`)
-      .click({force: true})
+      .click({ force: true })
 
     cy.get(`@organismPartDropdown`)
       .invoke(`attr`, `aria-controls`)

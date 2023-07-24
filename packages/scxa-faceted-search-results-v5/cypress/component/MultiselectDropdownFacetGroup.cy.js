@@ -7,12 +7,11 @@ import {
   getPropsWithoutTooltip,
   getPropsForMultiSelectDropdownGroupWithTooltip,
   getRandomInt
-} from "./TestUtils";
+} from "./TestUtils"
 
-import vindicators from "../fixtures/vindicatorsResponse.json";
+import vindicators from "../fixtures/vindicatorsResponse.json"
 
 describe(`MultiselectDropdownFacetGroup`, () => {
-
   it(`displays the expected tooltip if it exists`, () => {
     const propsWithTooltip = getPropsForMultiSelectDropdownGroupWithTooltip()
     const facetTooltip = propsWithTooltip.description
@@ -25,12 +24,12 @@ describe(`MultiselectDropdownFacetGroup`, () => {
     cy.get(`div.padding-bottom-xlarge h4 sup span`)
       .should(`have.class`, `icon icon-generic`)
       .should(`have.attr`, `data-tip`).then((dataTip) => {
-      expect(dataTip.toString()
-        .replace(`<span>`, ``)
-        .replace(`</span>`, ``)
-        .replace(`<br>`, ` `))
-        .to.equal(facetTooltip)
-    })
+        expect(dataTip.toString()
+          .replace(`<span>`, ``)
+          .replace(`</span>`, ``)
+          .replace(`<br>`, ` `))
+          .to.equal(facetTooltip)
+      })
   })
 
   it(`doesn’t display tooltip if not present`, () => {
@@ -46,8 +45,7 @@ describe(`MultiselectDropdownFacetGroup`, () => {
   })
 
   it(`callback includes user typed facet name in arguments`, () => {
-
-    let props = {
+    const props = {
       name: `Vindicators`,
       description: `Show the vindicators`,
       facets: vindicators,
@@ -55,7 +53,7 @@ describe(`MultiselectDropdownFacetGroup`, () => {
     }
 
     const mockCallbackWrapper = {
-      onChange: function(facetGroup, checkedFacets) {
+      onChange: function (facetGroup, checkedFacets) {
       }
     }
     cy.spy(mockCallbackWrapper, `onChange`).as(`onChange`)
@@ -63,8 +61,11 @@ describe(`MultiselectDropdownFacetGroup`, () => {
     const valueToType = vindicators[randomIndex].value
 
     cy.mount(<MultiselectDropdownFacetGroup {...props} onChange={mockCallbackWrapper.onChange} />)
-    cy.get(`input#facetGroupMultiSelectDropdown`)
-      .type(`${valueToType}{enter}`, {force: true})
+    cy.findAllByRole(`facetGroupMultiSelectDropdown`)
+      .get(`div[class$='ValueContainer']`)
+      .first()
+      .get(`input`)
+      .type(`${valueToType}{enter}`, { force: true })
 
     cy.get(`@onChange`)
       .should(`have.been.calledOnceWithExactly`,

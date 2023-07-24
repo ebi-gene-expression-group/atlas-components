@@ -2,10 +2,10 @@ import React from "react"
 
 import CheckboxFacetGroup from '../../src/facetgroups/CheckboxFacetGroup'
 
-import {getFacets, getPropsForCheckBoxGroupWithTooltip, getPropsWithoutTooltip, getRandomInt} from './TestUtils'
-import vindicators from "../fixtures/vindicatorsResponse.json";
+import { getFacets, getPropsForCheckBoxGroupWithTooltip, getPropsWithoutTooltip, getRandomInt } from './TestUtils'
+import vindicators from "../fixtures/vindicatorsResponse.json"
 
-let props = {
+const props = {
   name: `Vindicators`,
   description: `Show the vindicators`,
   facets: [],
@@ -13,12 +13,11 @@ let props = {
 }
 
 describe(`CheckboxFacetGroup`, () => {
-
   beforeEach(() => {
     while (props.facets.length === 0) {
       props.facets = vindicators.filter(() => Math.random() > 0.5)
     }
-    props.facets = props.facets.map(e => ({...e, disabled: false}))
+    props.facets = props.facets.map(e => ({ ...e, disabled: false }))
   })
 
   it(`displays the expected tooltip if it exists`, () => {
@@ -36,7 +35,7 @@ describe(`CheckboxFacetGroup`, () => {
           .replace(`</span>`, ``)
           .replace(`<br>`, ` `))
           .to.equal(props.description)
-    })
+      })
   })
 
   it(`doesn't display tooltip if not present`, () => {
@@ -67,7 +66,7 @@ describe(`CheckboxFacetGroup`, () => {
   })
 
   it(`displays disabled check boxes greyed out`, () => {
-    props.facets = props.facets.map(e => ({...e, disabled: true}))
+    props.facets = props.facets.map(e => ({ ...e, disabled: true }))
     cy.mount(<CheckboxFacetGroup {...props} />)
 
     cy.get(`input`).should(`have.attr`, `disabled`)
@@ -79,7 +78,7 @@ describe(`CheckboxFacetGroup`, () => {
   it(`callback is called when a checkbox is checked/unchecked with the right arguments`, () => {
     const randomCheckboxIndex = getRandomInt(0, props.facets.length)
     const mockCallbackWrapper = {
-      onChange: function(facetGroup, checkedFacets) {
+      onChange: function (facetGroup, checkedFacets) {
       }
     }
     cy.spy(mockCallbackWrapper, `onChange`).as(`onChange`)

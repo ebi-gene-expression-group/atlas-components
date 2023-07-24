@@ -1,4 +1,4 @@
-import PropTypes from "prop-types";
+import PropTypes from "prop-types"
 
 const FacetGroupPropTypes = {
   name: PropTypes.string.isRequired,
@@ -8,12 +8,10 @@ const FacetGroupPropTypes = {
       group: PropTypes.string.required,
       value: PropTypes.string.required,
       label: PropTypes.string.isRequired,
-      disabled: PropTypes.bool.isRequired,
+      disabled: PropTypes.bool.isRequired
     })
   ).isRequired,
-  queryParams: PropTypes.arrayOf(
-    PropTypes.string
-  ),
+  queryParams: PropTypes.object,
   onChange: PropTypes.func.isRequired
 }
 

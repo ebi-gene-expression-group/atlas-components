@@ -23,21 +23,22 @@ class FacetedSearchContainer extends React.Component {
     this.onChange = this.onChange.bind(this)
   }
 
-  onChange(filterType, selectedFacets, facetsOfChangedGroup = []) {
-    const queryStringObject = this.state.queryParams
-
+  setQueryString(queryStringObject, selectedFacets, filterType) {
     if (selectedFacets !== null && selectedFacets.length > 0) {
-      const selectedValues = filterType === `isMarkerGenes` ?
+      queryStringObject[filterType] = filterType === `isMarkerGenes` ?
         [`true`] :
         selectedFacets.map(selectedFacet => selectedFacet.value)
-      queryStringObject[filterType] = selectedValues
     } else {
       // if selectedFacets empty, then delete the type from query params
       delete queryStringObject[filterType]
     }
+    return queryStringObject
+  }
 
+  onChange(filterType, selectedFacets, facetsOfChangedGroup = []) {
+    const queryParams = cloneDeep(this.state.queryParams)
     this.setState({
-      queryParams: queryStringObject,
+      queryParams: this.setQueryString(queryParams, selectedFacets, filterType),
       changedFacetGroup: filterType,
       facetsOfChangedGroup
     })
@@ -46,7 +47,7 @@ class FacetedSearchContainer extends React.Component {
   render() {
     const {
       checkboxFacetGroups, multiSelectDropdownFacetGroups, host, filterListEndpoint,
-      ResultsHeaderClass, ResultElementClass, sortTitle
+      ResultsHeaderClass, ResultElementClass
     } = this.props
     const queryParams = this.state.queryParams
     const changedFacetGroup = this.state.changedFacetGroup
@@ -77,7 +78,7 @@ class FacetedSearchContainer extends React.Component {
               }
             )
             }
-            {...{ ResultElementClass, ResultsHeaderClass, sortTitle }}
+            {...{ ResultElementClass, ResultsHeaderClass }}
           />
         </div>
       </div>
