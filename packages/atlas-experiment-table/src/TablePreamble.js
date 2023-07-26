@@ -11,7 +11,8 @@ const TablePreamble =
        rowsPerPageOnChange,
        searchAll,
        searchAllOnChange,
-       className
+       className,
+       searchAllVisibility
      }) =>
         <React.Fragment>
           {
@@ -51,18 +52,18 @@ const TablePreamble =
               <select
                   defaultValue={rowsPerPage}
                   onChange={e => rowsPerPageOnChange(Number.parseInt(e.target.value))}>
-                {
-                  rowsPerPageOptions
-                      .filter(rowsPerPageOption => rowsCount >= rowsPerPageOption)
-                      .map((rowsPerPageOption, index) =>
-                          <option key={index} value={rowsPerPageOption}>{rowsPerPageOption}</option>)
-                }
+                    {
+                      rowsPerPageOptions
+                          .filter(rowsPerPageOption => rowsCount >= rowsPerPageOption)
+                          .map((rowsPerPageOption, index) =>
+                              <option key={index} value={rowsPerPageOption}>{rowsPerPageOption}</option>)
+                    }
                 <option value={0}>All</option>
               </select>
             </label>
           </div>
 
-          <div className={className}>
+          <div className={className} style={{visibility: searchAllVisibility}}>
             <label>Search all columns:
               <input
                   type={`search`}

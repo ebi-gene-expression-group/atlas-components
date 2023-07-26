@@ -445,7 +445,7 @@ describe(`TableManager`, () => {
     expect(wrapper.state(`selectedRows`)).toHaveLength(rowSelectionCount)
   })
 
-  test(`changes the displayed iterms when the page is changed in the footer`, () => {
+  test(`changes the displayed items when the page is changed in the footer`, () => {
     const wrapper =
       shallow(
         <TableManager
@@ -463,6 +463,25 @@ describe(`TableManager`, () => {
     const rowsInAnotherPage = wrapper.find(TableContent).prop(`dataRows`).map(e => e.experimentAccession)
 
     expect(_.intersection(experimentAccessionsInFirstPage, rowsInAnotherPage)).toHaveLength(0)
+  })
+
+  test(`fetches new data and changes the displayed items when the page is changed in the footer with props numberOfRows`,
+      () => {
+    const wrapper =
+        shallow(
+            <TableManager
+                {...props}
+                dataRows={bulkExperiments}
+                tableHeaders={bulkTableHeaders}
+                dropdownFilters={bulkDropdownFilters}
+                numberOfRows={50}/>)
+    TableManager.prototype._fetchAndSetStateExperimentDesign = jest.fn();
+    expect(wrapper).toHaveState({ currentPage: 1 })
+
+    wrapper.find(TableFooter).invoke(`onChange`)(5)
+    expect(TableManager.prototype._fetchAndSetStateExperimentDesign).toHaveBeenCalledTimes(1);
+    expect(TableManager.prototype._fetchAndSetStateExperimentDesign).toHaveBeenCalledWith(5, 10);
+    expect(wrapper).toHaveState({ currentPage: 5 })
   })
 
   test(`matches snapshot (bulk)`, () => {

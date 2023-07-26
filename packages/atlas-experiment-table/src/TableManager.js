@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import _ from 'lodash'
 
+import URI from 'urijs'
 import { tableHeaderPropTypes, filterPropTypes } from './filterPropTypes'
 import TablePreamble from './TablePreamble'
 import TableContent from './TableContent'
@@ -53,7 +54,8 @@ export default class TableManager extends React.Component {
       width: PropTypes.number
     }),
     className: PropTypes.string,
-    afterStateUpdate: PropTypes.func
+    afterStateUpdate: PropTypes.func,
+    numberOfRows: PropTypes.number
   }
 
   static defaultProps = {
@@ -62,7 +64,8 @@ export default class TableManager extends React.Component {
     host: ``,
     rowSelectionColumn: null,
     className: `row expanded`,
-    afterStateUpdate: () => {}
+    afterStateUpdate: () => {},
+    tableSecondHeaders: null
   }
 
   constructor(props) {
@@ -128,9 +131,46 @@ export default class TableManager extends React.Component {
     this.updateSearchAll = this.updateSearchAll.bind(this)
     this.updateRowsPerPage = this.updateRowsPerPage.bind(this)
     this.updateSortColumn = this.updateSortColumn.bind(this)
+    this._fetchAndSetState = this._fetchAndSetState.bind(this)
   }
 
-  updateSelectedRows(rowId) {
+  async _fetchAndSetState(resource, baseUrl, dataField, errorMessageField, loadingField) {
+    this.setState({
+      [loadingField]: true
+    })
+
+    const url = URI(resource, baseUrl).toString()
+
+    try {
+      const response = await fetch(url)
+      if (!response.ok) {
+        throw new Error(`${url} => ${response.status}`)
+      }
+      this.setState({
+        [dataField]: (await response.json()).data,
+        [errorMessageField]: null,
+        [loadingField]: false,
+      })
+    } catch (e) {
+      this.setState({
+        [errorMessageField]: `${e.name}: ${e.message}`,
+        [loadingField]: false
+      })
+    }
+  }
+
+  _fetchAndSetStateExperimentDesign(currentPage, rowsPerPage) {
+    // TBC resource with backend endpoint
+    const resource = `gxa/sc/json/experiment-design/E-GEOD-71585?pageNo=${currentPage}&pageSize=${rowsPerPage}`
+       //`https://gist.githubusercontent.com/lingyun1010/3344ad6b1506e78da3636394ffccaac5/raw/9b3dfc92c3aedaf59d29ae57c6adc95b178d49df/experiment-design-02.json`
+    this._fetchAndSetState(resource, `http://localhost:8080`, `filteredSortedDataRows`, `errorMessage`, `loading`)
+  }
+
+  componentDidMount() {
+    this.props.numberOfRows && this._fetchAndSetStateExperimentDesign(this.state.currentPage, this.state.rowsPerPage)
+  }
+
+  updateSelectedRows(rowId) {this._fetchAndSetStateExperimentDesign(this.state.currentPage, this.state.rowsPerPage)
     this.setState({
       selectedRows:
         _.chain(this.state.selectedRows)
@@ -186,6 +226,8 @@ export default class TableManager extends React.Component {
       rowsPerPage: rowsPerPage,
       currentPage: 1
     })
+    this.props.numberOfRows && rowsPerPage ? this._fetchAndSetStateExperimentDesign(this.state.currentPage, rowsPerPage) :
+        this._fetchAndSetStateExperimentDesign(this.state.currentPage, this.props.numberOfRows)
   }
 
   // If the columnIndex is the same we flip the order between ascending/descending
@@ -217,24 +259,29 @@ export default class TableManager extends React.Component {
 
   render() {
     const { rowsPerPage, currentPage } = this.state
-    const currentPageDataRows = rowsPerPage ?
-      this.state.filteredSortedDataRows.slice(rowsPerPage * (currentPage - 1), rowsPerPage * currentPage) :
-      this.state.filteredSortedDataRows
+    const currentPageDataRows =
+        this.props.numberOfRows ? this.state.filteredSortedDataRows :
+        rowsPerPage ?
+        this.state.filteredSortedDataRows.slice(rowsPerPage * (currentPage - 1), rowsPerPage * currentPage) :
+        this.state.filteredSortedDataRows
 
     return (
       <div className={this.props.className}>
         <TablePreamble
           dropdowns={this.state.dropdownFilters}
           dropdownOnChange={this.updateFilters}
-          rowsCount={this.state.filteredSortedDataRows.length}
+          rowsCount={this.props.numberOfRows ? this.props.numberOfRows : this.state.filteredSortedDataRows.length}
           rowsPerPageOptions={this.rowsPerPageOptions}
           rowsPerPage={this.state.rowsPerPage}
           rowsPerPageOnChange={this.updateRowsPerPage}
           searchAll={this.state.searchAll}
-          searchAllOnChange={this.updateSearchAll}/>
+          searchAllOnChange={this.updateSearchAll}
+          searchAllVisibility={this.props.numberOfRows ? `hidden` : `visible`}
+        />
 
         <TableContent
           dataRows={currentPageDataRows}
+          tableSecondHeaders={this.props.tableSecondHeaders}
           tableHeaders={this.props.tableHeaders}
           filters={this.state.filters}
           tableHeaderCellOnChange={this.updateFilters}
@@ -247,11 +294,14 @@ export default class TableManager extends React.Component {
           selectOnChange={this.updateSelectedRows}/>
 
         <TableFooter
-          dataRowsLength={this.props.dataRows.length}
-          filteredDataRowsLength={this.state.filteredSortedDataRows.length}
+          dataRowsLength={this.props.numberOfRows || this.props.dataRows.length}
+          filteredDataRowsLength={this.props.numberOfRows || this.state.filteredSortedDataRows.length}
           currentPage={this.state.currentPage}
           rowsPerPage={this.state.rowsPerPage}
-          onChange={i => this.setState({ currentPage: i })}/>
+          onChange={i => {
+            this.setState({ currentPage: i })
+            this._fetchAndSetStateExperimentDesign(i, this.state.rowsPerPage)
+          }}/>
       </div>
     )
   }

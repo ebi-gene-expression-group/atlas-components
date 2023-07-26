@@ -31,11 +31,39 @@ describe(`TableContent`, () => {
     selectOnChange: jest.fn()
   }
 
+  const tableSecondHeaders = [
+    {
+      label: '',
+      dataKey: '',
+      sortable: false,
+      width: 0.5,
+    },
+    {
+      label: 'Sample Characteristic',
+      dataKey: 'organism',
+      sortable: false,
+      width: 7.5
+    },
+    {
+      label: 'Experimental Variables',
+      dataKey: 'organism',
+      sortable: false,
+      width: 4
+    },
+  ]
   test(`renders a table with head and body`, () => {
     const wrapper = shallow(<TableContent {...props}/>)
 
     expect(wrapper).toContainExactlyOneMatchingElement(Table)
     expect(wrapper.find(Table).find(Table.Head)).toHaveLength(1)
+    expect(wrapper.find(Table).find(Table.Body)).toHaveLength(1)
+  })
+
+  test(`renders a table with head and second level header and body`, () => {
+    const wrapper = shallow(<TableContent {...props} tableSecondHeaders={tableSecondHeaders}/>)
+
+    expect(wrapper).toContainExactlyOneMatchingElement(Table)
+    expect(wrapper.find(Table).find(Table.Head)).toHaveLength(2)
     expect(wrapper.find(Table).find(Table.Body)).toHaveLength(1)
   })
 
@@ -100,6 +128,12 @@ describe(`TableContent`, () => {
     expect(wrapper.find(Table).find(Table.Head).find(SelectionTableHeaderCell)).toHaveLength(1)
     wrapper.find(Table).find(Table.Head).find(SelectionTableHeaderCell).simulate(`click`)
     expect(rowSelectionColumn.tableHeaderCellOnClick).toHaveBeenCalled()
+  })
+
+  test(`matches snapshot (with a second lever header)`, () => {
+    const wrapper =
+        mount(<TableContent {...props} tableSecondHeaders={tableSecondHeaders} dataRows={bulkExperiments.slice(100, 150)} tableHeaders={bulkTableHeaders}/>)
+    expect(wrapper).toMatchSnapshot()
   })
 
   test(`matches snapshot (without selection)`, () => {
