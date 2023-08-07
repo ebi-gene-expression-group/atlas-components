@@ -52,7 +52,7 @@ const TableContent =
           }
 
           <Table.Head
-            height={majorScale(tableSecondHeaders ? 3 : 6)}
+            height={tableSecondHeaders ? `auto` : majorScale(6)}
             paddingRight={0}>
             {
               tableHeaders.map((tableHeader, index) =>
