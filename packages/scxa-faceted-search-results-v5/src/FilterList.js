@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 const FilterList = ({ filteredResults, resultsMessage, ResultsHeaderClass, ResultElementClass }) => (
-  <div role={`filterList`}>
+  <div data-testid={`filterList`} role={`list`}>
     <h4>{resultsMessage}</h4>
     { filteredResults.length && <ResultsHeaderClass/> }
     { filteredResults.map((element, index) => <div key={index}><ResultElementClass {...element}/></div>) }

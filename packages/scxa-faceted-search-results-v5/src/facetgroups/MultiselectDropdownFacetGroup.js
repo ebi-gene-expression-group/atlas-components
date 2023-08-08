@@ -57,7 +57,8 @@ const getSelectedFacets = (queryParams, allFacets) => {
 
 const MultiselectDropdownFacetGroup = ({ name, description, facets, onChange, queryParams }) => (
   facets.length > 0 && (
-    <div role={`facetGroupMultiSelectDropdown`} className={`padding-bottom-xlarge`}>
+    <div role={`listbox`} className={`padding-bottom-xlarge`}
+      data-testid={`facetGroupMultiSelectDropdown`}>
       <h4>
         {name}
         {description && <TooltipIcon tooltipText={description}/>}

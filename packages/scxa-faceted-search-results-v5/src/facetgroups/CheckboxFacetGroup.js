@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import TooltipIcon from './TooltipIcon'
-import FacetGroupPropTypes from "./FacetGroupPropTypes"
+import FacetGroupPropTypes from './FacetGroupPropTypes'
 
 const CheckboxOption = ({ group, value, label, disabled, checked, onChange }) =>
   <div>
@@ -39,7 +39,7 @@ const getSelectedFacets = (facets, checkedFacets, changedFacetLabel) => {
 }
 
 const CheckboxFacetGroup = ({ name, description, facets, onChange, queryParams: checkedFacets }) => (
-  facets.length > 0 && (<div role={`facetGroupCheckBox`} className={`padding-bottom-xlarge`}>
+  facets.length > 0 && (<div role={`listbox`} className={`padding-bottom-xlarge`} data-testid={`facetGroupCheckBox`}>
     <h4>
       {name}
       {description && <TooltipIcon tooltipText={description}/>}

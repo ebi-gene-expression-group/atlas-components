@@ -178,9 +178,9 @@ describe(`FacetedSearchContainer`, () => {
 
   it(`when results have facets they are displayed along with the results list`, () => {
     cy.mount(<FacetedSearchContainer {...props} />)
-    cy.findAllByRole(`facetGroupMultiSelectDropdown`).should(`have.length`, 2)
-    cy.findAllByRole(`facetGroupCheckBox`).should(`have.length`, 2)
-    cy.findAllByRole(`filterList`).should(`have.length`, 1)
+    cy.findAllByTestId(`facetGroupMultiSelectDropdown`).should(`have.length`, 2)
+    cy.findAllByTestId(`facetGroupCheckBox`).should(`have.length`, 2)
+    cy.findAllByTestId(`filterList`).should(`have.length`, 1)
   })
 
   it(`when results have no facets only the results list is displayed`, () => {
@@ -191,9 +191,9 @@ describe(`FacetedSearchContainer`, () => {
     cy.intercept(`GET`, `/gxa/sc/json/gene-search/cell-types`, emptyResponse)
 
     cy.mount(<FacetedSearchContainer {...props} />)
-    cy.findAllByRole(`facetGroupMultiSelectDropdown`).should(`not.exist`)
-    cy.findAllByRole(`facetGroupCheckBox`).should(`not.exist`)
-    cy.findAllByRole(`filterList`).should(`have.length`, 1)
+    cy.findAllByTestId(`facetGroupMultiSelectDropdown`).should(`not.exist`)
+    cy.findAllByTestId(`facetGroupCheckBox`).should(`not.exist`)
+    cy.findAllByTestId(`filterList`).should(`have.length`, 1)
   })
 
   it(`clicking to select/unselect facets in checkbox groups works`, () => {
@@ -246,7 +246,7 @@ describe(`FacetedSearchContainer`, () => {
         expect(selectedTitlesByMarkerGeneLength).to.be.lessThan(resultList.results.length)
 
         // click on the 1st cell type checkbox
-        cy.findAllByRole(`facetGroupMultiSelectDropdown`)
+        cy.findAllByTestId(`facetGroupMultiSelectDropdown`)
           .get(`div[class$='ValueContainer']`)
           .first()
           .as(`selectedDropdown`)
@@ -264,7 +264,8 @@ describe(`FacetedSearchContainer`, () => {
         cy.get(`div.small-12.medium-8.large-9.columns>div>div>div>p`).its(`length`)
           .as(`selectedTitlesByMarkerGeneAndTwoCellTypes`)
           .then((selectedTitlesByMarkerGeneAndTwoCellTypes) => {
-            expect(selectedTitlesByMarkerGeneAndTwoCellTypes).to.be.equal(resultListByMarkerGenesAndTwoCellTypes.results.length)
+            expect(selectedTitlesByMarkerGeneAndTwoCellTypes).to.be.equal(
+              resultListByMarkerGenesAndTwoCellTypes.results.length)
             expect(selectedTitlesByMarkerGeneAndTwoCellTypes).to.be.lessThan(resultList.results.length)
             expect(selectedTitlesByMarkerGeneAndTwoCellTypes).to.be.lessThan(selectedTitlesByMarkerGeneLength)
           })
@@ -320,7 +321,7 @@ describe(`FacetedSearchContainer`, () => {
 
     const dropdownTitles = []
 
-    cy.findAllByRole(`facetGroupMultiSelectDropdown`)
+    cy.findAllByTestId(`facetGroupMultiSelectDropdown`)
       .get(`div[class$='ValueContainer']`)
       .first()
       .as(`selectedDropdown`)
@@ -332,17 +333,18 @@ describe(`FacetedSearchContainer`, () => {
       .invoke(`attr`, `aria-controls`)
       .as(`dropdownMenuId`)
 
-    cy.get(`@dropdownMenuId`).get(`div[class$="-MenuList"]`).first().then((selectedTitles) => {
-      Object.values(selectedTitles)[0].childNodes.forEach(node => {
-        const label = dropdownTitles.push(node.innerText)
-        if (!dropdownTitles.includes(label)) {
-          dropdownTitles.push(label)
-        } else {
-          uniqueness = false
-        }
+    cy.get(`@dropdownMenuId`).get(`div[class$="-MenuList"]`).first()
+      .then((selectedTitles) => {
+        Object.values(selectedTitles)[0].childNodes.forEach(node => {
+          const label = dropdownTitles.push(node.innerText)
+          if (!dropdownTitles.includes(label)) {
+            dropdownTitles.push(label)
+          } else {
+            uniqueness = false
+          }
+        })
+      }).then(() => {
+        expect(uniqueness).is.true
       })
-    }).then(() => {
-      expect(uniqueness).is.true
-    })
   })
 })

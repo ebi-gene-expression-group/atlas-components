@@ -61,7 +61,7 @@ describe(`MultiselectDropdownFacetGroup`, () => {
     const valueToType = vindicators[randomIndex].value
 
     cy.mount(<MultiselectDropdownFacetGroup {...props} onChange={mockCallbackWrapper.onChange} />)
-    cy.findAllByRole(`facetGroupMultiSelectDropdown`)
+    cy.findAllByTestId(`facetGroupMultiSelectDropdown`)
       .get(`div[class$='ValueContainer']`)
       .first()
       .get(`input`)
