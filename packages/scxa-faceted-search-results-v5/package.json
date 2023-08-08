@@ -46,12 +46,12 @@
     "@cypress/code-coverage": "^3.10.6",
     "@ebi-gene-expression-group/eslint-config": "^3.5.1",
     "@ebi-gene-expression-group/react-ebi-species": "^2.6.2",
-    "@testing-library/cypress": "^9.0.0",
+    "@testing-library/cypress": "^8.0.7",
     "babel-loader": "^8.1.0",
     "babel-plugin-istanbul": "^6.1.1",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "clean-webpack-plugin": "^3.0.0",
-    "cypress": "^12.16.0",
+    "cypress": "^4.2.0",
     "eslint": "^8.17.0",
     "fetch-mock": "^9.10.7",
     "identity-obj-proxy": "^3.0.0",
@@ -59,9 +59,8 @@
     "node-fetch": "^2.6.0",
     "random-words": "1.2.1",
     "react-test-renderer": "^16.13.1",
-    "webpack": "^4.44.1",
-    "webpack-cli": "^3.3.12",
-    "webpack-dev-server": "^3.11.0"
+    "webpack": "^5.73.0",
+    "webpack-dev-server": "^4.15.1"
   },
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1"
