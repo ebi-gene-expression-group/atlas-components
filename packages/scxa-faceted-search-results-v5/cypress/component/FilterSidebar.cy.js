@@ -48,7 +48,7 @@ describe(`FilterSidebar`, () => {
       })
     })
 
-  it(`should loads "species" and "is marker genes" facet groups 
+  it(`should loads "species" and "is marker genes" facet groups
   when there are couple of species exists for the given term`, () => {
     const markerGenePayload = `true`
     const speciesPayload = getRandomSpecies()
@@ -197,7 +197,7 @@ describe(`FilterSidebar`, () => {
         })
     })
 
-  it(`should load both "is marker gene", "species", "organism part" and "cell types" facet groups 
+  it(`should load both "is marker gene", "species", "organism part" and "cell types" facet groups
   when there is at least 1 marker gene`, () => {
     const markerGenePayload = `true`
     const speciesPayload = getRandomSpecies()

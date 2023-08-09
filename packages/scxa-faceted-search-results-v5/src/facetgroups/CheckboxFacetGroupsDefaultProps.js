@@ -24,14 +24,18 @@ const CheckboxFacetGroupsDefaultProps = [
     description: `Species from which the sample is originally derived`,
     endpoint: `json/gene-search/species`,
     queryParamName: `species`,
-    payloadConversion: data.map(checkboxValue => 
-      ({
-          group: `species`,
-          value: checkboxValue,
-          label: checkboxValue,
-          disabled: false
-      })
-    )
+    payloadConversion: (data) => {
+      return {
+        facets: data.map(checkboxValue =>
+          ({
+            group: `species`,
+            value: checkboxValue,
+            label: checkboxValue,
+            disabled: false
+          })
+        )
+      }
+    }
   }
 ]
 
