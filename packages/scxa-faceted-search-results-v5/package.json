@@ -63,7 +63,9 @@
     "webpack-dev-server": "^4.15.1"
   },
   "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1"
+    "prepare": "rm -rf lib && babel src -d lib --copy-files",
+    "test": "jest",
+    "posttest": "jest --coverage --coverageReporters=text-lcov | coveralls"
   },
   "bugs": {
     "url": "https://github.com/ebi-gene-expression-group/atlas-components/issues"
