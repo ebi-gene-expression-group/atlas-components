@@ -7,34 +7,19 @@ import MultiselectDropdownFacetGroup from './facetgroups/MultiselectDropdownFace
 const CheckboxFacetGroupWithFetchLoader = withFetchLoader(CheckboxFacetGroup)
 const MultiselectDropdownFacetGroupWithFetchLoader = withFetchLoader(MultiselectDropdownFacetGroup)
 
-const initCheckboxFacetGroups = (checkboxFacetGroups, changedFacetGroup, facetsOfChangedGroup) => {
-  const checkboxGroupsToRender = checkboxFacetGroups
+const initFacetGroups = (facetGroups, changedFacetGroup, facetsOfChangedGroup) => {
+  const facetGroupsToRender = facetGroups
     .map(facetGroup => ({ ...facetGroup, refreshGroup: true }))
 
-  checkboxGroupsToRender
+  facetGroupsToRender
     .filter(facetGroup => facetGroup.queryParamName === changedFacetGroup)
     .forEach(facetGroup => {
       facetGroup.facets = facetsOfChangedGroup
       facetGroup.refreshGroup = false
     })
 
-  return checkboxGroupsToRender
+  return facetGroupsToRender
 }
-
-const initMultiSelectDropdownFacetGroups =
-  (multiSelectDropdownFacetGroups, changedFacetGroup, facetsOfChangedGroup) => {
-    const dropdownGroupsToRender = multiSelectDropdownFacetGroups
-      .map(facetGroup => ({ ...facetGroup, refreshGroup: true }))
-
-    dropdownGroupsToRender
-      .filter(facetGroup => facetGroup.queryParamName === changedFacetGroup)
-      .forEach(facetGroup => {
-        facetGroup.facets = facetsOfChangedGroup
-        facetGroup.refreshGroup = false
-      })
-
-    return dropdownGroupsToRender
-  }
 
 const getQueryParamsByFacetGroupsAsString = (queryParams, facetGroupName) => {
   return queryParams[facetGroupName] === undefined ? [] : queryParams[facetGroupName]
@@ -45,7 +30,7 @@ const FilterSidebar = ({
   changedFacetGroup, facetsOfChangedGroup
 }) => (
   [
-    initCheckboxFacetGroups(checkboxFacetGroups, changedFacetGroup, facetsOfChangedGroup)
+    initFacetGroups(checkboxFacetGroups, changedFacetGroup, facetsOfChangedGroup)
       .map((facetGroup) => (
         facetGroup.refreshGroup === true ?
           <CheckboxFacetGroupWithFetchLoader
@@ -66,7 +51,7 @@ const FilterSidebar = ({
             facets={facetGroup.facets}
             onChange={onChange}/>
       )),
-    initMultiSelectDropdownFacetGroups(multiSelectDropdownFacetGroups, changedFacetGroup, facetsOfChangedGroup)
+    initFacetGroups(multiSelectDropdownFacetGroups, changedFacetGroup, facetsOfChangedGroup)
       .map((facetGroup) => (
         facetGroup.refreshGroup === true ?
           <MultiselectDropdownFacetGroupWithFetchLoader
