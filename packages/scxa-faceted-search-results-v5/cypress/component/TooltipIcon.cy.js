@@ -1,6 +1,6 @@
-import React from "react"
+import React from 'react'
 
-import TooltipIcon from "../../src/facetgroups/TooltipIcon"
+import TooltipIcon from '../../src/facetgroups/TooltipIcon'
 
 import randomWords from 'random-words'
 

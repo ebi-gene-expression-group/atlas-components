@@ -1,4 +1,4 @@
-import React from "react"
+import React from 'react'
 
 import MultiselectDropdownFacetGroup from '../../src/facetgroups/MultiselectDropdownFacetGroup'
 
@@ -7,9 +7,9 @@ import {
   getPropsWithoutTooltip,
   getPropsForMultiSelectDropdownGroupWithTooltip,
   getRandomInt
-} from "./TestUtils"
+} from './TestUtils'
 
-import vindicators from "../fixtures/vindicatorsResponse.json"
+import vindicators from '../fixtures/vindicatorsResponse.json'
 
 describe(`MultiselectDropdownFacetGroup`, () => {
   it(`displays the expected tooltip if it exists`, () => {

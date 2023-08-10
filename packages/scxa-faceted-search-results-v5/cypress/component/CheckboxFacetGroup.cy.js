@@ -1,9 +1,9 @@
-import React from "react"
+import React from 'react'
 
 import CheckboxFacetGroup from '../../src/facetgroups/CheckboxFacetGroup'
 
 import { getFacets, getPropsForCheckBoxGroupWithTooltip, getPropsWithoutTooltip, getRandomInt } from './TestUtils'
-import vindicators from "../fixtures/vindicatorsResponse.json"
+import vindicators from '../fixtures/vindicatorsResponse.json'
 
 const props = {
   name: `Vindicators`,

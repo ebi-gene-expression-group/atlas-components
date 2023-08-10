@@ -1,10 +1,10 @@
-import React from "react"
+import React from 'react'
 
-import FilterSidebar from "../../src/FilterSidebar"
+import FilterSidebar from '../../src/FilterSidebar'
 
-import CheckboxFacetGroupsDefaultProps from "../../src/facetgroups/CheckboxFacetGroupsDefaultProps"
+import CheckboxFacetGroupsDefaultProps from '../../src/facetgroups/CheckboxFacetGroupsDefaultProps'
 import MultiSelectDropdownFacetGroupsDefaultProps
-  from "../../src/facetgroups/MultiSelectDropdownFacetGroupsDefaultProps"
+  from '../../src/facetgroups/MultiSelectDropdownFacetGroupsDefaultProps'
 import { getRandomOrganismParts, getRandomCellTypes, getRandomSpecies } from './TestUtils'
 
 const propsForFilterSideBar = {
