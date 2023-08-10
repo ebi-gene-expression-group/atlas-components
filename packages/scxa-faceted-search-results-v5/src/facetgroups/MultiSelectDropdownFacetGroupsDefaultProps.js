@@ -5,18 +5,16 @@ const MultiSelectDropdownFacetGroupsDefaultProps = [
     endpoint: `json/gene-search/cell-types`,
     queryParamName: `cellTypes`,
     payloadConversion: (payload) => {
-      const facets = []
-      payload.map(dropdownValue => facets.push(
-        {
-          group: `cellTypes`,
-          value: dropdownValue,
-          label: dropdownValue,
-          disabled: false
-        }
-      )
-      )
-
-      return { facets: facets }
+      return {
+        facets: payload.map(dropdownValue => (
+          {
+            group: `cellTypes`,
+            value: dropdownValue,
+            label: dropdownValue,
+            disabled: false
+          }
+        ))
+      }
     }
   },
   {
@@ -25,18 +23,16 @@ const MultiSelectDropdownFacetGroupsDefaultProps = [
     endpoint: `json/gene-search/organism-parts`,
     queryParamName: `organism-parts`,
     payloadConversion: (payload) => {
-      const facets = []
-      payload.map(dropdownValue => facets.push(
-        {
-          group: `organism-parts`,
-          value: dropdownValue,
-          label: dropdownValue,
-          disabled: false
-        }
-      )
-      )
-
-      return { facets: facets }
+      return {
+        facets: payload.map(dropdownValue => (
+          {
+            group: `organism-parts`,
+            value: dropdownValue,
+            label: dropdownValue,
+            disabled: false
+          }
+        ))
+      }
     }
   }
 ]
