@@ -41,7 +41,7 @@ You can execute the existing tests in the following way:
 ## Try out the component with a given example
 Just run [webpack-dev-server](https://github.com/webpack/webpack-dev-server):
 ```
-npx webpack-dev-server --mode=development
+npx webpack serve --mode=development
 ```
 
 ## How to run test with code coverage in the console
