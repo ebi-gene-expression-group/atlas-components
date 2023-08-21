@@ -42,11 +42,26 @@ describe(`FacetedSearchContainer`, () => {
   )
 
   function mockRestCallsWithoutQueryParameters() {
+    cy.intercept(`GET`, `/gxa/sc/json/gene-search**`, resultList)
+      .as(`randomListResponse`)
+    cy.intercept(`GET`, `/gxa/sc/json/gene-search/marker**`, markerGenePayloadTrue)
+      .as(`randomMarkerGenesResponse`)
+    cy.intercept(`GET`, `/gxa/sc/json/gene-search/species**`, getRandomSpecies())
+      .as(`randomSpeciesResponse`)
+    cy.intercept(`GET`, `/gxa/sc/json/gene-search/organism**`, getRandomOrganismParts())
+      .as(`randomOrganismPartsResponse`)
+    cy.intercept(`GET`, `/gxa/sc/json/gene-search/cell**`, getRandomCellTypes())
+      .as(`randomCellTypesResponse`)
     cy.intercept(`GET`, `/gxa/sc/json/gene-search/marker-genes`, markerGenePayloadTrue)
+      .as(`initialMarkerGeneData`)
     cy.intercept(`GET`, `/gxa/sc/json/gene-search/species`, speciesPayload)
+      .as(`initialSpeciesData`)
     cy.intercept(`GET`, `/gxa/sc/json/gene-search/organism-parts`, organismPartsPayload)
+      .as(`initialOrganismPartsData`)
     cy.intercept(`GET`, `/gxa/sc/json/gene-search/cell-types`, cellTypePayload)
+      .as(`initialCellTypesData`)
     cy.intercept(`GET`, `/gxa/sc/json/gene-search`, resultList)
+      .as(`initialListResponse`)
   }
 
   function mockRestCallsWithQueryParameters() {
@@ -59,7 +74,8 @@ describe(`FacetedSearchContainer`, () => {
         }
       },
       resultListBySelection
-    )
+    ).as(`markerGeneOnlyListResponse`)
+
     cy.intercept(
       {
         method: `GET`,
@@ -70,8 +86,7 @@ describe(`FacetedSearchContainer`, () => {
         }
       },
       resultListByMarkerGenesAndOneCellTypes
-    )
-
+    ).as(`markerGeneAndOneCellTypeListResponse`)
     cy.intercept(
       {
         method: `GET`,
@@ -82,7 +97,7 @@ describe(`FacetedSearchContainer`, () => {
         }
       },
       resultListByMarkerGenesAndTwoCellTypes
-    )
+    ).as(`markerGeneAndTwoCellTypeListResponse`)
 
     cy.intercept(
       {
@@ -94,7 +109,7 @@ describe(`FacetedSearchContainer`, () => {
         }
       },
       resultListByMarkerGenesAndOneSpecies
-    )
+    ).as(`markerGeneAndOneSpeciesListResponse`)
     cy.intercept(
       {
         method: `GET`,
@@ -105,7 +120,7 @@ describe(`FacetedSearchContainer`, () => {
         }
       },
       resultListByMarkerGenesAndTwoSpecies
-    )
+    ).as(`markerGeneAndTwoSpeciesListResponse`)
 
     cy.intercept(
       {
@@ -199,15 +214,17 @@ describe(`FacetedSearchContainer`, () => {
   it(`clicking to select/unselect facets in checkbox groups works`, () => {
     cy.mount(<FacetedSearchContainer {...props} />)
 
+    cy.wait(`@initialListResponse`)
     // click on is marker gene
     cy.get(`input[type="checkbox"]`).first().click()
+    cy.wait(`@markerGeneOnlyListResponse`)
     cy.get(`div.small-12.medium-8.large-9.columns>div>div>div>p`).its(`length`)
       .then((selectedTitlesByMarkerGeneLength) => {
         expect(selectedTitlesByMarkerGeneLength).to.be.lessThan(resultList.results.length)
 
         // click on the 1st species checkbox
         cy.get(`:nth-child(2) > :nth-child(2) > input[type="checkbox"]`).click()
-
+        cy.wait(`@markerGeneAndOneSpeciesListResponse`)
         cy.get(`div.small-12.medium-8.large-9.columns>div>div>div>p`).its(`length`)
           .then((selectedTitlesByMarkerGeneAndOneSpecies) => {
             expect(selectedTitlesByMarkerGeneAndOneSpecies).to.be.lessThan(resultList.results.length)
@@ -215,7 +232,7 @@ describe(`FacetedSearchContainer`, () => {
 
             // click on the 2nd species checkbox
             cy.get(`:nth-child(2) > :nth-child(3) > input[type="checkbox"]`).click()
-
+            cy.wait(`@markerGeneAndTwoSpeciesListResponse`)
             cy.get(`div.small-12.medium-8.large-9.columns>div>div>div>p`).its(`length`)
               .then((selectedTitlesByMarkerGeneAndTwoSpecies) => {
                 expect(selectedTitlesByMarkerGeneAndTwoSpecies).to.be.lessThan(resultList.results.length)
@@ -230,6 +247,7 @@ describe(`FacetedSearchContainer`, () => {
     cy.get(`:nth-child(2) > :nth-child(2) > input[type="checkbox"]`).click()
     cy.get(`input[type="checkbox"]`).first().click()
 
+    cy.wait(`@initialListResponse`)
     cy.get(`div.small-12.medium-8.large-9.columns>div>div>div>p`)
       .then((selectedTitles2) => {
         expect(selectedTitles2.length).to.equal(resultList.results.length)
@@ -239,8 +257,11 @@ describe(`FacetedSearchContainer`, () => {
   it(`clicking to select/unselect facets in multi select dropdown groups works`, () => {
     cy.mount(<FacetedSearchContainer {...props} />)
 
+    cy.wait(`@initialListResponse`)
+
     // click on is marker gene
     cy.get(`input[type="checkbox"]`).first().click()
+    cy.wait(`@markerGeneOnlyListResponse`)
     cy.get(`div.small-12.medium-8.large-9.columns>div>div>div>p`).its(`length`)
       .then((selectedTitlesByMarkerGeneLength) => {
         expect(selectedTitlesByMarkerGeneLength).to.be.lessThan(resultList.results.length)
@@ -260,7 +281,7 @@ describe(`FacetedSearchContainer`, () => {
 
         // click on the 2nd cell type
         cy.get(`[id^=react-select-][id$=-option-1]`).click()
-
+        cy.wait(`@markerGeneAndTwoCellTypeListResponse`)
         cy.get(`div.small-12.medium-8.large-9.columns>div>div>div>p`).its(`length`)
           .as(`selectedTitlesByMarkerGeneAndTwoCellTypes`)
           .then((selectedTitlesByMarkerGeneAndTwoCellTypes) => {
@@ -281,6 +302,7 @@ describe(`FacetedSearchContainer`, () => {
     cy.get(`input[type="checkbox"]`).first().click()
 
     // assert if we got back the initial state
+    cy.wait(`@initialListResponse`)
     cy.get(`div.small-12.medium-8.large-9.columns>div>div>div>p`)
       .then((selectedTitles2) => {
         expect(selectedTitles2.length).to.equal(resultList.results.length)
@@ -289,21 +311,29 @@ describe(`FacetedSearchContainer`, () => {
 
   it(`clicking on a second facet works`, () => {
     cy.mount(<FacetedSearchContainer {...props} />)
+
+    cy.wait(`@initialListResponse`)
+
     cy.get(`input[type="checkbox"]`).first().click({ force: true })
+
+    cy.wait(`@markerGeneOnlyListResponse`)
+
     cy.get(`div.small-12.medium-8.large-9.columns>div>div>div>p`)
       .then((selectedTitles) => {
-        cy.get(`input[type="checkbox"]`).eq(1).click().then(() => {
-          cy.get(`div.small-12.medium-8.large-9.columns>div>div>div>p`)
-            .then((lessSelectedTitles) => {
-              expect(lessSelectedTitles.length)
-                .to.be.lessThan(selectedTitles.length)
-            })
-        })
+        cy.get(`input[type="checkbox"]`).eq(1).click()
+        cy.wait(`@markerGeneAndOneSpeciesListResponse`)
+        cy.get(`div.small-12.medium-8.large-9.columns>div>div>div>p`)
+          .then((lessSelectedTitles) => {
+            expect(lessSelectedTitles.length)
+              .to.be.lessThan(selectedTitles.length)
+          })
       })
   })
 
   it(`doesn’t display duplicated facets`, () => {
     cy.mount(<FacetedSearchContainer {...props}/>)
+
+    cy.wait(`@initialListResponse`)
 
     const checkboxLabels = []
     let uniqueness = true
