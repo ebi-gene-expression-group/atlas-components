@@ -7,9 +7,14 @@ import MultiSelectDropdownFacetGroupsDefaultProps
   from '../../src/facetgroups/MultiSelectDropdownFacetGroupsDefaultProps'
 import { getRandomOrganismParts, getRandomCellTypes, getRandomSpecies } from './TestUtils'
 
+const mockCallbackWrapper = {
+  onChange: function (facetGroup, checkedFacets) {
+  }
+}
+
 const propsForFilterSideBar = {
   host: `/gxa/sc/`,
-  onchange: {},
+  onChange: mockCallbackWrapper.onChange,
   queryParams: {}
 }
 
