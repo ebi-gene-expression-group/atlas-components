@@ -58,9 +58,7 @@ describe(`CheckboxFacetGroup`, () => {
     cy.get(`input[type="checkbox"]`).should((checkboxes) => {
       expect(checkboxes.length).to.equal(props.facets.length)
     })
-    cy.get(`h4`).invoke(`text`).then((headerText) => {
-      expect(headerText).to.equal(props.name)
-    })
+    cy.get(`h4`).should(`contains.text`, props.name)
     cy.get(`input`).should(`not.have.attr`, `disabled`)
     cy.get(`label`).should(`not.have.attr`, `color`)
   })

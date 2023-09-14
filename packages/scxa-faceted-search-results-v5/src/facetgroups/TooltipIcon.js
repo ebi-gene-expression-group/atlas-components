@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
+import ReactTooltip from 'react-tooltip'
 
 const splitText = str => {
   const maxLineLength = 40
@@ -17,14 +18,17 @@ const splitText = str => {
   ).join(`<br>`).trim()
 }
 
-const TooltipIcon = ({tooltipText}) =>
-  <sup>
-    <span
-      data-tip={`<span>${splitText(tooltipText)}</span>`}
-      data-html={true}
-      className={`icon icon-generic`} data-icon={`i`}
-      style={{color: `lightgrey`, fontSize: `smaller`}}/>
-  </sup>
+const TooltipIcon = ({ tooltipText }) =>
+  <Fragment>
+    <sup>
+      <span
+        data-tip={`<span>${splitText(tooltipText)}</span>`}
+        data-html={true}
+        className={`icon icon-generic`} data-icon={`i`}
+        style={{ color: `lightgrey`, fontSize: `smaller` }}/>
+    </sup>
+    <ReactTooltip effect={`solid`}/>
+  </Fragment>
 
 TooltipIcon.propTypes = {
   tooltipText: PropTypes.string.isRequired
