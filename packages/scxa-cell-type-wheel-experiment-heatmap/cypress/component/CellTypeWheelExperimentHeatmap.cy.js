@@ -5,7 +5,7 @@ import speciesResponse from '../fixtures/speciesResponse.json'
 import cellTypeWheelData from '../fixtures/CellTypeDataForWheelResponse.json'
 import heatMapTCellResponse from '../fixtures/heatMapRegulatoryTCellResponse.json'
 
-function firstWordMatcherOf (str) {
+function firstWordMatcherOf(str) {
   return new RegExp(`.${str.split(` `)[0]}*`)
 }
 
@@ -66,8 +66,23 @@ describe(`CellTypeWheelExperimentHeatmap`, () => {
       {...props}
     />)
 
-    const ringElement = cy.contains(`regulatory T cell`)
-    ringElement.click({ force: true })
+    cy.contains(`regulatory T cell`).click({ force: true })
+    heatMapTCellResponse.forEach(
+      cell => cy.contains(cell.geneName)
+    )
+  })
+
+  it(`mounts with data and displays a heatmap when a cell type label containing a forward slash is clicked`, () => {
+    cy.intercept(`GET`, `/gxa/sc/json/suggestions/species`,
+      speciesResponse)
+    cy.intercept(`GET`, `/gxa/sc/json/cell-type-marker-genes/mucosal%20invariant%20%2F%20T%20cell?experiment-accessions=E-MTAB-7704`,
+      heatMapTCellResponse)
+    cy.viewport(800, 1000)
+    cy.mount(<CellTypeWheelExperimentHeatmap
+      {...props}
+    />)
+
+    cy.contains(`mucosal invariant / T cell`).click({ force: true })
     heatMapTCellResponse.forEach(
       cell => cy.contains(cell.geneName)
     )
