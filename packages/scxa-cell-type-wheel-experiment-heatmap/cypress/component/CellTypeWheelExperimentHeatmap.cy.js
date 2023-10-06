@@ -4,6 +4,7 @@ import CellTypeWheelExperimentHeatmap from '../../src/CellTypeWheelExperimentHea
 import speciesResponse from '../fixtures/speciesResponse.json'
 import cellTypeWheelData from '../fixtures/CellTypeDataForWheelResponse.json'
 import heatMapTCellResponse from '../fixtures/heatMapRegulatoryTCellResponse.json'
+import URI from 'urijs'
 
 function firstWordMatcherOf(str) {
   return new RegExp(`.${str.split(` `)[0]}*`)
@@ -43,9 +44,10 @@ describe(`CellTypeWheelExperimentHeatmap`, () => {
   })
 
   it(`mounts with data and check if the cell type wheel is displayed`, () => {
+    const cellType = `regulatory T cell`
     cy.intercept(`GET`, `/gxa/sc/json/suggestions/species`,
       speciesResponse)
-    cy.intercept(`GET`, `/gxa/sc/json/cell-type-marker-genes/regulatory%20T%20cell?experiment-accessions=E-ENAD-15`,
+    cy.intercept(`GET`, `/gxa/sc/json/cell-type-marker-genes/${URI(encodeURIComponent(cellType))}?experiment-accessions=E-ENAD-15`,
       heatMapTCellResponse)
     cy.viewport(800, 1000)
     cy.mount(<CellTypeWheelExperimentHeatmap
@@ -57,32 +59,34 @@ describe(`CellTypeWheelExperimentHeatmap`, () => {
   })
 
   it(`mounts with data and displays a heatmap when a cell type label is clicked`, () => {
+    const cellType = `regulatory T cell`
     cy.intercept(`GET`, `/gxa/sc/json/suggestions/species`,
       speciesResponse)
-    cy.intercept(`GET`, `/gxa/sc/json/cell-type-marker-genes/regulatory%20T%20cell?experiment-accessions=E-ENAD-15`,
+    cy.intercept(`GET`, `/gxa/sc/json/cell-type-marker-genes/${URI(encodeURIComponent(cellType))}?experiment-accessions=E-ENAD-15`,
       heatMapTCellResponse)
     cy.viewport(800, 1000)
     cy.mount(<CellTypeWheelExperimentHeatmap
       {...props}
     />)
 
-    cy.contains(`regulatory T cell`).click({ force: true })
+    cy.contains(cellType).click({ force: true })
     heatMapTCellResponse.forEach(
       cell => cy.contains(cell.geneName)
     )
   })
 
   it(`mounts with data and displays a heatmap when a cell type label containing a forward slash is clicked`, () => {
+    const cellTypeWithSlash = `mucosal invariant / T cell`
     cy.intercept(`GET`, `/gxa/sc/json/suggestions/species`,
       speciesResponse)
-    cy.intercept(`GET`, `/gxa/sc/json/cell-type-marker-genes/mucosal%20invariant%20%2F%20T%20cell?experiment-accessions=E-MTAB-7704`,
+    cy.intercept(`GET`, `/gxa/sc/json/cell-type-marker-genes/${URI(encodeURIComponent(cellTypeWithSlash))}?experiment-accessions=E-MTAB-7704`,
       heatMapTCellResponse)
     cy.viewport(800, 1000)
     cy.mount(<CellTypeWheelExperimentHeatmap
       {...props}
     />)
 
-    cy.contains(`mucosal invariant / T cell`).click({ force: true })
+    cy.contains(cellTypeWithSlash).click({ force: true })
     heatMapTCellResponse.forEach(
       cell => cy.contains(cell.geneName)
     )
