@@ -26,9 +26,9 @@
   },
   "dependencies": {
     "@ebi-gene-expression-group/atlas-react-fetch-loader": "*",
-    "@ebi-gene-expression-group/scxa-cell-type-wheel": "^1.1.3",
+    "@ebi-gene-expression-group/scxa-cell-type-wheel": "*",
     "@ebi-gene-expression-group/scxa-gene-search-form": "*",
-    "@ebi-gene-expression-group/scxa-marker-gene-heatmap": "^2.5.2",
+    "@ebi-gene-expression-group/scxa-marker-gene-heatmap": "*",
     "highcharts": "^10.1.0",
     "highcharts-react-official": "^3.1.0",
     "lodash": "^4.17.21",
@@ -44,12 +44,12 @@
     "@babel/preset-react": "^7.17.12",
     "@cypress/code-coverage": "^3.10.0",
     "@ebi-gene-expression-group/eslint-config": "^3.5.1",
-    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/cypress": "^10.0.1",
     "@testing-library/react": "^12.1.5",
     "babel-loader": "^8.2.5",
     "babel-plugin-istanbul": "^6.1.1",
     "babel-plugin-transform-class-properties": "^6.24.1",
-    "cypress": "^10.10.0",
+    "cypress": "^13.2.0",
     "eslint": "^8.17.0",
     "file-loader": "^6.2.0",
     "jest": "^28.1.1",
@@ -57,7 +57,7 @@
     "react-test-renderer": "^17.0.2",
     "regenerator-runtime": "^0.13.9",
     "webpack": "^5.73.0",
-    "webpack-cli": "^4.9.2",
-    "webpack-dev-server": "^4.9.2"
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
   }
 }

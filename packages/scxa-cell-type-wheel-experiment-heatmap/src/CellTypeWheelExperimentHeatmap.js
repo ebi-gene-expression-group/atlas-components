@@ -13,7 +13,7 @@ const CellTypeWheelFetchLoader = withFetchLoader(CellTypeWheel)
 const MarkerGeneHeatmapFetchLoader = withFetchLoader(MarkerGeneHeatmap)
 const GeneSearchFormFetchLoader = withFetchLoader(GeneSearchForm)
 
-function CellTypeWheelExperimentHeatmap (props) {
+function CellTypeWheelExperimentHeatmap(props) {
   const [heatmapSelection, setHeatmapSelection] = useState({
     cellType: ``,
     species: ``,
@@ -70,14 +70,15 @@ function CellTypeWheelExperimentHeatmap (props) {
           {heatmapSelection.cellType ?
             <MarkerGeneHeatmapFetchLoader
               host={props.host}
-              resource={URI(heatmapSelection.cellType, props.heatmapResource).toString()}
+              resource={URI(encodeURIComponent(heatmapSelection.cellType), props.heatmapResource).toString()}
               fulfilledPayloadProvider={heatmapFulfilledPayloadProvider}
               query={{ [`experiment-accessions`]: heatmapSelection.experimentAccessions }}
               cellType={heatmapSelection.cellType}
               heatmapRowHeight={40}
               species={heatmapSelection.species}
               heatmapType={`multiexperimentcelltypes`}
-            /> : props.searchTerm.trim() ?
+            /> :
+            props.searchTerm.trim() ?
               <div className={`medium-text-center`} aria-label={`No cell type selected`}>
                 <h4>
                   Please click on a cell type to see a detailed view of the expression profile of top-scoring genes across experiments.

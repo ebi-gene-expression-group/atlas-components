@@ -2071,7 +2071,7 @@
     ]
   },
   {
-    "name": "mucosal invariant T cell",
+    "name": "mucosal invariant / T cell",
     "id": "Mus musculus#thymus#mucosal invariant T cell",
     "parent": "Mus musculus#thymus",
     "value": 1,
