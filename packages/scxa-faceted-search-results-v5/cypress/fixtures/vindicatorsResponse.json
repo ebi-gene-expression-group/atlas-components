@@ -1,0 +1,68 @@
+[
+  {
+    "value": "supernova",
+    "label": "Supernova",
+    "group": "Vindicators",
+    "disabled": false
+  },
+  {
+    "value": "noob-noob",
+    "label": "Noob-Noob",
+    "group":  "Vindicators",
+    "disabled": false
+  },
+  {
+    "value": "vance_maximus",
+    "label": "Vance Maximus",
+    "group":  "Vindicators",
+    "disabled": false
+  },
+  {
+    "value": "alan_rails",
+    "label": "Alan Rails",
+    "group":  "Vindicators",
+    "disabled": false
+  },
+  {
+    "value": "crocubot",
+    "label": "Crocubot",
+    "group":  "Vindicators",
+    "disabled": false
+  },
+  {
+    "value": "million_ants",
+    "label": "Million Ants",
+    "group":  "Vindicators",
+    "disabled": false
+  },
+  {
+    "value": "morty_smith",
+    "label": "Morty Smith",
+    "group":  "Vindicators",
+    "disabled": false
+  },
+  {
+    "value": "rick_sanchez",
+    "label": "Rick Sanchez",
+    "group":  "Vindicators",
+    "disabled": false
+  },
+  {
+    "value": "lady_katana",
+    "label": "Lady Katana",
+    "group":  "Vindicators",
+    "disabled": false
+  },
+  {
+    "value": "calypso",
+    "label": "Calypso",
+    "group":  "Vindicators",
+    "disabled": false
+  },
+  {
+    "value": "diablo_verde",
+    "label": "Diablo Verde",
+    "group":  "Vindicators",
+    "disabled": false
+  }
+]

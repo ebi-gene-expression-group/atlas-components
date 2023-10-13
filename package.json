@@ -2,6 +2,7 @@
   "name": "root",
   "private": true,
   "devDependencies": {
-    "lerna": "^5.1.2"
+    "lerna": "^5.1.2",
+    "webpack-cli": "^5.1.4"
   }
 }
