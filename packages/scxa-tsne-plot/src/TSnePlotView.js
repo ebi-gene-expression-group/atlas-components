@@ -57,7 +57,7 @@ class TSnePlotView extends React.Component {
 
   _fetchAndSetStateCellClusters(
     {atlasUrl, experimentAccession, accessKey, selectedColourBy, selectedColourByCategory, selectedPlotType, selectedPlotOptionLabel}) {
-    const resource = selectedColourByCategory === `clusters` ?
+    const resource = !isNaN(selectedColourBy) ?
       URI(`json/cell-plots/${experimentAccession}/clusters/k/${selectedColourBy}`)
         .query({
           plotMethod: selectedPlotType,
