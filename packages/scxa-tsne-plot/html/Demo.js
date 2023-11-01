@@ -205,7 +205,7 @@ class Demo extends React.Component {
               (plotOption) => {
                 this.setState({
                   selectedPlotType: plotOption.value,
-                  selectedPlotOption: defaultPlotMethodAndParameterisation[plotOption.value],
+                  selectedPlotOption: Object.values(defaultPlotMethodAndParameterisation[plotOption.value])[0],
                   selectedPlotOptionLabel: Object.keys(defaultPlotMethodAndParameterisation[plotOption.value])[0]
                       + ": " + Object.values(defaultPlotMethodAndParameterisation[plotOption.value])[0],
                 })}
