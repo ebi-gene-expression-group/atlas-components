@@ -826,9 +826,10 @@
     ]
   },
   {
-    "filename": "testis.testis.svg",
-    "species": "testis",
+    "filename": "reproduction.testis.svg",
+    "species": "reproduction",
     "view": "testis",
+    "parent": "reproduction",
     "ids": [
       "Fbbt_00057009",
       "Fbbt_00057010",
@@ -910,8 +911,8 @@
     ]
   },
   {
-    "filename": "ovariole.ovariole.svg",
-    "species": "ovariole",
+    "filename": "ovary.ovariole.svg",
+    "species": "ovary",
     "view": "ovariole",
     "parent":  "ovary",
     "ids": [
@@ -949,8 +950,8 @@
     ]
   },
   {
-    "filename": "ovariole.germarium.svg",
-    "species": "ovariole",
+    "filename": "ovary.germarium.svg",
+    "species": "ovary",
     "view": "germarium",
     "parent":  "ovariole",
     "ids": [
@@ -991,9 +992,9 @@
     ]
   },
   {
-    "filename": "male.male.svg",
-    "species": "male",
-    "view": "male",
+    "filename": "reproduction.reproduction.svg",
+    "species": "reproduction",
+    "view": "reproduction",
     "ids": [
       "Fbbt_0004928",
       "Fbbt_00004968",
