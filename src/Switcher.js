@@ -33,7 +33,7 @@ const IconImg = styled.img`
 const Switcher = ({species, parentView, selectedView, onChangeView}) => {
   return <IconWrapperDiv>
     {
-      [`kidney`, `pancreas`, `lung`, `liver`, `placenta`, `gut`].includes(species) ?
+      [`kidney`, `pancreas`, `lung`, `liver`, `placenta`, `gut`, `ovary`, `reproduction`].includes(species) ?
         parentView && <IconImg
           key={parentView}
           onClick={() => onChangeView(species, parentView)}
