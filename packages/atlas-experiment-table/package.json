@@ -5,7 +5,7 @@
   "main": "lib/index.js",
   "scripts": {
     "prepare": "rm -rf lib && babel src -d lib --copy-files",
-    "test": "jest",
+    "test": "jest -u",
     "posttest": "jest --coverage --coverageReporters=text-lcov | coveralls"
   },
   "jest": {
