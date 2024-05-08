@@ -65,28 +65,29 @@ describe(`TableCell`, () => {
 
   test.each(
       [`E-ANND-12`, `testExperimentAccession`, `E-MTAB-12`]
-  )(`is an image and check if it is an Anndata experiment or else`, (arrayDataKey) => {
-      const image = {
-            anndata: {
-              // tbc
+  )(`contains an icon and check if it is an Anndata experiment or no icons for others`, (arrayDataKey) => {
+      const icon = {
+            "E-ANND": {
               src: `anndata image source`,
               alt: `Anndata experiment`,
               title: `Anndata experiment`
-            },
-            nonAnndata: {
-              src: `nonAnndata image source`,
-              alt: `Non-anndata experiment`,
-              title: `Non-anndata experiment`
             }
       }
-      props.dataRow.string = arrayDataKey
+      props.dataRow.experimentAccession = arrayDataKey
     
-      const wrapper = shallow(<TableCell {...props} image={image} dataKey={`string`} />)
+      const wrapper = shallow(<TableCell {...props} icon={icon} dataKey={`experimentAccession`} />)
 0
-      expect(wrapper.find(Table.Cell)).toContainExactlyOneMatchingElement(`img`)
-      arrayDataKey.substring(0, 6) === `E-ANND` ? 
-          expect(wrapper.find(Table.Cell).find(`img`)).toHaveProp({src: `anndata image source`, alt: `Anndata experiment`}) :
-          expect(wrapper.find(Table.Cell).find(`img`)).toHaveProp({src: `nonAnndata image source`, alt: `Non-anndata experiment`})
+      if (arrayDataKey.startsWith(`E-ANND`)) {
+        // If it's an Anndata experiment, there should be an icon
+        expect(wrapper.find('.icon').length).toBe(1);
+        expect(wrapper.find('img').prop('src')).toBe(`anndata image source`);
+        expect(wrapper.find('img').prop('alt')).toBe(`Anndata experiment`);
+        expect(wrapper.find('img').prop('title')).toBe(`Anndata experiment`);
+      } else {
+        // For other types, there should be no icon
+        expect(wrapper.find('.icon').length).toBe(0);
+        expect(wrapper.find('img').length).toBe(0);
+    }
     })
 
   test(`defaults to a fallback icon if a suitable image can’t be found`, () => {
