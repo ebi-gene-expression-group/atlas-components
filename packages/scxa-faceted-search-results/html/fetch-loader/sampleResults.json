@@ -1,0 +1,1954 @@
+[
+  {
+    "element": {
+      "longDescription": "The failure of multiple sclerosis lesions to resolve in the months after they form leads to smouldering demyelination and axon degeneration (chronic active/slowly expanding lesions). To define mechanisms underlying this disabling, progressive neurodegenerative state, and to foster development of new therapeutics, we used MRI-informed single-nucleus RNA sequencing to profile the edge of demyelinated white matter lesions at various stages of inflammation and compared with healthy control white matter. Overall design: Human single-nucleus RNA profiles collected from 5 progressive multiple sclerosis autopsy brains (sampling of the lesion core,the edge and the periplaque of chronic active vs inactive MS lesions) and 3 healthy controls autopsy brains via 10X Genomics protocol.",
+      "experimentDescription": "A lymphocyte-microglia-astrocyte axis in chronic active multiple sclerosis",
+      "numberOfAssays": 194181,
+      "type": "Single-cell RNA-Seq mRNA baseline",
+      "factors": [
+        "disease",
+        "sampling site",
+        "clinical information"
+      ],
+      "lastUpdated": "31-10-2023",
+      "dataProviderDescription": [],
+      "dataProviderURL": [],
+      "experimentAccession": "E-GEOD-180759",
+      "species": "Homo sapiens",
+      "speciesReferenceName": "homo sapiens",
+      "pubMedIds": [
+        "34497421"
+      ],
+      "pageDescription": "A lymphocyte-microglia-astrocyte axis in chronic active multiple sclerosis",
+      "alternativeViewDescriptions": [],
+      "dois": [
+        "10.1038/s41586-021-03892-7"
+      ],
+      "disclaimer": "",
+      "publications": [
+        {
+          "pubmedId": "34497421",
+          "doi": "10.1038/s41586-021-03892-7",
+          "title": "A lymphocyte-microglia-astrocyte axis in chronic active multiple sclerosis.",
+          "publicationYear": "2021",
+          "authors": "Absinta M, Maric D, Gharagozloo M, Garton T, Smith MD, Jin J, Fitzgerald KC, Song A, Liu P, Lin JP, Wu T, Johnson KR, McGavern DB, Schafer DP, Calabresi PA, Reich DS."
+        }
+      ],
+      "alternativeViews": [],
+      "url": "http://wwwdev.ebi.ac.uk/gxa/sc/experiments/E-GEOD-180759?geneId\u003dENSG00000108381",
+      "markerGenes": [
+        {
+          "k": 82,
+          "clusterIds": [
+            28,
+            29
+          ],
+          "url": "http://wwwdev.ebi.ac.uk/gxa/sc/experiments/E-GEOD-180759/results?geneId\u003dENSG00000108381\u0026k\u003d82\u0026clusterId\u003d%5B28,%2029%5D"
+        },
+        {
+          "k": 100,
+          "clusterIds": [
+            27,
+            30
+          ],
+          "url": "http://wwwdev.ebi.ac.uk/gxa/sc/experiments/E-GEOD-180759/results?geneId\u003dENSG00000108381\u0026k\u003d100\u0026clusterId\u003d%5B27,%2030%5D"
+        },
+        {
+          "k": 21,
+          "clusterIds": [
+            16
+          ],
+          "url": "http://wwwdev.ebi.ac.uk/gxa/sc/experiments/E-GEOD-180759/results?geneId\u003dENSG00000108381\u0026k\u003d21\u0026clusterId\u003d%5B16%5D"
+        },
+        {
+          "k": 38,
+          "clusterIds": [
+            22
+          ],
+          "url": "http://wwwdev.ebi.ac.uk/gxa/sc/experiments/E-GEOD-180759/results?geneId\u003dENSG00000108381\u0026k\u003d38\u0026clusterId\u003d%5B22%5D"
+        },
+        {
+          "k": 56,
+          "clusterIds": [
+            24,
+            26
+          ],
+          "url": "http://wwwdev.ebi.ac.uk/gxa/sc/experiments/E-GEOD-180759/results?geneId\u003dENSG00000108381\u0026k\u003d56\u0026clusterId\u003d%5B24,%2026%5D"
+        },
+        {
+          "k": 27,
+          "clusterIds": [
+            19
+          ],
+          "url": "http://wwwdev.ebi.ac.uk/gxa/sc/experiments/E-GEOD-180759/results?geneId\u003dENSG00000108381\u0026k\u003d27\u0026clusterId\u003d%5B19%5D"
+        },
+        {
+          "k": 75,
+          "clusterIds": [
+            23,
+            28
+          ],
+          "url": "http://wwwdev.ebi.ac.uk/gxa/sc/experiments/E-GEOD-180759/results?geneId\u003dENSG00000108381\u0026k\u003d75\u0026clusterId\u003d%5B23,%2028%5D"
+        },
+        {
+          "k": 13,
+          "clusterIds": [
+            12
+          ],
+          "url": "http://wwwdev.ebi.ac.uk/gxa/sc/experiments/E-GEOD-180759/results?geneId\u003dENSG00000108381\u0026k\u003d13\u0026clusterId\u003d%5B12%5D"
+        },
+        {
+          "k": 31,
+          "clusterIds": [
+            21
+          ],
+          "url": "http://wwwdev.ebi.ac.uk/gxa/sc/experiments/E-GEOD-180759/results?geneId\u003dENSG00000108381\u0026k\u003d31\u0026clusterId\u003d%5B21%5D"
+        }
+      ]
+    },
+    "facets": [
+      {
+        "value": "brain white matter",
+        "label": "Brain white matter",
+        "group": "Organism part",
+        "description": "The tissue from which the sample is originally derived, e.g. lung"
+      },
+      {
+        "value": "homo sapiens",
+        "label": "Homo sapiens",
+        "group": "Species"
+      },
+      {
+        "group": "Marker genes",
+        "value": "experiments with marker genes",
+        "label": "Experiments with marker genes",
+        "description": "A gene that comprises part of the specific expression profile for that cluster"
+      }
+    ]
+  },
+  {
+    "element": {
+      "longDescription": "We analyzed single cell transcriptomes over 80,000 cells isolated from 65 organoids differentiated from iPSCs and ESCs using two different protocols. We find that both protocols generate kidney organoids that contain a diverse range of kidney cells at differing ratios as well as non-renal cell types. We reconstructed lineage [ionships during organoid differentiation through pseudotemporal ordering, and identified transcription factor networks associated with fate decisions. When comparing to adult human kidney, we reveal immaturity of all kidney organoid cell types. These results define impressive kidney organoid cell diversity, identify incomplete differentiation as a major roadblock for current directed differentiation protocols and provide a human adult kidney snRNA-seq dataset against which to benchmark future progress. Overall design: Dropseq and 10X Chromium were used to profile organoid cells and adult kidney nuclei",
+      "experimentDescription": "Comparative analysis of kidney organoid and adult human kidney single cell and single nucleus transcriptomes - human kidney subset",
+      "numberOfAssays": 1982,
+      "type": "Single-cell RNA-Seq mRNA baseline",
+      "factors": [
+        "organism part"
+      ],
+      "lastUpdated": "16-01-2023",
+      "dataProviderDescription": [],
+      "dataProviderURL": [],
+      "experimentAccession": "E-CURD-135",
+      "species": "Homo sapiens",
+      "speciesReferenceName": "homo sapiens",
+      "pubMedIds": [
+        "30449713"
+      ],
+      "pageDescription": "Comparative analysis of kidney organoid and adult human kidney single cell and single nucleus transcriptomes - human kidney subset",
+      "alternativeViewDescriptions": [],
+      "dois": [
+        "10.1016/j.stem.2018.10.010"
+      ],
+      "disclaimer": "",
+      "publications": [
+        {
+          "pubmedId": "30449713",
+          "doi": "10.1016/j.stem.2018.10.010",
+          "title": "Comparative Analysis and Refinement of Human PSC-Derived Kidney Organoid Differentiation with Single-Cell Transcriptomics.",
+          "publicationYear": "2018",
+          "authors": "Wu H, Uchimura K, Donnelly EL, Kirita Y, Morris SA, Humphreys BD."
+        }
+      ],
+      "alternativeViews": [],
+      "url": "http://wwwdev.ebi.ac.uk/gxa/sc/experiments/E-CURD-135?geneId\u003dENSG00000108381",
+      "markerGenes": [
+        {
+          "k": 6,
+          "clusterIds": [
+            1
+          ],
+          "url": "http://wwwdev.ebi.ac.uk/gxa/sc/experiments/E-CURD-135/results?geneId\u003dENSG00000108381\u0026k\u003d6\u0026clusterId\u003d%5B1%5D"
+        }
+      ]
+    },
+    "facets": [
+      {
+        "group": "Marker genes",
+        "value": "experiments with marker genes",
+        "label": "Experiments with marker genes",
+        "description": "A gene that comprises part of the specific expression profile for that cluster"
+      }
+    ]
+  },
+  {
+    "element": {
+      "longDescription": "Tissues develop unique homeostatic immune states through specific recruitment of immune cells that are further shaped by the tissue environment. Single-cell RNA of healthy cerebrospinal fluid (CSF) and single-nucleus RNA sequencing of brain parenchyma was used to profile the T cell state in the human central nervous system (CNS).",
+      "experimentDescription": "Transcriptomic and clonal characterization of T cells in the human central nervous system.",
+      "numberOfAssays": 69596,
+      "type": "Single-cell RNA-Seq mRNA baseline",
+      "factors": [
+        "sampling site",
+        "protocol"
+      ],
+      "lastUpdated": "15-07-2021",
+      "dataProviderDescription": [],
+      "dataProviderURL": [],
+      "experimentAccession": "E-HCAD-30",
+      "species": "Homo sapiens",
+      "speciesReferenceName": "homo sapiens",
+      "pubMedIds": [
+        "32948672"
+      ],
+      "pageDescription": "Transcriptomic and clonal characterization of T cells in the human central nervous system.",
+      "alternativeViewDescriptions": [],
+      "dois": [
+        "10.1126/sciimmunol.abb8786"
+      ],
+      "disclaimer": "",
+      "publications": [
+        {
+          "pubmedId": "32948672",
+          "doi": "10.1126/sciimmunol.abb8786",
+          "title": "Transcriptomic and clonal characterization of T cells in the human central nervous system.",
+          "publicationYear": "2020",
+          "authors": "Pappalardo JL, Zhang L, Pecsok MK, Perlman K, Zografou C, Raddassi K, Abulaban A, Krishnaswamy S, Antel J, van Dijk D, Hafler DA."
+        }
+      ],
+      "alternativeViews": [],
+      "url": "http://wwwdev.ebi.ac.uk/gxa/sc/experiments/E-HCAD-30?geneId\u003dENSG00000108381",
+      "markerGenes": [
+        {
+          "k": 105,
+          "clusterIds": [
+            18
+          ],
+          "url": "http://wwwdev.ebi.ac.uk/gxa/sc/experiments/E-HCAD-30/results?geneId\u003dENSG00000108381\u0026k\u003d105\u0026clusterId\u003d%5B18%5D"
+        },
+        {
+          "k": 142,
+          "clusterIds": [
+            13
+          ],
+          "url": "http://wwwdev.ebi.ac.uk/gxa/sc/experiments/E-HCAD-30/results?geneId\u003dENSG00000108381\u0026k\u003d142\u0026clusterId\u003d%5B13%5D"
+        }
+      ]
+    },
+    "facets": [
+      {
+        "value": "brain",
+        "label": "Brain",
+        "group": "Organism part",
+        "description": "The tissue from which the sample is originally derived, e.g. lung"
+      },
+      {
+        "value": "homo sapiens",
+        "label": "Homo sapiens",
+        "group": "Species"
+      },
+      {
+        "group": "Marker genes",
+        "value": "experiments with marker genes",
+        "label": "Experiments with marker genes",
+        "description": "A gene that comprises part of the specific expression profile for that cluster"
+      }
+    ]
+  },
+  {
+    "element": {
+      "longDescription": "Pathological cardiac hypertrophy is a leading cause of heart failure. The understanding of disease mechanisms is primarily based on experimental models, but knowledge of the full repertoire of cardiac cells and their gene expression profiles in the human heart is missing. Here, using large-scale single-nucleus transcriptomes, we highlight the transcriptional response of cardiomyocytes to pressure overload in humans with stenosis of the aortic valve and disclose major alterations in cellular cross-talk. Cardiomyocytes showed a reduction of incoming connections with endothelial cells and fibroblasts. Particularly Eph receptor tyrosine kinases, including the predominant EPHB1 gene, were significantly down-regulated in cardiomyocytes of the hypertrophied heart. We compared 5 AS patients to healthy patients from the human heart cell ATLAS (https://www.heartcellatlas.org). This repository contains the raw files from the single nuclei RNA-SEQ.",
+      "experimentDescription": "The atlas of the human hypertrophied heart reveals impaired cell communication",
+      "numberOfAssays": 50499,
+      "type": "Single-cell RNA-Seq mRNA baseline",
+      "factors": [
+        "individual"
+      ],
+      "lastUpdated": "26-08-2022",
+      "dataProviderDescription": [],
+      "dataProviderURL": [],
+      "experimentAccession": "E-MTAB-11268",
+      "species": "Homo sapiens",
+      "speciesReferenceName": "homo sapiens",
+      "pubMedIds": [],
+      "pageDescription": "The atlas of the human hypertrophied heart reveals impaired cell communication",
+      "alternativeViewDescriptions": [],
+      "dois": [
+        "10.1038/s44161-022-00019-7"
+      ],
+      "disclaimer": "",
+      "publications": [],
+      "alternativeViews": [],
+      "url": "http://wwwdev.ebi.ac.uk/gxa/sc/experiments/E-MTAB-11268?geneId\u003dENSG00000108381",
+      "markerGenes": [
+        {
+          "k": 37,
+          "clusterIds": [
+            30
+          ],
+          "url": "http://wwwdev.ebi.ac.uk/gxa/sc/experiments/E-MTAB-11268/results?geneId\u003dENSG00000108381\u0026k\u003d37\u0026clusterId\u003d%5B30%5D"
+        }
+      ]
+    },
+    "facets": [
+      {
+        "value": "heart left ventricle",
+        "label": "Heart left ventricle",
+        "group": "Organism part",
+        "description": "The tissue from which the sample is originally derived, e.g. lung"
+      },
+      {
+        "value": "homo sapiens",
+        "label": "Homo sapiens",
+        "group": "Species"
+      },
+      {
+        "group": "Marker genes",
+        "value": "experiments with marker genes",
+        "label": "Experiments with marker genes",
+        "description": "A gene that comprises part of the specific expression profile for that cluster"
+      }
+    ]
+  },
+  {
+    "element": {
+      "longDescription": "In this study we performed single-cell transcriptome analysis of THP-1 macrophages, stimulated with high levels of free fatty acids (palmitate, PAL) typical for obese adipose tissue microenvironment or lipopolysaccharide (LPS), representing a classical stimulus activating innate immune response. Analysing full transcriptomes of individual cells, we were able to distinguish 3 macrophage transcriptional states and decipher gene regulatory pathways underlying macrophage state identity in both stimulations.",
+      "experimentDescription": "Single-cell RNA-seq analysis of LPS- and palmitate-stimulated THP-1 macrophages",
+      "numberOfAssays": 286,
+      "type": "Single-cell RNA-Seq mRNA baseline",
+      "factors": [
+        "single cell identifier",
+        "compound",
+        "dose"
+      ],
+      "lastUpdated": "02-12-2021",
+      "dataProviderDescription": [],
+      "dataProviderURL": [],
+      "experimentAccession": "E-MTAB-6075",
+      "species": "Homo sapiens",
+      "speciesReferenceName": "homo sapiens",
+      "pubMedIds": [
+        "31088978"
+      ],
+      "pageDescription": "Single-cell RNA-seq analysis of LPS- and palmitate-stimulated THP-1 macrophages",
+      "alternativeViewDescriptions": [],
+      "dois": [
+        "10.1126/scisignal.aao5820"
+      ],
+      "disclaimer": "",
+      "publications": [
+        {
+          "pubmedId": "31088978",
+          "doi": "10.1126/scisignal.aao5820",
+          "title": "Signals trigger state-specific transcriptional programs to support diversity and homeostasis in immune cells.",
+          "publicationYear": "2019",
+          "authors": "Fischer C, Metsger M, Bauch S, Vidal R, Böttcher M, Grote P, Kliem M, Sauer S."
+        }
+      ],
+      "alternativeViews": [],
+      "url": "http://wwwdev.ebi.ac.uk/gxa/sc/experiments/E-MTAB-6075?geneId\u003dENSG00000108381",
+      "markerGenes": [
+        {
+          "k": 17,
+          "clusterIds": [
+            3
+          ],
+          "url": "http://wwwdev.ebi.ac.uk/gxa/sc/experiments/E-MTAB-6075/results?geneId\u003dENSG00000108381\u0026k\u003d17\u0026clusterId\u003d%5B3%5D"
+        }
+      ]
+    },
+    "facets": [
+      {
+        "group": "Marker genes",
+        "value": "experiments with marker genes",
+        "label": "Experiments with marker genes",
+        "description": "A gene that comprises part of the specific expression profile for that cluster"
+      }
+    ]
+  },
+  {
+    "element": {
+      "longDescription": "Intestinal mesenchymal cells play essential roles in epithelial homeostasis, matrix remodeling, immunity, and inflammation. But the extent of heterogeneity within the colonic mesenchyme in these processes remains unknown. Using unbiased single-cell profiling of over 16,500 colonic mesenchymal cells, we reveal four subsets of fibroblasts expressing divergent transcriptional regulators and functional pathways, in addition to pericytes and myofibroblasts. We identified a niche population located in proximity to epithelial crypts expressing SOX6, F3 (CD142), and WNT genes essential for colonic epithelial stem cell function. In colitis, we observed dysregulation of this niche and emergence of an activated mesenchymal population. This subset expressed TNF superfamily member 14 (TNFSF14), fibroblastic reticular cell-associated genes, IL-33, and Lysyl oxidases. Further, it induced factors that impaired epithelial proliferation and maturation and contributed to oxidative stress and disease severity in vivo. Our work defines how the colonic mesenchyme remodels to fuel inflammation and barrier dysfunction in IBD.",
+      "experimentDescription": "Structural Remodeling of the Human Colonic Mesenchyme in Inflammatory Bowel Disease",
+      "numberOfAssays": 21664,
+      "type": "Single-cell RNA-Seq mRNA baseline",
+      "factors": [
+        "individual",
+        "disease",
+        "inferred cell type - authors labels",
+        "inferred cell type - ontology labels"
+      ],
+      "lastUpdated": "29-02-2020",
+      "dataProviderDescription": [],
+      "dataProviderURL": [],
+      "experimentAccession": "E-HCAD-11",
+      "species": "Homo sapiens",
+      "speciesReferenceName": "homo sapiens",
+      "pubMedIds": [],
+      "pageDescription": "Structural Remodeling of the Human Colonic Mesenchyme in Inflammatory Bowel Disease",
+      "alternativeViewDescriptions": [],
+      "dois": [],
+      "disclaimer": "",
+      "alternativeViews": [],
+      "url": "http://wwwdev.ebi.ac.uk/gxa/sc/experiments/E-HCAD-11?geneId\u003dENSG00000108381",
+      "markerGenes": [
+        {
+          "k": 17,
+          "clusterIds": [
+            10
+          ],
+          "url": "http://wwwdev.ebi.ac.uk/gxa/sc/experiments/E-HCAD-11/results?geneId\u003dENSG00000108381\u0026k\u003d17\u0026clusterId\u003d%5B10%5D"
+        },
+        {
+          "k": 20,
+          "clusterIds": [
+            10
+          ],
+          "url": "http://wwwdev.ebi.ac.uk/gxa/sc/experiments/E-HCAD-11/results?geneId\u003dENSG00000108381\u0026k\u003d20\u0026clusterId\u003d%5B10%5D"
+        },
+        {
+          "k": 7,
+          "clusterIds": [
+            6
+          ],
+          "url": "http://wwwdev.ebi.ac.uk/gxa/sc/experiments/E-HCAD-11/results?geneId\u003dENSG00000108381\u0026k\u003d7\u0026clusterId\u003d%5B6%5D"
+        },
+        {
+          "k": 26,
+          "clusterIds": [
+            13
+          ],
+          "url": "http://wwwdev.ebi.ac.uk/gxa/sc/experiments/E-HCAD-11/results?geneId\u003dENSG00000108381\u0026k\u003d26\u0026clusterId\u003d%5B13%5D"
+        },
+        {
+          "k": 11,
+          "clusterIds": [
+            7
+          ],
+          "url": "http://wwwdev.ebi.ac.uk/gxa/sc/experiments/E-HCAD-11/results?geneId\u003dENSG00000108381\u0026k\u003d11\u0026clusterId\u003d%5B7%5D"
+        }
+      ]
+    },
+    "facets": [
+      {
+        "group": "Marker genes",
+        "value": "experiments with marker genes",
+        "label": "Experiments with marker genes",
+        "description": "A gene that comprises part of the specific expression profile for that cluster"
+      }
+    ]
+  },
+  {
+    "element": {
+      "longDescription": "Compare cell type proportion and gene expression between 3 mice with RET and 3 mice control",
+      "experimentDescription": "scRNAseq of Mus musculus ileum samples with RET melanoma against non-xenograft mice controls",
+      "numberOfAssays": 59093,
+      "type": "Single-cell RNA-Seq mRNA baseline",
+      "factors": [
+        "xenograft"
+      ],
+      "lastUpdated": "02-02-2022",
+      "dataProviderDescription": [],
+      "dataProviderURL": [],
+      "experimentAccession": "E-MTAB-11242",
+      "species": "Mus musculus",
+      "speciesReferenceName": "mus musculus",
+      "pubMedIds": [
+        "34930787"
+      ],
+      "pageDescription": "scRNAseq of Mus musculus ileum samples with RET melanoma against non-xenograft mice controls",
+      "alternativeViewDescriptions": [],
+      "dois": [
+        "10.1158/2159-8290.CD-21-0999"
+      ],
+      "disclaimer": "",
+      "publications": [
+        {
+          "pubmedId": "34930787",
+          "doi": "10.1158/2159-8290.cd-21-0999",
+          "title": "Cancer Induces a Stress Ileopathy Depending on β-Adrenergic Receptors and Promoting Dysbiosis that Contributes to Carcinogenesis.",
+          "publicationYear": "2022",
+          "authors": "Yonekura S, Terrisse S, Alves Costa Silva C, Lafarge A, Iebba V, Ferrere G, Goubet AG, Fahrner JE, Lahmar I, Ueda K, Mansouri G, Pizzato E, Ly P, Mazzenga M, Thelemaque C, Fidelle M, Jaulin F, Cartry J, Deloger M, Aglave M, Droin N, Opolon P, Puget A, Mann F, Neunlist M, Bessard A, Aymeric L, Matysiak-Budnik T, Bosq J, Hofman P, Duong CPM, Ugolini S, Quiniou V, Berrard S, Ryffel B, Kepp O, Kroemer G, Routy B, Lordello L, Bani MA, Segata N, Yengej FY, Clevers H, Scoazec JY, Pasolli E, Derosa L, Zitvogel L."
+        }
+      ],
+      "alternativeViews": [],
+      "url": "http://wwwdev.ebi.ac.uk/gxa/sc/experiments/E-MTAB-11242?geneId\u003dENSMUSG00000020774",
+      "markerGenes": [
+        {
+          "k": 16,
+          "clusterIds": [
+            1
+          ],
+          "url": "http://wwwdev.ebi.ac.uk/gxa/sc/experiments/E-MTAB-11242/results?geneId\u003dENSMUSG00000020774\u0026k\u003d16\u0026clusterId\u003d%5B1%5D"
+        },
+        {
+          "k": 20,
+          "clusterIds": [
+            1
+          ],
+          "url": "http://wwwdev.ebi.ac.uk/gxa/sc/experiments/E-MTAB-11242/results?geneId\u003dENSMUSG00000020774\u0026k\u003d20\u0026clusterId\u003d%5B1%5D"
+        },
+        {
+          "k": 42,
+          "clusterIds": [
+            1
+          ],
+          "url": "http://wwwdev.ebi.ac.uk/gxa/sc/experiments/E-MTAB-11242/results?geneId\u003dENSMUSG00000020774\u0026k\u003d42\u0026clusterId\u003d%5B1%5D"
+        },
+        {
+          "k": 28,
+          "clusterIds": [
+            1,
+            2,
+            7
+          ],
+          "url": "http://wwwdev.ebi.ac.uk/gxa/sc/experiments/E-MTAB-11242/results?geneId\u003dENSMUSG00000020774\u0026k\u003d28\u0026clusterId\u003d%5B1,%202,%207%5D"
+        }
+      ]
+    },
+    "facets": [
+      {
+        "group": "Marker genes",
+        "value": "experiments with marker genes",
+        "label": "Experiments with marker genes",
+        "description": "A gene that comprises part of the specific expression profile for that cluster"
+      }
+    ]
+  },
+  {
+    "element": {
+      "longDescription": "In the adult heart, the epicardium becomes activated after injury, contributing to cardiac healing by secretion of paracrine factors. Here we analyzed by single-cell RNA sequencing combined with RNA in situ hybridization and lineage tracing of WT1+ cells the cellular composition, location, and hierarchy of epicardial stromal cells (EpiSC) in comparison to activated myocardial fibroblasts/stromal cells in infarcted mouse hearts. We identified 11 transcriptionally distinct EpiSC populations, that can be classified in three groups each containing a cluster of proliferating cells. Two groups expressed cardiac specification makers and sarcomeric proteins suggestive of cardiomyogenic potential. Transcripts of HIF-1α and HIF-responsive genes were enriched in EpiSC consistent with the epicardium being a hypoxic niche. Expression of paracrine factors was not limited to WT1+ cells but was a general feature of activated cardiac stromal cells. Our findings provide the cellular framework by which myocardial ischemia may trigger in EpiSC the formation of cardioprotective/regenerative responses.",
+      "experimentDescription": "Single-cell sequencing of epicardial cells and fibroblasts within the infarcted heart",
+      "numberOfAssays": 112676,
+      "type": "Single-cell RNA-Seq mRNA baseline",
+      "factors": [
+        "disease",
+        "genotype",
+        "cell type"
+      ],
+      "lastUpdated": "25-08-2022",
+      "dataProviderDescription": [],
+      "dataProviderURL": [],
+      "experimentAccession": "E-MTAB-10035",
+      "species": "Mus musculus",
+      "speciesReferenceName": "mus musculus",
+      "pubMedIds": [
+        "34152268"
+      ],
+      "pageDescription": "Single-cell sequencing of epicardial cells and fibroblasts within the infarcted heart",
+      "alternativeViewDescriptions": [],
+      "dois": [
+        "10.7554/eLife.65921"
+      ],
+      "disclaimer": "",
+      "publications": [
+        {
+          "pubmedId": "34152268",
+          "doi": "10.7554/elife.65921",
+          "title": "Single-cell transcriptomics defines heterogeneity of epicardial cells and fibroblasts within the infarcted murine heart.",
+          "publicationYear": "2021",
+          "authors": "Hesse J, Owenier C, Lautwein T, Zalfen R, Weber JF, Ding Z, Alter C, Lang A, Grandoch M, Gerdes N, Fischer JW, Klau GW, Dieterich C, Köhrer K, Schrader J."
+        }
+      ],
+      "alternativeViews": [],
+      "url": "http://wwwdev.ebi.ac.uk/gxa/sc/experiments/E-MTAB-10035?geneId\u003dENSMUSG00000020774",
+      "markerGenes": [
+        {
+          "k": 16,
+          "clusterIds": [
+            16
+          ],
+          "url": "http://wwwdev.ebi.ac.uk/gxa/sc/experiments/E-MTAB-10035/results?geneId\u003dENSMUSG00000020774\u0026k\u003d16\u0026clusterId\u003d%5B16%5D"
+        },
+        {
+          "k": 48,
+          "clusterIds": [
+            45
+          ],
+          "url": "http://wwwdev.ebi.ac.uk/gxa/sc/experiments/E-MTAB-10035/results?geneId\u003dENSMUSG00000020774\u0026k\u003d48\u0026clusterId\u003d%5B45%5D"
+        },
+        {
+          "k": 20,
+          "clusterIds": [
+            20
+          ],
+          "url": "http://wwwdev.ebi.ac.uk/gxa/sc/experiments/E-MTAB-10035/results?geneId\u003dENSMUSG00000020774\u0026k\u003d20\u0026clusterId\u003d%5B20%5D"
+        },
+        {
+          "k": 85,
+          "clusterIds": [
+            81
+          ],
+          "url": "http://wwwdev.ebi.ac.uk/gxa/sc/experiments/E-MTAB-10035/results?geneId\u003dENSMUSG00000020774\u0026k\u003d85\u0026clusterId\u003d%5B81%5D"
+        },
+        {
+          "k": 25,
+          "clusterIds": [
+            23
+          ],
+          "url": "http://wwwdev.ebi.ac.uk/gxa/sc/experiments/E-MTAB-10035/results?geneId\u003dENSMUSG00000020774\u0026k\u003d25\u0026clusterId\u003d%5B23%5D"
+        },
+        {
+          "k": 27,
+          "clusterIds": [
+            25
+          ],
+          "url": "http://wwwdev.ebi.ac.uk/gxa/sc/experiments/E-MTAB-10035/results?geneId\u003dENSMUSG00000020774\u0026k\u003d27\u0026clusterId\u003d%5B25%5D"
+        },
+        {
+          "k": 75,
+          "clusterIds": [
+            71
+          ],
+          "url": "http://wwwdev.ebi.ac.uk/gxa/sc/experiments/E-MTAB-10035/results?geneId\u003dENSMUSG00000020774\u0026k\u003d75\u0026clusterId\u003d%5B71%5D"
+        },
+        {
+          "k": 12,
+          "clusterIds": [
+            12
+          ],
+          "url": "http://wwwdev.ebi.ac.uk/gxa/sc/experiments/E-MTAB-10035/results?geneId\u003dENSMUSG00000020774\u0026k\u003d12\u0026clusterId\u003d%5B12%5D"
+        },
+        {
+          "k": 60,
+          "clusterIds": [
+            57
+          ],
+          "url": "http://wwwdev.ebi.ac.uk/gxa/sc/experiments/E-MTAB-10035/results?geneId\u003dENSMUSG00000020774\u0026k\u003d60\u0026clusterId\u003d%5B57%5D"
+        }
+      ]
+    },
+    "facets": [
+      {
+        "value": "heart",
+        "label": "Heart",
+        "group": "Organism part",
+        "description": "The tissue from which the sample is originally derived, e.g. lung"
+      },
+      {
+        "value": "mus musculus",
+        "label": "Mus musculus",
+        "group": "Species"
+      },
+      {
+        "group": "Marker genes",
+        "value": "experiments with marker genes",
+        "label": "Experiments with marker genes",
+        "description": "A gene that comprises part of the specific expression profile for that cluster"
+      }
+    ]
+  },
+  {
+    "element": {
+      "longDescription": "To elucidate the interplay between signal transduction and transcriptional regulation in cellular reprogramming, distinct induction routes from epiblast stem cells to naïve pluripotency were evaluated and compared.",
+      "experimentDescription": "Single-cell transcriptional profiling of induced reprogramming trajectories",
+      "numberOfAssays": 1009,
+      "type": "Single-cell RNA-Seq mRNA baseline",
+      "factors": [
+        "single cell identifier",
+        "genotype",
+        "stimulus",
+        "time",
+        "cell type",
+        "phenotype"
+      ],
+      "lastUpdated": "05-01-2020",
+      "dataProviderDescription": [],
+      "dataProviderURL": [],
+      "experimentAccession": "E-MTAB-7901",
+      "species": "Mus musculus",
+      "speciesReferenceName": "mus musculus",
+      "pubMedIds": [
+        "31422912"
+      ],
+      "pageDescription": "Single-cell transcriptional profiling of induced reprogramming trajectories",
+      "alternativeViewDescriptions": [],
+      "dois": [
+        "10.1016/j.stem.2019.07.009"
+      ],
+      "disclaimer": "",
+      "publications": [
+        {
+          "pubmedId": "31422912",
+          "doi": "10.1016/j.stem.2019.07.009",
+          "title": "Distinct Molecular Trajectories Converge to Induce Naive Pluripotency.",
+          "publicationYear": "2019",
+          "authors": "Stuart HT, Stirparo GG, Lohoff T, Bates LE, Kinoshita M, Lim CY, Sousa EJ, Maskalenka K, Radzisheuskaya A, Malcolm AA, Alves MRP, Lloyd RL, Nestorowa S, Humphreys P, Mansfield W, Reik W, Bertone P, Nichols J, Göttgens B, Silva JCR."
+        }
+      ],
+      "alternativeViews": [],
+      "url": "http://wwwdev.ebi.ac.uk/gxa/sc/experiments/E-MTAB-7901?geneId\u003dENSMUSG00000020774",
+      "markerGenes": [
+        {
+          "k": 23,
+          "clusterIds": [
+            9
+          ],
+          "url": "http://wwwdev.ebi.ac.uk/gxa/sc/experiments/E-MTAB-7901/results?geneId\u003dENSMUSG00000020774\u0026k\u003d23\u0026clusterId\u003d%5B9%5D"
+        },
+        {
+          "k": 26,
+          "clusterIds": [
+            6
+          ],
+          "url": "http://wwwdev.ebi.ac.uk/gxa/sc/experiments/E-MTAB-7901/results?geneId\u003dENSMUSG00000020774\u0026k\u003d26\u0026clusterId\u003d%5B6%5D"
+        }
+      ]
+    },
+    "facets": [
+      {
+        "group": "Marker genes",
+        "value": "experiments with marker genes",
+        "label": "Experiments with marker genes",
+        "description": "A gene that comprises part of the specific expression profile for that cluster"
+      }
+    ]
+  },
+  {
+    "element": {
+      "longDescription": "We performed 3\u0027 single-cell RNA-seq using the 10X Genomics Chromium (version 2 chemistry) system on ~6,000 mouse endothelial cells derived from aorta.",
+      "experimentDescription": "Single cell transcriptional profiling of aortic endothelium identifies a hierarchy from endovascular progenitors to differentiated cells",
+      "numberOfAssays": 7293,
+      "type": "Single-cell RNA-Seq mRNA baseline",
+      "factors": [
+        "replicate"
+      ],
+      "lastUpdated": "23-06-2019",
+      "dataProviderDescription": [],
+      "dataProviderURL": [],
+      "experimentAccession": "E-MTAB-7149",
+      "species": "Mus musculus",
+      "speciesReferenceName": "mus musculus",
+      "pubMedIds": [],
+      "pageDescription": "Single cell transcriptional profiling of aortic endothelium identifies a hierarchy from endovascular progenitors to differentiated cells",
+      "alternativeViewDescriptions": [],
+      "dois": [],
+      "disclaimer": "",
+      "alternativeViews": [],
+      "url": "http://wwwdev.ebi.ac.uk/gxa/sc/experiments/E-MTAB-7149?geneId\u003dENSMUSG00000020774",
+      "markerGenes": [
+        {
+          "k": 17,
+          "clusterIds": [
+            16
+          ],
+          "url": "http://wwwdev.ebi.ac.uk/gxa/sc/experiments/E-MTAB-7149/results?geneId\u003dENSMUSG00000020774\u0026k\u003d17\u0026clusterId\u003d%5B16%5D"
+        },
+        {
+          "k": 23,
+          "clusterIds": [
+            22
+          ],
+          "url": "http://wwwdev.ebi.ac.uk/gxa/sc/experiments/E-MTAB-7149/results?geneId\u003dENSMUSG00000020774\u0026k\u003d23\u0026clusterId\u003d%5B22%5D"
+        },
+        {
+          "k": 39,
+          "clusterIds": [
+            38
+          ],
+          "url": "http://wwwdev.ebi.ac.uk/gxa/sc/experiments/E-MTAB-7149/results?geneId\u003dENSMUSG00000020774\u0026k\u003d39\u0026clusterId\u003d%5B38%5D"
+        },
+        {
+          "k": 55,
+          "clusterIds": [
+            52
+          ],
+          "url": "http://wwwdev.ebi.ac.uk/gxa/sc/experiments/E-MTAB-7149/results?geneId\u003dENSMUSG00000020774\u0026k\u003d55\u0026clusterId\u003d%5B52%5D"
+        },
+        {
+          "k": 9,
+          "clusterIds": [
+            9
+          ],
+          "url": "http://wwwdev.ebi.ac.uk/gxa/sc/experiments/E-MTAB-7149/results?geneId\u003dENSMUSG00000020774\u0026k\u003d9\u0026clusterId\u003d%5B9%5D"
+        },
+        {
+          "k": 13,
+          "clusterIds": [
+            13
+          ],
+          "url": "http://wwwdev.ebi.ac.uk/gxa/sc/experiments/E-MTAB-7149/results?geneId\u003dENSMUSG00000020774\u0026k\u003d13\u0026clusterId\u003d%5B13%5D"
+        },
+        {
+          "k": 46,
+          "clusterIds": [
+            44
+          ],
+          "url": "http://wwwdev.ebi.ac.uk/gxa/sc/experiments/E-MTAB-7149/results?geneId\u003dENSMUSG00000020774\u0026k\u003d46\u0026clusterId\u003d%5B44%5D"
+        },
+        {
+          "k": 15,
+          "clusterIds": [
+            15
+          ],
+          "url": "http://wwwdev.ebi.ac.uk/gxa/sc/experiments/E-MTAB-7149/results?geneId\u003dENSMUSG00000020774\u0026k\u003d15\u0026clusterId\u003d%5B15%5D"
+        },
+        {
+          "k": 31,
+          "clusterIds": [
+            30
+          ],
+          "url": "http://wwwdev.ebi.ac.uk/gxa/sc/experiments/E-MTAB-7149/results?geneId\u003dENSMUSG00000020774\u0026k\u003d31\u0026clusterId\u003d%5B30%5D"
+        }
+      ]
+    },
+    "facets": [
+      {
+        "group": "Marker genes",
+        "value": "experiments with marker genes",
+        "label": "Experiments with marker genes",
+        "description": "A gene that comprises part of the specific expression profile for that cluster"
+      }
+    ]
+  },
+  {
+    "element": {
+      "longDescription": "A subset of COVID-19 patients exhibit altered olfactory function. Here we analyze bulk and single cell RNA-Seq datasets to identify cell types in the olfactory epithelium and olfactory bulb that express cell entry molecules that mediate infection by SARS-CoV-2 (CoV-2), the causal agent in COVID-19. We find that samples from whole olfactory mucosa in species including mouse and human express two key genes involved in CoV-2 entry, ACE2 and TMPRSS2. However, neither olfactory sensory neurons nor olfactory bulb neurons express these genes, which are instead expressed in support cells, stem cells, and perivascular cells. These findings suggest that CoV-2 infection of non-neuronal cell types leads to anosmia and related disturbances in odor perception in COVID-19 patients. Two 15 min Drop-seq runs from a single dissociation of the olfactory bulbs were obtained from 2 mice. Two such dissociations were performed, giving 4 total replicates. Additional Drop-Seq data from the olfactory mucosa can be found in GSE151346.",
+      "experimentDescription": "Non-neuronal expression of SARS-CoV-2 entry genes in the olfactory system suggests mechanisms underlying COVID-19-associated anosmia (scRNA-seq: olfactory bulb)",
+      "numberOfAssays": 24609,
+      "type": "Single-cell RNA-Seq mRNA baseline",
+      "factors": [
+        "replicate",
+        "inferred cell type - authors labels",
+        "inferred cell type - ontology labels"
+      ],
+      "lastUpdated": "11-01-2021",
+      "dataProviderDescription": [],
+      "dataProviderURL": [],
+      "experimentAccession": "E-GEOD-148360",
+      "species": "Mus musculus",
+      "speciesReferenceName": "mus musculus",
+      "pubMedIds": [
+        "32937591"
+      ],
+      "pageDescription": "Non-neuronal expression of SARS-CoV-2 entry genes in the olfactory system suggests mechanisms underlying COVID-19-associated anosmia (scRNA-seq: olfactory bulb)",
+      "alternativeViewDescriptions": [],
+      "dois": [
+        "10.1126/sciadv.abc5801"
+      ],
+      "disclaimer": "",
+      "publications": [
+        {
+          "pubmedId": "32937591",
+          "doi": "10.1126/sciadv.abc5801",
+          "title": "Non-neuronal expression of SARS-CoV-2 entry genes in the olfactory system suggests mechanisms underlying COVID-19-associated anosmia.",
+          "publicationYear": "2020",
+          "authors": "Brann DH, Tsukahara T, Weinreb C, Lipovsek M, Van den Berge K, Gong B, Chance R, Macaulay IC, Chou HJ, Fletcher RB, Das D, Street K, de Bezieux HR, Choi YG, Risso D, Dudoit S, Purdom E, Mill J, Hachem RA, Matsunami H, Logan DW, Goldstein BJ, Grubb MS, Ngai J, Datta SR."
+        }
+      ],
+      "alternativeViews": [],
+      "url": "http://wwwdev.ebi.ac.uk/gxa/sc/experiments/E-GEOD-148360?geneId\u003dENSMUSG00000020774",
+      "markerGenes": [
+        {
+          "k": 19,
+          "clusterIds": [
+            12
+          ],
+          "url": "http://wwwdev.ebi.ac.uk/gxa/sc/experiments/E-GEOD-148360/results?geneId\u003dENSMUSG00000020774\u0026k\u003d19\u0026clusterId\u003d%5B12%5D"
+        },
+        {
+          "k": 52,
+          "clusterIds": [
+            9
+          ],
+          "url": "http://wwwdev.ebi.ac.uk/gxa/sc/experiments/E-GEOD-148360/results?geneId\u003dENSMUSG00000020774\u0026k\u003d52\u0026clusterId\u003d%5B9%5D"
+        },
+        {
+          "k": 24,
+          "clusterIds": [
+            12
+          ],
+          "url": "http://wwwdev.ebi.ac.uk/gxa/sc/experiments/E-GEOD-148360/results?geneId\u003dENSMUSG00000020774\u0026k\u003d24\u0026clusterId\u003d%5B12%5D"
+        },
+        {
+          "k": 44,
+          "clusterIds": [
+            14
+          ],
+          "url": "http://wwwdev.ebi.ac.uk/gxa/sc/experiments/E-GEOD-148360/results?geneId\u003dENSMUSG00000020774\u0026k\u003d44\u0026clusterId\u003d%5B14%5D"
+        },
+        {
+          "k": 30,
+          "clusterIds": [
+            16
+          ],
+          "url": "http://wwwdev.ebi.ac.uk/gxa/sc/experiments/E-GEOD-148360/results?geneId\u003dENSMUSG00000020774\u0026k\u003d30\u0026clusterId\u003d%5B16%5D"
+        }
+      ]
+    },
+    "facets": [
+      {
+        "group": "Marker genes",
+        "value": "experiments with marker genes",
+        "label": "Experiments with marker genes",
+        "description": "A gene that comprises part of the specific expression profile for that cluster"
+      }
+    ]
+  },
+  {
+    "element": {
+      "longDescription": "We characterized single-cell transcriptional profiles of the cardiac non-myocyte cell pool in C57BL/6J mice. The cell preparation we sequenced consisted of metabolically active, nucleated non-myocyte cells from heart ventricles of female and male mice which were depleted of endothelial cells. The goals of this experiment included examining cellular diversity, identifying markers of understudied cell populations, exploring functional roles of different cell types, and characterizing sexual dimorphism in cardiac gene expression.",
+      "experimentDescription": "Single cell RNA-Seq of the murine non-myocyte cardiac cellulome",
+      "numberOfAssays": 11057,
+      "type": "Single-cell RNA-Seq mRNA baseline",
+      "factors": [
+        "replicate"
+      ],
+      "lastUpdated": "08-06-2019",
+      "dataProviderDescription": [],
+      "dataProviderURL": [],
+      "experimentAccession": "E-MTAB-6173",
+      "species": "Mus musculus",
+      "speciesReferenceName": "mus musculus",
+      "pubMedIds": [
+        "29346760"
+      ],
+      "pageDescription": "Single cell RNA-Seq of the murine non-myocyte cardiac cellulome",
+      "alternativeViewDescriptions": [],
+      "dois": [
+        "10.1016/j.celrep.2017.12.072"
+      ],
+      "disclaimer": "",
+      "publications": [
+        {
+          "pubmedId": "29346760",
+          "doi": "10.1016/j.celrep.2017.12.072",
+          "title": "Single-Cell Transcriptional Profiling Reveals Cellular Diversity and Intercommunication in the Mouse Heart.",
+          "publicationYear": "2018",
+          "authors": "Skelly DA, Squiers GT, McLellan MA, Bolisetty MT, Robson P, Rosenthal NA, Pinto AR."
+        }
+      ],
+      "alternativeViews": [],
+      "url": "http://wwwdev.ebi.ac.uk/gxa/sc/experiments/E-MTAB-6173?geneId\u003dENSMUSG00000020774",
+      "markerGenes": [
+        {
+          "k": 49,
+          "clusterIds": [
+            32
+          ],
+          "url": "http://wwwdev.ebi.ac.uk/gxa/sc/experiments/E-MTAB-6173/results?geneId\u003dENSMUSG00000020774\u0026k\u003d49\u0026clusterId\u003d%5B32%5D"
+        },
+        {
+          "k": 20,
+          "clusterIds": [
+            15
+          ],
+          "url": "http://wwwdev.ebi.ac.uk/gxa/sc/experiments/E-MTAB-6173/results?geneId\u003dENSMUSG00000020774\u0026k\u003d20\u0026clusterId\u003d%5B15%5D"
+        },
+        {
+          "k": 54,
+          "clusterIds": [
+            36
+          ],
+          "url": "http://wwwdev.ebi.ac.uk/gxa/sc/experiments/E-MTAB-6173/results?geneId\u003dENSMUSG00000020774\u0026k\u003d54\u0026clusterId\u003d%5B36%5D"
+        },
+        {
+          "k": 41,
+          "clusterIds": [
+            27
+          ],
+          "url": "http://wwwdev.ebi.ac.uk/gxa/sc/experiments/E-MTAB-6173/results?geneId\u003dENSMUSG00000020774\u0026k\u003d41\u0026clusterId\u003d%5B27%5D"
+        },
+        {
+          "k": 12,
+          "clusterIds": [
+            10
+          ],
+          "url": "http://wwwdev.ebi.ac.uk/gxa/sc/experiments/E-MTAB-6173/results?geneId\u003dENSMUSG00000020774\u0026k\u003d12\u0026clusterId\u003d%5B10%5D"
+        },
+        {
+          "k": 15,
+          "clusterIds": [
+            12
+          ],
+          "url": "http://wwwdev.ebi.ac.uk/gxa/sc/experiments/E-MTAB-6173/results?geneId\u003dENSMUSG00000020774\u0026k\u003d15\u0026clusterId\u003d%5B12%5D"
+        }
+      ]
+    },
+    "facets": [
+      {
+        "group": "Marker genes",
+        "value": "experiments with marker genes",
+        "label": "Experiments with marker genes",
+        "description": "A gene that comprises part of the specific expression profile for that cluster"
+      }
+    ]
+  },
+  {
+    "element": {
+      "longDescription": "Worldwide increases in obese and elderly populations synergistically enhance the incidence of sarcopenia. Accumulation of intermuscular adipose tissue (IMAT) is considered to be a major problem whereby obesity leads to sarcopenia and metabolic disorders and thus is a promising target for treating this emerging pathological condition. However, while sarcopenic obesity-associated IMAT is suggested to be originated from PDGFRα+ mesenchymal progenitors, processes of their adipogenesis remain largely unexplored. Here we investigated intracellular changes associated with these processes using scRNA-Seq analysis.",
+      "experimentDescription": "Changes in Pdgfra-positive mesenchymal progenitors during muscle regeneration under normal and obese condition",
+      "numberOfAssays": 59907,
+      "type": "Single-cell RNA-Seq mRNA baseline",
+      "factors": [
+        "diet",
+        "compound",
+        "dose",
+        "sampling time point"
+      ],
+      "lastUpdated": "26-08-2022",
+      "dataProviderDescription": [],
+      "dataProviderURL": [],
+      "experimentAccession": "E-MTAB-9715",
+      "species": "Mus musculus",
+      "speciesReferenceName": "mus musculus",
+      "pubMedIds": [
+        "35029658"
+      ],
+      "pageDescription": "Changes in Pdgfra-positive mesenchymal progenitors during muscle regeneration under normal and obese condition",
+      "alternativeViewDescriptions": [],
+      "dois": [
+        "10.1242/dev.199443"
+      ],
+      "disclaimer": "",
+      "publications": [
+        {
+          "pubmedId": "35029658",
+          "doi": "10.1242/dev.199443",
+          "title": "Galectin-3 promotes the adipogenic differentiation of PDGFRα+ cells and ectopic fat formation in regenerating muscle.",
+          "publicationYear": "2022",
+          "authors": "Takada N, Takasugi M, Nonaka Y, Kamiya T, Takemura K, Satoh J, Ito S, Fujimoto K, Uematsu S, Yoshida K, Morita T, Nakamura H, Uezumi A, Ohtani N, Ohtani N."
+        }
+      ],
+      "alternativeViews": [],
+      "url": "http://wwwdev.ebi.ac.uk/gxa/sc/experiments/E-MTAB-9715?geneId\u003dENSMUSG00000020774",
+      "markerGenes": [
+        {
+          "k": 21,
+          "clusterIds": [
+            14
+          ],
+          "url": "http://wwwdev.ebi.ac.uk/gxa/sc/experiments/E-MTAB-9715/results?geneId\u003dENSMUSG00000020774\u0026k\u003d21\u0026clusterId\u003d%5B14%5D"
+        },
+        {
+          "k": 14,
+          "clusterIds": [
+            9
+          ],
+          "url": "http://wwwdev.ebi.ac.uk/gxa/sc/experiments/E-MTAB-9715/results?geneId\u003dENSMUSG00000020774\u0026k\u003d14\u0026clusterId\u003d%5B9%5D"
+        }
+      ]
+    },
+    "facets": [
+      {
+        "value": "hindlimb muscle",
+        "label": "Hindlimb muscle",
+        "group": "Organism part",
+        "description": "The tissue from which the sample is originally derived, e.g. lung"
+      },
+      {
+        "value": "mus musculus",
+        "label": "Mus musculus",
+        "group": "Species"
+      },
+      {
+        "group": "Marker genes",
+        "value": "experiments with marker genes",
+        "label": "Experiments with marker genes",
+        "description": "A gene that comprises part of the specific expression profile for that cluster"
+      }
+    ]
+  },
+  {
+    "element": {
+      "longDescription": "The outcome of cardiac repair post myocardial infarction is highly dependent on the balance between inflammation and fibrosis, which can lead to adverse ventricular remodeling and failure or early cardiac rupture. In order to profile the dynamic response of the interstitium to cardiac ischemic injury, we performed unbiased single cell RNA Sequencing (scRNAseq) on cardiac interstitial cells at homeostasis and 1, 3, 5, 7, 14, 28 days post-injury using transgenic mice on C57bl/6j background (B6), expressing ZsGreen under the control of the epicardial marker Wt1 (Wt1Cre;RosaZsgreenf/+). About 38,600 cells were captured using the 10xChromium technology. To gain insights on how cell composition and transcriptome can affect the predisposition to cardiac rupture, we compared the data on B6 background with 129S1/SvlmJ (129) mice sham and d3 post-MI (time point proceeding the rupture), capturing about 13,000 additional cells.",
+      "experimentDescription": "Myocardial infarction time series single cell RNA-Seq",
+      "numberOfAssays": 61910,
+      "type": "Single-cell RNA-Seq mRNA baseline",
+      "factors": [
+        "genotype",
+        "injury",
+        "time"
+      ],
+      "lastUpdated": "24-05-2021",
+      "dataProviderDescription": [],
+      "dataProviderURL": [],
+      "experimentAccession": "E-MTAB-7895",
+      "species": "Mus musculus",
+      "speciesReferenceName": "mus musculus",
+      "pubMedIds": [
+        "32130914"
+      ],
+      "pageDescription": "Myocardial infarction time series single cell RNA-Seq",
+      "alternativeViewDescriptions": [],
+      "dois": [
+        "10.1016/j.celrep.2020.02.008"
+      ],
+      "disclaimer": "",
+      "publications": [
+        {
+          "pubmedId": "32130914",
+          "doi": "10.1016/j.celrep.2020.02.008",
+          "title": "Dynamic Interstitial Cell Response during Myocardial Infarction Predicts Resilience to Rupture in Genetically Diverse Mice.",
+          "publicationYear": "2020",
+          "authors": "Forte E, Skelly DA, Chen M, Daigle S, Morelli KA, Hon O, Philip VM, Costa MW, Rosenthal NA, Furtado MB."
+        }
+      ],
+      "alternativeViews": [],
+      "url": "http://wwwdev.ebi.ac.uk/gxa/sc/experiments/E-MTAB-7895?geneId\u003dENSMUSG00000020774",
+      "markerGenes": [
+        {
+          "k": 16,
+          "clusterIds": [
+            15
+          ],
+          "url": "http://wwwdev.ebi.ac.uk/gxa/sc/experiments/E-MTAB-7895/results?geneId\u003dENSMUSG00000020774\u0026k\u003d16\u0026clusterId\u003d%5B15%5D"
+        },
+        {
+          "k": 32,
+          "clusterIds": [
+            29
+          ],
+          "url": "http://wwwdev.ebi.ac.uk/gxa/sc/experiments/E-MTAB-7895/results?geneId\u003dENSMUSG00000020774\u0026k\u003d32\u0026clusterId\u003d%5B29%5D"
+        },
+        {
+          "k": 65,
+          "clusterIds": [
+            61
+          ],
+          "url": "http://wwwdev.ebi.ac.uk/gxa/sc/experiments/E-MTAB-7895/results?geneId\u003dENSMUSG00000020774\u0026k\u003d65\u0026clusterId\u003d%5B61%5D"
+        },
+        {
+          "k": 81,
+          "clusterIds": [
+            73
+          ],
+          "url": "http://wwwdev.ebi.ac.uk/gxa/sc/experiments/E-MTAB-7895/results?geneId\u003dENSMUSG00000020774\u0026k\u003d81\u0026clusterId\u003d%5B73%5D"
+        },
+        {
+          "k": 52,
+          "clusterIds": [
+            48
+          ],
+          "url": "http://wwwdev.ebi.ac.uk/gxa/sc/experiments/E-MTAB-7895/results?geneId\u003dENSMUSG00000020774\u0026k\u003d52\u0026clusterId\u003d%5B48%5D"
+        }
+      ]
+    },
+    "facets": [
+      {
+        "value": "cardiac ventricle",
+        "label": "Cardiac ventricle",
+        "group": "Organism part",
+        "description": "The tissue from which the sample is originally derived, e.g. lung"
+      },
+      {
+        "value": "mus musculus",
+        "label": "Mus musculus",
+        "group": "Species"
+      },
+      {
+        "group": "Marker genes",
+        "value": "experiments with marker genes",
+        "label": "Experiments with marker genes",
+        "description": "A gene that comprises part of the specific expression profile for that cluster"
+      }
+    ]
+  },
+  {
+    "element": {
+      "longDescription": "The aims of the experiment were to profile the cell types in the adult mouse cardiac interstitium (non-myocyte cells) and how they respond to myocardial infarction injury. Adult, male, Pdgfra +/GFP mice were subject to either a myocardial infarction or sham injury, with cells isolated from cardiac ventricles 3 or 7 days following surgery. We obtained scRNA-seq profiles of two cell fractions: total interstitial (non-myocyte) cell population (TIP) and FACS-sorted GFP+/Cd31- cells (GFP).",
+      "experimentDescription": "Single-cell RNA-seq of mouse cardiac interstitial cells 3 \u0026 7 days after sham or myocardial infarction injury",
+      "numberOfAssays": 39524,
+      "type": "Single-cell RNA-Seq mRNA baseline",
+      "factors": [
+        "injury",
+        "time",
+        "fraction"
+      ],
+      "lastUpdated": "08-06-2019",
+      "dataProviderDescription": [],
+      "dataProviderURL": [],
+      "experimentAccession": "E-MTAB-7376",
+      "species": "Mus musculus",
+      "speciesReferenceName": "mus musculus",
+      "pubMedIds": [],
+      "pageDescription": "Single-cell RNA-seq of mouse cardiac interstitial cells 3 \u0026 7 days after sham or myocardial infarction injury",
+      "alternativeViewDescriptions": [],
+      "dois": [
+        "10.7554/eLife.43882"
+      ],
+      "disclaimer": "",
+      "publications": [
+        {
+          "pubmedId": "30912746",
+          "doi": "10.7554/elife.43882",
+          "title": "Single-cell expression profiling reveals dynamic flux of cardiac stromal, vascular and immune cells in health and injury.",
+          "publicationYear": "2019",
+          "authors": "Farbehi N, Patrick R, Dorison A, Xaymardan M, Janbandhu V, Wystub-Lis K, Ho JW, Nordon RE, Harvey RP."
+        }
+      ],
+      "alternativeViews": [],
+      "url": "http://wwwdev.ebi.ac.uk/gxa/sc/experiments/E-MTAB-7376?geneId\u003dENSMUSG00000020774",
+      "markerGenes": [
+        {
+          "k": 17,
+          "clusterIds": [
+            16
+          ],
+          "url": "http://wwwdev.ebi.ac.uk/gxa/sc/experiments/E-MTAB-7376/results?geneId\u003dENSMUSG00000020774\u0026k\u003d17\u0026clusterId\u003d%5B16%5D"
+        },
+        {
+          "k": 65,
+          "clusterIds": [
+            64
+          ],
+          "url": "http://wwwdev.ebi.ac.uk/gxa/sc/experiments/E-MTAB-7376/results?geneId\u003dENSMUSG00000020774\u0026k\u003d65\u0026clusterId\u003d%5B64%5D"
+        },
+        {
+          "k": 22,
+          "clusterIds": [
+            20
+          ],
+          "url": "http://wwwdev.ebi.ac.uk/gxa/sc/experiments/E-MTAB-7376/results?geneId\u003dENSMUSG00000020774\u0026k\u003d22\u0026clusterId\u003d%5B20%5D"
+        },
+        {
+          "k": 54,
+          "clusterIds": [
+            53
+          ],
+          "url": "http://wwwdev.ebi.ac.uk/gxa/sc/experiments/E-MTAB-7376/results?geneId\u003dENSMUSG00000020774\u0026k\u003d54\u0026clusterId\u003d%5B53%5D"
+        },
+        {
+          "k": 41,
+          "clusterIds": [
+            40
+          ],
+          "url": "http://wwwdev.ebi.ac.uk/gxa/sc/experiments/E-MTAB-7376/results?geneId\u003dENSMUSG00000020774\u0026k\u003d41\u0026clusterId\u003d%5B40%5D"
+        },
+        {
+          "k": 27,
+          "clusterIds": [
+            25
+          ],
+          "url": "http://wwwdev.ebi.ac.uk/gxa/sc/experiments/E-MTAB-7376/results?geneId\u003dENSMUSG00000020774\u0026k\u003d27\u0026clusterId\u003d%5B25%5D"
+        },
+        {
+          "k": 77,
+          "clusterIds": [
+            76
+          ],
+          "url": "http://wwwdev.ebi.ac.uk/gxa/sc/experiments/E-MTAB-7376/results?geneId\u003dENSMUSG00000020774\u0026k\u003d77\u0026clusterId\u003d%5B76%5D"
+        },
+        {
+          "k": 15,
+          "clusterIds": [
+            14
+          ],
+          "url": "http://wwwdev.ebi.ac.uk/gxa/sc/experiments/E-MTAB-7376/results?geneId\u003dENSMUSG00000020774\u0026k\u003d15\u0026clusterId\u003d%5B14%5D"
+        }
+      ]
+    },
+    "facets": [
+      {
+        "group": "Marker genes",
+        "value": "experiments with marker genes",
+        "label": "Experiments with marker genes",
+        "description": "A gene that comprises part of the specific expression profile for that cluster"
+      }
+    ]
+  },
+  {
+    "element": {
+      "longDescription": "The purpose of this study was to define, at the single cell level, the transcriptional profile of murine tail epidermal basal cells during postnatal growth and to compare with adult homeostatic basal cells. The analysis was performed on Lgr5DTR-EGFP mice (Tian et al., 2011)(knockin mice containing an Enhanced Green Fluorescent Protein (EGFP) under the control of the Lgr5 regulatory region), allowing to identify and exclude Lgr5-expressing cells of the bulge and basal cells of the interfollicular epidermis were enriched using EGFP negative, CD34 negative, alpha6 integrin positive gating. Our single-cell RNA sequencing revealed that epidermal basal cells at P7 form a more uniform population compared to adult basal cells and that heterogeneity starts to appear around P30. Mouse tail epidermis was collected on mice at postnatal day 7, 30 and 60. (3 samples) The libraries were prepared using the Chromium Single Cell 3’ Library Kit (V2-chemistry, PN-120233, 10X Genomics), quantified using a low coverage Illumina NextSeq 550 run and sequenced on an Illumina NovaSeq generating 343M, 245M and 336M reads for the P7, P30 and P60 libraries respectively. 10.338, 948 and 10.920  cells were detected, with a mean number of 33.179, 245.972 and 30.857 reads per cell, detecting a median of 2.290, 5.050 and 2.309 of genes per cell.",
+      "experimentDescription": "Single Cell RNA-sequencing of murine tail interfollicular epidermis basal cells at postnatal days 7, 30 and in adult",
+      "numberOfAssays": 21589,
+      "type": "Single-cell RNA-Seq mRNA baseline",
+      "factors": [
+        "age"
+      ],
+      "lastUpdated": "25-04-2020",
+      "dataProviderDescription": [],
+      "dataProviderURL": [],
+      "experimentAccession": "E-GEOD-146122",
+      "species": "Mus musculus",
+      "speciesReferenceName": "mus musculus",
+      "pubMedIds": [
+        "32259486"
+      ],
+      "pageDescription": "Single Cell RNA-sequencing of murine tail interfollicular epidermis basal cells at postnatal days 7, 30 and in adult",
+      "alternativeViewDescriptions": [],
+      "dois": [
+        "10.1016/j.cell.2020.03.015"
+      ],
+      "disclaimer": "",
+      "publications": [
+        {
+          "pubmedId": "32259486",
+          "doi": "10.1016/j.cell.2020.03.015",
+          "title": "Defining the Design Principles of Skin Epidermis Postnatal Growth.",
+          "publicationYear": "2020",
+          "authors": "Dekoninck S, Hannezo E, Sifrim A, Miroshnikova YA, Aragona M, Malfait M, Gargouri S, de Neunheuser C, Dubois C, Voet T, Wickström SA, Simons BD, Blanpain C."
+        }
+      ],
+      "alternativeViews": [],
+      "url": "http://wwwdev.ebi.ac.uk/gxa/sc/experiments/E-GEOD-146122?geneId\u003dENSMUSG00000020774",
+      "markerGenes": [
+        {
+          "k": 17,
+          "clusterIds": [
+            17
+          ],
+          "url": "http://wwwdev.ebi.ac.uk/gxa/sc/experiments/E-GEOD-146122/results?geneId\u003dENSMUSG00000020774\u0026k\u003d17\u0026clusterId\u003d%5B17%5D"
+        },
+        {
+          "k": 33,
+          "clusterIds": [
+            32
+          ],
+          "url": "http://wwwdev.ebi.ac.uk/gxa/sc/experiments/E-GEOD-146122/results?geneId\u003dENSMUSG00000020774\u0026k\u003d33\u0026clusterId\u003d%5B32%5D"
+        },
+        {
+          "k": 19,
+          "clusterIds": [
+            19
+          ],
+          "url": "http://wwwdev.ebi.ac.uk/gxa/sc/experiments/E-GEOD-146122/results?geneId\u003dENSMUSG00000020774\u0026k\u003d19\u0026clusterId\u003d%5B19%5D"
+        },
+        {
+          "k": 7,
+          "clusterIds": [
+            7
+          ],
+          "url": "http://wwwdev.ebi.ac.uk/gxa/sc/experiments/E-GEOD-146122/results?geneId\u003dENSMUSG00000020774\u0026k\u003d7\u0026clusterId\u003d%5B7%5D"
+        },
+        {
+          "k": 11,
+          "clusterIds": [
+            11
+          ],
+          "url": "http://wwwdev.ebi.ac.uk/gxa/sc/experiments/E-GEOD-146122/results?geneId\u003dENSMUSG00000020774\u0026k\u003d11\u0026clusterId\u003d%5B11%5D"
+        },
+        {
+          "k": 14,
+          "clusterIds": [
+            14
+          ],
+          "url": "http://wwwdev.ebi.ac.uk/gxa/sc/experiments/E-GEOD-146122/results?geneId\u003dENSMUSG00000020774\u0026k\u003d14\u0026clusterId\u003d%5B14%5D"
+        }
+      ]
+    },
+    "facets": [
+      {
+        "group": "Marker genes",
+        "value": "experiments with marker genes",
+        "label": "Experiments with marker genes",
+        "description": "A gene that comprises part of the specific expression profile for that cluster"
+      }
+    ]
+  },
+  {
+    "element": {
+      "longDescription": "We characterized single-cell transcriptional profiles of heart ventricles of C57BL/6J female and male mice subjected to a chronic stress, two weeks of continuous administration of Angiotensin II. The cell preparation we sequenced consisted of  metabolically active, nucleated non-myocyte cells which were depleted of endothelial cells, mixed with nuclei isolated from cardiomyocytes. The goal of this experiment included characterizing cellular diversity in stressed and unstressed hearts, uncovering potential drivers of cardiac fibrosis and hypertrophy, and quantifying sexual dimorphism in cardiac gene expression.",
+      "experimentDescription": "Single cell RNA-Seq of the mouse heart in response to chronic stress",
+      "numberOfAssays": 35356,
+      "type": "Single-cell RNA-Seq mRNA baseline",
+      "factors": [
+        "compound",
+        "dose",
+        "inferred cell type - authors labels",
+        "inferred cell type - ontology labels"
+      ],
+      "lastUpdated": "13-12-2020",
+      "dataProviderDescription": [],
+      "dataProviderURL": [],
+      "experimentAccession": "E-MTAB-8810",
+      "species": "Mus musculus",
+      "speciesReferenceName": "mus musculus",
+      "pubMedIds": [],
+      "pageDescription": "Single cell RNA-Seq of the mouse heart in response to chronic stress",
+      "alternativeViewDescriptions": [],
+      "dois": [
+        "10.1161/CIRCULATIONAHA.119.045115"
+      ],
+      "disclaimer": "",
+      "publications": [
+        {
+          "pubmedId": "32795101",
+          "doi": "10.1161/circulationaha.119.045115",
+          "title": "High-Resolution Transcriptomic Profiling of the Heart During Chronic Stress Reveals Cellular Drivers of Cardiac Fibrosis and Hypertrophy.",
+          "publicationYear": "2020",
+          "authors": "McLellan MA, Skelly DA, Dona MSI, Squiers GT, Farrugia GE, Gaynor TL, Cohen CD, Pandey R, Diep H, Vinh A, Rosenthal NA, Pinto AR."
+        }
+      ],
+      "alternativeViews": [],
+      "url": "http://wwwdev.ebi.ac.uk/gxa/sc/experiments/E-MTAB-8810?geneId\u003dENSMUSG00000020774",
+      "markerGenes": [
+        {
+          "k": 16,
+          "clusterIds": [
+            14
+          ],
+          "url": "http://wwwdev.ebi.ac.uk/gxa/sc/experiments/E-MTAB-8810/results?geneId\u003dENSMUSG00000020774\u0026k\u003d16\u0026clusterId\u003d%5B14%5D"
+        }
+      ]
+    },
+    "facets": [
+      {
+        "group": "Marker genes",
+        "value": "experiments with marker genes",
+        "label": "Experiments with marker genes",
+        "description": "A gene that comprises part of the specific expression profile for that cluster"
+      }
+    ]
+  },
+  {
+    "element": {
+      "longDescription": "In this project we explore the role of the master hypoxia regulator, Hypoxia inducible factor-1alpha (Hif-1a), in governing cardiac fibroblast (CF) function in homeostasis and following an acute ischaemic injury - myocardial infarction (MI). CF-specific Hif-1a conditional knockout (cKO) mice were generated by breeding Pdgfra-merCremer (PdgfraMCM/+) Cre recombinase driver mice with Hif-1a-floxed mice (Hif-1aflox/). In Hif-1afl/-; PdgfraMCM/+ progeny, Hif-1a could be conditionally deleted in adult CFs by tamoxifen (tam) administration. We also introduced a Cre-dependent R26tdTomato reporter allele allowing marking of Pdgfra+ CFs and their progeny. In this experiment, we first performed single-cell RNA sequencing (scRNA-seq) on tdTomato+ cells from the hearts of healthy cKO or heterozygous (HET) adult, male mice using the 10x Genomics Chromium system. We also performed scRNA-seq on tdTomato+/CD31-/CD45- cells from the hearts of cKO or HET mice at day-3 post-sham or -MI surgery.",
+      "experimentDescription": "Single-cell RNA-seq on enriched cardiac fibroblasts from the healthy, sham or MI hearts of Hif-1a conditional knockout or heterozygous mice",
+      "numberOfAssays": 31588,
+      "type": "Single-cell RNA-Seq mRNA baseline",
+      "factors": [
+        "genotype",
+        "injury",
+        "sampling time point",
+        "inferred cell type - authors labels",
+        "inferred cell type - ontology labels"
+      ],
+      "lastUpdated": "18-12-2021",
+      "dataProviderDescription": [],
+      "dataProviderURL": [],
+      "experimentAccession": "E-MTAB-9583",
+      "species": "Mus musculus",
+      "speciesReferenceName": "mus musculus",
+      "pubMedIds": [
+        "34762860"
+      ],
+      "pageDescription": "Single-cell RNA-seq on enriched cardiac fibroblasts from the healthy, sham or MI hearts of Hif-1a conditional knockout or heterozygous mice",
+      "alternativeViewDescriptions": [],
+      "dois": [
+        "10.1016/j.stem.2021.10.009"
+      ],
+      "disclaimer": "",
+      "publications": [
+        {
+          "pubmedId": "34762860",
+          "doi": "10.1016/j.stem.2021.10.009",
+          "title": "Hif-1a suppresses ROS-induced proliferation of cardiac fibroblasts following myocardial infarction.",
+          "publicationYear": "2022",
+          "authors": "Janbandhu V, Tallapragada V, Patrick R, Li Y, Abeygunawardena D, Humphreys DT, Martin EMMA, Ward AO, Contreras O, Farbehi N, Yao E, Du J, Dunwoodie SL, Bursac N, Harvey RP."
+        }
+      ],
+      "alternativeViews": [],
+      "url": "http://wwwdev.ebi.ac.uk/gxa/sc/experiments/E-MTAB-9583?geneId\u003dENSMUSG00000020774",
+      "markerGenes": [
+        {
+          "k": 29,
+          "clusterIds": [
+            3
+          ],
+          "url": "http://wwwdev.ebi.ac.uk/gxa/sc/experiments/E-MTAB-9583/results?geneId\u003dENSMUSG00000020774\u0026k\u003d29\u0026clusterId\u003d%5B3%5D"
+        }
+      ]
+    },
+    "facets": [
+      {
+        "group": "Marker genes",
+        "value": "experiments with marker genes",
+        "label": "Experiments with marker genes",
+        "description": "A gene that comprises part of the specific expression profile for that cluster"
+      }
+    ]
+  },
+  {
+    "element": {
+      "longDescription": "To understand the diversity of cellular states within mouse intestinal epithelial tissue, we obtained whole intestines from wild type mice, disaggregated the samples, sorted into single cells and profiled them by single-cell RNA-seq. To understand normal tissue homeostasis, untreated cells were profiled, while to investigate the impact of enteric pathogens on epithelial cells, mice infected with both Salmonella enterica and the parasitic worm H. polygyrus were profiled using both 3\u0027-droplet-based and full length plate-based single-cell RNAseq. RANKL-mediated differentiation of organoid cultures were used to sequence the rare intestinal M cell, these were then compared to M cells obtained from the in vivo follicle associated epithelium (FAE). NOTE: This dataset represents a subset of the original GSE92332 containing only 389 epithelial cells sequenced using full-length plate-based single cell RNA-seq in response to Salmonella enterica and to the parasitic helminth Heligmosomoides polygyrus.",
+      "experimentDescription": "Single-cell RNA-seq analysis of 389 cells of the small intestinal epithelium in response to Salmonella enterica and to the parasitic helminth Heligmosomoides polygyrus",
+      "numberOfAssays": 387,
+      "type": "Single-cell RNA-Seq mRNA baseline",
+      "factors": [
+        "single cell identifier",
+        "infect",
+        "time",
+        "inferred cell type - ontology labels"
+      ],
+      "lastUpdated": "25-05-2018",
+      "dataProviderDescription": [],
+      "dataProviderURL": [],
+      "experimentAccession": "E-ENAD-14",
+      "species": "Mus musculus",
+      "speciesReferenceName": "mus musculus",
+      "pubMedIds": [
+        "29144463"
+      ],
+      "pageDescription": "Single-cell RNA-seq analysis of 389 cells of the small intestinal epithelium in response to Salmonella enterica and to the parasitic helminth Heligmosomoides polygyrus",
+      "alternativeViewDescriptions": [],
+      "dois": [
+        "10.1038/nature24489"
+      ],
+      "disclaimer": "",
+      "publications": [
+        {
+          "pubmedId": "29144463",
+          "doi": "10.1038/nature24489",
+          "title": "A single-cell survey of the small intestinal epithelium.",
+          "publicationYear": "2017",
+          "authors": "Haber AL, Biton M, Rogel N, Herbst RH, Shekhar K, Smillie C, Burgin G, Delorey TM, Howitt MR, Katz Y, Tirosh I, Beyaz S, Dionne D, Zhang M, Raychowdhury R, Garrett WS, Rozenblatt-Rosen O, Shi HN, Yilmaz O, Xavier RJ, Regev A."
+        }
+      ],
+      "alternativeViews": [],
+      "url": "http://wwwdev.ebi.ac.uk/gxa/sc/experiments/E-ENAD-14?geneId\u003dENSMUSG00000020774",
+      "markerGenes": [
+        {
+          "k": 8,
+          "clusterIds": [
+            4
+          ],
+          "url": "http://wwwdev.ebi.ac.uk/gxa/sc/experiments/E-ENAD-14/results?geneId\u003dENSMUSG00000020774\u0026k\u003d8\u0026clusterId\u003d%5B4%5D"
+        }
+      ]
+    },
+    "facets": [
+      {
+        "group": "Marker genes",
+        "value": "experiments with marker genes",
+        "label": "Experiments with marker genes",
+        "description": "A gene that comprises part of the specific expression profile for that cluster"
+      }
+    ]
+  },
+  {
+    "element": {
+      "longDescription": "We have created a compendium of single cell transcriptome data from the model organism Mus musculus comprising more than 100,000 cells from 20 organs and tissues. These data represent a new resource for cell biology, revealing gene expression in poorly characterized cell populations and allowing for direct and controlled comparison of gene expression in cell types shared between tissues, such as T-lymphocytes and endothelial cells from distinct anatomical locations. Two distinct technical approaches were used for most tissues: one approach, microfluidic droplet-based 3’-end counting, enabled the survey of thousands of cells at relatively low coverage, while the other, FACS-based full length transcript analysis, enabled characterization of cell types with high sensitivity and coverage. The cumulative data provide the foundation for an atlas of transcriptomic cell biology. NOTE: This dataset represents a subset of the original GSE109774 containing only 57,760 cells sequenced using FACS-based full-length single cell RNA-seq.",
+      "experimentDescription": "Single-cell RNA-seq analysis of 20 organs and tissues from individual mice creates a Tabula muris",
+      "numberOfAssays": 53759,
+      "type": "Single-cell RNA-Seq mRNA baseline",
+      "factors": [
+        "single cell identifier",
+        "organism part",
+        "inferred cell type - ontology labels"
+      ],
+      "lastUpdated": "08-06-2019",
+      "dataProviderDescription": [],
+      "dataProviderURL": [],
+      "experimentAccession": "E-ENAD-15",
+      "species": "Mus musculus",
+      "speciesReferenceName": "mus musculus",
+      "pubMedIds": [],
+      "pageDescription": "Single-cell RNA-seq analysis of 20 organs and tissues from individual mice creates a Tabula muris",
+      "alternativeViewDescriptions": [],
+      "dois": [
+        "doi.org/10.1101/237446"
+      ],
+      "disclaimer": "",
+      "publications": [],
+      "alternativeViews": [],
+      "url": "http://wwwdev.ebi.ac.uk/gxa/sc/experiments/E-ENAD-15?geneId\u003dENSMUSG00000020774",
+      "markerGenes": [
+        {
+          "k": 32,
+          "clusterIds": [
+            11
+          ],
+          "url": "http://wwwdev.ebi.ac.uk/gxa/sc/experiments/E-ENAD-15/results?geneId\u003dENSMUSG00000020774\u0026k\u003d32\u0026clusterId\u003d%5B11%5D"
+        },
+        {
+          "k": 35,
+          "clusterIds": [
+            11
+          ],
+          "url": "http://wwwdev.ebi.ac.uk/gxa/sc/experiments/E-ENAD-15/results?geneId\u003dENSMUSG00000020774\u0026k\u003d35\u0026clusterId\u003d%5B11%5D"
+        },
+        {
+          "k": 67,
+          "clusterIds": [
+            9
+          ],
+          "url": "http://wwwdev.ebi.ac.uk/gxa/sc/experiments/E-ENAD-15/results?geneId\u003dENSMUSG00000020774\u0026k\u003d67\u0026clusterId\u003d%5B9%5D"
+        },
+        {
+          "k": 101,
+          "clusterIds": [
+            3
+          ],
+          "url": "http://wwwdev.ebi.ac.uk/gxa/sc/experiments/E-ENAD-15/results?geneId\u003dENSMUSG00000020774\u0026k\u003d101\u0026clusterId\u003d%5B3%5D"
+        },
+        {
+          "k": 85,
+          "clusterIds": [
+            5
+          ],
+          "url": "http://wwwdev.ebi.ac.uk/gxa/sc/experiments/E-ENAD-15/results?geneId\u003dENSMUSG00000020774\u0026k\u003d85\u0026clusterId\u003d%5B5%5D"
+        },
+        {
+          "k": 44,
+          "clusterIds": [
+            10
+          ],
+          "url": "http://wwwdev.ebi.ac.uk/gxa/sc/experiments/E-ENAD-15/results?geneId\u003dENSMUSG00000020774\u0026k\u003d44\u0026clusterId\u003d%5B10%5D"
+        },
+        {
+          "k": 61,
+          "clusterIds": [
+            10
+          ],
+          "url": "http://wwwdev.ebi.ac.uk/gxa/sc/experiments/E-ENAD-15/results?geneId\u003dENSMUSG00000020774\u0026k\u003d61\u0026clusterId\u003d%5B10%5D"
+        },
+        {
+          "k": 47,
+          "clusterIds": [
+            11
+          ],
+          "url": "http://wwwdev.ebi.ac.uk/gxa/sc/experiments/E-ENAD-15/results?geneId\u003dENSMUSG00000020774\u0026k\u003d47\u0026clusterId\u003d%5B11%5D"
+        }
+      ]
+    },
+    "facets": [
+      {
+        "group": "Marker genes",
+        "value": "experiments with marker genes",
+        "label": "Experiments with marker genes",
+        "description": "A gene that comprises part of the specific expression profile for that cluster"
+      }
+    ]
+  },
+  {
+    "element": {
+      "longDescription": "Splenic white pulp (WP) structures are underpinned by fibroblastic stromal cells (FSCs) to facilitate splenic compartmentalization and execute efficient immune responses. Although distinct WP FSCs exhibit various molecular traits, the origin and the hierarchical differentiation of different cell subsets are not characterized. Here we showed, the organization of splenic WP and the differentiation of WP FSCs were governed by lymphotoxin beta receptor (LTβR) signaling pathway. Cell fate mapping analysis revealed that different WP fibroblastic stromal cells descend from a common perivascular LTβR-sensitive mesenchymal lymphoid organizer cells (mLTo) at prenatal stage. Moreover, embryonic mLTo cells required LTβR signaling to give rise to different WP stromal cell subsets, while the proliferation of these cells was devoid of LTβR signaling but followed the development of WP during ontogeny. Moreover, cell fate mapping from different time point indicated a consecutive commitment of mLTo cells initiated from the proximal region around the splenic artery. RNAseq and differentiation trajectory analysis of distinct FSCs showed that Ltbr-deficient cells and perivascular reticular cells (PRCs) from adult spleen exhibited a progenitor phenotype and revealed a closer hierarchical lineage with embryonic mLTo cells. Taken together, our results unveil that embryonic mLTo cells residing in the perivascular niches can give rise to different FSC populations in a LTβR-dependent manner during development.",
+      "experimentDescription": "Fibroblastic reticular cells in the spleen - total splenic Stroma cells - single cell RNAseq dataset 2",
+      "numberOfAssays": 18264,
+      "type": "Single-cell RNA-Seq mRNA baseline",
+      "factors": [
+        "replicate"
+      ],
+      "lastUpdated": "07-06-2019",
+      "dataProviderDescription": [],
+      "dataProviderURL": [],
+      "experimentAccession": "E-MTAB-7703",
+      "species": "Mus musculus",
+      "speciesReferenceName": "mus musculus",
+      "pubMedIds": [
+        "30988302"
+      ],
+      "pageDescription": "Fibroblastic reticular cells in the spleen - total splenic Stroma cells - single cell RNAseq dataset 2",
+      "alternativeViewDescriptions": [],
+      "dois": [
+        "10.1038/s41467-019-09728-3"
+      ],
+      "disclaimer": "",
+      "publications": [
+        {
+          "pubmedId": "30988302",
+          "doi": "10.1038/s41467-019-09728-3",
+          "title": "Origin and differentiation trajectories of fibroblastic reticular cells in the splenic white pulp.",
+          "publicationYear": "2019",
+          "authors": "Cheng HW, Onder L, Novkovic M, Soneson C, Lütge M, Pikor N, Scandella E, Robinson MD, Miyazaki JI, Tersteegen A, Sorg U, Pfeffer K, Rülicke T, Hehlgans T, Ludewig B."
+        }
+      ],
+      "alternativeViews": [],
+      "url": "http://wwwdev.ebi.ac.uk/gxa/sc/experiments/E-MTAB-7703?geneId\u003dENSMUSG00000020774",
+      "markerGenes": [
+        {
+          "k": 35,
+          "clusterIds": [
+            34
+          ],
+          "url": "http://wwwdev.ebi.ac.uk/gxa/sc/experiments/E-MTAB-7703/results?geneId\u003dENSMUSG00000020774\u0026k\u003d35\u0026clusterId\u003d%5B34%5D"
+        },
+        {
+          "k": 68,
+          "clusterIds": [
+            66
+          ],
+          "url": "http://wwwdev.ebi.ac.uk/gxa/sc/experiments/E-MTAB-7703/results?geneId\u003dENSMUSG00000020774\u0026k\u003d68\u0026clusterId\u003d%5B66%5D"
+        },
+        {
+          "k": 56,
+          "clusterIds": [
+            53
+          ],
+          "url": "http://wwwdev.ebi.ac.uk/gxa/sc/experiments/E-MTAB-7703/results?geneId\u003dENSMUSG00000020774\u0026k\u003d56\u0026clusterId\u003d%5B53%5D"
+        },
+        {
+          "k": 47,
+          "clusterIds": [
+            45
+          ],
+          "url": "http://wwwdev.ebi.ac.uk/gxa/sc/experiments/E-MTAB-7703/results?geneId\u003dENSMUSG00000020774\u0026k\u003d47\u0026clusterId\u003d%5B45%5D"
+        }
+      ]
+    },
+    "facets": [
+      {
+        "group": "Marker genes",
+        "value": "experiments with marker genes",
+        "label": "Experiments with marker genes",
+        "description": "A gene that comprises part of the specific expression profile for that cluster"
+      }
+    ]
+  },
+  {
+    "element": {
+      "longDescription": "By analyzing thousands of vascular single cell transcriptomes from adult mouse brain, we provide molecular definitions of the principal vascular (endothelial and mural cells), and vascular-associated cell classes. We used four different transgenic mouse reporter lines with fluorescent expression in different populations of vascular cells, Cldn5(BAC)eGFP mice that strongly labels brain endothelial cells, mice doubly positive for Pdgfrb(BAC)eGFP and NG2dsRed, in which brain vascular mural cells express both markers whereas each single marker are expressed also in other, non-overlapping cell types, and Pdgfra-H2BGFP that we found labeled a perivascular population of cells distinct from mural cells and astrocytes, in addition to the known labeling of cells of the oligendendrocyte lineage.   We chose to focus our efforts to adult mice 10 to 19 weeks old in order to primarily define fully differentiated and quiescent vascular cells and we chose a methodology based on fluorescence-activated cell sorting (FACS) into 384-well plates followed by the SmartSeq2 methodology for the generation and sequencing of full length polyadenylated cDNAs",
+      "experimentDescription": "Single cell RNA-seq of mouse brain vascular transcriptomes",
+      "numberOfAssays": 3186,
+      "type": "Single-cell RNA-Seq mRNA baseline",
+      "factors": [
+        "single cell identifier"
+      ],
+      "lastUpdated": "26-05-2018",
+      "dataProviderDescription": [],
+      "dataProviderURL": [],
+      "experimentAccession": "E-GEOD-98816",
+      "species": "Mus musculus",
+      "speciesReferenceName": "mus musculus",
+      "pubMedIds": [
+        "29443965"
+      ],
+      "pageDescription": "Single cell RNA-seq of mouse brain vascular transcriptomes",
+      "alternativeViewDescriptions": [],
+      "dois": [
+        "10.1038/nature25739"
+      ],
+      "disclaimer": "",
+      "publications": [
+        {
+          "pubmedId": "29443965",
+          "doi": "10.1038/nature25739",
+          "title": "A molecular atlas of cell types and zonation in the brain vasculature.",
+          "publicationYear": "2018",
+          "authors": "Vanlandewijck M, He L, Mäe MA, Andrae J, Ando K, Del Gaudio F, Nahar K, Lebouvier T, Laviña B, Gouveia L, Sun Y, Raschperger E, Räsänen M, Zarb Y, Mochizuki N, Keller A, Lendahl U, Betsholtz C."
+        }
+      ],
+      "alternativeViews": [],
+      "url": "http://wwwdev.ebi.ac.uk/gxa/sc/experiments/E-GEOD-98816?geneId\u003dENSMUSG00000020774",
+      "markerGenes": [
+        {
+          "k": 5,
+          "clusterIds": [
+            3
+          ],
+          "url": "http://wwwdev.ebi.ac.uk/gxa/sc/experiments/E-GEOD-98816/results?geneId\u003dENSMUSG00000020774\u0026k\u003d5\u0026clusterId\u003d%5B3%5D"
+        },
+        {
+          "k": 12,
+          "clusterIds": [
+            7
+          ],
+          "url": "http://wwwdev.ebi.ac.uk/gxa/sc/experiments/E-GEOD-98816/results?geneId\u003dENSMUSG00000020774\u0026k\u003d12\u0026clusterId\u003d%5B7%5D"
+        }
+      ]
+    },
+    "facets": [
+      {
+        "group": "Marker genes",
+        "value": "experiments with marker genes",
+        "label": "Experiments with marker genes",
+        "description": "A gene that comprises part of the specific expression profile for that cluster"
+      }
+    ]
+  },
+  {
+    "element": {
+      "longDescription": "Cellular heterogeneity within the mammalian brain poses a challenge towards understanding its complex functions.  Within the olfactory bulb (OB), odor information is processed by subtypes of inhibitory interneurons whose heterogeneity and functionality is influenced by ongoing adult neurogenesis.  To investigate this cellular heterogeneity, and to better understand the developmental programs of adult-born neurons, we utilized single cell RNA sequencing and computational modeling to reveal diverse and transcriptionally distinct neuronal and non-neuronal cell types. We also analyzed molecular changes during adult-born interneuron maturation, and uncovered developmental programs within their gene expression profiles. Finally, we discovered that distinct neuronal subtypes are differentially affected by sensory experience. Together, these data provide a transcriptome-based foundation for investigating subtype-specific neuronal function in the OB, charting the molecular profiles that arise during the maturation and integration of adult-born neurons, and documenting activity-dependent changes in the cellular composition of the olfactory system. To develop a comprehensive profile of cellular heterogeneity within the OB, here we employed high-throughput single-cell RNA sequencing (scRNA-seq) (Zheng et al. 2017) of activity manipulated and wildtype mouse olfactory bulbs. This technique allows an in-depth categorization of single cell molecular signatures, and provides an analysis of potential developmental and activity-dependent changes that occur in adult-born neuron populations. Together, our data inform the heterogeneity of interneurons within the OB, provide a molecular blueprint of stereotyped developmental programs for OB interneurons, and reveal the transcriptional changes that govern activity-dependent circuit integration of adult-born neurons. Furthermore, our results suggest that distinct molecular mechanisms act on different subsets of adult-born neurons, driving diversity and survival of adult-born interneuron subsets in an activity-dependent manner.",
+      "experimentDescription": "Single cell RNAseq of mouse olfactory bulb reveals cellular heterogeneity and activity dependent molecular census of adult-born neurons",
+      "numberOfAssays": 39850,
+      "type": "Single-cell RNA-Seq mRNA baseline",
+      "factors": [
+        "stimulus"
+      ],
+      "lastUpdated": "01-05-2021",
+      "dataProviderDescription": [],
+      "dataProviderURL": [],
+      "experimentAccession": "E-GEOD-121891",
+      "species": "Mus musculus",
+      "speciesReferenceName": "mus musculus",
+      "pubMedIds": [
+        "30517858"
+      ],
+      "pageDescription": "Single cell RNAseq of mouse olfactory bulb reveals cellular heterogeneity and activity dependent molecular census of adult-born neurons",
+      "alternativeViewDescriptions": [],
+      "dois": [
+        "10.1016/j.celrep.2018.11.034"
+      ],
+      "disclaimer": "",
+      "publications": [
+        {
+          "pubmedId": "30517858",
+          "doi": "10.1016/j.celrep.2018.11.034",
+          "title": "Single-Cell RNA-Seq of Mouse Olfactory Bulb Reveals Cellular Heterogeneity and Activity-Dependent Molecular Census of Adult-Born Neurons.",
+          "publicationYear": "2018",
+          "authors": "Tepe B, Hill MC, Pekarek BT, Hunt PJ, Martin TJ, Martin JF, Arenkiel BR."
+        }
+      ],
+      "alternativeViews": [],
+      "url": "http://wwwdev.ebi.ac.uk/gxa/sc/experiments/E-GEOD-121891?geneId\u003dENSMUSG00000020774",
+      "markerGenes": [
+        {
+          "k": 17,
+          "clusterIds": [
+            1
+          ],
+          "url": "http://wwwdev.ebi.ac.uk/gxa/sc/experiments/E-GEOD-121891/results?geneId\u003dENSMUSG00000020774\u0026k\u003d17\u0026clusterId\u003d%5B1%5D"
+        },
+        {
+          "k": 20,
+          "clusterIds": [
+            2
+          ],
+          "url": "http://wwwdev.ebi.ac.uk/gxa/sc/experiments/E-GEOD-121891/results?geneId\u003dENSMUSG00000020774\u0026k\u003d20\u0026clusterId\u003d%5B2%5D"
+        },
+        {
+          "k": 23,
+          "clusterIds": [
+            2
+          ],
+          "url": "http://wwwdev.ebi.ac.uk/gxa/sc/experiments/E-GEOD-121891/results?geneId\u003dENSMUSG00000020774\u0026k\u003d23\u0026clusterId\u003d%5B2%5D"
+        },
+        {
+          "k": 56,
+          "clusterIds": [
+            4
+          ],
+          "url": "http://wwwdev.ebi.ac.uk/gxa/sc/experiments/E-GEOD-121891/results?geneId\u003dENSMUSG00000020774\u0026k\u003d56\u0026clusterId\u003d%5B4%5D"
+        },
+        {
+          "k": 11,
+          "clusterIds": [
+            1
+          ],
+          "url": "http://wwwdev.ebi.ac.uk/gxa/sc/experiments/E-GEOD-121891/results?geneId\u003dENSMUSG00000020774\u0026k\u003d11\u0026clusterId\u003d%5B1%5D"
+        },
+        {
+          "k": 28,
+          "clusterIds": [
+            13,
+            23,
+            27,
+            3
+          ],
+          "url": "http://wwwdev.ebi.ac.uk/gxa/sc/experiments/E-GEOD-121891/results?geneId\u003dENSMUSG00000020774\u0026k\u003d28\u0026clusterId\u003d%5B13,%2023,%2027,%203%5D"
+        },
+        {
+          "k": 46,
+          "clusterIds": [
+            7
+          ],
+          "url": "http://wwwdev.ebi.ac.uk/gxa/sc/experiments/E-GEOD-121891/results?geneId\u003dENSMUSG00000020774\u0026k\u003d46\u0026clusterId\u003d%5B7%5D"
+        }
+      ]
+    },
+    "facets": [
+      {
+        "group": "Marker genes",
+        "value": "experiments with marker genes",
+        "label": "Experiments with marker genes",
+        "description": "A gene that comprises part of the specific expression profile for that cluster"
+      }
+    ]
+  },
+  {
+    "element": {
+      "longDescription": "Bone marrow derived phagocytes from mouse, rat, rabbit and pig stimulated with LPS (100ng/mL) or with dsRNA (poly I:C)  (1ug/mL) for 0,2,4,6 hours.  Processed files include UMI matrices of QCed cells that belong to the first cluster (as described in the publication), which were used for all the analyses presented in the publication.",
+      "experimentDescription": "Single-cell RNA-seq of of bone marrow derived mononuclear phagocytes derived from rabbit",
+      "numberOfAssays": 78786,
+      "type": "Single-cell RNA-Seq mRNA baseline",
+      "factors": [
+        "compound",
+        "dose",
+        "sampling time point"
+      ],
+      "lastUpdated": "09-02-2022",
+      "dataProviderDescription": [],
+      "dataProviderURL": [],
+      "experimentAccession": "E-CURD-102",
+      "species": "Oryctolagus cuniculus",
+      "speciesReferenceName": "oryctolagus cuniculus",
+      "pubMedIds": [
+        "30356220"
+      ],
+      "pageDescription": "Single-cell RNA-seq of of bone marrow derived mononuclear phagocytes derived from rabbit",
+      "alternativeViewDescriptions": [],
+      "dois": [
+        "10.1038/s41586-018-0657-2"
+      ],
+      "disclaimer": "",
+      "publications": [
+        {
+          "pubmedId": "30356220",
+          "doi": "10.1038/s41586-018-0657-2",
+          "title": "Gene expression variability across cells and species shapes innate immunity.",
+          "publicationYear": "2018",
+          "authors": "Hagai T, Chen X, Miragaia RJ, Rostom R, Gomes T, Kunowska N, Henriksson J, Park JE, Proserpio V, Donati G, Bossini-Castillo L, Vieira Braga FA, Naamati G, Fletcher J, Stephenson E, Vegh P, Trynka G, Kondova I, Dennis M, Haniffa M, Nourmohammad A, Lässig M, Teichmann SA."
+        }
+      ],
+      "alternativeViews": [],
+      "url": "http://wwwdev.ebi.ac.uk/gxa/sc/experiments/E-CURD-102?geneId\u003dENSOCUG00000005855",
+      "markerGenes": [
+        {
+          "k": 86,
+          "clusterIds": [
+            29
+          ],
+          "url": "http://wwwdev.ebi.ac.uk/gxa/sc/experiments/E-CURD-102/results?geneId\u003dENSOCUG00000005855\u0026k\u003d86\u0026clusterId\u003d%5B29%5D"
+        }
+      ]
+    },
+    "facets": [
+      {
+        "group": "Marker genes",
+        "value": "experiments with marker genes",
+        "label": "Experiments with marker genes",
+        "description": "A gene that comprises part of the specific expression profile for that cluster"
+      }
+    ]
+  },
+  {
+    "element": {
+      "longDescription": "Microglia, brain resident macrophages, require instruction from the central nervous system microenvironment to maintain their identity, morphology, and to regulate inflammatory responses. We investigated the heterogeneity of response of microglia to the presence of neurons and astrocytes by performing single-cell sequencing of microglia in both monoculture, and in co-culture with neurons and astrocytes.",
+      "experimentDescription": "Single-cell RNA-seq of rat microglia in monoculture and in coculture with neurons and astrocytes",
+      "numberOfAssays": 35002,
+      "type": "Single-cell RNA-Seq mRNA baseline",
+      "factors": [
+        "growth condition"
+      ],
+      "lastUpdated": "25-08-2022",
+      "dataProviderDescription": [],
+      "dataProviderURL": [],
+      "experimentAccession": "E-MTAB-10030",
+      "species": "Rattus norvegicus",
+      "speciesReferenceName": "rattus norvegicus",
+      "pubMedIds": [
+        "33761343"
+      ],
+      "pageDescription": "Single-cell RNA-seq of rat microglia in monoculture and in coculture with neurons and astrocytes",
+      "alternativeViewDescriptions": [],
+      "dois": [
+        "10.1016/j.celrep.2021.108882"
+      ],
+      "disclaimer": "",
+      "publications": [
+        {
+          "pubmedId": "33761343",
+          "doi": "10.1016/j.celrep.2021.108882",
+          "title": "Microglial identity and inflammatory responses are controlled by the combined effects of neurons and astrocytes.",
+          "publicationYear": "2021",
+          "authors": "Baxter PS, Dando O, Emelianova K, He X, McKay S, Hardingham GE, Qiu J."
+        }
+      ],
+      "alternativeViews": [],
+      "url": "http://wwwdev.ebi.ac.uk/gxa/sc/experiments/E-MTAB-10030?geneId\u003dENSRNOG00000019659",
+      "markerGenes": [
+        {
+          "k": 16,
+          "clusterIds": [
+            13
+          ],
+          "url": "http://wwwdev.ebi.ac.uk/gxa/sc/experiments/E-MTAB-10030/results?geneId\u003dENSRNOG00000019659\u0026k\u003d16\u0026clusterId\u003d%5B13%5D"
+        },
+        {
+          "k": 24,
+          "clusterIds": [
+            10
+          ],
+          "url": "http://wwwdev.ebi.ac.uk/gxa/sc/experiments/E-MTAB-10030/results?geneId\u003dENSRNOG00000019659\u0026k\u003d24\u0026clusterId\u003d%5B10%5D"
+        }
+      ]
+    },
+    "facets": [
+      {
+        "group": "Marker genes",
+        "value": "experiments with marker genes",
+        "label": "Experiments with marker genes",
+        "description": "A gene that comprises part of the specific expression profile for that cluster"
+      }
+    ]
+  }
+]
