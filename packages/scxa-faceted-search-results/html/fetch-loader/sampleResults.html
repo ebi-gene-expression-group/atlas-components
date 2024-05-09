@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>FacetedSearchContainer demo</title>
+
+    <link rel="stylesheet" href="https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/css/ebi-global.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="https://ebi.emblstatic.net/web_guidelines/EBI-Icon-fonts/v1.3/fonts.css" type="text/css" media="all" />
+
+    <style type="text/css">
+        #target input {
+            height: unset;
+            box-shadow: none;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+<div id="wrapper" class="row column expanded margin-top-large">
+    <div id="content" class="small-12 columns">
+        <div id="target">
+        </div>
+    </div>
+</div>
+</body>
+
+<script src="/dist/vendors.bundle.js"></script>
+<script src="/dist/facetedSearchContainerSampleResultsDemo.bundle.js"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function (event) {
+        facetedSearchContainerSampleResultsDemo.render({}, 'target');
+    })
+</script>
+
+</html>
