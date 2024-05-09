@@ -4,23 +4,22 @@ import URI from 'urijs'
 
 import { Table, Text } from 'evergreen-ui'
 
-const TableCell = ({ dataRow, dataKey, image, linkTo, host, width }) => {
+const ANNDATA_EXPERIMENT = `E-ANND`
+const TableCell = ({ dataRow, dataKey, image, icon, linkTo, host, width }) => {
   let cellItem = null
-  let regex = new RegExp(`E-ANND`)
-  if (image) {
-    // If the column is an image put the image in the cell (or an unknown icon if the type is undefined)
-    if (image[dataRow[dataKey]]) {
-      cellItem = <img {...image[dataRow[dataKey]]}/>
-    }
-    else if (Object.keys(image).includes(`anndata`)) {
-      let ifAnndata = regex.test(dataRow[dataKey]) ? `anndata` : `nonAnndata`
-      cellItem = <img {...image[ifAnndata]}/>
-    }
-    else {
-      cellItem = `❔`
-    }
+  if (icon) {
+      // If the column includes an icon in the cell for anndata experiment
+      cellItem = dataRow[`experimentAccession`].startsWith(ANNDATA_EXPERIMENT) ?
+          <div className={'icon'}>
+              <img {...icon[ANNDATA_EXPERIMENT]}/>
+              {dataRow[dataKey]}
+          </div> :
+          dataRow[dataKey]
+  } else if (image) {
+      // If the column is an image put the image in the cell (or an unknown icon if the type is undefined)
+      cellItem = image[dataRow[dataKey]] ? <img {...image[dataRow[dataKey]]}/> : `❔`
   } else if (Array.isArray(dataRow[dataKey])) {
-    // If the contents of the cell is an array expand it to a list
+      // If the contents of the cell is an array expand it to a list
     cellItem =
         <ul>
           {dataRow[dataKey].map(

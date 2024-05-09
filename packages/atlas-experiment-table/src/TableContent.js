@@ -90,6 +90,7 @@ const TableContent =
                         dataRow={dataRow}
                         dataKey={tableHeader.dataKey}
                         image={tableHeader.image}
+                        icon={tableHeader.icon}
                         host={host}
                         linkTo={tableHeader.linkTo}
                         width={tableHeader.width}/>

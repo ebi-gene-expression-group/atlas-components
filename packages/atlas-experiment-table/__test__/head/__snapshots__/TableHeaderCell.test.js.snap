@@ -17,13 +17,11 @@ exports[`TableHeaderCell matches snapshot (basic) 1`] = `
   <Memo(TableHeaderCell)
     cursor="auto"
     flexGrow={1}
-    height="auto"
   >
     <ForwardRef(TableCell)
       borderBottom={null}
       cursor="auto"
       flexGrow={1}
-      height="auto"
       overflow="visible"
     >
       <ForwardRef(Pane)
@@ -36,7 +34,6 @@ exports[`TableHeaderCell matches snapshot (basic) 1`] = `
         flex={1}
         flexGrow={1}
         flexShrink={0}
-        height="auto"
         onKeyDown={[Function]}
         overflow="visible"
         paddingX={12}
@@ -51,18 +48,16 @@ exports[`TableHeaderCell matches snapshot (basic) 1`] = `
           flex={1}
           flexGrow={1}
           flexShrink={0}
-          height="auto"
           is="div"
           onKeyDown={[Function]}
           overflow="visible"
           paddingX={12}
         >
           <div
-            className="css-saeo60 css-nil ub-h_auto ub-pl_12px ub-pr_12px ub-box-szg_border-box ub-flx_1 ub-dspl_flex ub-algn-itms_center ub-flx-srnk_0 ub-ovflw-x_visible ub-ovflw-y_visible ub-flx-grow_1 ub-crsr_auto"
+            className="css-saeo60 css-nil ub-pl_12px ub-pr_12px ub-box-szg_border-box ub-flx_1 ub-dspl_flex ub-algn-itms_center ub-flx-srnk_0 ub-ovflw-x_visible ub-ovflw-y_visible ub-flx-grow_1 ub-crsr_auto"
             onKeyDown={[Function]}
           >
             <ForwardRef(Heading)
-              height="auto"
               onClick={[Function]}
               size={500}
             >
@@ -72,7 +67,6 @@ exports[`TableHeaderCell matches snapshot (basic) 1`] = `
                 fontFamily="\\"SF UI Text\\", -apple-system, BlinkMacSystemFont, \\"Segoe UI\\", Roboto, Helvetica, Arial, sans-serif, \\"Apple Color Emoji\\", \\"Segoe UI Emoji\\", \\"Segoe UI Symbol\\""
                 fontSize="16px"
                 fontWeight={500}
-                height="auto"
                 is="h2"
                 letterSpacing="-0.05px"
                 lineHeight="20px"
@@ -81,7 +75,7 @@ exports[`TableHeaderCell matches snapshot (basic) 1`] = `
                 onClick={[Function]}
               >
                 <h2
-                  className="ub-mt_0px ub-mb_0px ub-fnt-sze_16px ub-f-wght_500 ub-ln-ht_20px ub-ltr-spc_-0-05px ub-fnt-fam_b77syt ub-color_234361 ub-h_auto ub-box-szg_border-box"
+                  className="ub-mt_0px ub-mb_0px ub-fnt-sze_16px ub-f-wght_500 ub-ln-ht_20px ub-ltr-spc_-0-05px ub-fnt-fam_b77syt ub-color_234361 ub-box-szg_border-box"
                   onClick={[Function]}
                 >
                   Header cell label
@@ -113,13 +107,11 @@ exports[`TableHeaderCell matches snapshot (searchable and sortable) 1`] = `
   <Memo(TableHeaderCell)
     cursor="auto"
     flexGrow={1}
-    height="auto"
   >
     <ForwardRef(TableCell)
       borderBottom={null}
       cursor="auto"
       flexGrow={1}
-      height="auto"
       overflow="visible"
     >
       <ForwardRef(Pane)
@@ -132,7 +124,6 @@ exports[`TableHeaderCell matches snapshot (searchable and sortable) 1`] = `
         flex={1}
         flexGrow={1}
         flexShrink={0}
-        height="auto"
         onKeyDown={[Function]}
         overflow="visible"
         paddingX={12}
@@ -147,14 +138,13 @@ exports[`TableHeaderCell matches snapshot (searchable and sortable) 1`] = `
           flex={1}
           flexGrow={1}
           flexShrink={0}
-          height="auto"
           is="div"
           onKeyDown={[Function]}
           overflow="visible"
           paddingX={12}
         >
           <div
-            className="css-saeo60 css-nil ub-h_auto ub-pl_12px ub-pr_12px ub-box-szg_border-box ub-flx_1 ub-dspl_flex ub-algn-itms_center ub-flx-srnk_0 ub-ovflw-x_visible ub-ovflw-y_visible ub-flx-grow_1 ub-crsr_auto"
+            className="css-saeo60 css-nil ub-pl_12px ub-pr_12px ub-box-szg_border-box ub-flx_1 ub-dspl_flex ub-algn-itms_center ub-flx-srnk_0 ub-ovflw-x_visible ub-ovflw-y_visible ub-flx-grow_1 ub-crsr_auto"
             onKeyDown={[Function]}
           >
             <ForwardRef(SearchInput)
@@ -359,13 +349,11 @@ exports[`TableHeaderCell matches snapshot (searchable) 1`] = `
   <Memo(TableHeaderCell)
     cursor="auto"
     flexGrow={1}
-    height="auto"
   >
     <ForwardRef(TableCell)
       borderBottom={null}
       cursor="auto"
       flexGrow={1}
-      height="auto"
       overflow="visible"
     >
       <ForwardRef(Pane)
@@ -378,7 +366,6 @@ exports[`TableHeaderCell matches snapshot (searchable) 1`] = `
         flex={1}
         flexGrow={1}
         flexShrink={0}
-        height="auto"
         onKeyDown={[Function]}
         overflow="visible"
         paddingX={12}
@@ -393,14 +380,13 @@ exports[`TableHeaderCell matches snapshot (searchable) 1`] = `
           flex={1}
           flexGrow={1}
           flexShrink={0}
-          height="auto"
           is="div"
           onKeyDown={[Function]}
           overflow="visible"
           paddingX={12}
         >
           <div
-            className="css-saeo60 css-nil ub-h_auto ub-pl_12px ub-pr_12px ub-box-szg_border-box ub-flx_1 ub-dspl_flex ub-algn-itms_center ub-flx-srnk_0 ub-ovflw-x_visible ub-ovflw-y_visible ub-flx-grow_1 ub-crsr_auto"
+            className="css-saeo60 css-nil ub-pl_12px ub-pr_12px ub-box-szg_border-box ub-flx_1 ub-dspl_flex ub-algn-itms_center ub-flx-srnk_0 ub-ovflw-x_visible ub-ovflw-y_visible ub-flx-grow_1 ub-crsr_auto"
             onKeyDown={[Function]}
           >
             <ForwardRef(SearchInput)
@@ -585,13 +571,11 @@ exports[`TableHeaderCell matches snapshot (sortable) 1`] = `
   <Memo(TableHeaderCell)
     cursor="pointer"
     flexGrow={1}
-    height="auto"
   >
     <ForwardRef(TableCell)
       borderBottom={null}
       cursor="pointer"
       flexGrow={1}
-      height="auto"
       overflow="visible"
     >
       <ForwardRef(Pane)
@@ -604,7 +588,6 @@ exports[`TableHeaderCell matches snapshot (sortable) 1`] = `
         flex={1}
         flexGrow={1}
         flexShrink={0}
-        height="auto"
         onKeyDown={[Function]}
         overflow="visible"
         paddingX={12}
@@ -619,18 +602,16 @@ exports[`TableHeaderCell matches snapshot (sortable) 1`] = `
           flex={1}
           flexGrow={1}
           flexShrink={0}
-          height="auto"
           is="div"
           onKeyDown={[Function]}
           overflow="visible"
           paddingX={12}
         >
           <div
-            className="css-saeo60 css-nil ub-h_auto ub-pl_12px ub-pr_12px ub-box-szg_border-box ub-flx_1 ub-dspl_flex ub-algn-itms_center ub-flx-srnk_0 ub-ovflw-x_visible ub-ovflw-y_visible ub-flx-grow_1 ub-crsr_pointer"
+            className="css-saeo60 css-nil ub-pl_12px ub-pr_12px ub-box-szg_border-box ub-flx_1 ub-dspl_flex ub-algn-itms_center ub-flx-srnk_0 ub-ovflw-x_visible ub-ovflw-y_visible ub-flx-grow_1 ub-crsr_pointer"
             onKeyDown={[Function]}
           >
             <ForwardRef(Heading)
-              height="auto"
               onClick={[Function]}
               size={500}
             >
@@ -640,7 +621,6 @@ exports[`TableHeaderCell matches snapshot (sortable) 1`] = `
                 fontFamily="\\"SF UI Text\\", -apple-system, BlinkMacSystemFont, \\"Segoe UI\\", Roboto, Helvetica, Arial, sans-serif, \\"Apple Color Emoji\\", \\"Segoe UI Emoji\\", \\"Segoe UI Symbol\\""
                 fontSize="16px"
                 fontWeight={500}
-                height="auto"
                 is="h2"
                 letterSpacing="-0.05px"
                 lineHeight="20px"
@@ -649,7 +629,7 @@ exports[`TableHeaderCell matches snapshot (sortable) 1`] = `
                 onClick={[Function]}
               >
                 <h2
-                  className="ub-mt_0px ub-mb_0px ub-fnt-sze_16px ub-f-wght_500 ub-ln-ht_20px ub-ltr-spc_-0-05px ub-fnt-fam_b77syt ub-color_234361 ub-h_auto ub-box-szg_border-box"
+                  className="ub-mt_0px ub-mb_0px ub-fnt-sze_16px ub-f-wght_500 ub-ln-ht_20px ub-ltr-spc_-0-05px ub-fnt-fam_b77syt ub-color_234361 ub-box-szg_border-box"
                   onClick={[Function]}
                 >
                   Header cell label
