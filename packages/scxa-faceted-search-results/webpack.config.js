@@ -6,7 +6,8 @@ const vendorsBundleName = `vendors`
 module.exports = {
   entry: {
     facetedSearchContainerWithFetchLoaderDemo: [`@babel/polyfill`, `./html/fetch-loader/demo.js`],
-    facetedSearchContainerDemo: [`@babel/polyfill`, `./html/container/demo.js`]
+    facetedSearchContainerDemo: [`@babel/polyfill`, `./html/container/demo.js`],
+    facetedSearchContainerSampleResultsDemo: [`@babel/polyfill`, `./html/fetch-loader/sampleResults.js`]
   },
 
   plugins: [
@@ -52,6 +53,17 @@ module.exports = {
         test: /\.js$/i,
         exclude: /node_modules\//,
         use: `babel-loader`
+      },
+      {
+        test: /\.(png|jpg|jpeg|gif)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[path][name].[ext]', // Optional: Customize the output path/filename
+            },
+          },
+        ],
       }
     ]
   },
