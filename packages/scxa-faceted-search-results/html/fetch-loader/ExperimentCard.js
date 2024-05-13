@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import formatNumber from 'format-number'
 import EbiSpeciesIcon from '@ebi-gene-expression-group/react-ebi-species'
+import AnndataIcon from './anndata.png';
 
 const _formatNumber = formatNumber()
 
@@ -24,7 +25,8 @@ const CardContainerDiv = styled.div`
 const SmallIconDiv = styled.div`
   width: 5%;
   text-align: center;
-  font-size: 3rem;
+  font-size: 1rem;
+  display: inline-flex;
 `
 
 const IconDiv = styled.div`
@@ -74,18 +76,10 @@ class ExperimentCard extends React.Component {
       </li>) :
       []
 
+    const showIcon = experimentAccession.startsWith("E-ANND")
+
     return (
       <CardContainerDiv onClick={this._goToExperiment.bind(this, url)}>
-          <SmallIconDiv>
-              <span data-tip={type} data-html={true} className={`icon icon-functional`}>
-                  {
-                      experimentAccession.substring(0,6) === ANNDATA ?
-                          //tbc
-                          <img src={`https://user-images.githubusercontent.com/33519183/203308460-aee477fa-c8ab-4561-be46-34254bfa1731.png`} /> :
-                          <img src={`https://www.ebi.ac.uk/gxa/resources/images/expression-atlas.png`} />
-                  }
-              </span>
-          </SmallIconDiv>
         <IconDiv>
           <EbiSpeciesIcon species={species}/>
           <h6>{species}</h6>
@@ -106,30 +100,35 @@ class ExperimentCard extends React.Component {
                 data-icon={`x`} />
             </MarkerDiv>
         }
-        <TitleDiv> {experimentDescription} </TitleDiv>
+       <TitleDiv>
+        <SmallIconDiv>
+          {showIcon && <img src={AnndataIcon} alt={`@`} title={`Anndata experiment`}/>}
+        </SmallIconDiv>
+           {experimentDescription}
+       </TitleDiv>
         <VariableDiv>
           <ul style={{marginBottom: 0}}>
-            {factors.map(factor => <li key={`factor-${factor}`}> {factor} </li>)}
+              {factors.map(factor => <li key={`factor-${factor}`}> {factor} </li>)}
           </ul>
         </VariableDiv>
-        <CountDiv> {_formatNumber(numberOfAssays)} </CountDiv>
+      <CountDiv> {_formatNumber(numberOfAssays)} </CountDiv>
       </CardContainerDiv>
     )
   }
 }
 
 ExperimentCard.propTypes = {
-  url: PropTypes.string.isRequired,
-  species: PropTypes.string.isRequired,
-  experimentDescription: PropTypes.string.isRequired,
-  markerGenes: PropTypes.arrayOf(PropTypes.shape({
+    url: PropTypes.string.isRequired,
+    species: PropTypes.string.isRequired,
+    experimentDescription: PropTypes.string.isRequired,
+    markerGenes: PropTypes.arrayOf(PropTypes.shape({
     k: PropTypes.number.isRequired,
     clusterIds: PropTypes.array.isRequired,
     url: PropTypes.string.isRequired
   })),
   numberOfAssays: PropTypes.number.isRequired,
   factors: PropTypes.array.isRequired,
-  experimentAccession: PropTypes.string.isRequired
+  experimentAccession: PropTypes.string.isRequired,
   type: PropTypes.string.isRequired
 }
 
