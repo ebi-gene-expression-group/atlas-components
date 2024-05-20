@@ -3,9 +3,22 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import formatNumber from 'format-number'
 import EbiSpeciesIcon from '@ebi-gene-expression-group/react-ebi-species'
-import AnndataIcon from './anndata.png';
 
 const _formatNumber = formatNumber()
+
+const ExperimentIconDiv = styled.div`
+  background-color: ${props => props.background};
+  color: ${props => props.color};
+  border-radius: 50%;
+  font-size: 16px;
+  height: 20px;
+  width: 20px;
+  text-align: center;
+  vertical-align: middle;
+  margin-left: 4px;
+  opacity: 0.4;
+  display: inline-block;
+`
 
 const CardContainerDiv = styled.div`
   height: 100%;
@@ -76,7 +89,8 @@ class ExperimentCard extends React.Component {
       </li>) :
       []
 
-    const showIcon = experimentAccession.startsWith("E-ANND")
+    const showIcon = experimentAccession.startsWith(ANNDATA)
+      console.log(experimentAccession, showIcon)
 
     return (
       <CardContainerDiv onClick={this._goToExperiment.bind(this, url)}>
@@ -101,10 +115,11 @@ class ExperimentCard extends React.Component {
             </MarkerDiv>
         }
        <TitleDiv>
-        <SmallIconDiv>
-          {showIcon && <img src={AnndataIcon} alt={`@`} title={`Anndata experiment`}/>}
-        </SmallIconDiv>
            {experimentDescription}
+            <SmallIconDiv>
+              {showIcon && <ExperimentIconDiv background={`red`} color={`white`} data-toggle={`tooltip`} data-placement={`bottom`}
+                                              title={`Experiment with annotated data analysed by an external source.`}>A</ExperimentIconDiv>}
+            </SmallIconDiv>
        </TitleDiv>
         <VariableDiv>
           <ul style={{marginBottom: 0}}>
