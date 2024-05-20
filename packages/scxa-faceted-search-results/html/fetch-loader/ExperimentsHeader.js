@@ -66,9 +66,9 @@ const CountDiv = styled.div`
 
 const ExperimentTableHeaderBasic = () =>
   ({
-    'titles': [`Experiment type`, `Species`, `Marker genes`, `Title`, `Experimental variables`, `Number of assays`],
-    'styles': [SmallIconDiv, IconDiv, MarkerDiv, TitleDiv, VariableDiv, CountDiv],
-    'attributes': [`experimentAccession`, `species`, `markerGenes`, `experimentDescription`, null, `numberOfAssays`]
+    'titles': [`Species`, `Marker genes`, `Title`, `Experimental variables`, `Number of assays`],
+    'styles': [IconDiv, MarkerDiv, TitleDiv, VariableDiv, CountDiv],
+    'attributes': [`species`, `markerGenes`, `experimentDescription`, null, `numberOfAssays`]
   })
 
 
