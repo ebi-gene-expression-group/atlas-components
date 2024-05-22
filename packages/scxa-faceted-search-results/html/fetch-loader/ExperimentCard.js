@@ -16,7 +16,6 @@ const ExperimentIconDiv = styled.div`
   text-align: center;
   vertical-align: middle;
   margin-left: 4px;
-  opacity: 0.4;
   display: inline-block;
 `
 
@@ -117,7 +116,7 @@ class ExperimentCard extends React.Component {
        <TitleDiv>
            {experimentDescription}
             <SmallIconDiv>
-              {showIcon && <ExperimentIconDiv background={`red`} color={`white`} data-toggle={`tooltip`} data-placement={`bottom`}
+              {showIcon && <ExperimentIconDiv background={`indianred`} color={`white`} data-toggle={`tooltip`} data-placement={`bottom`}
                                               title={`Experiment with annotated data analysed by an external source.`}>A</ExperimentIconDiv>}
             </SmallIconDiv>
        </TitleDiv>
