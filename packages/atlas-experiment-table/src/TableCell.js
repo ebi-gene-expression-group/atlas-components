@@ -17,7 +17,6 @@ const ExperimentIconDiv = styled.div`
   text-align: center;
   vertical-align: middle;
   margin-left: 4px;
-  opacity: 0.4;
   display: inline-block;
 `
 const TableCell = ({ dataRow, dataKey, image, icon, linkTo, host, width }) => {
@@ -27,7 +26,7 @@ const TableCell = ({ dataRow, dataKey, image, icon, linkTo, host, width }) => {
       cellItem = dataRow[`experimentAccession`].startsWith(ANNDATA_EXPERIMENT) ?
           <div className={'icon'}>
             {dataRow[dataKey]}
-            <ExperimentIconDiv background={`red`} color={`white`} data-toggle={`tooltip`} data-placement={`bottom`}
+            <ExperimentIconDiv background={`indianred`} color={`white`} data-toggle={`tooltip`} data-placement={`bottom`}
                              title={`Experiment with annotated data analysed by an external source.`}>A</ExperimentIconDiv>
           </div>
           :
