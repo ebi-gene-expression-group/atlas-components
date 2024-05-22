@@ -1,24 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import styled from 'styled-components'
 import URI from 'urijs'
-
+import { ExperimentIconDiv } from './ExperimentIconDiv'
 import { Table, Text } from 'evergreen-ui'
 
 const ANNDATA_EXPERIMENT = `E-ANND`
 
-const ExperimentIconDiv = styled.div`
-  background-color: ${props => props.background};
-  color: ${props => props.color};
-  border-radius: 50%;
-  font-size: 16px;
-  height: 20px;
-  width: 20px;
-  text-align: center;
-  vertical-align: middle;
-  margin-left: 4px;
-  display: inline-block;
-`
 const TableCell = ({ dataRow, dataKey, image, icon, linkTo, host, width }) => {
   let cellItem = null
   if (icon) {
