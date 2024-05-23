@@ -1,19 +1,22 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import URI from 'urijs'
-
+import { ExperimentIconDiv } from './ExperimentIconDiv'
 import { Table, Text } from 'evergreen-ui'
 
 const ANNDATA_EXPERIMENT = `E-ANND`
+
 const TableCell = ({ dataRow, dataKey, image, icon, linkTo, host, width }) => {
   let cellItem = null
   if (icon) {
       // If the column includes an icon in the cell for anndata experiment
       cellItem = dataRow[`experimentAccession`].startsWith(ANNDATA_EXPERIMENT) ?
           <div className={'icon'}>
-              <img {...icon[ANNDATA_EXPERIMENT]}/>
-              {dataRow[dataKey]}
-          </div> :
+            {dataRow[dataKey]}
+            <ExperimentIconDiv background={`indianred`} color={`white`} data-toggle={`tooltip`} data-placement={`bottom`}
+                             title={`Experiment with annotated data analysed by an external source.`}>A</ExperimentIconDiv>
+          </div>
+          :
           dataRow[dataKey]
   } else if (image) {
       // If the column is an image put the image in the cell (or an unknown icon if the type is undefined)
