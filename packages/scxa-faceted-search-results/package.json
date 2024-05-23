@@ -1,6 +1,6 @@
 {
   "name": "@ebi-gene-expression-group/scxa-faceted-search-results",
-  "version": "4.1.1",
+  "version": "4.1.2",
   "publishConfig": {
     "access": "public"
   },
