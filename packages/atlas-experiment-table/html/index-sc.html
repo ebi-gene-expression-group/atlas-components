@@ -48,7 +48,16 @@
               searchable: true,
               sortable: true,
               linkTo: function(dataRow) { return 'experiments/' + dataRow.experimentAccession + '/results'; },
-              width: 2
+              width: 2,
+              icon: {
+                  "E-ANND": {
+                      //tbc, change the src accordingly
+                      src: 'https://www.ebi.ac.uk/gxa/resources/images/experiments-table/differential.png',
+                      alt: 'Anndata experiment',
+                      title: 'Anndata experiment'
+                  }
+              }
+
             },
             {
               label: 'Experimental factors',
