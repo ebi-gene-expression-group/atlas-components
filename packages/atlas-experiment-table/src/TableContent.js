@@ -87,6 +87,7 @@ const TableContent =
                     tableHeaders.map((tableHeader, index) =>
                       <TableCell
                         key={index}
+                        label={tableHeader.label}
                         dataRow={dataRow}
                         dataKey={tableHeader.dataKey}
                         image={tableHeader.image}
