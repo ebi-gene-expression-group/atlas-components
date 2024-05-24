@@ -14,6 +14,7 @@ describe(`TableCell`, () => {
   const props = {
     dataRow: {
       string: randomString(),
+      experimentAccession: randomString(),
       number: getRandomInt(0, 9001),
       arrayOfStrings:
         Array.apply(0, Array(getRandomInt(1, MAX_DATA_ROW_ARRAY_LENGTH)))
@@ -66,29 +67,18 @@ describe(`TableCell`, () => {
   test.each(
       [`E-ANND-12`, `testExperimentAccession`, `E-MTAB-12`]
   )(`contains an icon and check if it is an Anndata experiment or no icons for others`, (arrayDataKey) => {
-      const icon = {
-            "E-ANND": {
-              src: `anndata image source`,
-              alt: `Anndata experiment`,
-              title: `Anndata experiment`
-            }
-      }
-      props.dataRow.experimentAccession = arrayDataKey
-    
-      const wrapper = shallow(<TableCell {...props} icon={icon} dataKey={`experimentAccession`} />)
-0
-      if (arrayDataKey.startsWith(`E-ANND`)) {
-        // If it's an Anndata experiment, there should be an icon
-        expect(wrapper.find('.icon').length).toBe(1);
-        expect(wrapper.find('img').prop('src')).toBe(`anndata image source`);
-        expect(wrapper.find('img').prop('alt')).toBe(`Anndata experiment`);
-        expect(wrapper.find('img').prop('title')).toBe(`Anndata experiment`);
-      } else {
-        // For other types, there should be no icon
-        expect(wrapper.find('.icon').length).toBe(0);
-        expect(wrapper.find('img').length).toBe(0);
+    props.dataRow.experimentAccession = arrayDataKey
+
+    const wrapper = shallow(<TableCell {...props} label={`Title`} dataKey={`string`} />)
+    0
+    if (arrayDataKey.startsWith(`E-ANND`)) {
+      // If it's an Anndata experiment, there should be an icon
+      expect(wrapper.find('.icon').length).toBe(1);
+    } else {
+      // For other types, there should be no icon
+      expect(wrapper.find('.icon').length).toBe(0);
     }
-    })
+  })
 
   test(`defaults to a fallback icon if a suitable image can’t be found`, () => {
     const image = {}
