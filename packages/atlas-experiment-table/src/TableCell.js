@@ -10,9 +10,9 @@ const EXPERIMENT_ACCESSION_KEY = `experimentAccession`
 
 const TableCell = ({ label, dataRow, dataKey, image, linkTo, host, width }) => {
   let cellItem = null
+  let experimentAccession = dataRow[EXPERIMENT_ACCESSION_KEY]
     // If it's anndata experiment, add an icon to title column
-  if (dataRow[EXPERIMENT_ACCESSION_KEY].startsWith(ANNDATA_EXPERIMENT) && label === TITLE_COLUMN_LABEL) {
-
+  if (experimentAccession && experimentAccession.startsWith(ANNDATA_EXPERIMENT) && label === TITLE_COLUMN_LABEL) {
     cellItem =
       <div className={'icon'}>
         {dataRow[dataKey]}
