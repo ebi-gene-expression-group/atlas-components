@@ -53,8 +53,8 @@ class ExperimentCard extends React.Component {
        <TitleDiv>
            {experimentDescription}
             <SmallIconDiv>
-              {showIcon && <ExperimentIconDiv background={`indianred`} color={`white`} data-toggle={`tooltip`} data-placement={`bottom`}
-                                              title={`Experiment with annotated data analysed by an external source.`}>A</ExperimentIconDiv>}
+              {showIcon && <ExperimentIconDiv background={`indianred`} color={`white`} data-toggle={`tooltip`}
+                                  data-placement={`bottom`} title={`Externally analysed data`}>E</ExperimentIconDiv>}
             </SmallIconDiv>
        </TitleDiv>
         <VariableDiv>
