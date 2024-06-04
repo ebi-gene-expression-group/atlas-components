@@ -17,7 +17,7 @@ const TableCell = ({ label, dataRow, dataKey, image, linkTo, host, width }) => {
       <div className={'icon'}>
         {dataRow[dataKey]}
         <ExperimentIconDiv background={`indianred`} color={`white`} data-toggle={`tooltip`} data-placement={`bottom`}
-                         title={`Externally analysed data.`}>E</ExperimentIconDiv>
+                         title={`Externally analysed data`}>E</ExperimentIconDiv>
       </div>
   } else if (image) {
       // If the column is an image put the image in the cell (or an unknown icon if the type is undefined)
