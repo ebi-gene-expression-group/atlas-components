@@ -52,7 +52,7 @@ class GeneSearchForm extends React.Component {
     return (
       <form action={URI(actionEndpoint, host).toString()} method={`post`}>
         <div className={wrapperClassName}>
-          <div className={autocompleteClassName}>
+          <div className={autocompleteClassName} data-cy={`searchTerm`}>
             <Autocomplete
               host={host}
               suggesterEndpoint={suggesterEndpoint}
@@ -63,9 +63,9 @@ class GeneSearchForm extends React.Component {
               labelText={autocompleteLabel}/>
           </div>
           { enableSpeciesSelect &&
-            <div className={speciesSelectClassName}>
+            <div className={speciesSelectClassName} data-cy={`speciesDropDown`}>
               <LabelledSelect
-                name={`species`}
+                name={`speciesDropDown`}
                 topGroup={topSpecies}
                 bottomGroup={allSpecies}
                 bottomGroupLabel={`All species`}

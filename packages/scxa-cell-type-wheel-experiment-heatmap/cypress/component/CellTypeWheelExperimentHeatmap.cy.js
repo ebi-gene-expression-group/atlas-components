@@ -91,4 +91,61 @@ describe(`CellTypeWheelExperimentHeatmap`, () => {
       cell => cy.contains(cell.geneName)
     )
   })
+
+  it(`species filter defaults to 'Any' if the species is not provided`, () => {
+    const cellType = `regulatory T cell`
+
+    cy.intercept(`GET`, `/gxa/sc/json/suggestions/species`, speciesResponse)
+    cy.intercept(`GET`,
+      `/gxa/sc/json/cell-type-marker-genes/${URI(encodeURIComponent(cellType))}?experiment-accessions=E-ENAD-15`,
+      heatMapTCellResponse)
+
+    cy.viewport(800, 1000)
+    cy.mount(<CellTypeWheelExperimentHeatmap{...props}/>)
+
+    cy.get(`[data-cy='speciesDropDown']`)
+      .get(`div[class$='ValueContainer']`)
+      .last()
+      .invoke(`text`)
+      .should(`eq`, `Any`)
+  })
+
+  it(`species filter defaults to 'Any' if the provided species variable is empty`, () => {
+    const cellType = `regulatory T cell`
+    props.species = ``
+
+    cy.intercept(`GET`, `/gxa/sc/json/suggestions/species`, speciesResponse)
+    cy.intercept(`GET`,
+      `/gxa/sc/json/cell-type-marker-genes/${URI(encodeURIComponent(cellType))}?experiment-accessions=E-ENAD-15`,
+      heatMapTCellResponse)
+
+    cy.viewport(800, 1000)
+    cy.mount(<CellTypeWheelExperimentHeatmap{...props}/>)
+
+    cy.get(`[data-cy='speciesDropDown']`)
+      .get(`div[class$='ValueContainer']`)
+      .last()
+      .invoke(`text`)
+      .should(`eq`, `Any`)
+  })
+
+  it(`species filter selects the species value if it is provided`, () => {
+    const cellType = `regulatory T cell`
+    const givenSpecies = `Mus musculus`
+    props.species = givenSpecies
+
+    cy.intercept(`GET`, `/gxa/sc/json/suggestions/species`, speciesResponse)
+    cy.intercept(`GET`,
+      `/gxa/sc/json/cell-type-marker-genes/${URI(encodeURIComponent(cellType))}?experiment-accessions=E-ENAD-15`,
+      heatMapTCellResponse)
+
+    cy.viewport(800, 1000)
+    cy.mount(<CellTypeWheelExperimentHeatmap{...props}/>)
+
+    cy.get(`[data-cy='speciesDropDown']`)
+      .get(`div[class$='ValueContainer']`)
+      .last()
+      .invoke(`text`)
+      .should(`eq`, givenSpecies)
+  })
 })

@@ -48,13 +48,18 @@ function CellTypeWheelExperimentHeatmap(props) {
         defaultValue={ { term: props.searchTerm, category: `metadata` } }
         enableSpeciesSelect={true}
         speciesSelectClassName={`small-4 columns`}
+        defaultSpecies={props.species}
       />
       <div className={`row-expanded small-12 columns`}>
         <div className={`small-12 medium-6 columns`} aria-label={`Cell type wheel`}>
           {props.searchTerm.trim() ?
             <CellTypeWheelFetchLoader
               host={props.host}
-              resource={URI(props.searchTerm, props.cellTypeWheelResource).toString()}
+              resource={URI(props.cellTypeWheelResource)
+                .segment(props.searchTerm)
+                .search(`?species=` + props.species)
+                .toString()
+              }
               fulfilledPayloadProvider={cellTypeWheelData => ({ data: cellTypeWheelData })}
               searchTerm={props.searchTerm}
               onCellTypeWheelClick={onCellTypeWheelClick}
@@ -99,7 +104,8 @@ CellTypeWheelExperimentHeatmap.propTypes = {
   suggesterEndpoint: PropTypes.string,
   cellTypeWheelResource: PropTypes.string,
   heatmapResource: PropTypes.string,
-  searchTerm: PropTypes.string.isRequired
+  searchTerm: PropTypes.string.isRequired,
+  species: PropTypes.string
 }
 
 CellTypeWheelExperimentHeatmap.defaultProps = {
