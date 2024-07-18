@@ -1,0 +1,7163 @@
+[
+  {
+    "name": "Mus musculus",
+    "id": "Mus musculus",
+    "parent": "",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-10035",
+      "E-MTAB-8810",
+      "E-MTAB-9583",
+      "E-MTAB-8077",
+      "E-ENAD-15",
+      "E-MTAB-11104",
+      "E-MTAB-10043",
+      "E-MTAB-10869",
+      "E-MTAB-6173",
+      "E-GEOD-123046",
+      "E-MTAB-6970",
+      "E-MTAB-3321",
+      "E-CURD-100",
+      "E-CURD-118",
+      "E-MTAB-10050",
+      "E-GEOD-87631",
+      "E-MTAB-4547",
+      "E-GEOD-100426",
+      "E-GEOD-81682",
+      "E-GEOD-106973",
+      "E-MTAB-8360",
+      "E-MTAB-7703",
+      "E-MTAB-7094",
+      "E-MTAB-10174",
+      "E-MTAB-6487",
+      "E-CURD-117",
+      "E-MTAB-7311",
+      "E-CURD-96",
+      "E-MTAB-4888",
+      "E-MTAB-4388",
+      "E-MTAB-4825",
+      "E-GEOD-148360",
+      "E-MTAB-7678",
+      "E-MTAB-4619",
+      "E-HCAD-21",
+      "E-MTAB-3707",
+      "E-MTAB-8562",
+      "E-MTAB-8561",
+      "E-MTAB-10021",
+      "E-MTAB-10196",
+      "E-MTAB-10197",
+      "E-EHCA-2",
+      "E-MTAB-9715",
+      "E-MTAB-8662",
+      "E-MTAB-8002",
+      "E-MTAB-10243",
+      "E-MTAB-7098",
+      "E-MTAB-5208",
+      "E-MTAB-5058",
+      "E-MTAB-6362",
+      "E-MTAB-5485",
+      "E-MTAB-7901",
+      "E-MTAB-5466",
+      "E-MTAB-10743",
+      "E-MTAB-10746",
+      "E-MTAB-7149",
+      "E-MTAB-8656",
+      "E-MTAB-7660",
+      "E-MTAB-11238",
+      "E-ENAD-13",
+      "E-ENAD-14",
+      "E-MTAB-5553",
+      "E-MTAB-7704",
+      "E-MTAB-6945",
+      "E-MTAB-5727",
+      "E-CURD-52",
+      "E-MTAB-10221",
+      "E-GEOD-151346",
+      "E-MTAB-10448",
+      "E-MTAB-8145",
+      "E-MTAB-12687",
+      "E-GEOD-146122",
+      "E-MTAB-6925",
+      "E-MTAB-6912",
+      "E-GEOD-103334",
+      "E-MTAB-6677",
+      "E-MTAB-5802",
+      "E-MTAB-10371",
+      "E-MTAB-6879",
+      "E-GEOD-90848",
+      "E-GEOD-71585",
+      "E-MTAB-10434",
+      "E-MTAB-6976",
+      "E-MTAB-6385",
+      "E-GEOD-94641",
+      "E-CURD-94",
+      "E-MTAB-6987",
+      "E-CURD-84"
+    ]
+  },
+  {
+    "name": "adipose tissue",
+    "id": "Mus musculus#adipose tissue",
+    "parent": "Mus musculus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-6677",
+      "E-MTAB-5802"
+    ]
+  },
+  {
+    "name": "adipose tissue derived mesenchymal stem cell",
+    "id": "Mus musculus#adipose tissue#adipose tissue derived mesenchymal stem cell",
+    "parent": "Mus musculus#adipose tissue",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-6677"
+    ]
+  },
+  {
+    "name": "mesenchymal stem cell of adipose",
+    "id": "Mus musculus#adipose tissue#mesenchymal stem cell of adipose",
+    "parent": "Mus musculus#adipose tissue",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-5802"
+    ]
+  },
+  {
+    "name": "allantois",
+    "id": "Mus musculus#allantois",
+    "parent": "Mus musculus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-6970"
+    ]
+  },
+  {
+    "name": "endothelial cell",
+    "id": "Mus musculus#allantois#endothelial cell",
+    "parent": "Mus musculus#allantois",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-6970"
+    ]
+  },
+  {
+    "name": "anterior gut",
+    "id": "Mus musculus#anterior gut",
+    "parent": "Mus musculus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-123046"
+    ]
+  },
+  {
+    "name": "endothelium",
+    "id": "Mus musculus#anterior gut#endothelium",
+    "parent": "Mus musculus#anterior gut",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-123046"
+    ]
+  },
+  {
+    "name": "midline",
+    "id": "Mus musculus#anterior gut#midline",
+    "parent": "Mus musculus#anterior gut",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-123046"
+    ]
+  },
+  {
+    "name": "mouse embryonic stem cell",
+    "id": "Mus musculus#anterior gut#mouse embryonic stem cell",
+    "parent": "Mus musculus#anterior gut",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-123046"
+    ]
+  },
+  {
+    "name": "presumptive gut",
+    "id": "Mus musculus#anterior gut#presumptive gut",
+    "parent": "Mus musculus#anterior gut",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-123046"
+    ]
+  },
+  {
+    "name": "yolk sac endoderm",
+    "id": "Mus musculus#anterior gut#yolk sac endoderm",
+    "parent": "Mus musculus#anterior gut",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-123046"
+    ]
+  },
+  {
+    "name": "aorta",
+    "id": "Mus musculus#aorta",
+    "parent": "Mus musculus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-10743",
+      "E-MTAB-10746",
+      "E-MTAB-7149",
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "aortic endothelial cell",
+    "id": "Mus musculus#aorta#aortic endothelial cell",
+    "parent": "Mus musculus#aorta",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-7149"
+    ]
+  },
+  {
+    "name": "endothelial cell",
+    "id": "Mus musculus#aorta#endothelial cell",
+    "parent": "Mus musculus#aorta",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "erythrocyte",
+    "id": "Mus musculus#aorta#erythrocyte",
+    "parent": "Mus musculus#aorta",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "fibroblast",
+    "id": "Mus musculus#aorta#fibroblast",
+    "parent": "Mus musculus#aorta",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "myeloid cell",
+    "id": "Mus musculus#aorta#myeloid cell",
+    "parent": "Mus musculus#aorta",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-10743",
+      "E-MTAB-10746"
+    ]
+  },
+  {
+    "name": "professional antigen presenting cell",
+    "id": "Mus musculus#aorta#professional antigen presenting cell",
+    "parent": "Mus musculus#aorta",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "ascending colon",
+    "id": "Mus musculus#ascending colon",
+    "parent": "Mus musculus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "Brush cell of epithelium proper of large intestine",
+    "id": "Mus musculus#ascending colon#Brush cell of epithelium proper of large intestine",
+    "parent": "Mus musculus#ascending colon",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "enterocyte of epithelium of large intestine",
+    "id": "Mus musculus#ascending colon#enterocyte of epithelium of large intestine",
+    "parent": "Mus musculus#ascending colon",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "enteroendocrine cell",
+    "id": "Mus musculus#ascending colon#enteroendocrine cell",
+    "parent": "Mus musculus#ascending colon",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "epithelial cell of large intestine",
+    "id": "Mus musculus#ascending colon#epithelial cell of large intestine",
+    "parent": "Mus musculus#ascending colon",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "large intestine goblet cell",
+    "id": "Mus musculus#ascending colon#large intestine goblet cell",
+    "parent": "Mus musculus#ascending colon",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "back skin",
+    "id": "Mus musculus#back skin",
+    "parent": "Mus musculus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "basal cell of epidermis",
+    "id": "Mus musculus#back skin#basal cell of epidermis",
+    "parent": "Mus musculus#back skin",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "epidermal cell",
+    "id": "Mus musculus#back skin#epidermal cell",
+    "parent": "Mus musculus#back skin",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "keratinocyte stem cell",
+    "id": "Mus musculus#back skin#keratinocyte stem cell",
+    "parent": "Mus musculus#back skin",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "leukocyte",
+    "id": "Mus musculus#back skin#leukocyte",
+    "parent": "Mus musculus#back skin",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "stem cell of epidermis",
+    "id": "Mus musculus#back skin#stem cell of epidermis",
+    "parent": "Mus musculus#back skin",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "bone marrow",
+    "id": "Mus musculus#bone marrow",
+    "parent": "Mus musculus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-CURD-100",
+      "E-CURD-118",
+      "E-MTAB-10050",
+      "E-GEOD-87631",
+      "E-MTAB-4547",
+      "E-GEOD-100426",
+      "E-GEOD-81682",
+      "E-ENAD-15",
+      "E-GEOD-106973",
+      "E-MTAB-8360"
+    ]
+  },
+  {
+    "name": "B cell",
+    "id": "Mus musculus#bone marrow#B cell",
+    "parent": "Mus musculus#bone marrow",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "basophil",
+    "id": "Mus musculus#bone marrow#basophil",
+    "parent": "Mus musculus#bone marrow",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "basophil mast progenitor cell",
+    "id": "Mus musculus#bone marrow#basophil mast progenitor cell",
+    "parent": "Mus musculus#bone marrow",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-106973"
+    ]
+  },
+  {
+    "name": "bone marrow cell",
+    "id": "Mus musculus#bone marrow#bone marrow cell",
+    "parent": "Mus musculus#bone marrow",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-8360"
+    ]
+  },
+  {
+    "name": "common lymphoid progenitor",
+    "id": "Mus musculus#bone marrow#common lymphoid progenitor",
+    "parent": "Mus musculus#bone marrow",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "dormant hematopoietic stem cell",
+    "id": "Mus musculus#bone marrow#dormant hematopoietic stem cell",
+    "parent": "Mus musculus#bone marrow",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-4547"
+    ]
+  },
+  {
+    "name": "granulocyte",
+    "id": "Mus musculus#bone marrow#granulocyte",
+    "parent": "Mus musculus#bone marrow",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "granulocyte monocyte progenitor cell",
+    "id": "Mus musculus#bone marrow#granulocyte monocyte progenitor cell",
+    "parent": "Mus musculus#bone marrow",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15",
+      "E-GEOD-106973"
+    ]
+  },
+  {
+    "name": "hematopoietic cell",
+    "id": "Mus musculus#bone marrow#hematopoietic cell",
+    "parent": "Mus musculus#bone marrow",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-10050"
+    ]
+  },
+  {
+    "name": "hematopoietic multipotent progenitor cell",
+    "id": "Mus musculus#bone marrow#hematopoietic multipotent progenitor cell",
+    "parent": "Mus musculus#bone marrow",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-100426"
+    ]
+  },
+  {
+    "name": "hematopoietic precursor cell",
+    "id": "Mus musculus#bone marrow#hematopoietic precursor cell",
+    "parent": "Mus musculus#bone marrow",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "hematopoietic stem cell",
+    "id": "Mus musculus#bone marrow#hematopoietic stem cell",
+    "parent": "Mus musculus#bone marrow",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-87631",
+      "E-MTAB-4547"
+    ]
+  },
+  {
+    "name": "hematopoietic stem cell and hematopoietic multipotent progenitor cell",
+    "id": "Mus musculus#bone marrow#hematopoietic stem cell and hematopoietic multipotent progenitor cell",
+    "parent": "Mus musculus#bone marrow",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-81682"
+    ]
+  },
+  {
+    "name": "immature B cell",
+    "id": "Mus musculus#bone marrow#immature B cell",
+    "parent": "Mus musculus#bone marrow",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "immature natural killer cell",
+    "id": "Mus musculus#bone marrow#immature natural killer cell",
+    "parent": "Mus musculus#bone marrow",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "immature NK T cell",
+    "id": "Mus musculus#bone marrow#immature NK T cell",
+    "parent": "Mus musculus#bone marrow",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "immature T cell",
+    "id": "Mus musculus#bone marrow#immature T cell",
+    "parent": "Mus musculus#bone marrow",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "late pro-B cell",
+    "id": "Mus musculus#bone marrow#late pro-B cell",
+    "parent": "Mus musculus#bone marrow",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "long term hematopoietic stem cell",
+    "id": "Mus musculus#bone marrow#long term hematopoietic stem cell",
+    "parent": "Mus musculus#bone marrow",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-100426",
+      "E-GEOD-81682"
+    ]
+  },
+  {
+    "name": "macrophage",
+    "id": "Mus musculus#bone marrow#macrophage",
+    "parent": "Mus musculus#bone marrow",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "mature natural killer cell",
+    "id": "Mus musculus#bone marrow#mature natural killer cell",
+    "parent": "Mus musculus#bone marrow",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "megakaryocyte-erythroid progenitor cell",
+    "id": "Mus musculus#bone marrow#megakaryocyte-erythroid progenitor cell",
+    "parent": "Mus musculus#bone marrow",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "megakaryocyte-erythroid progenitor cell, common myeloid progenitor and granulocyte monocyte progenitor cell",
+    "id": "Mus musculus#bone marrow#megakaryocyte-erythroid progenitor cell, common myeloid progenitor and granulocyte monocyte progenitor cell",
+    "parent": "Mus musculus#bone marrow",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-81682"
+    ]
+  },
+  {
+    "name": "monocyte",
+    "id": "Mus musculus#bone marrow#monocyte",
+    "parent": "Mus musculus#bone marrow",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "mononuclear phagocyte",
+    "id": "Mus musculus#bone marrow#mononuclear phagocyte",
+    "parent": "Mus musculus#bone marrow",
+    "value": 1,
+    "experimentAccessions": [
+      "E-CURD-100"
+    ]
+  },
+  {
+    "name": "naive B cell",
+    "id": "Mus musculus#bone marrow#naive B cell",
+    "parent": "Mus musculus#bone marrow",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "plasma cell",
+    "id": "Mus musculus#bone marrow#plasma cell",
+    "parent": "Mus musculus#bone marrow",
+    "value": 1,
+    "experimentAccessions": [
+      "E-CURD-118"
+    ]
+  },
+  {
+    "name": "pre-natural killer cell",
+    "id": "Mus musculus#bone marrow#pre-natural killer cell",
+    "parent": "Mus musculus#bone marrow",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "pro-B cell",
+    "id": "Mus musculus#bone marrow#pro-B cell",
+    "parent": "Mus musculus#bone marrow",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "regulatory T cell",
+    "id": "Mus musculus#bone marrow#regulatory T cell",
+    "parent": "Mus musculus#bone marrow",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "short term hematopoietic stem cell",
+    "id": "Mus musculus#bone marrow#short term hematopoietic stem cell",
+    "parent": "Mus musculus#bone marrow",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-100426"
+    ]
+  },
+  {
+    "name": "Slamf1-negative multipotent progenitor cell",
+    "id": "Mus musculus#bone marrow#Slamf1-negative multipotent progenitor cell",
+    "parent": "Mus musculus#bone marrow",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "Slamf1-positive multipotent progenitor cell",
+    "id": "Mus musculus#bone marrow#Slamf1-positive multipotent progenitor cell",
+    "parent": "Mus musculus#bone marrow",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "brachial lymph node",
+    "id": "Mus musculus#brachial lymph node",
+    "parent": "Mus musculus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-CURD-96"
+    ]
+  },
+  {
+    "name": "CD4-positive, alpha-beta memory T cell",
+    "id": "Mus musculus#brachial lymph node#CD4-positive, alpha-beta memory T cell",
+    "parent": "Mus musculus#brachial lymph node",
+    "value": 1,
+    "experimentAccessions": [
+      "E-CURD-96"
+    ]
+  },
+  {
+    "name": "CD4-positive, CD25-positive, alpha-beta regulatory T cell",
+    "id": "Mus musculus#brachial lymph node#CD4-positive, CD25-positive, alpha-beta regulatory T cell",
+    "parent": "Mus musculus#brachial lymph node",
+    "value": 1,
+    "experimentAccessions": [
+      "E-CURD-96"
+    ]
+  },
+  {
+    "name": "brain",
+    "id": "Mus musculus#brain",
+    "parent": "Mus musculus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-12687",
+      "E-MTAB-8077"
+    ]
+  },
+  {
+    "name": "endothelial cell",
+    "id": "Mus musculus#brain#endothelial cell",
+    "parent": "Mus musculus#brain",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-12687",
+      "E-MTAB-8077"
+    ]
+  },
+  {
+    "name": "brown adipose tissue",
+    "id": "Mus musculus#brown adipose tissue",
+    "parent": "Mus musculus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-8562",
+      "E-MTAB-8561"
+    ]
+  },
+  {
+    "name": "fat cell",
+    "id": "Mus musculus#brown adipose tissue#fat cell",
+    "parent": "Mus musculus#brown adipose tissue",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-8562",
+      "E-MTAB-8561"
+    ]
+  },
+  {
+    "name": "cardiac ventricle",
+    "id": "Mus musculus#cardiac ventricle",
+    "parent": "Mus musculus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-6173"
+    ]
+  },
+  {
+    "name": "cardiac non-myocyte",
+    "id": "Mus musculus#cardiac ventricle#cardiac non-myocyte",
+    "parent": "Mus musculus#cardiac ventricle",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-6173"
+    ]
+  },
+  {
+    "name": "caudal lateral epiblast",
+    "id": "Mus musculus#caudal lateral epiblast",
+    "parent": "Mus musculus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-5208"
+    ]
+  },
+  {
+    "name": "epiblast cell",
+    "id": "Mus musculus#caudal lateral epiblast#epiblast cell",
+    "parent": "Mus musculus#caudal lateral epiblast",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-5208"
+    ]
+  },
+  {
+    "name": "cerebellum",
+    "id": "Mus musculus#cerebellum",
+    "parent": "Mus musculus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "astrocyte of the cerebral cortex",
+    "id": "Mus musculus#cerebellum#astrocyte of the cerebral cortex",
+    "parent": "Mus musculus#cerebellum",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "Bergmann glial cell",
+    "id": "Mus musculus#cerebellum#Bergmann glial cell",
+    "parent": "Mus musculus#cerebellum",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "brain pericyte",
+    "id": "Mus musculus#cerebellum#brain pericyte",
+    "parent": "Mus musculus#cerebellum",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "endothelial cell",
+    "id": "Mus musculus#cerebellum#endothelial cell",
+    "parent": "Mus musculus#cerebellum",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "macrophage",
+    "id": "Mus musculus#cerebellum#macrophage",
+    "parent": "Mus musculus#cerebellum",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "microglial cell",
+    "id": "Mus musculus#cerebellum#microglial cell",
+    "parent": "Mus musculus#cerebellum",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "neuron",
+    "id": "Mus musculus#cerebellum#neuron",
+    "parent": "Mus musculus#cerebellum",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "oligodendrocyte",
+    "id": "Mus musculus#cerebellum#oligodendrocyte",
+    "parent": "Mus musculus#cerebellum",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "oligodendrocyte precursor cell",
+    "id": "Mus musculus#cerebellum#oligodendrocyte precursor cell",
+    "parent": "Mus musculus#cerebellum",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "cerebral cortex",
+    "id": "Mus musculus#cerebral cortex",
+    "parent": "Mus musculus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "astrocyte of the cerebral cortex",
+    "id": "Mus musculus#cerebral cortex#astrocyte of the cerebral cortex",
+    "parent": "Mus musculus#cerebral cortex",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "brain pericyte",
+    "id": "Mus musculus#cerebral cortex#brain pericyte",
+    "parent": "Mus musculus#cerebral cortex",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "endothelial cell",
+    "id": "Mus musculus#cerebral cortex#endothelial cell",
+    "parent": "Mus musculus#cerebral cortex",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "macrophage",
+    "id": "Mus musculus#cerebral cortex#macrophage",
+    "parent": "Mus musculus#cerebral cortex",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "microglial cell",
+    "id": "Mus musculus#cerebral cortex#microglial cell",
+    "parent": "Mus musculus#cerebral cortex",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "neuron",
+    "id": "Mus musculus#cerebral cortex#neuron",
+    "parent": "Mus musculus#cerebral cortex",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "oligodendrocyte",
+    "id": "Mus musculus#cerebral cortex#oligodendrocyte",
+    "parent": "Mus musculus#cerebral cortex",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "oligodendrocyte precursor cell",
+    "id": "Mus musculus#cerebral cortex#oligodendrocyte precursor cell",
+    "parent": "Mus musculus#cerebral cortex",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "colon",
+    "id": "Mus musculus#colon",
+    "parent": "Mus musculus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-8077",
+      "E-MTAB-7311",
+      "E-CURD-96"
+    ]
+  },
+  {
+    "name": "CD4-positive, alpha-beta memory T cell",
+    "id": "Mus musculus#colon#CD4-positive, alpha-beta memory T cell",
+    "parent": "Mus musculus#colon",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-7311",
+      "E-CURD-96"
+    ]
+  },
+  {
+    "name": "CD4-positive, CD25-positive, alpha-beta regulatory T cell",
+    "id": "Mus musculus#colon#CD4-positive, CD25-positive, alpha-beta regulatory T cell",
+    "parent": "Mus musculus#colon",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-7311",
+      "E-CURD-96"
+    ]
+  },
+  {
+    "name": "endothelial cell",
+    "id": "Mus musculus#colon#endothelial cell",
+    "parent": "Mus musculus#colon",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-8077"
+    ]
+  },
+  {
+    "name": "cortex of kidney",
+    "id": "Mus musculus#cortex of kidney",
+    "parent": "Mus musculus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-8145"
+    ]
+  },
+  {
+    "name": "endothelial cell",
+    "id": "Mus musculus#cortex of kidney#endothelial cell",
+    "parent": "Mus musculus#cortex of kidney",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-8145"
+    ]
+  },
+  {
+    "name": "definitive endoderm",
+    "id": "Mus musculus#definitive endoderm",
+    "parent": "Mus musculus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-123046"
+    ]
+  },
+  {
+    "name": "blood",
+    "id": "Mus musculus#definitive endoderm#blood",
+    "parent": "Mus musculus#definitive endoderm",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-123046"
+    ]
+  },
+  {
+    "name": "definitive endoderm",
+    "id": "Mus musculus#definitive endoderm#definitive endoderm",
+    "parent": "Mus musculus#definitive endoderm",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-123046"
+    ]
+  },
+  {
+    "name": "endothelium",
+    "id": "Mus musculus#definitive endoderm#endothelium",
+    "parent": "Mus musculus#definitive endoderm",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-123046"
+    ]
+  },
+  {
+    "name": "epiblast cell",
+    "id": "Mus musculus#definitive endoderm#epiblast cell",
+    "parent": "Mus musculus#definitive endoderm",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-123046"
+    ]
+  },
+  {
+    "name": "extraembryonic ectoderm",
+    "id": "Mus musculus#definitive endoderm#extraembryonic ectoderm",
+    "parent": "Mus musculus#definitive endoderm",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-123046"
+    ]
+  },
+  {
+    "name": "germ cell",
+    "id": "Mus musculus#definitive endoderm#germ cell",
+    "parent": "Mus musculus#definitive endoderm",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-123046"
+    ]
+  },
+  {
+    "name": "intestinal endoderm",
+    "id": "Mus musculus#definitive endoderm#intestinal endoderm",
+    "parent": "Mus musculus#definitive endoderm",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-123046"
+    ]
+  },
+  {
+    "name": "liver endoderm",
+    "id": "Mus musculus#definitive endoderm#liver endoderm",
+    "parent": "Mus musculus#definitive endoderm",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-123046"
+    ]
+  },
+  {
+    "name": "lung endoderm",
+    "id": "Mus musculus#definitive endoderm#lung endoderm",
+    "parent": "Mus musculus#definitive endoderm",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-123046"
+    ]
+  },
+  {
+    "name": "midline",
+    "id": "Mus musculus#definitive endoderm#midline",
+    "parent": "Mus musculus#definitive endoderm",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-123046"
+    ]
+  },
+  {
+    "name": "mouse embryonic stem cell",
+    "id": "Mus musculus#definitive endoderm#mouse embryonic stem cell",
+    "parent": "Mus musculus#definitive endoderm",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-123046"
+    ]
+  },
+  {
+    "name": "pancreatic endoderm",
+    "id": "Mus musculus#definitive endoderm#pancreatic endoderm",
+    "parent": "Mus musculus#definitive endoderm",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-123046"
+    ]
+  },
+  {
+    "name": "parietal endoderm",
+    "id": "Mus musculus#definitive endoderm#parietal endoderm",
+    "parent": "Mus musculus#definitive endoderm",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-123046"
+    ]
+  },
+  {
+    "name": "thymus primordium endoderm",
+    "id": "Mus musculus#definitive endoderm#thymus primordium endoderm",
+    "parent": "Mus musculus#definitive endoderm",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-123046"
+    ]
+  },
+  {
+    "name": "thyroid primordium endoderm",
+    "id": "Mus musculus#definitive endoderm#thyroid primordium endoderm",
+    "parent": "Mus musculus#definitive endoderm",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-123046"
+    ]
+  },
+  {
+    "name": "visceral endoderm",
+    "id": "Mus musculus#definitive endoderm#visceral endoderm",
+    "parent": "Mus musculus#definitive endoderm",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-123046"
+    ]
+  },
+  {
+    "name": "dermis",
+    "id": "Mus musculus#dermis",
+    "parent": "Mus musculus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-6385",
+      "E-MTAB-7098"
+    ]
+  },
+  {
+    "name": "fibroblast",
+    "id": "Mus musculus#dermis#fibroblast",
+    "parent": "Mus musculus#dermis",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-6385",
+      "E-MTAB-7098"
+    ]
+  },
+  {
+    "name": "descending colon",
+    "id": "Mus musculus#descending colon",
+    "parent": "Mus musculus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "Brush cell of epithelium proper of large intestine",
+    "id": "Mus musculus#descending colon#Brush cell of epithelium proper of large intestine",
+    "parent": "Mus musculus#descending colon",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "enterocyte of epithelium of large intestine",
+    "id": "Mus musculus#descending colon#enterocyte of epithelium of large intestine",
+    "parent": "Mus musculus#descending colon",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "enteroendocrine cell",
+    "id": "Mus musculus#descending colon#enteroendocrine cell",
+    "parent": "Mus musculus#descending colon",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "epithelial cell of large intestine",
+    "id": "Mus musculus#descending colon#epithelial cell of large intestine",
+    "parent": "Mus musculus#descending colon",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "large intestine goblet cell",
+    "id": "Mus musculus#descending colon#large intestine goblet cell",
+    "parent": "Mus musculus#descending colon",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "diaphragm",
+    "id": "Mus musculus#diaphragm",
+    "parent": "Mus musculus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "endothelial cell",
+    "id": "Mus musculus#diaphragm#endothelial cell",
+    "parent": "Mus musculus#diaphragm",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "lymphocyte",
+    "id": "Mus musculus#diaphragm#lymphocyte",
+    "parent": "Mus musculus#diaphragm",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "macrophage",
+    "id": "Mus musculus#diaphragm#macrophage",
+    "parent": "Mus musculus#diaphragm",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "mesenchymal stem cell",
+    "id": "Mus musculus#diaphragm#mesenchymal stem cell",
+    "parent": "Mus musculus#diaphragm",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "skeletal muscle satellite stem cell",
+    "id": "Mus musculus#diaphragm#skeletal muscle satellite stem cell",
+    "parent": "Mus musculus#diaphragm",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "dorsal skin",
+    "id": "Mus musculus#dorsal skin",
+    "parent": "Mus musculus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-90848"
+    ]
+  },
+  {
+    "name": "hair follicle bulge stem cell",
+    "id": "Mus musculus#dorsal skin#hair follicle bulge stem cell",
+    "parent": "Mus musculus#dorsal skin",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-90848"
+    ]
+  },
+  {
+    "name": "hair follicle dermal papilla cell",
+    "id": "Mus musculus#dorsal skin#hair follicle dermal papilla cell",
+    "parent": "Mus musculus#dorsal skin",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-90848"
+    ]
+  },
+  {
+    "name": "hair germ cell",
+    "id": "Mus musculus#dorsal skin#hair germ cell",
+    "parent": "Mus musculus#dorsal skin",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-90848"
+    ]
+  },
+  {
+    "name": "hair germinal matrix cell",
+    "id": "Mus musculus#dorsal skin#hair germinal matrix cell",
+    "parent": "Mus musculus#dorsal skin",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-90848"
+    ]
+  },
+  {
+    "name": "embryo",
+    "id": "Mus musculus#embryo",
+    "parent": "Mus musculus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-123046",
+      "E-MTAB-6970",
+      "E-MTAB-3321"
+    ]
+  },
+  {
+    "name": "blastoderm cell",
+    "id": "Mus musculus#embryo#blastoderm cell",
+    "parent": "Mus musculus#embryo",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-3321"
+    ]
+  },
+  {
+    "name": "endothelial cell",
+    "id": "Mus musculus#embryo#endothelial cell",
+    "parent": "Mus musculus#embryo",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-6970"
+    ]
+  },
+  {
+    "name": "epiblast cell",
+    "id": "Mus musculus#embryo#epiblast cell",
+    "parent": "Mus musculus#embryo",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-123046"
+    ]
+  },
+  {
+    "name": "extraembryonic ectoderm",
+    "id": "Mus musculus#embryo#extraembryonic ectoderm",
+    "parent": "Mus musculus#embryo",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-123046"
+    ]
+  },
+  {
+    "name": "inner cell mass derived hypoblast",
+    "id": "Mus musculus#embryo#inner cell mass derived hypoblast",
+    "parent": "Mus musculus#embryo",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-123046"
+    ]
+  },
+  {
+    "name": "trophectoderm",
+    "id": "Mus musculus#embryo#trophectoderm",
+    "parent": "Mus musculus#embryo",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-123046"
+    ]
+  },
+  {
+    "name": "visceral endoderm",
+    "id": "Mus musculus#embryo#visceral endoderm",
+    "parent": "Mus musculus#embryo",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-123046"
+    ]
+  },
+  {
+    "name": "endocrine pancreas",
+    "id": "Mus musculus#endocrine pancreas",
+    "parent": "Mus musculus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "endothelial cell",
+    "id": "Mus musculus#endocrine pancreas#endothelial cell",
+    "parent": "Mus musculus#endocrine pancreas",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "leukocyte",
+    "id": "Mus musculus#endocrine pancreas#leukocyte",
+    "parent": "Mus musculus#endocrine pancreas",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "pancreatic A cell",
+    "id": "Mus musculus#endocrine pancreas#pancreatic A cell",
+    "parent": "Mus musculus#endocrine pancreas",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "pancreatic acinar cell",
+    "id": "Mus musculus#endocrine pancreas#pancreatic acinar cell",
+    "parent": "Mus musculus#endocrine pancreas",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "pancreatic D cell",
+    "id": "Mus musculus#endocrine pancreas#pancreatic D cell",
+    "parent": "Mus musculus#endocrine pancreas",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "pancreatic ductal cell",
+    "id": "Mus musculus#endocrine pancreas#pancreatic ductal cell",
+    "parent": "Mus musculus#endocrine pancreas",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "pancreatic PP cell",
+    "id": "Mus musculus#endocrine pancreas#pancreatic PP cell",
+    "parent": "Mus musculus#endocrine pancreas",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "pancreatic stellate cell",
+    "id": "Mus musculus#endocrine pancreas#pancreatic stellate cell",
+    "parent": "Mus musculus#endocrine pancreas",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "type B pancreatic cell",
+    "id": "Mus musculus#endocrine pancreas#type B pancreatic cell",
+    "parent": "Mus musculus#endocrine pancreas",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "epidermis",
+    "id": "Mus musculus#epidermis",
+    "parent": "Mus musculus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-146122"
+    ]
+  },
+  {
+    "name": "keratinocyte",
+    "id": "Mus musculus#epidermis#keratinocyte",
+    "parent": "Mus musculus#epidermis",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-146122"
+    ]
+  },
+  {
+    "name": "epididymal fat pad",
+    "id": "Mus musculus#epididymal fat pad",
+    "parent": "Mus musculus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-10869"
+    ]
+  },
+  {
+    "name": "immune cell",
+    "id": "Mus musculus#epididymal fat pad#immune cell",
+    "parent": "Mus musculus#epididymal fat pad",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-10869"
+    ]
+  },
+  {
+    "name": "esophagus",
+    "id": "Mus musculus#esophagus",
+    "parent": "Mus musculus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-8662"
+    ]
+  },
+  {
+    "name": "basal cell",
+    "id": "Mus musculus#esophagus#basal cell",
+    "parent": "Mus musculus#esophagus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-8662"
+    ]
+  },
+  {
+    "name": "differentiated",
+    "id": "Mus musculus#esophagus#differentiated",
+    "parent": "Mus musculus#esophagus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-8662"
+    ]
+  },
+  {
+    "name": "epithelial cell",
+    "id": "Mus musculus#esophagus#epithelial cell",
+    "parent": "Mus musculus#esophagus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-8662"
+    ]
+  },
+  {
+    "name": "exocrine pancreas",
+    "id": "Mus musculus#exocrine pancreas",
+    "parent": "Mus musculus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "endothelial cell",
+    "id": "Mus musculus#exocrine pancreas#endothelial cell",
+    "parent": "Mus musculus#exocrine pancreas",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "leukocyte",
+    "id": "Mus musculus#exocrine pancreas#leukocyte",
+    "parent": "Mus musculus#exocrine pancreas",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "pancreatic A cell",
+    "id": "Mus musculus#exocrine pancreas#pancreatic A cell",
+    "parent": "Mus musculus#exocrine pancreas",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "pancreatic acinar cell",
+    "id": "Mus musculus#exocrine pancreas#pancreatic acinar cell",
+    "parent": "Mus musculus#exocrine pancreas",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "pancreatic D cell",
+    "id": "Mus musculus#exocrine pancreas#pancreatic D cell",
+    "parent": "Mus musculus#exocrine pancreas",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "pancreatic ductal cell",
+    "id": "Mus musculus#exocrine pancreas#pancreatic ductal cell",
+    "parent": "Mus musculus#exocrine pancreas",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "pancreatic PP cell",
+    "id": "Mus musculus#exocrine pancreas#pancreatic PP cell",
+    "parent": "Mus musculus#exocrine pancreas",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "pancreatic stellate cell",
+    "id": "Mus musculus#exocrine pancreas#pancreatic stellate cell",
+    "parent": "Mus musculus#exocrine pancreas",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "type B pancreatic cell",
+    "id": "Mus musculus#exocrine pancreas#type B pancreatic cell",
+    "parent": "Mus musculus#exocrine pancreas",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "extensor digitorum longus",
+    "id": "Mus musculus#extensor digitorum longus",
+    "parent": "Mus musculus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-8077"
+    ]
+  },
+  {
+    "name": "endothelial cell",
+    "id": "Mus musculus#extensor digitorum longus#endothelial cell",
+    "parent": "Mus musculus#extensor digitorum longus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-8077"
+    ]
+  },
+  {
+    "name": "femur",
+    "id": "Mus musculus#femur",
+    "parent": "Mus musculus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-10448"
+    ]
+  },
+  {
+    "name": "endothelial cell",
+    "id": "Mus musculus#femur#endothelial cell",
+    "parent": "Mus musculus#femur",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-10448"
+    ]
+  },
+  {
+    "name": "gingiva",
+    "id": "Mus musculus#gingiva",
+    "parent": "Mus musculus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-10050"
+    ]
+  },
+  {
+    "name": "hematopoietic cell",
+    "id": "Mus musculus#gingiva#hematopoietic cell",
+    "parent": "Mus musculus#gingiva",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-10050"
+    ]
+  },
+  {
+    "name": "gonadal fat pad",
+    "id": "Mus musculus#gonadal fat pad",
+    "parent": "Mus musculus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "B cell",
+    "id": "Mus musculus#gonadal fat pad#B cell",
+    "parent": "Mus musculus#gonadal fat pad",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "endothelial cell",
+    "id": "Mus musculus#gonadal fat pad#endothelial cell",
+    "parent": "Mus musculus#gonadal fat pad",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "mesenchymal stem cell of adipose",
+    "id": "Mus musculus#gonadal fat pad#mesenchymal stem cell of adipose",
+    "parent": "Mus musculus#gonadal fat pad",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "myeloid cell",
+    "id": "Mus musculus#gonadal fat pad#myeloid cell",
+    "parent": "Mus musculus#gonadal fat pad",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "natural killer cell",
+    "id": "Mus musculus#gonadal fat pad#natural killer cell",
+    "parent": "Mus musculus#gonadal fat pad",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "T cell",
+    "id": "Mus musculus#gonadal fat pad#T cell",
+    "parent": "Mus musculus#gonadal fat pad",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "heart",
+    "id": "Mus musculus#heart",
+    "parent": "Mus musculus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-10035",
+      "E-MTAB-8810",
+      "E-MTAB-9583",
+      "E-MTAB-8077",
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "heart left atrium",
+    "id": "Mus musculus#heart left atrium",
+    "parent": "Mus musculus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "heart left atrium and heart right atrium",
+    "id": "Mus musculus#heart left atrium and heart right atrium",
+    "parent": "Mus musculus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "cardiac muscle cell",
+    "id": "Mus musculus#heart left atrium and heart right atrium#cardiac muscle cell",
+    "parent": "Mus musculus#heart left atrium and heart right atrium",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "fibroblast",
+    "id": "Mus musculus#heart left atrium and heart right atrium#fibroblast",
+    "parent": "Mus musculus#heart left atrium and heart right atrium",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "cardiac muscle cell",
+    "id": "Mus musculus#heart left atrium#cardiac muscle cell",
+    "parent": "Mus musculus#heart left atrium",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "cardiac neuron",
+    "id": "Mus musculus#heart left atrium#cardiac neuron",
+    "parent": "Mus musculus#heart left atrium",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "endocardial cell",
+    "id": "Mus musculus#heart left atrium#endocardial cell",
+    "parent": "Mus musculus#heart left atrium",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "endothelial cell",
+    "id": "Mus musculus#heart left atrium#endothelial cell",
+    "parent": "Mus musculus#heart left atrium",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "fibroblast",
+    "id": "Mus musculus#heart left atrium#fibroblast",
+    "parent": "Mus musculus#heart left atrium",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "leukocyte",
+    "id": "Mus musculus#heart left atrium#leukocyte",
+    "parent": "Mus musculus#heart left atrium",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "myofibroblast cell",
+    "id": "Mus musculus#heart left atrium#myofibroblast cell",
+    "parent": "Mus musculus#heart left atrium",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "smooth muscle cell",
+    "id": "Mus musculus#heart left atrium#smooth muscle cell",
+    "parent": "Mus musculus#heart left atrium",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "heart left ventricle",
+    "id": "Mus musculus#heart left ventricle",
+    "parent": "Mus musculus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "cardiac muscle cell",
+    "id": "Mus musculus#heart left ventricle#cardiac muscle cell",
+    "parent": "Mus musculus#heart left ventricle",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "cardiac neuron",
+    "id": "Mus musculus#heart left ventricle#cardiac neuron",
+    "parent": "Mus musculus#heart left ventricle",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "endocardial cell",
+    "id": "Mus musculus#heart left ventricle#endocardial cell",
+    "parent": "Mus musculus#heart left ventricle",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "endothelial cell",
+    "id": "Mus musculus#heart left ventricle#endothelial cell",
+    "parent": "Mus musculus#heart left ventricle",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "fibroblast",
+    "id": "Mus musculus#heart left ventricle#fibroblast",
+    "parent": "Mus musculus#heart left ventricle",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "leukocyte",
+    "id": "Mus musculus#heart left ventricle#leukocyte",
+    "parent": "Mus musculus#heart left ventricle",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "myofibroblast cell",
+    "id": "Mus musculus#heart left ventricle#myofibroblast cell",
+    "parent": "Mus musculus#heart left ventricle",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "smooth muscle cell",
+    "id": "Mus musculus#heart left ventricle#smooth muscle cell",
+    "parent": "Mus musculus#heart left ventricle",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "heart right atrium",
+    "id": "Mus musculus#heart right atrium",
+    "parent": "Mus musculus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "cardiac muscle cell",
+    "id": "Mus musculus#heart right atrium#cardiac muscle cell",
+    "parent": "Mus musculus#heart right atrium",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "cardiac neuron",
+    "id": "Mus musculus#heart right atrium#cardiac neuron",
+    "parent": "Mus musculus#heart right atrium",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "endocardial cell",
+    "id": "Mus musculus#heart right atrium#endocardial cell",
+    "parent": "Mus musculus#heart right atrium",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "endothelial cell",
+    "id": "Mus musculus#heart right atrium#endothelial cell",
+    "parent": "Mus musculus#heart right atrium",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "fibroblast",
+    "id": "Mus musculus#heart right atrium#fibroblast",
+    "parent": "Mus musculus#heart right atrium",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "leukocyte",
+    "id": "Mus musculus#heart right atrium#leukocyte",
+    "parent": "Mus musculus#heart right atrium",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "myofibroblast cell",
+    "id": "Mus musculus#heart right atrium#myofibroblast cell",
+    "parent": "Mus musculus#heart right atrium",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "smooth muscle cell",
+    "id": "Mus musculus#heart right atrium#smooth muscle cell",
+    "parent": "Mus musculus#heart right atrium",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "heart right ventricle",
+    "id": "Mus musculus#heart right ventricle",
+    "parent": "Mus musculus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "cardiac muscle cell",
+    "id": "Mus musculus#heart right ventricle#cardiac muscle cell",
+    "parent": "Mus musculus#heart right ventricle",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "cardiac neuron",
+    "id": "Mus musculus#heart right ventricle#cardiac neuron",
+    "parent": "Mus musculus#heart right ventricle",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "endocardial cell",
+    "id": "Mus musculus#heart right ventricle#endocardial cell",
+    "parent": "Mus musculus#heart right ventricle",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "endothelial cell",
+    "id": "Mus musculus#heart right ventricle#endothelial cell",
+    "parent": "Mus musculus#heart right ventricle",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "fibroblast",
+    "id": "Mus musculus#heart right ventricle#fibroblast",
+    "parent": "Mus musculus#heart right ventricle",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "leukocyte",
+    "id": "Mus musculus#heart right ventricle#leukocyte",
+    "parent": "Mus musculus#heart right ventricle",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "myofibroblast cell",
+    "id": "Mus musculus#heart right ventricle#myofibroblast cell",
+    "parent": "Mus musculus#heart right ventricle",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "smooth muscle cell",
+    "id": "Mus musculus#heart right ventricle#smooth muscle cell",
+    "parent": "Mus musculus#heart right ventricle",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "activated cardiac stromal cell",
+    "id": "Mus musculus#heart#activated cardiac stromal cell",
+    "parent": "Mus musculus#heart",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-10035"
+    ]
+  },
+  {
+    "name": "B cell",
+    "id": "Mus musculus#heart#B cell",
+    "parent": "Mus musculus#heart",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-8810"
+    ]
+  },
+  {
+    "name": "cardiac endothelial cell",
+    "id": "Mus musculus#heart#cardiac endothelial cell",
+    "parent": "Mus musculus#heart",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-8810"
+    ]
+  },
+  {
+    "name": "cardiac endothelial cell of lymphatic vessel",
+    "id": "Mus musculus#heart#cardiac endothelial cell of lymphatic vessel",
+    "parent": "Mus musculus#heart",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-8810"
+    ]
+  },
+  {
+    "name": "cardiac muscle cell",
+    "id": "Mus musculus#heart#cardiac muscle cell",
+    "parent": "Mus musculus#heart",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "cardiac non-myocyte and cardiomyocyte",
+    "id": "Mus musculus#heart#cardiac non-myocyte and cardiomyocyte",
+    "parent": "Mus musculus#heart",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-8810"
+    ]
+  },
+  {
+    "name": "cardiac stromal cell",
+    "id": "Mus musculus#heart#cardiac stromal cell",
+    "parent": "Mus musculus#heart",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-10035"
+    ]
+  },
+  {
+    "name": "cardiomyocyte",
+    "id": "Mus musculus#heart#cardiomyocyte",
+    "parent": "Mus musculus#heart",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-8810"
+    ]
+  },
+  {
+    "name": "dendritic cell",
+    "id": "Mus musculus#heart#dendritic cell",
+    "parent": "Mus musculus#heart",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-8810"
+    ]
+  },
+  {
+    "name": "endocardial cell",
+    "id": "Mus musculus#heart#endocardial cell",
+    "parent": "Mus musculus#heart",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-8810",
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "endothelial cell",
+    "id": "Mus musculus#heart#endothelial cell",
+    "parent": "Mus musculus#heart",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-8077",
+      "E-MTAB-9583",
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "epicardial stromal cell",
+    "id": "Mus musculus#heart#epicardial stromal cell",
+    "parent": "Mus musculus#heart",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-10035"
+    ]
+  },
+  {
+    "name": "epicardium",
+    "id": "Mus musculus#heart#epicardium",
+    "parent": "Mus musculus#heart",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-8810"
+    ]
+  },
+  {
+    "name": "erythrocyte",
+    "id": "Mus musculus#heart#erythrocyte",
+    "parent": "Mus musculus#heart",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-8810"
+    ]
+  },
+  {
+    "name": "fibroblast",
+    "id": "Mus musculus#heart#fibroblast",
+    "parent": "Mus musculus#heart",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "fibroblast activated",
+    "id": "Mus musculus#heart#fibroblast activated",
+    "parent": "Mus musculus#heart",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-9583"
+    ]
+  },
+  {
+    "name": "fibroblast cycling",
+    "id": "Mus musculus#heart#fibroblast cycling",
+    "parent": "Mus musculus#heart",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-9583"
+    ]
+  },
+  {
+    "name": "fibroblast cycling intermediate",
+    "id": "Mus musculus#heart#fibroblast cycling intermediate",
+    "parent": "Mus musculus#heart",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-9583"
+    ]
+  },
+  {
+    "name": "fibroblast Interferon stimulated",
+    "id": "Mus musculus#heart#fibroblast Interferon stimulated",
+    "parent": "Mus musculus#heart",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-9583"
+    ]
+  },
+  {
+    "name": "fibroblast of cardiac tissue",
+    "id": "Mus musculus#heart#fibroblast of cardiac tissue",
+    "parent": "Mus musculus#heart",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-8810"
+    ]
+  },
+  {
+    "name": "fibroblast Sca1-high",
+    "id": "Mus musculus#heart#fibroblast Sca1-high",
+    "parent": "Mus musculus#heart",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-9583"
+    ]
+  },
+  {
+    "name": "fibroblast Sca1-low",
+    "id": "Mus musculus#heart#fibroblast Sca1-low",
+    "parent": "Mus musculus#heart",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-9583"
+    ]
+  },
+  {
+    "name": "fibroblast transitory",
+    "id": "Mus musculus#heart#fibroblast transitory",
+    "parent": "Mus musculus#heart",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-9583"
+    ]
+  },
+  {
+    "name": "fibroblast Wnt expressing",
+    "id": "Mus musculus#heart#fibroblast Wnt expressing",
+    "parent": "Mus musculus#heart",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-9583"
+    ]
+  },
+  {
+    "name": "granulocyte",
+    "id": "Mus musculus#heart#granulocyte",
+    "parent": "Mus musculus#heart",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-8810"
+    ]
+  },
+  {
+    "name": "macrophage",
+    "id": "Mus musculus#heart#macrophage",
+    "parent": "Mus musculus#heart",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-8810"
+    ]
+  },
+  {
+    "name": "natural killer cell",
+    "id": "Mus musculus#heart#natural killer cell",
+    "parent": "Mus musculus#heart",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-8810"
+    ]
+  },
+  {
+    "name": "pericyte",
+    "id": "Mus musculus#heart#pericyte",
+    "parent": "Mus musculus#heart",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-8810"
+    ]
+  },
+  {
+    "name": "proliferating cell",
+    "id": "Mus musculus#heart#proliferating cell",
+    "parent": "Mus musculus#heart",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-8810"
+    ]
+  },
+  {
+    "name": "Schwann cell",
+    "id": "Mus musculus#heart#Schwann cell",
+    "parent": "Mus musculus#heart",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-8810"
+    ]
+  },
+  {
+    "name": "smooth muscle cell",
+    "id": "Mus musculus#heart#smooth muscle cell",
+    "parent": "Mus musculus#heart",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-8810",
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "T cell",
+    "id": "Mus musculus#heart#T cell",
+    "parent": "Mus musculus#heart",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-8810"
+    ]
+  },
+  {
+    "name": "hindbrain",
+    "id": "Mus musculus#hindbrain",
+    "parent": "Mus musculus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-6925",
+      "E-MTAB-6912"
+    ]
+  },
+  {
+    "name": "cardiocyte",
+    "id": "Mus musculus#hindbrain#cardiocyte",
+    "parent": "Mus musculus#hindbrain",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-6912"
+    ]
+  },
+  {
+    "name": "embryonic neural border stem cell",
+    "id": "Mus musculus#hindbrain#embryonic neural border stem cell",
+    "parent": "Mus musculus#hindbrain",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-6925"
+    ]
+  },
+  {
+    "name": "endothelial cell",
+    "id": "Mus musculus#hindbrain#endothelial cell",
+    "parent": "Mus musculus#hindbrain",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-6912"
+    ]
+  },
+  {
+    "name": "extraembryonic endoderm cell",
+    "id": "Mus musculus#hindbrain#extraembryonic endoderm cell",
+    "parent": "Mus musculus#hindbrain",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-6912"
+    ]
+  },
+  {
+    "name": "forebrain",
+    "id": "Mus musculus#hindbrain#forebrain",
+    "parent": "Mus musculus#hindbrain",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-6912"
+    ]
+  },
+  {
+    "name": "foregut",
+    "id": "Mus musculus#hindbrain#foregut",
+    "parent": "Mus musculus#hindbrain",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-6912"
+    ]
+  },
+  {
+    "name": "mesoderm progenitor",
+    "id": "Mus musculus#hindbrain#mesoderm progenitor",
+    "parent": "Mus musculus#hindbrain",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-6912"
+    ]
+  },
+  {
+    "name": "mid hindbrain",
+    "id": "Mus musculus#hindbrain#mid hindbrain",
+    "parent": "Mus musculus#hindbrain",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-6912",
+      "E-MTAB-6925"
+    ]
+  },
+  {
+    "name": "mixed mesoderm",
+    "id": "Mus musculus#hindbrain#mixed mesoderm",
+    "parent": "Mus musculus#hindbrain",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-6912",
+      "E-MTAB-6925"
+    ]
+  },
+  {
+    "name": "neural crest cell",
+    "id": "Mus musculus#hindbrain#neural crest cell",
+    "parent": "Mus musculus#hindbrain",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-6912"
+    ]
+  },
+  {
+    "name": "neural tube",
+    "id": "Mus musculus#hindbrain#neural tube",
+    "parent": "Mus musculus#hindbrain",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-6925",
+      "E-MTAB-6912"
+    ]
+  },
+  {
+    "name": "pharyngeal mesoderm",
+    "id": "Mus musculus#hindbrain#pharyngeal mesoderm",
+    "parent": "Mus musculus#hindbrain",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-6912"
+    ]
+  },
+  {
+    "name": "placode",
+    "id": "Mus musculus#hindbrain#placode",
+    "parent": "Mus musculus#hindbrain",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-6925",
+      "E-MTAB-6912"
+    ]
+  },
+  {
+    "name": "presomitic mesoderm",
+    "id": "Mus musculus#hindbrain#presomitic mesoderm",
+    "parent": "Mus musculus#hindbrain",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-6925",
+      "E-MTAB-6912"
+    ]
+  },
+  {
+    "name": "somitic mesoderm",
+    "id": "Mus musculus#hindbrain#somitic mesoderm",
+    "parent": "Mus musculus#hindbrain",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-6912"
+    ]
+  },
+  {
+    "name": "hindlimb muscle",
+    "id": "Mus musculus#hindlimb muscle",
+    "parent": "Mus musculus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-9715"
+    ]
+  },
+  {
+    "name": "fibro-adipogenic progenitor cell",
+    "id": "Mus musculus#hindlimb muscle#fibro-adipogenic progenitor cell",
+    "parent": "Mus musculus#hindlimb muscle",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-9715"
+    ]
+  },
+  {
+    "name": "hippocampus",
+    "id": "Mus musculus#hippocampus",
+    "parent": "Mus musculus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-103334",
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "astrocyte of the cerebral cortex",
+    "id": "Mus musculus#hippocampus#astrocyte of the cerebral cortex",
+    "parent": "Mus musculus#hippocampus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "brain pericyte",
+    "id": "Mus musculus#hippocampus#brain pericyte",
+    "parent": "Mus musculus#hippocampus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "endothelial cell",
+    "id": "Mus musculus#hippocampus#endothelial cell",
+    "parent": "Mus musculus#hippocampus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "macrophage",
+    "id": "Mus musculus#hippocampus#macrophage",
+    "parent": "Mus musculus#hippocampus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "microglial cell",
+    "id": "Mus musculus#hippocampus#microglial cell",
+    "parent": "Mus musculus#hippocampus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-103334",
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "neuron",
+    "id": "Mus musculus#hippocampus#neuron",
+    "parent": "Mus musculus#hippocampus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "oligodendrocyte",
+    "id": "Mus musculus#hippocampus#oligodendrocyte",
+    "parent": "Mus musculus#hippocampus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "oligodendrocyte precursor cell",
+    "id": "Mus musculus#hippocampus#oligodendrocyte precursor cell",
+    "parent": "Mus musculus#hippocampus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "inguinal lymph node",
+    "id": "Mus musculus#inguinal lymph node",
+    "parent": "Mus musculus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-10434"
+    ]
+  },
+  {
+    "name": "endothelial cell of lymphatic vessel",
+    "id": "Mus musculus#inguinal lymph node#endothelial cell of lymphatic vessel",
+    "parent": "Mus musculus#inguinal lymph node",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-10434"
+    ]
+  },
+  {
+    "name": "macrophage of medullary sinus of lymph node",
+    "id": "Mus musculus#inguinal lymph node#macrophage of medullary sinus of lymph node",
+    "parent": "Mus musculus#inguinal lymph node",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-10434"
+    ]
+  },
+  {
+    "name": "inner cell mass",
+    "id": "Mus musculus#inner cell mass",
+    "parent": "Mus musculus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-10243",
+      "E-MTAB-7098",
+      "E-MTAB-5208",
+      "E-MTAB-5058",
+      "E-MTAB-6362",
+      "E-MTAB-5485",
+      "E-MTAB-7901",
+      "E-MTAB-5466"
+    ]
+  },
+  {
+    "name": "embryonic stem cell",
+    "id": "Mus musculus#inner cell mass#embryonic stem cell",
+    "parent": "Mus musculus#inner cell mass",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-5208",
+      "E-MTAB-5058",
+      "E-MTAB-6362",
+      "E-MTAB-5485",
+      "E-MTAB-7901"
+    ]
+  },
+  {
+    "name": "epiblast cell",
+    "id": "Mus musculus#inner cell mass#epiblast cell",
+    "parent": "Mus musculus#inner cell mass",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-7901"
+    ]
+  },
+  {
+    "name": "induced pluripotent stem cell",
+    "id": "Mus musculus#inner cell mass#induced pluripotent stem cell",
+    "parent": "Mus musculus#inner cell mass",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-7901"
+    ]
+  },
+  {
+    "name": "motor neuron progenitor cell",
+    "id": "Mus musculus#inner cell mass#motor neuron progenitor cell",
+    "parent": "Mus musculus#inner cell mass",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-5466"
+    ]
+  },
+  {
+    "name": "mouse embryonic stem cell",
+    "id": "Mus musculus#inner cell mass#mouse embryonic stem cell",
+    "parent": "Mus musculus#inner cell mass",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-10243",
+      "E-MTAB-7098"
+    ]
+  },
+  {
+    "name": "interscapular brown adipose tissue",
+    "id": "Mus musculus#interscapular brown adipose tissue",
+    "parent": "Mus musculus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "B cell",
+    "id": "Mus musculus#interscapular brown adipose tissue#B cell",
+    "parent": "Mus musculus#interscapular brown adipose tissue",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "endothelial cell",
+    "id": "Mus musculus#interscapular brown adipose tissue#endothelial cell",
+    "parent": "Mus musculus#interscapular brown adipose tissue",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "mesenchymal stem cell of adipose",
+    "id": "Mus musculus#interscapular brown adipose tissue#mesenchymal stem cell of adipose",
+    "parent": "Mus musculus#interscapular brown adipose tissue",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "myeloid cell",
+    "id": "Mus musculus#interscapular brown adipose tissue#myeloid cell",
+    "parent": "Mus musculus#interscapular brown adipose tissue",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "natural killer cell",
+    "id": "Mus musculus#interscapular brown adipose tissue#natural killer cell",
+    "parent": "Mus musculus#interscapular brown adipose tissue",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "T cell",
+    "id": "Mus musculus#interscapular brown adipose tissue#T cell",
+    "parent": "Mus musculus#interscapular brown adipose tissue",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "kidney",
+    "id": "Mus musculus#kidney",
+    "parent": "Mus musculus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-8002",
+      "E-MTAB-8077",
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "endothelial cell",
+    "id": "Mus musculus#kidney#endothelial cell",
+    "parent": "Mus musculus#kidney",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-8077",
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "epithelial cell of proximal tubule",
+    "id": "Mus musculus#kidney#epithelial cell of proximal tubule",
+    "parent": "Mus musculus#kidney",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "kidney collecting duct epithelial cell",
+    "id": "Mus musculus#kidney#kidney collecting duct epithelial cell",
+    "parent": "Mus musculus#kidney",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "leukocyte",
+    "id": "Mus musculus#kidney#leukocyte",
+    "parent": "Mus musculus#kidney",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-8002"
+    ]
+  },
+  {
+    "name": "macrophage",
+    "id": "Mus musculus#kidney#macrophage",
+    "parent": "Mus musculus#kidney",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "natural killer cell",
+    "id": "Mus musculus#kidney#natural killer cell",
+    "parent": "Mus musculus#kidney",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "T cell",
+    "id": "Mus musculus#kidney#T cell",
+    "parent": "Mus musculus#kidney",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-8002"
+    ]
+  },
+  {
+    "name": "lamina propria of small intestine",
+    "id": "Mus musculus#lamina propria of small intestine",
+    "parent": "Mus musculus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-6976"
+    ]
+  },
+  {
+    "name": "macrophage",
+    "id": "Mus musculus#lamina propria of small intestine#macrophage",
+    "parent": "Mus musculus#lamina propria of small intestine",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-6976"
+    ]
+  },
+  {
+    "name": "limb muscle",
+    "id": "Mus musculus#limb muscle",
+    "parent": "Mus musculus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "B cell",
+    "id": "Mus musculus#limb muscle#B cell",
+    "parent": "Mus musculus#limb muscle",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "endothelial cell",
+    "id": "Mus musculus#limb muscle#endothelial cell",
+    "parent": "Mus musculus#limb muscle",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "macrophage",
+    "id": "Mus musculus#limb muscle#macrophage",
+    "parent": "Mus musculus#limb muscle",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "mesenchymal stem cell",
+    "id": "Mus musculus#limb muscle#mesenchymal stem cell",
+    "parent": "Mus musculus#limb muscle",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "skeletal muscle satellite cell",
+    "id": "Mus musculus#limb muscle#skeletal muscle satellite cell",
+    "parent": "Mus musculus#limb muscle",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "T cell",
+    "id": "Mus musculus#limb muscle#T cell",
+    "parent": "Mus musculus#limb muscle",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "liver",
+    "id": "Mus musculus#liver",
+    "parent": "Mus musculus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-HCAD-21",
+      "E-MTAB-8077",
+      "E-ENAD-15",
+      "E-MTAB-3707",
+      "E-MTAB-8360"
+    ]
+  },
+  {
+    "name": "B cell",
+    "id": "Mus musculus#liver#B cell",
+    "parent": "Mus musculus#liver",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "endothelial cell",
+    "id": "Mus musculus#liver#endothelial cell",
+    "parent": "Mus musculus#liver",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-8077"
+    ]
+  },
+  {
+    "name": "endothelial cell of hepatic sinusoid",
+    "id": "Mus musculus#liver#endothelial cell of hepatic sinusoid",
+    "parent": "Mus musculus#liver",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "hematopoietic stem cell",
+    "id": "Mus musculus#liver#hematopoietic stem cell",
+    "parent": "Mus musculus#liver",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-8360"
+    ]
+  },
+  {
+    "name": "hepatocyte",
+    "id": "Mus musculus#liver#hepatocyte",
+    "parent": "Mus musculus#liver",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15",
+      "E-MTAB-3707",
+      "E-MTAB-8360"
+    ]
+  },
+  {
+    "name": "Kupffer cell",
+    "id": "Mus musculus#liver#Kupffer cell",
+    "parent": "Mus musculus#liver",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "natural killer cell",
+    "id": "Mus musculus#liver#natural killer cell",
+    "parent": "Mus musculus#liver",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "phagocyte",
+    "id": "Mus musculus#liver#phagocyte",
+    "parent": "Mus musculus#liver",
+    "value": 1,
+    "experimentAccessions": [
+      "E-HCAD-21"
+    ]
+  },
+  {
+    "name": "lung",
+    "id": "Mus musculus#lung",
+    "parent": "Mus musculus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-8077",
+      "E-MTAB-7678",
+      "E-ENAD-15",
+      "E-MTAB-4619"
+    ]
+  },
+  {
+    "name": "B cell",
+    "id": "Mus musculus#lung#B cell",
+    "parent": "Mus musculus#lung",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "ciliated columnar cell of tracheobronchial tree",
+    "id": "Mus musculus#lung#ciliated columnar cell of tracheobronchial tree",
+    "parent": "Mus musculus#lung",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "classical monocyte",
+    "id": "Mus musculus#lung#classical monocyte",
+    "parent": "Mus musculus#lung",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-7678",
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "endothelial cell",
+    "id": "Mus musculus#lung#endothelial cell",
+    "parent": "Mus musculus#lung",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-8077"
+    ]
+  },
+  {
+    "name": "epithelial cell of lung",
+    "id": "Mus musculus#lung#epithelial cell of lung",
+    "parent": "Mus musculus#lung",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "leukocyte",
+    "id": "Mus musculus#lung#leukocyte",
+    "parent": "Mus musculus#lung",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "lung endothelial cell",
+    "id": "Mus musculus#lung#lung endothelial cell",
+    "parent": "Mus musculus#lung",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "lung macrophage",
+    "id": "Mus musculus#lung#lung macrophage",
+    "parent": "Mus musculus#lung",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-7678"
+    ]
+  },
+  {
+    "name": "monocyte",
+    "id": "Mus musculus#lung#monocyte",
+    "parent": "Mus musculus#lung",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "myeloid cell",
+    "id": "Mus musculus#lung#myeloid cell",
+    "parent": "Mus musculus#lung",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "natural killer cell",
+    "id": "Mus musculus#lung#natural killer cell",
+    "parent": "Mus musculus#lung",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "stromal cell",
+    "id": "Mus musculus#lung#stromal cell",
+    "parent": "Mus musculus#lung",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "T cell",
+    "id": "Mus musculus#lung#T cell",
+    "parent": "Mus musculus#lung",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "T-helper 2 cell",
+    "id": "Mus musculus#lung#T-helper 2 cell",
+    "parent": "Mus musculus#lung",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-4619"
+    ]
+  },
+  {
+    "name": "lymph node",
+    "id": "Mus musculus#lymph node",
+    "parent": "Mus musculus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-10196",
+      "E-MTAB-10197",
+      "E-MTAB-7311",
+      "E-EHCA-2"
+    ]
+  },
+  {
+    "name": " dendritic cell",
+    "id": "Mus musculus#lymph node# dendritic cell",
+    "parent": "Mus musculus#lymph node",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-10196"
+    ]
+  },
+  {
+    "name": "B cell",
+    "id": "Mus musculus#lymph node#B cell",
+    "parent": "Mus musculus#lymph node",
+    "value": 1,
+    "experimentAccessions": [
+      "E-EHCA-2"
+    ]
+  },
+  {
+    "name": "cancer associated fibroblast 1",
+    "id": "Mus musculus#lymph node#cancer associated fibroblast 1",
+    "parent": "Mus musculus#lymph node",
+    "value": 1,
+    "experimentAccessions": [
+      "E-EHCA-2"
+    ]
+  },
+  {
+    "name": "cancer associated fibroblast 2",
+    "id": "Mus musculus#lymph node#cancer associated fibroblast 2",
+    "parent": "Mus musculus#lymph node",
+    "value": 1,
+    "experimentAccessions": [
+      "E-EHCA-2"
+    ]
+  },
+  {
+    "name": "cancer associated fibroblast 3",
+    "id": "Mus musculus#lymph node#cancer associated fibroblast 3",
+    "parent": "Mus musculus#lymph node",
+    "value": 1,
+    "experimentAccessions": [
+      "E-EHCA-2"
+    ]
+  },
+  {
+    "name": "CD11b-positive dendritic cell",
+    "id": "Mus musculus#lymph node#CD11b-positive dendritic cell",
+    "parent": "Mus musculus#lymph node",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-10196"
+    ]
+  },
+  {
+    "name": "CD4-positive, alpha-beta memory T cell",
+    "id": "Mus musculus#lymph node#CD4-positive, alpha-beta memory T cell",
+    "parent": "Mus musculus#lymph node",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-7311"
+    ]
+  },
+  {
+    "name": "CD4-positive, CD25-positive, alpha-beta regulatory T cell",
+    "id": "Mus musculus#lymph node#CD4-positive, CD25-positive, alpha-beta regulatory T cell",
+    "parent": "Mus musculus#lymph node",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-7311"
+    ]
+  },
+  {
+    "name": "CD8_alpha-positive CD11b-negative dendritic cell",
+    "id": "Mus musculus#lymph node#CD8_alpha-positive CD11b-negative dendritic cell",
+    "parent": "Mus musculus#lymph node",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-10196"
+    ]
+  },
+  {
+    "name": "conventional dendritic cell 1",
+    "id": "Mus musculus#lymph node#conventional dendritic cell 1",
+    "parent": "Mus musculus#lymph node",
+    "value": 1,
+    "experimentAccessions": [
+      "E-EHCA-2"
+    ]
+  },
+  {
+    "name": "conventional dendritic cell 2",
+    "id": "Mus musculus#lymph node#conventional dendritic cell 2",
+    "parent": "Mus musculus#lymph node",
+    "value": 1,
+    "experimentAccessions": [
+      "E-EHCA-2"
+    ]
+  },
+  {
+    "name": "dendritic cell",
+    "id": "Mus musculus#lymph node#dendritic cell",
+    "parent": "Mus musculus#lymph node",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-10196"
+    ]
+  },
+  {
+    "name": "endothelial cell of lymphatic vessel",
+    "id": "Mus musculus#lymph node#endothelial cell of lymphatic vessel",
+    "parent": "Mus musculus#lymph node",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-10197"
+    ]
+  },
+  {
+    "name": "fibroblast",
+    "id": "Mus musculus#lymph node#fibroblast",
+    "parent": "Mus musculus#lymph node",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-10197",
+      "E-MTAB-10196"
+    ]
+  },
+  {
+    "name": "follicular dendritic cell",
+    "id": "Mus musculus#lymph node#follicular dendritic cell",
+    "parent": "Mus musculus#lymph node",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-10197"
+    ]
+  },
+  {
+    "name": "gamma-delta T cell/mucosal invariant T cell",
+    "id": "Mus musculus#lymph node#gamma-delta T cell/mucosal invariant T cell",
+    "parent": "Mus musculus#lymph node",
+    "value": 1,
+    "experimentAccessions": [
+      "E-EHCA-2"
+    ]
+  },
+  {
+    "name": "Ki67 positive conventional dendritic cell 2/tolerogenic dendritic cell",
+    "id": "Mus musculus#lymph node#Ki67 positive conventional dendritic cell 2/tolerogenic dendritic cell",
+    "parent": "Mus musculus#lymph node",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-10196"
+    ]
+  },
+  {
+    "name": "lymph node endothelial cell",
+    "id": "Mus musculus#lymph node#lymph node endothelial cell",
+    "parent": "Mus musculus#lymph node",
+    "value": 1,
+    "experimentAccessions": [
+      "E-EHCA-2"
+    ]
+  },
+  {
+    "name": "lymph node fibroblast",
+    "id": "Mus musculus#lymph node#lymph node fibroblast",
+    "parent": "Mus musculus#lymph node",
+    "value": 1,
+    "experimentAccessions": [
+      "E-EHCA-2"
+    ]
+  },
+  {
+    "name": "lymph node T cell",
+    "id": "Mus musculus#lymph node#lymph node T cell",
+    "parent": "Mus musculus#lymph node",
+    "value": 1,
+    "experimentAccessions": [
+      "E-EHCA-2"
+    ]
+  },
+  {
+    "name": "lymphatic endothelial cell",
+    "id": "Mus musculus#lymph node#lymphatic endothelial cell",
+    "parent": "Mus musculus#lymph node",
+    "value": 1,
+    "experimentAccessions": [
+      "E-EHCA-2"
+    ]
+  },
+  {
+    "name": "macrophage/monocyte",
+    "id": "Mus musculus#lymph node#macrophage/monocyte",
+    "parent": "Mus musculus#lymph node",
+    "value": 1,
+    "experimentAccessions": [
+      "E-EHCA-2"
+    ]
+  },
+  {
+    "name": "migratory dendritic cell",
+    "id": "Mus musculus#lymph node#migratory dendritic cell",
+    "parent": "Mus musculus#lymph node",
+    "value": 1,
+    "experimentAccessions": [
+      "E-EHCA-2"
+    ]
+  },
+  {
+    "name": "natural killer cell",
+    "id": "Mus musculus#lymph node#natural killer cell",
+    "parent": "Mus musculus#lymph node",
+    "value": 1,
+    "experimentAccessions": [
+      "E-EHCA-2"
+    ]
+  },
+  {
+    "name": "not available",
+    "id": "Mus musculus#lymph node#not available",
+    "parent": "Mus musculus#lymph node",
+    "value": 1,
+    "experimentAccessions": [
+      "E-EHCA-2"
+    ]
+  },
+  {
+    "name": "pericyte cell",
+    "id": "Mus musculus#lymph node#pericyte cell",
+    "parent": "Mus musculus#lymph node",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-10197"
+    ]
+  },
+  {
+    "name": "plasmacytoid dendritic cell",
+    "id": "Mus musculus#lymph node#plasmacytoid dendritic cell",
+    "parent": "Mus musculus#lymph node",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-10196",
+      "E-EHCA-2"
+    ]
+  },
+  {
+    "name": "reticular cell",
+    "id": "Mus musculus#lymph node#reticular cell",
+    "parent": "Mus musculus#lymph node",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-10197"
+    ]
+  },
+  {
+    "name": "stromal cell",
+    "id": "Mus musculus#lymph node#stromal cell",
+    "parent": "Mus musculus#lymph node",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-10197"
+    ]
+  },
+  {
+    "name": "T cell",
+    "id": "Mus musculus#lymph node#T cell",
+    "parent": "Mus musculus#lymph node",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-10196"
+    ]
+  },
+  {
+    "name": "tumor T cell",
+    "id": "Mus musculus#lymph node#tumor T cell",
+    "parent": "Mus musculus#lymph node",
+    "value": 1,
+    "experimentAccessions": [
+      "E-EHCA-2"
+    ]
+  },
+  {
+    "name": "tumour endothelial cell",
+    "id": "Mus musculus#lymph node#tumour endothelial cell",
+    "parent": "Mus musculus#lymph node",
+    "value": 1,
+    "experimentAccessions": [
+      "E-EHCA-2"
+    ]
+  },
+  {
+    "name": "mammary gland",
+    "id": "Mus musculus#mammary gland",
+    "parent": "Mus musculus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-10043",
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "B cell",
+    "id": "Mus musculus#mammary gland#B cell",
+    "parent": "Mus musculus#mammary gland",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-10043"
+    ]
+  },
+  {
+    "name": "basal cell",
+    "id": "Mus musculus#mammary gland#basal cell",
+    "parent": "Mus musculus#mammary gland",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-10043",
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "CD4-positive, alpha-beta T cell",
+    "id": "Mus musculus#mammary gland#CD4-positive, alpha-beta T cell",
+    "parent": "Mus musculus#mammary gland",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-10043"
+    ]
+  },
+  {
+    "name": "CD8-positive, alpha-beta T cell",
+    "id": "Mus musculus#mammary gland#CD8-positive, alpha-beta T cell",
+    "parent": "Mus musculus#mammary gland",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-10043"
+    ]
+  },
+  {
+    "name": "conventional dendritic cell",
+    "id": "Mus musculus#mammary gland#conventional dendritic cell",
+    "parent": "Mus musculus#mammary gland",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-10043"
+    ]
+  },
+  {
+    "name": "cytotoxic T cell",
+    "id": "Mus musculus#mammary gland#cytotoxic T cell",
+    "parent": "Mus musculus#mammary gland",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-10043"
+    ]
+  },
+  {
+    "name": "DcsMbe",
+    "id": "Mus musculus#mammary gland#DcsMbe",
+    "parent": "Mus musculus#mammary gland",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-10043"
+    ]
+  },
+  {
+    "name": "dendritic cell",
+    "id": "Mus musculus#mammary gland#dendritic cell",
+    "parent": "Mus musculus#mammary gland",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-10043"
+    ]
+  },
+  {
+    "name": "endothelial cell",
+    "id": "Mus musculus#mammary gland#endothelial cell",
+    "parent": "Mus musculus#mammary gland",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-10043",
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "fibroblast",
+    "id": "Mus musculus#mammary gland#fibroblast",
+    "parent": "Mus musculus#mammary gland",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-10043"
+    ]
+  },
+  {
+    "name": "hematopoietic stem cell",
+    "id": "Mus musculus#mammary gland#hematopoietic stem cell",
+    "parent": "Mus musculus#mammary gland",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-10043"
+    ]
+  },
+  {
+    "name": "hematopoietic stem progenitor",
+    "id": "Mus musculus#mammary gland#hematopoietic stem progenitor",
+    "parent": "Mus musculus#mammary gland",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-10043"
+    ]
+  },
+  {
+    "name": "innate lymphoid cell",
+    "id": "Mus musculus#mammary gland#innate lymphoid cell",
+    "parent": "Mus musculus#mammary gland",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-10043"
+    ]
+  },
+  {
+    "name": "luminal epithelial cell of mammary gland",
+    "id": "Mus musculus#mammary gland#luminal epithelial cell of mammary gland",
+    "parent": "Mus musculus#mammary gland",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "macrophage",
+    "id": "Mus musculus#mammary gland#macrophage",
+    "parent": "Mus musculus#mammary gland",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-10043"
+    ]
+  },
+  {
+    "name": "mast cell",
+    "id": "Mus musculus#mammary gland#mast cell",
+    "parent": "Mus musculus#mammary gland",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-10043"
+    ]
+  },
+  {
+    "name": "Mp1Dm",
+    "id": "Mus musculus#mammary gland#Mp1Dm",
+    "parent": "Mus musculus#mammary gland",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-10043"
+    ]
+  },
+  {
+    "name": "myeloid cell",
+    "id": "Mus musculus#mammary gland#myeloid cell",
+    "parent": "Mus musculus#mammary gland",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-10043"
+    ]
+  },
+  {
+    "name": "myeloid dendritic cell",
+    "id": "Mus musculus#mammary gland#myeloid dendritic cell",
+    "parent": "Mus musculus#mammary gland",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-10043"
+    ]
+  },
+  {
+    "name": "myeloid leukocyte",
+    "id": "Mus musculus#mammary gland#myeloid leukocyte",
+    "parent": "Mus musculus#mammary gland",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-10043"
+    ]
+  },
+  {
+    "name": "natural killer cell",
+    "id": "Mus musculus#mammary gland#natural killer cell",
+    "parent": "Mus musculus#mammary gland",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-10043"
+    ]
+  },
+  {
+    "name": "neoplastic cell",
+    "id": "Mus musculus#mammary gland#neoplastic cell",
+    "parent": "Mus musculus#mammary gland",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-10043"
+    ]
+  },
+  {
+    "name": "neutrophil",
+    "id": "Mus musculus#mammary gland#neutrophil",
+    "parent": "Mus musculus#mammary gland",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-10043"
+    ]
+  },
+  {
+    "name": "pericyte cell",
+    "id": "Mus musculus#mammary gland#pericyte cell",
+    "parent": "Mus musculus#mammary gland",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-10043"
+    ]
+  },
+  {
+    "name": "plasma cell",
+    "id": "Mus musculus#mammary gland#plasma cell",
+    "parent": "Mus musculus#mammary gland",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-10043"
+    ]
+  },
+  {
+    "name": "plasmacytoid dendritic cell",
+    "id": "Mus musculus#mammary gland#plasmacytoid dendritic cell",
+    "parent": "Mus musculus#mammary gland",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-10043"
+    ]
+  },
+  {
+    "name": "progenitor cell of mammary luminal epithelium",
+    "id": "Mus musculus#mammary gland#progenitor cell of mammary luminal epithelium",
+    "parent": "Mus musculus#mammary gland",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-10043"
+    ]
+  },
+  {
+    "name": "regulatory T cell",
+    "id": "Mus musculus#mammary gland#regulatory T cell",
+    "parent": "Mus musculus#mammary gland",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-10043"
+    ]
+  },
+  {
+    "name": "secretory alveolar cell like luminal cell",
+    "id": "Mus musculus#mammary gland#secretory alveolar cell like luminal cell",
+    "parent": "Mus musculus#mammary gland",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-10043"
+    ]
+  },
+  {
+    "name": "stromal cell",
+    "id": "Mus musculus#mammary gland#stromal cell",
+    "parent": "Mus musculus#mammary gland",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "Swc",
+    "id": "Mus musculus#mammary gland#Swc",
+    "parent": "Mus musculus#mammary gland",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-10043"
+    ]
+  },
+  {
+    "name": "T cell",
+    "id": "Mus musculus#mammary gland#T cell",
+    "parent": "Mus musculus#mammary gland",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-10043"
+    ]
+  },
+  {
+    "name": "medial ganglionic eminence",
+    "id": "Mus musculus#medial ganglionic eminence",
+    "parent": "Mus musculus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-94641"
+    ]
+  },
+  {
+    "name": "astrocytes or ependymal cell",
+    "id": "Mus musculus#medial ganglionic eminence#astrocytes or ependymal cell",
+    "parent": "Mus musculus#medial ganglionic eminence",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-94641"
+    ]
+  },
+  {
+    "name": "endothelial cell",
+    "id": "Mus musculus#medial ganglionic eminence#endothelial cell",
+    "parent": "Mus musculus#medial ganglionic eminence",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-94641"
+    ]
+  },
+  {
+    "name": "ependymal cell",
+    "id": "Mus musculus#medial ganglionic eminence#ependymal cell",
+    "parent": "Mus musculus#medial ganglionic eminence",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-94641"
+    ]
+  },
+  {
+    "name": "immature neuron",
+    "id": "Mus musculus#medial ganglionic eminence#immature neuron",
+    "parent": "Mus musculus#medial ganglionic eminence",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-94641"
+    ]
+  },
+  {
+    "name": "microglial cell",
+    "id": "Mus musculus#medial ganglionic eminence#microglial cell",
+    "parent": "Mus musculus#medial ganglionic eminence",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-94641"
+    ]
+  },
+  {
+    "name": "proliferating neural progenitor cell",
+    "id": "Mus musculus#medial ganglionic eminence#proliferating neural progenitor cell",
+    "parent": "Mus musculus#medial ganglionic eminence",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-94641"
+    ]
+  },
+  {
+    "name": "vascular smooth muscle cell",
+    "id": "Mus musculus#medial ganglionic eminence#vascular smooth muscle cell",
+    "parent": "Mus musculus#medial ganglionic eminence",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-94641"
+    ]
+  },
+  {
+    "name": "mediastinal lymph node",
+    "id": "Mus musculus#mediastinal lymph node",
+    "parent": "Mus musculus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-4619"
+    ]
+  },
+  {
+    "name": "T-helper 2 cell",
+    "id": "Mus musculus#mediastinal lymph node#T-helper 2 cell",
+    "parent": "Mus musculus#mediastinal lymph node",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-4619"
+    ]
+  },
+  {
+    "name": "medulla of thymus",
+    "id": "Mus musculus#medulla of thymus",
+    "parent": "Mus musculus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-CURD-94"
+    ]
+  },
+  {
+    "name": "epithelial cell",
+    "id": "Mus musculus#medulla of thymus#epithelial cell",
+    "parent": "Mus musculus#medulla of thymus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-CURD-94"
+    ]
+  },
+  {
+    "name": "mesenteric adipose tissue",
+    "id": "Mus musculus#mesenteric adipose tissue",
+    "parent": "Mus musculus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "B cell",
+    "id": "Mus musculus#mesenteric adipose tissue#B cell",
+    "parent": "Mus musculus#mesenteric adipose tissue",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "endothelial cell",
+    "id": "Mus musculus#mesenteric adipose tissue#endothelial cell",
+    "parent": "Mus musculus#mesenteric adipose tissue",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "mesenchymal stem cell of adipose",
+    "id": "Mus musculus#mesenteric adipose tissue#mesenchymal stem cell of adipose",
+    "parent": "Mus musculus#mesenteric adipose tissue",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "myeloid cell",
+    "id": "Mus musculus#mesenteric adipose tissue#myeloid cell",
+    "parent": "Mus musculus#mesenteric adipose tissue",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "natural killer cell",
+    "id": "Mus musculus#mesenteric adipose tissue#natural killer cell",
+    "parent": "Mus musculus#mesenteric adipose tissue",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "T cell",
+    "id": "Mus musculus#mesenteric adipose tissue#T cell",
+    "parent": "Mus musculus#mesenteric adipose tissue",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "mesenteric lymph node",
+    "id": "Mus musculus#mesenteric lymph node",
+    "parent": "Mus musculus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-7311",
+      "E-CURD-96",
+      "E-MTAB-4619"
+    ]
+  },
+  {
+    "name": "CD4-positive, alpha-beta memory T cell",
+    "id": "Mus musculus#mesenteric lymph node#CD4-positive, alpha-beta memory T cell",
+    "parent": "Mus musculus#mesenteric lymph node",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-7311",
+      "E-CURD-96"
+    ]
+  },
+  {
+    "name": "CD4-positive, CD25-positive, alpha-beta regulatory T cell",
+    "id": "Mus musculus#mesenteric lymph node#CD4-positive, CD25-positive, alpha-beta regulatory T cell",
+    "parent": "Mus musculus#mesenteric lymph node",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-7311",
+      "E-CURD-96"
+    ]
+  },
+  {
+    "name": "T-helper 2 cell",
+    "id": "Mus musculus#mesenteric lymph node#T-helper 2 cell",
+    "parent": "Mus musculus#mesenteric lymph node",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-4619"
+    ]
+  },
+  {
+    "name": "nasal cavity mucosa",
+    "id": "Mus musculus#nasal cavity mucosa",
+    "parent": "Mus musculus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-CURD-52"
+    ]
+  },
+  {
+    "name": "B cell",
+    "id": "Mus musculus#nasal cavity mucosa#B cell",
+    "parent": "Mus musculus#nasal cavity mucosa",
+    "value": 1,
+    "experimentAccessions": [
+      "E-CURD-52"
+    ]
+  },
+  {
+    "name": "basal cell of olfactory epithelium",
+    "id": "Mus musculus#nasal cavity mucosa#basal cell of olfactory epithelium",
+    "parent": "Mus musculus#nasal cavity mucosa",
+    "value": 1,
+    "experimentAccessions": [
+      "E-CURD-52"
+    ]
+  },
+  {
+    "name": "blood vessel endothelial cell",
+    "id": "Mus musculus#nasal cavity mucosa#blood vessel endothelial cell",
+    "parent": "Mus musculus#nasal cavity mucosa",
+    "value": 1,
+    "experimentAccessions": [
+      "E-CURD-52"
+    ]
+  },
+  {
+    "name": "brush cell",
+    "id": "Mus musculus#nasal cavity mucosa#brush cell",
+    "parent": "Mus musculus#nasal cavity mucosa",
+    "value": 1,
+    "experimentAccessions": [
+      "E-CURD-52"
+    ]
+  },
+  {
+    "name": "ciliated epithelial cell",
+    "id": "Mus musculus#nasal cavity mucosa#ciliated epithelial cell",
+    "parent": "Mus musculus#nasal cavity mucosa",
+    "value": 1,
+    "experimentAccessions": [
+      "E-CURD-52"
+    ]
+  },
+  {
+    "name": "dendritic cell",
+    "id": "Mus musculus#nasal cavity mucosa#dendritic cell",
+    "parent": "Mus musculus#nasal cavity mucosa",
+    "value": 1,
+    "experimentAccessions": [
+      "E-CURD-52"
+    ]
+  },
+  {
+    "name": "erythroid lineage cell",
+    "id": "Mus musculus#nasal cavity mucosa#erythroid lineage cell",
+    "parent": "Mus musculus#nasal cavity mucosa",
+    "value": 1,
+    "experimentAccessions": [
+      "E-CURD-52"
+    ]
+  },
+  {
+    "name": "fibroblast",
+    "id": "Mus musculus#nasal cavity mucosa#fibroblast",
+    "parent": "Mus musculus#nasal cavity mucosa",
+    "value": 1,
+    "experimentAccessions": [
+      "E-CURD-52"
+    ]
+  },
+  {
+    "name": "interneuron",
+    "id": "Mus musculus#nasal cavity mucosa#interneuron",
+    "parent": "Mus musculus#nasal cavity mucosa",
+    "value": 1,
+    "experimentAccessions": [
+      "E-CURD-52"
+    ]
+  },
+  {
+    "name": "ionocyte",
+    "id": "Mus musculus#nasal cavity mucosa#ionocyte",
+    "parent": "Mus musculus#nasal cavity mucosa",
+    "value": 1,
+    "experimentAccessions": [
+      "E-CURD-52"
+    ]
+  },
+  {
+    "name": "macrophage",
+    "id": "Mus musculus#nasal cavity mucosa#macrophage",
+    "parent": "Mus musculus#nasal cavity mucosa",
+    "value": 1,
+    "experimentAccessions": [
+      "E-CURD-52"
+    ]
+  },
+  {
+    "name": "monocyte",
+    "id": "Mus musculus#nasal cavity mucosa#monocyte",
+    "parent": "Mus musculus#nasal cavity mucosa",
+    "value": 1,
+    "experimentAccessions": [
+      "E-CURD-52"
+    ]
+  },
+  {
+    "name": "nasal cavity respiratory epithelium epithelial cell of viscerocranial mucosa",
+    "id": "Mus musculus#nasal cavity mucosa#nasal cavity respiratory epithelium epithelial cell of viscerocranial mucosa",
+    "parent": "Mus musculus#nasal cavity mucosa",
+    "value": 1,
+    "experimentAccessions": [
+      "E-CURD-52"
+    ]
+  },
+  {
+    "name": "nasal mucosa goblet cell",
+    "id": "Mus musculus#nasal cavity mucosa#nasal mucosa goblet cell",
+    "parent": "Mus musculus#nasal cavity mucosa",
+    "value": 1,
+    "experimentAccessions": [
+      "E-CURD-52"
+    ]
+  },
+  {
+    "name": "neuron",
+    "id": "Mus musculus#nasal cavity mucosa#neuron",
+    "parent": "Mus musculus#nasal cavity mucosa",
+    "value": 1,
+    "experimentAccessions": [
+      "E-CURD-52"
+    ]
+  },
+  {
+    "name": "neutrophil",
+    "id": "Mus musculus#nasal cavity mucosa#neutrophil",
+    "parent": "Mus musculus#nasal cavity mucosa",
+    "value": 1,
+    "experimentAccessions": [
+      "E-CURD-52"
+    ]
+  },
+  {
+    "name": "olfactory bulb tufted cell",
+    "id": "Mus musculus#nasal cavity mucosa#olfactory bulb tufted cell",
+    "parent": "Mus musculus#nasal cavity mucosa",
+    "value": 1,
+    "experimentAccessions": [
+      "E-CURD-52"
+    ]
+  },
+  {
+    "name": "olfactory epithelial cell",
+    "id": "Mus musculus#nasal cavity mucosa#olfactory epithelial cell",
+    "parent": "Mus musculus#nasal cavity mucosa",
+    "value": 1,
+    "experimentAccessions": [
+      "E-CURD-52"
+    ]
+  },
+  {
+    "name": "olfactory receptor cell",
+    "id": "Mus musculus#nasal cavity mucosa#olfactory receptor cell",
+    "parent": "Mus musculus#nasal cavity mucosa",
+    "value": 1,
+    "experimentAccessions": [
+      "E-CURD-52"
+    ]
+  },
+  {
+    "name": "oligodendrocyte",
+    "id": "Mus musculus#nasal cavity mucosa#oligodendrocyte",
+    "parent": "Mus musculus#nasal cavity mucosa",
+    "value": 1,
+    "experimentAccessions": [
+      "E-CURD-52"
+    ]
+  },
+  {
+    "name": "pericyte cell",
+    "id": "Mus musculus#nasal cavity mucosa#pericyte cell",
+    "parent": "Mus musculus#nasal cavity mucosa",
+    "value": 1,
+    "experimentAccessions": [
+      "E-CURD-52"
+    ]
+  },
+  {
+    "name": "T cell",
+    "id": "Mus musculus#nasal cavity mucosa#T cell",
+    "parent": "Mus musculus#nasal cavity mucosa",
+    "value": 1,
+    "experimentAccessions": [
+      "E-CURD-52"
+    ]
+  },
+  {
+    "name": "type-6 epithelial cell of thymus",
+    "id": "Mus musculus#nasal cavity mucosa#type-6 epithelial cell of thymus",
+    "parent": "Mus musculus#nasal cavity mucosa",
+    "value": 1,
+    "experimentAccessions": [
+      "E-CURD-52"
+    ]
+  },
+  {
+    "name": "olfactory bulb",
+    "id": "Mus musculus#olfactory bulb",
+    "parent": "Mus musculus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-148360"
+    ]
+  },
+  {
+    "name": "astrocyte",
+    "id": "Mus musculus#olfactory bulb#astrocyte",
+    "parent": "Mus musculus#olfactory bulb",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-148360"
+    ]
+  },
+  {
+    "name": "central nervous system pericyte",
+    "id": "Mus musculus#olfactory bulb#central nervous system pericyte",
+    "parent": "Mus musculus#olfactory bulb",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-148360"
+    ]
+  },
+  {
+    "name": "dopaminergic neuron",
+    "id": "Mus musculus#olfactory bulb#dopaminergic neuron",
+    "parent": "Mus musculus#olfactory bulb",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-148360"
+    ]
+  },
+  {
+    "name": "immature neuron",
+    "id": "Mus musculus#olfactory bulb#immature neuron",
+    "parent": "Mus musculus#olfactory bulb",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-148360"
+    ]
+  },
+  {
+    "name": "leptomeningeal cell",
+    "id": "Mus musculus#olfactory bulb#leptomeningeal cell",
+    "parent": "Mus musculus#olfactory bulb",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-148360"
+    ]
+  },
+  {
+    "name": "macrophage",
+    "id": "Mus musculus#olfactory bulb#macrophage",
+    "parent": "Mus musculus#olfactory bulb",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-148360"
+    ]
+  },
+  {
+    "name": "microglial cell",
+    "id": "Mus musculus#olfactory bulb#microglial cell",
+    "parent": "Mus musculus#olfactory bulb",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-148360"
+    ]
+  },
+  {
+    "name": "neural progenitor cell",
+    "id": "Mus musculus#olfactory bulb#neural progenitor cell",
+    "parent": "Mus musculus#olfactory bulb",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-148360"
+    ]
+  },
+  {
+    "name": "neuron",
+    "id": "Mus musculus#olfactory bulb#neuron",
+    "parent": "Mus musculus#olfactory bulb",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-148360"
+    ]
+  },
+  {
+    "name": "olfactory bulb interneuron",
+    "id": "Mus musculus#olfactory bulb#olfactory bulb interneuron",
+    "parent": "Mus musculus#olfactory bulb",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-148360"
+    ]
+  },
+  {
+    "name": "olfactory bulb tufted cell",
+    "id": "Mus musculus#olfactory bulb#olfactory bulb tufted cell",
+    "parent": "Mus musculus#olfactory bulb",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-148360"
+    ]
+  },
+  {
+    "name": "olfactory ensheathing cell",
+    "id": "Mus musculus#olfactory bulb#olfactory ensheathing cell",
+    "parent": "Mus musculus#olfactory bulb",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-148360"
+    ]
+  },
+  {
+    "name": "olfactory granule cell",
+    "id": "Mus musculus#olfactory bulb#olfactory granule cell",
+    "parent": "Mus musculus#olfactory bulb",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-148360"
+    ]
+  },
+  {
+    "name": "oligodendrocyte",
+    "id": "Mus musculus#olfactory bulb#oligodendrocyte",
+    "parent": "Mus musculus#olfactory bulb",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-148360"
+    ]
+  },
+  {
+    "name": "oligodendrocyte precursor cell",
+    "id": "Mus musculus#olfactory bulb#oligodendrocyte precursor cell",
+    "parent": "Mus musculus#olfactory bulb",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-148360"
+    ]
+  },
+  {
+    "name": "vascular cell",
+    "id": "Mus musculus#olfactory bulb#vascular cell",
+    "parent": "Mus musculus#olfactory bulb",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-148360"
+    ]
+  },
+  {
+    "name": "olfactory segment of nasal mucosa",
+    "id": "Mus musculus#olfactory segment of nasal mucosa",
+    "parent": "Mus musculus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-151346"
+    ]
+  },
+  {
+    "name": "basal proper cell of olfactory epithelium",
+    "id": "Mus musculus#olfactory segment of nasal mucosa#basal proper cell of olfactory epithelium",
+    "parent": "Mus musculus#olfactory segment of nasal mucosa",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-151346"
+    ]
+  },
+  {
+    "name": "Bowman\u0027s gland cell",
+    "id": "Mus musculus#olfactory segment of nasal mucosa#Bowman\u0027s gland cell",
+    "parent": "Mus musculus#olfactory segment of nasal mucosa",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-151346"
+    ]
+  },
+  {
+    "name": "ciliated epithelial cell",
+    "id": "Mus musculus#olfactory segment of nasal mucosa#ciliated epithelial cell",
+    "parent": "Mus musculus#olfactory segment of nasal mucosa",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-151346"
+    ]
+  },
+  {
+    "name": "globose cell of olfactory epithelium",
+    "id": "Mus musculus#olfactory segment of nasal mucosa#globose cell of olfactory epithelium",
+    "parent": "Mus musculus#olfactory segment of nasal mucosa",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-151346"
+    ]
+  },
+  {
+    "name": "immediate neural precursor cell",
+    "id": "Mus musculus#olfactory segment of nasal mucosa#immediate neural precursor cell",
+    "parent": "Mus musculus#olfactory segment of nasal mucosa",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-151346"
+    ]
+  },
+  {
+    "name": "leukocyte",
+    "id": "Mus musculus#olfactory segment of nasal mucosa#leukocyte",
+    "parent": "Mus musculus#olfactory segment of nasal mucosa",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-151346"
+    ]
+  },
+  {
+    "name": "microvillous olfactory receptor neuron",
+    "id": "Mus musculus#olfactory segment of nasal mucosa#microvillous olfactory receptor neuron",
+    "parent": "Mus musculus#olfactory segment of nasal mucosa",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-151346"
+    ]
+  },
+  {
+    "name": "olfactory receptor cell",
+    "id": "Mus musculus#olfactory segment of nasal mucosa#olfactory receptor cell",
+    "parent": "Mus musculus#olfactory segment of nasal mucosa",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-151346"
+    ]
+  },
+  {
+    "name": "respiratory basal cell",
+    "id": "Mus musculus#olfactory segment of nasal mucosa#respiratory basal cell",
+    "parent": "Mus musculus#olfactory segment of nasal mucosa",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-151346"
+    ]
+  },
+  {
+    "name": "secretory cell",
+    "id": "Mus musculus#olfactory segment of nasal mucosa#secretory cell",
+    "parent": "Mus musculus#olfactory segment of nasal mucosa",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-151346"
+    ]
+  },
+  {
+    "name": "smooth muscle cell",
+    "id": "Mus musculus#olfactory segment of nasal mucosa#smooth muscle cell",
+    "parent": "Mus musculus#olfactory segment of nasal mucosa",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-151346"
+    ]
+  },
+  {
+    "name": "sustentacular cell",
+    "id": "Mus musculus#olfactory segment of nasal mucosa#sustentacular cell",
+    "parent": "Mus musculus#olfactory segment of nasal mucosa",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-151346"
+    ]
+  },
+  {
+    "name": "parietal endoderm",
+    "id": "Mus musculus#parietal endoderm",
+    "parent": "Mus musculus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-123046"
+    ]
+  },
+  {
+    "name": "blood",
+    "id": "Mus musculus#parietal endoderm#blood",
+    "parent": "Mus musculus#parietal endoderm",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-123046"
+    ]
+  },
+  {
+    "name": "epiblast cell",
+    "id": "Mus musculus#parietal endoderm#epiblast cell",
+    "parent": "Mus musculus#parietal endoderm",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-123046"
+    ]
+  },
+  {
+    "name": "extraembryonic ectoderm",
+    "id": "Mus musculus#parietal endoderm#extraembryonic ectoderm",
+    "parent": "Mus musculus#parietal endoderm",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-123046"
+    ]
+  },
+  {
+    "name": "mouse embryonic stem cell",
+    "id": "Mus musculus#parietal endoderm#mouse embryonic stem cell",
+    "parent": "Mus musculus#parietal endoderm",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-123046"
+    ]
+  },
+  {
+    "name": "parietal endoderm",
+    "id": "Mus musculus#parietal endoderm#parietal endoderm",
+    "parent": "Mus musculus#parietal endoderm",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-123046"
+    ]
+  },
+  {
+    "name": "yolk sac endoderm",
+    "id": "Mus musculus#parietal endoderm#yolk sac endoderm",
+    "parent": "Mus musculus#parietal endoderm",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-123046"
+    ]
+  },
+  {
+    "name": "pituitary gland",
+    "id": "Mus musculus#pituitary gland",
+    "parent": "Mus musculus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-10021"
+    ]
+  },
+  {
+    "name": "apoptotic cell",
+    "id": "Mus musculus#pituitary gland#apoptotic cell",
+    "parent": "Mus musculus#pituitary gland",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-10021"
+    ]
+  },
+  {
+    "name": "connective tissue cell",
+    "id": "Mus musculus#pituitary gland#connective tissue cell",
+    "parent": "Mus musculus#pituitary gland",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-10021"
+    ]
+  },
+  {
+    "name": "corticotroph",
+    "id": "Mus musculus#pituitary gland#corticotroph",
+    "parent": "Mus musculus#pituitary gland",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-10021"
+    ]
+  },
+  {
+    "name": "endothelial cell",
+    "id": "Mus musculus#pituitary gland#endothelial cell",
+    "parent": "Mus musculus#pituitary gland",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-10021"
+    ]
+  },
+  {
+    "name": "gonadtroph",
+    "id": "Mus musculus#pituitary gland#gonadtroph",
+    "parent": "Mus musculus#pituitary gland",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-10021"
+    ]
+  },
+  {
+    "name": "leukocyte",
+    "id": "Mus musculus#pituitary gland#leukocyte",
+    "parent": "Mus musculus#pituitary gland",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-10021"
+    ]
+  },
+  {
+    "name": "mammotroph",
+    "id": "Mus musculus#pituitary gland#mammotroph",
+    "parent": "Mus musculus#pituitary gland",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-10021"
+    ]
+  },
+  {
+    "name": "melanocyte stimulating hormone secreting cell",
+    "id": "Mus musculus#pituitary gland#melanocyte stimulating hormone secreting cell",
+    "parent": "Mus musculus#pituitary gland",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-10021"
+    ]
+  },
+  {
+    "name": "somatotroph",
+    "id": "Mus musculus#pituitary gland#somatotroph",
+    "parent": "Mus musculus#pituitary gland",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-10021"
+    ]
+  },
+  {
+    "name": "stem cell",
+    "id": "Mus musculus#pituitary gland#stem cell",
+    "parent": "Mus musculus#pituitary gland",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-10021"
+    ]
+  },
+  {
+    "name": "thyrotroph",
+    "id": "Mus musculus#pituitary gland#thyrotroph",
+    "parent": "Mus musculus#pituitary gland",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-10021"
+    ]
+  },
+  {
+    "name": "posterior gut",
+    "id": "Mus musculus#posterior gut",
+    "parent": "Mus musculus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-123046"
+    ]
+  },
+  {
+    "name": "endothelium",
+    "id": "Mus musculus#posterior gut#endothelium",
+    "parent": "Mus musculus#posterior gut",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-123046"
+    ]
+  },
+  {
+    "name": "germ cell",
+    "id": "Mus musculus#posterior gut#germ cell",
+    "parent": "Mus musculus#posterior gut",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-123046"
+    ]
+  },
+  {
+    "name": "midline",
+    "id": "Mus musculus#posterior gut#midline",
+    "parent": "Mus musculus#posterior gut",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-123046"
+    ]
+  },
+  {
+    "name": "mouse embryonic stem cell",
+    "id": "Mus musculus#posterior gut#mouse embryonic stem cell",
+    "parent": "Mus musculus#posterior gut",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-123046"
+    ]
+  },
+  {
+    "name": "presumptive gut",
+    "id": "Mus musculus#posterior gut#presumptive gut",
+    "parent": "Mus musculus#posterior gut",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-123046"
+    ]
+  },
+  {
+    "name": "yolk sac endoderm",
+    "id": "Mus musculus#posterior gut#yolk sac endoderm",
+    "parent": "Mus musculus#posterior gut",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-123046"
+    ]
+  },
+  {
+    "name": "primary visual area, layer 1",
+    "id": "Mus musculus#primary visual area, layer 1",
+    "parent": "Mus musculus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-71585"
+    ]
+  },
+  {
+    "name": "primary visual area, layer 1 and layer 2/3",
+    "id": "Mus musculus#primary visual area, layer 1 and layer 2/3",
+    "parent": "Mus musculus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-71585"
+    ]
+  },
+  {
+    "name": "astrocyte of primary visual cortex",
+    "id": "Mus musculus#primary visual area, layer 1 and layer 2/3#astrocyte of primary visual cortex",
+    "parent": "Mus musculus#primary visual area, layer 1 and layer 2/3",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-71585"
+    ]
+  },
+  {
+    "name": "endothelial cell of primary visual cortex",
+    "id": "Mus musculus#primary visual area, layer 1 and layer 2/3#endothelial cell of primary visual cortex",
+    "parent": "Mus musculus#primary visual area, layer 1 and layer 2/3",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-71585"
+    ]
+  },
+  {
+    "name": "GABAergic neuron of primary visual area, layer 1 to 4",
+    "id": "Mus musculus#primary visual area, layer 1 and layer 2/3#GABAergic neuron of primary visual area, layer 1 to 4",
+    "parent": "Mus musculus#primary visual area, layer 1 and layer 2/3",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-71585"
+    ]
+  },
+  {
+    "name": "glutamatergic neuron of primary visual area, layer 2/3 and layer 4",
+    "id": "Mus musculus#primary visual area, layer 1 and layer 2/3#glutamatergic neuron of primary visual area, layer 2/3 and layer 4",
+    "parent": "Mus musculus#primary visual area, layer 1 and layer 2/3",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-71585"
+    ]
+  },
+  {
+    "name": "glutamatergic neuron of primary visual area, layer 4",
+    "id": "Mus musculus#primary visual area, layer 1 and layer 2/3#glutamatergic neuron of primary visual area, layer 4",
+    "parent": "Mus musculus#primary visual area, layer 1 and layer 2/3",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-71585"
+    ]
+  },
+  {
+    "name": "glutamatergic neuron of primary visual area, layer 5",
+    "id": "Mus musculus#primary visual area, layer 1 and layer 2/3#glutamatergic neuron of primary visual area, layer 5",
+    "parent": "Mus musculus#primary visual area, layer 1 and layer 2/3",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-71585"
+    ]
+  },
+  {
+    "name": "glutamatergic neuron of primary visual area, layer 5a",
+    "id": "Mus musculus#primary visual area, layer 1 and layer 2/3#glutamatergic neuron of primary visual area, layer 5a",
+    "parent": "Mus musculus#primary visual area, layer 1 and layer 2/3",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-71585"
+    ]
+  },
+  {
+    "name": "glutamatergic neuron of primary visual cortex, layer 2",
+    "id": "Mus musculus#primary visual area, layer 1 and layer 2/3#glutamatergic neuron of primary visual cortex, layer 2",
+    "parent": "Mus musculus#primary visual area, layer 1 and layer 2/3",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-71585"
+    ]
+  },
+  {
+    "name": "glutamatergic neuron of primary visual cortex, layer 2 and layer 2/3",
+    "id": "Mus musculus#primary visual area, layer 1 and layer 2/3#glutamatergic neuron of primary visual cortex, layer 2 and layer 2/3",
+    "parent": "Mus musculus#primary visual area, layer 1 and layer 2/3",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-71585"
+    ]
+  },
+  {
+    "name": "glutamatergic neuron of primary visual cortex, layer 2/3",
+    "id": "Mus musculus#primary visual area, layer 1 and layer 2/3#glutamatergic neuron of primary visual cortex, layer 2/3",
+    "parent": "Mus musculus#primary visual area, layer 1 and layer 2/3",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-71585"
+    ]
+  },
+  {
+    "name": "microglial cell of primary visual cortex",
+    "id": "Mus musculus#primary visual area, layer 1 and layer 2/3#microglial cell of primary visual cortex",
+    "parent": "Mus musculus#primary visual area, layer 1 and layer 2/3",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-71585"
+    ]
+  },
+  {
+    "name": "astrocyte of primary visual cortex",
+    "id": "Mus musculus#primary visual area, layer 1#astrocyte of primary visual cortex",
+    "parent": "Mus musculus#primary visual area, layer 1",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-71585"
+    ]
+  },
+  {
+    "name": "endothelial cell of primary visual cortex",
+    "id": "Mus musculus#primary visual area, layer 1#endothelial cell of primary visual cortex",
+    "parent": "Mus musculus#primary visual area, layer 1",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-71585"
+    ]
+  },
+  {
+    "name": "GABAergic neuron of primary visual area, layer 1 to 4",
+    "id": "Mus musculus#primary visual area, layer 1#GABAergic neuron of primary visual area, layer 1 to 4",
+    "parent": "Mus musculus#primary visual area, layer 1",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-71585"
+    ]
+  },
+  {
+    "name": "glutamatergic neuron of primary visual cortex, layer 2",
+    "id": "Mus musculus#primary visual area, layer 1#glutamatergic neuron of primary visual cortex, layer 2",
+    "parent": "Mus musculus#primary visual area, layer 1",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-71585"
+    ]
+  },
+  {
+    "name": "glutamatergic neuron of primary visual cortex, layer 2 and layer 2/3",
+    "id": "Mus musculus#primary visual area, layer 1#glutamatergic neuron of primary visual cortex, layer 2 and layer 2/3",
+    "parent": "Mus musculus#primary visual area, layer 1",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-71585"
+    ]
+  },
+  {
+    "name": "glutamatergic neuron of primary visual cortex, layer 2/3",
+    "id": "Mus musculus#primary visual area, layer 1#glutamatergic neuron of primary visual cortex, layer 2/3",
+    "parent": "Mus musculus#primary visual area, layer 1",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-71585"
+    ]
+  },
+  {
+    "name": "oligodendrocyte of primary visual cortex",
+    "id": "Mus musculus#primary visual area, layer 1#oligodendrocyte of primary visual cortex",
+    "parent": "Mus musculus#primary visual area, layer 1",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-71585"
+    ]
+  },
+  {
+    "name": "oligodendrocyte OR oligodendrocyte precursor cell of primary visual cortex",
+    "id": "Mus musculus#primary visual area, layer 1#oligodendrocyte OR oligodendrocyte precursor cell of primary visual cortex",
+    "parent": "Mus musculus#primary visual area, layer 1",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-71585"
+    ]
+  },
+  {
+    "name": "oligodendrocyte precursor cell of primary visual cortex",
+    "id": "Mus musculus#primary visual area, layer 1#oligodendrocyte precursor cell of primary visual cortex",
+    "parent": "Mus musculus#primary visual area, layer 1",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-71585"
+    ]
+  },
+  {
+    "name": "primary visual area, layer 1, layer 2/3 and layer 4",
+    "id": "Mus musculus#primary visual area, layer 1, layer 2/3 and layer 4",
+    "parent": "Mus musculus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-71585"
+    ]
+  },
+  {
+    "name": "astrocyte of primary visual cortex",
+    "id": "Mus musculus#primary visual area, layer 1, layer 2/3 and layer 4#astrocyte of primary visual cortex",
+    "parent": "Mus musculus#primary visual area, layer 1, layer 2/3 and layer 4",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-71585"
+    ]
+  },
+  {
+    "name": "GABAergic neuron of primary visual area, layer 1 to 4",
+    "id": "Mus musculus#primary visual area, layer 1, layer 2/3 and layer 4#GABAergic neuron of primary visual area, layer 1 to 4",
+    "parent": "Mus musculus#primary visual area, layer 1, layer 2/3 and layer 4",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-71585"
+    ]
+  },
+  {
+    "name": "GABAergic neuron of primary visual area, layer 5 and layer 6",
+    "id": "Mus musculus#primary visual area, layer 1, layer 2/3 and layer 4#GABAergic neuron of primary visual area, layer 5 and layer 6",
+    "parent": "Mus musculus#primary visual area, layer 1, layer 2/3 and layer 4",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-71585"
+    ]
+  },
+  {
+    "name": "GABAergic neuron of primary visual cortex",
+    "id": "Mus musculus#primary visual area, layer 1, layer 2/3 and layer 4#GABAergic neuron of primary visual cortex",
+    "parent": "Mus musculus#primary visual area, layer 1, layer 2/3 and layer 4",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-71585"
+    ]
+  },
+  {
+    "name": "glutamatergic neuron of primary visual area, layer 4",
+    "id": "Mus musculus#primary visual area, layer 1, layer 2/3 and layer 4#glutamatergic neuron of primary visual area, layer 4",
+    "parent": "Mus musculus#primary visual area, layer 1, layer 2/3 and layer 4",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-71585"
+    ]
+  },
+  {
+    "name": "glutamatergic neuron of primary visual area, layer 5 and layer 6a",
+    "id": "Mus musculus#primary visual area, layer 1, layer 2/3 and layer 4#glutamatergic neuron of primary visual area, layer 5 and layer 6a",
+    "parent": "Mus musculus#primary visual area, layer 1, layer 2/3 and layer 4",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-71585"
+    ]
+  },
+  {
+    "name": "glutamatergic neuron of primary visual cortex, layer 2",
+    "id": "Mus musculus#primary visual area, layer 1, layer 2/3 and layer 4#glutamatergic neuron of primary visual cortex, layer 2",
+    "parent": "Mus musculus#primary visual area, layer 1, layer 2/3 and layer 4",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-71585"
+    ]
+  },
+  {
+    "name": "glutamatergic neuron of primary visual cortex, layer 2/3",
+    "id": "Mus musculus#primary visual area, layer 1, layer 2/3 and layer 4#glutamatergic neuron of primary visual cortex, layer 2/3",
+    "parent": "Mus musculus#primary visual area, layer 1, layer 2/3 and layer 4",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-71585"
+    ]
+  },
+  {
+    "name": "oligodendrocyte OR oligodendrocyte precursor cell of primary visual cortex",
+    "id": "Mus musculus#primary visual area, layer 1, layer 2/3 and layer 4#oligodendrocyte OR oligodendrocyte precursor cell of primary visual cortex",
+    "parent": "Mus musculus#primary visual area, layer 1, layer 2/3 and layer 4",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-71585"
+    ]
+  },
+  {
+    "name": "oligodendrocyte precursor cell of primary visual cortex",
+    "id": "Mus musculus#primary visual area, layer 1, layer 2/3 and layer 4#oligodendrocyte precursor cell of primary visual cortex",
+    "parent": "Mus musculus#primary visual area, layer 1, layer 2/3 and layer 4",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-71585"
+    ]
+  },
+  {
+    "name": "primary visual area, layer 4",
+    "id": "Mus musculus#primary visual area, layer 4",
+    "parent": "Mus musculus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-71585"
+    ]
+  },
+  {
+    "name": "glutamatergic neuron of primary visual area, layer 4",
+    "id": "Mus musculus#primary visual area, layer 4#glutamatergic neuron of primary visual area, layer 4",
+    "parent": "Mus musculus#primary visual area, layer 4",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-71585"
+    ]
+  },
+  {
+    "name": "glutamatergic neuron of primary visual area, layer 4 and layer 5",
+    "id": "Mus musculus#primary visual area, layer 4#glutamatergic neuron of primary visual area, layer 4 and layer 5",
+    "parent": "Mus musculus#primary visual area, layer 4",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-71585"
+    ]
+  },
+  {
+    "name": "glutamatergic neuron of primary visual area, layer 5",
+    "id": "Mus musculus#primary visual area, layer 4#glutamatergic neuron of primary visual area, layer 5",
+    "parent": "Mus musculus#primary visual area, layer 4",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-71585"
+    ]
+  },
+  {
+    "name": "glutamatergic neuron of primary visual area, layer 5 and layer 5a",
+    "id": "Mus musculus#primary visual area, layer 4#glutamatergic neuron of primary visual area, layer 5 and layer 5a",
+    "parent": "Mus musculus#primary visual area, layer 4",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-71585"
+    ]
+  },
+  {
+    "name": "glutamatergic neuron of primary visual area, layer 5a",
+    "id": "Mus musculus#primary visual area, layer 4#glutamatergic neuron of primary visual area, layer 5a",
+    "parent": "Mus musculus#primary visual area, layer 4",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-71585"
+    ]
+  },
+  {
+    "name": "glutamatergic neuron of primary visual cortex, layer 2/3",
+    "id": "Mus musculus#primary visual area, layer 4#glutamatergic neuron of primary visual cortex, layer 2/3",
+    "parent": "Mus musculus#primary visual area, layer 4",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-71585"
+    ]
+  },
+  {
+    "name": "microglial cell of primary visual cortex",
+    "id": "Mus musculus#primary visual area, layer 4#microglial cell of primary visual cortex",
+    "parent": "Mus musculus#primary visual area, layer 4",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-71585"
+    ]
+  },
+  {
+    "name": "oligodendrocyte of primary visual cortex",
+    "id": "Mus musculus#primary visual area, layer 4#oligodendrocyte of primary visual cortex",
+    "parent": "Mus musculus#primary visual area, layer 4",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-71585"
+    ]
+  },
+  {
+    "name": "oligodendrocyte OR oligodendrocyte precursor cell of primary visual cortex",
+    "id": "Mus musculus#primary visual area, layer 4#oligodendrocyte OR oligodendrocyte precursor cell of primary visual cortex",
+    "parent": "Mus musculus#primary visual area, layer 4",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-71585"
+    ]
+  },
+  {
+    "name": "oligodendrocyte precursor cell of primary visual cortex",
+    "id": "Mus musculus#primary visual area, layer 4#oligodendrocyte precursor cell of primary visual cortex",
+    "parent": "Mus musculus#primary visual area, layer 4",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-71585"
+    ]
+  },
+  {
+    "name": "primary visual area, layer 5",
+    "id": "Mus musculus#primary visual area, layer 5",
+    "parent": "Mus musculus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-71585"
+    ]
+  },
+  {
+    "name": "primary visual area, layer 5 and layer 6",
+    "id": "Mus musculus#primary visual area, layer 5 and layer 6",
+    "parent": "Mus musculus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-71585"
+    ]
+  },
+  {
+    "name": "astrocyte of primary visual cortex",
+    "id": "Mus musculus#primary visual area, layer 5 and layer 6#astrocyte of primary visual cortex",
+    "parent": "Mus musculus#primary visual area, layer 5 and layer 6",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-71585"
+    ]
+  },
+  {
+    "name": "endothelial cell OR oligodendrocyte precursor cell of primary visual cortex",
+    "id": "Mus musculus#primary visual area, layer 5 and layer 6#endothelial cell OR oligodendrocyte precursor cell of primary visual cortex",
+    "parent": "Mus musculus#primary visual area, layer 5 and layer 6",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-71585"
+    ]
+  },
+  {
+    "name": "GABAergic neuron of primary visual area, layer 1 to 4",
+    "id": "Mus musculus#primary visual area, layer 5 and layer 6#GABAergic neuron of primary visual area, layer 1 to 4",
+    "parent": "Mus musculus#primary visual area, layer 5 and layer 6",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-71585"
+    ]
+  },
+  {
+    "name": "GABAergic neuron of primary visual area, layer 5 and layer 6",
+    "id": "Mus musculus#primary visual area, layer 5 and layer 6#GABAergic neuron of primary visual area, layer 5 and layer 6",
+    "parent": "Mus musculus#primary visual area, layer 5 and layer 6",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-71585"
+    ]
+  },
+  {
+    "name": "GABAergic neuron of primary visual cortex",
+    "id": "Mus musculus#primary visual area, layer 5 and layer 6#GABAergic neuron of primary visual cortex",
+    "parent": "Mus musculus#primary visual area, layer 5 and layer 6",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-71585"
+    ]
+  },
+  {
+    "name": "glutamatergic neuron of primary visual area, layer 5",
+    "id": "Mus musculus#primary visual area, layer 5 and layer 6#glutamatergic neuron of primary visual area, layer 5",
+    "parent": "Mus musculus#primary visual area, layer 5 and layer 6",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-71585"
+    ]
+  },
+  {
+    "name": "glutamatergic neuron of primary visual area, layer 5 and layer 5a",
+    "id": "Mus musculus#primary visual area, layer 5 and layer 6#glutamatergic neuron of primary visual area, layer 5 and layer 5a",
+    "parent": "Mus musculus#primary visual area, layer 5 and layer 6",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-71585"
+    ]
+  },
+  {
+    "name": "glutamatergic neuron of primary visual area, layer 5a",
+    "id": "Mus musculus#primary visual area, layer 5 and layer 6#glutamatergic neuron of primary visual area, layer 5a",
+    "parent": "Mus musculus#primary visual area, layer 5 and layer 6",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-71585"
+    ]
+  },
+  {
+    "name": "glutamatergic neuron of primary visual area, layer 5a and layer 6a",
+    "id": "Mus musculus#primary visual area, layer 5 and layer 6#glutamatergic neuron of primary visual area, layer 5a and layer 6a",
+    "parent": "Mus musculus#primary visual area, layer 5 and layer 6",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-71585"
+    ]
+  },
+  {
+    "name": "glutamatergic neuron of primary visual area, layer 6a",
+    "id": "Mus musculus#primary visual area, layer 5 and layer 6#glutamatergic neuron of primary visual area, layer 6a",
+    "parent": "Mus musculus#primary visual area, layer 5 and layer 6",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-71585"
+    ]
+  },
+  {
+    "name": "glutamatergic neuron of primary visual area, layer 6b",
+    "id": "Mus musculus#primary visual area, layer 5 and layer 6#glutamatergic neuron of primary visual area, layer 6b",
+    "parent": "Mus musculus#primary visual area, layer 5 and layer 6",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-71585"
+    ]
+  },
+  {
+    "name": "glutamatergic neuron of primary visual cortex, layer 2/3 and layer 4",
+    "id": "Mus musculus#primary visual area, layer 5 and layer 6#glutamatergic neuron of primary visual cortex, layer 2/3 and layer 4",
+    "parent": "Mus musculus#primary visual area, layer 5 and layer 6",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-71585"
+    ]
+  },
+  {
+    "name": "astrocyte of primary visual cortex",
+    "id": "Mus musculus#primary visual area, layer 5#astrocyte of primary visual cortex",
+    "parent": "Mus musculus#primary visual area, layer 5",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-71585"
+    ]
+  },
+  {
+    "name": "GABAergic neuron of primary visual area, layer 1 to 4",
+    "id": "Mus musculus#primary visual area, layer 5#GABAergic neuron of primary visual area, layer 1 to 4",
+    "parent": "Mus musculus#primary visual area, layer 5",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-71585"
+    ]
+  },
+  {
+    "name": "GABAergic neuron of primary visual area, layer 5 and layer 6",
+    "id": "Mus musculus#primary visual area, layer 5#GABAergic neuron of primary visual area, layer 5 and layer 6",
+    "parent": "Mus musculus#primary visual area, layer 5",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-71585"
+    ]
+  },
+  {
+    "name": "glutamatergic neuron of primary visual area, layer 4",
+    "id": "Mus musculus#primary visual area, layer 5#glutamatergic neuron of primary visual area, layer 4",
+    "parent": "Mus musculus#primary visual area, layer 5",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-71585"
+    ]
+  },
+  {
+    "name": "glutamatergic neuron of primary visual area, layer 4 and layer 5",
+    "id": "Mus musculus#primary visual area, layer 5#glutamatergic neuron of primary visual area, layer 4 and layer 5",
+    "parent": "Mus musculus#primary visual area, layer 5",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-71585"
+    ]
+  },
+  {
+    "name": "glutamatergic neuron of primary visual area, layer 5",
+    "id": "Mus musculus#primary visual area, layer 5#glutamatergic neuron of primary visual area, layer 5",
+    "parent": "Mus musculus#primary visual area, layer 5",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-71585"
+    ]
+  },
+  {
+    "name": "glutamatergic neuron of primary visual area, layer 5 and layer 5a",
+    "id": "Mus musculus#primary visual area, layer 5#glutamatergic neuron of primary visual area, layer 5 and layer 5a",
+    "parent": "Mus musculus#primary visual area, layer 5",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-71585"
+    ]
+  },
+  {
+    "name": "glutamatergic neuron of primary visual area, layer 5a",
+    "id": "Mus musculus#primary visual area, layer 5#glutamatergic neuron of primary visual area, layer 5a",
+    "parent": "Mus musculus#primary visual area, layer 5",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-71585"
+    ]
+  },
+  {
+    "name": "glutamatergic neuron of primary visual area, layer 5a and layer 5b",
+    "id": "Mus musculus#primary visual area, layer 5#glutamatergic neuron of primary visual area, layer 5a and layer 5b",
+    "parent": "Mus musculus#primary visual area, layer 5",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-71585"
+    ]
+  },
+  {
+    "name": "glutamatergic neuron of primary visual area, layer 5b",
+    "id": "Mus musculus#primary visual area, layer 5#glutamatergic neuron of primary visual area, layer 5b",
+    "parent": "Mus musculus#primary visual area, layer 5",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-71585"
+    ]
+  },
+  {
+    "name": "glutamatergic neuron of primary visual area, layer 6a",
+    "id": "Mus musculus#primary visual area, layer 5#glutamatergic neuron of primary visual area, layer 6a",
+    "parent": "Mus musculus#primary visual area, layer 5",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-71585"
+    ]
+  },
+  {
+    "name": "microglial cell of primary visual cortex",
+    "id": "Mus musculus#primary visual area, layer 5#microglial cell of primary visual cortex",
+    "parent": "Mus musculus#primary visual area, layer 5",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-71585"
+    ]
+  },
+  {
+    "name": "oligodendrocyte of primary visual cortex",
+    "id": "Mus musculus#primary visual area, layer 5#oligodendrocyte of primary visual cortex",
+    "parent": "Mus musculus#primary visual area, layer 5",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-71585"
+    ]
+  },
+  {
+    "name": "oligodendrocyte OR oligodendrocyte precursor cell of primary visual cortex",
+    "id": "Mus musculus#primary visual area, layer 5#oligodendrocyte OR oligodendrocyte precursor cell of primary visual cortex",
+    "parent": "Mus musculus#primary visual area, layer 5",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-71585"
+    ]
+  },
+  {
+    "name": "oligodendrocyte precursor cell of primary visual cortex",
+    "id": "Mus musculus#primary visual area, layer 5#oligodendrocyte precursor cell of primary visual cortex",
+    "parent": "Mus musculus#primary visual area, layer 5",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-71585"
+    ]
+  },
+  {
+    "name": "primary visual area, layer 6",
+    "id": "Mus musculus#primary visual area, layer 6",
+    "parent": "Mus musculus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-71585"
+    ]
+  },
+  {
+    "name": "astrocyte of primary visual cortex",
+    "id": "Mus musculus#primary visual area, layer 6#astrocyte of primary visual cortex",
+    "parent": "Mus musculus#primary visual area, layer 6",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-71585"
+    ]
+  },
+  {
+    "name": "GABAergic neuron of primary visual area, layer 1 to 4",
+    "id": "Mus musculus#primary visual area, layer 6#GABAergic neuron of primary visual area, layer 1 to 4",
+    "parent": "Mus musculus#primary visual area, layer 6",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-71585"
+    ]
+  },
+  {
+    "name": "GABAergic neuron of primary visual area, layer 5 and layer 6",
+    "id": "Mus musculus#primary visual area, layer 6#GABAergic neuron of primary visual area, layer 5 and layer 6",
+    "parent": "Mus musculus#primary visual area, layer 6",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-71585"
+    ]
+  },
+  {
+    "name": "GABAergic neuron of primary visual cortex",
+    "id": "Mus musculus#primary visual area, layer 6#GABAergic neuron of primary visual cortex",
+    "parent": "Mus musculus#primary visual area, layer 6",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-71585"
+    ]
+  },
+  {
+    "name": "glutamatergic neuron of primary visual area, layer 5a",
+    "id": "Mus musculus#primary visual area, layer 6#glutamatergic neuron of primary visual area, layer 5a",
+    "parent": "Mus musculus#primary visual area, layer 6",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-71585"
+    ]
+  },
+  {
+    "name": "glutamatergic neuron of primary visual area, layer 6",
+    "id": "Mus musculus#primary visual area, layer 6#glutamatergic neuron of primary visual area, layer 6",
+    "parent": "Mus musculus#primary visual area, layer 6",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-71585"
+    ]
+  },
+  {
+    "name": "glutamatergic neuron of primary visual area, layer 6a",
+    "id": "Mus musculus#primary visual area, layer 6#glutamatergic neuron of primary visual area, layer 6a",
+    "parent": "Mus musculus#primary visual area, layer 6",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-71585"
+    ]
+  },
+  {
+    "name": "glutamatergic neuron of primary visual area, layer 6a and layer 6b",
+    "id": "Mus musculus#primary visual area, layer 6#glutamatergic neuron of primary visual area, layer 6a and layer 6b",
+    "parent": "Mus musculus#primary visual area, layer 6",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-71585"
+    ]
+  },
+  {
+    "name": "oligodendrocyte of primary visual cortex",
+    "id": "Mus musculus#primary visual area, layer 6#oligodendrocyte of primary visual cortex",
+    "parent": "Mus musculus#primary visual area, layer 6",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-71585"
+    ]
+  },
+  {
+    "name": "oligodendrocyte OR oligodendrocyte precursor cell of primary visual cortex",
+    "id": "Mus musculus#primary visual area, layer 6#oligodendrocyte OR oligodendrocyte precursor cell of primary visual cortex",
+    "parent": "Mus musculus#primary visual area, layer 6",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-71585"
+    ]
+  },
+  {
+    "name": "oligodendrocyte precursor cell of primary visual cortex",
+    "id": "Mus musculus#primary visual area, layer 6#oligodendrocyte precursor cell of primary visual cortex",
+    "parent": "Mus musculus#primary visual area, layer 6",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-71585"
+    ]
+  },
+  {
+    "name": "primary visual area, layer 6a",
+    "id": "Mus musculus#primary visual area, layer 6a",
+    "parent": "Mus musculus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-71585"
+    ]
+  },
+  {
+    "name": "astrocyte of primary visual cortex",
+    "id": "Mus musculus#primary visual area, layer 6a#astrocyte of primary visual cortex",
+    "parent": "Mus musculus#primary visual area, layer 6a",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-71585"
+    ]
+  },
+  {
+    "name": "endothelial cell of primary visual cortex",
+    "id": "Mus musculus#primary visual area, layer 6a#endothelial cell of primary visual cortex",
+    "parent": "Mus musculus#primary visual area, layer 6a",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-71585"
+    ]
+  },
+  {
+    "name": "glutamatergic neuron of primary visual area, layer 6",
+    "id": "Mus musculus#primary visual area, layer 6a#glutamatergic neuron of primary visual area, layer 6",
+    "parent": "Mus musculus#primary visual area, layer 6a",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-71585"
+    ]
+  },
+  {
+    "name": "glutamatergic neuron of primary visual area, layer 6a",
+    "id": "Mus musculus#primary visual area, layer 6a#glutamatergic neuron of primary visual area, layer 6a",
+    "parent": "Mus musculus#primary visual area, layer 6a",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-71585"
+    ]
+  },
+  {
+    "name": "glutamatergic neuron of primary visual area, layer 6b",
+    "id": "Mus musculus#primary visual area, layer 6a#glutamatergic neuron of primary visual area, layer 6b",
+    "parent": "Mus musculus#primary visual area, layer 6a",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-71585"
+    ]
+  },
+  {
+    "name": "microglial cell of primary visual cortex",
+    "id": "Mus musculus#primary visual area, layer 6a#microglial cell of primary visual cortex",
+    "parent": "Mus musculus#primary visual area, layer 6a",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-71585"
+    ]
+  },
+  {
+    "name": "oligodendrocyte of primary visual cortex",
+    "id": "Mus musculus#primary visual area, layer 6a#oligodendrocyte of primary visual cortex",
+    "parent": "Mus musculus#primary visual area, layer 6a",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-71585"
+    ]
+  },
+  {
+    "name": "oligodendrocyte OR oligodendrocyte precursor cell of primary visual cortex",
+    "id": "Mus musculus#primary visual area, layer 6a#oligodendrocyte OR oligodendrocyte precursor cell of primary visual cortex",
+    "parent": "Mus musculus#primary visual area, layer 6a",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-71585"
+    ]
+  },
+  {
+    "name": "oligodendrocyte precursor cell of primary visual cortex",
+    "id": "Mus musculus#primary visual area, layer 6a#oligodendrocyte precursor cell of primary visual cortex",
+    "parent": "Mus musculus#primary visual area, layer 6a",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-71585"
+    ]
+  },
+  {
+    "name": "primary visual area, layer 6b",
+    "id": "Mus musculus#primary visual area, layer 6b",
+    "parent": "Mus musculus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-71585"
+    ]
+  },
+  {
+    "name": "GABAergic neuron of primary visual area, layer 1 to 4",
+    "id": "Mus musculus#primary visual area, layer 6b#GABAergic neuron of primary visual area, layer 1 to 4",
+    "parent": "Mus musculus#primary visual area, layer 6b",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-71585"
+    ]
+  },
+  {
+    "name": "GABAergic neuron of primary visual area, layer 5 and layer 6",
+    "id": "Mus musculus#primary visual area, layer 6b#GABAergic neuron of primary visual area, layer 5 and layer 6",
+    "parent": "Mus musculus#primary visual area, layer 6b",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-71585"
+    ]
+  },
+  {
+    "name": "GABAergic neuron of primary visual cortex",
+    "id": "Mus musculus#primary visual area, layer 6b#GABAergic neuron of primary visual cortex",
+    "parent": "Mus musculus#primary visual area, layer 6b",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-71585"
+    ]
+  },
+  {
+    "name": "glutamatergic neuron of primary visual area, layer 6a",
+    "id": "Mus musculus#primary visual area, layer 6b#glutamatergic neuron of primary visual area, layer 6a",
+    "parent": "Mus musculus#primary visual area, layer 6b",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-71585"
+    ]
+  },
+  {
+    "name": "glutamatergic neuron of primary visual area, layer 6a and layer 6b",
+    "id": "Mus musculus#primary visual area, layer 6b#glutamatergic neuron of primary visual area, layer 6a and layer 6b",
+    "parent": "Mus musculus#primary visual area, layer 6b",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-71585"
+    ]
+  },
+  {
+    "name": "glutamatergic neuron of primary visual area, layer 6b",
+    "id": "Mus musculus#primary visual area, layer 6b#glutamatergic neuron of primary visual area, layer 6b",
+    "parent": "Mus musculus#primary visual area, layer 6b",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-71585"
+    ]
+  },
+  {
+    "name": "primary visual cortex",
+    "id": "Mus musculus#primary visual cortex",
+    "parent": "Mus musculus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-71585"
+    ]
+  },
+  {
+    "name": "astrocyte of primary visual cortex",
+    "id": "Mus musculus#primary visual cortex#astrocyte of primary visual cortex",
+    "parent": "Mus musculus#primary visual cortex",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-71585"
+    ]
+  },
+  {
+    "name": "endothelial cell of primary visual cortex",
+    "id": "Mus musculus#primary visual cortex#endothelial cell of primary visual cortex",
+    "parent": "Mus musculus#primary visual cortex",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-71585"
+    ]
+  },
+  {
+    "name": "endothelial cell OR oligodendrocyte precursor cell of primary visual cortex",
+    "id": "Mus musculus#primary visual cortex#endothelial cell OR oligodendrocyte precursor cell of primary visual cortex",
+    "parent": "Mus musculus#primary visual cortex",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-71585"
+    ]
+  },
+  {
+    "name": "GABAergic neuron of primary visual area, layer 1 to 4",
+    "id": "Mus musculus#primary visual cortex#GABAergic neuron of primary visual area, layer 1 to 4",
+    "parent": "Mus musculus#primary visual cortex",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-71585"
+    ]
+  },
+  {
+    "name": "GABAergic neuron of primary visual area, layer 5 and layer 6",
+    "id": "Mus musculus#primary visual cortex#GABAergic neuron of primary visual area, layer 5 and layer 6",
+    "parent": "Mus musculus#primary visual cortex",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-71585"
+    ]
+  },
+  {
+    "name": "GABAergic neuron of primary visual cortex",
+    "id": "Mus musculus#primary visual cortex#GABAergic neuron of primary visual cortex",
+    "parent": "Mus musculus#primary visual cortex",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-71585"
+    ]
+  },
+  {
+    "name": "GABAergic neuron of primary visual cortex, layer 5 and layer 6",
+    "id": "Mus musculus#primary visual cortex#GABAergic neuron of primary visual cortex, layer 5 and layer 6",
+    "parent": "Mus musculus#primary visual cortex",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-71585"
+    ]
+  },
+  {
+    "name": "glutamatergic neuron of primary visual area, layer 2/3 and layer 4",
+    "id": "Mus musculus#primary visual cortex#glutamatergic neuron of primary visual area, layer 2/3 and layer 4",
+    "parent": "Mus musculus#primary visual cortex",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-71585"
+    ]
+  },
+  {
+    "name": "glutamatergic neuron of primary visual area, layer 4",
+    "id": "Mus musculus#primary visual cortex#glutamatergic neuron of primary visual area, layer 4",
+    "parent": "Mus musculus#primary visual cortex",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-71585"
+    ]
+  },
+  {
+    "name": "glutamatergic neuron of primary visual area, layer 4 and layer 5",
+    "id": "Mus musculus#primary visual cortex#glutamatergic neuron of primary visual area, layer 4 and layer 5",
+    "parent": "Mus musculus#primary visual cortex",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-71585"
+    ]
+  },
+  {
+    "name": "glutamatergic neuron of primary visual area, layer 4 and layer 6",
+    "id": "Mus musculus#primary visual cortex#glutamatergic neuron of primary visual area, layer 4 and layer 6",
+    "parent": "Mus musculus#primary visual cortex",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-71585"
+    ]
+  },
+  {
+    "name": "glutamatergic neuron of primary visual area, layer 5",
+    "id": "Mus musculus#primary visual cortex#glutamatergic neuron of primary visual area, layer 5",
+    "parent": "Mus musculus#primary visual cortex",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-71585"
+    ]
+  },
+  {
+    "name": "glutamatergic neuron of primary visual area, layer 5 and layer 5a",
+    "id": "Mus musculus#primary visual cortex#glutamatergic neuron of primary visual area, layer 5 and layer 5a",
+    "parent": "Mus musculus#primary visual cortex",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-71585"
+    ]
+  },
+  {
+    "name": "glutamatergic neuron of primary visual area, layer 5a",
+    "id": "Mus musculus#primary visual cortex#glutamatergic neuron of primary visual area, layer 5a",
+    "parent": "Mus musculus#primary visual cortex",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-71585"
+    ]
+  },
+  {
+    "name": "glutamatergic neuron of primary visual area, layer 5a and layer 6",
+    "id": "Mus musculus#primary visual cortex#glutamatergic neuron of primary visual area, layer 5a and layer 6",
+    "parent": "Mus musculus#primary visual cortex",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-71585"
+    ]
+  },
+  {
+    "name": "glutamatergic neuron of primary visual area, layer 5a and layer 6a",
+    "id": "Mus musculus#primary visual cortex#glutamatergic neuron of primary visual area, layer 5a and layer 6a",
+    "parent": "Mus musculus#primary visual cortex",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-71585"
+    ]
+  },
+  {
+    "name": "glutamatergic neuron of primary visual area, layer 5b",
+    "id": "Mus musculus#primary visual cortex#glutamatergic neuron of primary visual area, layer 5b",
+    "parent": "Mus musculus#primary visual cortex",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-71585"
+    ]
+  },
+  {
+    "name": "glutamatergic neuron of primary visual area, layer 6",
+    "id": "Mus musculus#primary visual cortex#glutamatergic neuron of primary visual area, layer 6",
+    "parent": "Mus musculus#primary visual cortex",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-71585"
+    ]
+  },
+  {
+    "name": "glutamatergic neuron of primary visual area, layer 6a",
+    "id": "Mus musculus#primary visual cortex#glutamatergic neuron of primary visual area, layer 6a",
+    "parent": "Mus musculus#primary visual cortex",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-71585"
+    ]
+  },
+  {
+    "name": "glutamatergic neuron of primary visual cortex, layer 2",
+    "id": "Mus musculus#primary visual cortex#glutamatergic neuron of primary visual cortex, layer 2",
+    "parent": "Mus musculus#primary visual cortex",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-71585"
+    ]
+  },
+  {
+    "name": "glutamatergic neuron of primary visual cortex, layer 2 and layer 2/3",
+    "id": "Mus musculus#primary visual cortex#glutamatergic neuron of primary visual cortex, layer 2 and layer 2/3",
+    "parent": "Mus musculus#primary visual cortex",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-71585"
+    ]
+  },
+  {
+    "name": "glutamatergic neuron of primary visual cortex, layer 2/3",
+    "id": "Mus musculus#primary visual cortex#glutamatergic neuron of primary visual cortex, layer 2/3",
+    "parent": "Mus musculus#primary visual cortex",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-71585"
+    ]
+  },
+  {
+    "name": "neurogliaform cell of primary visual cortex",
+    "id": "Mus musculus#primary visual cortex#neurogliaform cell of primary visual cortex",
+    "parent": "Mus musculus#primary visual cortex",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-71585"
+    ]
+  },
+  {
+    "name": "oligodendrocyte of primary visual cortex",
+    "id": "Mus musculus#primary visual cortex#oligodendrocyte of primary visual cortex",
+    "parent": "Mus musculus#primary visual cortex",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-71585"
+    ]
+  },
+  {
+    "name": "oligodendrocyte OR oligodendrocyte precursor cell of primary visual cortex",
+    "id": "Mus musculus#primary visual cortex#oligodendrocyte OR oligodendrocyte precursor cell of primary visual cortex",
+    "parent": "Mus musculus#primary visual cortex",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-71585"
+    ]
+  },
+  {
+    "name": "renal glomerulus",
+    "id": "Mus musculus#renal glomerulus",
+    "parent": "Mus musculus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-8145"
+    ]
+  },
+  {
+    "name": "endothelial cell",
+    "id": "Mus musculus#renal glomerulus#endothelial cell",
+    "parent": "Mus musculus#renal glomerulus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-8145"
+    ]
+  },
+  {
+    "name": "renal medulla",
+    "id": "Mus musculus#renal medulla",
+    "parent": "Mus musculus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-8145"
+    ]
+  },
+  {
+    "name": "endothelial cell",
+    "id": "Mus musculus#renal medulla#endothelial cell",
+    "parent": "Mus musculus#renal medulla",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-8145"
+    ]
+  },
+  {
+    "name": "skin",
+    "id": "Mus musculus#skin",
+    "parent": "Mus musculus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-EHCA-2",
+      "E-CURD-96"
+    ]
+  },
+  {
+    "name": "skin of body",
+    "id": "Mus musculus#skin of body",
+    "parent": "Mus musculus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-7311"
+    ]
+  },
+  {
+    "name": "CD4-positive, alpha-beta memory T cell",
+    "id": "Mus musculus#skin of body#CD4-positive, alpha-beta memory T cell",
+    "parent": "Mus musculus#skin of body",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-7311"
+    ]
+  },
+  {
+    "name": "CD4-positive, CD25-positive, alpha-beta regulatory T cell",
+    "id": "Mus musculus#skin of body#CD4-positive, CD25-positive, alpha-beta regulatory T cell",
+    "parent": "Mus musculus#skin of body",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-7311"
+    ]
+  },
+  {
+    "name": "B cell",
+    "id": "Mus musculus#skin#B cell",
+    "parent": "Mus musculus#skin",
+    "value": 1,
+    "experimentAccessions": [
+      "E-EHCA-2"
+    ]
+  },
+  {
+    "name": "cancer associated fibroblast 1",
+    "id": "Mus musculus#skin#cancer associated fibroblast 1",
+    "parent": "Mus musculus#skin",
+    "value": 1,
+    "experimentAccessions": [
+      "E-EHCA-2"
+    ]
+  },
+  {
+    "name": "cancer associated fibroblast 2",
+    "id": "Mus musculus#skin#cancer associated fibroblast 2",
+    "parent": "Mus musculus#skin",
+    "value": 1,
+    "experimentAccessions": [
+      "E-EHCA-2"
+    ]
+  },
+  {
+    "name": "cancer associated fibroblast 3",
+    "id": "Mus musculus#skin#cancer associated fibroblast 3",
+    "parent": "Mus musculus#skin",
+    "value": 1,
+    "experimentAccessions": [
+      "E-EHCA-2"
+    ]
+  },
+  {
+    "name": "CD4-positive, alpha-beta memory T cell",
+    "id": "Mus musculus#skin#CD4-positive, alpha-beta memory T cell",
+    "parent": "Mus musculus#skin",
+    "value": 1,
+    "experimentAccessions": [
+      "E-CURD-96"
+    ]
+  },
+  {
+    "name": "CD4-positive, CD25-positive, alpha-beta regulatory T cell",
+    "id": "Mus musculus#skin#CD4-positive, CD25-positive, alpha-beta regulatory T cell",
+    "parent": "Mus musculus#skin",
+    "value": 1,
+    "experimentAccessions": [
+      "E-CURD-96"
+    ]
+  },
+  {
+    "name": "conventional dendritic cell 1",
+    "id": "Mus musculus#skin#conventional dendritic cell 1",
+    "parent": "Mus musculus#skin",
+    "value": 1,
+    "experimentAccessions": [
+      "E-EHCA-2"
+    ]
+  },
+  {
+    "name": "conventional dendritic cell 2",
+    "id": "Mus musculus#skin#conventional dendritic cell 2",
+    "parent": "Mus musculus#skin",
+    "value": 1,
+    "experimentAccessions": [
+      "E-EHCA-2"
+    ]
+  },
+  {
+    "name": "gamma-delta T cell/mucosal invariant T cell",
+    "id": "Mus musculus#skin#gamma-delta T cell/mucosal invariant T cell",
+    "parent": "Mus musculus#skin",
+    "value": 1,
+    "experimentAccessions": [
+      "E-EHCA-2"
+    ]
+  },
+  {
+    "name": "lymph node endothelial cell",
+    "id": "Mus musculus#skin#lymph node endothelial cell",
+    "parent": "Mus musculus#skin",
+    "value": 1,
+    "experimentAccessions": [
+      "E-EHCA-2"
+    ]
+  },
+  {
+    "name": "lymph node fibroblast",
+    "id": "Mus musculus#skin#lymph node fibroblast",
+    "parent": "Mus musculus#skin",
+    "value": 1,
+    "experimentAccessions": [
+      "E-EHCA-2"
+    ]
+  },
+  {
+    "name": "lymph node T cell",
+    "id": "Mus musculus#skin#lymph node T cell",
+    "parent": "Mus musculus#skin",
+    "value": 1,
+    "experimentAccessions": [
+      "E-EHCA-2"
+    ]
+  },
+  {
+    "name": "lymphatic endothelial cell",
+    "id": "Mus musculus#skin#lymphatic endothelial cell",
+    "parent": "Mus musculus#skin",
+    "value": 1,
+    "experimentAccessions": [
+      "E-EHCA-2"
+    ]
+  },
+  {
+    "name": "macrophage/monocyte",
+    "id": "Mus musculus#skin#macrophage/monocyte",
+    "parent": "Mus musculus#skin",
+    "value": 1,
+    "experimentAccessions": [
+      "E-EHCA-2"
+    ]
+  },
+  {
+    "name": "migratory dendritic cell",
+    "id": "Mus musculus#skin#migratory dendritic cell",
+    "parent": "Mus musculus#skin",
+    "value": 1,
+    "experimentAccessions": [
+      "E-EHCA-2"
+    ]
+  },
+  {
+    "name": "natural killer cell",
+    "id": "Mus musculus#skin#natural killer cell",
+    "parent": "Mus musculus#skin",
+    "value": 1,
+    "experimentAccessions": [
+      "E-EHCA-2"
+    ]
+  },
+  {
+    "name": "not available",
+    "id": "Mus musculus#skin#not available",
+    "parent": "Mus musculus#skin",
+    "value": 1,
+    "experimentAccessions": [
+      "E-EHCA-2"
+    ]
+  },
+  {
+    "name": "plasmacytoid dendritic cell",
+    "id": "Mus musculus#skin#plasmacytoid dendritic cell",
+    "parent": "Mus musculus#skin",
+    "value": 1,
+    "experimentAccessions": [
+      "E-EHCA-2"
+    ]
+  },
+  {
+    "name": "tumor T cell",
+    "id": "Mus musculus#skin#tumor T cell",
+    "parent": "Mus musculus#skin",
+    "value": 1,
+    "experimentAccessions": [
+      "E-EHCA-2"
+    ]
+  },
+  {
+    "name": "tumour endothelial cell",
+    "id": "Mus musculus#skin#tumour endothelial cell",
+    "parent": "Mus musculus#skin",
+    "value": 1,
+    "experimentAccessions": [
+      "E-EHCA-2"
+    ]
+  },
+  {
+    "name": "small intestine",
+    "id": "Mus musculus#small intestine",
+    "parent": "Mus musculus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-8656",
+      "E-MTAB-7660",
+      "E-MTAB-11238",
+      "E-MTAB-8077",
+      "E-ENAD-13",
+      "E-ENAD-14",
+      "E-MTAB-5553"
+    ]
+  },
+  {
+    "name": "early enterocyte progenitor",
+    "id": "Mus musculus#small intestine#early enterocyte progenitor",
+    "parent": "Mus musculus#small intestine",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-13"
+    ]
+  },
+  {
+    "name": "endocrine cell",
+    "id": "Mus musculus#small intestine#endocrine cell",
+    "parent": "Mus musculus#small intestine",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-13",
+      "E-ENAD-14"
+    ]
+  },
+  {
+    "name": "endothelial cell",
+    "id": "Mus musculus#small intestine#endothelial cell",
+    "parent": "Mus musculus#small intestine",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-8077"
+    ]
+  },
+  {
+    "name": "enterocyte",
+    "id": "Mus musculus#small intestine#enterocyte",
+    "parent": "Mus musculus#small intestine",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-13",
+      "E-ENAD-14"
+    ]
+  },
+  {
+    "name": "goblet cell",
+    "id": "Mus musculus#small intestine#goblet cell",
+    "parent": "Mus musculus#small intestine",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-13",
+      "E-ENAD-14"
+    ]
+  },
+  {
+    "name": "intestinal epithelial cell",
+    "id": "Mus musculus#small intestine#intestinal epithelial cell",
+    "parent": "Mus musculus#small intestine",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-8656",
+      "E-MTAB-7660"
+    ]
+  },
+  {
+    "name": "late enterocyte progenitor",
+    "id": "Mus musculus#small intestine#late enterocyte progenitor",
+    "parent": "Mus musculus#small intestine",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-13"
+    ]
+  },
+  {
+    "name": "neural crest-derived cell",
+    "id": "Mus musculus#small intestine#neural crest-derived cell",
+    "parent": "Mus musculus#small intestine",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-5553"
+    ]
+  },
+  {
+    "name": "NKp46-positive innate lymphoid cell",
+    "id": "Mus musculus#small intestine#NKp46-positive innate lymphoid cell",
+    "parent": "Mus musculus#small intestine",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-11238"
+    ]
+  },
+  {
+    "name": "paneth cell",
+    "id": "Mus musculus#small intestine#paneth cell",
+    "parent": "Mus musculus#small intestine",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-14",
+      "E-ENAD-13"
+    ]
+  },
+  {
+    "name": "stem cell",
+    "id": "Mus musculus#small intestine#stem cell",
+    "parent": "Mus musculus#small intestine",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-13",
+      "E-ENAD-14"
+    ]
+  },
+  {
+    "name": "transit amplifying cell",
+    "id": "Mus musculus#small intestine#transit amplifying cell",
+    "parent": "Mus musculus#small intestine",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-13",
+      "E-ENAD-14"
+    ]
+  },
+  {
+    "name": "tuft cell",
+    "id": "Mus musculus#small intestine#tuft cell",
+    "parent": "Mus musculus#small intestine",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-13",
+      "E-ENAD-14"
+    ]
+  },
+  {
+    "name": "soleus muscle",
+    "id": "Mus musculus#soleus muscle",
+    "parent": "Mus musculus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-8077"
+    ]
+  },
+  {
+    "name": "endothelial cell",
+    "id": "Mus musculus#soleus muscle#endothelial cell",
+    "parent": "Mus musculus#soleus muscle",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-8077"
+    ]
+  },
+  {
+    "name": "splanchnic layer of lateral plate mesoderm",
+    "id": "Mus musculus#splanchnic layer of lateral plate mesoderm",
+    "parent": "Mus musculus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-6987"
+    ]
+  },
+  {
+    "name": "endothelial cell",
+    "id": "Mus musculus#splanchnic layer of lateral plate mesoderm#endothelial cell",
+    "parent": "Mus musculus#splanchnic layer of lateral plate mesoderm",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-6987"
+    ]
+  },
+  {
+    "name": "spleen",
+    "id": "Mus musculus#spleen",
+    "parent": "Mus musculus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-7703",
+      "E-MTAB-7094",
+      "E-MTAB-10174",
+      "E-MTAB-6487",
+      "E-CURD-117",
+      "E-ENAD-15",
+      "E-MTAB-8077",
+      "E-MTAB-7311",
+      "E-CURD-96",
+      "E-MTAB-4888",
+      "E-MTAB-4388",
+      "E-MTAB-4825"
+    ]
+  },
+  {
+    "name": "B cell",
+    "id": "Mus musculus#spleen#B cell",
+    "parent": "Mus musculus#spleen",
+    "value": 1,
+    "experimentAccessions": [
+      "E-CURD-117",
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "CD4-positive, alpha-beta memory T cell",
+    "id": "Mus musculus#spleen#CD4-positive, alpha-beta memory T cell",
+    "parent": "Mus musculus#spleen",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-7311",
+      "E-CURD-96"
+    ]
+  },
+  {
+    "name": "CD4-positive, CD25-positive, alpha-beta regulatory T cell",
+    "id": "Mus musculus#spleen#CD4-positive, CD25-positive, alpha-beta regulatory T cell",
+    "parent": "Mus musculus#spleen",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-7311",
+      "E-CURD-96"
+    ]
+  },
+  {
+    "name": "dendritic cell",
+    "id": "Mus musculus#spleen#dendritic cell",
+    "parent": "Mus musculus#spleen",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-4388"
+    ]
+  },
+  {
+    "name": "effector memory CD4-positive, alpha-beta T cell",
+    "id": "Mus musculus#spleen#effector memory CD4-positive, alpha-beta T cell",
+    "parent": "Mus musculus#spleen",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-4888"
+    ]
+  },
+  {
+    "name": "endothelial cell",
+    "id": "Mus musculus#spleen#endothelial cell",
+    "parent": "Mus musculus#spleen",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-8077"
+    ]
+  },
+  {
+    "name": "helper T cell",
+    "id": "Mus musculus#spleen#helper T cell",
+    "parent": "Mus musculus#spleen",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-4388"
+    ]
+  },
+  {
+    "name": "leukocyte",
+    "id": "Mus musculus#spleen#leukocyte",
+    "parent": "Mus musculus#spleen",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-6487"
+    ]
+  },
+  {
+    "name": "lymphocyte of B lineage",
+    "id": "Mus musculus#spleen#lymphocyte of B lineage",
+    "parent": "Mus musculus#spleen",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-4825"
+    ]
+  },
+  {
+    "name": "macrophage",
+    "id": "Mus musculus#spleen#macrophage",
+    "parent": "Mus musculus#spleen",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "monocyte",
+    "id": "Mus musculus#spleen#monocyte",
+    "parent": "Mus musculus#spleen",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-4388"
+    ]
+  },
+  {
+    "name": "naive thymus-derived CD4-positive, alpha-beta T cell",
+    "id": "Mus musculus#spleen#naive thymus-derived CD4-positive, alpha-beta T cell",
+    "parent": "Mus musculus#spleen",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-4888"
+    ]
+  },
+  {
+    "name": "reticular cell",
+    "id": "Mus musculus#spleen#reticular cell",
+    "parent": "Mus musculus#spleen",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-7703",
+      "E-MTAB-7094"
+    ]
+  },
+  {
+    "name": "splenocyte",
+    "id": "Mus musculus#spleen#splenocyte",
+    "parent": "Mus musculus#spleen",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-10174"
+    ]
+  },
+  {
+    "name": "T cell",
+    "id": "Mus musculus#spleen#T cell",
+    "parent": "Mus musculus#spleen",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "stomach",
+    "id": "Mus musculus#stomach",
+    "parent": "Mus musculus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-10371",
+      "E-MTAB-6879"
+    ]
+  },
+  {
+    "name": "epithelial cell of stomach",
+    "id": "Mus musculus#stomach#epithelial cell of stomach",
+    "parent": "Mus musculus#stomach",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-10371"
+    ]
+  },
+  {
+    "name": "peptic cell",
+    "id": "Mus musculus#stomach#peptic cell",
+    "parent": "Mus musculus#stomach",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-6879"
+    ]
+  },
+  {
+    "name": "stem cell of gastric gland",
+    "id": "Mus musculus#stomach#stem cell of gastric gland",
+    "parent": "Mus musculus#stomach",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-6879"
+    ]
+  },
+  {
+    "name": "striatum",
+    "id": "Mus musculus#striatum",
+    "parent": "Mus musculus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "astrocyte of the cerebral cortex",
+    "id": "Mus musculus#striatum#astrocyte of the cerebral cortex",
+    "parent": "Mus musculus#striatum",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "Bergmann glial cell",
+    "id": "Mus musculus#striatum#Bergmann glial cell",
+    "parent": "Mus musculus#striatum",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "brain pericyte",
+    "id": "Mus musculus#striatum#brain pericyte",
+    "parent": "Mus musculus#striatum",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "endothelial cell",
+    "id": "Mus musculus#striatum#endothelial cell",
+    "parent": "Mus musculus#striatum",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "macrophage",
+    "id": "Mus musculus#striatum#macrophage",
+    "parent": "Mus musculus#striatum",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "microglial cell",
+    "id": "Mus musculus#striatum#microglial cell",
+    "parent": "Mus musculus#striatum",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "neuron",
+    "id": "Mus musculus#striatum#neuron",
+    "parent": "Mus musculus#striatum",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "oligodendrocyte",
+    "id": "Mus musculus#striatum#oligodendrocyte",
+    "parent": "Mus musculus#striatum",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "oligodendrocyte precursor cell",
+    "id": "Mus musculus#striatum#oligodendrocyte precursor cell",
+    "parent": "Mus musculus#striatum",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "subcutaneous adipose tissue",
+    "id": "Mus musculus#subcutaneous adipose tissue",
+    "parent": "Mus musculus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-10221",
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "B cell",
+    "id": "Mus musculus#subcutaneous adipose tissue#B cell",
+    "parent": "Mus musculus#subcutaneous adipose tissue",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "endothelial cell",
+    "id": "Mus musculus#subcutaneous adipose tissue#endothelial cell",
+    "parent": "Mus musculus#subcutaneous adipose tissue",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "mesenchymal stem cell of adipose",
+    "id": "Mus musculus#subcutaneous adipose tissue#mesenchymal stem cell of adipose",
+    "parent": "Mus musculus#subcutaneous adipose tissue",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "myeloid cell",
+    "id": "Mus musculus#subcutaneous adipose tissue#myeloid cell",
+    "parent": "Mus musculus#subcutaneous adipose tissue",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "natural killer cell",
+    "id": "Mus musculus#subcutaneous adipose tissue#natural killer cell",
+    "parent": "Mus musculus#subcutaneous adipose tissue",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "stromal cell",
+    "id": "Mus musculus#subcutaneous adipose tissue#stromal cell",
+    "parent": "Mus musculus#subcutaneous adipose tissue",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-10221"
+    ]
+  },
+  {
+    "name": "T cell",
+    "id": "Mus musculus#subcutaneous adipose tissue#T cell",
+    "parent": "Mus musculus#subcutaneous adipose tissue",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "testis",
+    "id": "Mus musculus#testis",
+    "parent": "Mus musculus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-8077"
+    ]
+  },
+  {
+    "name": "endothelial cell",
+    "id": "Mus musculus#testis#endothelial cell",
+    "parent": "Mus musculus#testis",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-8077"
+    ]
+  },
+  {
+    "name": "thymus",
+    "id": "Mus musculus#thymus",
+    "parent": "Mus musculus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-7704",
+      "E-MTAB-6945",
+      "E-ENAD-15",
+      "E-MTAB-5727"
+    ]
+  },
+  {
+    "name": "CD8-Positive T-Lymphocytes",
+    "id": "Mus musculus#thymus#CD8-Positive T-Lymphocytes",
+    "parent": "Mus musculus#thymus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-6945"
+    ]
+  },
+  {
+    "name": "DN1 thymic pro-T cell",
+    "id": "Mus musculus#thymus#DN1 thymic pro-T cell",
+    "parent": "Mus musculus#thymus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "immature T cell",
+    "id": "Mus musculus#thymus#immature T cell",
+    "parent": "Mus musculus#thymus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "medullary thymic epithelial cells",
+    "id": "Mus musculus#thymus#medullary thymic epithelial cells",
+    "parent": "Mus musculus#thymus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-5727"
+    ]
+  },
+  {
+    "name": "mucosal invariant T cell",
+    "id": "Mus musculus#thymus#mucosal invariant T cell",
+    "parent": "Mus musculus#thymus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-7704"
+    ]
+  },
+  {
+    "name": "professional antigen presenting cell",
+    "id": "Mus musculus#thymus#professional antigen presenting cell",
+    "parent": "Mus musculus#thymus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "tongue",
+    "id": "Mus musculus#tongue",
+    "parent": "Mus musculus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "basal cell of epidermis",
+    "id": "Mus musculus#tongue#basal cell of epidermis",
+    "parent": "Mus musculus#tongue",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "keratinocyte",
+    "id": "Mus musculus#tongue#keratinocyte",
+    "parent": "Mus musculus#tongue",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "trachea",
+    "id": "Mus musculus#trachea",
+    "parent": "Mus musculus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "blood cell",
+    "id": "Mus musculus#trachea#blood cell",
+    "parent": "Mus musculus#trachea",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "endothelial cell",
+    "id": "Mus musculus#trachea#endothelial cell",
+    "parent": "Mus musculus#trachea",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "epithelial cell",
+    "id": "Mus musculus#trachea#epithelial cell",
+    "parent": "Mus musculus#trachea",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "mesenchymal cell",
+    "id": "Mus musculus#trachea#mesenchymal cell",
+    "parent": "Mus musculus#trachea",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "urinary bladder",
+    "id": "Mus musculus#urinary bladder",
+    "parent": "Mus musculus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "bladder cell",
+    "id": "Mus musculus#urinary bladder#bladder cell",
+    "parent": "Mus musculus#urinary bladder",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "bladder urothelial cell",
+    "id": "Mus musculus#urinary bladder#bladder urothelial cell",
+    "parent": "Mus musculus#urinary bladder",
+    "value": 1,
+    "experimentAccessions": [
+      "E-ENAD-15"
+    ]
+  },
+  {
+    "name": "visceral and parietal endoderm",
+    "id": "Mus musculus#visceral and parietal endoderm",
+    "parent": "Mus musculus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-123046"
+    ]
+  },
+  {
+    "name": "epiblast cell",
+    "id": "Mus musculus#visceral and parietal endoderm#epiblast cell",
+    "parent": "Mus musculus#visceral and parietal endoderm",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-123046"
+    ]
+  },
+  {
+    "name": "mouse embryonic stem cell",
+    "id": "Mus musculus#visceral and parietal endoderm#mouse embryonic stem cell",
+    "parent": "Mus musculus#visceral and parietal endoderm",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-123046"
+    ]
+  },
+  {
+    "name": "trophectoderm",
+    "id": "Mus musculus#visceral and parietal endoderm#trophectoderm",
+    "parent": "Mus musculus#visceral and parietal endoderm",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-123046"
+    ]
+  },
+  {
+    "name": "visceral endoderm",
+    "id": "Mus musculus#visceral and parietal endoderm#visceral endoderm",
+    "parent": "Mus musculus#visceral and parietal endoderm",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-123046"
+    ]
+  },
+  {
+    "name": "visceral endoderm",
+    "id": "Mus musculus#visceral endoderm",
+    "parent": "Mus musculus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-123046"
+    ]
+  },
+  {
+    "name": "definitive endoderm",
+    "id": "Mus musculus#visceral endoderm#definitive endoderm",
+    "parent": "Mus musculus#visceral endoderm",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-123046"
+    ]
+  },
+  {
+    "name": "endothelium",
+    "id": "Mus musculus#visceral endoderm#endothelium",
+    "parent": "Mus musculus#visceral endoderm",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-123046"
+    ]
+  },
+  {
+    "name": "epiblast cell",
+    "id": "Mus musculus#visceral endoderm#epiblast cell",
+    "parent": "Mus musculus#visceral endoderm",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-123046"
+    ]
+  },
+  {
+    "name": "extraembryonic ectoderm",
+    "id": "Mus musculus#visceral endoderm#extraembryonic ectoderm",
+    "parent": "Mus musculus#visceral endoderm",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-123046"
+    ]
+  },
+  {
+    "name": "germ cell",
+    "id": "Mus musculus#visceral endoderm#germ cell",
+    "parent": "Mus musculus#visceral endoderm",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-123046"
+    ]
+  },
+  {
+    "name": "intestinal endoderm",
+    "id": "Mus musculus#visceral endoderm#intestinal endoderm",
+    "parent": "Mus musculus#visceral endoderm",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-123046"
+    ]
+  },
+  {
+    "name": "liver endoderm",
+    "id": "Mus musculus#visceral endoderm#liver endoderm",
+    "parent": "Mus musculus#visceral endoderm",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-123046"
+    ]
+  },
+  {
+    "name": "lung endoderm",
+    "id": "Mus musculus#visceral endoderm#lung endoderm",
+    "parent": "Mus musculus#visceral endoderm",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-123046"
+    ]
+  },
+  {
+    "name": "midline",
+    "id": "Mus musculus#visceral endoderm#midline",
+    "parent": "Mus musculus#visceral endoderm",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-123046"
+    ]
+  },
+  {
+    "name": "mouse embryonic stem cell",
+    "id": "Mus musculus#visceral endoderm#mouse embryonic stem cell",
+    "parent": "Mus musculus#visceral endoderm",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-123046"
+    ]
+  },
+  {
+    "name": "pancreatic endoderm",
+    "id": "Mus musculus#visceral endoderm#pancreatic endoderm",
+    "parent": "Mus musculus#visceral endoderm",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-123046"
+    ]
+  },
+  {
+    "name": "thymus primordium endoderm",
+    "id": "Mus musculus#visceral endoderm#thymus primordium endoderm",
+    "parent": "Mus musculus#visceral endoderm",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-123046"
+    ]
+  },
+  {
+    "name": "thyroid primordium endoderm",
+    "id": "Mus musculus#visceral endoderm#thyroid primordium endoderm",
+    "parent": "Mus musculus#visceral endoderm",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-123046"
+    ]
+  },
+  {
+    "name": "visceral endoderm",
+    "id": "Mus musculus#visceral endoderm#visceral endoderm",
+    "parent": "Mus musculus#visceral endoderm",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-123046"
+    ]
+  },
+  {
+    "name": "yolk sac endoderm",
+    "id": "Mus musculus#visceral endoderm#yolk sac endoderm",
+    "parent": "Mus musculus#visceral endoderm",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-123046"
+    ]
+  },
+  {
+    "name": "white adipose tissue",
+    "id": "Mus musculus#white adipose tissue",
+    "parent": "Mus musculus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-11104"
+    ]
+  },
+  {
+    "name": "fat cell",
+    "id": "Mus musculus#white adipose tissue#fat cell",
+    "parent": "Mus musculus#white adipose tissue",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-11104"
+    ]
+  },
+  {
+    "name": "fibroblast",
+    "id": "Mus musculus#white adipose tissue#fibroblast",
+    "parent": "Mus musculus#white adipose tissue",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-11104"
+    ]
+  },
+  {
+    "name": "macrophage",
+    "id": "Mus musculus#white adipose tissue#macrophage",
+    "parent": "Mus musculus#white adipose tissue",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-11104"
+    ]
+  },
+  {
+    "name": "natural killer cell",
+    "id": "Mus musculus#white adipose tissue#natural killer cell",
+    "parent": "Mus musculus#white adipose tissue",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-11104"
+    ]
+  },
+  {
+    "name": "yolk sac",
+    "id": "Mus musculus#yolk sac",
+    "parent": "Mus musculus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-6970"
+    ]
+  },
+  {
+    "name": "yolk sac endoderm",
+    "id": "Mus musculus#yolk sac endoderm",
+    "parent": "Mus musculus",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-123046"
+    ]
+  },
+  {
+    "name": "yolk sac endoderm",
+    "id": "Mus musculus#yolk sac endoderm#yolk sac endoderm",
+    "parent": "Mus musculus#yolk sac endoderm",
+    "value": 1,
+    "experimentAccessions": [
+      "E-GEOD-123046"
+    ]
+  },
+  {
+    "name": "endothelial cell",
+    "id": "Mus musculus#yolk sac#endothelial cell",
+    "parent": "Mus musculus#yolk sac",
+    "value": 1,
+    "experimentAccessions": [
+      "E-MTAB-6970"
+    ]
+  }
+]
