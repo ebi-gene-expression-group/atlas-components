@@ -60,6 +60,9 @@ class CellTypeWheel extends React.Component {
           point: {
             events: {
               click: function () {
+                if (props.allSpecies && props.allSpecies.includes(props.searchTerm) && this.node.level === 3) {
+                  props.onCellTypeWheelClick(this.name, props.searchTerm, this.experimentAccessions)
+                }
                 if (this.node.level === 4) {
                   const species = _.split(this.id, `#`, 1)
                   props.onCellTypeWheelClick(this.name, species[0], this.experimentAccessions)
@@ -110,6 +113,7 @@ class CellTypeWheel extends React.Component {
 
 CellTypeWheel.propTypes = {
   searchTerm: PropTypes.string.isRequired,
+  allSpecies: PropTypes.arrayOf(PropTypes.string).isRequired,
   data: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,
