@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import PropTypes from 'prop-types'
 import URI from 'urijs'
 
@@ -14,17 +14,45 @@ const MarkerGeneHeatmapFetchLoader = withFetchLoader(MarkerGeneHeatmap)
 const GeneSearchFormFetchLoader = withFetchLoader(GeneSearchForm)
 
 function CellTypeWheelExperimentHeatmap(props) {
+  const [allSpecies, setAllSpecies] = useState(null) // State to hold the fetched data
+  const [loading, setLoading] = useState(true) // State to handle loading status
+  const [error, setError] = useState(null)
+
+  useEffect(() => {
+    // Define the async function inside useEffect
+    const fetchData = async () => {
+      const url = URI(props.searchFormResource, props.host).toString()
+      try {
+        const response = await fetch(url)
+        if (!response.ok) {
+          throw new Error('Network response was not ok')
+        }
+        const result = await response.json()
+        setAllSpecies(result.allSpecies) // Update state with the fetched data
+      } catch (err) {
+        setError(err.message)
+        setAllSpecies([])// Update state with the error message
+      } finally {
+        setLoading(false) // Set loading to false once the fetch is complete
+      }
+    }
+
+    fetchData()
+  }, [])
+
   const [heatmapSelection, setHeatmapSelection] = useState({
     cellType: ``,
     species: ``,
     experimentAccessions: []
   })
 
-  const onCellTypeWheelClick = (cellType, species, experimentAccessions) => setHeatmapSelection({
-    cellType,
-    species,
-    experimentAccessions
-  })
+  const onCellTypeWheelClick = (cellType, species, experimentAccessions) => {
+    return setHeatmapSelection({
+      cellType,
+      species,
+      experimentAccessions
+    })
+  }
 
   const heatmapFulfilledPayloadProvider = heatmapData => ({
     data: heatmapData,
@@ -57,6 +85,7 @@ function CellTypeWheelExperimentHeatmap(props) {
               resource={URI(props.searchTerm, props.cellTypeWheelResource).toString()}
               fulfilledPayloadProvider={cellTypeWheelData => ({ data: cellTypeWheelData })}
               searchTerm={props.searchTerm}
+              allSpecies={allSpecies}
               onCellTypeWheelClick={onCellTypeWheelClick}
             /> :
             <div className={`medium-text-center`} aria-label={`Empty search term`}>
