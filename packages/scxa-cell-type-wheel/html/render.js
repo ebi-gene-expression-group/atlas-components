@@ -9,6 +9,7 @@ import lung from './data/lung.json'
 import pancreas from './data/pancreas.json'
 import leukocyte from './data/leukocyte.json'
 import tcell from './data/t_cell.json'
+import musmusculus from './data/mus-musculus.json'
 
 const data = {
   lung: lung,
@@ -16,8 +17,20 @@ const data = {
   "COVID-19": covid19,
   leukocyte: leukocyte,
   cancer: cancer,
-  "T cell": tcell
+  "T cell": tcell,
+  "Mus musculus": musmusculus
 }
+
+const allSpecies = [
+    `Meeseek`,
+    `Gromflomite`,
+    `Cromulon`,
+    `Zigerion`,
+    `Moopian`,
+    `Bliznarvian`,
+    `Greebybobe`,
+    `Mus musculus`
+]
 
 const render = (options, dataKey, target) => {
   ReactDOM.render(
@@ -25,6 +38,7 @@ const render = (options, dataKey, target) => {
           {...options}
           searchTerm={dataKey}
           data={data[dataKey]}
+          allSpecies={allSpecies}
           onCellTypeWheelClick={
             (name, species, experimentAccessions) => console.log(name, species, experimentAccessions)}
       />, document.getElementById(target))

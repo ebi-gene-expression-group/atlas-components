@@ -12,22 +12,9 @@
 
   <body>
     <div id="wrapper" class="row">
-      <h1>Cell type wheel demo</h1>
-
-      <div class="row column">
-        <h2>Metadata query</h2>
-        <ul>
-          <li><a href="./covid-19.html">COVID-19</a></li>
-          <li><a href="./cancer.html">Cancer</a></li>
-
-          <li><a href="./pancreas.html">Pancreas</a></li>
-          <li><a href="./lung.html">Lung</a></li>
-
-          <li><a href="./t_cell.html">T cell</a></li>
-          <li><a href="./leukocyte.html">Leukocyte</a></li>
-
-          <li><a href="./mus-musculus.html">Mus musculus</a></li>
-        </ul>
+      <div id="content" class="small-12 columns">
+        <div id="target">
+        </div>
       </div>
     </div>
 
@@ -40,5 +27,12 @@
   <script src="https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/js/foundationExtendEBI.js"></script>
   <script type="text/JavaScript">$(document).foundation();</script>
   <script type="text/JavaScript">$(document).foundationExtendEBI();</script>
+
+  <script src="../dist/vendors.bundle.js"></script>
+  <script src="../dist/cellTypeWheelDemo.bundle.js"></script>
+
+  <script>
+    cellTypeWheelDemo.render({}, 'Mus musculus', 'target')
+  </script>
 </body>
 </html>
