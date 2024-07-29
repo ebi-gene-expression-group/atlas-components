@@ -1,6 +1,6 @@
 {
   "name": "@ebi-gene-expression-group/scxa-cell-type-wheel",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "publishConfig": {
     "access": "public"
   },
@@ -25,8 +25,8 @@
     "url": "https://github.com/atlas-components.git"
   },
   "dependencies": {
-    "highcharts": "^10.1.0",
-    "highcharts-react-official": "^3.1.0",
+    "highcharts": "^11.4.6",
+    "highcharts-react-official": "^3.2.1",
     "lodash": "^4.17.21",
     "prop-types": "^15.8.1",
     "react": "^17.0.2",
