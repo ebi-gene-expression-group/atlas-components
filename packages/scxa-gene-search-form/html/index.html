@@ -115,12 +115,6 @@
     return Math.floor(Math.random() * Math.floor(max));
   }
 
-  function onOptionChange(item){
-    console.log("on option change");
-    console.log(item);
-    console.log("on option change done");
-  }
-
   geneSearchFormDemo.render({
     host: 'http://localhost:8080/gxa/sc/',
     resource: 'json/suggestions/species',
@@ -152,12 +146,7 @@
         text: 'FBgn0004647 (FlyBase ID)',
         url: '${pageContext.request.contextPath}/search?flybase_gene_id=FBgn0004647'
       }
-    ],
-    onSpeciesSelectOnChange:function(item){
-      console.log("on option change");
-      console.log(item);
-      console.log("on option change done");
-    }
+    ]
   }, 'search');
 
   geneSearchFormDemo.render({

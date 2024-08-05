@@ -17,7 +17,6 @@ function CellTypeWheelExperimentHeatmap(props) {
   const [allSpecies, setAllSpecies] = useState(null) // State to hold the fetched data
   const [loading, setLoading] = useState(true) // State to handle loading status
   const [error, setError] = useState(null)
-  const [selectedSpecies, setSelectedSpecies] = useState(props.species)
 
   useEffect(() => {
     // Define the async function inside useEffect
@@ -55,10 +54,6 @@ function CellTypeWheelExperimentHeatmap(props) {
     })
   }
 
-  function handleChange(species) {
-    setSelectedSpecies(species);
-  }
-
   const heatmapFulfilledPayloadProvider = heatmapData => ({
     data: heatmapData,
     xAxisCategories: _.chain(heatmapData).uniqBy(`x`).sortBy(`x`).map(`cellGroupValue`).value(),
@@ -82,7 +77,6 @@ function CellTypeWheelExperimentHeatmap(props) {
         enableSpeciesSelect={true}
         speciesSelectClassName={`small-4 columns`}
         defaultSpecies={props.species}
-        onSpeciesSelectOnChange={handleChange}
       />
       <div className={`row-expanded small-12 columns`}>
         <div className={`small-12 medium-6 columns`} aria-label={`Cell type wheel`}>
