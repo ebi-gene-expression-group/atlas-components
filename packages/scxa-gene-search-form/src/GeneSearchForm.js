@@ -39,6 +39,9 @@ class GeneSearchForm extends React.Component {
 
   _speciesSelectOnChange (selectedItem) {
     this.setState({ selectedSpecies: selectedItem.value })
+    if (this.props.onSpeciesSelectOnChange) {
+      this.props.onSpeciesSelectOnChange(selectedItem.value)
+    }
   }
 
   render () {
@@ -125,7 +128,8 @@ GeneSearchForm.propTypes = {
   searchExamples: PropTypes.arrayOf(PropTypes.shape({
     text: PropTypes.string.isRequired,
     url: PropTypes.string.isRequired
-  }))
+  })),
+  onSpeciesSelectOnChange: PropTypes.func
 }
 
 GeneSearchForm.defaultProps = {
