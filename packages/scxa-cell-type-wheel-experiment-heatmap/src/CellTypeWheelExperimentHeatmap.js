@@ -92,8 +92,8 @@ function CellTypeWheelExperimentHeatmap(props) {
               resource={URI(props.cellTypeWheelResource)
                 .segment(props.searchTerm)
                 .search(`?species=` + props.species)
-                .toString()
-              }
+                .toString()}
+              query={props.species ? `?species=` + selectedSpecies : ``}
               fulfilledPayloadProvider={cellTypeWheelData => ({ data: cellTypeWheelData })}
               searchTerm={props.searchTerm}
               allSpecies={allSpecies}
