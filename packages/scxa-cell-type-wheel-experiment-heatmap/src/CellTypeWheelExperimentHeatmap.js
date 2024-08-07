@@ -17,6 +17,7 @@ function CellTypeWheelExperimentHeatmap(props) {
   const [allSpecies, setAllSpecies] = useState(null) // State to hold the fetched data
   const [loading, setLoading] = useState(true) // State to handle loading status
   const [error, setError] = useState(null)
+  const [selectedSpecies, setSelectedSpecies] = useState(props.species)
 
   useEffect(() => {
     // Define the async function inside useEffect
@@ -54,6 +55,10 @@ function CellTypeWheelExperimentHeatmap(props) {
     })
   }
 
+  function handleChange(species) {
+    setSelectedSpecies(species);
+  }
+
   const heatmapFulfilledPayloadProvider = heatmapData => ({
     data: heatmapData,
     xAxisCategories: _.chain(heatmapData).uniqBy(`x`).sortBy(`x`).map(`cellGroupValue`).value(),
@@ -66,8 +71,8 @@ function CellTypeWheelExperimentHeatmap(props) {
       <GeneSearchFormFetchLoader
         host={props.host}
         resource={props.searchFormResource}
-        loadingPayloadProvider={ () => ({ speciesSelectStatusMessage: `Fetching species…` }) }
-        errorPayloadProvider={ () => ({ speciesSelectStatusMessage: `Failed fetching species` }) }
+        loadingPayloadProvider={() => ({ speciesSelectStatusMessage: `Fetching species…` })}
+        errorPayloadProvider={() => ({ speciesSelectStatusMessage: `Failed fetching species` })}
         wrapperClassName={`row-expanded small-12 columns`}
         autocompleteClassName={`small-8 columns`}
         actionEndpoint={props.actionEndpoint}
@@ -77,6 +82,7 @@ function CellTypeWheelExperimentHeatmap(props) {
         enableSpeciesSelect={true}
         speciesSelectClassName={`small-4 columns`}
         defaultSpecies={props.species}
+        onSpeciesSelectOnChange={handleChange}
       />
       <div className={`row-expanded small-12 columns`}>
         <div className={`small-12 medium-6 columns`} aria-label={`Cell type wheel`}>
@@ -85,9 +91,8 @@ function CellTypeWheelExperimentHeatmap(props) {
               host={props.host}
               resource={URI(props.cellTypeWheelResource)
                 .segment(props.searchTerm)
-                .search(`?species=` + props.species)
-                .toString()
-              }
+                .toString()}
+              query={props.species ? `?species=` + selectedSpecies : ''}
               fulfilledPayloadProvider={cellTypeWheelData => ({ data: cellTypeWheelData })}
               searchTerm={props.searchTerm}
               allSpecies={allSpecies}
@@ -115,7 +120,8 @@ function CellTypeWheelExperimentHeatmap(props) {
             props.searchTerm.trim() ?
               <div className={`medium-text-center`} aria-label={`No cell type selected`}>
                 <h4>
-                  Please click on a cell type to see a detailed view of the expression profile of top-scoring genes across experiments.
+                  Please click on a cell type to see a detailed view of the expression profile of top-scoring genes
+                  across experiments.
                 </h4>
               </div> :
               <div/>

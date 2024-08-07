@@ -10,38 +10,41 @@ import pancreas from './data/pancreas.json'
 import leukocyte from './data/leukocyte.json'
 import tcell from './data/t_cell.json'
 import musmusculus from './data/mus-musculus.json'
+import homosapiens from './data/homo-sapiens.json'
 
 const data = {
-  lung: lung,
-  pancreas: pancreas,
+  lung,
+  pancreas,
   "COVID-19": covid19,
-  leukocyte: leukocyte,
-  cancer: cancer,
+  leukocyte,
+  cancer,
   "T cell": tcell,
-  "Mus musculus": musmusculus
+  "Mus musculus": musmusculus,
+  "Homo sapiens": homosapiens
 }
 
 const allSpecies = [
-    `Meeseek`,
-    `Gromflomite`,
-    `Cromulon`,
-    `Zigerion`,
-    `Moopian`,
-    `Bliznarvian`,
-    `Greebybobe`,
-    `Mus musculus`
+  `Meeseek`,
+  `Gromflomite`,
+  `Cromulon`,
+  `Zigerion`,
+  `Moopian`,
+  `Bliznarvian`,
+  `Greebybobe`,
+  `Mus musculus`,
+  `Homo sapiens`
 ]
 
 const render = (options, dataKey, target) => {
   ReactDOM.render(
-      <CellTypeWheel
-          {...options}
-          searchTerm={dataKey}
-          data={data[dataKey]}
-          allSpecies={allSpecies}
-          onCellTypeWheelClick={
-            (name, species, experimentAccessions) => console.log(name, species, experimentAccessions)}
-      />, document.getElementById(target))
+    <CellTypeWheel
+      {...options}
+      searchTerm={dataKey}
+      data={data[dataKey]}
+      allSpecies={allSpecies}
+      onCellTypeWheelClick={
+        (name, species, experimentAccessions) => console.log(name, species, experimentAccessions)}
+    />, document.getElementById(target))
 }
 
 export { render }
