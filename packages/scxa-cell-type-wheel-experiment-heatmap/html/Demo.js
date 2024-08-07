@@ -9,6 +9,7 @@ const render = (options, target) => {
       {...options}
       host={`https://wwwdev.ebi.ac.uk/gxa/sc/`}
       searchTerm={`pancreas`}
+      species={'mus musculus'}
     />, document.getElementById(target)
   )
 }
