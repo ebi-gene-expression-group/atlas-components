@@ -89,7 +89,7 @@ function CellTypeWheelExperimentHeatmap(props) {
           {props.searchTerm.trim() ?
             <CellTypeWheelFetchLoader
               host={props.host}
-resource={URI(props.cellTypeWheelResource)
+              resource={URI(props.cellTypeWheelResource)
                 .segment(props.searchTerm)
                 .toString()}
               query={props.species ? `?species=` + selectedSpecies : ''}
