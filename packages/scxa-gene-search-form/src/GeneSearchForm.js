@@ -68,7 +68,7 @@ class GeneSearchForm extends React.Component {
           { enableSpeciesSelect &&
             <div className={speciesSelectClassName} data-cy={`speciesDropDown`}>
               <LabelledSelect
-                name={`speciesDropDown`}
+                name={`species`}
                 topGroup={topSpecies}
                 bottomGroup={allSpecies}
                 bottomGroupLabel={`All species`}
