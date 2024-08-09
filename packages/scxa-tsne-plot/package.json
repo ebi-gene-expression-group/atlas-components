@@ -55,6 +55,7 @@
     "styled-components": "^5.1.1"
   },
   "devDependencies": {
+    "@ebi-gene-expression-group/highcharts-series-generator": "^1.2.1",
     "@babel/cli": "^7.10.5",
     "@babel/core": "^7.11.1",
     "@babel/polyfill": "^7.10.4",
