@@ -7,3 +7,6 @@ Visualisation of [t-SNE plots](https://lvdmaaten.github.io/tsne/) of single cell
 It uses [Highcharts](https://www.highcharts.com/) for plotting and expects the `series` property in the JSON payload of both plots to adhere to [Highcharts series format for scatter plots](https://api.highcharts.com/highcharts/series.scatter).
 
 Elements use classes from the [EBI Visual Framework](https://github.com/ebiwd/EBI-Framework/) for styling and layout.
+
+To test this component, please uncomment `HighchartsExporting(Highcharts)
+ HighchartsOfflineExporting(Highcharts)   HighchartsBoost(Highcharts)` in `Scatterplot.js` first, as highcharts wrappers are not been supported in the test.
