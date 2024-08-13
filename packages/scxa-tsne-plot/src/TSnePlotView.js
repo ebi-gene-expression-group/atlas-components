@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-
+import 'whatwg-fetch'
 import URI from 'urijs'
 
 import ClusterTSnePlot from './ClusterTSnePlot'
