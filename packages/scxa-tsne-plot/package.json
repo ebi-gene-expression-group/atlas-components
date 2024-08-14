@@ -1,6 +1,6 @@
 {
   "name": "@ebi-gene-expression-group/scxa-tsne-plot",
-  "version": "6.3.2",
+  "version": "6.3.3",
   "description": "A twin plot of metadata and gene expression to display t-SNE plots in Single Cell Expression Atlas",
   "main": "lib/index.js",
   "scripts": {
@@ -81,5 +81,5 @@
     "webpack-dev-server": "^3.11.0",
     "whatwg-fetch": "^3.4.0"
   },
-  "gitHead": "3c3e8c8de82cbcd35fef05db76775e04f7f24289"
+  "gitHead": "0fcac2cf1b51445c92c92a4dc4ce51f468a1a6fb"
 }
