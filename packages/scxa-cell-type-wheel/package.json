@@ -48,5 +48,6 @@
     "eslint": "^8.17.0",
     "webpack": "^5.73.0",
     "webpack-dev-server": "^4.9.2"
-  }
+  },
+  "gitHead": "3c3e8c8de82cbcd35fef05db76775e04f7f24289"
 }

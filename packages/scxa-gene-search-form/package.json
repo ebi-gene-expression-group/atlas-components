@@ -54,5 +54,6 @@
     "webpack-cli": "^4.10.0",
     "webpack-dev-server": "^4.9.2",
     "whatwg-fetch": "^3.6.2"
-  }
+  },
+  "gitHead": "3c3e8c8de82cbcd35fef05db76775e04f7f24289"
 }
