@@ -61,5 +61,5 @@
     "webpack-dev-server": "^3.11.0",
     "whatwg-fetch": "^3.4.0"
   },
-  "gitHead": "3c3e8c8de82cbcd35fef05db76775e04f7f24289"
+  "gitHead": "0fcac2cf1b51445c92c92a4dc4ce51f468a1a6fb"
 }
