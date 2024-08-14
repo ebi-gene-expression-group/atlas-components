@@ -118,11 +118,11 @@ const ClusterTSnePlot = (props) => {
     }
   }
 
-  const kOptions = ks.sort((a, b) => a - b).map((k) => ({
+  const kOptions = ks.length > 0 ? ks.sort((a, b) => a - b).map((k) => ({
     value: k.toString(),
     label: `k = ${k}`,
     group: `clusters`
-  }))
+  })) : null
 
   const metadataOptions = metadata.map((metadata) => ({
     ...metadata,
@@ -133,12 +133,15 @@ const ClusterTSnePlot = (props) => {
     {
       label: `Metadata`,
       options: metadataOptions,
-    },
-    {
+    }
+  ]
+
+  if (kOptions) {
+    options[1] = {
       label: `Number of clusters`,
       options: kOptions,
-    },
-  ]
+    }
+  }
 
   const defaultValue = _find(
       _flatten(
