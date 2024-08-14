@@ -65,8 +65,8 @@ function CellTypeWheelExperimentHeatmap(props) {
       <GeneSearchFormFetchLoader
         host={props.host}
         resource={props.searchFormResource}
-        loadingPayloadProvider={() => ({ speciesSelectStatusMessage: `Fetching species…` })}
-        errorPayloadProvider={() => ({ speciesSelectStatusMessage: `Failed fetching species` })}
+        loadingPayloadProvider={ () => ({ speciesSelectStatusMessage: `Fetching species…` }) }
+        errorPayloadProvider={ () => ({ speciesSelectStatusMessage: `Failed fetching species` }) }
         wrapperClassName={`row-expanded small-12 columns`}
         autocompleteClassName={`small-8 columns`}
         actionEndpoint={props.actionEndpoint}
@@ -112,8 +112,7 @@ function CellTypeWheelExperimentHeatmap(props) {
             props.searchTerm.trim() ?
               <div className={`medium-text-center`} aria-label={`No cell type selected`}>
                 <h4>
-                  Please click on a cell type to see a detailed view of the expression profile of top-scoring genes
-                  across experiments.
+                  Please click on a cell type to see a detailed view of the expression profile of top-scoring genes across experiments.
                 </h4>
               </div> :
               <div/>
