@@ -97,7 +97,7 @@ exports[`TSnePlotView matches snapshot 1`] = `
             className=" css-1hb7zxy-IndicatorsContainer"
           >
             <span
-              className="sc-AxirZ eHnaPO"
+              className="sc-gsnTZi ebinUc"
               cx={[Function]}
             />
           </div>
@@ -189,7 +189,7 @@ exports[`TSnePlotView matches snapshot 1`] = `
             className=" css-1hb7zxy-IndicatorsContainer"
           >
             <span
-              className="sc-AxirZ eHnaPO"
+              className="sc-gsnTZi ebinUc"
               cx={[Function]}
             />
           </div>
@@ -285,7 +285,7 @@ exports[`TSnePlotView matches snapshot 1`] = `
             className=" css-1hb7zxy-IndicatorsContainer"
           >
             <span
-              className="sc-AxirZ eHnaPO"
+              className="sc-gsnTZi ebinUc"
               cx={[Function]}
             />
           </div>
@@ -293,11 +293,28 @@ exports[`TSnePlotView matches snapshot 1`] = `
       </div>
     </div>
     <div
-      className="row text-center scxa-error"
+      className="row"
+      style={
+        Object {
+          "position": "relative",
+        }
+      }
     >
-      <p>
-        ReferenceError: fetch is not defined
-      </p>
+      <div
+        className="small-12 columns"
+      >
+        <div />
+      </div>
+      <div
+        className="sc-bczRLJ dMcFoN"
+      >
+        <p>
+          Loading, please wait...
+        </p>
+        <img
+          src="test-file-stub"
+        />
+      </div>
     </div>
   </div>
   <div
@@ -341,11 +358,28 @@ exports[`TSnePlotView matches snapshot 1`] = `
       </div>
     </div>
     <div
-      className="row text-center scxa-error"
+      className="row"
+      style={
+        Object {
+          "position": "relative",
+        }
+      }
     >
-      <p>
-        ReferenceError: fetch is not defined
-      </p>
+      <div
+        className="small-12 columns"
+      >
+        <div />
+      </div>
+      <div
+        className="sc-bczRLJ dMcFoN"
+      >
+        <p>
+          Loading, please wait...
+        </p>
+        <img
+          src="test-file-stub"
+        />
+      </div>
     </div>
   </div>
 </div>
