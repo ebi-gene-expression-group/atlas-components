@@ -141,7 +141,7 @@ class Demo extends React.Component {
       geneId: ``,
       selectedPlotOption: Object.values(Object.values(defaultPlotMethodAndParameterisation)[0])[0],
       selectedPlotOptionLabel: Object.keys(Object.values(defaultPlotMethodAndParameterisation)[0])[0] + ": " + Object.values(Object.values(defaultPlotMethodAndParameterisation)[0])[0],
-      selectedColourBy: ks[Math.round((ks.length -1) / 2)].toString(),
+      selectedColourBy: metadata ? metadata[0].value : ``, //ks may be empty, we prefer metadata as the default option
       highlightClusters: [],
       experimentAccession: accession,
       selectedColourByCategory: `clusters`
