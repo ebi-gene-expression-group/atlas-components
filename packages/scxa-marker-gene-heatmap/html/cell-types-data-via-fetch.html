@@ -26,14 +26,19 @@
 </body>
 
 <script src="../dist/vendors.bundle.js"></script>
-<script src="../dist/heatmapViewRenderModule.bundle.js"></script>
+<script src="../dist/clustersViewDemo.bundle.js"></script>
 <script>
-  heatmapViewRenderModule.render({
+  clustersViewDemo.render({
     resource: 'json/experiments/E-MTAB-5061/marker-genes/cell-types?organismPart=http://purl.obolibrary.org/obo/UBERON_0001264',
     host: 'http://localhost:8080/gxa/sc/',
     species: 'Homo sapiens',
     hasDynamicHeight: true,
     heatmapRowHeight: 20,
+    ks: [ 8, 11, 19],
+    metadata:[{
+      value: `inferred cell type - ontology labels`,
+      label: `Inferred cell type - ontology labels`
+    }],
     wrapperClassName: 'row expanded',
     heatmapType: 'celltypes'
   }, 'target');
