@@ -174,7 +174,12 @@ HeatmapView.propTypes = {
   defaultHeatmapHeight: PropTypes.number,
   hasDynamicHeight: PropTypes.bool,
   heatmapRowHeight: PropTypes.number,
-  species: PropTypes.string.isRequired
+  species: PropTypes.string.isRequired,
+  heatmapType: PropTypes.string,
+  metadata: PropTypes.arrayOf(PropTypes.shape({
+    value: PropTypes.string,
+    label: PropTypes.string
+  }))
 }
 
 HeatmapView.defaultProps = {
@@ -182,7 +187,8 @@ HeatmapView.defaultProps = {
   plotWrapperClassName: `small-12 columns`,
   defaultHeatmapHeight: 300,
   hasDynamicHeight: true,
-  heatmapRowHeight: 20
+  heatmapRowHeight: 20,
+  heatmapType: `cluster`
 }
 
 export default HeatmapView
