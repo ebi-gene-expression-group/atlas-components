@@ -183,6 +183,22 @@ describe(`ClusterTSnePlot`, () => {
     expect(dropdown.props().defaultValue.label).toContain(`The first metadata value`)
   })
 
+  test(`dropdown selection text only have metadata if ks is empty`, () => {
+    const ks = []
+    const metadata = [
+      {
+        value: `metadata-1`,
+        label: `The first metadata value`
+      }
+    ]
+
+    const wrapper = mount(<ClusterTSnePlot {...props} ks={ks} metadata={metadata} selectedColourBy={`metadata-1`} selectedColourCategory={`metadata`} showControls={true}/>)
+
+    const dropdown = wrapper.find({ labelText: `Colour plot by:`})
+
+    expect(dropdown.props()).not.toContain(`NUMBER OF CLUSTERS`)
+  })
+
   test(`hides the cluster name in tooltips if tSNE is coloured by metadata`, () => {
     const randomSeries1 = randomHighchartsSeriesWithNamesAndMaxPoints(seriesNames, 10).map(point => Object.assign(point, {clusterType: `clusters`}))
     const randomSeries2 = randomHighchartsSeriesWithNamesAndMaxPoints(seriesNames, 10).map(point => Object.assign(point, {clusterType: `metadata`}))
