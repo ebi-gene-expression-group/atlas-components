@@ -1,0 +1,3202 @@
+[
+  {
+    "x": 5,
+    "y": 0,
+    "geneName": "ENSG00000224981",
+    "value": 0.0,
+    "cellGroupValue": "6",
+    "cellGroupValueWhereMarker": "1",
+    "pValue": 4.37261792498723E-71,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 1,
+    "y": 0,
+    "geneName": "ENSG00000224981",
+    "value": 0.0,
+    "cellGroupValue": "2",
+    "cellGroupValueWhereMarker": "1",
+    "pValue": 4.37261792498723E-71,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 2,
+    "y": 0,
+    "geneName": "ENSG00000224981",
+    "value": 0.0,
+    "cellGroupValue": "3",
+    "cellGroupValueWhereMarker": "1",
+    "pValue": 4.37261792498723E-71,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 7,
+    "y": 0,
+    "geneName": "ENSG00000224981",
+    "value": 0.0,
+    "cellGroupValue": "8",
+    "cellGroupValueWhereMarker": "1",
+    "pValue": 4.37261792498723E-71,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 0,
+    "y": 0,
+    "geneName": "ENSG00000224981",
+    "value": 87.22198,
+    "cellGroupValue": "1",
+    "cellGroupValueWhereMarker": "1",
+    "pValue": 4.37261792498723E-71,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 4,
+    "y": 0,
+    "geneName": "ENSG00000224981",
+    "value": 8.40315,
+    "cellGroupValue": "5",
+    "cellGroupValueWhereMarker": "1",
+    "pValue": 4.37261792498723E-71,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 6,
+    "y": 0,
+    "geneName": "ENSG00000224981",
+    "value": 0.0,
+    "cellGroupValue": "7",
+    "cellGroupValueWhereMarker": "1",
+    "pValue": 4.37261792498723E-71,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 3,
+    "y": 0,
+    "geneName": "ENSG00000224981",
+    "value": 2.2323062,
+    "cellGroupValue": "4",
+    "cellGroupValueWhereMarker": "1",
+    "pValue": 4.37261792498723E-71,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 1,
+    "y": 1,
+    "geneName": "SST",
+    "value": 3.3894513,
+    "cellGroupValue": "2",
+    "cellGroupValueWhereMarker": "1",
+    "pValue": 7.73479324030978E-46,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 3,
+    "y": 1,
+    "geneName": "SST",
+    "value": 17.398733,
+    "cellGroupValue": "4",
+    "cellGroupValueWhereMarker": "1",
+    "pValue": 7.73479324030978E-46,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 7,
+    "y": 1,
+    "geneName": "SST",
+    "value": 7.426367,
+    "cellGroupValue": "8",
+    "cellGroupValueWhereMarker": "1",
+    "pValue": 7.73479324030978E-46,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 4,
+    "y": 1,
+    "geneName": "SST",
+    "value": 8.456659,
+    "cellGroupValue": "5",
+    "cellGroupValueWhereMarker": "1",
+    "pValue": 7.73479324030978E-46,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 5,
+    "y": 1,
+    "geneName": "SST",
+    "value": 7.60475,
+    "cellGroupValue": "6",
+    "cellGroupValueWhereMarker": "1",
+    "pValue": 7.73479324030978E-46,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 2,
+    "y": 1,
+    "geneName": "SST",
+    "value": 27.870682,
+    "cellGroupValue": "3",
+    "cellGroupValueWhereMarker": "1",
+    "pValue": 7.73479324030978E-46,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 6,
+    "y": 1,
+    "geneName": "SST",
+    "value": 0.56293094,
+    "cellGroupValue": "7",
+    "cellGroupValueWhereMarker": "1",
+    "pValue": 7.73479324030978E-46,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 0,
+    "y": 1,
+    "geneName": "SST",
+    "value": 359.58292,
+    "cellGroupValue": "1",
+    "cellGroupValueWhereMarker": "1",
+    "pValue": 7.73479324030978E-46,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 0,
+    "y": 2,
+    "geneName": "CFC1B",
+    "value": 0.5592904,
+    "cellGroupValue": "1",
+    "cellGroupValueWhereMarker": "1",
+    "pValue": 2.15322659496253E-29,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 5,
+    "y": 2,
+    "geneName": "CFC1B",
+    "value": 0.0,
+    "cellGroupValue": "6",
+    "cellGroupValueWhereMarker": "1",
+    "pValue": 2.15322659496253E-29,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 4,
+    "y": 2,
+    "geneName": "CFC1B",
+    "value": 0.0,
+    "cellGroupValue": "5",
+    "cellGroupValueWhereMarker": "1",
+    "pValue": 2.15322659496253E-29,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 1,
+    "y": 2,
+    "geneName": "CFC1B",
+    "value": 0.0,
+    "cellGroupValue": "2",
+    "cellGroupValueWhereMarker": "1",
+    "pValue": 2.15322659496253E-29,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 3,
+    "y": 2,
+    "geneName": "CFC1B",
+    "value": 0.0,
+    "cellGroupValue": "4",
+    "cellGroupValueWhereMarker": "1",
+    "pValue": 2.15322659496253E-29,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 6,
+    "y": 2,
+    "geneName": "CFC1B",
+    "value": 0.0,
+    "cellGroupValue": "7",
+    "cellGroupValueWhereMarker": "1",
+    "pValue": 2.15322659496253E-29,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 7,
+    "y": 2,
+    "geneName": "CFC1B",
+    "value": 0.0,
+    "cellGroupValue": "8",
+    "cellGroupValueWhereMarker": "1",
+    "pValue": 2.15322659496253E-29,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 2,
+    "y": 2,
+    "geneName": "CFC1B",
+    "value": 0.0,
+    "cellGroupValue": "3",
+    "cellGroupValueWhereMarker": "1",
+    "pValue": 2.15322659496253E-29,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 4,
+    "y": 3,
+    "geneName": "MIXL1",
+    "value": 5.077548,
+    "cellGroupValue": "5",
+    "cellGroupValueWhereMarker": "1",
+    "pValue": 5.85791651764427E-29,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 6,
+    "y": 3,
+    "geneName": "MIXL1",
+    "value": 0.0,
+    "cellGroupValue": "7",
+    "cellGroupValueWhereMarker": "1",
+    "pValue": 5.85791651764427E-29,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 2,
+    "y": 3,
+    "geneName": "MIXL1",
+    "value": 1.564365,
+    "cellGroupValue": "3",
+    "cellGroupValueWhereMarker": "1",
+    "pValue": 5.85791651764427E-29,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 0,
+    "y": 3,
+    "geneName": "MIXL1",
+    "value": 14.607576,
+    "cellGroupValue": "1",
+    "cellGroupValueWhereMarker": "1",
+    "pValue": 5.85791651764427E-29,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 7,
+    "y": 3,
+    "geneName": "MIXL1",
+    "value": 0.0,
+    "cellGroupValue": "8",
+    "cellGroupValueWhereMarker": "1",
+    "pValue": 5.85791651764427E-29,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 5,
+    "y": 3,
+    "geneName": "MIXL1",
+    "value": 0.0,
+    "cellGroupValue": "6",
+    "cellGroupValueWhereMarker": "1",
+    "pValue": 5.85791651764427E-29,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 1,
+    "y": 3,
+    "geneName": "MIXL1",
+    "value": 0.0,
+    "cellGroupValue": "2",
+    "cellGroupValueWhereMarker": "1",
+    "pValue": 5.85791651764427E-29,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 3,
+    "y": 3,
+    "geneName": "MIXL1",
+    "value": 2.6824892,
+    "cellGroupValue": "4",
+    "cellGroupValueWhereMarker": "1",
+    "pValue": 5.85791651764427E-29,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 6,
+    "y": 4,
+    "geneName": "KRT19",
+    "value": 10.137259,
+    "cellGroupValue": "7",
+    "cellGroupValueWhereMarker": "2",
+    "pValue": 1.89363764813727E-225,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 2,
+    "y": 4,
+    "geneName": "KRT19",
+    "value": 0.0,
+    "cellGroupValue": "3",
+    "cellGroupValueWhereMarker": "2",
+    "pValue": 1.89363764813727E-225,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 7,
+    "y": 4,
+    "geneName": "KRT19",
+    "value": 0.0,
+    "cellGroupValue": "8",
+    "cellGroupValueWhereMarker": "2",
+    "pValue": 1.89363764813727E-225,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 1,
+    "y": 4,
+    "geneName": "KRT19",
+    "value": 1530.4695,
+    "cellGroupValue": "2",
+    "cellGroupValueWhereMarker": "2",
+    "pValue": 1.89363764813727E-225,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 0,
+    "y": 4,
+    "geneName": "KRT19",
+    "value": 0.0,
+    "cellGroupValue": "1",
+    "cellGroupValueWhereMarker": "2",
+    "pValue": 1.89363764813727E-225,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 5,
+    "y": 4,
+    "geneName": "KRT19",
+    "value": 0.0,
+    "cellGroupValue": "6",
+    "cellGroupValueWhereMarker": "2",
+    "pValue": 1.89363764813727E-225,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 4,
+    "y": 4,
+    "geneName": "KRT19",
+    "value": 0.0,
+    "cellGroupValue": "5",
+    "cellGroupValueWhereMarker": "2",
+    "pValue": 1.89363764813727E-225,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 3,
+    "y": 4,
+    "geneName": "KRT19",
+    "value": 0.0,
+    "cellGroupValue": "4",
+    "cellGroupValueWhereMarker": "2",
+    "pValue": 1.89363764813727E-225,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 3,
+    "y": 5,
+    "geneName": "ANXA4",
+    "value": 31.650702,
+    "cellGroupValue": "4",
+    "cellGroupValueWhereMarker": "2",
+    "pValue": 1.50189020296124E-221,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 7,
+    "y": 5,
+    "geneName": "ANXA4",
+    "value": 76.85805,
+    "cellGroupValue": "8",
+    "cellGroupValueWhereMarker": "2",
+    "pValue": 1.50189020296124E-221,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 4,
+    "y": 5,
+    "geneName": "ANXA4",
+    "value": 31.836103,
+    "cellGroupValue": "5",
+    "cellGroupValueWhereMarker": "2",
+    "pValue": 1.50189020296124E-221,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 1,
+    "y": 5,
+    "geneName": "ANXA4",
+    "value": 2275.4514,
+    "cellGroupValue": "2",
+    "cellGroupValueWhereMarker": "2",
+    "pValue": 1.50189020296124E-221,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 2,
+    "y": 5,
+    "geneName": "ANXA4",
+    "value": 2.5411541,
+    "cellGroupValue": "3",
+    "cellGroupValueWhereMarker": "2",
+    "pValue": 1.50189020296124E-221,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 5,
+    "y": 5,
+    "geneName": "ANXA4",
+    "value": 37.13069,
+    "cellGroupValue": "6",
+    "cellGroupValueWhereMarker": "2",
+    "pValue": 1.50189020296124E-221,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 0,
+    "y": 5,
+    "geneName": "ANXA4",
+    "value": 0.0,
+    "cellGroupValue": "1",
+    "cellGroupValueWhereMarker": "2",
+    "pValue": 1.50189020296124E-221,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 6,
+    "y": 5,
+    "geneName": "ANXA4",
+    "value": 466.3139,
+    "cellGroupValue": "7",
+    "cellGroupValueWhereMarker": "2",
+    "pValue": 1.50189020296124E-221,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 0,
+    "y": 6,
+    "geneName": "KRT8",
+    "value": 24.441813,
+    "cellGroupValue": "1",
+    "cellGroupValueWhereMarker": "2",
+    "pValue": 8.5088752408801E-214,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 7,
+    "y": 6,
+    "geneName": "KRT8",
+    "value": 156.2409,
+    "cellGroupValue": "8",
+    "cellGroupValueWhereMarker": "2",
+    "pValue": 8.5088752408801E-214,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 6,
+    "y": 6,
+    "geneName": "KRT8",
+    "value": 1394.3619,
+    "cellGroupValue": "7",
+    "cellGroupValueWhereMarker": "2",
+    "pValue": 8.5088752408801E-214,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 5,
+    "y": 6,
+    "geneName": "KRT8",
+    "value": 327.4154,
+    "cellGroupValue": "6",
+    "cellGroupValueWhereMarker": "2",
+    "pValue": 8.5088752408801E-214,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 4,
+    "y": 6,
+    "geneName": "KRT8",
+    "value": 356.7531,
+    "cellGroupValue": "5",
+    "cellGroupValueWhereMarker": "2",
+    "pValue": 8.5088752408801E-214,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 3,
+    "y": 6,
+    "geneName": "KRT8",
+    "value": 240.41835,
+    "cellGroupValue": "4",
+    "cellGroupValueWhereMarker": "2",
+    "pValue": 8.5088752408801E-214,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 2,
+    "y": 6,
+    "geneName": "KRT8",
+    "value": 271.2582,
+    "cellGroupValue": "3",
+    "cellGroupValueWhereMarker": "2",
+    "pValue": 8.5088752408801E-214,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 1,
+    "y": 6,
+    "geneName": "KRT8",
+    "value": 3945.821,
+    "cellGroupValue": "2",
+    "cellGroupValueWhereMarker": "2",
+    "pValue": 8.5088752408801E-214,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 2,
+    "y": 7,
+    "geneName": "CFTR",
+    "value": 0.0,
+    "cellGroupValue": "3",
+    "cellGroupValueWhereMarker": "2",
+    "pValue": 4.61632789637763E-211,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 1,
+    "y": 7,
+    "geneName": "CFTR",
+    "value": 1102.3605,
+    "cellGroupValue": "2",
+    "cellGroupValueWhereMarker": "2",
+    "pValue": 4.61632789637763E-211,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 0,
+    "y": 7,
+    "geneName": "CFTR",
+    "value": 0.0,
+    "cellGroupValue": "1",
+    "cellGroupValueWhereMarker": "2",
+    "pValue": 4.61632789637763E-211,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 3,
+    "y": 7,
+    "geneName": "CFTR",
+    "value": 0.0,
+    "cellGroupValue": "4",
+    "cellGroupValueWhereMarker": "2",
+    "pValue": 4.61632789637763E-211,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 4,
+    "y": 7,
+    "geneName": "CFTR",
+    "value": 0.0,
+    "cellGroupValue": "5",
+    "cellGroupValueWhereMarker": "2",
+    "pValue": 4.61632789637763E-211,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 5,
+    "y": 7,
+    "geneName": "CFTR",
+    "value": 0.0,
+    "cellGroupValue": "6",
+    "cellGroupValueWhereMarker": "2",
+    "pValue": 4.61632789637763E-211,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 6,
+    "y": 7,
+    "geneName": "CFTR",
+    "value": 0.0,
+    "cellGroupValue": "7",
+    "cellGroupValueWhereMarker": "2",
+    "pValue": 4.61632789637763E-211,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 7,
+    "y": 7,
+    "geneName": "CFTR",
+    "value": 0.0,
+    "cellGroupValue": "8",
+    "cellGroupValueWhereMarker": "2",
+    "pValue": 4.61632789637763E-211,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 4,
+    "y": 8,
+    "geneName": "ANXA2",
+    "value": 73.21682,
+    "cellGroupValue": "5",
+    "cellGroupValueWhereMarker": "2",
+    "pValue": 1.99221988233008E-210,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 7,
+    "y": 8,
+    "geneName": "ANXA2",
+    "value": 157.97787,
+    "cellGroupValue": "8",
+    "cellGroupValueWhereMarker": "2",
+    "pValue": 1.99221988233008E-210,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 2,
+    "y": 8,
+    "geneName": "ANXA2",
+    "value": 49.852272,
+    "cellGroupValue": "3",
+    "cellGroupValueWhereMarker": "2",
+    "pValue": 1.99221988233008E-210,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 0,
+    "y": 8,
+    "geneName": "ANXA2",
+    "value": 153.42787,
+    "cellGroupValue": "1",
+    "cellGroupValueWhereMarker": "2",
+    "pValue": 1.99221988233008E-210,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 3,
+    "y": 8,
+    "geneName": "ANXA2",
+    "value": 258.43262,
+    "cellGroupValue": "4",
+    "cellGroupValueWhereMarker": "2",
+    "pValue": 1.99221988233008E-210,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 6,
+    "y": 8,
+    "geneName": "ANXA2",
+    "value": 456.06085,
+    "cellGroupValue": "7",
+    "cellGroupValueWhereMarker": "2",
+    "pValue": 1.99221988233008E-210,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 5,
+    "y": 8,
+    "geneName": "ANXA2",
+    "value": 141.12454,
+    "cellGroupValue": "6",
+    "cellGroupValueWhereMarker": "2",
+    "pValue": 1.99221988233008E-210,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 1,
+    "y": 8,
+    "geneName": "ANXA2",
+    "value": 3844.9185,
+    "cellGroupValue": "2",
+    "cellGroupValueWhereMarker": "2",
+    "pValue": 1.99221988233008E-210,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 0,
+    "y": 9,
+    "geneName": "HADH",
+    "value": 0.0,
+    "cellGroupValue": "1",
+    "cellGroupValueWhereMarker": "3",
+    "pValue": 1.96483439528192E-177,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 2,
+    "y": 9,
+    "geneName": "HADH",
+    "value": 815.0141,
+    "cellGroupValue": "3",
+    "cellGroupValueWhereMarker": "3",
+    "pValue": 1.96483439528192E-177,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 5,
+    "y": 9,
+    "geneName": "HADH",
+    "value": 1.160582,
+    "cellGroupValue": "6",
+    "cellGroupValueWhereMarker": "3",
+    "pValue": 1.96483439528192E-177,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 4,
+    "y": 9,
+    "geneName": "HADH",
+    "value": 6.7663817,
+    "cellGroupValue": "5",
+    "cellGroupValueWhereMarker": "3",
+    "pValue": 1.96483439528192E-177,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 6,
+    "y": 9,
+    "geneName": "HADH",
+    "value": 59.542465,
+    "cellGroupValue": "7",
+    "cellGroupValueWhereMarker": "3",
+    "pValue": 1.96483439528192E-177,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 3,
+    "y": 9,
+    "geneName": "HADH",
+    "value": 2.0116334,
+    "cellGroupValue": "4",
+    "cellGroupValueWhereMarker": "3",
+    "pValue": 1.96483439528192E-177,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 1,
+    "y": 9,
+    "geneName": "HADH",
+    "value": 73.74502,
+    "cellGroupValue": "2",
+    "cellGroupValueWhereMarker": "3",
+    "pValue": 1.96483439528192E-177,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 7,
+    "y": 9,
+    "geneName": "HADH",
+    "value": 1.3293984,
+    "cellGroupValue": "8",
+    "cellGroupValueWhereMarker": "3",
+    "pValue": 1.96483439528192E-177,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 2,
+    "y": 10,
+    "geneName": "PCSK1",
+    "value": 361.477,
+    "cellGroupValue": "3",
+    "cellGroupValueWhereMarker": "3",
+    "pValue": 3.04251474435244E-156,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 6,
+    "y": 10,
+    "geneName": "PCSK1",
+    "value": 0.0,
+    "cellGroupValue": "7",
+    "cellGroupValueWhereMarker": "3",
+    "pValue": 3.04251474435244E-156,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 4,
+    "y": 10,
+    "geneName": "PCSK1",
+    "value": 10.60802,
+    "cellGroupValue": "5",
+    "cellGroupValueWhereMarker": "3",
+    "pValue": 3.04251474435244E-156,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 5,
+    "y": 10,
+    "geneName": "PCSK1",
+    "value": 0.0,
+    "cellGroupValue": "6",
+    "cellGroupValueWhereMarker": "3",
+    "pValue": 3.04251474435244E-156,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 0,
+    "y": 10,
+    "geneName": "PCSK1",
+    "value": 0.0,
+    "cellGroupValue": "1",
+    "cellGroupValueWhereMarker": "3",
+    "pValue": 3.04251474435244E-156,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 3,
+    "y": 10,
+    "geneName": "PCSK1",
+    "value": 0.0,
+    "cellGroupValue": "4",
+    "cellGroupValueWhereMarker": "3",
+    "pValue": 3.04251474435244E-156,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 7,
+    "y": 10,
+    "geneName": "PCSK1",
+    "value": 0.0,
+    "cellGroupValue": "8",
+    "cellGroupValueWhereMarker": "3",
+    "pValue": 3.04251474435244E-156,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 1,
+    "y": 10,
+    "geneName": "PCSK1",
+    "value": 0.0,
+    "cellGroupValue": "2",
+    "cellGroupValueWhereMarker": "3",
+    "pValue": 3.04251474435244E-156,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 7,
+    "y": 11,
+    "geneName": "NPTX2",
+    "value": 0.0,
+    "cellGroupValue": "8",
+    "cellGroupValueWhereMarker": "3",
+    "pValue": 1.19629214591574E-137,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 5,
+    "y": 11,
+    "geneName": "NPTX2",
+    "value": 0.0,
+    "cellGroupValue": "6",
+    "cellGroupValueWhereMarker": "3",
+    "pValue": 1.19629214591574E-137,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 4,
+    "y": 11,
+    "geneName": "NPTX2",
+    "value": 0.0,
+    "cellGroupValue": "5",
+    "cellGroupValueWhereMarker": "3",
+    "pValue": 1.19629214591574E-137,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 1,
+    "y": 11,
+    "geneName": "NPTX2",
+    "value": 0.0,
+    "cellGroupValue": "2",
+    "cellGroupValueWhereMarker": "3",
+    "pValue": 1.19629214591574E-137,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 6,
+    "y": 11,
+    "geneName": "NPTX2",
+    "value": 0.5023104,
+    "cellGroupValue": "7",
+    "cellGroupValueWhereMarker": "3",
+    "pValue": 1.19629214591574E-137,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 3,
+    "y": 11,
+    "geneName": "NPTX2",
+    "value": 0.0,
+    "cellGroupValue": "4",
+    "cellGroupValueWhereMarker": "3",
+    "pValue": 1.19629214591574E-137,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 0,
+    "y": 11,
+    "geneName": "NPTX2",
+    "value": 0.0,
+    "cellGroupValue": "1",
+    "cellGroupValueWhereMarker": "3",
+    "pValue": 1.19629214591574E-137,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 2,
+    "y": 11,
+    "geneName": "NPTX2",
+    "value": 306.7501,
+    "cellGroupValue": "3",
+    "cellGroupValueWhereMarker": "3",
+    "pValue": 1.19629214591574E-137,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 1,
+    "y": 12,
+    "geneName": "CASR",
+    "value": 2.6174703,
+    "cellGroupValue": "2",
+    "cellGroupValueWhereMarker": "3",
+    "pValue": 1.16946964013787E-121,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 2,
+    "y": 12,
+    "geneName": "CASR",
+    "value": 180.18205,
+    "cellGroupValue": "3",
+    "cellGroupValueWhereMarker": "3",
+    "pValue": 1.16946964013787E-121,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 5,
+    "y": 12,
+    "geneName": "CASR",
+    "value": 0.0,
+    "cellGroupValue": "6",
+    "cellGroupValueWhereMarker": "3",
+    "pValue": 1.16946964013787E-121,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 3,
+    "y": 12,
+    "geneName": "CASR",
+    "value": 0.0,
+    "cellGroupValue": "4",
+    "cellGroupValueWhereMarker": "3",
+    "pValue": 1.16946964013787E-121,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 4,
+    "y": 12,
+    "geneName": "CASR",
+    "value": 3.0004818,
+    "cellGroupValue": "5",
+    "cellGroupValueWhereMarker": "3",
+    "pValue": 1.16946964013787E-121,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 6,
+    "y": 12,
+    "geneName": "CASR",
+    "value": 0.0,
+    "cellGroupValue": "7",
+    "cellGroupValueWhereMarker": "3",
+    "pValue": 1.16946964013787E-121,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 0,
+    "y": 12,
+    "geneName": "CASR",
+    "value": 0.0,
+    "cellGroupValue": "1",
+    "cellGroupValueWhereMarker": "3",
+    "pValue": 1.16946964013787E-121,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 7,
+    "y": 12,
+    "geneName": "CASR",
+    "value": 0.0,
+    "cellGroupValue": "8",
+    "cellGroupValueWhereMarker": "3",
+    "pValue": 1.16946964013787E-121,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 2,
+    "y": 13,
+    "geneName": "INS",
+    "value": 52837.773,
+    "cellGroupValue": "3",
+    "cellGroupValueWhereMarker": "3",
+    "pValue": 1.3336182098771E-119,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 4,
+    "y": 13,
+    "geneName": "INS",
+    "value": 28.559525,
+    "cellGroupValue": "5",
+    "cellGroupValueWhereMarker": "3",
+    "pValue": 1.3336182098771E-119,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 1,
+    "y": 13,
+    "geneName": "INS",
+    "value": 8.250144,
+    "cellGroupValue": "2",
+    "cellGroupValueWhereMarker": "3",
+    "pValue": 1.3336182098771E-119,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 3,
+    "y": 13,
+    "geneName": "INS",
+    "value": 39.30875,
+    "cellGroupValue": "4",
+    "cellGroupValueWhereMarker": "3",
+    "pValue": 1.3336182098771E-119,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 5,
+    "y": 13,
+    "geneName": "INS",
+    "value": 96.82417,
+    "cellGroupValue": "6",
+    "cellGroupValueWhereMarker": "3",
+    "pValue": 1.3336182098771E-119,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 7,
+    "y": 13,
+    "geneName": "INS",
+    "value": 13.706094,
+    "cellGroupValue": "8",
+    "cellGroupValueWhereMarker": "3",
+    "pValue": 1.3336182098771E-119,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 6,
+    "y": 13,
+    "geneName": "INS",
+    "value": 16.073294,
+    "cellGroupValue": "7",
+    "cellGroupValueWhereMarker": "3",
+    "pValue": 1.3336182098771E-119,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 0,
+    "y": 13,
+    "geneName": "INS",
+    "value": 1761.5972,
+    "cellGroupValue": "1",
+    "cellGroupValueWhereMarker": "3",
+    "pValue": 1.3336182098771E-119,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 7,
+    "y": 13,
+    "geneName": "INS",
+    "value": 13.706094,
+    "cellGroupValue": "8",
+    "cellGroupValueWhereMarker": "3",
+    "pValue": 1.3336182098771E-119,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 4,
+    "y": 13,
+    "geneName": "INS",
+    "value": 28.559525,
+    "cellGroupValue": "5",
+    "cellGroupValueWhereMarker": "3",
+    "pValue": 1.3336182098771E-119,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 1,
+    "y": 13,
+    "geneName": "INS",
+    "value": 8.250144,
+    "cellGroupValue": "2",
+    "cellGroupValueWhereMarker": "3",
+    "pValue": 1.3336182098771E-119,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 5,
+    "y": 13,
+    "geneName": "INS",
+    "value": 96.82417,
+    "cellGroupValue": "6",
+    "cellGroupValueWhereMarker": "3",
+    "pValue": 1.3336182098771E-119,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 3,
+    "y": 13,
+    "geneName": "INS",
+    "value": 39.30875,
+    "cellGroupValue": "4",
+    "cellGroupValueWhereMarker": "3",
+    "pValue": 1.3336182098771E-119,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 0,
+    "y": 13,
+    "geneName": "INS",
+    "value": 1761.5972,
+    "cellGroupValue": "1",
+    "cellGroupValueWhereMarker": "3",
+    "pValue": 1.3336182098771E-119,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 6,
+    "y": 13,
+    "geneName": "INS",
+    "value": 16.073294,
+    "cellGroupValue": "7",
+    "cellGroupValueWhereMarker": "3",
+    "pValue": 1.3336182098771E-119,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 2,
+    "y": 13,
+    "geneName": "INS",
+    "value": 52837.773,
+    "cellGroupValue": "3",
+    "cellGroupValueWhereMarker": "3",
+    "pValue": 1.3336182098771E-119,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 0,
+    "y": 14,
+    "geneName": "TM4SF4",
+    "value": 117.85504,
+    "cellGroupValue": "1",
+    "cellGroupValueWhereMarker": "4",
+    "pValue": 4.26159651552812E-117,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 1,
+    "y": 14,
+    "geneName": "TM4SF4",
+    "value": 79.26785,
+    "cellGroupValue": "2",
+    "cellGroupValueWhereMarker": "4",
+    "pValue": 4.26159651552812E-117,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 4,
+    "y": 14,
+    "geneName": "TM4SF4",
+    "value": 2990.0315,
+    "cellGroupValue": "5",
+    "cellGroupValueWhereMarker": "4",
+    "pValue": 4.26159651552812E-117,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 5,
+    "y": 14,
+    "geneName": "TM4SF4",
+    "value": 2387.7937,
+    "cellGroupValue": "6",
+    "cellGroupValueWhereMarker": "4",
+    "pValue": 4.26159651552812E-117,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 2,
+    "y": 14,
+    "geneName": "TM4SF4",
+    "value": 9.826534,
+    "cellGroupValue": "3",
+    "cellGroupValueWhereMarker": "4",
+    "pValue": 4.26159651552812E-117,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 6,
+    "y": 14,
+    "geneName": "TM4SF4",
+    "value": 2.5766587,
+    "cellGroupValue": "7",
+    "cellGroupValueWhereMarker": "4",
+    "pValue": 4.26159651552812E-117,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 3,
+    "y": 14,
+    "geneName": "TM4SF4",
+    "value": 4219.022,
+    "cellGroupValue": "4",
+    "cellGroupValueWhereMarker": "4",
+    "pValue": 4.26159651552812E-117,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 7,
+    "y": 14,
+    "geneName": "TM4SF4",
+    "value": 2505.0767,
+    "cellGroupValue": "8",
+    "cellGroupValueWhereMarker": "4",
+    "pValue": 4.26159651552812E-117,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 2,
+    "y": 15,
+    "geneName": "GC",
+    "value": 0.0,
+    "cellGroupValue": "3",
+    "cellGroupValueWhereMarker": "4",
+    "pValue": 8.38818925584839E-98,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 7,
+    "y": 15,
+    "geneName": "GC",
+    "value": 1287.2107,
+    "cellGroupValue": "8",
+    "cellGroupValueWhereMarker": "4",
+    "pValue": 8.38818925584839E-98,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 0,
+    "y": 15,
+    "geneName": "GC",
+    "value": 1.9806256,
+    "cellGroupValue": "1",
+    "cellGroupValueWhereMarker": "4",
+    "pValue": 8.38818925584839E-98,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 3,
+    "y": 15,
+    "geneName": "GC",
+    "value": 1294.8733,
+    "cellGroupValue": "4",
+    "cellGroupValueWhereMarker": "4",
+    "pValue": 8.38818925584839E-98,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 1,
+    "y": 15,
+    "geneName": "GC",
+    "value": 22.833883,
+    "cellGroupValue": "2",
+    "cellGroupValueWhereMarker": "4",
+    "pValue": 8.38818925584839E-98,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 6,
+    "y": 15,
+    "geneName": "GC",
+    "value": 2.319973,
+    "cellGroupValue": "7",
+    "cellGroupValueWhereMarker": "4",
+    "pValue": 8.38818925584839E-98,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 5,
+    "y": 15,
+    "geneName": "GC",
+    "value": 820.88104,
+    "cellGroupValue": "6",
+    "cellGroupValueWhereMarker": "4",
+    "pValue": 8.38818925584839E-98,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 4,
+    "y": 15,
+    "geneName": "GC",
+    "value": 638.6659,
+    "cellGroupValue": "5",
+    "cellGroupValueWhereMarker": "4",
+    "pValue": 8.38818925584839E-98,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 7,
+    "y": 16,
+    "geneName": "GCG",
+    "value": 138280.06,
+    "cellGroupValue": "8",
+    "cellGroupValueWhereMarker": "4",
+    "pValue": 6.9682028714606E-91,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 5,
+    "y": 16,
+    "geneName": "GCG",
+    "value": 115020.83,
+    "cellGroupValue": "6",
+    "cellGroupValueWhereMarker": "4",
+    "pValue": 6.9682028714606E-91,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 3,
+    "y": 16,
+    "geneName": "GCG",
+    "value": 126553.19,
+    "cellGroupValue": "4",
+    "cellGroupValueWhereMarker": "4",
+    "pValue": 6.9682028714606E-91,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 2,
+    "y": 16,
+    "geneName": "GCG",
+    "value": 105.08429,
+    "cellGroupValue": "3",
+    "cellGroupValueWhereMarker": "4",
+    "pValue": 6.9682028714606E-91,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 6,
+    "y": 16,
+    "geneName": "GCG",
+    "value": 47.832394,
+    "cellGroupValue": "7",
+    "cellGroupValueWhereMarker": "4",
+    "pValue": 6.9682028714606E-91,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 1,
+    "y": 16,
+    "geneName": "GCG",
+    "value": 58.031055,
+    "cellGroupValue": "2",
+    "cellGroupValueWhereMarker": "4",
+    "pValue": 6.9682028714606E-91,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 0,
+    "y": 16,
+    "geneName": "GCG",
+    "value": 11306.531,
+    "cellGroupValue": "1",
+    "cellGroupValueWhereMarker": "4",
+    "pValue": 6.9682028714606E-91,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 4,
+    "y": 16,
+    "geneName": "GCG",
+    "value": 409.32294,
+    "cellGroupValue": "5",
+    "cellGroupValueWhereMarker": "4",
+    "pValue": 6.9682028714606E-91,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 2,
+    "y": 17,
+    "geneName": "CHGB",
+    "value": 2076.034,
+    "cellGroupValue": "3",
+    "cellGroupValueWhereMarker": "4",
+    "pValue": 3.63292592948882E-89,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 1,
+    "y": 17,
+    "geneName": "CHGB",
+    "value": 5.301524,
+    "cellGroupValue": "2",
+    "cellGroupValueWhereMarker": "4",
+    "pValue": 3.63292592948882E-89,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 5,
+    "y": 17,
+    "geneName": "CHGB",
+    "value": 9030.326,
+    "cellGroupValue": "6",
+    "cellGroupValueWhereMarker": "4",
+    "pValue": 3.63292592948882E-89,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 4,
+    "y": 17,
+    "geneName": "CHGB",
+    "value": 7215.652,
+    "cellGroupValue": "5",
+    "cellGroupValueWhereMarker": "4",
+    "pValue": 3.63292592948882E-89,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 7,
+    "y": 17,
+    "geneName": "CHGB",
+    "value": 8861.329,
+    "cellGroupValue": "8",
+    "cellGroupValueWhereMarker": "4",
+    "pValue": 3.63292592948882E-89,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 0,
+    "y": 17,
+    "geneName": "CHGB",
+    "value": 1967.3479,
+    "cellGroupValue": "1",
+    "cellGroupValueWhereMarker": "4",
+    "pValue": 3.63292592948882E-89,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 6,
+    "y": 17,
+    "geneName": "CHGB",
+    "value": 6.372146,
+    "cellGroupValue": "7",
+    "cellGroupValueWhereMarker": "4",
+    "pValue": 3.63292592948882E-89,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 3,
+    "y": 17,
+    "geneName": "CHGB",
+    "value": 10133.951,
+    "cellGroupValue": "4",
+    "cellGroupValueWhereMarker": "4",
+    "pValue": 3.63292592948882E-89,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 2,
+    "y": 18,
+    "geneName": "ALDH1A1",
+    "value": 407.80045,
+    "cellGroupValue": "3",
+    "cellGroupValueWhereMarker": "4",
+    "pValue": 3.18322833455735E-87,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 0,
+    "y": 18,
+    "geneName": "ALDH1A1",
+    "value": 164.25757,
+    "cellGroupValue": "1",
+    "cellGroupValueWhereMarker": "4",
+    "pValue": 3.18322833455735E-87,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 5,
+    "y": 18,
+    "geneName": "ALDH1A1",
+    "value": 1260.0598,
+    "cellGroupValue": "6",
+    "cellGroupValueWhereMarker": "4",
+    "pValue": 3.18322833455735E-87,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 3,
+    "y": 18,
+    "geneName": "ALDH1A1",
+    "value": 2000.9481,
+    "cellGroupValue": "4",
+    "cellGroupValueWhereMarker": "4",
+    "pValue": 3.18322833455735E-87,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 6,
+    "y": 18,
+    "geneName": "ALDH1A1",
+    "value": 280.14948,
+    "cellGroupValue": "7",
+    "cellGroupValueWhereMarker": "4",
+    "pValue": 3.18322833455735E-87,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 7,
+    "y": 18,
+    "geneName": "ALDH1A1",
+    "value": 2746.4832,
+    "cellGroupValue": "8",
+    "cellGroupValueWhereMarker": "4",
+    "pValue": 3.18322833455735E-87,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 4,
+    "y": 18,
+    "geneName": "ALDH1A1",
+    "value": 1590.7047,
+    "cellGroupValue": "5",
+    "cellGroupValueWhereMarker": "4",
+    "pValue": 3.18322833455735E-87,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 1,
+    "y": 18,
+    "geneName": "ALDH1A1",
+    "value": 187.16734,
+    "cellGroupValue": "2",
+    "cellGroupValueWhereMarker": "4",
+    "pValue": 3.18322833455735E-87,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 6,
+    "y": 19,
+    "geneName": "PPY",
+    "value": 6.211582,
+    "cellGroupValue": "7",
+    "cellGroupValueWhereMarker": "5",
+    "pValue": 3.05008326769227E-101,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 1,
+    "y": 19,
+    "geneName": "PPY",
+    "value": 0.0,
+    "cellGroupValue": "2",
+    "cellGroupValueWhereMarker": "5",
+    "pValue": 3.05008326769227E-101,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 0,
+    "y": 19,
+    "geneName": "PPY",
+    "value": 170.1268,
+    "cellGroupValue": "1",
+    "cellGroupValueWhereMarker": "5",
+    "pValue": 3.05008326769227E-101,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 2,
+    "y": 19,
+    "geneName": "PPY",
+    "value": 7.311973,
+    "cellGroupValue": "3",
+    "cellGroupValueWhereMarker": "5",
+    "pValue": 3.05008326769227E-101,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 4,
+    "y": 19,
+    "geneName": "PPY",
+    "value": 16931.111,
+    "cellGroupValue": "5",
+    "cellGroupValueWhereMarker": "5",
+    "pValue": 3.05008326769227E-101,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 5,
+    "y": 19,
+    "geneName": "PPY",
+    "value": 0.0,
+    "cellGroupValue": "6",
+    "cellGroupValueWhereMarker": "5",
+    "pValue": 3.05008326769227E-101,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 7,
+    "y": 19,
+    "geneName": "PPY",
+    "value": 3.7356365,
+    "cellGroupValue": "8",
+    "cellGroupValueWhereMarker": "5",
+    "pValue": 3.05008326769227E-101,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 3,
+    "y": 19,
+    "geneName": "PPY",
+    "value": 16.659523,
+    "cellGroupValue": "4",
+    "cellGroupValueWhereMarker": "5",
+    "pValue": 3.05008326769227E-101,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 7,
+    "y": 20,
+    "geneName": "OPHN1",
+    "value": 76.76453,
+    "cellGroupValue": "8",
+    "cellGroupValueWhereMarker": "5",
+    "pValue": 3.09773694067105E-93,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 1,
+    "y": 20,
+    "geneName": "OPHN1",
+    "value": 22.834574,
+    "cellGroupValue": "2",
+    "cellGroupValueWhereMarker": "5",
+    "pValue": 3.09773694067105E-93,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 2,
+    "y": 20,
+    "geneName": "OPHN1",
+    "value": 25.034101,
+    "cellGroupValue": "3",
+    "cellGroupValueWhereMarker": "5",
+    "pValue": 3.09773694067105E-93,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 3,
+    "y": 20,
+    "geneName": "OPHN1",
+    "value": 65.79653,
+    "cellGroupValue": "4",
+    "cellGroupValueWhereMarker": "5",
+    "pValue": 3.09773694067105E-93,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 4,
+    "y": 20,
+    "geneName": "OPHN1",
+    "value": 162.89752,
+    "cellGroupValue": "5",
+    "cellGroupValueWhereMarker": "5",
+    "pValue": 3.09773694067105E-93,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 5,
+    "y": 20,
+    "geneName": "OPHN1",
+    "value": 34.087284,
+    "cellGroupValue": "6",
+    "cellGroupValueWhereMarker": "5",
+    "pValue": 3.09773694067105E-93,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 6,
+    "y": 20,
+    "geneName": "OPHN1",
+    "value": 23.442675,
+    "cellGroupValue": "7",
+    "cellGroupValueWhereMarker": "5",
+    "pValue": 3.09773694067105E-93,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 0,
+    "y": 20,
+    "geneName": "OPHN1",
+    "value": 0.0,
+    "cellGroupValue": "1",
+    "cellGroupValueWhereMarker": "5",
+    "pValue": 3.09773694067105E-93,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 6,
+    "y": 21,
+    "geneName": "KCNH6",
+    "value": 0.0,
+    "cellGroupValue": "7",
+    "cellGroupValueWhereMarker": "5",
+    "pValue": 1.70953661098837E-89,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 4,
+    "y": 21,
+    "geneName": "KCNH6",
+    "value": 95.954025,
+    "cellGroupValue": "5",
+    "cellGroupValueWhereMarker": "5",
+    "pValue": 1.70953661098837E-89,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 1,
+    "y": 21,
+    "geneName": "KCNH6",
+    "value": 0.0,
+    "cellGroupValue": "2",
+    "cellGroupValueWhereMarker": "5",
+    "pValue": 1.70953661098837E-89,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 5,
+    "y": 21,
+    "geneName": "KCNH6",
+    "value": 58.37951,
+    "cellGroupValue": "6",
+    "cellGroupValueWhereMarker": "5",
+    "pValue": 1.70953661098837E-89,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 7,
+    "y": 21,
+    "geneName": "KCNH6",
+    "value": 38.169235,
+    "cellGroupValue": "8",
+    "cellGroupValueWhereMarker": "5",
+    "pValue": 1.70953661098837E-89,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 2,
+    "y": 21,
+    "geneName": "KCNH6",
+    "value": 0.0,
+    "cellGroupValue": "3",
+    "cellGroupValueWhereMarker": "5",
+    "pValue": 1.70953661098837E-89,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 0,
+    "y": 21,
+    "geneName": "KCNH6",
+    "value": 0.0,
+    "cellGroupValue": "1",
+    "cellGroupValueWhereMarker": "5",
+    "pValue": 1.70953661098837E-89,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 3,
+    "y": 21,
+    "geneName": "KCNH6",
+    "value": 26.459064,
+    "cellGroupValue": "4",
+    "cellGroupValueWhereMarker": "5",
+    "pValue": 1.70953661098837E-89,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 7,
+    "y": 22,
+    "geneName": "CEP126",
+    "value": 95.26831,
+    "cellGroupValue": "8",
+    "cellGroupValueWhereMarker": "5",
+    "pValue": 2.06812579483227E-88,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 1,
+    "y": 22,
+    "geneName": "CEP126",
+    "value": 0.0,
+    "cellGroupValue": "2",
+    "cellGroupValueWhereMarker": "5",
+    "pValue": 2.06812579483227E-88,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 6,
+    "y": 22,
+    "geneName": "CEP126",
+    "value": 0.0,
+    "cellGroupValue": "7",
+    "cellGroupValueWhereMarker": "5",
+    "pValue": 2.06812579483227E-88,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 3,
+    "y": 22,
+    "geneName": "CEP126",
+    "value": 58.686546,
+    "cellGroupValue": "4",
+    "cellGroupValueWhereMarker": "5",
+    "pValue": 2.06812579483227E-88,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 4,
+    "y": 22,
+    "geneName": "CEP126",
+    "value": 141.23976,
+    "cellGroupValue": "5",
+    "cellGroupValueWhereMarker": "5",
+    "pValue": 2.06812579483227E-88,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 5,
+    "y": 22,
+    "geneName": "CEP126",
+    "value": 75.01283,
+    "cellGroupValue": "6",
+    "cellGroupValueWhereMarker": "5",
+    "pValue": 2.06812579483227E-88,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 2,
+    "y": 22,
+    "geneName": "CEP126",
+    "value": 7.85262,
+    "cellGroupValue": "3",
+    "cellGroupValueWhereMarker": "5",
+    "pValue": 2.06812579483227E-88,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 0,
+    "y": 22,
+    "geneName": "CEP126",
+    "value": 0.0,
+    "cellGroupValue": "1",
+    "cellGroupValueWhereMarker": "5",
+    "pValue": 2.06812579483227E-88,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 5,
+    "y": 23,
+    "geneName": "MORC4",
+    "value": 37.40707,
+    "cellGroupValue": "6",
+    "cellGroupValueWhereMarker": "5",
+    "pValue": 2.01997668317656E-85,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 6,
+    "y": 23,
+    "geneName": "MORC4",
+    "value": 41.21172,
+    "cellGroupValue": "7",
+    "cellGroupValueWhereMarker": "5",
+    "pValue": 2.01997668317656E-85,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 0,
+    "y": 23,
+    "geneName": "MORC4",
+    "value": 0.0,
+    "cellGroupValue": "1",
+    "cellGroupValueWhereMarker": "5",
+    "pValue": 2.01997668317656E-85,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 3,
+    "y": 23,
+    "geneName": "MORC4",
+    "value": 83.59787,
+    "cellGroupValue": "4",
+    "cellGroupValueWhereMarker": "5",
+    "pValue": 2.01997668317656E-85,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 2,
+    "y": 23,
+    "geneName": "MORC4",
+    "value": 35.831764,
+    "cellGroupValue": "3",
+    "cellGroupValueWhereMarker": "5",
+    "pValue": 2.01997668317656E-85,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 1,
+    "y": 23,
+    "geneName": "MORC4",
+    "value": 38.923893,
+    "cellGroupValue": "2",
+    "cellGroupValueWhereMarker": "5",
+    "pValue": 2.01997668317656E-85,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 7,
+    "y": 23,
+    "geneName": "MORC4",
+    "value": 167.26897,
+    "cellGroupValue": "8",
+    "cellGroupValueWhereMarker": "5",
+    "pValue": 2.01997668317656E-85,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 4,
+    "y": 23,
+    "geneName": "MORC4",
+    "value": 185.08826,
+    "cellGroupValue": "5",
+    "cellGroupValueWhereMarker": "5",
+    "pValue": 2.01997668317656E-85,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 0,
+    "y": 24,
+    "geneName": "RNASEK-C17orf49",
+    "value": 0.0,
+    "cellGroupValue": "1",
+    "cellGroupValueWhereMarker": "6",
+    "pValue": 6.50702254571818E-130,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 7,
+    "y": 24,
+    "geneName": "RNASEK-C17orf49",
+    "value": 72.83113,
+    "cellGroupValue": "8",
+    "cellGroupValueWhereMarker": "6",
+    "pValue": 6.50702254571818E-130,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 1,
+    "y": 24,
+    "geneName": "RNASEK-C17orf49",
+    "value": 56.54234,
+    "cellGroupValue": "2",
+    "cellGroupValueWhereMarker": "6",
+    "pValue": 6.50702254571818E-130,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 2,
+    "y": 24,
+    "geneName": "RNASEK-C17orf49",
+    "value": 73.70088,
+    "cellGroupValue": "3",
+    "cellGroupValueWhereMarker": "6",
+    "pValue": 6.50702254571818E-130,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 6,
+    "y": 24,
+    "geneName": "RNASEK-C17orf49",
+    "value": 59.45304,
+    "cellGroupValue": "7",
+    "cellGroupValueWhereMarker": "6",
+    "pValue": 6.50702254571818E-130,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 3,
+    "y": 24,
+    "geneName": "RNASEK-C17orf49",
+    "value": 178.22371,
+    "cellGroupValue": "4",
+    "cellGroupValueWhereMarker": "6",
+    "pValue": 6.50702254571818E-130,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 5,
+    "y": 24,
+    "geneName": "RNASEK-C17orf49",
+    "value": 602.28467,
+    "cellGroupValue": "6",
+    "cellGroupValueWhereMarker": "6",
+    "pValue": 6.50702254571818E-130,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 4,
+    "y": 24,
+    "geneName": "RNASEK-C17orf49",
+    "value": 166.07556,
+    "cellGroupValue": "5",
+    "cellGroupValueWhereMarker": "6",
+    "pValue": 6.50702254571818E-130,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 1,
+    "y": 25,
+    "geneName": "ENSG00000227715",
+    "value": 211.48784,
+    "cellGroupValue": "2",
+    "cellGroupValueWhereMarker": "6",
+    "pValue": 2.93416947517726E-121,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 7,
+    "y": 25,
+    "geneName": "ENSG00000227715",
+    "value": 16.068363,
+    "cellGroupValue": "8",
+    "cellGroupValueWhereMarker": "6",
+    "pValue": 2.93416947517726E-121,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 6,
+    "y": 25,
+    "geneName": "ENSG00000227715",
+    "value": 0.0,
+    "cellGroupValue": "7",
+    "cellGroupValueWhereMarker": "6",
+    "pValue": 2.93416947517726E-121,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 0,
+    "y": 25,
+    "geneName": "ENSG00000227715",
+    "value": 0.0,
+    "cellGroupValue": "1",
+    "cellGroupValueWhereMarker": "6",
+    "pValue": 2.93416947517726E-121,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 5,
+    "y": 25,
+    "geneName": "ENSG00000227715",
+    "value": 1923.4403,
+    "cellGroupValue": "6",
+    "cellGroupValueWhereMarker": "6",
+    "pValue": 2.93416947517726E-121,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 4,
+    "y": 25,
+    "geneName": "ENSG00000227715",
+    "value": 301.4881,
+    "cellGroupValue": "5",
+    "cellGroupValueWhereMarker": "6",
+    "pValue": 2.93416947517726E-121,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 3,
+    "y": 25,
+    "geneName": "ENSG00000227715",
+    "value": 248.5502,
+    "cellGroupValue": "4",
+    "cellGroupValueWhereMarker": "6",
+    "pValue": 2.93416947517726E-121,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 2,
+    "y": 25,
+    "geneName": "ENSG00000227715",
+    "value": 2.7265885,
+    "cellGroupValue": "3",
+    "cellGroupValueWhereMarker": "6",
+    "pValue": 2.93416947517726E-121,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 6,
+    "y": 26,
+    "geneName": "RNASEK",
+    "value": 210.36356,
+    "cellGroupValue": "7",
+    "cellGroupValueWhereMarker": "6",
+    "pValue": 1.24227334563804E-120,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 3,
+    "y": 26,
+    "geneName": "RNASEK",
+    "value": 690.5923,
+    "cellGroupValue": "4",
+    "cellGroupValueWhereMarker": "6",
+    "pValue": 1.24227334563804E-120,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 1,
+    "y": 26,
+    "geneName": "RNASEK",
+    "value": 290.43546,
+    "cellGroupValue": "2",
+    "cellGroupValueWhereMarker": "6",
+    "pValue": 1.24227334563804E-120,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 0,
+    "y": 26,
+    "geneName": "RNASEK",
+    "value": 164.71075,
+    "cellGroupValue": "1",
+    "cellGroupValueWhereMarker": "6",
+    "pValue": 1.24227334563804E-120,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 7,
+    "y": 26,
+    "geneName": "RNASEK",
+    "value": 699.5771,
+    "cellGroupValue": "8",
+    "cellGroupValueWhereMarker": "6",
+    "pValue": 1.24227334563804E-120,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 2,
+    "y": 26,
+    "geneName": "RNASEK",
+    "value": 359.26895,
+    "cellGroupValue": "3",
+    "cellGroupValueWhereMarker": "6",
+    "pValue": 1.24227334563804E-120,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 5,
+    "y": 26,
+    "geneName": "RNASEK",
+    "value": 1605.5641,
+    "cellGroupValue": "6",
+    "cellGroupValueWhereMarker": "6",
+    "pValue": 1.24227334563804E-120,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 4,
+    "y": 26,
+    "geneName": "RNASEK",
+    "value": 629.2706,
+    "cellGroupValue": "5",
+    "cellGroupValueWhereMarker": "6",
+    "pValue": 1.24227334563804E-120,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 4,
+    "y": 27,
+    "geneName": "ENSG00000235657",
+    "value": 31.72313,
+    "cellGroupValue": "5",
+    "cellGroupValueWhereMarker": "6",
+    "pValue": 5.14588840814872E-117,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 5,
+    "y": 27,
+    "geneName": "ENSG00000235657",
+    "value": 1318.2136,
+    "cellGroupValue": "6",
+    "cellGroupValueWhereMarker": "6",
+    "pValue": 5.14588840814872E-117,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 3,
+    "y": 27,
+    "geneName": "ENSG00000235657",
+    "value": 0.011854286,
+    "cellGroupValue": "4",
+    "cellGroupValueWhereMarker": "6",
+    "pValue": 5.14588840814872E-117,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 2,
+    "y": 27,
+    "geneName": "ENSG00000235657",
+    "value": 0.0,
+    "cellGroupValue": "3",
+    "cellGroupValueWhereMarker": "6",
+    "pValue": 5.14588840814872E-117,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 6,
+    "y": 27,
+    "geneName": "ENSG00000235657",
+    "value": 0.0,
+    "cellGroupValue": "7",
+    "cellGroupValueWhereMarker": "6",
+    "pValue": 5.14588840814872E-117,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 0,
+    "y": 27,
+    "geneName": "ENSG00000235657",
+    "value": 0.0,
+    "cellGroupValue": "1",
+    "cellGroupValueWhereMarker": "6",
+    "pValue": 5.14588840814872E-117,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 7,
+    "y": 27,
+    "geneName": "ENSG00000235657",
+    "value": 0.0,
+    "cellGroupValue": "8",
+    "cellGroupValueWhereMarker": "6",
+    "pValue": 5.14588840814872E-117,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 1,
+    "y": 27,
+    "geneName": "ENSG00000235657",
+    "value": 29.388031,
+    "cellGroupValue": "2",
+    "cellGroupValueWhereMarker": "6",
+    "pValue": 5.14588840814872E-117,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 1,
+    "y": 28,
+    "geneName": "MZT2B",
+    "value": 26.515274,
+    "cellGroupValue": "2",
+    "cellGroupValueWhereMarker": "6",
+    "pValue": 3.96198581855559E-115,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 2,
+    "y": 28,
+    "geneName": "MZT2B",
+    "value": 25.93569,
+    "cellGroupValue": "3",
+    "cellGroupValueWhereMarker": "6",
+    "pValue": 3.96198581855559E-115,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 7,
+    "y": 28,
+    "geneName": "MZT2B",
+    "value": 35.659637,
+    "cellGroupValue": "8",
+    "cellGroupValueWhereMarker": "6",
+    "pValue": 3.96198581855559E-115,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 6,
+    "y": 28,
+    "geneName": "MZT2B",
+    "value": 76.14014,
+    "cellGroupValue": "7",
+    "cellGroupValueWhereMarker": "6",
+    "pValue": 3.96198581855559E-115,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 0,
+    "y": 28,
+    "geneName": "MZT2B",
+    "value": 0.0,
+    "cellGroupValue": "1",
+    "cellGroupValueWhereMarker": "6",
+    "pValue": 3.96198581855559E-115,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 3,
+    "y": 28,
+    "geneName": "MZT2B",
+    "value": 38.58782,
+    "cellGroupValue": "4",
+    "cellGroupValueWhereMarker": "6",
+    "pValue": 3.96198581855559E-115,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 5,
+    "y": 28,
+    "geneName": "MZT2B",
+    "value": 271.2626,
+    "cellGroupValue": "6",
+    "cellGroupValueWhereMarker": "6",
+    "pValue": 3.96198581855559E-115,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 4,
+    "y": 28,
+    "geneName": "MZT2B",
+    "value": 54.148136,
+    "cellGroupValue": "5",
+    "cellGroupValueWhereMarker": "6",
+    "pValue": 3.96198581855559E-115,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 6,
+    "y": 29,
+    "geneName": "PRSS2",
+    "value": 10282.195,
+    "cellGroupValue": "7",
+    "cellGroupValueWhereMarker": "7",
+    "pValue": 1.14340000368378E-109,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 2,
+    "y": 29,
+    "geneName": "PRSS2",
+    "value": 0.0,
+    "cellGroupValue": "3",
+    "cellGroupValueWhereMarker": "7",
+    "pValue": 1.14340000368378E-109,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 0,
+    "y": 29,
+    "geneName": "PRSS2",
+    "value": 0.0,
+    "cellGroupValue": "1",
+    "cellGroupValueWhereMarker": "7",
+    "pValue": 1.14340000368378E-109,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 1,
+    "y": 29,
+    "geneName": "PRSS2",
+    "value": 0.0,
+    "cellGroupValue": "2",
+    "cellGroupValueWhereMarker": "7",
+    "pValue": 1.14340000368378E-109,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 3,
+    "y": 29,
+    "geneName": "PRSS2",
+    "value": 0.0,
+    "cellGroupValue": "4",
+    "cellGroupValueWhereMarker": "7",
+    "pValue": 1.14340000368378E-109,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 5,
+    "y": 29,
+    "geneName": "PRSS2",
+    "value": 0.0,
+    "cellGroupValue": "6",
+    "cellGroupValueWhereMarker": "7",
+    "pValue": 1.14340000368378E-109,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 7,
+    "y": 29,
+    "geneName": "PRSS2",
+    "value": 0.0,
+    "cellGroupValue": "8",
+    "cellGroupValueWhereMarker": "7",
+    "pValue": 1.14340000368378E-109,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 4,
+    "y": 29,
+    "geneName": "PRSS2",
+    "value": 0.0,
+    "cellGroupValue": "5",
+    "cellGroupValueWhereMarker": "7",
+    "pValue": 1.14340000368378E-109,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 7,
+    "y": 30,
+    "geneName": "REG1A",
+    "value": 2.256735,
+    "cellGroupValue": "8",
+    "cellGroupValueWhereMarker": "7",
+    "pValue": 1.14340000368378E-109,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 3,
+    "y": 30,
+    "geneName": "REG1A",
+    "value": 1.9898201,
+    "cellGroupValue": "4",
+    "cellGroupValueWhereMarker": "7",
+    "pValue": 1.14340000368378E-109,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 2,
+    "y": 30,
+    "geneName": "REG1A",
+    "value": 0.0,
+    "cellGroupValue": "3",
+    "cellGroupValueWhereMarker": "7",
+    "pValue": 1.14340000368378E-109,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 5,
+    "y": 30,
+    "geneName": "REG1A",
+    "value": 0.0,
+    "cellGroupValue": "6",
+    "cellGroupValueWhereMarker": "7",
+    "pValue": 1.14340000368378E-109,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 4,
+    "y": 30,
+    "geneName": "REG1A",
+    "value": 1.5086915,
+    "cellGroupValue": "5",
+    "cellGroupValueWhereMarker": "7",
+    "pValue": 1.14340000368378E-109,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 0,
+    "y": 30,
+    "geneName": "REG1A",
+    "value": 0.0,
+    "cellGroupValue": "1",
+    "cellGroupValueWhereMarker": "7",
+    "pValue": 1.14340000368378E-109,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 6,
+    "y": 30,
+    "geneName": "REG1A",
+    "value": 61942.93,
+    "cellGroupValue": "7",
+    "cellGroupValueWhereMarker": "7",
+    "pValue": 1.14340000368378E-109,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 1,
+    "y": 30,
+    "geneName": "REG1A",
+    "value": 112.35044,
+    "cellGroupValue": "2",
+    "cellGroupValueWhereMarker": "7",
+    "pValue": 1.14340000368378E-109,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 2,
+    "y": 31,
+    "geneName": "PRSS1",
+    "value": 0.0,
+    "cellGroupValue": "3",
+    "cellGroupValueWhereMarker": "7",
+    "pValue": 1.14340000368378E-109,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 5,
+    "y": 31,
+    "geneName": "PRSS1",
+    "value": 0.0,
+    "cellGroupValue": "6",
+    "cellGroupValueWhereMarker": "7",
+    "pValue": 1.14340000368378E-109,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 0,
+    "y": 31,
+    "geneName": "PRSS1",
+    "value": 0.0,
+    "cellGroupValue": "1",
+    "cellGroupValueWhereMarker": "7",
+    "pValue": 1.14340000368378E-109,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 3,
+    "y": 31,
+    "geneName": "PRSS1",
+    "value": 0.0,
+    "cellGroupValue": "4",
+    "cellGroupValueWhereMarker": "7",
+    "pValue": 1.14340000368378E-109,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 1,
+    "y": 31,
+    "geneName": "PRSS1",
+    "value": 0.0,
+    "cellGroupValue": "2",
+    "cellGroupValueWhereMarker": "7",
+    "pValue": 1.14340000368378E-109,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 6,
+    "y": 31,
+    "geneName": "PRSS1",
+    "value": 13934.368,
+    "cellGroupValue": "7",
+    "cellGroupValueWhereMarker": "7",
+    "pValue": 1.14340000368378E-109,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 4,
+    "y": 31,
+    "geneName": "PRSS1",
+    "value": 0.0,
+    "cellGroupValue": "5",
+    "cellGroupValueWhereMarker": "7",
+    "pValue": 1.14340000368378E-109,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 7,
+    "y": 31,
+    "geneName": "PRSS1",
+    "value": 0.0,
+    "cellGroupValue": "8",
+    "cellGroupValueWhereMarker": "7",
+    "pValue": 1.14340000368378E-109,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 6,
+    "y": 32,
+    "geneName": "GSTA2",
+    "value": 549.73956,
+    "cellGroupValue": "7",
+    "cellGroupValueWhereMarker": "7",
+    "pValue": 1.46124811862562E-109,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 3,
+    "y": 32,
+    "geneName": "GSTA2",
+    "value": 0.0,
+    "cellGroupValue": "4",
+    "cellGroupValueWhereMarker": "7",
+    "pValue": 1.46124811862562E-109,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 1,
+    "y": 32,
+    "geneName": "GSTA2",
+    "value": 0.0,
+    "cellGroupValue": "2",
+    "cellGroupValueWhereMarker": "7",
+    "pValue": 1.46124811862562E-109,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 0,
+    "y": 32,
+    "geneName": "GSTA2",
+    "value": 0.0,
+    "cellGroupValue": "1",
+    "cellGroupValueWhereMarker": "7",
+    "pValue": 1.46124811862562E-109,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 2,
+    "y": 32,
+    "geneName": "GSTA2",
+    "value": 0.0,
+    "cellGroupValue": "3",
+    "cellGroupValueWhereMarker": "7",
+    "pValue": 1.46124811862562E-109,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 7,
+    "y": 32,
+    "geneName": "GSTA2",
+    "value": 0.0,
+    "cellGroupValue": "8",
+    "cellGroupValueWhereMarker": "7",
+    "pValue": 1.46124811862562E-109,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 4,
+    "y": 32,
+    "geneName": "GSTA2",
+    "value": 0.0,
+    "cellGroupValue": "5",
+    "cellGroupValueWhereMarker": "7",
+    "pValue": 1.46124811862562E-109,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 5,
+    "y": 32,
+    "geneName": "GSTA2",
+    "value": 0.0,
+    "cellGroupValue": "6",
+    "cellGroupValueWhereMarker": "7",
+    "pValue": 1.46124811862562E-109,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 3,
+    "y": 33,
+    "geneName": "CTRB1",
+    "value": 0.0,
+    "cellGroupValue": "4",
+    "cellGroupValueWhereMarker": "7",
+    "pValue": 2.76214637799412E-109,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 1,
+    "y": 33,
+    "geneName": "CTRB1",
+    "value": 0.0,
+    "cellGroupValue": "2",
+    "cellGroupValueWhereMarker": "7",
+    "pValue": 2.76214637799412E-109,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 6,
+    "y": 33,
+    "geneName": "CTRB1",
+    "value": 6432.887,
+    "cellGroupValue": "7",
+    "cellGroupValueWhereMarker": "7",
+    "pValue": 2.76214637799412E-109,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 5,
+    "y": 33,
+    "geneName": "CTRB1",
+    "value": 0.0,
+    "cellGroupValue": "6",
+    "cellGroupValueWhereMarker": "7",
+    "pValue": 2.76214637799412E-109,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 4,
+    "y": 33,
+    "geneName": "CTRB1",
+    "value": 0.0,
+    "cellGroupValue": "5",
+    "cellGroupValueWhereMarker": "7",
+    "pValue": 2.76214637799412E-109,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 7,
+    "y": 33,
+    "geneName": "CTRB1",
+    "value": 0.0,
+    "cellGroupValue": "8",
+    "cellGroupValueWhereMarker": "7",
+    "pValue": 2.76214637799412E-109,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 2,
+    "y": 33,
+    "geneName": "CTRB1",
+    "value": 0.0,
+    "cellGroupValue": "3",
+    "cellGroupValueWhereMarker": "7",
+    "pValue": 2.76214637799412E-109,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 0,
+    "y": 33,
+    "geneName": "CTRB1",
+    "value": 0.0,
+    "cellGroupValue": "1",
+    "cellGroupValueWhereMarker": "7",
+    "pValue": 2.76214637799412E-109,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 2,
+    "y": 34,
+    "geneName": "KCTD12",
+    "value": 0.0,
+    "cellGroupValue": "3",
+    "cellGroupValueWhereMarker": "8",
+    "pValue": 2.69068354125592E-75,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 6,
+    "y": 34,
+    "geneName": "KCTD12",
+    "value": 0.0,
+    "cellGroupValue": "7",
+    "cellGroupValueWhereMarker": "8",
+    "pValue": 2.69068354125592E-75,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 7,
+    "y": 34,
+    "geneName": "KCTD12",
+    "value": 283.9228,
+    "cellGroupValue": "8",
+    "cellGroupValueWhereMarker": "8",
+    "pValue": 2.69068354125592E-75,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 0,
+    "y": 34,
+    "geneName": "KCTD12",
+    "value": 0.0,
+    "cellGroupValue": "1",
+    "cellGroupValueWhereMarker": "8",
+    "pValue": 2.69068354125592E-75,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 5,
+    "y": 34,
+    "geneName": "KCTD12",
+    "value": 105.87987,
+    "cellGroupValue": "6",
+    "cellGroupValueWhereMarker": "8",
+    "pValue": 2.69068354125592E-75,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 3,
+    "y": 34,
+    "geneName": "KCTD12",
+    "value": 73.00975,
+    "cellGroupValue": "4",
+    "cellGroupValueWhereMarker": "8",
+    "pValue": 2.69068354125592E-75,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 4,
+    "y": 34,
+    "geneName": "KCTD12",
+    "value": 61.336147,
+    "cellGroupValue": "5",
+    "cellGroupValueWhereMarker": "8",
+    "pValue": 2.69068354125592E-75,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 1,
+    "y": 34,
+    "geneName": "KCTD12",
+    "value": 0.0,
+    "cellGroupValue": "2",
+    "cellGroupValueWhereMarker": "8",
+    "pValue": 2.69068354125592E-75,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 2,
+    "y": 35,
+    "geneName": "GCH1",
+    "value": 47.36278,
+    "cellGroupValue": "3",
+    "cellGroupValueWhereMarker": "8",
+    "pValue": 1.18044466085977E-72,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 0,
+    "y": 35,
+    "geneName": "GCH1",
+    "value": 0.0,
+    "cellGroupValue": "1",
+    "cellGroupValueWhereMarker": "8",
+    "pValue": 1.18044466085977E-72,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 4,
+    "y": 35,
+    "geneName": "GCH1",
+    "value": 87.318405,
+    "cellGroupValue": "5",
+    "cellGroupValueWhereMarker": "8",
+    "pValue": 1.18044466085977E-72,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 5,
+    "y": 35,
+    "geneName": "GCH1",
+    "value": 105.95184,
+    "cellGroupValue": "6",
+    "cellGroupValueWhereMarker": "8",
+    "pValue": 1.18044466085977E-72,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 3,
+    "y": 35,
+    "geneName": "GCH1",
+    "value": 87.6117,
+    "cellGroupValue": "4",
+    "cellGroupValueWhereMarker": "8",
+    "pValue": 1.18044466085977E-72,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 6,
+    "y": 35,
+    "geneName": "GCH1",
+    "value": 0.0,
+    "cellGroupValue": "7",
+    "cellGroupValueWhereMarker": "8",
+    "pValue": 1.18044466085977E-72,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 7,
+    "y": 35,
+    "geneName": "GCH1",
+    "value": 325.52927,
+    "cellGroupValue": "8",
+    "cellGroupValueWhereMarker": "8",
+    "pValue": 1.18044466085977E-72,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 1,
+    "y": 35,
+    "geneName": "GCH1",
+    "value": 0.0,
+    "cellGroupValue": "2",
+    "cellGroupValueWhereMarker": "8",
+    "pValue": 1.18044466085977E-72,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 1,
+    "y": 36,
+    "geneName": "GLS",
+    "value": 32.441067,
+    "cellGroupValue": "2",
+    "cellGroupValueWhereMarker": "8",
+    "pValue": 2.90054985618176E-72,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 7,
+    "y": 36,
+    "geneName": "GLS",
+    "value": 565.78076,
+    "cellGroupValue": "8",
+    "cellGroupValueWhereMarker": "8",
+    "pValue": 2.90054985618176E-72,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 0,
+    "y": 36,
+    "geneName": "GLS",
+    "value": 0.0,
+    "cellGroupValue": "1",
+    "cellGroupValueWhereMarker": "8",
+    "pValue": 2.90054985618176E-72,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 3,
+    "y": 36,
+    "geneName": "GLS",
+    "value": 228.82932,
+    "cellGroupValue": "4",
+    "cellGroupValueWhereMarker": "8",
+    "pValue": 2.90054985618176E-72,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 6,
+    "y": 36,
+    "geneName": "GLS",
+    "value": 24.94577,
+    "cellGroupValue": "7",
+    "cellGroupValueWhereMarker": "8",
+    "pValue": 2.90054985618176E-72,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 5,
+    "y": 36,
+    "geneName": "GLS",
+    "value": 230.5537,
+    "cellGroupValue": "6",
+    "cellGroupValueWhereMarker": "8",
+    "pValue": 2.90054985618176E-72,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 2,
+    "y": 36,
+    "geneName": "GLS",
+    "value": 7.9184566,
+    "cellGroupValue": "3",
+    "cellGroupValueWhereMarker": "8",
+    "pValue": 2.90054985618176E-72,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 4,
+    "y": 36,
+    "geneName": "GLS",
+    "value": 151.96289,
+    "cellGroupValue": "5",
+    "cellGroupValueWhereMarker": "8",
+    "pValue": 2.90054985618176E-72,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 5,
+    "y": 37,
+    "geneName": "ARFGEF3",
+    "value": 415.45923,
+    "cellGroupValue": "6",
+    "cellGroupValueWhereMarker": "8",
+    "pValue": 7.26562847104978E-69,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 7,
+    "y": 37,
+    "geneName": "ARFGEF3",
+    "value": 718.64856,
+    "cellGroupValue": "8",
+    "cellGroupValueWhereMarker": "8",
+    "pValue": 7.26562847104978E-69,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 1,
+    "y": 37,
+    "geneName": "ARFGEF3",
+    "value": 18.704273,
+    "cellGroupValue": "2",
+    "cellGroupValueWhereMarker": "8",
+    "pValue": 7.26562847104978E-69,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 6,
+    "y": 37,
+    "geneName": "ARFGEF3",
+    "value": 42.01574,
+    "cellGroupValue": "7",
+    "cellGroupValueWhereMarker": "8",
+    "pValue": 7.26562847104978E-69,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 2,
+    "y": 37,
+    "geneName": "ARFGEF3",
+    "value": 111.148575,
+    "cellGroupValue": "3",
+    "cellGroupValueWhereMarker": "8",
+    "pValue": 7.26562847104978E-69,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 0,
+    "y": 37,
+    "geneName": "ARFGEF3",
+    "value": 0.0,
+    "cellGroupValue": "1",
+    "cellGroupValueWhereMarker": "8",
+    "pValue": 7.26562847104978E-69,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 3,
+    "y": 37,
+    "geneName": "ARFGEF3",
+    "value": 276.10638,
+    "cellGroupValue": "4",
+    "cellGroupValueWhereMarker": "8",
+    "pValue": 7.26562847104978E-69,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 4,
+    "y": 37,
+    "geneName": "ARFGEF3",
+    "value": 326.19882,
+    "cellGroupValue": "5",
+    "cellGroupValueWhereMarker": "8",
+    "pValue": 7.26562847104978E-69,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 2,
+    "y": 38,
+    "geneName": "FAP",
+    "value": 0.0,
+    "cellGroupValue": "3",
+    "cellGroupValueWhereMarker": "8",
+    "pValue": 6.62444483409552E-68,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 3,
+    "y": 38,
+    "geneName": "FAP",
+    "value": 229.51645,
+    "cellGroupValue": "4",
+    "cellGroupValueWhereMarker": "8",
+    "pValue": 6.62444483409552E-68,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 6,
+    "y": 38,
+    "geneName": "FAP",
+    "value": 0.0,
+    "cellGroupValue": "7",
+    "cellGroupValueWhereMarker": "8",
+    "pValue": 6.62444483409552E-68,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 7,
+    "y": 38,
+    "geneName": "FAP",
+    "value": 561.2999,
+    "cellGroupValue": "8",
+    "cellGroupValueWhereMarker": "8",
+    "pValue": 6.62444483409552E-68,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 4,
+    "y": 38,
+    "geneName": "FAP",
+    "value": 1.3852892,
+    "cellGroupValue": "5",
+    "cellGroupValueWhereMarker": "8",
+    "pValue": 6.62444483409552E-68,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 0,
+    "y": 38,
+    "geneName": "FAP",
+    "value": 0.0,
+    "cellGroupValue": "1",
+    "cellGroupValueWhereMarker": "8",
+    "pValue": 6.62444483409552E-68,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 5,
+    "y": 38,
+    "geneName": "FAP",
+    "value": 228.44377,
+    "cellGroupValue": "6",
+    "cellGroupValueWhereMarker": "8",
+    "pValue": 6.62444483409552E-68,
+    "expressionUnit": "CPM-test"
+  },
+  {
+    "x": 1,
+    "y": 38,
+    "geneName": "FAP",
+    "value": 0.0,
+    "cellGroupValue": "2",
+    "cellGroupValueWhereMarker": "8",
+    "pValue": 6.62444483409552E-68,
+    "expressionUnit": "CPM-test"
+  }
+]
