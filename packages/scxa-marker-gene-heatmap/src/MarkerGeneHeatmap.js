@@ -207,7 +207,7 @@ const MarkerGeneHeatmap = (props) => {
 
     legend: {
       title: {
-        text: `Median expression (CPM)`
+        text: `Median expression (${data[0] ? data[0].expressionUnit : `CPM`})`
       },
       align: `center`,
       verticalAlign: `top`,
@@ -290,7 +290,8 @@ MarkerGeneHeatmap.propTypes = {
     geneName: PropTypes.string.isRequired,
     value: PropTypes.number.isRequired,
     cellGroupValueWhereMarker: PropTypes.string.isRequired,
-    cellGroupValue: PropTypes.string.isRequired
+    cellGroupValue: PropTypes.string.isRequired,
+    expressionUnit: PropTypes.string.isRequired
   })).isRequired,
   xAxisCategories: PropTypes.array.isRequired,
   yAxisCategories: PropTypes.array.isRequired,

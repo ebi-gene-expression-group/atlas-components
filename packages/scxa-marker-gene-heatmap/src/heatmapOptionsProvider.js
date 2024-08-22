@@ -13,7 +13,7 @@ const heatmapOptionsProvider = {
         } else {
           return `<b>Marker gene in experiment:</b> ${this.point.cellGroupValueWhereMarker}<br/>` +
             `<b>Gene ID:</b> ${this.point.geneName}<br/>` +
-            `<b>Expression:</b> ${+this.point.value.toFixed(3)} CPM`
+            `<b>Expression:</b> ${+this.point.value.toFixed(3)} ${this.point.expressionUnit}`
         }
       }
     },
@@ -43,7 +43,7 @@ const heatmapOptionsProvider = {
           return `<b>Cell type:</b> ${this.point.cellGroupValue}<br/>` +
             `<b>Cell type where marker:</b> ${this.point.cellGroupValueWhereMarker}<br/>` +
             `<b>Gene ID:</b> ${this.point.geneName}<br/>` +
-            `<b>Expression:</b> ${+this.point.value.toFixed(3)} CPM`
+            `<b>Expression:</b> ${+this.point.value.toFixed(3)} ${this.point.expressionUnit}`
         }
       }
     },
@@ -64,7 +64,7 @@ const heatmapOptionsProvider = {
           const text = `<b>Cluster ID:</b> ${this.point.x + 1}<br/>` +
             `<b>Cluster ID where marker:</b> ${this.point.cellGroupValueWhereMarker}<br/>` +
             `<b>Gene ID:</b> ${this.point.geneName}<br/>` +
-            `<b>Median expression:</b> ${+this.point.value.toFixed(3)} CPM`
+            `<b>Median expression:</b> ${+this.point.value.toFixed(3)} ${this.point.expressionUnit}`
 
           if (this.point.cellGroupValueWhereMarker === this.point.x + 1) {
             return text + `<br/><b>P-value:</b> ${this.point.pValue.toExponential(3)}`
