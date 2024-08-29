@@ -144,7 +144,7 @@ class HeatmapView extends React.Component {
           <div className={wrapperClassName}>
             <div className={`small-12 medium-6 columns`}>
               <PlotSettingsDropdown
-                labelText={`Number of clusters:`}
+                labelText={`Cluster by:`}
                 options={metadata ? options : kOptions}
                 onSelect={(selectedOption) => onSelectK(selectedOption.value)}
                 value={heatmapType === `celltypes` ?
