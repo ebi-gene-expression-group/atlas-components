@@ -28,16 +28,21 @@
 <script src="../dist/vendors.bundle.js"></script>
 <script src="../dist/clustersViewDemo.bundle.js"></script>
 <script>
-  heatmapViewRenderModule.render({
+  clustersViewDemo.render({
     resource: 'json/experiments/E-MTAB-5061/marker-genes-heatmap/cell-types?cellGroupType=inferred cell type - ontology labels',
     host: 'http://localhost:8080/gxa/sc/',
     species: 'Homo sapiens',
     hasDynamicHeight: true,
     heatmapRowHeight: 20,
     ks: [ 8, 11, 19],
+    ksWithMarkers: [`8`],
     metadata:[{
       value: `inferred cell type - ontology labels`,
       label: `Inferred cell type - ontology labels`
+    },
+    {
+      value: `sex`,
+      label: `Sex`
     }],
     wrapperClassName: 'row expanded',
     heatmapType: 'celltypes'
