@@ -6,7 +6,7 @@ import URI from 'urijs'
 import _ from "lodash";
 
 import heatmapOptionsProvider from './heatmapOptionsProvider'
-import MarkerGeneHeatmap from "./MarkerGeneHeatmap";
+import MarkerGeneHeatmap from "./MarkerGeneHeatmap"
 
 class HeatmapView extends React.Component {
   constructor(props) {
