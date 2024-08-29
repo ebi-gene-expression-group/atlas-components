@@ -98,6 +98,8 @@ class HeatmapView extends React.Component {
     if (metadata) {
       const metadataOptions = metadata.map((metadata) => ({
         ...metadata,
+        // only enable inferred cell type metadata option and disable the others like sex, cancer etc.
+        isDisabled: ![`Inferred cell type - authors labels`, `Inferred cell type - ontology labels`].includes(metadata.label),
         group: `metadata`
       }))
 
