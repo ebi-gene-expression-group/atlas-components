@@ -28,8 +28,8 @@
 <script src="../dist/vendors.bundle.js"></script>
 <script src="../dist/clustersViewDemo.bundle.js"></script>
 <script>
-  clustersViewDemo.render({
-    resource: 'json/experiments/E-MTAB-5061/marker-genes/cell-types?organismPart=http://purl.obolibrary.org/obo/UBERON_0001264',
+  heatmapViewRenderModule.render({
+    resource: 'json/experiments/E-MTAB-5061/marker-genes-heatmap/cell-types?cellGroupType=inferred cell type - ontology labels',
     host: 'http://localhost:8080/gxa/sc/',
     species: 'Homo sapiens',
     hasDynamicHeight: true,
