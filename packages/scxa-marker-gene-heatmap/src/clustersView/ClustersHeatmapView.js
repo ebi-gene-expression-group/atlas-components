@@ -82,6 +82,7 @@ class HeatmapView extends React.Component {
     const { ks, ksWithMarkers, selectedK, onSelectK, metadata } = this.props
     const { hasDynamicHeight, defaultHeatmapHeight, heatmapRowHeight, species, host, heatmapType } = this.props
 
+    const inferredCellTypeOptions = [`Inferred cell type - authors labels`, `Inferred cell type - ontology labels`]
     const kOptions = ks
       .sort((a, b) => a-b)
       .map((k) => ({
@@ -98,8 +99,7 @@ class HeatmapView extends React.Component {
     if (metadata) {
       const metadataOptions = metadata.map((metadata) => ({
         ...metadata,
-        // only enable inferred cell type metadata option and disable the others like sex, cancer etc.
-        isDisabled: ![`Inferred cell type - authors labels`, `Inferred cell type - ontology labels`].includes(metadata.label),
+        isDisabled: !inferredCellTypeOptions.includes(metadata.label),
         group: `metadata`
       }))
 
