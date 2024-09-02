@@ -49,7 +49,7 @@ const heatmapOptionsProvider = {
     },
     title: cellType => `${cellType}<br>marker genes`,
     labelsFormatter: label => label,
-    noData: `No marker genes found for the selected organ or region. Try selecting another organism part.`
+    noData: `There are no marker genes for this value, please select another attribute or k value.`
   },
 
   clusters: {

@@ -26,12 +26,13 @@ class Demo extends React.Component {
       // experimentAccession: `E-EHCA-2`,
       // experimentAccession: `E-ENAD-19`,
       // experimentAccession: `E-GEOD-93593`,
-      ks: ks,
+      ks: props.ks,
       ksWithMarkers: ['14','18','20'],
       // ksWithMarkers: [8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18],
       // ksWithMarkers: [4, 7, 9],
       // ksWithMarkers: [36, 37, 38, 39, 40, 41, 42, 42, 43, 44, 45, 46],
-      selectedK: ks[2]
+      selectedK: props.metadata ? props.metadata[0].value : props.ks[0],
+      heatmapType: props.metadata ? `celltypes` : `clusters`
       // selectedK: 17
     }
   }
@@ -42,22 +43,29 @@ class Demo extends React.Component {
         <HeatmapView
           wrapperClassName={`row expanded`}
           resource={
-            URI(`json/experiments/${this.state.experimentAccession}/marker-genes/clusters`)
-              .search({k: this.state.selectedK})
-              .toString()
+            this.state.heatmapType === `celltypes` ?
+              URI(`json/experiments/${this.state.experimentAccession}/marker-genes-heatmap/cell-types`)
+                  .search({cellGroupType: this.state.selectedK})
+                  .toString() :
+              URI(`json/experiments/${this.state.experimentAccession}/marker-genes/clusters`)
+                .search({k: this.state.selectedK})
+                .toString()
           }
-          host={`https://wwwdev.ebi.ac.uk:8080/gxa/sc/`}
-          ks={this.state.ks}
-          ksWithMarkers={this.state.ksWithMarkers}
+          host={`https://wwwdev.ebi.ac.uk/gxa/sc/`}
+          ks={this.props.ks}
+          ksWithMarkers={this.props.ksWithMarkers}
+          metadata={this.props.metadata}
           selectedK={this.state.selectedK}
           onSelectK={
             (k) => {
               this.setState({
-                selectedK: parseInt(k)
+                selectedK: parseInt(k) ? parseInt(k) : k,
+                heatmapType: parseInt(k) ? `clusters` : `celltypes`
               })
             }
           }
           species={`Homo sapiens`}
+          heatmapType={this.state.heatmapType}
         />
       </div>
     )

@@ -79,9 +79,10 @@ class HeatmapView extends React.Component {
   render() {
     const { data, filteredData, selectedClusterId, isLoading, hasError } = this.state
     const { wrapperClassName, plotWrapperClassName } = this.props
-    const { ks, ksWithMarkers, selectedK, onSelectK } = this.props
-    const { hasDynamicHeight, defaultHeatmapHeight, heatmapRowHeight, species, host } = this.props
+    const { ks, ksWithMarkers, selectedK, onSelectK, metadata } = this.props
+    const { hasDynamicHeight, defaultHeatmapHeight, heatmapRowHeight, species, host, heatmapType } = this.props
 
+    const inferredCellTypeOptions = [`Inferred cell type - authors labels`, `Inferred cell type - ontology labels`]
     const kOptions = ks
       .sort((a, b) => a-b)
       .map((k) => ({
@@ -90,16 +91,42 @@ class HeatmapView extends React.Component {
         isDisabled: ksWithMarkers ? !ksWithMarkers.includes(k.toString()) : false
       }))
 
+    const options = [{
+      label: `Number of clusters`,
+      options: kOptions
+    }]
+
+    if (metadata) {
+      const metadataOptions = metadata.map((metadata) => ({
+        ...metadata,
+        isDisabled: !inferredCellTypeOptions.includes(metadata.label),
+        group: `metadata`
+      }))
+
+      options.unshift(
+        {
+          label: `Metadata`,
+          options: metadataOptions
+      })
+    }
+
     const allClusterIds = _.range(1, parseInt(selectedK) + 1)
     const clusterIdsWithMarkers = data && _.uniq(data.map(x => parseInt(x.cellGroupValueWhereMarker)))
+    const allCellTypeIds = _.chain(data).uniqBy(`x`).sortBy(`x`).map(`cellGroupValue`).value()
 
-    const clusterIdOptions = allClusterIds
-      .sort((a, b) => a-b)
-      .map((clusterId) => ({
-        value: clusterId.toString(),
-        label: `Cluster ${clusterId}`,
-        isDisabled: clusterIdsWithMarkers ? !clusterIdsWithMarkers.includes(clusterId) : false
-      }))
+    const clusterIdOptions = heatmapType === `celltypes` ?
+      allCellTypeIds
+        .map((clusterId) => ({
+          value: clusterId.toString(),
+          label: clusterId
+        })) :
+      allClusterIds
+        .sort((a, b) => a-b)
+        .map((clusterId) => ({
+          value: clusterId.toString(),
+          label: `Cluster ${clusterId}`,
+          isDisabled: clusterIdsWithMarkers ? !clusterIdsWithMarkers.includes(clusterId) : false
+        }))
 
     // Add default "All clusters" option at the start of the options array
     clusterIdOptions.unshift({
@@ -108,6 +135,8 @@ class HeatmapView extends React.Component {
       isDisabled: false // always show this option
     })
 
+    const capitalized = (str) => str.charAt(0).toUpperCase() + str.slice(1)
+
     return (
       hasError ?
         <CalloutAlert error={hasError}/> :
@@ -115,10 +144,11 @@ class HeatmapView extends React.Component {
           <div className={wrapperClassName}>
             <div className={`small-12 medium-6 columns`}>
               <PlotSettingsDropdown
-                labelText={`Number of clusters:`}
-                options={kOptions}
+                labelText={`Cluster by:`}
+                options={metadata ? options : kOptions}
                 onSelect={(selectedOption) => onSelectK(selectedOption.value)}
-                value={{value: selectedK, label: `k = ${selectedK}`}}
+                value={heatmapType === `celltypes` ?
+                        {value: selectedK, label: `${capitalized(selectedK)}`} : {value: selectedK, label: `k = ${selectedK}`}}
               />
             </div>
             <div className={`small-12 medium-6 columns`}>
@@ -143,14 +173,16 @@ class HeatmapView extends React.Component {
               <MarkerGeneHeatmap
                 data={selectedClusterId && selectedClusterId.value !== `all` ? filteredData : data}
                 isDataFiltered={selectedClusterId && selectedClusterId.value !== `all` || false}
-                xAxisCategories={allClusterIds}
-                yAxisCategories={_.chain(data).map(cell => _.pick(cell, `geneName`, `cellGroupValueWhereMarker`)).uniqWith(_.isEqual).map(`geneName`).value()}
+                xAxisCategories={heatmapType === `celltypes` ? allCellTypeIds : allClusterIds}
+                yAxisCategories={heatmapType === `celltypes` ? _
+                        .chain(data).uniqBy(`y`).sortBy(`y`).map(`geneName`).value()
+                        : _.chain(data).map(cell => _.pick(cell, `geneName`, `cellGroupValueWhereMarker`)).uniqWith(_.isEqual).map(`geneName`).value()}
                 chartHeight={defaultHeatmapHeight}
                 hasDynamicHeight={_.chain(filteredData).map(`geneName`).uniq().value().length > 5 ? hasDynamicHeight : false}
                 heatmapRowHeight={heatmapRowHeight}
                 species={species}
                 host={host}
-                heatmapType={`clusters`}
+                heatmapType={heatmapType}
               />
               <LoadingOverlay
                 show={isLoading}
@@ -174,7 +206,12 @@ HeatmapView.propTypes = {
   defaultHeatmapHeight: PropTypes.number,
   hasDynamicHeight: PropTypes.bool,
   heatmapRowHeight: PropTypes.number,
-  species: PropTypes.string.isRequired
+  species: PropTypes.string.isRequired,
+  heatmapType: PropTypes.string,
+  metadata: PropTypes.arrayOf(PropTypes.shape({
+    value: PropTypes.string,
+    label: PropTypes.string
+  }))
 }
 
 HeatmapView.defaultProps = {
@@ -182,7 +219,8 @@ HeatmapView.defaultProps = {
   plotWrapperClassName: `small-12 columns`,
   defaultHeatmapHeight: 300,
   hasDynamicHeight: true,
-  heatmapRowHeight: 20
+  heatmapRowHeight: 20,
+  heatmapType: `cluster`
 }
 
 export default HeatmapView
