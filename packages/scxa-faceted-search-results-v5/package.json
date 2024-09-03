@@ -1,6 +1,6 @@
 {
   "name": "scxa-faceted-search-results-v5",
-  "version": "5.0.1",
+  "version": "5.0.2-alpha.0",
   "description": "Faceted experiments list for Single Cell Expression Atlas gene search results",
   "keywords": [
     "react",
