@@ -16,8 +16,11 @@ const TableCell = ({ label, dataRow, dataKey, image, linkTo, host, width }) => {
     cellItem =
       <div className={'icon'}>
         {dataRow[dataKey]}
-        <ExperimentIconDiv background={`indianred`} color={`white`} data-toggle={`tooltip`} data-placement={`bottom`}
-                         title={`Externally analysed data`}>E</ExperimentIconDiv>
+          <a href={`${host}/help.html?section=external-data`}>
+              <ExperimentIconDiv background={`indianred`} color={`white`} data-toggle={`tooltip`} data-placement={`bottom`}
+                                 title={`Externally analysed data`}>E</ExperimentIconDiv>
+          </a>
+
       </div>
   } else if (image) {
       // If the column is an image put the image in the cell (or an unknown icon if the type is undefined)
