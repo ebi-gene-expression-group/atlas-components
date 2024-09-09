@@ -4,10 +4,16 @@ import PropTypes from 'prop-types'
 import HighchartsReact from 'highcharts-react-official'
 import Highcharts from 'highcharts'
 import highchartsSunburst from 'highcharts/modules/sunburst'
+import HighchartsNoData from 'highcharts/modules/no-data-to-display'
 
 import _ from 'lodash'
 
-highchartsSunburst(Highcharts)
+async function addModules () {
+  HighchartsNoData(Highcharts)
+  highchartsSunburst(Highcharts)
+}
+
+addModules()
 
 class CellTypeWheel extends React.Component {
   constructor (props) {
@@ -43,6 +49,17 @@ class CellTypeWheel extends React.Component {
           style: {
             fontSize: `25px`,
             fontWeight: `bold`
+          }
+        },
+
+        lang: {
+          noData: `${props.species} doesn't have wheel data for the organism part: ${props.searchTerm}.`
+        },
+        noData: {
+          style: {
+            fontWeight: `bold`,
+            fontSize: `16px`,
+            color: `#000000`
           }
         },
 
@@ -122,6 +139,7 @@ CellTypeWheel.propTypes = {
       value: PropTypes.number.isRequired,
       experimentAccessions: PropTypes.arrayOf(PropTypes.string)
     })).isRequired,
+  species: PropTypes.string.isRequired,
   onCellTypeWheelClick: PropTypes.func
 }
 
