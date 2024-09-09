@@ -88,6 +88,7 @@ function CellTypeWheelExperimentHeatmap(props) {
               query={ props.species ? { species: props.species } : {} }
               fulfilledPayloadProvider={cellTypeWheelData => ({ data: cellTypeWheelData })}
               searchTerm={props.searchTerm}
+              species={props.species ? props.species : `All species`}
               allSpecies={allSpecies}
               onCellTypeWheelClick={onCellTypeWheelClick}
             /> :
