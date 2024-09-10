@@ -20,7 +20,7 @@ describe(`<CellTypeWheel>`, () => {
     cy.mount(<CellTypeWheel species={`species`} searchTerm={`searchTerm`}/>)
     cy.get(`.highcharts-series`).find(`path`).should(`have.length`, 0)
     cy.get(`.highcharts-data-labels`).find(`text`).should(`have.length`, 0)
-    cy.get(`.highcharts-no-data`).find(`text`).should(`contain`, `species doesn't have wheel data for the organism part: searchTerm.`)
+    cy.get(`.highcharts-no-data`).find(`text`).should(`contain`, `There are no results for this search: searchTerm for species.`)
   })
 
   it(`mounts with non-empty data`, () => {

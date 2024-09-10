@@ -53,7 +53,7 @@ class CellTypeWheel extends React.Component {
         },
 
         lang: {
-          noData: `${props.species} doesn't have wheel data for the organism part: ${props.searchTerm}.`
+          noData: `There are no results for this search: ${props.searchTerm} for ${props.species}.`
         },
         noData: {
           style: {
