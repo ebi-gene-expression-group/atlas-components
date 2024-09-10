@@ -42,6 +42,7 @@ const render = (options, dataKey, target) => {
       searchTerm={dataKey}
       data={data[dataKey]}
       allSpecies={allSpecies}
+      species={allSpecies[0]}
       onCellTypeWheelClick={
         (name, species, experimentAccessions) => console.log(name, species, experimentAccessions)}
     />, document.getElementById(target))
