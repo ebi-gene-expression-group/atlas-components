@@ -79,7 +79,7 @@ describe(`heatmapOptionsProvider.multiexperimentcelltypes.labelsFormatter`, () =
     const host = `https://www.example.com`
     const result = labelsFormatter(experimentAccession, host)
 
-    expect(result).toContain(`<img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/External_link_font_awesome.svg">`)
+    expect(result).toContain(`<img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/External_link_font_awesome.svg"`)
     expect(result).toContain(`E-ANND-0001`)
     expect(result).toContain(`href="https://www.example.com/experiments/E-ANND-0001"`)
   })
@@ -89,7 +89,7 @@ describe(`heatmapOptionsProvider.multiexperimentcelltypes.labelsFormatter`, () =
     const host = `https://www.example.com`
     const result = labelsFormatter(experimentAccession, host)
 
-    expect(result).not.toContain(`<img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/External_link_font_awesome.svg">`)
+    expect(result).not.toContain(`<img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/External_link_font_awesome.svg"`)
     expect(result).toContain(`E-GEOD-1234`)
     expect(result).toContain(`href="https://www.example.com/experiments/E-GEOD-1234"`)
   })
