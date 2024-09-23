@@ -1,6 +1,6 @@
 import URI from 'urijs'
 
-const checkIfAnnDataExperiment = experimentAccession => /E-ANND-\d*/.test(experimentAccession)
+export const checkIfAnnDataExperiment = experimentAccession => /E-ANND-\d*/.test(experimentAccession)
 
 const heatmapOptionsProvider = {
   multiexperimentcelltypes: {
