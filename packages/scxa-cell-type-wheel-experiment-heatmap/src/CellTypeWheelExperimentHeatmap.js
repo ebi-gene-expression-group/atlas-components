@@ -103,7 +103,7 @@ function CellTypeWheelExperimentHeatmap(props) {
           {heatmapSelection.cellType ?
             <MarkerGeneHeatmapFetchLoader
               host={props.host}
-              resource={URI(encodeURIComponent(heatmapSelection.cellType), props.heatmapResource).toString()}
+              resource={URI(props.heatmapResource).segment(encodeURIComponent(btoa(heatmapSelection.cellType))).toString()}
               fulfilledPayloadProvider={heatmapFulfilledPayloadProvider}
               query={{ [`experiment-accessions`]: heatmapSelection.experimentAccessions }}
               cellType={heatmapSelection.cellType}
