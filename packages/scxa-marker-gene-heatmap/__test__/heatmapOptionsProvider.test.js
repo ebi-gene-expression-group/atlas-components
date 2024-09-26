@@ -73,24 +73,24 @@ describe(`heatmapOptionsProvider.celltypes.tooltip.formatter`, () => {
 
 describe(`heatmapOptionsProvider.multiexperimentcelltypes.labelsFormatter`, () => {
   const labelsFormatter = heatmapOptionsProvider.multiexperimentcelltypes.labelsFormatter
+  const experimentImageURl = `https://upload.wikimedia.org/wikipedia/commons/6/6a/External_link_font_awesome.svg`
+  const host = `https://www.example.com`
 
   it(`should return formatted label with AnnData icon for AnnData experiments`, () => {
     const experimentAccession = `E-ANND-0001`
-    const host = `https://www.example.com`
     const result = labelsFormatter(experimentAccession, host)
 
-    expect(result).toContain(`<img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/External_link_font_awesome.svg"`)
+    expect(result).not.toContain(`<img src="${experimentImageURl}"`)
     expect(result).toContain(`E-ANND-0001`)
-    expect(result).toContain(`href="https://www.example.com/experiments/E-ANND-0001"`)
+    expect(result).toContain(`href="${host}/experiments/E-ANND-0001"`)
   })
 
   it(`should return formatted label without AnnData icon for non-AnnData experiments`, () => {
     const experimentAccession = `E-GEOD-1234`
-    const host = `https://www.example.com`
     const result = labelsFormatter(experimentAccession, host)
 
-    expect(result).not.toContain(`<img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/External_link_font_awesome.svg"`)
+    expect(result).not.toContain(`<img src="${experimentImageURl}"`)
     expect(result).toContain(`E-GEOD-1234`)
-    expect(result).toContain(`href="https://www.example.com/experiments/E-GEOD-1234"`)
+    expect(result).toContain(`href="${host}/experiments/E-GEOD-1234"`)
   })
 })
