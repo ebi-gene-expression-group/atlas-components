@@ -102,11 +102,14 @@ const MarkerGeneHeatmap = (props) => {
         value: plotLineAxisPosition,
         zIndex,
         label: heatmapType !== `multiexperimentcelltypes` && {
-          text: splitCellTypeLabel.join(`<br/>`),
+          // tilted and trim very long labels for long cell types
+          text: splitCellTypeLabel.length <= 3 ? splitCellTypeLabel.join(`<br/>`) : splitCellTypeLabel.slice(0, 3).join(`<br/>`) + `...`,
           align: `right`,
           textAlign: `left`,
-          x: 0,
-          y: yOffset - Math.max(splitCellTypeLabel.length - 3, 0) * heatmapRowHeight / 2 // Move very long labels slightly up
+          rotation: heatmapType === `celltypes` ? -45 : 0,
+          x: heatmapType === `celltypes` ? 3 : 0,
+          // No need to move very long labels slightly up as we tilted and trim it for long cell types
+          y: yOffset //- Math.max(splitCellTypeLabel.length - 3, 0) * heatmapRowHeight / 2
         }
       })
     })
