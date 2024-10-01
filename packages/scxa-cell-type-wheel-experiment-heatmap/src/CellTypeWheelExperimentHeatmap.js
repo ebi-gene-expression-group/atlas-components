@@ -8,6 +8,7 @@ import { withFetchLoader } from '@ebi-gene-expression-group/atlas-react-fetch-lo
 import CellTypeWheel from '@ebi-gene-expression-group/scxa-cell-type-wheel'
 import MarkerGeneHeatmap from '@ebi-gene-expression-group/scxa-marker-gene-heatmap/lib/MarkerGeneHeatmap'
 import GeneSearchForm from '@ebi-gene-expression-group/scxa-gene-search-form'
+import {encode as base64_encode} from 'base-64'
 
 const CellTypeWheelFetchLoader = withFetchLoader(CellTypeWheel)
 const MarkerGeneHeatmapFetchLoader = withFetchLoader(MarkerGeneHeatmap)
@@ -103,7 +104,8 @@ function CellTypeWheelExperimentHeatmap(props) {
           {heatmapSelection.cellType ?
             <MarkerGeneHeatmapFetchLoader
               host={props.host}
-              resource={URI(props.heatmapResource).segment(encodeURIComponent(btoa(heatmapSelection.cellType))).toString()}
+              resource={URI(props.heatmapResource)
+                        .segmentCoded(base64_encode(heatmapSelection.cellType)).toString()}
               fulfilledPayloadProvider={heatmapFulfilledPayloadProvider}
               query={{ [`experiment-accessions`]: heatmapSelection.experimentAccessions }}
               cellType={heatmapSelection.cellType}
@@ -142,7 +144,7 @@ CellTypeWheelExperimentHeatmap.defaultProps = {
   actionEndpoint: `search`,
   suggesterEndpoint: `json/suggestions/gene_ids`,
   cellTypeWheelResource: `json/cell-type-wheel/`,
-  heatmapResource: `json/cell-type-marker-genes/`
+  heatmapResource: `json/cell-type-marker-genes/`,
 }
 
 export default CellTypeWheelExperimentHeatmap
