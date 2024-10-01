@@ -5,6 +5,7 @@ import speciesResponse from '../fixtures/speciesResponse.json'
 import cellTypeWheelData from '../fixtures/CellTypeDataForWheelResponse.json'
 import heatMapTCellResponse from '../fixtures/heatMapRegulatoryTCellResponse.json'
 import URI from 'urijs'
+import {decode as base64_decode, encode as base64_encode} from 'base-64';
 
 function firstWordMatcherOf(str) {
   return new RegExp(`.${str.split(` `)[0]}*`)
@@ -47,7 +48,7 @@ describe(`CellTypeWheelExperimentHeatmap`, () => {
     const cellType = `regulatory T cell`
     cy.intercept(`GET`, `/gxa/sc/json/suggestions/species`,
       speciesResponse)
-    cy.intercept(`GET`, `/gxa/sc/json/cell-type-marker-genes/${URI(encodeURIComponent(cellType))}?experiment-accessions=E-ENAD-15`,
+    cy.intercept(`GET`, `/gxa/sc/json/cell-type-marker-genes/${URI(encodeURIComponent(base64_encode(cellType)))}?experiment-accessions=E-ENAD-15`,
       heatMapTCellResponse)
     cy.viewport(800, 1000)
     cy.mount(<CellTypeWheelExperimentHeatmap
@@ -62,7 +63,7 @@ describe(`CellTypeWheelExperimentHeatmap`, () => {
     const cellType = `regulatory T cell`
     cy.intercept(`GET`, `/gxa/sc/json/suggestions/species`,
       speciesResponse)
-    cy.intercept(`GET`, `/gxa/sc/json/cell-type-marker-genes/${URI(encodeURIComponent(cellType))}?experiment-accessions=E-ENAD-15`,
+    cy.intercept(`GET`, `/gxa/sc/json/cell-type-marker-genes/${URI(base64_encode(cellType))}?experiment-accessions=E-ENAD-15`,
       heatMapTCellResponse)
     cy.viewport(800, 1000)
     cy.mount(<CellTypeWheelExperimentHeatmap
@@ -79,7 +80,7 @@ describe(`CellTypeWheelExperimentHeatmap`, () => {
     const cellTypeWithSlash = `mucosal invariant / T cell`
     cy.intercept(`GET`, `/gxa/sc/json/suggestions/species`,
       speciesResponse)
-    cy.intercept(`GET`, `/gxa/sc/json/cell-type-marker-genes/${URI(encodeURIComponent(cellTypeWithSlash))}?experiment-accessions=E-MTAB-7704`,
+    cy.intercept(`GET`, `/gxa/sc/json/cell-type-marker-genes/${URI(base64_encode(cellTypeWithSlash))}?experiment-accessions=E-MTAB-7704`,
       heatMapTCellResponse)
     cy.viewport(800, 1000)
     cy.mount(<CellTypeWheelExperimentHeatmap
