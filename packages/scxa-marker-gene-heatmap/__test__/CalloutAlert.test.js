@@ -1,30 +1,35 @@
 import React from 'react'
-import Enzyme from 'enzyme'
+import { render, screen } from '@testing-library/react'
+import '@testing-library/jest-dom' // for matcher like toBeInTheDocument
 import renderer from 'react-test-renderer'
-import { shallow } from 'enzyme'
-import Adapter from 'enzyme-adapter-react-16'
-
 import CalloutAlert from '../src/CalloutAlert'
 
-Enzyme.configure({ adapter: new Adapter() })
-
-describe(`CalloutAlert`, () => {
+describe('CalloutAlert', () => {
   const props = {
     error: {
-      description: `A human-readable description of the error, hopefully useful to the user`,
-      name: `Error name`,
-      message: `Error message`
+      description: 'A human-readable description of the error, hopefully useful to the user',
+      name: 'Error name',
+      message: 'Error message',
     }
   }
 
-  it(`prints all the relevant error information`, () => {
-    const wrapper = shallow(<CalloutAlert {...props} />)
-    expect(wrapper.text()).toMatch(props.error.description)
-    expect(wrapper.text()).toMatch(props.error.name)
-    expect(wrapper.text()).toMatch(props.error.message)
+  it('prints all the relevant error information', () => {
+    render(<CalloutAlert {...props} />)
+
+    expect(screen.getByText((content, element) => {
+      return content.includes(props.error.description)
+    })).toBeInTheDocument()
+
+    expect(screen.getByText((content, element) => {
+      return content.includes(props.error.name)
+    })).toBeInTheDocument()
+
+    expect(screen.getByText((content, element) => {
+      return content.includes(props.error.message)
+    })).toBeInTheDocument()
   })
 
-  it(`matches snapshot`, () => {
+  it('matches snapshot', () => {
     const tree = renderer.create(<CalloutAlert {...props} />).toJSON()
     expect(tree).toMatchSnapshot()
   })
