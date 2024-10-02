@@ -48,7 +48,7 @@ describe(`CellTypeWheelExperimentHeatmap`, () => {
     const cellType = `regulatory T cell`
     cy.intercept(`GET`, `/gxa/sc/json/suggestions/species`,
       speciesResponse)
-    cy.intercept(`GET`, `/gxa/sc/json/cell-type-marker-genes/${URI(encodeURIComponent(base64_encode(cellType)))}?experiment-accessions=E-ENAD-15`,
+    cy.intercept(`GET`, `/gxa/sc/json/cell-type-marker-genes/${URI(base64_encode(cellType))}?experiment-accessions=E-ENAD-15`,
       heatMapTCellResponse)
     cy.viewport(800, 1000)
     cy.mount(<CellTypeWheelExperimentHeatmap
