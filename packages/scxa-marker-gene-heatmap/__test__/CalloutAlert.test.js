@@ -4,16 +4,16 @@ import '@testing-library/jest-dom' // for matcher like toBeInTheDocument
 import renderer from 'react-test-renderer'
 import CalloutAlert from '../src/CalloutAlert'
 
-describe('CalloutAlert', () => {
+describe(`CalloutAlert`, () => {
   const props = {
     error: {
-      description: 'A human-readable description of the error, hopefully useful to the user',
-      name: 'Error name',
-      message: 'Error message',
+      description: `A human-readable description of the error, hopefully useful to the user`,
+      name: `Error name`,
+      message: `Error message`
     }
   }
 
-  it('prints all the relevant error information', () => {
+  it(`prints all the relevant error information`, () => {
     render(<CalloutAlert {...props} />)
 
     expect(screen.getByText((content, element) => {
@@ -29,7 +29,7 @@ describe('CalloutAlert', () => {
     })).toBeInTheDocument()
   })
 
-  it('matches snapshot', () => {
+  it(`matches snapshot`, () => {
     const tree = renderer.create(<CalloutAlert {...props} />).toJSON()
     expect(tree).toMatchSnapshot()
   })

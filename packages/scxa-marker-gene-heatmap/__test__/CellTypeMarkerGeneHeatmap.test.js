@@ -42,7 +42,7 @@ describe(`MarkerGeneHeatmap`, () => {
       />
     )
 
-    const plotLines = container.querySelectorAll('[class^="highcharts-plot-line "]')
+    const plotLines = container.querySelectorAll(`[class^="highcharts-plot-line "]`)
     expect(plotLines).toHaveLength(3)
   })
 
