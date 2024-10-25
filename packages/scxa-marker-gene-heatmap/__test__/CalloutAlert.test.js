@@ -13,7 +13,7 @@ describe(`CalloutAlert`, () => {
     }
   }
 
-  it(`prints all the relevant error information`, () => {
+  test(`prints all the relevant error information`, () => {
     render(<CalloutAlert {...props} />)
 
     expect(screen.getByText((content, element) => {
@@ -29,7 +29,7 @@ describe(`CalloutAlert`, () => {
     })).toBeInTheDocument()
   })
 
-  it(`matches snapshot`, () => {
+  test(`matches snapshot`, () => {
     const tree = renderer.create(<CalloutAlert {...props} />).toJSON()
     expect(tree).toMatchSnapshot()
   })
