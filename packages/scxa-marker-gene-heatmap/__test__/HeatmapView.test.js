@@ -1,21 +1,9 @@
 import React from 'react'
-import Enzyme, {mount} from 'enzyme'
-import {shallow} from 'enzyme'
-import Adapter from 'enzyme-adapter-react-16'
-
-import '@babel/polyfill'
+import { render, screen } from '@testing-library/react'
 import fetchMock from 'fetch-mock'
-
 import HeatmapView from '../src/HeatmapView'
-import CalloutAlert from '../src/CalloutAlert'
-
-Enzyme.configure({ adapter: new Adapter() })
 
 describe(`HeatmapView`, () => {
-  beforeEach(() => {
-    fetchMock.restore()
-  })
-
   const props = {
     host: `foo/`,
     resource: `bar`,
@@ -23,20 +11,31 @@ describe(`HeatmapView`, () => {
     heatmapType: `clusters`
   }
 
+  beforeEach(() => {
+    fetchMock.restore()
+  })
+
   test(`renders error if API request is unsuccessful`, () => {
-    const wrapper = shallow(<HeatmapView {...props} />)
-    expect(wrapper.exists(CalloutAlert)).toBe(true)
+    render(<HeatmapView {...props} />)
+
+    // Check if CalloutAlert is rendered
+    expect(screen.getByText((content, element) => {
+      return content.includes(`Error`)
+    })).toBeInTheDocument()
   })
 
   test(`matches snapshot when heatmap type is multiexperimentcelltypes`, () => {
-    expect(mount(<HeatmapView {...props} heatmapType={`multiexperimentcelltypes`}/>)).toMatchSnapshot()
+    const { asFragment } = render(<HeatmapView {...props} heatmapType="multiexperimentcelltypes" />)
+    expect(asFragment()).toMatchSnapshot()
   })
 
   test(`matches snapshot when heatmap type is clusters`, () => {
-    expect(mount(<HeatmapView {...props} heatmapType={`clusters`}/>)).toMatchSnapshot()
+    const { asFragment } = render(<HeatmapView {...props} heatmapType="clusters" />)
+    expect(asFragment()).toMatchSnapshot()
   })
 
   test(`matches snapshot when heatmap type is celltypes`, () => {
-    expect(mount(<HeatmapView {...props} heatmapType={`celltypes`}/>)).toMatchSnapshot()
+    const { asFragment } = render(<HeatmapView {...props} heatmapType="celltypes" />)
+    expect(asFragment()).toMatchSnapshot()
   })
 })

@@ -1,45 +1,31 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`LoadingOverlay matches snapshot when hidden 1`] = `
-<LoadingOverlay
-  resourcesUrl=""
-  show={false}
->
-  <styled.div
-    show={false}
+<DocumentFragment>
+  <div
+    class="sc-aXZVg kYawNo"
   >
-    <div
-      className="sc-bdnylx bqQJZW"
-    >
-      <p>
-        Loading, please wait...
-      </p>
-      <img
-        src="test-file-stub"
-      />
-    </div>
-  </styled.div>
-</LoadingOverlay>
+    <p>
+      Loading, please wait...
+    </p>
+    <img
+      src="test-file-stub"
+    />
+  </div>
+</DocumentFragment>
 `;
 
 exports[`LoadingOverlay matches snapshot when shown 1`] = `
-<LoadingOverlay
-  resourcesUrl=""
-  show={true}
->
-  <styled.div
-    show={true}
+<DocumentFragment>
+  <div
+    class="sc-aXZVg bGqqkF"
   >
-    <div
-      className="sc-bdnylx dRCoQz"
-    >
-      <p>
-        Loading, please wait...
-      </p>
-      <img
-        src="test-file-stub"
-      />
-    </div>
-  </styled.div>
-</LoadingOverlay>
+    <p>
+      Loading, please wait...
+    </p>
+    <img
+      src="test-file-stub"
+    />
+  </div>
+</DocumentFragment>
 `;
