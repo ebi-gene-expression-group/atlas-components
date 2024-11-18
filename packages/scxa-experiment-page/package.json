@@ -5,7 +5,7 @@
     "access": "public"
   },
   "description": "Single cell experiment page integration component",
-  "main": "index.js",
+  "main": "html/index.js",
   "author": "Expression Atlas developers <atlas-developers@ebi.ac.uk>",
   "collaborators": [
     "Alfonso Muñoz-Pomer Fuentes <amunoz@ebi.ac.uk>",

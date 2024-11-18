@@ -6,7 +6,7 @@ const vendorsBundleName = `vendors`
 
 module.exports = {
   entry: {
-    experimentPageDemo: [`whatwg-fetch`, `@babel/polyfill`, `./index.js`]
+    experimentPageDemo: [`whatwg-fetch`, `@babel/polyfill`, `./html/index.js`]
   },
 
   plugins: [

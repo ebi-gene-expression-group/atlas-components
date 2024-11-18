@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-import ExperimentPageRouter from './src/ExperimentPageRouter'
+import ExperimentPageRouter from '../src/index'
 
 const render = (options, mountNodeId) => {
   ReactDOM.render(
