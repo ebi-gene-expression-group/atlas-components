@@ -104,19 +104,29 @@ const MarkerGeneHeatmap = (props) => {
       const color = `#000000`
       const zIndex = 5
       const splitCellTypeLabel = splitPhrase(heatmapOptionsProvider[heatmapType].labelsFormatter(cellTypeOrClusterId))
-      const shortenCellTypeLabel = splitCellTypeLabel.length <= 3 ? splitCellTypeLabel.join(`<br/>`) : splitCellTypeLabel.slice(0, 3).join(`<br/>`) + `...`
       plotLines.push({
         color,
         width: 2,
         value: plotLineAxisPosition,
         zIndex,
         label: heatmapType !== `multiexperimentcelltypes` && {
-          text: shortenCellTypeLabel,
+          text: splitCellTypeLabel,
           align: `right`,
           textAlign: `left`,
           rotation: heatmapType === `celltypes` ? -45 : 0,
           x: heatmapType === `celltypes` ? 3 : 0,
-          y: yOffset
+          y: yOffset,
+          formatter: () => {
+            const shortenCellTypeLabel = numberOfRows === 1 ?
+              splitCellTypeLabel.slice(0, 1).join(`<br/>`) + `...` :
+              splitCellTypeLabel.length <= 3 ?
+                splitCellTypeLabel.join(`<br/>`) :
+                splitCellTypeLabel.slice(0, 3).join(`<br/>`) + `...`
+            return shortenCellTypeLabel
+          },
+          style: {
+            cursor: `pointer` // Indicate it's interactive
+          }
         }
       })
     })
@@ -129,7 +139,66 @@ const MarkerGeneHeatmap = (props) => {
       animation: false,
       marginRight: data.length !== 0 ? 100 : 0,
       plotBackgroundColor: `#eaeaea`,
-      spacingBottom: 0
+      spacingBottom: 0,
+      events: {
+        render: function () {
+          const chart = this
+
+          // Find the label by className
+          chart.yAxis[0].plotLinesAndBands.forEach(plotLine => {
+            if (plotLine.label) {
+              // Get the rendered SVG label element
+              const label = plotLine.label.element
+
+              label.addEventListener(`mouseover`, function () {
+                const tooltip = document.createElement(`div`)
+                tooltip.className = `custom-tooltip`
+                tooltip.style.position = `absolute`
+                tooltip.style.background = `#fff`
+                tooltip.style.border = `1px solid #ccc`
+                tooltip.style.padding = `1px`
+                tooltip.style.pointerEvents = `none`
+                tooltip.style.zIndex = 1000
+
+                // Add styling for better display
+                tooltip.style.maxWidth = `60px` // Restrict width
+                tooltip.style.wordWrap = `break-word` // Enable word wrapping
+                tooltip.style.boxShadow = `0 2px 5px rgba(0,0,0,0.3)` // Add subtle shadow for visibility
+
+                tooltip.innerText = plotLine.options.label.text
+
+                // Position tooltip
+                chart.container.appendChild(tooltip)
+                tooltip.style.left = `${label.getBoundingClientRect().left + window.scrollX}px`
+                tooltip.style.top = `${label.getBoundingClientRect().top + window.scrollY - tooltip.offsetHeight}px`
+
+                // Position tooltip
+                const labelBBox = label.getBoundingClientRect()
+                const containerBBox = chart.container.getBoundingClientRect()
+                const tooltipX = labelBBox.left - containerBBox.left + labelBBox.width / 2 - tooltip.style.maxWidth / 2
+
+                // Adjust position dynamically to prevent overflow
+                const tooltipRect = tooltip.getBoundingClientRect()
+                if (tooltipRect.right > window.innerWidth) {
+                  tooltip.style.left = `${window.innerWidth - tooltipRect.width}px` // Align to the right edge
+                } else {
+                  tooltip.style.left = `${tooltipX}px` // Default positioning
+                }
+
+                // Save for removal
+                label._tooltip = tooltip
+              })
+              label.addEventListener(`mouseout`, function () {
+                // Remove tooltip
+                if (label._tooltip) {
+                  label._tooltip.remove()
+                  label._tooltip = null
+                }
+              })
+            }
+          })
+        }
+      }
     },
     lang: {
       noData: heatmapOptionsProvider[heatmapType].noData
@@ -195,7 +264,6 @@ const MarkerGeneHeatmap = (props) => {
     },
 
     tooltip: heatmapOptionsProvider[heatmapType].tooltip,
-
     colorAxis: {
       type: `logarithmic`,
       min: 0.1,
