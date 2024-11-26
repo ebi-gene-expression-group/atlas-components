@@ -15,7 +15,7 @@ import URI from 'urijs'
 import heatmapOptionsProvider from './heatmapOptionsProvider'
 
 // initialise modules
-async function addModules () {
+async function addModules() {
   HighchartsHeatmap(Highcharts)
   HighchartsNoData(Highcharts)
   HighchartsExporting(Highcharts)
@@ -26,12 +26,20 @@ async function addModules () {
 addModules()
 
 const splitPhrase = (phrase, maxLineLength = 12) => {
-  const splitPhrase = [``]
+  const splitPhrase = []
 
   const words = phrase.split(/\s+/)
+
+  // Add first word to the first line if splitPhrase is empty
+  if (words.length > 0) {
+    splitPhrase.push(words.shift())
+  }
+
   while (words.length > 0) {
     const nextWord = words.shift()
-    if (splitPhrase[splitPhrase.length - 1].length + nextWord.length < maxLineLength) {
+
+    // Check if adding the next word would exceed the maxLineLength
+    if (splitPhrase[splitPhrase.length - 1].length + nextWord.length + 1 <= maxLineLength) {
       splitPhrase[splitPhrase.length - 1] = `${splitPhrase[splitPhrase.length - 1]} ${nextWord}`
     } else {
       splitPhrase.push(nextWord)
