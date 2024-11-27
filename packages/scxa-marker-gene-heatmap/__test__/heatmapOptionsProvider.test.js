@@ -80,7 +80,7 @@ describe(`heatmapOptionsProvider.multiexperimentcelltypes.labelsFormatter`, () =
     const experimentAccession = `E-ANND-0001`
     const result = labelsFormatter(experimentAccession, host)
 
-    expect(result).not.toContain(`<img src="${experimentImageURl}"`)
+    expect(result).toContain(`<img src="${experimentImageURl}"`)
     expect(result).toContain(`E-ANND-0001`)
     expect(result).toContain(`href="${host}/experiments/E-ANND-0001"`)
   })
