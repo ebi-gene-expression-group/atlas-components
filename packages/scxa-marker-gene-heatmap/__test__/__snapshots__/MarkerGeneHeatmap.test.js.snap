@@ -9,7 +9,7 @@ exports[`MarkerGeneHeatmap matches snapshot when heatmap type is celltypes 1`] =
     <div
       class="highcharts-container "
       dir="ltr"
-      id="highcharts-t7rji18-165472"
+      id="highcharts-961kin0-165472"
       style="position: relative; overflow: hidden; width: 600px; height: 400px; text-align: left; line-height: normal; z-index: 0; user-select: none; outline: none;"
     >
       <svg
@@ -28,7 +28,7 @@ exports[`MarkerGeneHeatmap matches snapshot when heatmap type is celltypes 1`] =
         </desc>
         <defs>
           <lineargradient
-            id="highcharts-t7rji18-165473"
+            id="highcharts-961kin0-165473"
             x1="0"
             x2="1"
             y1="0"
@@ -76,7 +76,7 @@ exports[`MarkerGeneHeatmap matches snapshot when heatmap type is celltypes 1`] =
             />
           </lineargradient>
           <clippath
-            id="highcharts-t7rji18-165474-"
+            id="highcharts-961kin0-165474-"
           >
             <rect
               fill="none"
@@ -87,7 +87,7 @@ exports[`MarkerGeneHeatmap matches snapshot when heatmap type is celltypes 1`] =
             />
           </clippath>
           <clippath
-            id="highcharts-t7rji18-248207-"
+            id="highcharts-961kin0-248207-"
           >
             <rect
               fill="none"
@@ -650,7 +650,7 @@ exports[`MarkerGeneHeatmap matches snapshot when heatmap type is celltypes 1`] =
         >
           <g
             class="highcharts-series highcharts-series-0 highcharts-heatmap-series highcharts-color-0 highcharts-tracker"
-            clip-path="url(#highcharts-t7rji18-248207-)"
+            clip-path="url(#highcharts-961kin0-248207-)"
             data-z-index="0.1"
             opacity="1"
             style="cursor: crosshair;"
@@ -1518,7 +1518,7 @@ exports[`MarkerGeneHeatmap matches snapshot when heatmap type is celltypes 1`] =
               >
                 <rect
                   data-z-index="1"
-                  fill="url(#highcharts-t7rji18-165473)"
+                  fill="url(#highcharts-961kin0-165473)"
                   height="12"
                   width="480"
                   x="0"
@@ -2194,7 +2194,7 @@ exports[`MarkerGeneHeatmap matches snapshot when heatmap type is clusters 1`] = 
     <div
       class="highcharts-container "
       dir="ltr"
-      id="highcharts-t7rji18-82736"
+      id="highcharts-961kin0-82736"
       style="position: relative; overflow: hidden; width: 600px; height: 400px; text-align: left; line-height: normal; z-index: 0; user-select: none; outline: none;"
     >
       <svg
@@ -2213,7 +2213,7 @@ exports[`MarkerGeneHeatmap matches snapshot when heatmap type is clusters 1`] = 
         </desc>
         <defs>
           <lineargradient
-            id="highcharts-t7rji18-82737"
+            id="highcharts-961kin0-82737"
             x1="0"
             x2="1"
             y1="0"
@@ -2261,7 +2261,7 @@ exports[`MarkerGeneHeatmap matches snapshot when heatmap type is clusters 1`] = 
             />
           </lineargradient>
           <clippath
-            id="highcharts-t7rji18-82738-"
+            id="highcharts-961kin0-82738-"
           >
             <rect
               fill="none"
@@ -2272,7 +2272,7 @@ exports[`MarkerGeneHeatmap matches snapshot when heatmap type is clusters 1`] = 
             />
           </clippath>
           <clippath
-            id="highcharts-t7rji18-165471-"
+            id="highcharts-961kin0-165471-"
           >
             <rect
               fill="none"
@@ -2835,7 +2835,7 @@ exports[`MarkerGeneHeatmap matches snapshot when heatmap type is clusters 1`] = 
         >
           <g
             class="highcharts-series highcharts-series-0 highcharts-heatmap-series highcharts-color-0 highcharts-tracker"
-            clip-path="url(#highcharts-t7rji18-165471-)"
+            clip-path="url(#highcharts-961kin0-165471-)"
             data-z-index="0.1"
             opacity="1"
             style="cursor: crosshair;"
@@ -3695,7 +3695,7 @@ exports[`MarkerGeneHeatmap matches snapshot when heatmap type is clusters 1`] = 
               >
                 <rect
                   data-z-index="1"
-                  fill="url(#highcharts-t7rji18-82737)"
+                  fill="url(#highcharts-961kin0-82737)"
                   height="12"
                   width="480"
                   x="0"
@@ -4371,7 +4371,7 @@ exports[`MarkerGeneHeatmap matches snapshot when heatmap type is multiexperiment
     <div
       class="highcharts-container "
       dir="ltr"
-      id="highcharts-t7rji18-0"
+      id="highcharts-961kin0-0"
       style="position: relative; overflow: hidden; width: 600px; height: 400px; text-align: left; line-height: normal; z-index: 0; user-select: none; outline: none;"
     >
       <svg
@@ -4390,7 +4390,7 @@ exports[`MarkerGeneHeatmap matches snapshot when heatmap type is multiexperiment
         </desc>
         <defs>
           <lineargradient
-            id="highcharts-t7rji18-1"
+            id="highcharts-961kin0-1"
             x1="0"
             x2="1"
             y1="0"
@@ -4438,7 +4438,7 @@ exports[`MarkerGeneHeatmap matches snapshot when heatmap type is multiexperiment
             />
           </lineargradient>
           <clippath
-            id="highcharts-t7rji18-2-"
+            id="highcharts-961kin0-2-"
           >
             <rect
               fill="none"
@@ -4449,7 +4449,7 @@ exports[`MarkerGeneHeatmap matches snapshot when heatmap type is multiexperiment
             />
           </clippath>
           <clippath
-            id="highcharts-t7rji18-82735-"
+            id="highcharts-961kin0-82735-"
           >
             <rect
               fill="none"
@@ -5012,7 +5012,7 @@ exports[`MarkerGeneHeatmap matches snapshot when heatmap type is multiexperiment
         >
           <g
             class="highcharts-series highcharts-series-0 highcharts-heatmap-series highcharts-color-0 highcharts-tracker"
-            clip-path="url(#highcharts-t7rji18-82735-)"
+            clip-path="url(#highcharts-961kin0-82735-)"
             data-z-index="0.1"
             opacity="1"
             style="cursor: crosshair;"
@@ -5880,7 +5880,7 @@ exports[`MarkerGeneHeatmap matches snapshot when heatmap type is multiexperiment
               >
                 <rect
                   data-z-index="1"
-                  fill="url(#highcharts-t7rji18-1)"
+                  fill="url(#highcharts-961kin0-1)"
                   height="12"
                   width="480"
                   x="0"
