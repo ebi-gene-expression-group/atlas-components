@@ -28,23 +28,26 @@ const CLUSTER_MARKER_GENE_HEATMAP = `clusters`
 class TSnePlotViewRoute extends React.Component {
   constructor (props) {
     super(props)
-    const cellTypeValue = _first(_intersection(_map(this.props.metadata, `label`), this.props.initialCellTypeValues))
+    const getFirstExistingCellTypeValue = _first(_intersection(_map(this.props.metadata, `label`), this.props.initialCellTypeValues))
+    const cellTypeValue = getFirstExistingCellTypeValue
     const search = URI(this.props.location.search).search(true)
+    const defaultPlotType = Object.keys(this.props.defaultPlotMethodAndParameterisation)[0]
+    const defaultPlotOption = Object.values(Object.values(this.props.defaultPlotMethodAndParameterisation)[0])[0]
+    const defaultPlotOptionLabel = Object.keys(Object.values(this.props.defaultPlotMethodAndParameterisation)[0])[0]
+    const defaultSelectedKOrCellType = cellTypeValue
+      ? cellTypeValue.toLowerCase()
+      : this.props.ks.length > 0 ? this.props.ks[Math.round((this.props.ks.length - 1) / 2)].toString() : ``
     this.state = {
-      selectedPlotType: Object.keys(this.props.defaultPlotMethodAndParameterisation)[0],
+      selectedPlotType: defaultPlotType,
       geneId: ``,
-      selectedPlotOption: Object.values(Object.values(this.props.defaultPlotMethodAndParameterisation)[0])[0],
-      selectedPlotOptionLabel: Object.keys(Object.values(this.props.defaultPlotMethodAndParameterisation)[0])[0] + `: ` +
-          Object.values(Object.values(this.props.defaultPlotMethodAndParameterisation)[0])[0],
-      selectedColourBy: cellTypeValue
-        ? cellTypeValue.toLowerCase()
-        : this.props.ks.length > 0 ? this.props.ks[Math.round((this.props.ks.length - 1) / 2)].toString() : ``,
+      selectedPlotOption: defaultPlotOption,
+      selectedPlotOptionLabel: defaultPlotOptionLabel + `: ` +
+          defaultPlotOption,
+      selectedColourBy: defaultSelectedKOrCellType,
       highlightClusters: [],
       experimentAccession: this.props.experimentAccession,
       selectedColourByCategory: isNaN(search.k) ? METADATA_PLOT : CLUSTERS_PLOT,
-      selectedClusterId: cellTypeValue
-        ? cellTypeValue.toLowerCase()
-        : this.props.ks.length > 0 ? this.props.ks[Math.round((this.props.ks.length - 1) / 2)].toString() : ``,
+      selectedClusterId: defaultSelectedKOrCellType,
       selectedClusterIdOption: ``
     }
   }
@@ -62,6 +65,8 @@ class TSnePlotViewRoute extends React.Component {
           plotOptions: plotTypesAndOptions[plot]
         }))
 
+    // some experiments may have more than one organ anatomogram views, so far we decided to show the one which has the
+    // most available ontologies view
     let organWithMostOntologies = Object.keys(anatomogram)[0]
     for (const availableOrgan in anatomogram) {
       organWithMostOntologies = anatomogram[availableOrgan].length > anatomogram[organWithMostOntologies].length
@@ -108,11 +113,12 @@ class TSnePlotViewRoute extends React.Component {
           }
           onChangePlotTypes={
             (plotOption) => {
+              const defaultPlotType = defaultPlotMethodAndParameterisation[plotOption.value]
               this.setState({
                 selectedPlotType: plotOption.value,
-                selectedPlotOption: Object.values(defaultPlotMethodAndParameterisation[plotOption.value])[0],
-                selectedPlotOptionLabel: Object.keys(defaultPlotMethodAndParameterisation[plotOption.value])[0] +
-                    `: ` + Object.values(defaultPlotMethodAndParameterisation[plotOption.value])[0]
+                selectedPlotOption: Object.values(defaultPlotType)[0],
+                selectedPlotOptionLabel: Object.keys(defaultPlotType)[0] +
+                    `: ` + Object.values(defaultPlotType)[0]
               })
 
               updateUrlWithParams([{ plotType: plotOption.value }, { plotOption: Object.values(defaultPlotMethodAndParameterisation[plotOption.value])[0] }])
@@ -332,7 +338,9 @@ TSnePlotViewRoute.propTypes = {
   }).isRequired).isRequired,
   selectedK: PropTypes.number,
   anatomogram: PropTypes.object.isRequired,
-  initialCellTypeValues: PropTypes.arrayOf(PropTypes.string)
+  initialCellTypeValues: PropTypes.arrayOf(PropTypes.string),
+  defaultPlotMethodAndParameterisation: PropTypes.object.isRequired,
+  plotTypesAndOptions: PropTypes.object.isRequired
 }
 
 TSnePlotViewRoute.defaultProps = {

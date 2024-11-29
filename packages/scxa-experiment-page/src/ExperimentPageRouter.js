@@ -4,7 +4,7 @@ import { BrowserRouter, Route, Redirect, Switch, NavLink, withRouter } from 'rea
 
 import URI from 'urijs'
 
-import TSnePlotViewRoute from './TSnePlotViewRoute'
+import ExperimentPageSubTabRoute from './ExperimentPageSubTabRoute'
 import ExperimentDesignRoute from './ExperimentDesignRoute'
 import SupplementaryInformationRoute from './SupplementaryInformationRoute'
 import DownloadsRoute from './DownloadsRoute'
@@ -25,7 +25,7 @@ const TabCommonPropTypes = {
 
 // What component each tab type should render, coupled to ExperimentController.java
 const tabTypeComponent = {
-  results: TSnePlotViewRoute,
+  results: ExperimentPageSubTabRoute,
   'experiment-design': ExperimentDesignRoute,
   'supplementary-information': SupplementaryInformationRoute,
   downloads: DownloadsRoute
