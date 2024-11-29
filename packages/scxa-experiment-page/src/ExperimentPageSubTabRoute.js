@@ -25,7 +25,7 @@ const METADATA_PLOT = `metadata`
 const CELL_TYPE_MARKER_GENE_HEATMAP = `celltypes`
 const CLUSTER_MARKER_GENE_HEATMAP = `clusters`
 
-class TSnePlotViewRoute extends React.Component {
+class ExperimentPageSubTabRoute extends React.Component {
   constructor (props) {
     super(props)
     const getFirstExistingCellTypeValue = _first(_intersection(_map(this.props.metadata, `label`), this.props.initialCellTypeValues))
@@ -320,7 +320,7 @@ RedirectWithSearchAndHash.propTypes = {
   }).isRequired
 }
 
-TSnePlotViewRoute.propTypes = {
+ExperimentPageSubTabRoute.propTypes = {
   match: PropTypes.object.isRequired,
   location: PropTypes.object.isRequired,
   history: PropTypes.object.isRequired,
@@ -343,8 +343,8 @@ TSnePlotViewRoute.propTypes = {
   plotTypesAndOptions: PropTypes.object.isRequired
 }
 
-TSnePlotViewRoute.defaultProps = {
+ExperimentPageSubTabRoute.defaultProps = {
   initialCellTypeValues: [`Inferred cell type - ontology labels`, `Inferred cell type - authors labels`, `Cell type`, `Progenitor cell type`]
 }
 
-export default TSnePlotViewRoute
+export default ExperimentPageSubTabRoute
