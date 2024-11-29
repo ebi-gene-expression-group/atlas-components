@@ -25,19 +25,19 @@ const TabCommonPropTypes = {
 
 // What component each tab type should render, coupled to ExperimentController.java
 const tabTypeComponent = {
-  'results' : TSnePlotViewRoute,
-  'experiment-design' : ExperimentDesignRoute,
-  'supplementary-information' : SupplementaryInformationRoute,
-  'downloads' : DownloadsRoute
+  results: TSnePlotViewRoute,
+  'experiment-design': ExperimentDesignRoute,
+  'supplementary-information': SupplementaryInformationRoute,
+  downloads: DownloadsRoute
 }
 
-const TopRibbon = ({tabs, routeProps}) =>
+const TopRibbon = ({ tabs, routeProps }) =>
   <ul className={`tabs`}>
     {
       tabs.map((tab) =>
         <li title={tab.name} key={tab.type} className={`tabs-title`}>
-          <NavLink to={{pathname:`/${tab.type}`, search: routeProps.location.search, hash: routeProps.location.hash}}
-                   activeClassName={`active`}>
+          <NavLink to={{ pathname: `/${tab.type}`, search: routeProps.location.search, hash: routeProps.location.hash }}
+            activeClassName={`active`}>
             {tab.name}
           </NavLink>
         </li>
@@ -53,8 +53,7 @@ TopRibbon.propTypes = {
   routeProps: PropTypes.shape(RoutePropTypes)
 }
 
-
-const TabContent = ({type, tabProps, commonProps, routeProps}) => {
+const TabContent = ({ type, tabProps, commonProps, routeProps }) => {
   // Pass in the search from location
   const Tab = tabTypeComponent[type]
 
@@ -71,7 +70,7 @@ TabContent.propTypes = {
 }
 
 const RedirectWithSearchAndHash = (props) =>
-  <Redirect to={{ pathname: props.pathname, search: props.location.search, hash: props.location.hash}} />
+  <Redirect to={{ pathname: props.pathname, search: props.location.search, hash: props.location.hash }} />
 
 RedirectWithSearchAndHash.propTypes = {
   pathname: PropTypes.string.isRequired,
@@ -83,7 +82,7 @@ RedirectWithSearchAndHash.propTypes = {
 
 const RedirectWithLocation = withRouter(RedirectWithSearchAndHash)
 
-const ExperimentPageRouter = ({atlasUrl, resourcesUrl, experimentAccession, species, accessKey, tabs}) => {
+const ExperimentPageRouter = ({ atlasUrl, resourcesUrl, experimentAccession, species, accessKey, tabs }) => {
   const tabCommonProps = {
     atlasUrl,
     resourcesUrl,
