@@ -12,6 +12,7 @@ import BioentityInformation from '@ebi-gene-expression-group/atlas-bioentity-inf
 import { withFetchLoader } from '@ebi-gene-expression-group/atlas-react-fetch-loader'
 
 import { intersection as _intersection, first as _first, map as _map } from 'lodash'
+import { plotTypeDropdown, updateUrlWithParams, getPlotOption, preferredK, organWithMostOntologies } from './subTabRoutesHelper'
 
 const BioentityInformationWithFetchLoader = withFetchLoader(BioentityInformation)
 
@@ -58,22 +59,6 @@ class ExperimentPageSubTabRoute extends React.Component {
     const { species, experimentAccession, accessKey, ks, ksWithMarkerGenes, plotTypesAndOptions, metadata, anatomogram } = this.props
     const search = URI(location.search).search(true)
 
-    const plotTypeDropdown =
-      Object.keys(defaultPlotMethodAndParameterisation)
-        .map(plot => ({
-          plotType: plot,
-          plotOptions: plotTypesAndOptions[plot]
-        }))
-
-    // some experiments may have more than one organ anatomogram views, so far we decided to show the one which has the
-    // most available ontologies view
-    let organWithMostOntologies = Object.keys(anatomogram)[0]
-    for (const availableOrgan in anatomogram) {
-      organWithMostOntologies = anatomogram[availableOrgan].length > anatomogram[organWithMostOntologies].length
-        ? availableOrgan
-        : organWithMostOntologies
-    }
-
     const routes = [
       {
         path: `/cell-plots`,
@@ -101,10 +86,10 @@ class ExperimentPageSubTabRoute extends React.Component {
           height={800}
           onSelectGeneId={
             (geneId) => {
-              updateUrlWithParams([{ geneId }])
+              updateUrlWithParams(history, [{ geneId }])
             }
           }
-          plotTypeDropdown={plotTypeDropdown}
+          plotTypeDropdown={plotTypeDropdown(defaultPlotMethodAndParameterisation, plotTypesAndOptions)}
           selectedPlotOptionLabel={search.plotOption
             ? search.plotType
               ? getPlotOption(search.plotType.toLowerCase())
@@ -121,7 +106,7 @@ class ExperimentPageSubTabRoute extends React.Component {
                     `: ` + Object.values(defaultPlotType)[0]
               })
 
-              updateUrlWithParams([{ plotType: plotOption.value }, { plotOption: Object.values(defaultPlotMethodAndParameterisation[plotOption.value])[0] }])
+              updateUrlWithParams(history, [{ plotType: plotOption.value }, { plotOption: Object.values(defaultPlotMethodAndParameterisation[plotOption.value])[0] }])
             }
           }
           onChangePlotOptions={
@@ -130,7 +115,7 @@ class ExperimentPageSubTabRoute extends React.Component {
                 selectedPlotOption: plotOption.value,
                 selectedPlotOptionLabel: plotOption.label
               })
-              updateUrlWithParams([{ plotOption: plotOption.value }])
+              updateUrlWithParams(history, [{ plotOption: plotOption.value }])
             }
           }
 
@@ -149,7 +134,7 @@ class ExperimentPageSubTabRoute extends React.Component {
                 queryParams.push({ colourBy: colourByValue })
               }
 
-              updateUrlWithParams(queryParams)
+              updateUrlWithParams(history, queryParams)
             }
           }
         />
@@ -170,7 +155,7 @@ class ExperimentPageSubTabRoute extends React.Component {
           }
           wrapperClassName={`row expanded`}
           ks={ks}
-          selectedClusterByCategory={search.cellGroupType || search.k || preferredK}
+          selectedClusterByCategory={search.cellGroupType || search.k || preferredK(this.props)}
           selectedK={this.state.selectedColourByCategory === METADATA_PLOT ? this.state.selectedColourBy : this.state.selectedClusterId}
           onSelectK={(colourByValue) => {
             // If marker gene heatmap is coloured by numeric k values
@@ -180,13 +165,13 @@ class ExperimentPageSubTabRoute extends React.Component {
                 selectedColourBy: colourByValue,
                 selectedColourByCategory: METADATA_PLOT
               })
-              updateUrlWithParams([{ colourBy: colourByValue }])
+              updateUrlWithParams(history, [{ colourBy: colourByValue }])
             } else {
               this.setState({
                 selectedClusterId: colourByValue,
                 selectedColourByCategory: CLUSTERS_PLOT
               })
-              updateUrlWithParams([{ k: colourByValue }])
+              updateUrlWithParams(history, [{ k: colourByValue }])
             }
           }
           }
