@@ -191,10 +191,10 @@ class ExperimentPageSubTabRoute extends React.Component {
         title: `Anatomogram`,
         main: () =>
           <AnatomogramCellTypeHeatmapView
-            showIds={anatomogram[organWithMostOntologies]}
+            showIds={anatomogram[organWithMostOntologies(anatomogram)]}
             experimentAccession={experimentAccession}
             species={species}
-            organ={organWithMostOntologies}
+            organ={organWithMostOntologies(anatomogram)}
             host={atlasUrl}
           />
       },
@@ -208,87 +208,39 @@ class ExperimentPageSubTabRoute extends React.Component {
       }
     ]
 
-    const updateUrl = (query) => {
-      history.push({ ...history.location, search: query.toString() })
-    }
-
-    const resetHighlightClusters = (query) => {
-      if (query.has(`clusterId`)) {
-        query.delete(`clusterId`)
-      }
-    }
-
-    const updateUrlWithParams = (params) => {
-      const query = new URLSearchParams(history.location.search)
-      params.forEach(param => query.set(Object.keys(param)[0], Object.values(param)[0]))
-      resetHighlightClusters(query)
-      updateUrl(query)
-    }
-
-    const getPlotOption = (selectedPlotType) => {
-      return Object.keys(plotTypeDropdown[plotTypeDropdown.findIndex(
-        (plot) => plot.plotType.toLowerCase() === selectedPlotType)].plotOptions[0])[0] + `: ` + search.plotOption
-    }
-
-    const preferredK = this.props.selectedK
-      ? this.props.selectedK.toString()
-      : this.props.ks.length > 0
-        ? this.props.ks[0].toString()
-        : ``
-
     const basename = URI(`experiments/${experimentAccession}${match.path}`, URI(atlasUrl).path()).toString()
-
     const sideTabStyle = { overflow: `clip`, textOverflow: `ellipsis` }
+
     return (
       <BrowserRouter basename={basename}>
-        <div className={`row expanded`}>
-          <div
-            className={`small-3 medium-2 large-1 columns`}
-            style={{
-              padding: 0,
-              background: `#ffffff`
-            }}>
-            <ul className={`side-tabs`}>
-              <li title={routes[0].title} className={`side-tabs-title`}>
-                <NavLink to={{ pathname: routes[0].path, search: location.search, hash: location.hash }}
-                  activeClassName={`active`} style={sideTabStyle}>
-                  {routes[0].title}</NavLink>
-              </li>
-              <li title={routes[1].title} className={`side-tabs-title`}>
-                <NavLink to={{ pathname: routes[1].path, search: location.search, hash: location.hash }}
-                  activeClassName={`active`} style={sideTabStyle}>
-                  {routes[1].title}</NavLink>
-              </li>
-              {
-                species === `homo sapiens` && Object.keys(anatomogram).length > 0 &&
-                <li title={routes[2].title} className={`side-tabs-title`}>
-                  <NavLink to={{ pathname: routes[2].path, search: location.search, hash: location.hash }}
-                    activeClassName={`active`} style={sideTabStyle}>
-                    {routes[2].title}</NavLink>
-                </li>
-              }
-              {
-                search.geneId &&
-                  <li title={routes[3].title} className={`side-tabs-title`}>
-                    <NavLink to={{ pathname: routes[3].path, search: location.search, hash: location.hash }}
-                      activeClassName={`active`} style={sideTabStyle}>
-                      {routes[3].title}</NavLink>
+        <div className="row expanded">
+          {/* Sidebar */}
+          <div className="small-3 medium-2 large-1 columns" style={{ padding: 0, background: `#ffffff` }}>
+            <ul className="side-tabs">
+              {routes.map((route, index) => (
+                (index < 2 || (species === `homo sapiens` && Object.keys(anatomogram).length > 0 && index === 2) ||
+                        (search.geneId && index === 3)) && (
+                  <li key={index} title={route.title} className="side-tabs-title">
+                    <NavLink
+                      to={{ pathname: route.path, search: location.search, hash: location.hash }}
+                      activeClassName="active"
+                      style={sideTabStyle}
+                    >
+                      {route.title}
+                    </NavLink>
                   </li>
-              }
+                )
+              ))}
             </ul>
           </div>
-          <div
-            className={`small-9 medium-10 large-11 columns`}
-            style={{ padding: `10px` }}>
+
+          {/* Main Content */}
+          <div className="small-9 medium-10 large-11 columns" style={{ padding: `10px` }}>
             <Switch>
               {routes.map((route, index) => (
-                <Route
-                  key={index}
-                  path={route.path}
-                  component={route.main}
-                />
+                <Route key={index} path={route.path} component={route.main} />
               ))}
-              <RedirectWithLocation pathname={`${routes[0].path}`} />
+              <RedirectWithLocation pathname={routes[0].path} />
             </Switch>
           </div>
         </div>
