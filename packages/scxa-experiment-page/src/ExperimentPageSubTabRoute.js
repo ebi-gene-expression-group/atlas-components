@@ -12,7 +12,18 @@ import BioentityInformation from '@ebi-gene-expression-group/atlas-bioentity-inf
 import { withFetchLoader } from '@ebi-gene-expression-group/atlas-react-fetch-loader'
 
 import { intersection as _intersection, first as _first, map as _map } from 'lodash'
-import { plotTypeDropdown, updateUrlWithParams, getPlotOption, preferredK, organWithMostOntologies } from './subTabRoutesHelper'
+import {
+  plotTypeDropdown,
+  updateUrlWithParams,
+  getSelectedPlotOptionLabel,
+  preferredK,
+  organWithMostOntologies,
+  formatMetadata,
+  getHighlightClusters,
+  getMarkerGenesResource,
+  getSelectedColourBy,
+  handleClusterSelection, handlePlotTypeChange, handlePlotOptionChange, handleColourByChange
+} from './subTabRoutesHelper'
 
 const BioentityInformationWithFetchLoader = withFetchLoader(BioentityInformation)
 
@@ -75,68 +86,18 @@ class ExperimentPageSubTabRoute extends React.Component {
           selectedPlotOption={search.plotOption || this.state.selectedPlotOption}
           selectedPlotType={search.plotType || this.state.selectedPlotType}
           ks={ks}
-          metadata={metadata.map(data => { return { value: data.value.replaceAll(`_`, ` `), label: data.label } })}
-          selectedColourBy={this.state.selectedColourByCategory === METADATA_PLOT
-            ? search.colourBy || this.state.selectedColourBy
-            : search.k || this.state.selectedClusterId
-          }
+          metadata={formatMetadata(metadata)}
+          selectedColourBy={getSelectedColourBy(search, this.state)}
           selectedColourByCategory={this.state.selectedColourByCategory} // Is the plot coloured by clusters or metadata
-          highlightClusters={search.clusterId ? JSON.parse(search.clusterId) : []}
+          highlightClusters={getHighlightClusters(search)}
           geneId={search.geneId || ``}
           height={800}
-          onSelectGeneId={
-            (geneId) => {
-              updateUrlWithParams(history, [{ geneId }])
-            }
-          }
+          onSelectGeneId={geneId => updateUrlWithParams([{ geneId }], history)}
           plotTypeDropdown={plotTypeDropdown(defaultPlotMethodAndParameterisation, plotTypesAndOptions)}
-          selectedPlotOptionLabel={search.plotOption
-            ? search.plotType
-              ? getPlotOption(search.plotType.toLowerCase())
-              : getPlotOption(this.state.selectedPlotType.toLowerCase())
-            : this.state.selectedPlotOptionLabel
-          }
-          onChangePlotTypes={
-            (plotOption) => {
-              const defaultPlotType = defaultPlotMethodAndParameterisation[plotOption.value]
-              this.setState({
-                selectedPlotType: plotOption.value,
-                selectedPlotOption: Object.values(defaultPlotType)[0],
-                selectedPlotOptionLabel: Object.keys(defaultPlotType)[0] +
-                    `: ` + Object.values(defaultPlotType)[0]
-              })
-
-              updateUrlWithParams(history, [{ plotType: plotOption.value }, { plotOption: Object.values(defaultPlotMethodAndParameterisation[plotOption.value])[0] }])
-            }
-          }
-          onChangePlotOptions={
-            (plotOption) => {
-              this.setState({
-                selectedPlotOption: plotOption.value,
-                selectedPlotOptionLabel: plotOption.label
-              })
-              updateUrlWithParams(history, [{ plotOption: plotOption.value }])
-            }
-          }
-
-          onChangeColourBy={
-            (colourByCategory, colourByValue) => {
-              const queryParams = []
-
-              this.setState({
-                selectedColourByCategory: colourByCategory
-              })
-              if (colourByCategory === CLUSTERS_PLOT) {
-                this.setState({ selectedClusterId: colourByValue })
-                queryParams.push({ k: colourByValue })
-              } else {
-                this.setState({ selectedColourBy: colourByValue })
-                queryParams.push({ colourBy: colourByValue })
-              }
-
-              updateUrlWithParams(history, queryParams)
-            }
-          }
+          selectedPlotOptionLabel={getSelectedPlotOptionLabel(search, this.state, plotTypeDropdown(defaultPlotMethodAndParameterisation, plotTypesAndOptions, history))}
+          onChangePlotTypes={plotOption => handlePlotTypeChange(defaultPlotMethodAndParameterisation, plotOption, this, history)}
+          onChangePlotOptions={plotOption => handlePlotOptionChange(plotOption, this, history)}
+          onChangeColourBy={ (colourByCategory, colourByValue) => handleColourByChange(colourByCategory, colourByValue, this, history)}
         />
       },
       {
@@ -144,44 +105,15 @@ class ExperimentPageSubTabRoute extends React.Component {
         title: `Marker Genes`,
         main: () => <ClustersHeatmapView
           host={atlasUrl}
-          resource={
-            this.state.selectedColourByCategory === METADATA_PLOT
-              ? URI(`json/experiments/${this.state.experimentAccession}/marker-genes-heatmap/cell-types`)
-                .search({ cellGroupType: this.state.selectedColourBy })
-                .toString()
-              : URI(`json/experiments/${this.state.experimentAccession}/marker-genes/clusters`)
-                .search({ k: this.state.selectedClusterId })
-                .toString()
-          }
+          resource={getMarkerGenesResource(this.state, experimentAccession)}
           wrapperClassName={`row expanded`}
           ks={ks}
           selectedClusterByCategory={search.cellGroupType || search.k || preferredK(this.props)}
           selectedK={this.state.selectedColourByCategory === METADATA_PLOT ? this.state.selectedColourBy : this.state.selectedClusterId}
-          onSelectK={(colourByValue) => {
-            // If marker gene heatmap is coloured by numeric k values
-            const isMetadataCluster = !parseInt(colourByValue)
-            if (isMetadataCluster) {
-              this.setState({
-                selectedColourBy: colourByValue,
-                selectedColourByCategory: METADATA_PLOT
-              })
-              updateUrlWithParams(history, [{ colourBy: colourByValue }])
-            } else {
-              this.setState({
-                selectedClusterId: colourByValue,
-                selectedColourByCategory: CLUSTERS_PLOT
-              })
-              updateUrlWithParams(history, [{ k: colourByValue }])
-            }
-          }
-          }
-          onChangeMarkerGeneFor={(selectedOption) => {
-            this.setState((state) => ({
-              selectedClusterIdOption: selectedOption
-            }))
-          }}
+          onSelectK={value => handleClusterSelection(value, this, history)}
+          onChangeMarkerGeneFor={option => this.setState({ selectedClusterIdOption: option })}
           ksWithMarkers={ksWithMarkerGenes}
-          metadata={metadata.map(data => { return { value: data.value.replaceAll(`_`, ` `), label: data.label } })}
+          metadata={formatMetadata(metadata)}
           species={species}
           heatmapType={this.state.selectedColourByCategory === METADATA_PLOT ? CELL_TYPE_MARKER_GENE_HEATMAP : CLUSTER_MARKER_GENE_HEATMAP}
         />
