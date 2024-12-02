@@ -49,12 +49,12 @@ class ExperimentPageSubTabRoute extends React.Component {
     const defaultSelectedKOrCellType = cellTypeValue
       ? cellTypeValue.toLowerCase()
       : this.props.ks.length > 0 ? this.props.ks[Math.round((this.props.ks.length - 1) / 2)].toString() : ``
+
     this.state = {
       selectedPlotType: defaultPlotType,
       geneId: ``,
       selectedPlotOption: defaultPlotOption,
-      selectedPlotOptionLabel: defaultPlotOptionLabel + `: ` +
-          defaultPlotOption,
+      selectedPlotOptionLabel: defaultPlotOptionLabel + `: ` + defaultPlotOption,
       selectedColourBy: defaultSelectedKOrCellType,
       highlightClusters: [],
       experimentAccession: this.props.experimentAccession,
