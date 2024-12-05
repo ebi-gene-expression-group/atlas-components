@@ -7,13 +7,13 @@ import HeatmapView from '@ebi-gene-expression-group/scxa-marker-gene-heatmap'
 import ontologyIds from './ontologyIds.json'
 
 const ontologyAccessionToOntologyUri = (accession) => {
-  return accession.startsWith(`EFO`) ?
-    `http://www.ebi.ac.uk/efo/${accession}` :
-    `http://purl.obolibrary.org/obo/${accession}`
+  return accession.startsWith(`EFO`)
+    ? `http://www.ebi.ac.uk/efo/${accession}`
+    : `http://purl.obolibrary.org/obo/${accession}`
 }
 
 class AnatomogramCellTypeHeatmapView extends React.Component {
-  constructor(props) {
+  constructor (props) {
     super(props)
     this.state = {
       selectedSpecies: props.organ,
@@ -23,8 +23,8 @@ class AnatomogramCellTypeHeatmapView extends React.Component {
       selectAllIds: [],
       resource:
           URI(`json/experiments/${props.experimentAccession}/marker-genes/cell-types`, props.host)
-              .search({organismPart: ontologyAccessionToOntologyUri(ontologyIds[props.organ][props.organ][0])})
-              .toString()
+            .search({ organismPart: ontologyAccessionToOntologyUri(ontologyIds[props.organ][props.organ][0]) })
+            .toString()
     }
 
     this._addRemoveFromSelectIds = this._addRemoveFromSelectIds.bind(this)
@@ -33,13 +33,13 @@ class AnatomogramCellTypeHeatmapView extends React.Component {
     this._afterSwitchView = this._afterSwitchView.bind(this)
   }
 
-  _handleSelectOnChange(event) {
+  _handleSelectOnChange (event) {
     this.setState({
       selectedSpecies: event.target.value
     })
   }
 
-  _addRemoveFromSelectIds(ids) {
+  _addRemoveFromSelectIds (ids) {
     if (ids.length === 0 || ids[0].startsWith(`link`)) {
       this.setState({
         selectIds: ids
@@ -49,44 +49,44 @@ class AnatomogramCellTypeHeatmapView extends React.Component {
         selectIds: ids,
         resource:
             URI(`json/experiments/${this.props.experimentAccession}/marker-genes/cell-types`, this.props.host)
-                .search({organismPart: ids.map(ontologyAccessionToOntologyUri).join(`,`)})
-                .toString()
+              .search({ organismPart: ids.map(ontologyAccessionToOntologyUri).join(`,`) })
+              .toString()
       })
     }
   }
 
-  _afterSwitchView(species, view) {
+  _afterSwitchView (species, view) {
     let requestOntologyIds = []
 
     if (ontologyIds[species] && ontologyIds[species][view]) {
       requestOntologyIds = ontologyIds[species][view]
     }
 
-  this.setState({
-       resource:
+    this.setState({
+      resource:
          URI(`json/experiments/${this.props.experimentAccession}/marker-genes/cell-types`, this.props.host)
            .search({ organismPart: requestOntologyIds.map(ontologyAccessionToOntologyUri).join(`,`) })
            .toString()
     })
   }
 
-  _showLinkBoxIds(id) {
+  _showLinkBoxIds (id) {
     this.setState({
       showIds: [...new Set(id.concat(this.state.showIds))]
     })
   }
 
-  render() {
-    const {host} = this.props
+  render () {
+    const { host } = this.props
 
     const heatmapArgs = {
-      host: host,
+      host,
       resource: this.state.resource,
       species: `Homo sapiens`,
       hasDynamicHeight: true,
       heatmapRowHeight: 20,
       wrapperClassName: `row expanded`,
-      heatmapType: 'celltypes'
+      heatmapType: `celltypes`
     }
 
     return (

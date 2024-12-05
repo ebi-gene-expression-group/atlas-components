@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 import Linkify from 'linkifyjs/react'
 
-const AnalysisMethodsTable = ({data}) =>
+const AnalysisMethodsTable = ({ data }) =>
   <table>
     <thead>
       <tr>

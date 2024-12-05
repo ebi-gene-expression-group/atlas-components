@@ -12,30 +12,30 @@ const aggregateText = (name, vals) => {
   return (
     xs.length === 1 || (xs.length < 5 && xs.join(`, `).length < 30)
       ? xs.join(`, `)
-      : toPlural(name.toLowerCase() , xs.length, true)
+      : toPlural(name.toLowerCase(), xs.length, true)
   )
 }
 
-const ExperimentDesignTable = ({data, headers}) =>
+const ExperimentDesignTable = ({ data, headers }) =>
   <div>
     <ReactTableStyle/>
     <ReactTable
       columns={
-        headers.map((headerGroup, ix)=> (
+        headers.map((headerGroup, ix) => (
           {
             Header: headerGroup.name,
             columns:
               headerGroup.values.map((header, jx) => ({
                 aggregate: curry(aggregateText, 2)(header),
                 Header: header,
-                id: ix*1000 +jx +1,
+                id: ix * 1000 + jx + 1,
                 accessor: r => r.values[ix][jx]
               }))
           }
         ))
       }
       className={`-striped`}
-      style={{fontSize: `small`}}
+      style={{ fontSize: `small` }}
       data={data} />
   </div>
 

@@ -4,7 +4,7 @@ import URI from 'urijs'
 
 import ExperimentDesignTable from './experiment-design/ExperimentDesignTable'
 
-const ExperimentDesignRoute = ({atlasUrl, downloadUrl, table}) =>
+const ExperimentDesignRoute = ({ atlasUrl, downloadUrl, table }) =>
   <div className={`row expanded margin-top-large`}>
     <div className={`small-12 columns text-right`}>
       <a className={`button`} href={URI(downloadUrl, atlasUrl).toString()}>
@@ -39,6 +39,5 @@ ExperimentDesignRoute.propTypes = {
     }).isRequired).isRequired
   }).isRequired
 }
-
 
 export default ExperimentDesignRoute
