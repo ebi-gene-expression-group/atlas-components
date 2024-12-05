@@ -16,7 +16,8 @@ const SectionContent = ({type, props, atlasUrl}) => {
 
 const SupplementaryInformationRoute = (props) => {
   const annDataText =
-      'This methods summary is based on information provided by the authors or described in the associated ' +
+      `This methods summary is based on information provided by the authors or described in the associated ` +
+      `publication, the data have not been re-analysed by Single Cell Expression Atlas`
       'publication, the data have not been re-analysed by Single Cell Expression Atlas'
 
   const sections = props.sections.map((section) =>
