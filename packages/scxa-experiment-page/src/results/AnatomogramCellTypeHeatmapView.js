@@ -12,6 +12,10 @@ const ontologyAccessionToOntologyUri = (accession) => {
     : `http://purl.obolibrary.org/obo/${accession}`
 }
 
+const buildResource = (experimentAccession, host) => {
+  return URI(`json/experiments/${experimentAccession}/marker-genes/cell-types`, host)
+}
+
 class AnatomogramCellTypeHeatmapView extends React.Component {
   constructor (props) {
     super(props)
@@ -21,10 +25,9 @@ class AnatomogramCellTypeHeatmapView extends React.Component {
       highlightIds: [],
       selectIds: [],
       selectAllIds: [],
-      resource:
-          URI(`json/experiments/${props.experimentAccession}/marker-genes/cell-types`, props.host)
-            .search({ organismPart: ontologyAccessionToOntologyUri(ontologyIds[props.organ][props.organ][0]) })
-            .toString()
+      resource: buildResource(props.experimentAccession, props.host)
+        .search({ organismPart: ontologyAccessionToOntologyUri(ontologyIds[props.organ][props.organ][0]) })
+        .toString()
     }
 
     this._addRemoveFromSelectIds = this._addRemoveFromSelectIds.bind(this)
@@ -48,7 +51,7 @@ class AnatomogramCellTypeHeatmapView extends React.Component {
       this.setState({
         selectIds: ids,
         resource:
-            URI(`json/experiments/${this.props.experimentAccession}/marker-genes/cell-types`, this.props.host)
+            buildResource(this.props.experimentAccession, this.props.host)
               .search({ organismPart: ids.map(ontologyAccessionToOntologyUri).join(`,`) })
               .toString()
       })
@@ -64,9 +67,9 @@ class AnatomogramCellTypeHeatmapView extends React.Component {
 
     this.setState({
       resource:
-         URI(`json/experiments/${this.props.experimentAccession}/marker-genes/cell-types`, this.props.host)
-           .search({ organismPart: requestOntologyIds.map(ontologyAccessionToOntologyUri).join(`,`) })
-           .toString()
+          buildResource(this.props.experimentAccession, this.props.host)
+            .search({ organismPart: requestOntologyIds.map(ontologyAccessionToOntologyUri).join(`,`) })
+            .toString()
     })
   }
 
