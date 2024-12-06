@@ -1,9 +1,12 @@
 {
   "name": "@ebi-gene-expression-group/scxa-experiment-page",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "publishConfig": {
     "access": "public"
   },
+  "files": [
+    "lib"
+  ],
   "description": "Single cell experiment page integration component",
   "main": "html/index.js",
   "author": "Expression Atlas developers <atlas-developers@ebi.ac.uk>",
