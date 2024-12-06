@@ -47,8 +47,13 @@ module.exports = {
     rules: [
       {
         test: /\.js$/i,
-        exclude: /node_modules\//,
-        use: `babel-loader`
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env', '@babel/preset-react'],
+          },
+        },
       },
       {
         test: /\.(jpe?g|png|gif)$/i,
