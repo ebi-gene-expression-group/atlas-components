@@ -26,7 +26,7 @@ function CellTypeWheelExperimentHeatmap(props) {
       try {
         const response = await fetch(url)
         if (!response.ok) {
-          throw new Error('Network response was not ok')
+          throw new Error(`Network response was not ok`)
         }
         const result = await response.json()
         setAllSpecies(result.allSpecies) // Update state with the fetched data
@@ -105,7 +105,7 @@ function CellTypeWheelExperimentHeatmap(props) {
             <MarkerGeneHeatmapFetchLoader
               host={props.host}
               resource={URI(props.heatmapResource)
-                        .segmentCoded(base64Encode(heatmapSelection.cellType)).toString()}
+                .segmentCoded(base64Encode(heatmapSelection.cellType)).toString()}
               fulfilledPayloadProvider={heatmapFulfilledPayloadProvider}
               query={{ [`experiment-accessions`]: heatmapSelection.experimentAccessions }}
               cellType={heatmapSelection.cellType}
