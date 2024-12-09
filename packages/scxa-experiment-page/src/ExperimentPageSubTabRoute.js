@@ -42,7 +42,6 @@ class ExperimentPageSubTabRoute extends React.Component {
     super(props)
     const getFirstExistingCellTypeValue = _first(_intersection(_map(this.props.metadata, `label`), this.props.initialCellTypeValues))
     const cellTypeValue = getFirstExistingCellTypeValue
-    const search = URI(this.props.location.search).search(true)
     const defaultPlotType = Object.keys(this.props.defaultPlotMethodAndParameterisation)[0]
     const defaultPlotOption = Object.values(Object.values(this.props.defaultPlotMethodAndParameterisation)[0])[0]
     const defaultPlotOptionLabel = Object.keys(Object.values(this.props.defaultPlotMethodAndParameterisation)[0])[0]
@@ -58,7 +57,7 @@ class ExperimentPageSubTabRoute extends React.Component {
       selectedColourBy: defaultSelectedKOrCellType,
       highlightClusters: [],
       experimentAccession: this.props.experimentAccession,
-      selectedColourByCategory: isNaN(search.k) ? METADATA_PLOT : CLUSTERS_PLOT,
+      selectedColourByCategory: isNaN(defaultSelectedKOrCellType) ? METADATA_PLOT : CLUSTERS_PLOT,
       selectedClusterId: defaultSelectedKOrCellType,
       selectedClusterIdOption: ``
     }
