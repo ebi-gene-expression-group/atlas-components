@@ -12,7 +12,8 @@ describe(`MarkerGeneHeatmap`, () => {
         geneName: `foo`,
         value: 13,
         cellGroupValue: `1`,
-        cellGroupValueWhereMarker: `1`
+        cellGroupValueWhereMarker: `1`,
+        expressionUnit: `unit`
       },
       {
         x: 1,
@@ -20,7 +21,8 @@ describe(`MarkerGeneHeatmap`, () => {
         geneName: `bar`,
         value: 2,
         cellGroupValue: `2`,
-        cellGroupValueWhereMarker: `2`
+        cellGroupValueWhereMarker: `2`,
+        expressionUnit: `unit`
       },
       {
         x: 2,
@@ -28,7 +30,8 @@ describe(`MarkerGeneHeatmap`, () => {
         geneName: `foobar`,
         value: 1,
         cellGroupValue: `3`,
-        cellGroupValueWhereMarker: `3`
+        cellGroupValueWhereMarker: `3`,
+        expressionUnit: `unit`
       }
     ]
     const { container } = render(
