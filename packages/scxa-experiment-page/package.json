@@ -1,6 +1,6 @@
 {
   "name": "@ebi-gene-expression-group/scxa-experiment-page",
-  "version": "1.0.4",
+  "version": "1.0.6",
   "publishConfig": {
     "access": "public"
   },
