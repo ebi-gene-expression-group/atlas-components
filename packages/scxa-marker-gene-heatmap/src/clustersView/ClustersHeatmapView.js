@@ -79,7 +79,7 @@ class HeatmapView extends React.Component {
   render() {
     const { data, filteredData, selectedClusterId, isLoading, hasError } = this.state
     const { wrapperClassName, plotWrapperClassName } = this.props
-    const { ks, ksWithMarkers, selectedK, onSelectK, metadata } = this.props
+    const { ks, ksWithMarkers, selectedK, onSelectK, markerGeneMetadata } = this.props
     const { hasDynamicHeight, defaultHeatmapHeight, heatmapRowHeight, species, host, heatmapType } = this.props
 
     const inferredCellTypeOptions = [`Inferred cell type - authors labels`, `Inferred cell type - ontology labels`]
@@ -96,8 +96,8 @@ class HeatmapView extends React.Component {
       options: kOptions
     }]
 
-    if (metadata) {
-      const metadataOptions = metadata.map((metadata) => ({
+    if (markerGeneMetadata) {
+      const metadataOptions = markerGeneMetadata.map((metadata) => ({
         ...metadata,
         isDisabled: !inferredCellTypeOptions.includes(metadata.label),
         group: `metadata`
@@ -145,7 +145,7 @@ class HeatmapView extends React.Component {
             <div className={`small-12 medium-6 columns`}>
               <PlotSettingsDropdown
                 labelText={`Cluster by:`}
-                options={metadata ? options : kOptions}
+                options={markerGeneMetadata ? options : kOptions}
                 onSelect={(selectedOption) => onSelectK(selectedOption.value)}
                 value={heatmapType === `celltypes` ?
                         {value: selectedK, label: `${capitalized(selectedK)}`} : {value: selectedK, label: `k = ${selectedK}`}}
@@ -208,9 +208,10 @@ HeatmapView.propTypes = {
   heatmapRowHeight: PropTypes.number,
   species: PropTypes.string.isRequired,
   heatmapType: PropTypes.string,
-  metadata: PropTypes.arrayOf(PropTypes.shape({
+  markerGeneMetadata: PropTypes.arrayOf(PropTypes.shape({
     value: PropTypes.string,
-    label: PropTypes.string
+    label: PropTypes.string,
+    status: PropTypes.string
   }))
 }
 
