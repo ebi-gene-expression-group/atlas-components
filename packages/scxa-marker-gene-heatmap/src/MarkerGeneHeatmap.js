@@ -13,6 +13,8 @@ import _ from 'lodash'
 import URI from 'urijs'
 
 import heatmapOptionsProvider from './heatmapOptionsProvider'
+import formatTooltip from "./tooltip"
+import splitPhrase from "./splitPhrase"
 
 // initialise modules
 async function addModules() {
@@ -24,30 +26,6 @@ async function addModules() {
 }
 
 addModules()
-
-const splitPhrase = (phrase, maxLineLength = 12) => {
-  const splitPhrase = []
-
-  const words = phrase.split(/\s+/)
-
-  // Add first word to the first line if splitPhrase is empty
-  if (words.length > 0) {
-    splitPhrase.push(words.shift())
-  }
-
-  while (words.length > 0) {
-    const nextWord = words.shift()
-
-    // Check if adding the next word would exceed the maxLineLength
-    if (splitPhrase[splitPhrase.length - 1].length + nextWord.length + 1 <= maxLineLength) {
-      splitPhrase[splitPhrase.length - 1] = `${splitPhrase[splitPhrase.length - 1]} ${nextWord}`
-    } else {
-      splitPhrase.push(nextWord)
-    }
-  }
-
-  return splitPhrase
-}
 
 Highcharts.SVGRenderer.prototype.symbols.download = (x, y, w, h) => [
   // Arrow stem
@@ -151,40 +129,7 @@ const MarkerGeneHeatmap = (props) => {
               const label = plotLine.label.element
 
               label.addEventListener(`mouseover`, function () {
-                const tooltip = document.createElement(`div`)
-                tooltip.className = `custom-tooltip`
-                tooltip.style.position = `absolute`
-                tooltip.style.background = `#fff`
-                tooltip.style.border = `1px solid #ccc`
-                tooltip.style.padding = `1px`
-                tooltip.style.pointerEvents = `none`
-                tooltip.style.zIndex = 1000
-
-                // Add styling for better display
-                tooltip.style.maxWidth = `60px` // Restrict width
-                tooltip.style.wordWrap = `break-word` // Enable word wrapping
-                tooltip.style.boxShadow = `0 2px 5px rgba(0,0,0,0.3)` // Add subtle shadow for visibility
-
-                tooltip.innerText = plotLine.options.label.text
-
-                // Position tooltip
-                chart.container.appendChild(tooltip)
-                tooltip.style.left = `${label.getBoundingClientRect().left + window.scrollX}px`
-                tooltip.style.top = `${label.getBoundingClientRect().top + window.scrollY - tooltip.offsetHeight}px`
-
-                // Position tooltip
-                const labelBBox = label.getBoundingClientRect()
-                const containerBBox = chart.container.getBoundingClientRect()
-                const tooltipX = labelBBox.left - containerBBox.left + labelBBox.width / 2 - tooltip.style.maxWidth / 2
-
-                // Adjust position dynamically to prevent overflow
-                const tooltipRect = tooltip.getBoundingClientRect()
-                if (tooltipRect.right > window.innerWidth) {
-                  tooltip.style.left = `${window.innerWidth - tooltipRect.width}px` // Align to the right edge
-                } else {
-                  tooltip.style.left = `${tooltipX}px` // Default positioning
-                }
-
+                const tooltip = formatTooltip(chart, plotLine, label)
                 // Save for removal
                 label._tooltip = tooltip
               })
