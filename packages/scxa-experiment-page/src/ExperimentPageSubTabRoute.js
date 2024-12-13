@@ -66,7 +66,7 @@ class ExperimentPageSubTabRoute extends React.Component {
   render () {
     const { location, match, history } = this.props
     const { atlasUrl, suggesterEndpoint, defaultPlotMethodAndParameterisation } = this.props
-    const { species, experimentAccession, accessKey, ks, ksWithMarkerGenes, plotTypesAndOptions, metadata, anatomogram } = this.props
+    const { species, experimentAccession, accessKey, ks, ksWithMarkerGenes, plotTypesAndOptions, metadata, anatomogram, markerGeneMetadata } = this.props
     const search = URI(location.search).search(true)
 
     const routes = [
@@ -112,7 +112,7 @@ class ExperimentPageSubTabRoute extends React.Component {
           onSelectK={value => handleClusterSelection(value, this, history)}
           onChangeMarkerGeneFor={option => this.setState({ selectedClusterIdOption: option })}
           ksWithMarkers={ksWithMarkerGenes}
-          metadata={formatMetadata(metadata)}
+          markerGeneMetadata={formatMetadata(markerGeneMetadata)}
           species={species}
           heatmapType={this.state.selectedColourByCategory === METADATA_PLOT ? CELL_TYPE_MARKER_GENE_HEATMAP : CLUSTER_MARKER_GENE_HEATMAP}
         />
@@ -208,7 +208,12 @@ ExperimentPageSubTabRoute.propTypes = {
   anatomogram: PropTypes.object.isRequired,
   initialCellTypeValues: PropTypes.arrayOf(PropTypes.string),
   defaultPlotMethodAndParameterisation: PropTypes.object.isRequired,
-  plotTypesAndOptions: PropTypes.object.isRequired
+  plotTypesAndOptions: PropTypes.object.isRequired,
+  markerGeneMetadata: PropTypes.arrayOf(PropTypes.shape({
+    label: PropTypes.string.isRequired,
+    value: PropTypes.string.isRequired,
+    status: PropTypes.string.isRequired
+  }).isRequired).isRequired
 }
 
 ExperimentPageSubTabRoute.defaultProps = {
