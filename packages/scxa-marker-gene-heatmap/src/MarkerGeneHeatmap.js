@@ -96,7 +96,9 @@ const MarkerGeneHeatmap = (props) => {
           y: yOffset,
           formatter: () => {
             const shortenCellTypeLabel = numberOfRows === 1 ?
-              splitCellTypeLabel.slice(0, 1).join(`<br/>`) + `...` :
+              splitCellTypeLabel.length === 1 ?
+                splitCellTypeLabel :
+                splitCellTypeLabel.slice(0, 1).join(`<br/>`) + `...` :
               splitCellTypeLabel.length <= 3 ?
                 splitCellTypeLabel.join(`<br/>`) :
                 splitCellTypeLabel.slice(0, 3).join(`<br/>`) + `...`
