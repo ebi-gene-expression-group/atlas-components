@@ -3,8 +3,7 @@ import PropTypes from 'prop-types'
 import LoadingOverlay from './LoadingOverlay'
 import CalloutAlert from './CalloutAlert'
 import URI from 'urijs'
-import _ from "lodash";
-
+import _ from "lodash"
 import heatmapOptionsProvider from './heatmapOptionsProvider'
 import MarkerGeneHeatmap from "./MarkerGeneHeatmap"
 
@@ -21,7 +20,7 @@ class HeatmapView extends React.Component {
     }
   }
 
-  async _fetchAndSetState({resource, host}) {
+  async _fetchAndSetState({ resource, host }) {
     this.setState({
       isLoading: true
     })
@@ -42,9 +41,7 @@ class HeatmapView extends React.Component {
         isLoading: false,
         hasError: null
       })
-    } catch(e) {
-      console.log(`catch`)
-
+    } catch (e) {
       this.setState({
         data: null,
         isLoading: false,
@@ -85,24 +82,24 @@ class HeatmapView extends React.Component {
     return (
       hasError ?
         <CalloutAlert error={hasError}/> :
-          <div className={wrapperClassName}>
-            <div className={plotWrapperClassName} style={{position: `relative`}}>
-              <MarkerGeneHeatmap
-                data={data}
-                xAxisCategories={_.chain(data).uniqBy(`x`).sortBy(`x`).map(`cellGroupValue`).value()}
-                yAxisCategories={_.chain(data).uniqBy(`y`).sortBy(`y`).map(`geneName`).value()}
-                chartHeight={defaultHeatmapHeight}
-                hasDynamicHeight={_.chain(data).map(`geneName`).uniq().value().length > 5 ? hasDynamicHeight : false}
-                heatmapRowHeight={heatmapRowHeight}
-                species={species}
-                heatmapType={heatmapType}
-                host={host}
-              />
-              <LoadingOverlay
-                show={isLoading}
-              />
-            </div>
+        <div className={wrapperClassName}>
+          <div className={plotWrapperClassName} style={{ position: `relative` }}>
+            <MarkerGeneHeatmap
+              data={data}
+              xAxisCategories={_.chain(data).uniqBy(`x`).sortBy(`x`).map(`cellGroupValue`).value()}
+              yAxisCategories={_.chain(data).uniqBy(`y`).sortBy(`y`).map(`geneName`).value()}
+              chartHeight={defaultHeatmapHeight}
+              hasDynamicHeight={_.chain(data).map(`geneName`).uniq().value().length > 5 ? hasDynamicHeight : false}
+              heatmapRowHeight={heatmapRowHeight}
+              species={species}
+              heatmapType={heatmapType}
+              host={host}
+            />
+            <LoadingOverlay
+              show={isLoading}
+            />
           </div>
+        </div>
     )
   }
 }

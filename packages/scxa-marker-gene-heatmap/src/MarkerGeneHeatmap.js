@@ -13,9 +13,11 @@ import _ from 'lodash'
 import URI from 'urijs'
 
 import heatmapOptionsProvider from './heatmapOptionsProvider'
+import formatTooltip from "./tooltip"
+import splitPhrase from "./splitPhrase"
 
 // initialise modules
-async function addModules () {
+async function addModules() {
   HighchartsHeatmap(Highcharts)
   HighchartsNoData(Highcharts)
   HighchartsExporting(Highcharts)
@@ -24,22 +26,6 @@ async function addModules () {
 }
 
 addModules()
-
-const splitPhrase = (phrase, maxLineLength = 12) => {
-  const splitPhrase = [``]
-
-  const words = phrase.split(/\s+/)
-  while (words.length > 0) {
-    const nextWord = words.shift()
-    if (splitPhrase[splitPhrase.length - 1].length + nextWord.length < maxLineLength) {
-      splitPhrase[splitPhrase.length - 1] = `${splitPhrase[splitPhrase.length - 1]} ${nextWord}`
-    } else {
-      splitPhrase.push(nextWord)
-    }
-  }
-
-  return splitPhrase
-}
 
 Highcharts.SVGRenderer.prototype.symbols.download = (x, y, w, h) => [
   // Arrow stem
@@ -96,19 +82,31 @@ const MarkerGeneHeatmap = (props) => {
       const color = `#000000`
       const zIndex = 5
       const splitCellTypeLabel = splitPhrase(heatmapOptionsProvider[heatmapType].labelsFormatter(cellTypeOrClusterId))
-      const shortenCellTypeLabel = splitCellTypeLabel.length <= 3 ? splitCellTypeLabel.join(`<br/>`) : splitCellTypeLabel.slice(0, 3).join(`<br/>`) + `...`
       plotLines.push({
         color,
         width: 2,
         value: plotLineAxisPosition,
         zIndex,
         label: heatmapType !== `multiexperimentcelltypes` && {
-          text: shortenCellTypeLabel,
+          text: splitCellTypeLabel,
           align: `right`,
           textAlign: `left`,
           rotation: heatmapType === `celltypes` ? -45 : 0,
           x: heatmapType === `celltypes` ? 3 : 0,
-          y: yOffset
+          y: yOffset,
+          formatter: () => {
+            const shortenCellTypeLabel = numberOfRows === 1 ?
+              splitCellTypeLabel.length === 1 ?
+                splitCellTypeLabel :
+                splitCellTypeLabel.slice(0, 1).join(`<br/>`) + `...` :
+              splitCellTypeLabel.length <= 3 ?
+                splitCellTypeLabel.join(`<br/>`) :
+                splitCellTypeLabel.slice(0, 3).join(`<br/>`) + `...`
+            return shortenCellTypeLabel
+          },
+          style: {
+            cursor: `pointer` // Indicate it's interactive
+          }
         }
       })
     })
@@ -121,7 +119,33 @@ const MarkerGeneHeatmap = (props) => {
       animation: false,
       marginRight: data.length !== 0 ? 100 : 0,
       plotBackgroundColor: `#eaeaea`,
-      spacingBottom: 0
+      spacingBottom: 0,
+      events: {
+        render: function () {
+          const chart = this
+
+          // Find the label by className
+          chart.yAxis[0].plotLinesAndBands.forEach(plotLine => {
+            if (plotLine.label) {
+              // Get the rendered SVG label element
+              const label = plotLine.label.element
+
+              label.addEventListener(`mouseover`, function () {
+                const tooltip = formatTooltip(chart, plotLine, label)
+                // Save for removal
+                label._tooltip = tooltip
+              })
+              label.addEventListener(`mouseout`, function () {
+                // Remove tooltip
+                if (label._tooltip) {
+                  label._tooltip.remove()
+                  label._tooltip = null
+                }
+              })
+            }
+          })
+        }
+      }
     },
     lang: {
       noData: heatmapOptionsProvider[heatmapType].noData
@@ -187,7 +211,6 @@ const MarkerGeneHeatmap = (props) => {
     },
 
     tooltip: heatmapOptionsProvider[heatmapType].tooltip,
-
     colorAxis: {
       type: `logarithmic`,
       min: 0.1,
