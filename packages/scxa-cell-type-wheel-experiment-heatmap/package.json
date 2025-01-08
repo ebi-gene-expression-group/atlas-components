@@ -1,6 +1,6 @@
 {
   "name": "@ebi-gene-expression-group/scxa-cell-type-wheel-heatmap",
-  "version": "1.4.16",
+  "version": "1.4.17",
   "publishConfig": {
     "access": "public"
   },
@@ -28,7 +28,7 @@
     "@ebi-gene-expression-group/atlas-react-fetch-loader": "*",
     "@ebi-gene-expression-group/scxa-cell-type-wheel": "^1.1.10",
     "@ebi-gene-expression-group/scxa-gene-search-form": "^2.1.0",
-    "@ebi-gene-expression-group/scxa-marker-gene-heatmap": "^2.7.1",
+    "@ebi-gene-expression-group/scxa-marker-gene-heatmap": "^2.7.2",
     "base-64": "^1.0.0",
     "highcharts": "^11.4.6",
     "highcharts-react-official": "^3.2.1",
