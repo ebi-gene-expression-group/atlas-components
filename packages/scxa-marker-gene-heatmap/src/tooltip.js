@@ -18,7 +18,7 @@ const formatTooltip = (chart, plotLine, label) => {
   // Position tooltip
   chart.container.appendChild(tooltip)
   tooltip.style.left = `${label.getBoundingClientRect().left + window.scrollX}px`
-  tooltip.style.top = `${label.getBoundingClientRect().top + window.scrollY - tooltip.offsetHeight}px`
+  tooltip.style.top = `${label.getBoundingClientRect().top + window.scrollY - 2 * tooltip.offsetHeight}px`
 
   // Position tooltip
   const labelBBox = label.getBoundingClientRect()
@@ -27,8 +27,8 @@ const formatTooltip = (chart, plotLine, label) => {
 
   // Adjust position dynamically to prevent overflow
   const tooltipRect = tooltip.getBoundingClientRect()
-  if (tooltipRect.right > window.innerWidth) {
-    tooltip.style.left = `${window.innerWidth - tooltipRect.width}px` // Align to the right edge
+  if (tooltipRect.right > window.innerWidth * 0.85) {
+    tooltip.style.left = `${window.innerWidth * 0.85 - tooltipRect.width}px` // Align to the right edge
   } else {
     tooltip.style.left = `${tooltipX}px` // Default positioning
   }
