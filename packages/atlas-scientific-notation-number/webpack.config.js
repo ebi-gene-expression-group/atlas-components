@@ -6,19 +6,19 @@ const vendorsBundleName = `vendors`
 
 module.exports = {
   entry: {
-    scientificNotationNumber: './html/render.js',
+    scientificNotationNumber: `./html/render.js`,
   },
 
   plugins: [
-    new CleanWebpackPlugin({
-      cleanOnceBeforeBuildPatterns: `dist`
-    })
+    new CleanWebpackPlugin()
   ],
 
   output: {
     library: `[name]`,
     filename: `[name].bundle.js`,
-    publicPath: commonPublicPath
+    publicPath: commonPublicPath,
+    devtoolNamespace: 'firefox',
+    path: path.resolve(__dirname, 'dist'),
   },
 
   resolve: {
@@ -30,7 +30,7 @@ module.exports = {
 
   optimization: {
     runtimeChunk: {
-       name: vendorsBundleName
+      name: vendorsBundleName
     },
     splitChunks: {
       cacheGroups: {
@@ -40,9 +40,8 @@ module.exports = {
           chunks: 'all'
         }
       }
-    }
+    },
   },
-
   module: {
     rules: [
       {
@@ -55,7 +54,9 @@ module.exports = {
 
   devServer: {
     port: 9000,
-    contentBase: path.resolve(__dirname, `html`),
-    publicPath: commonPublicPath
-  }
-}
+    static: path.resolve(__dirname, 'html'),
+    devMiddleware: {
+      publicPath: commonPublicPath,
+    },
+  },
+};
