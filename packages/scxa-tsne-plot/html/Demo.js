@@ -141,7 +141,7 @@ class Demo extends React.Component {
       geneId: ``,
       selectedPlotOption: Object.values(Object.values(defaultPlotMethodAndParameterisation)[0])[0],
       selectedPlotOptionLabel: Object.keys(Object.values(defaultPlotMethodAndParameterisation)[0])[0] + ": " + Object.values(Object.values(defaultPlotMethodAndParameterisation)[0])[0],
-      selectedColourBy: metadata ? metadata[0].value : ``, //ks may be empty, we prefer metadata as the default option
+      selectedColourBy: metadata ? metadata[0].value : ``,
       highlightClusters: [],
       experimentAccession: accession,
       selectedColourByCategory: `clusters`
@@ -154,9 +154,14 @@ class Demo extends React.Component {
   }
 
   _handleSubmit(event) {
+    const highlightClustersValue = this.highlightClustersInput.current ? this.highlightClustersInput.current.value : ''
+    const highlightClusters = highlightClustersValue.split(',')
+        .map((e) => parseInt(e.trim()))
+        .filter((e) => !isNaN(e))
+
     this.setState({
-      experimentAccession: this.experimentAccessionInput.current.value,
-      highlightClusters: this.highlightClustersInput.current.value.split(`,`).map((e) => parseInt(e.trim())).filter((e) => !isNaN(e))
+      experimentAccession: this.experimentAccessionInput.current ? this.experimentAccessionInput.current.value : '',
+      highlightClusters: highlightClusters
     })
 
     event.preventDefault()
@@ -164,81 +169,62 @@ class Demo extends React.Component {
 
   _resetHighlightClusters() {
     this.setState({
-      highlightClusters: [] // reset highlight clusters
+      highlightClusters: []
     })
-    this.highlightClustersInput.current.value = `` // reset the form field
+    if (this.highlightClustersInput.current) {
+      this.highlightClustersInput.current.value = ``
+    }
   }
-
-  /*
-          <div className={`row column expanded`}>
-          <form onSubmit={this._handleSubmit}>
-            <label>Highlight clusters (cluster integer IDs separated by commas):
-              <input name={`inputHighlightClusters`} type={`text`} ref={this.highlightClustersInput} defaultValue={``}/>
-            </label>
-            <label className={`margin-bottom-large`}>Experiment accession:
-              <input name={`inputExperimentAccession`} type={`text`} ref={this.experimentAccessionInput} defaultValue={this.state.experimentAccession}/>
-            </label>
-            <button className={`button`} type="submit">Submit</button>
-          </form>
-        </div>
-   */
 
   render() {
     return(
-      <div className={`row column expanded`}>
-        <TsnePlotView
-          atlasUrl={`https://wwwdev.ebi.ac.uk/gxa/sc/`}
-          suggesterEndpoint={`json/suggestions`}
-          experimentAccession={this.state.experimentAccession}
-          accessKey={accessKey}
-          wrapperClassName={`row expanded`}
-          clusterPlotClassName={`small-12 large-6 columns`}
-          expressionPlotClassName={`small-12 large-6 columns`}
-          selectedPlotOption={this.state.selectedPlotOption}
-          selectedPlotType={this.state.selectedPlotType}
-          ks={ks}
-          metadata={metadata}
-          selectedColourByCategory={this.state.selectedColourByCategory}
-          plotTypeDropdown={plotTypeDropdown}
-          selectedPlotOptionLabel={this.state.selectedPlotOptionLabel}
-          onChangePlotTypes={
-              (plotOption) => {
+        <div className={`row column expanded`}>
+          <TsnePlotView
+              atlasUrl={`https://wwwdev.ebi.ac.uk/gxa/sc/`}
+              suggesterEndpoint={`json/suggestions`}
+              experimentAccession={this.state.experimentAccession}
+              accessKey={accessKey}
+              wrapperClassName={`row expanded`}
+              clusterPlotClassName={`small-12 large-6 columns`}
+              expressionPlotClassName={`small-12 large-6 columns`}
+              selectedPlotOption={this.state.selectedPlotOption}
+              selectedPlotType={this.state.selectedPlotType}
+              ks={ks}
+              metadata={metadata}
+              selectedColourByCategory={this.state.selectedColourByCategory}
+              plotTypeDropdown={plotTypeDropdown}
+              selectedPlotOptionLabel={this.state.selectedPlotOptionLabel}
+              onChangePlotTypes={(plotOption) => {
                 this.setState({
                   selectedPlotType: plotOption.value,
                   selectedPlotOption: Object.values(defaultPlotMethodAndParameterisation[plotOption.value])[0],
                   selectedPlotOptionLabel: Object.keys(defaultPlotMethodAndParameterisation[plotOption.value])[0]
                       + ": " + Object.values(defaultPlotMethodAndParameterisation[plotOption.value])[0],
-                })}
-          }
-          onChangePlotOptions={
-            (plotOption) => {
-              this.setState({
-                selectedPlotOption: plotOption.value,
-                selectedPlotOptionLabel: plotOption.label
-              })}
-          }
-          selectedColourBy={this.state.selectedColourBy}
-          highlightClusters={this.state.highlightClusters}
-          geneId={this.state.geneId}
-          speciesName={species}
-          onChangeColourBy={
-            (colourByCategory, colourByValue) => {
-              this.setState({
-                selectedColourBy : colourByValue,
-                selectedColourByCategory : colourByCategory
-
-              })
-              this._resetHighlightClusters()
-            }
-          }
-          onSelectGeneId={
-            (geneId) => {
-              this.setState({ geneId: geneId })
-              this._resetHighlightClusters()
-            }
-          }
-        />
-      </div>
+                })
+              }}
+              onChangePlotOptions={(plotOption) => {
+                this.setState({
+                  selectedPlotOption: plotOption.value,
+                  selectedPlotOptionLabel: plotOption.label
+                })
+              }}
+              selectedColourBy={this.state.selectedColourBy}
+              highlightClusters={this.state.highlightClusters}
+              geneId={this.state.geneId}
+              speciesName={species}
+              onChangeColourBy={(colourByCategory, colourByValue) => {
+                this.setState({
+                  selectedColourBy : colourByValue,
+                  selectedColourByCategory : colourByCategory
+                })
+                this._resetHighlightClusters()
+              }}
+              onSelectGeneId={(geneId) => {
+                this.setState({ geneId: geneId })
+                this._resetHighlightClusters()
+              }}
+          />
+        </div>
     )
   }
 }
@@ -247,4 +233,4 @@ const render = (options, target) => {
   ReactDOM.render(<Demo {...options} />, document.getElementById(target))
 }
 
-export {render}
+export { render }
