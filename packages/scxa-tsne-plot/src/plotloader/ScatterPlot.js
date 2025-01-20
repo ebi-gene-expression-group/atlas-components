@@ -35,19 +35,11 @@ Highcharts.SVGRenderer.prototype.symbols.download = (x, y, w, h) => [
 ]
 
 async function addModules() {
-  // Only include modules if Highcharts isn’t a *good* mock -- Boost/Exporting can break tests
-  // if (Highcharts.getOptions()) {...}
-  HighchartsExporting(Highcharts)
-  HighchartsOfflineExporting(Highcharts)
   highchartsExportStyle(Highcharts)
 
-  HighchartsColorAxis(Highcharts)
   highchartsColorAxisLogWithNegativeValues(Highcharts)
 
   highchartsAdaptChartToLegendModule(Highcharts)
-
-  // Boost should be the last module loaded; read note in https://www.highcharts.com/docs/advanced-chart-features/boost-module
-  HighchartsBoost(Highcharts)
 }
 
 addModules()
@@ -80,10 +72,7 @@ const highchartsBaseConfig = {
     height: `100%`,
     panning: true,
     zoomType: `xy`,
-    plotBackgroundColor: `transparent`, // This needs to be set to allow access to this.plotBackground
-    events: {
-      load: function() { this.plotBackground.htmlCss({ cursor: `crosshair` }) }
-    }
+    plotBackgroundColor: `transparent` // This needs to be set to allow access to this.plotBackground
   },
 
   legend: {
@@ -149,6 +138,7 @@ const highchartsBaseConfig = {
   colors: [`#b25fbc`, `#76b341`, `#6882cf`, `#ce9b44`, `#c8577b`, `#4fae84`, `#c95c3f`, `#7c7f39`],
   plotOptions: {
     series: {
+      cursor: `crosshair`,
       turboThreshold: 0,
       animation: false
     }
