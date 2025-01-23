@@ -7,7 +7,8 @@
   "description": "Format numbers nicely",
   "main": "lib/index.js",
   "scripts": {
-    "prepare": "rm -rf lib && babel src -d lib --copy-files"
+    "prepare": "rm -rf lib && babel src -d lib --copy-files",
+    "build": "webpack-dev-server --mode=development"
   },
   "jest": {
     "setupFilesAfterEnv": [
