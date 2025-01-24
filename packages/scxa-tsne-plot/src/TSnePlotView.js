@@ -256,7 +256,7 @@ TSnePlotView.propTypes = {
   plotTypeDropdown: PropTypes.arrayOf(
     PropTypes.shape({
       plotType: PropTypes.string,
-      plotOptions: PropTypes.arrayOf(PropTypes.number)
+      plotOptions: PropTypes.arrayOf(PropTypes.object)
     })
   )
 }

@@ -17,6 +17,8 @@ const DropdownIndicator = styled.span`
     height: 1rem;
  `
 
+const CustomIndicatorsContainer = () =>  <DropdownIndicator />
+
 const PlotSettingsDropdown = (props) => {
   const {labelText, options, onSelect, defaultValue} = props
 
@@ -55,7 +57,7 @@ const PlotSettingsDropdown = (props) => {
     labelText && <label key={`label`}>{labelText}</label>,
     <Select
       key={`dropdown`}
-      components={{ DropdownIndicator, IndicatorSeparator: null }}
+      components={{ IndicatorsContainer: CustomIndicatorsContainer, IndicatorSeparator: null }}
       options={options}
       onChange={onSelect}
       value={defaultValue}

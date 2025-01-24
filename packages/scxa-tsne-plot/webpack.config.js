@@ -1,76 +1,68 @@
-const path = require(`path`)
-const { CleanWebpackPlugin } = require(`clean-webpack-plugin`)
+const path = require('path')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
-const commonPublicPath = `/dist/`
-const vendorsBundleName = `vendors`
+const commonPublicPath = '/dist/'
+const vendorsBundleName = 'vendors'
 
 module.exports = {
-  entry: {
-    tSnePlotViewDemo: [`@babel/polyfill`, `./html/Demo.js`],
-  },
-
-  plugins: [
-    new CleanWebpackPlugin()
-  ],
-
-  output: {
-    library: `[name]`,
-    filename: `[name].bundle.js`,
-    publicPath: commonPublicPath,
-    devtoolNamespace: `firefox`
-  },
-
-  resolve: {
-    alias: {
-      "react": path.resolve(`./node_modules/react`),
-      "react-dom": path.resolve(`./node_modules/react-dom`),
-      "styled-components": path.resolve(`./node_modules/styled-components`)
+    entry: {
+        tSnePlotViewDemo: ['@babel/polyfill', './html/Demo.js'],
     },
-  },
 
-  optimization: {
-    runtimeChunk: {
-       name: vendorsBundleName
+    plugins: [
+        new CleanWebpackPlugin()
+    ],
+
+    output: {
+        library: '[name]',
+        filename: '[name].bundle.js',
+        publicPath: commonPublicPath,
+        devtoolNamespace: 'firefox',
+        path: path.resolve(__dirname, 'dist'),
     },
-    splitChunks: {
-      cacheGroups: {
-        commons: {
-          test: /[\\/]node_modules[\\/]/,
-          name: vendorsBundleName,
-          chunks: 'all'
-        }
-      }
-    }
-  },
 
-  module: {
-    rules: [
-      {
-        test: /\.js$/i,
-        exclude: /node_modules\//,
-        use: `babel-loader`
-      },
-      {
-          test: /\.svg$/i,
-          use: [
-              {
-                  loader: `file-loader`,
-                  options: {
-                      query: {
-                          name: `[hash].[ext]`,
-                          hash: `sha512`,
-                          digest: `hex`
-                      }
-                  }
-              }
-          ]
-      }
-    ]
-  },
+    resolve: {
+        alias: {
+            react: path.resolve('./node_modules/react'),
+            'react-dom': path.resolve('./node_modules/react-dom'),
+            'styled-components': path.resolve('./node_modules/styled-components'),
+        },
+    },
 
-  devServer: {
-    port: 9000,
-    contentBase: path.resolve(__dirname, `html`),
-    publicPath: commonPublicPath
-  }
-}
+    optimization: {
+        runtimeChunk: {
+            name: vendorsBundleName,
+        },
+        splitChunks: {
+            cacheGroups: {
+                commons: {
+                    test: /[\\/]node_modules[\\/]/,
+                    name: vendorsBundleName,
+                    chunks: 'all',
+                },
+            },
+        },
+    },
+
+    module: {
+        rules: [
+            {
+                test: /\.js$/i,
+                exclude: /node_modules\//,
+                use: 'babel-loader',
+            },
+            {
+                test: /\.svg$/i,
+                type: 'asset/resource',
+            },
+        ],
+    },
+
+    devServer: {
+        port: 9000,
+        static: path.resolve(__dirname, 'html'),
+        devMiddleware: {
+            publicPath: commonPublicPath,
+        },
+    },
+};
