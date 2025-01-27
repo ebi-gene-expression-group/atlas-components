@@ -17,5 +17,5 @@ you don’t include them in your environment nothing will be shown, only the *Fe
 Use Webpack-Dev-Server:
 ```
 npm install
-npx webpack-dev-server -d
+npx webpack-dev-server --mode=development
 ```
