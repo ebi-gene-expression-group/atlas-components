@@ -18,7 +18,7 @@ module.exports = {
     filename: `[name].bundle.js`,
     publicPath: commonPublicPath,
     // This setting fixes source maps in Firefox, the string can be anything you’d like
-    devtoolNamespace: `firefox`
+    devtoolNamespace: `firefox`,
   },
 
   resolve: {
@@ -56,8 +56,10 @@ module.exports = {
 
   devServer: {
     port: 9000,
-    contentBase: path.resolve(__dirname, `html`),
-    publicPath: commonPublicPath
+    static: path.resolve(__dirname, `html`),
+    devMiddleware: {
+      publicPath: commonPublicPath,
+    },
     // Add if developing a SPA to redirect non-matching routes known by WDS (i.e. no document in /html) to the router
     // historyApiFallback: true
   }
