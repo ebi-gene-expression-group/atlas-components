@@ -53,12 +53,12 @@
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.3",
     "eslint": "^7.6.0",
-    "jest": "^26.4.0",
-    "jest-enzyme": "^7.1.2",
+    "jest": "^29.7.0",
+    "jest-enzyme": "^4.2.0",
     "random-string": "^0.2.0",
     "react-test-renderer": "^16.13.1",
-    "webpack": "^4.44.1",
-    "webpack-cli": "^3.3.12",
-    "webpack-dev-server": "^3.11.0"
+    "webpack": "^5.97.1",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.0"
   }
 }
