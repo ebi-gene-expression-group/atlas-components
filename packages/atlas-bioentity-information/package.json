@@ -42,12 +42,12 @@
     "urijs": "^1.19.2"
   },
   "devDependencies": {
-    "@babel/cli": "^7.10.5",
-    "@babel/core": "^7.11.1",
-    "@babel/polyfill": "^7.10.4",
-    "@babel/preset-env": "^7.11.0",
-    "@babel/preset-react": "^7.10.4",
-    "babel-loader": "^8.1.0",
+    "@babel/cli": "^7.26.4",
+    "@babel/core": "^7.26.7",
+    "@babel/polyfill": "^7.12.1",
+    "@babel/preset-env": "^7.26.7",
+    "@babel/preset-react": "^7.26.3",
+    "babel-loader": "^8.4.1",
     "clean-webpack-plugin": "^3.0.0",
     "coveralls": "^3.1.0",
     "enzyme": "^3.11.0",
@@ -60,5 +60,8 @@
     "webpack": "^5.97.1",
     "webpack-cli": "^6.0.1",
     "webpack-dev-server": "^5.2.0"
+  },
+  "overrides": {
+    "tough-cookie": "^4.1.4"
   }
 }
