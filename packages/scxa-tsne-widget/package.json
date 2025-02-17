@@ -6,7 +6,8 @@
   "scripts": {
     "prepare": "rm -rf lib && babel src -d lib --copy-files",
     "test": "jest",
-    "posttest": "jest --coverage --coverageReporters=text-lcov | coveralls"
+    "posttest": "jest --coverage --coverageReporters=text-lcov | coveralls",
+    "start": "npx webpack-dev-server --mode=development"
   },
   "jest": {
     "setupFilesAfterEnv": [
