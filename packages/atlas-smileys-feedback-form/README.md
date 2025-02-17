@@ -12,10 +12,12 @@ The feedback button uses an icon from [EBI Icon Fonts](https://www.ebi.ac.uk/sty
 you don’t include them in your environment nothing will be shown, only the *Feedback* label text. Have a look at
 `/html/index.html` for more details. To deploy in production remember to add `react-popup.css` as well.
 
+### Node requirement
+Node version 18+ (e.g. v18.19.0)
 
 ## Run it on your browser
 Use Webpack-Dev-Server:
 ```
 npm install
-npx webpack-dev-server -d
+npx webpack-dev-server --mode=development
 ```
