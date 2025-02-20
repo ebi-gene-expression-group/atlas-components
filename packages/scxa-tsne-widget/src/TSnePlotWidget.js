@@ -9,85 +9,64 @@ class TSnePlotWidget extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      plotdata: {
-        metadata: [],
-        perplexities: []
-      },
+      selectedPlotType: Object.keys(this.props.defaultPlotMethodAndParameterisation)[0],
+      selectedPlotOption: Object.values(Object.values(this.props.defaultPlotMethodAndParameterisation)[0])[0],
+      selectedPlotOptionLabel: Object.keys(Object.values(this.props.defaultPlotMethodAndParameterisation)[0])[0] + ": "
+          + Object.values(Object.values(this.props.defaultPlotMethodAndParameterisation)[0])[0],
+      selectedColourBy: this.props.metadata ? this.props.metadata[0].value : ``,
       selectedGeneId: this.props.geneId,
-      selectedColourBy: `inferred_cell_type`,
       selectedColourByCategory: `metadata`,
       metadataErrorMessage: null,
       loadingMetadata: false,
+      geneId: ``,
+      highlightClusters: []
+    }
+
+    this.experimentAccessionInput = React.createRef()
+    this.highlightClustersInput = React.createRef()
+
+    this._handleSubmit = this._handleSubmit.bind(this)
+  }
+  _resetHighlightClusters() {
+    this.setState({
+      highlightClusters: []
+    })
+    if (this.highlightClustersInput.current) {
+      this.highlightClustersInput.current.value = ``
     }
   }
 
-  async _fetchAndSetState(resource, baseUrl, dataField, errorMessageField, loadingField) {
+  _handleSubmit(event) {
+    const highlightClustersValue = this.highlightClustersInput.current ? this.highlightClustersInput.current.value : ''
+    const highlightClusters = highlightClustersValue.split(',')
+        .map((e) => parseInt(e.trim()))
+        .filter((e) => !isNaN(e))
+
     this.setState({
-      [loadingField]: true
+      experimentAccession: this.experimentAccessionInput.current ? this.experimentAccessionInput.current.value : '',
+      highlightClusters: highlightClusters
     })
 
-    const url = URI(resource, baseUrl).toString()
-
-    try {
-      const response = await fetch(url)
-
-      if (!response.ok) {
-        throw new Error(`${url} => ${response.status}`)
-      }
-
-      this.setState({
-        [dataField]: await response.json(),
-        [errorMessageField]: null,
-        [loadingField]: false,
-      })
-
-      if (!(this.state.plotdata.metadata.indexOf(`inferred_cell_type`) > -1)) {
-        this.setState({
-          selectedColourBy: this.state.plotdata.metadata[0].value //selects first element of metadata array if inferred_cell_type is not present
-        })
-      }
-
-    } catch (e) {
-      this.setState({
-        [errorMessageField]: `${e.name}: ${e.message}`,
-        [loadingField]: false
-      })
-    }
-  }
-
-  _fetchAndSetStateMetadata(
-    {atlasUrl, experimentAccession}) {
-    const resource = `json/experiments/${experimentAccession}/metadata/tsneplot`
-
-    this._fetchAndSetState(
-      resource, atlasUrl, `plotdata`, `metadataErrorMessage`, `loadingMetadata`) // this will work once backend code is merged in sc atlas. In meantime, it will not fetch metadata option as there is no endpoint currently in sc atlas
-  }
-
-  _onChangeColourBy(colourByCategory, colourByValue) {
-    this.setState({
-      selectedColourBy: colourByValue,
-      selectedColourByCategory: colourByCategory
-    })
-  }
-
-  componentDidMount() {
-    this._fetchAndSetStateMetadata(this.props)
+    event.preventDefault()
   }
 
   render() {
     const {height, atlasUrl, suggesterEndpoint} = this.props
     const {wrapperClassName, clusterPlotClassName, expressionPlotClassName} = this.props
     const {geneIds, speciesName, ks, experimentAccession, showControls} = this.props
-    const {metadata, perplexities} = this.state.plotdata
+    const {plotTypesAndOptions, defaultPlotMethodAndParameterisation, metadata} = this.props
     const {selectedColourBy, selectedColourByCategory, loadingMetadata, selectedGeneId} = this.state
 
-    const perplexitiesOrdered = perplexities.sort((a, b) => a - b)
-
-    // ks -> for future use
-    // selectedColourBy -> used default k value as we are not showing widget controls for now
-    // selectedColourByCategory -> Is the plot coloured by clusters or metadata (as we not showing controls so used 'clusters' as default selected category
-    // selectedPerplexity -> //default value given for now
-    // showControls ->  flag to control weather controls over t-SNE plots are shown or not
+    const plotTypeDropdown =  [
+      {
+        plotType: Object.keys(defaultPlotMethodAndParameterisation)[0],
+        plotOptions: plotTypesAndOptions[Object.keys(defaultPlotMethodAndParameterisation)[0]]
+      },
+      {
+        plotType: Object.keys(defaultPlotMethodAndParameterisation)[1],
+        plotOptions: plotTypesAndOptions[Object.keys(defaultPlotMethodAndParameterisation)[1]]
+      }
+    ]
 
     return (
       loadingMetadata ?
@@ -103,19 +82,43 @@ class TSnePlotWidget extends React.Component {
             experimentAccession={experimentAccession}
             ks={ks}
             metadata={metadata}
+            plotTypeDropdown={plotTypeDropdown}
             selectedColourBy={selectedColourBy}
             selectedColourByCategory={selectedColourByCategory}
-            perplexities={perplexities}
-            selectedPerplexity={perplexitiesOrdered[Math.round((perplexitiesOrdered.length - 1) / 2)]}
             onChangePerplexity={() => {}}
             geneId={selectedGeneId}
             geneIds={geneIds}
             height={height}
-            onChangeColourBy={(colourByCategory, colourByValue) =>
-              this._onChangeColourBy(colourByCategory, colourByValue)
-            }
-            onSelectGeneId={(geneId) => this.setState({ selectedGeneId: geneId.value })}
             showControls={showControls}
+            selectedPlotOption={this.state.selectedPlotOption}
+            selectedPlotType={this.state.selectedPlotType}
+            selectedPlotOptionLabel={this.state.selectedPlotOptionLabel}
+            onChangePlotTypes={(plotOption) => {
+              this.setState({
+                selectedPlotType: plotOption.value,
+                selectedPlotOption: Object.values(defaultPlotMethodAndParameterisation[plotOption.value])[0],
+                selectedPlotOptionLabel: Object.keys(defaultPlotMethodAndParameterisation[plotOption.value])[0]
+                    + ": " + Object.values(defaultPlotMethodAndParameterisation[plotOption.value])[0],
+              })
+            }}
+            onChangePlotOptions={(plotOption) => {
+              this.setState({
+                selectedPlotOption: plotOption.value,
+                selectedPlotOptionLabel: plotOption.label
+              })
+            }}
+            highlightClusters={this.state.highlightClusters}
+            onChangeColourBy={(colourByCategory, colourByValue) => {
+              this.setState({
+                selectedColourBy : colourByValue,
+                selectedColourByCategory : colourByCategory
+              })
+              this._resetHighlightClusters()
+            }}
+            onSelectGeneId={(geneId) => {
+              this.setState({ geneId: geneId })
+              this._resetHighlightClusters()
+            }}
           />
           <p>
             To know more about this experiment please go to <a target={`_blank`} href={`https://www.ebi.ac.uk/gxa/sc/experiments/${experimentAccession}`}>Single Cell Expression Atlas </a>.
