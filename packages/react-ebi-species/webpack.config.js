@@ -1,3 +1,6 @@
+const path = require("path")
+const commonPublicPath = '/dist/'
+
 module.exports = {
   entry: {
     reactEbiSpecies: `./src/index.js`,
@@ -36,11 +39,10 @@ module.exports = {
   },
 
   devServer: {
-    // injectClient: false, // webpack-dev-server@3 https://github.com/webpack/webpack-dev-server/issues/2484
     port: 9000,
-    static: `./html`,
-    dev: {
-      publicPath: `/dist`
-    }
+    static: path.resolve(__dirname, 'html'),
+    devMiddleware: {
+      publicPath: commonPublicPath,
+    },
   }
 }
