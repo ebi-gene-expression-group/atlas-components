@@ -2,10 +2,10 @@
 
 exports[`EbiSpeciesIcon with classes Icon of mapped species alpaca matches snapshot 1`] = `
 <span
-  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  className="sc-aXZVg sc-gEvEer jMbJFh bvNOrM"
   data-icon="a"
   style={
-    Object {
+    {
       "color": "indianred",
     }
   }
@@ -15,10 +15,10 @@ exports[`EbiSpeciesIcon with classes Icon of mapped species alpaca matches snaps
 
 exports[`EbiSpeciesIcon with classes Icon of mapped species amoeba matches snapshot 1`] = `
 <span
-  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  className="sc-aXZVg sc-gEvEer jMbJFh bvNOrM"
   data-icon="0"
   style={
-    Object {
+    {
       "color": "deepskyblue",
     }
   }
@@ -28,10 +28,10 @@ exports[`EbiSpeciesIcon with classes Icon of mapped species amoeba matches snaps
 
 exports[`EbiSpeciesIcon with classes Icon of mapped species anolis carolinensis matches snapshot 1`] = `
 <span
-  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  className="sc-aXZVg sc-gEvEer jMbJFh bvNOrM"
   data-icon="7"
   style={
-    Object {
+    {
       "color": "deepskyblue",
     }
   }
@@ -41,10 +41,10 @@ exports[`EbiSpeciesIcon with classes Icon of mapped species anolis carolinensis 
 
 exports[`EbiSpeciesIcon with classes Icon of mapped species anolis matches snapshot 1`] = `
 <span
-  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  className="sc-aXZVg sc-gEvEer jMbJFh bvNOrM"
   data-icon="7"
   style={
-    Object {
+    {
       "color": "deepskyblue",
     }
   }
@@ -54,10 +54,10 @@ exports[`EbiSpeciesIcon with classes Icon of mapped species anolis matches snaps
 
 exports[`EbiSpeciesIcon with classes Icon of mapped species anopheles gambiae matches snapshot 1`] = `
 <span
-  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  className="sc-aXZVg sc-gEvEer jMbJFh bvNOrM"
   data-icon="1"
   style={
-    Object {
+    {
       "color": "deepskyblue",
     }
   }
@@ -67,10 +67,10 @@ exports[`EbiSpeciesIcon with classes Icon of mapped species anopheles gambiae ma
 
 exports[`EbiSpeciesIcon with classes Icon of mapped species arabidopsis lyrata matches snapshot 1`] = `
 <span
-  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  className="sc-aXZVg sc-gEvEer jMbJFh bvNOrM"
   data-icon="B"
   style={
-    Object {
+    {
       "color": "mediumseagreen",
     }
   }
@@ -80,10 +80,10 @@ exports[`EbiSpeciesIcon with classes Icon of mapped species arabidopsis lyrata m
 
 exports[`EbiSpeciesIcon with classes Icon of mapped species arabidopsis matches snapshot 1`] = `
 <span
-  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  className="sc-aXZVg sc-gEvEer jMbJFh bvNOrM"
   data-icon="B"
   style={
-    Object {
+    {
       "color": "mediumseagreen",
     }
   }
@@ -93,10 +93,10 @@ exports[`EbiSpeciesIcon with classes Icon of mapped species arabidopsis matches 
 
 exports[`EbiSpeciesIcon with classes Icon of mapped species arabidopsis thaliana matches snapshot 1`] = `
 <span
-  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  className="sc-aXZVg sc-gEvEer jMbJFh bvNOrM"
   data-icon="B"
   style={
-    Object {
+    {
       "color": "mediumseagreen",
     }
   }
@@ -106,10 +106,10 @@ exports[`EbiSpeciesIcon with classes Icon of mapped species arabidopsis thaliana
 
 exports[`EbiSpeciesIcon with classes Icon of mapped species armadillo matches snapshot 1`] = `
 <span
-  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  className="sc-aXZVg sc-gEvEer jMbJFh bvNOrM"
   data-icon="l"
   style={
-    Object {
+    {
       "color": "indianred",
     }
   }
@@ -119,10 +119,10 @@ exports[`EbiSpeciesIcon with classes Icon of mapped species armadillo matches sn
 
 exports[`EbiSpeciesIcon with classes Icon of mapped species aspergillus fumigatus matches snapshot 1`] = `
 <span
-  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  className="sc-aXZVg sc-gEvEer jMbJFh bvNOrM"
   data-icon="£"
   style={
-    Object {
+    {
       "color": "deepskyblue",
     }
   }
@@ -132,10 +132,10 @@ exports[`EbiSpeciesIcon with classes Icon of mapped species aspergillus fumigatu
 
 exports[`EbiSpeciesIcon with classes Icon of mapped species aspergillus matches snapshot 1`] = `
 <span
-  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  className="sc-aXZVg sc-gEvEer jMbJFh bvNOrM"
   data-icon="£"
   style={
-    Object {
+    {
       "color": "deepskyblue",
     }
   }
@@ -145,10 +145,10 @@ exports[`EbiSpeciesIcon with classes Icon of mapped species aspergillus matches 
 
 exports[`EbiSpeciesIcon with classes Icon of mapped species barley matches snapshot 1`] = `
 <span
-  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  className="sc-aXZVg sc-gEvEer jMbJFh bvNOrM"
   data-icon="5"
   style={
-    Object {
+    {
       "color": "mediumseagreen",
     }
   }
@@ -158,10 +158,10 @@ exports[`EbiSpeciesIcon with classes Icon of mapped species barley matches snaps
 
 exports[`EbiSpeciesIcon with classes Icon of mapped species bat matches snapshot 1`] = `
 <span
-  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  className="sc-aXZVg sc-gEvEer jMbJFh bvNOrM"
   data-icon="("
   style={
-    Object {
+    {
       "color": "indianred",
     }
   }
@@ -171,10 +171,10 @@ exports[`EbiSpeciesIcon with classes Icon of mapped species bat matches snapshot
 
 exports[`EbiSpeciesIcon with classes Icon of mapped species bee matches snapshot 1`] = `
 <span
-  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  className="sc-aXZVg sc-gEvEer jMbJFh bvNOrM"
   data-icon="$"
   style={
-    Object {
+    {
       "color": "deepskyblue",
     }
   }
@@ -184,10 +184,10 @@ exports[`EbiSpeciesIcon with classes Icon of mapped species bee matches snapshot
 
 exports[`EbiSpeciesIcon with classes Icon of mapped species bos taurus matches snapshot 1`] = `
 <span
-  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  className="sc-aXZVg sc-gEvEer jMbJFh bvNOrM"
   data-icon="C"
   style={
-    Object {
+    {
       "color": "indianred",
     }
   }
@@ -197,10 +197,10 @@ exports[`EbiSpeciesIcon with classes Icon of mapped species bos taurus matches s
 
 exports[`EbiSpeciesIcon with classes Icon of mapped species brachypodium distachyon matches snapshot 1`] = `
 <span
-  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  className="sc-aXZVg sc-gEvEer jMbJFh bvNOrM"
   data-icon="%"
   style={
-    Object {
+    {
       "color": "mediumseagreen",
     }
   }
@@ -210,10 +210,10 @@ exports[`EbiSpeciesIcon with classes Icon of mapped species brachypodium distach
 
 exports[`EbiSpeciesIcon with classes Icon of mapped species brachypodium matches snapshot 1`] = `
 <span
-  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  className="sc-aXZVg sc-gEvEer jMbJFh bvNOrM"
   data-icon="%"
   style={
-    Object {
+    {
       "color": "mediumseagreen",
     }
   }
@@ -223,10 +223,10 @@ exports[`EbiSpeciesIcon with classes Icon of mapped species brachypodium matches
 
 exports[`EbiSpeciesIcon with classes Icon of mapped species brassica matches snapshot 1`] = `
 <span
-  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  className="sc-aXZVg sc-gEvEer jMbJFh bvNOrM"
   data-icon="B"
   style={
-    Object {
+    {
       "color": "mediumseagreen",
     }
   }
@@ -236,10 +236,10 @@ exports[`EbiSpeciesIcon with classes Icon of mapped species brassica matches sna
 
 exports[`EbiSpeciesIcon with classes Icon of mapped species brassica oleracea matches snapshot 1`] = `
 <span
-  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  className="sc-aXZVg sc-gEvEer jMbJFh bvNOrM"
   data-icon="B"
   style={
-    Object {
+    {
       "color": "mediumseagreen",
     }
   }
@@ -249,10 +249,10 @@ exports[`EbiSpeciesIcon with classes Icon of mapped species brassica oleracea ma
 
 exports[`EbiSpeciesIcon with classes Icon of mapped species brassica rapa matches snapshot 1`] = `
 <span
-  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  className="sc-aXZVg sc-gEvEer jMbJFh bvNOrM"
   data-icon="B"
   style={
-    Object {
+    {
       "color": "mediumseagreen",
     }
   }
@@ -262,10 +262,10 @@ exports[`EbiSpeciesIcon with classes Icon of mapped species brassica rapa matche
 
 exports[`EbiSpeciesIcon with classes Icon of mapped species bug matches snapshot 1`] = `
 <span
-  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  className="sc-aXZVg sc-gEvEer jMbJFh bvNOrM"
   data-icon="b"
   style={
-    Object {
+    {
       "color": "deepskyblue",
     }
   }
@@ -275,10 +275,10 @@ exports[`EbiSpeciesIcon with classes Icon of mapped species bug matches snapshot
 
 exports[`EbiSpeciesIcon with classes Icon of mapped species c elegans matches snapshot 1`] = `
 <span
-  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  className="sc-aXZVg sc-gEvEer jMbJFh bvNOrM"
   data-icon="W"
   style={
-    Object {
+    {
       "color": "deepskyblue",
     }
   }
@@ -288,10 +288,10 @@ exports[`EbiSpeciesIcon with classes Icon of mapped species c elegans matches sn
 
 exports[`EbiSpeciesIcon with classes Icon of mapped species caenorhabditis elegans matches snapshot 1`] = `
 <span
-  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  className="sc-aXZVg sc-gEvEer jMbJFh bvNOrM"
   data-icon="W"
   style={
-    Object {
+    {
       "color": "deepskyblue",
     }
   }
@@ -301,10 +301,10 @@ exports[`EbiSpeciesIcon with classes Icon of mapped species caenorhabditis elega
 
 exports[`EbiSpeciesIcon with classes Icon of mapped species callithrix jacchus matches snapshot 1`] = `
 <span
-  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  className="sc-aXZVg sc-gEvEer jMbJFh bvNOrM"
   data-icon="q"
   style={
-    Object {
+    {
       "color": "indianred",
     }
   }
@@ -314,10 +314,10 @@ exports[`EbiSpeciesIcon with classes Icon of mapped species callithrix jacchus m
 
 exports[`EbiSpeciesIcon with classes Icon of mapped species canis lupus familiaris matches snapshot 1`] = `
 <span
-  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  className="sc-aXZVg sc-gEvEer jMbJFh bvNOrM"
   data-icon="d"
   style={
-    Object {
+    {
       "color": "indianred",
     }
   }
@@ -327,10 +327,10 @@ exports[`EbiSpeciesIcon with classes Icon of mapped species canis lupus familiar
 
 exports[`EbiSpeciesIcon with classes Icon of mapped species canis lupus matches snapshot 1`] = `
 <span
-  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  className="sc-aXZVg sc-gEvEer jMbJFh bvNOrM"
   data-icon="d"
   style={
-    Object {
+    {
       "color": "indianred",
     }
   }
@@ -340,10 +340,10 @@ exports[`EbiSpeciesIcon with classes Icon of mapped species canis lupus matches 
 
 exports[`EbiSpeciesIcon with classes Icon of mapped species cat matches snapshot 1`] = `
 <span
-  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  className="sc-aXZVg sc-gEvEer jMbJFh bvNOrM"
   data-icon="A"
   style={
-    Object {
+    {
       "color": "indianred",
     }
   }
@@ -353,10 +353,10 @@ exports[`EbiSpeciesIcon with classes Icon of mapped species cat matches snapshot
 
 exports[`EbiSpeciesIcon with classes Icon of mapped species cavia porcellus matches snapshot 1`] = `
 <span
-  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  className="sc-aXZVg sc-gEvEer jMbJFh bvNOrM"
   data-icon="g"
   style={
-    Object {
+    {
       "color": "indianred",
     }
   }
@@ -366,10 +366,10 @@ exports[`EbiSpeciesIcon with classes Icon of mapped species cavia porcellus matc
 
 exports[`EbiSpeciesIcon with classes Icon of mapped species chicken matches snapshot 1`] = `
 <span
-  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  className="sc-aXZVg sc-gEvEer jMbJFh bvNOrM"
   data-icon="k"
   style={
-    Object {
+    {
       "color": "indianred",
     }
   }
@@ -379,10 +379,10 @@ exports[`EbiSpeciesIcon with classes Icon of mapped species chicken matches snap
 
 exports[`EbiSpeciesIcon with classes Icon of mapped species chimpanzee matches snapshot 1`] = `
 <span
-  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  className="sc-aXZVg sc-gEvEer jMbJFh bvNOrM"
   data-icon="i"
   style={
-    Object {
+    {
       "color": "indianred",
     }
   }
@@ -392,10 +392,10 @@ exports[`EbiSpeciesIcon with classes Icon of mapped species chimpanzee matches s
 
 exports[`EbiSpeciesIcon with classes Icon of mapped species corn matches snapshot 1`] = `
 <span
-  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  className="sc-aXZVg sc-gEvEer jMbJFh bvNOrM"
   data-icon="c"
   style={
-    Object {
+    {
       "color": "mediumseagreen",
     }
   }
@@ -405,10 +405,10 @@ exports[`EbiSpeciesIcon with classes Icon of mapped species corn matches snapsho
 
 exports[`EbiSpeciesIcon with classes Icon of mapped species cow matches snapshot 1`] = `
 <span
-  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  className="sc-aXZVg sc-gEvEer jMbJFh bvNOrM"
   data-icon="C"
   style={
-    Object {
+    {
       "color": "indianred",
     }
   }
@@ -418,10 +418,10 @@ exports[`EbiSpeciesIcon with classes Icon of mapped species cow matches snapshot
 
 exports[`EbiSpeciesIcon with classes Icon of mapped species danio rerio matches snapshot 1`] = `
 <span
-  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  className="sc-aXZVg sc-gEvEer jMbJFh bvNOrM"
   data-icon="Z"
   style={
-    Object {
+    {
       "color": "deepskyblue",
     }
   }
@@ -431,10 +431,10 @@ exports[`EbiSpeciesIcon with classes Icon of mapped species danio rerio matches 
 
 exports[`EbiSpeciesIcon with classes Icon of mapped species diatom matches snapshot 1`] = `
 <span
-  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  className="sc-aXZVg sc-gEvEer jMbJFh bvNOrM"
   data-icon="2"
   style={
-    Object {
+    {
       "color": "deepskyblue",
     }
   }
@@ -444,10 +444,10 @@ exports[`EbiSpeciesIcon with classes Icon of mapped species diatom matches snaps
 
 exports[`EbiSpeciesIcon with classes Icon of mapped species dog matches snapshot 1`] = `
 <span
-  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  className="sc-aXZVg sc-gEvEer jMbJFh bvNOrM"
   data-icon="d"
   style={
-    Object {
+    {
       "color": "indianred",
     }
   }
@@ -457,10 +457,10 @@ exports[`EbiSpeciesIcon with classes Icon of mapped species dog matches snapshot
 
 exports[`EbiSpeciesIcon with classes Icon of mapped species dolphin matches snapshot 1`] = `
 <span
-  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  className="sc-aXZVg sc-gEvEer jMbJFh bvNOrM"
   data-icon="D"
   style={
-    Object {
+    {
       "color": "indianred",
     }
   }
@@ -470,10 +470,10 @@ exports[`EbiSpeciesIcon with classes Icon of mapped species dolphin matches snap
 
 exports[`EbiSpeciesIcon with classes Icon of mapped species drosophila melanogaster matches snapshot 1`] = `
 <span
-  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  className="sc-aXZVg sc-gEvEer jMbJFh bvNOrM"
   data-icon="F"
   style={
-    Object {
+    {
       "color": "deepskyblue",
     }
   }
@@ -483,10 +483,10 @@ exports[`EbiSpeciesIcon with classes Icon of mapped species drosophila melanogas
 
 exports[`EbiSpeciesIcon with classes Icon of mapped species ecoli matches snapshot 1`] = `
 <span
-  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  className="sc-aXZVg sc-gEvEer jMbJFh bvNOrM"
   data-icon="L"
   style={
-    Object {
+    {
       "color": "deepskyblue",
     }
   }
@@ -496,10 +496,10 @@ exports[`EbiSpeciesIcon with classes Icon of mapped species ecoli matches snapsh
 
 exports[`EbiSpeciesIcon with classes Icon of mapped species elephant matches snapshot 1`] = `
 <span
-  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  className="sc-aXZVg sc-gEvEer jMbJFh bvNOrM"
   data-icon="e"
   style={
-    Object {
+    {
       "color": "indianred",
     }
   }
@@ -509,10 +509,10 @@ exports[`EbiSpeciesIcon with classes Icon of mapped species elephant matches sna
 
 exports[`EbiSpeciesIcon with classes Icon of mapped species elephas maximus matches snapshot 1`] = `
 <span
-  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  className="sc-aXZVg sc-gEvEer jMbJFh bvNOrM"
   data-icon="e"
   style={
-    Object {
+    {
       "color": "indianred",
     }
   }
@@ -522,10 +522,10 @@ exports[`EbiSpeciesIcon with classes Icon of mapped species elephas maximus matc
 
 exports[`EbiSpeciesIcon with classes Icon of mapped species equus caballus matches snapshot 1`] = `
 <span
-  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  className="sc-aXZVg sc-gEvEer jMbJFh bvNOrM"
   data-icon="h"
   style={
-    Object {
+    {
       "color": "indianred",
     }
   }
@@ -535,10 +535,10 @@ exports[`EbiSpeciesIcon with classes Icon of mapped species equus caballus match
 
 exports[`EbiSpeciesIcon with classes Icon of mapped species erinaceus europaeus matches snapshot 1`] = `
 <span
-  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  className="sc-aXZVg sc-gEvEer jMbJFh bvNOrM"
   data-icon="o"
   style={
-    Object {
+    {
       "color": "indianred",
     }
   }
@@ -548,10 +548,10 @@ exports[`EbiSpeciesIcon with classes Icon of mapped species erinaceus europaeus 
 
 exports[`EbiSpeciesIcon with classes Icon of mapped species escherichia coli matches snapshot 1`] = `
 <span
-  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  className="sc-aXZVg sc-gEvEer jMbJFh bvNOrM"
   data-icon="L"
   style={
-    Object {
+    {
       "color": "deepskyblue",
     }
   }
@@ -561,10 +561,10 @@ exports[`EbiSpeciesIcon with classes Icon of mapped species escherichia coli mat
 
 exports[`EbiSpeciesIcon with classes Icon of mapped species felis catus matches snapshot 1`] = `
 <span
-  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  className="sc-aXZVg sc-gEvEer jMbJFh bvNOrM"
   data-icon="A"
   style={
-    Object {
+    {
       "color": "indianred",
     }
   }
@@ -574,10 +574,10 @@ exports[`EbiSpeciesIcon with classes Icon of mapped species felis catus matches 
 
 exports[`EbiSpeciesIcon with classes Icon of mapped species ferret matches snapshot 1`] = `
 <span
-  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  className="sc-aXZVg sc-gEvEer jMbJFh bvNOrM"
   data-icon="!"
   style={
-    Object {
+    {
       "color": "indianred",
     }
   }
@@ -587,10 +587,10 @@ exports[`EbiSpeciesIcon with classes Icon of mapped species ferret matches snaps
 
 exports[`EbiSpeciesIcon with classes Icon of mapped species finch matches snapshot 1`] = `
 <span
-  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  className="sc-aXZVg sc-gEvEer jMbJFh bvNOrM"
   data-icon="n"
   style={
-    Object {
+    {
       "color": "indianred",
     }
   }
@@ -600,10 +600,10 @@ exports[`EbiSpeciesIcon with classes Icon of mapped species finch matches snapsh
 
 exports[`EbiSpeciesIcon with classes Icon of mapped species fly matches snapshot 1`] = `
 <span
-  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  className="sc-aXZVg sc-gEvEer jMbJFh bvNOrM"
   data-icon="F"
   style={
-    Object {
+    {
       "color": "deepskyblue",
     }
   }
@@ -613,10 +613,10 @@ exports[`EbiSpeciesIcon with classes Icon of mapped species fly matches snapshot
 
 exports[`EbiSpeciesIcon with classes Icon of mapped species frog matches snapshot 1`] = `
 <span
-  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  className="sc-aXZVg sc-gEvEer jMbJFh bvNOrM"
   data-icon="f"
   style={
-    Object {
+    {
       "color": "deepskyblue",
     }
   }
@@ -626,10 +626,10 @@ exports[`EbiSpeciesIcon with classes Icon of mapped species frog matches snapsho
 
 exports[`EbiSpeciesIcon with classes Icon of mapped species fungus matches snapshot 1`] = `
 <span
-  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  className="sc-aXZVg sc-gEvEer jMbJFh bvNOrM"
   data-icon="u"
   style={
-    Object {
+    {
       "color": "deepskyblue",
     }
   }
@@ -639,10 +639,10 @@ exports[`EbiSpeciesIcon with classes Icon of mapped species fungus matches snaps
 
 exports[`EbiSpeciesIcon with classes Icon of mapped species gallus gallus matches snapshot 1`] = `
 <span
-  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  className="sc-aXZVg sc-gEvEer jMbJFh bvNOrM"
   data-icon="k"
   style={
-    Object {
+    {
       "color": "indianred",
     }
   }
@@ -652,10 +652,10 @@ exports[`EbiSpeciesIcon with classes Icon of mapped species gallus gallus matche
 
 exports[`EbiSpeciesIcon with classes Icon of mapped species glycine max matches snapshot 1`] = `
 <span
-  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  className="sc-aXZVg sc-gEvEer jMbJFh bvNOrM"
   data-icon="^"
   style={
-    Object {
+    {
       "color": "mediumseagreen",
     }
   }
@@ -665,10 +665,10 @@ exports[`EbiSpeciesIcon with classes Icon of mapped species glycine max matches 
 
 exports[`EbiSpeciesIcon with classes Icon of mapped species glycinemax matches snapshot 1`] = `
 <span
-  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  className="sc-aXZVg sc-gEvEer jMbJFh bvNOrM"
   data-icon="^"
   style={
-    Object {
+    {
       "color": "mediumseagreen",
     }
   }
@@ -678,10 +678,10 @@ exports[`EbiSpeciesIcon with classes Icon of mapped species glycinemax matches s
 
 exports[`EbiSpeciesIcon with classes Icon of mapped species goat matches snapshot 1`] = `
 <span
-  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  className="sc-aXZVg sc-gEvEer jMbJFh bvNOrM"
   data-icon="m"
   style={
-    Object {
+    {
       "color": "indianred",
     }
   }
@@ -691,10 +691,10 @@ exports[`EbiSpeciesIcon with classes Icon of mapped species goat matches snapsho
 
 exports[`EbiSpeciesIcon with classes Icon of mapped species gorilla gorilla matches snapshot 1`] = `
 <span
-  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  className="sc-aXZVg sc-gEvEer jMbJFh bvNOrM"
   data-icon="G"
   style={
-    Object {
+    {
       "color": "indianred",
     }
   }
@@ -704,10 +704,10 @@ exports[`EbiSpeciesIcon with classes Icon of mapped species gorilla gorilla matc
 
 exports[`EbiSpeciesIcon with classes Icon of mapped species gorilla matches snapshot 1`] = `
 <span
-  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  className="sc-aXZVg sc-gEvEer jMbJFh bvNOrM"
   data-icon="G"
   style={
-    Object {
+    {
       "color": "indianred",
     }
   }
@@ -717,10 +717,10 @@ exports[`EbiSpeciesIcon with classes Icon of mapped species gorilla matches snap
 
 exports[`EbiSpeciesIcon with classes Icon of mapped species grapes matches snapshot 1`] = `
 <span
-  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  className="sc-aXZVg sc-gEvEer jMbJFh bvNOrM"
   data-icon="O"
   style={
-    Object {
+    {
       "color": "mediumseagreen",
     }
   }
@@ -730,10 +730,10 @@ exports[`EbiSpeciesIcon with classes Icon of mapped species grapes matches snaps
 
 exports[`EbiSpeciesIcon with classes Icon of mapped species guinea pig matches snapshot 1`] = `
 <span
-  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  className="sc-aXZVg sc-gEvEer jMbJFh bvNOrM"
   data-icon="g"
   style={
-    Object {
+    {
       "color": "indianred",
     }
   }
@@ -743,10 +743,10 @@ exports[`EbiSpeciesIcon with classes Icon of mapped species guinea pig matches s
 
 exports[`EbiSpeciesIcon with classes Icon of mapped species hedgehog matches snapshot 1`] = `
 <span
-  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  className="sc-aXZVg sc-gEvEer jMbJFh bvNOrM"
   data-icon="o"
   style={
-    Object {
+    {
       "color": "indianred",
     }
   }
@@ -756,10 +756,10 @@ exports[`EbiSpeciesIcon with classes Icon of mapped species hedgehog matches sna
 
 exports[`EbiSpeciesIcon with classes Icon of mapped species homo sapiens matches snapshot 1`] = `
 <span
-  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  className="sc-aXZVg sc-gEvEer jMbJFh bvNOrM"
   data-icon="H"
   style={
-    Object {
+    {
       "color": "indianred",
     }
   }
@@ -769,10 +769,10 @@ exports[`EbiSpeciesIcon with classes Icon of mapped species homo sapiens matches
 
 exports[`EbiSpeciesIcon with classes Icon of mapped species hordeum vulgare matches snapshot 1`] = `
 <span
-  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  className="sc-aXZVg sc-gEvEer jMbJFh bvNOrM"
   data-icon="5"
   style={
-    Object {
+    {
       "color": "mediumseagreen",
     }
   }
@@ -782,10 +782,10 @@ exports[`EbiSpeciesIcon with classes Icon of mapped species hordeum vulgare matc
 
 exports[`EbiSpeciesIcon with classes Icon of mapped species hordeum vulgare subsp. vulgare matches snapshot 1`] = `
 <span
-  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  className="sc-aXZVg sc-gEvEer jMbJFh bvNOrM"
   data-icon="5"
   style={
-    Object {
+    {
       "color": "mediumseagreen",
     }
   }
@@ -795,10 +795,10 @@ exports[`EbiSpeciesIcon with classes Icon of mapped species hordeum vulgare subs
 
 exports[`EbiSpeciesIcon with classes Icon of mapped species horse matches snapshot 1`] = `
 <span
-  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  className="sc-aXZVg sc-gEvEer jMbJFh bvNOrM"
   data-icon="h"
   style={
-    Object {
+    {
       "color": "indianred",
     }
   }
@@ -808,10 +808,10 @@ exports[`EbiSpeciesIcon with classes Icon of mapped species horse matches snapsh
 
 exports[`EbiSpeciesIcon with classes Icon of mapped species human matches snapshot 1`] = `
 <span
-  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  className="sc-aXZVg sc-gEvEer jMbJFh bvNOrM"
   data-icon="H"
   style={
-    Object {
+    {
       "color": "indianred",
     }
   }
@@ -821,10 +821,10 @@ exports[`EbiSpeciesIcon with classes Icon of mapped species human matches snapsh
 
 exports[`EbiSpeciesIcon with classes Icon of mapped species kangaroo rat matches snapshot 1`] = `
 <span
-  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  className="sc-aXZVg sc-gEvEer jMbJFh bvNOrM"
   data-icon="3"
   style={
-    Object {
+    {
       "color": "indianred",
     }
   }
@@ -834,10 +834,10 @@ exports[`EbiSpeciesIcon with classes Icon of mapped species kangaroo rat matches
 
 exports[`EbiSpeciesIcon with classes Icon of mapped species louse matches snapshot 1`] = `
 <span
-  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  className="sc-aXZVg sc-gEvEer jMbJFh bvNOrM"
   data-icon="4"
   style={
-    Object {
+    {
       "color": "deepskyblue",
     }
   }
@@ -847,10 +847,10 @@ exports[`EbiSpeciesIcon with classes Icon of mapped species louse matches snapsh
 
 exports[`EbiSpeciesIcon with classes Icon of mapped species loxodonta africana matches snapshot 1`] = `
 <span
-  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  className="sc-aXZVg sc-gEvEer jMbJFh bvNOrM"
   data-icon="e"
   style={
-    Object {
+    {
       "color": "indianred",
     }
   }
@@ -860,10 +860,10 @@ exports[`EbiSpeciesIcon with classes Icon of mapped species loxodonta africana m
 
 exports[`EbiSpeciesIcon with classes Icon of mapped species loxodonta cyclotis matches snapshot 1`] = `
 <span
-  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  className="sc-aXZVg sc-gEvEer jMbJFh bvNOrM"
   data-icon="e"
   style={
-    Object {
+    {
       "color": "indianred",
     }
   }
@@ -873,10 +873,10 @@ exports[`EbiSpeciesIcon with classes Icon of mapped species loxodonta cyclotis m
 
 exports[`EbiSpeciesIcon with classes Icon of mapped species macaca mulatta matches snapshot 1`] = `
 <span
-  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  className="sc-aXZVg sc-gEvEer jMbJFh bvNOrM"
   data-icon="r"
   style={
-    Object {
+    {
       "color": "indianred",
     }
   }
@@ -886,10 +886,10 @@ exports[`EbiSpeciesIcon with classes Icon of mapped species macaca mulatta match
 
 exports[`EbiSpeciesIcon with classes Icon of mapped species marmoset matches snapshot 1`] = `
 <span
-  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  className="sc-aXZVg sc-gEvEer jMbJFh bvNOrM"
   data-icon="q"
   style={
-    Object {
+    {
       "color": "indianred",
     }
   }
@@ -899,10 +899,10 @@ exports[`EbiSpeciesIcon with classes Icon of mapped species marmoset matches sna
 
 exports[`EbiSpeciesIcon with classes Icon of mapped species monkey matches snapshot 1`] = `
 <span
-  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  className="sc-aXZVg sc-gEvEer jMbJFh bvNOrM"
   data-icon="r"
   style={
-    Object {
+    {
       "color": "indianred",
     }
   }
@@ -912,10 +912,10 @@ exports[`EbiSpeciesIcon with classes Icon of mapped species monkey matches snaps
 
 exports[`EbiSpeciesIcon with classes Icon of mapped species monodelphis domestica matches snapshot 1`] = `
 <span
-  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  className="sc-aXZVg sc-gEvEer jMbJFh bvNOrM"
   data-icon="9"
   style={
-    Object {
+    {
       "color": "indianred",
     }
   }
@@ -925,10 +925,10 @@ exports[`EbiSpeciesIcon with classes Icon of mapped species monodelphis domestic
 
 exports[`EbiSpeciesIcon with classes Icon of mapped species monodelphis matches snapshot 1`] = `
 <span
-  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  className="sc-aXZVg sc-gEvEer jMbJFh bvNOrM"
   data-icon="9"
   style={
-    Object {
+    {
       "color": "indianred",
     }
   }
@@ -938,10 +938,10 @@ exports[`EbiSpeciesIcon with classes Icon of mapped species monodelphis matches 
 
 exports[`EbiSpeciesIcon with classes Icon of mapped species mosquito matches snapshot 1`] = `
 <span
-  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  className="sc-aXZVg sc-gEvEer jMbJFh bvNOrM"
   data-icon="1"
   style={
-    Object {
+    {
       "color": "deepskyblue",
     }
   }
@@ -951,10 +951,10 @@ exports[`EbiSpeciesIcon with classes Icon of mapped species mosquito matches sna
 
 exports[`EbiSpeciesIcon with classes Icon of mapped species mouse lemur matches snapshot 1`] = `
 <span
-  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  className="sc-aXZVg sc-gEvEer jMbJFh bvNOrM"
   data-icon="N"
   style={
-    Object {
+    {
       "color": "indianred",
     }
   }
@@ -964,10 +964,10 @@ exports[`EbiSpeciesIcon with classes Icon of mapped species mouse lemur matches 
 
 exports[`EbiSpeciesIcon with classes Icon of mapped species mouse matches snapshot 1`] = `
 <span
-  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  className="sc-aXZVg sc-gEvEer jMbJFh bvNOrM"
   data-icon="M"
   style={
-    Object {
+    {
       "color": "indianred",
     }
   }
@@ -977,10 +977,10 @@ exports[`EbiSpeciesIcon with classes Icon of mapped species mouse matches snapsh
 
 exports[`EbiSpeciesIcon with classes Icon of mapped species mus musculus matches snapshot 1`] = `
 <span
-  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  className="sc-aXZVg sc-gEvEer jMbJFh bvNOrM"
   data-icon="M"
   style={
-    Object {
+    {
       "color": "indianred",
     }
   }
@@ -990,10 +990,10 @@ exports[`EbiSpeciesIcon with classes Icon of mapped species mus musculus matches
 
 exports[`EbiSpeciesIcon with classes Icon of mapped species mustela putorius furo matches snapshot 1`] = `
 <span
-  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  className="sc-aXZVg sc-gEvEer jMbJFh bvNOrM"
   data-icon="!"
   style={
-    Object {
+    {
       "color": "indianred",
     }
   }
@@ -1003,10 +1003,10 @@ exports[`EbiSpeciesIcon with classes Icon of mapped species mustela putorius fur
 
 exports[`EbiSpeciesIcon with classes Icon of mapped species orangutan matches snapshot 1`] = `
 <span
-  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  className="sc-aXZVg sc-gEvEer jMbJFh bvNOrM"
   data-icon="*"
   style={
-    Object {
+    {
       "color": "indianred",
     }
   }
@@ -1016,10 +1016,10 @@ exports[`EbiSpeciesIcon with classes Icon of mapped species orangutan matches sn
 
 exports[`EbiSpeciesIcon with classes Icon of mapped species ornithorhynchus anatinus matches snapshot 1`] = `
 <span
-  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  className="sc-aXZVg sc-gEvEer jMbJFh bvNOrM"
   data-icon="U"
   style={
-    Object {
+    {
       "color": "indianred",
     }
   }
@@ -1029,10 +1029,10 @@ exports[`EbiSpeciesIcon with classes Icon of mapped species ornithorhynchus anat
 
 exports[`EbiSpeciesIcon with classes Icon of mapped species oryctolagus cuniculus matches snapshot 1`] = `
 <span
-  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  className="sc-aXZVg sc-gEvEer jMbJFh bvNOrM"
   data-icon="t"
   style={
-    Object {
+    {
       "color": "indianred",
     }
   }
@@ -1042,10 +1042,10 @@ exports[`EbiSpeciesIcon with classes Icon of mapped species oryctolagus cuniculu
 
 exports[`EbiSpeciesIcon with classes Icon of mapped species oryza sativa japonica group matches snapshot 1`] = `
 <span
-  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  className="sc-aXZVg sc-gEvEer jMbJFh bvNOrM"
   data-icon="6"
   style={
-    Object {
+    {
       "color": "mediumseagreen",
     }
   }
@@ -1055,10 +1055,10 @@ exports[`EbiSpeciesIcon with classes Icon of mapped species oryza sativa japonic
 
 exports[`EbiSpeciesIcon with classes Icon of mapped species oryza sativa matches snapshot 1`] = `
 <span
-  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  className="sc-aXZVg sc-gEvEer jMbJFh bvNOrM"
   data-icon="6"
   style={
-    Object {
+    {
       "color": "mediumseagreen",
     }
   }
@@ -1068,10 +1068,10 @@ exports[`EbiSpeciesIcon with classes Icon of mapped species oryza sativa matches
 
 exports[`EbiSpeciesIcon with classes Icon of mapped species ovis aries matches snapshot 1`] = `
 <span
-  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  className="sc-aXZVg sc-gEvEer jMbJFh bvNOrM"
   data-icon="x"
   style={
-    Object {
+    {
       "color": "indianred",
     }
   }
@@ -1081,10 +1081,10 @@ exports[`EbiSpeciesIcon with classes Icon of mapped species ovis aries matches s
 
 exports[`EbiSpeciesIcon with classes Icon of mapped species pan paniscus matches snapshot 1`] = `
 <span
-  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  className="sc-aXZVg sc-gEvEer jMbJFh bvNOrM"
   data-icon="i"
   style={
-    Object {
+    {
       "color": "indianred",
     }
   }
@@ -1094,10 +1094,10 @@ exports[`EbiSpeciesIcon with classes Icon of mapped species pan paniscus matches
 
 exports[`EbiSpeciesIcon with classes Icon of mapped species pan troglodytes matches snapshot 1`] = `
 <span
-  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  className="sc-aXZVg sc-gEvEer jMbJFh bvNOrM"
   data-icon="i"
   style={
-    Object {
+    {
       "color": "indianred",
     }
   }
@@ -1107,10 +1107,10 @@ exports[`EbiSpeciesIcon with classes Icon of mapped species pan troglodytes matc
 
 exports[`EbiSpeciesIcon with classes Icon of mapped species papio anubis matches snapshot 1`] = `
 <span
-  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  className="sc-aXZVg sc-gEvEer jMbJFh bvNOrM"
   data-icon="8"
   style={
-    Object {
+    {
       "color": "indianred",
     }
   }
@@ -1120,10 +1120,10 @@ exports[`EbiSpeciesIcon with classes Icon of mapped species papio anubis matches
 
 exports[`EbiSpeciesIcon with classes Icon of mapped species physcomitrella patens matches snapshot 1`] = `
 <span
-  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  className="sc-aXZVg sc-gEvEer jMbJFh bvNOrM"
   data-icon="P"
   style={
-    Object {
+    {
       "color": "mediumseagreen",
     }
   }
@@ -1133,10 +1133,10 @@ exports[`EbiSpeciesIcon with classes Icon of mapped species physcomitrella paten
 
 exports[`EbiSpeciesIcon with classes Icon of mapped species pig matches snapshot 1`] = `
 <span
-  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  className="sc-aXZVg sc-gEvEer jMbJFh bvNOrM"
   data-icon="p"
   style={
-    Object {
+    {
       "color": "indianred",
     }
   }
@@ -1146,10 +1146,10 @@ exports[`EbiSpeciesIcon with classes Icon of mapped species pig matches snapshot
 
 exports[`EbiSpeciesIcon with classes Icon of mapped species plant matches snapshot 1`] = `
 <span
-  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  className="sc-aXZVg sc-gEvEer jMbJFh bvNOrM"
   data-icon="P"
   style={
-    Object {
+    {
       "color": "mediumseagreen",
     }
   }
@@ -1159,10 +1159,10 @@ exports[`EbiSpeciesIcon with classes Icon of mapped species plant matches snapsh
 
 exports[`EbiSpeciesIcon with classes Icon of mapped species plasmodium berghei matches snapshot 1`] = `
 <span
-  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  className="sc-aXZVg sc-gEvEer jMbJFh bvNOrM"
   data-icon="@"
   style={
-    Object {
+    {
       "color": "deepskyblue",
     }
   }
@@ -1172,10 +1172,10 @@ exports[`EbiSpeciesIcon with classes Icon of mapped species plasmodium berghei m
 
 exports[`EbiSpeciesIcon with classes Icon of mapped species plasmodium falciparum matches snapshot 1`] = `
 <span
-  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  className="sc-aXZVg sc-gEvEer jMbJFh bvNOrM"
   data-icon="@"
   style={
-    Object {
+    {
       "color": "deepskyblue",
     }
   }
@@ -1185,10 +1185,10 @@ exports[`EbiSpeciesIcon with classes Icon of mapped species plasmodium falciparu
 
 exports[`EbiSpeciesIcon with classes Icon of mapped species plasmodium matches snapshot 1`] = `
 <span
-  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  className="sc-aXZVg sc-gEvEer jMbJFh bvNOrM"
   data-icon="@"
   style={
-    Object {
+    {
       "color": "deepskyblue",
     }
   }
@@ -1198,10 +1198,10 @@ exports[`EbiSpeciesIcon with classes Icon of mapped species plasmodium matches s
 
 exports[`EbiSpeciesIcon with classes Icon of mapped species platypus matches snapshot 1`] = `
 <span
-  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  className="sc-aXZVg sc-gEvEer jMbJFh bvNOrM"
   data-icon="U"
   style={
-    Object {
+    {
       "color": "indianred",
     }
   }
@@ -1211,10 +1211,10 @@ exports[`EbiSpeciesIcon with classes Icon of mapped species platypus matches sna
 
 exports[`EbiSpeciesIcon with classes Icon of mapped species pongo abelii matches snapshot 1`] = `
 <span
-  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  className="sc-aXZVg sc-gEvEer jMbJFh bvNOrM"
   data-icon="*"
   style={
-    Object {
+    {
       "color": "indianred",
     }
   }
@@ -1224,10 +1224,10 @@ exports[`EbiSpeciesIcon with classes Icon of mapped species pongo abelii matches
 
 exports[`EbiSpeciesIcon with classes Icon of mapped species pongo pygmaeus matches snapshot 1`] = `
 <span
-  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  className="sc-aXZVg sc-gEvEer jMbJFh bvNOrM"
   data-icon="*"
   style={
-    Object {
+    {
       "color": "indianred",
     }
   }
@@ -1237,10 +1237,10 @@ exports[`EbiSpeciesIcon with classes Icon of mapped species pongo pygmaeus match
 
 exports[`EbiSpeciesIcon with classes Icon of mapped species pufferfish matches snapshot 1`] = `
 <span
-  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  className="sc-aXZVg sc-gEvEer jMbJFh bvNOrM"
   data-icon="E"
   style={
-    Object {
+    {
       "color": "deepskyblue",
     }
   }
@@ -1250,10 +1250,10 @@ exports[`EbiSpeciesIcon with classes Icon of mapped species pufferfish matches s
 
 exports[`EbiSpeciesIcon with classes Icon of mapped species pyrrhula pyrrhula matches snapshot 1`] = `
 <span
-  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  className="sc-aXZVg sc-gEvEer jMbJFh bvNOrM"
   data-icon="n"
   style={
-    Object {
+    {
       "color": "indianred",
     }
   }
@@ -1263,10 +1263,10 @@ exports[`EbiSpeciesIcon with classes Icon of mapped species pyrrhula pyrrhula ma
 
 exports[`EbiSpeciesIcon with classes Icon of mapped species rabbit matches snapshot 1`] = `
 <span
-  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  className="sc-aXZVg sc-gEvEer jMbJFh bvNOrM"
   data-icon="t"
   style={
-    Object {
+    {
       "color": "indianred",
     }
   }
@@ -1276,10 +1276,10 @@ exports[`EbiSpeciesIcon with classes Icon of mapped species rabbit matches snaps
 
 exports[`EbiSpeciesIcon with classes Icon of mapped species rat matches snapshot 1`] = `
 <span
-  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  className="sc-aXZVg sc-gEvEer jMbJFh bvNOrM"
   data-icon="R"
   style={
-    Object {
+    {
       "color": "indianred",
     }
   }
@@ -1289,10 +1289,10 @@ exports[`EbiSpeciesIcon with classes Icon of mapped species rat matches snapshot
 
 exports[`EbiSpeciesIcon with classes Icon of mapped species rattus norvegicus matches snapshot 1`] = `
 <span
-  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  className="sc-aXZVg sc-gEvEer jMbJFh bvNOrM"
   data-icon="R"
   style={
-    Object {
+    {
       "color": "indianred",
     }
   }
@@ -1302,10 +1302,10 @@ exports[`EbiSpeciesIcon with classes Icon of mapped species rattus norvegicus ma
 
 exports[`EbiSpeciesIcon with classes Icon of mapped species ray matches snapshot 1`] = `
 <span
-  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  className="sc-aXZVg sc-gEvEer jMbJFh bvNOrM"
   data-icon="+"
   style={
-    Object {
+    {
       "color": "deepskyblue",
     }
   }
@@ -1315,10 +1315,10 @@ exports[`EbiSpeciesIcon with classes Icon of mapped species ray matches snapshot
 
 exports[`EbiSpeciesIcon with classes Icon of mapped species rice matches snapshot 1`] = `
 <span
-  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  className="sc-aXZVg sc-gEvEer jMbJFh bvNOrM"
   data-icon="6"
   style={
-    Object {
+    {
       "color": "mediumseagreen",
     }
   }
@@ -1328,10 +1328,10 @@ exports[`EbiSpeciesIcon with classes Icon of mapped species rice matches snapsho
 
 exports[`EbiSpeciesIcon with classes Icon of mapped species saccharomyces cerevisiae matches snapshot 1`] = `
 <span
-  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  className="sc-aXZVg sc-gEvEer jMbJFh bvNOrM"
   data-icon="Y"
   style={
-    Object {
+    {
       "color": "deepskyblue",
     }
   }
@@ -1341,10 +1341,10 @@ exports[`EbiSpeciesIcon with classes Icon of mapped species saccharomyces cerevi
 
 exports[`EbiSpeciesIcon with classes Icon of mapped species schistosoma mansoni matches snapshot 1`] = `
 <span
-  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  className="sc-aXZVg sc-gEvEer jMbJFh bvNOrM"
   data-icon="W"
   style={
-    Object {
+    {
       "color": "deepskyblue",
     }
   }
@@ -1354,10 +1354,10 @@ exports[`EbiSpeciesIcon with classes Icon of mapped species schistosoma mansoni 
 
 exports[`EbiSpeciesIcon with classes Icon of mapped species schizosaccharomyces pombe matches snapshot 1`] = `
 <span
-  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  className="sc-aXZVg sc-gEvEer jMbJFh bvNOrM"
   data-icon="Y"
   style={
-    Object {
+    {
       "color": "deepskyblue",
     }
   }
@@ -1367,10 +1367,10 @@ exports[`EbiSpeciesIcon with classes Icon of mapped species schizosaccharomyces 
 
 exports[`EbiSpeciesIcon with classes Icon of mapped species scorpion matches snapshot 1`] = `
 <span
-  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  className="sc-aXZVg sc-gEvEer jMbJFh bvNOrM"
   data-icon="s"
   style={
-    Object {
+    {
       "color": "deepskyblue",
     }
   }
@@ -1380,10 +1380,10 @@ exports[`EbiSpeciesIcon with classes Icon of mapped species scorpion matches sna
 
 exports[`EbiSpeciesIcon with classes Icon of mapped species sheep matches snapshot 1`] = `
 <span
-  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  className="sc-aXZVg sc-gEvEer jMbJFh bvNOrM"
   data-icon="x"
   style={
-    Object {
+    {
       "color": "indianred",
     }
   }
@@ -1393,10 +1393,10 @@ exports[`EbiSpeciesIcon with classes Icon of mapped species sheep matches snapsh
 
 exports[`EbiSpeciesIcon with classes Icon of mapped species shrew matches snapshot 1`] = `
 <span
-  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  className="sc-aXZVg sc-gEvEer jMbJFh bvNOrM"
   data-icon="Q"
   style={
-    Object {
+    {
       "color": "indianred",
     }
   }
@@ -1406,10 +1406,10 @@ exports[`EbiSpeciesIcon with classes Icon of mapped species shrew matches snapsh
 
 exports[`EbiSpeciesIcon with classes Icon of mapped species snail matches snapshot 1`] = `
 <span
-  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  className="sc-aXZVg sc-gEvEer jMbJFh bvNOrM"
   data-icon="'"
   style={
-    Object {
+    {
       "color": "deepskyblue",
     }
   }
@@ -1419,10 +1419,10 @@ exports[`EbiSpeciesIcon with classes Icon of mapped species snail matches snapsh
 
 exports[`EbiSpeciesIcon with classes Icon of mapped species solanum lycopersicum matches snapshot 1`] = `
 <span
-  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  className="sc-aXZVg sc-gEvEer jMbJFh bvNOrM"
   data-icon=")"
   style={
-    Object {
+    {
       "color": "mediumseagreen",
     }
   }
@@ -1432,10 +1432,10 @@ exports[`EbiSpeciesIcon with classes Icon of mapped species solanum lycopersicum
 
 exports[`EbiSpeciesIcon with classes Icon of mapped species solanum tuberosum matches snapshot 1`] = `
 <span
-  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  className="sc-aXZVg sc-gEvEer jMbJFh bvNOrM"
   data-icon=")"
   style={
-    Object {
+    {
       "color": "mediumseagreen",
     }
   }
@@ -1445,10 +1445,10 @@ exports[`EbiSpeciesIcon with classes Icon of mapped species solanum tuberosum ma
 
 exports[`EbiSpeciesIcon with classes Icon of mapped species sorghum bicolor matches snapshot 1`] = `
 <span
-  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  className="sc-aXZVg sc-gEvEer jMbJFh bvNOrM"
   data-icon="P"
   style={
-    Object {
+    {
       "color": "mediumseagreen",
     }
   }
@@ -1458,10 +1458,10 @@ exports[`EbiSpeciesIcon with classes Icon of mapped species sorghum bicolor matc
 
 exports[`EbiSpeciesIcon with classes Icon of mapped species spider matches snapshot 1`] = `
 <span
-  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  className="sc-aXZVg sc-gEvEer jMbJFh bvNOrM"
   data-icon="S"
   style={
-    Object {
+    {
       "color": "deepskyblue",
     }
   }
@@ -1471,10 +1471,10 @@ exports[`EbiSpeciesIcon with classes Icon of mapped species spider matches snaps
 
 exports[`EbiSpeciesIcon with classes Icon of mapped species squirrel matches snapshot 1`] = `
 <span
-  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  className="sc-aXZVg sc-gEvEer jMbJFh bvNOrM"
   data-icon="I"
   style={
-    Object {
+    {
       "color": "indianred",
     }
   }
@@ -1484,10 +1484,10 @@ exports[`EbiSpeciesIcon with classes Icon of mapped species squirrel matches sna
 
 exports[`EbiSpeciesIcon with classes Icon of mapped species sus scrofa matches snapshot 1`] = `
 <span
-  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  className="sc-aXZVg sc-gEvEer jMbJFh bvNOrM"
   data-icon="p"
   style={
-    Object {
+    {
       "color": "indianred",
     }
   }
@@ -1497,10 +1497,10 @@ exports[`EbiSpeciesIcon with classes Icon of mapped species sus scrofa matches s
 
 exports[`EbiSpeciesIcon with classes Icon of mapped species tetraodon nigroviridis matches snapshot 1`] = `
 <span
-  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  className="sc-aXZVg sc-gEvEer jMbJFh bvNOrM"
   data-icon="E"
   style={
-    Object {
+    {
       "color": "deepskyblue",
     }
   }
@@ -1510,10 +1510,10 @@ exports[`EbiSpeciesIcon with classes Icon of mapped species tetraodon nigrovirid
 
 exports[`EbiSpeciesIcon with classes Icon of mapped species tick matches snapshot 1`] = `
 <span
-  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  className="sc-aXZVg sc-gEvEer jMbJFh bvNOrM"
   data-icon="&"
   style={
-    Object {
+    {
       "color": "deepskyblue",
     }
   }
@@ -1523,10 +1523,10 @@ exports[`EbiSpeciesIcon with classes Icon of mapped species tick matches snapsho
 
 exports[`EbiSpeciesIcon with classes Icon of mapped species tomatoes matches snapshot 1`] = `
 <span
-  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  className="sc-aXZVg sc-gEvEer jMbJFh bvNOrM"
   data-icon=")"
   style={
-    Object {
+    {
       "color": "mediumseagreen",
     }
   }
@@ -1536,10 +1536,10 @@ exports[`EbiSpeciesIcon with classes Icon of mapped species tomatoes matches sna
 
 exports[`EbiSpeciesIcon with classes Icon of mapped species triticum aestivum matches snapshot 1`] = `
 <span
-  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  className="sc-aXZVg sc-gEvEer jMbJFh bvNOrM"
   data-icon="P"
   style={
-    Object {
+    {
       "color": "mediumseagreen",
     }
   }
@@ -1549,10 +1549,10 @@ exports[`EbiSpeciesIcon with classes Icon of mapped species triticum aestivum ma
 
 exports[`EbiSpeciesIcon with classes Icon of mapped species vicugna pacos matches snapshot 1`] = `
 <span
-  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  className="sc-aXZVg sc-gEvEer jMbJFh bvNOrM"
   data-icon="a"
   style={
-    Object {
+    {
       "color": "indianred",
     }
   }
@@ -1562,10 +1562,10 @@ exports[`EbiSpeciesIcon with classes Icon of mapped species vicugna pacos matche
 
 exports[`EbiSpeciesIcon with classes Icon of mapped species virus matches snapshot 1`] = `
 <span
-  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  className="sc-aXZVg sc-gEvEer jMbJFh bvNOrM"
   data-icon="v"
   style={
-    Object {
+    {
       "color": "deepskyblue",
     }
   }
@@ -1575,10 +1575,10 @@ exports[`EbiSpeciesIcon with classes Icon of mapped species virus matches snapsh
 
 exports[`EbiSpeciesIcon with classes Icon of mapped species vitis vinifera matches snapshot 1`] = `
 <span
-  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  className="sc-aXZVg sc-gEvEer jMbJFh bvNOrM"
   data-icon="O"
   style={
-    Object {
+    {
       "color": "mediumseagreen",
     }
   }
@@ -1588,10 +1588,10 @@ exports[`EbiSpeciesIcon with classes Icon of mapped species vitis vinifera match
 
 exports[`EbiSpeciesIcon with classes Icon of mapped species wallaby matches snapshot 1`] = `
 <span
-  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  className="sc-aXZVg sc-gEvEer jMbJFh bvNOrM"
   data-icon="w"
   style={
-    Object {
+    {
       "color": "indianred",
     }
   }
@@ -1601,10 +1601,10 @@ exports[`EbiSpeciesIcon with classes Icon of mapped species wallaby matches snap
 
 exports[`EbiSpeciesIcon with classes Icon of mapped species xenopus (silurana) tropicalis matches snapshot 1`] = `
 <span
-  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  className="sc-aXZVg sc-gEvEer jMbJFh bvNOrM"
   data-icon="f"
   style={
-    Object {
+    {
       "color": "deepskyblue",
     }
   }
@@ -1614,10 +1614,10 @@ exports[`EbiSpeciesIcon with classes Icon of mapped species xenopus (silurana) t
 
 exports[`EbiSpeciesIcon with classes Icon of mapped species xenopus tropicalis matches snapshot 1`] = `
 <span
-  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  className="sc-aXZVg sc-gEvEer jMbJFh bvNOrM"
   data-icon="f"
   style={
-    Object {
+    {
       "color": "deepskyblue",
     }
   }
@@ -1627,10 +1627,10 @@ exports[`EbiSpeciesIcon with classes Icon of mapped species xenopus tropicalis m
 
 exports[`EbiSpeciesIcon with classes Icon of mapped species yeast matches snapshot 1`] = `
 <span
-  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  className="sc-aXZVg sc-gEvEer jMbJFh bvNOrM"
   data-icon="Y"
   style={
-    Object {
+    {
       "color": "deepskyblue",
     }
   }
@@ -1640,10 +1640,10 @@ exports[`EbiSpeciesIcon with classes Icon of mapped species yeast matches snapsh
 
 exports[`EbiSpeciesIcon with classes Icon of mapped species zea mays matches snapshot 1`] = `
 <span
-  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  className="sc-aXZVg sc-gEvEer jMbJFh bvNOrM"
   data-icon="c"
   style={
-    Object {
+    {
       "color": "mediumseagreen",
     }
   }
@@ -1653,10 +1653,10 @@ exports[`EbiSpeciesIcon with classes Icon of mapped species zea mays matches sna
 
 exports[`EbiSpeciesIcon with classes Icon of mapped species zebrafish matches snapshot 1`] = `
 <span
-  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  className="sc-aXZVg sc-gEvEer jMbJFh bvNOrM"
   data-icon="Z"
   style={
-    Object {
+    {
       "color": "deepskyblue",
     }
   }
@@ -1666,10 +1666,10 @@ exports[`EbiSpeciesIcon with classes Icon of mapped species zebrafish matches sn
 
 exports[`EbiSpeciesIcon with classes Icon of unknown species matches snapshot 1`] = `
 <span
-  className="sc-bdfBwQ sc-gsTCUz veTvr glWtrC"
+  className="sc-aXZVg sc-gEvEer jMbJFh bvNOrM"
   data-icon="❔"
   style={
-    Object {
+    {
       "color": "black",
     }
   }
