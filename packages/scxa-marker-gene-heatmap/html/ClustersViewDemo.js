@@ -54,7 +54,7 @@ class Demo extends React.Component {
           host={`https://wwwdev.ebi.ac.uk/gxa/sc/`}
           ks={this.props.ks}
           ksWithMarkers={this.props.ksWithMarkers}
-          metadata={this.props.metadata}
+          markerGeneMetadata={this.props.markerGeneMetadata}
           selectedK={this.state.selectedK}
           onSelectK={
             (k) => {
