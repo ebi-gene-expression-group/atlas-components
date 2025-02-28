@@ -64,7 +64,7 @@ exports[`TableHeaderCell matches snapshot (basic) 1`] = `
               <Box
                 boxSizing="border-box"
                 color="#234361"
-                fontFamily="\\"SF UI Text\\", -apple-system, BlinkMacSystemFont, \\"Segoe UI\\", Roboto, Helvetica, Arial, sans-serif, \\"Apple Color Emoji\\", \\"Segoe UI Emoji\\", \\"Segoe UI Symbol\\""
+                fontFamily=""SF UI Text", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol""
                 fontSize="16px"
                 fontWeight={500}
                 is="h2"
@@ -191,12 +191,12 @@ exports[`TableHeaderCell matches snapshot (searchable and sortable) 1`] = `
                           name="search"
                           size={12}
                           svgPaths16={
-                            Array [
+                            [
                               "M15.55 13.43l-2.67-2.68a6.94 6.94 0 001.11-3.76c0-3.87-3.13-7-7-7s-7 3.13-7 7 3.13 7 7 7c1.39 0 2.68-.42 3.76-1.11l2.68 2.67a1.498 1.498 0 102.12-2.12zm-8.56-1.44c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z",
                             ]
                           }
                           svgPaths20={
-                            Array [
+                            [
                               "M19.56 17.44l-4.94-4.94A8.004 8.004 0 0016 8c0-4.42-3.58-8-8-8S0 3.58 0 8s3.58 8 8 8c1.67 0 3.21-.51 4.5-1.38l4.94 4.94a1.498 1.498 0 102.12-2.12zM8 14c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6z",
                             ]
                           }
@@ -208,7 +208,7 @@ exports[`TableHeaderCell matches snapshot (searchable and sortable) 1`] = `
                             height={12}
                             is="svg"
                             style={
-                              Object {
+                              {
                                 "fill": "#66788A",
                               }
                             }
@@ -220,7 +220,7 @@ exports[`TableHeaderCell matches snapshot (searchable and sortable) 1`] = `
                               className="ub-z-idx_3 ub-w_12px ub-h_12px ub-box-szg_border-box"
                               data-icon="search"
                               style={
-                                Object {
+                                {
                                   "fill": "#66788A",
                                 }
                               }
@@ -272,7 +272,7 @@ exports[`TableHeaderCell matches snapshot (searchable and sortable) 1`] = `
                         className="css-5ljhhe"
                         color="#425A70"
                         disabled={false}
-                        fontFamily="\\"SF UI Text\\", -apple-system, BlinkMacSystemFont, \\"Segoe UI\\", Roboto, Helvetica, Arial, sans-serif, \\"Apple Color Emoji\\", \\"Segoe UI Emoji\\", \\"Segoe UI Symbol\\""
+                        fontFamily=""SF UI Text", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol""
                         fontSize="16px"
                         fontWeight={400}
                         height={32}
@@ -433,12 +433,12 @@ exports[`TableHeaderCell matches snapshot (searchable) 1`] = `
                           name="search"
                           size={12}
                           svgPaths16={
-                            Array [
+                            [
                               "M15.55 13.43l-2.67-2.68a6.94 6.94 0 001.11-3.76c0-3.87-3.13-7-7-7s-7 3.13-7 7 3.13 7 7 7c1.39 0 2.68-.42 3.76-1.11l2.68 2.67a1.498 1.498 0 102.12-2.12zm-8.56-1.44c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z",
                             ]
                           }
                           svgPaths20={
-                            Array [
+                            [
                               "M19.56 17.44l-4.94-4.94A8.004 8.004 0 0016 8c0-4.42-3.58-8-8-8S0 3.58 0 8s3.58 8 8 8c1.67 0 3.21-.51 4.5-1.38l4.94 4.94a1.498 1.498 0 102.12-2.12zM8 14c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6z",
                             ]
                           }
@@ -450,7 +450,7 @@ exports[`TableHeaderCell matches snapshot (searchable) 1`] = `
                             height={12}
                             is="svg"
                             style={
-                              Object {
+                              {
                                 "fill": "#66788A",
                               }
                             }
@@ -462,7 +462,7 @@ exports[`TableHeaderCell matches snapshot (searchable) 1`] = `
                               className="ub-z-idx_3 ub-w_12px ub-h_12px ub-box-szg_border-box"
                               data-icon="search"
                               style={
-                                Object {
+                                {
                                   "fill": "#66788A",
                                 }
                               }
@@ -514,7 +514,7 @@ exports[`TableHeaderCell matches snapshot (searchable) 1`] = `
                         className="css-5ljhhe"
                         color="#425A70"
                         disabled={false}
-                        fontFamily="\\"SF UI Text\\", -apple-system, BlinkMacSystemFont, \\"Segoe UI\\", Roboto, Helvetica, Arial, sans-serif, \\"Apple Color Emoji\\", \\"Segoe UI Emoji\\", \\"Segoe UI Symbol\\""
+                        fontFamily=""SF UI Text", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol""
                         fontSize="16px"
                         fontWeight={400}
                         height={32}
@@ -618,7 +618,7 @@ exports[`TableHeaderCell matches snapshot (sortable) 1`] = `
               <Box
                 boxSizing="border-box"
                 color="#234361"
-                fontFamily="\\"SF UI Text\\", -apple-system, BlinkMacSystemFont, \\"Segoe UI\\", Roboto, Helvetica, Arial, sans-serif, \\"Apple Color Emoji\\", \\"Segoe UI Emoji\\", \\"Segoe UI Symbol\\""
+                fontFamily=""SF UI Text", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol""
                 fontSize="16px"
                 fontWeight={500}
                 is="h2"

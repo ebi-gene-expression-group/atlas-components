@@ -3,16 +3,16 @@
 exports[`SelectionTableHeaderCell matches snapshot (basic) 1`] = `
 <SelectionTableHeaderCell
   downloadFileTypes={
-    Array [
-      Object {
+    [
+      {
         "description": "File type 1",
         "id": "file1",
       },
-      Object {
+      {
         "description": "File type 2",
         "id": "file-2",
       },
-      Object {
+      {
         "description": "File type 3",
         "id": "file-type3",
       },
@@ -20,7 +20,7 @@ exports[`SelectionTableHeaderCell matches snapshot (basic) 1`] = `
   }
   label="Action"
   onClick={[Function]}
-  selectedRowIds={Array []}
+  selectedRowIds={[]}
   tooltipContent=""
   width={1}
 >
@@ -73,7 +73,7 @@ exports[`SelectionTableHeaderCell matches snapshot (basic) 1`] = `
               <Box
                 boxSizing="border-box"
                 color="#234361"
-                fontFamily="\\"SF UI Text\\", -apple-system, BlinkMacSystemFont, \\"Segoe UI\\", Roboto, Helvetica, Arial, sans-serif, \\"Apple Color Emoji\\", \\"Segoe UI Emoji\\", \\"Segoe UI Symbol\\""
+                fontFamily=""SF UI Text", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol""
                 fontSize="16px"
                 fontWeight={500}
                 is="h2"
@@ -102,7 +102,7 @@ exports[`SelectionTableHeaderCell matches snapshot (with a selection) 1`] = `
   label="Action"
   onClick={[MockFunction]}
   selectedRowIds={
-    Array [
+    [
       "E-EHCA-1",
       "E-MTAB-5200",
     ]
@@ -159,7 +159,7 @@ exports[`SelectionTableHeaderCell matches snapshot (with a selection) 1`] = `
               <Box
                 boxSizing="border-box"
                 color="#234361"
-                fontFamily="\\"SF UI Text\\", -apple-system, BlinkMacSystemFont, \\"Segoe UI\\", Roboto, Helvetica, Arial, sans-serif, \\"Apple Color Emoji\\", \\"Segoe UI Emoji\\", \\"Segoe UI Symbol\\""
+                fontFamily=""SF UI Text", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol""
                 fontSize="16px"
                 fontWeight={500}
                 is="h2"

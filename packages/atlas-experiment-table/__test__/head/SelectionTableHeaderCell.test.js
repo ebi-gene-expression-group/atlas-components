@@ -22,11 +22,11 @@ describe(`SelectionTableHeaderCell`, () => {
     }
     const wrapper = shallow(<SelectionTableHeaderCell {...props}/>)
 
-    expect(wrapper).not.toContainMatchingElement(`a`)
-    expect(wrapper).not.toContainMatchingElement(ReactTooltip)
+    expect(wrapper.find(`a`)).toHaveLength(0);
+    expect(wrapper.find(ReactTooltip)).toHaveLength(0);
 
-    expect(wrapper).toContainExactlyOneMatchingElement(Table.HeaderCell)
-    expect(wrapper).toContainExactlyOneMatchingElement(Heading)
+    expect(wrapper.find(Table.HeaderCell)).toHaveLength(1);
+    expect(wrapper.find(Heading)).toHaveLength(1);
     expect(wrapper.find(Heading)).toHaveProp(`children`, props.label)
   })
 
@@ -42,8 +42,8 @@ describe(`SelectionTableHeaderCell`, () => {
     }
     const wrapper = shallow(<SelectionTableHeaderCell {...props}/>)
 
-    expect(wrapper).toContainExactlyOneMatchingElement(Table.HeaderCell)
-    expect(wrapper).toContainExactlyOneMatchingElement(`a`)
+    expect(wrapper.find(Table.HeaderCell)).toHaveLength(1)
+    expect(wrapper.find(`a`)).toHaveLength(1)
     expect(wrapper.find(`a`)).toIncludeText(props.label)
   })
 
@@ -74,7 +74,7 @@ describe(`SelectionTableHeaderCell`, () => {
     }
     const wrapper = shallow(<SelectionTableHeaderCell {...props}/>)
 
-    expect(wrapper).toContainExactlyOneMatchingElement(ReactTooltip)
+    expect(wrapper.find(ReactTooltip)).toHaveLength(1)
   })
 
   test(`matches snapshot (basic)`, () => {

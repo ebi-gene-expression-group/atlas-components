@@ -60,8 +60,10 @@ describe(`TableCell`, () => {
     }
     const wrapper = shallow(<TableCell {...props} image={image} dataKey={`string`}/>)
 
-    expect(wrapper.find(Table.Cell)).toContainExactlyOneMatchingElement(`img`)
-    expect(wrapper.find(Table.Cell).find(`img`)).toHaveProp({src: `imageUrl`, alt: `altText`})
+    const imgElement = wrapper.find(Table.Cell).find(`img`)
+    expect(imgElement).toHaveLength(1)
+    expect(imgElement.prop(`src`)).toBe(`imageUrl`)
+    expect(imgElement.prop(`alt`)).toBe(`altText`)
   })
 
   test.each(
@@ -84,17 +86,20 @@ describe(`TableCell`, () => {
     const image = {}
     const wrapper = shallow(<TableCell {...props} image={image} dataKey={`string`}/>)
 
-    expect(wrapper.find(Table.Cell).find(`img`)).not.toExist()
+    expect(wrapper.find(Table.Cell).find(`img`)).toHaveLength(0)
     expect(wrapper.find(Table.Cell).find(Text).children()).toHaveText(`❔`)
   })
 
   test(`shows a link if a linkTo function has been passed`, () => {
     const linkTo = dataRow => `https://some.domain/${dataRow.string}/someResource`
-    const wrapper = shallow(<TableCell {...props} linkTo={linkTo} dataKey={`number`}/>)
+    const wrapper = shallow(<TableCell {...props} linkTo={linkTo} dataKey={`number`} />)
 
-    expect(wrapper.find(Table.Cell)).toContainExactlyOneMatchingElement(`a`)
-    expect(wrapper.find(Table.Cell).find(`a`)).toHaveProp({ href: linkTo(props.dataRow) })
+    const linkElement = wrapper.find(Table.Cell).find(`a`)
+
+    expect(linkElement).toHaveLength(1)
+    expect(linkElement.prop(`href`)).toBe(linkTo(props.dataRow))
   })
+
 
   test(`matches snapshot (sring)`, () => {
     const dataRow = {

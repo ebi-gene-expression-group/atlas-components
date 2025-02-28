@@ -4,6 +4,7 @@ import { shallow } from 'enzyme/build'
 
 import ExperimentFileTypeMultiChoice from '../../src/download/ExperimentFileTypeMultiChoice'
 import { downloadFileTypes, getRandomInt } from '../TestUtils'
+import {Heading} from "evergreen-ui";
 
 describe(`ExperimentFileTypeMultiChoice`, () => {
   const props = {
@@ -28,7 +29,7 @@ describe(`ExperimentFileTypeMultiChoice`, () => {
 
   test(`displays a warning message if no inputs are checked`, () => {
     const wrapper = shallow(<ExperimentFileTypeMultiChoice {...props}/>)
-    expect(wrapper).not.toContainExactlyOneMatchingElement(`p`)
+    expect(wrapper.find(`p`)).toHaveLength(0)
 
     // I don’t know why this doesn’t work, it only changes checked in the last input :(
     //wrapper.find(`input`).forEach(node => { node.simulate(`change`) })
@@ -37,7 +38,7 @@ describe(`ExperimentFileTypeMultiChoice`, () => {
       wrapper.find(`input`).at(i).simulate(`change`)
     }
 
-    expect(wrapper).toContainExactlyOneMatchingElement(`p`)
+    expect(wrapper.find(`p`)).toHaveLength(1)
   })
 
   test(`matches snapshot`, () => {
