@@ -8,11 +8,12 @@ import TSnePlotView from '@ebi-gene-expression-group/scxa-tsne-plot'
 class TSnePlotWidget extends React.Component {
   constructor(props) {
     super(props)
+    const defaultPlotMethodAndParameterisation = this.props.defaultPlotMethodAndParameterisation
     this.state = {
-      selectedPlotType: Object.keys(this.props.defaultPlotMethodAndParameterisation)[0],
-      selectedPlotOption: Object.values(Object.values(this.props.defaultPlotMethodAndParameterisation)[0])[0],
-      selectedPlotOptionLabel: Object.keys(Object.values(this.props.defaultPlotMethodAndParameterisation)[0])[0] + ": "
-          + Object.values(Object.values(this.props.defaultPlotMethodAndParameterisation)[0])[0],
+      selectedPlotType: Object.keys(defaultPlotMethodAndParameterisation)[0],
+      selectedPlotOption: Object.values(Object.values(defaultPlotMethodAndParameterisation)[0])[0],
+      selectedPlotOptionLabel: Object.keys(Object.values(defaultPlotMethodAndParameterisation)[0])[0] + ": "
+          + Object.values(Object.values(defaultPlotMethodAndParameterisation)[0])[0],
       selectedColourBy: this.props.metadata ? this.props.metadata[0].value : ``,
       selectedGeneId: this.props.geneId,
       selectedColourByCategory: `metadata`,
