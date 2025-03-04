@@ -20,7 +20,7 @@ exports[`TableFooter matches snapshot (fewer than 7 pages in total) 1`] = `
     <ul
       className="pagination"
       style={
-        Object {
+        {
           "textAlign": "right",
         }
       }
@@ -97,7 +97,7 @@ exports[`TableFooter matches snapshot (more than 7 pages filtered from a superse
     <ul
       className="pagination"
       style={
-        Object {
+        {
           "textAlign": "right",
         }
       }
@@ -198,7 +198,7 @@ exports[`TableFooter matches snapshot (no data) 1`] = `
     <ul
       className="pagination"
       style={
-        Object {
+        {
           "textAlign": "right",
         }
       }
@@ -242,7 +242,7 @@ exports[`TableFooter matches snapshot (one page) 1`] = `
     <ul
       className="pagination"
       style={
-        Object {
+        {
           "textAlign": "right",
         }
       }

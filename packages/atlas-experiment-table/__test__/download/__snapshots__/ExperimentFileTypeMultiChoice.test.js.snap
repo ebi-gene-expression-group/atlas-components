@@ -3,7 +3,7 @@
 exports[`ExperimentFileTypeMultiChoice matches snapshot 1`] = `
 <ul
   style={
-    Object {
+    {
       "listStyle": "none",
     }
   }

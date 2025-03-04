@@ -4,13 +4,13 @@ exports[`SelectionTableCell matches snapshot (checked) 1`] = `
 <SelectionTableCell
   dataKey="string"
   dataRow={
-    Object {
+    {
       "string": "foobar",
     }
   }
   selectOnChange={[MockFunction]}
   selectedRowIds={
-    Array [
+    [
       "foobar",
     ]
   }
@@ -124,12 +124,12 @@ exports[`SelectionTableCell matches snapshot (unchecked) 1`] = `
 <SelectionTableCell
   dataKey="string"
   dataRow={
-    Object {
+    {
       "string": "foobar",
     }
   }
   selectOnChange={[MockFunction]}
-  selectedRowIds={Array []}
+  selectedRowIds={[]}
   width={1}
 >
   <ForwardRef(TableCell)
