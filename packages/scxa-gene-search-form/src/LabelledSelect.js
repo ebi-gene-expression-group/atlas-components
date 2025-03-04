@@ -64,7 +64,7 @@ class LabelledSelect extends React.Component {
       <label>{capitalisedName}
         <Select
           name={name}
-          components={{ IndicatorSeparator: null, DropdownIndicator: ebiVfReactSelectReplacements.DropdownIndicator }}
+          components={{ IndicatorSeparator: null, DropdownIndicator: ebiVfReactSelectReplacements.CustomIndicatorsContainer }}
           styles={ebiVfReactSelectReplacements.styles}
           inputId={`${name}-input`}
           isSearchable={false}
