@@ -82,7 +82,9 @@ module.exports = {
 	      'hlcadev2.westeurope.cloudapp.azure.com',
         'www.ebi.ac.uk'
     ],
-    contentBase: path.resolve(__dirname, `html`),
-    publicPath: commonPublicPath
+    static: path.resolve(__dirname, `html`),
+    devMiddleware: {
+      publicPath: commonPublicPath,
+    },
   },
 }
