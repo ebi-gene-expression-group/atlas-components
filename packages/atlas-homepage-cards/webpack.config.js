@@ -51,7 +51,9 @@ module.exports = {
 
   devServer: {
     port: 9000,
-    contentBase: path.resolve(__dirname, `html`),
-    publicPath: commonPublicPath
+    static: path.resolve(__dirname, 'html'),
+    devMiddleware: {
+      publicPath: commonPublicPath,
+    }
   }
 }
