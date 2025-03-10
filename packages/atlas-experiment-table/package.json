@@ -1,6 +1,6 @@
 {
   "name": "@ebi-gene-expression-group/atlas-experiment-table",
-  "version": "3.2.11",
+  "version": "3.2.12",
   "description": "This package renders an experiment table with user interaction using Evergreen package",
   "main": "lib/index.js",
   "scripts": {
@@ -10,7 +10,10 @@
     "start": "webpack-dev-server --mode=development"
   },
   "jest": {
-    "setupFilesAfterEnv": ["jest-enzyme", "<rootDir>/jest.setup.js"],
+    "setupFilesAfterEnv": [
+      "jest-enzyme",
+      "<rootDir>/jest.setup.js"
+    ],
     "testEnvironment": "jsdom",
     "testEnvironmentOptions": {
       "enzymeAdapter": "react16"

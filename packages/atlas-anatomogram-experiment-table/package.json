@@ -1,6 +1,6 @@
 {
   "name": "anatomogramexperiment",
-  "version": "1.1.9",
+  "version": "1.1.10",
   "description": "",
   "main": "lib/anatomogramCellTypeHeatmapView.js",
   "scripts": {
@@ -14,8 +14,8 @@
     "url": "git+https://github.com/ebi-gene-expression-group/atlas-components.git"
   },
   "dependencies": {
-    "@ebi-gene-expression-group/atlas-experiment-table": "^3.2.11",
-    "@ebi-gene-expression-group/atlas-react-fetch-loader": "*",
+    "@ebi-gene-expression-group/atlas-experiment-table": "^3.2.12",
+    "@ebi-gene-expression-group/atlas-react-fetch-loader": "^3.9.1",
     "@ebi-gene-expression-group/organ-anatomogram": "^1.0.0-beta1",
     "prop-types": "^15.7.2",
     "react": "^16.14.0",
