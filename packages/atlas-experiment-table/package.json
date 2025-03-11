@@ -1,18 +1,20 @@
 {
   "name": "@ebi-gene-expression-group/atlas-experiment-table",
-  "version": "3.2.11",
+  "version": "3.2.12",
   "description": "This package renders an experiment table with user interaction using Evergreen package",
   "main": "lib/index.js",
   "scripts": {
     "prepare": "rm -rf lib && babel src -d lib --copy-files",
     "test": "jest -u",
-    "posttest": "jest --coverage --coverageReporters=text-lcov | coveralls"
+    "posttest": "jest --coverage --coverageReporters=text-lcov | coveralls",
+    "start": "webpack-dev-server --mode=development"
   },
   "jest": {
     "setupFilesAfterEnv": [
-      "jest-enzyme"
+      "jest-enzyme",
+      "<rootDir>/jest.setup.js"
     ],
-    "testEnvironment": "enzyme",
+    "testEnvironment": "jsdom",
     "testEnvironmentOptions": {
       "enzymeAdapter": "react16"
     },
@@ -39,6 +41,7 @@
     "url": "git+https://github.com/ebi-gene-expression-group/atlas-components.git"
   },
   "dependencies": {
+    "@testing-library/jest-dom": "^6.6.3",
     "evergreen-ui": "^5.0.4",
     "jw-paginate": "^1.0.4",
     "lodash": "^4.17.20",
@@ -62,16 +65,20 @@
     "clean-webpack-plugin": "^3.0.0",
     "coveralls": "^3.1.0",
     "enzyme": "^3.11.0",
-    "enzyme-adapter-react-16": "^1.15.3",
+    "enzyme-adapter-react-16": "^1.15.8",
     "eslint": "^7.6.0",
-    "fetch-mock": "^9.10.6",
-    "jest": "^26.4.0",
-    "jest-environment-enzyme": "^7.1.2",
-    "jest-enzyme": "^7.1.2",
+    "fetch-mock": "^9.11.0",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "jest-enzyme": "^4.2.0",
     "random-string": "^0.2.0",
-    "webpack": "^4.44.1",
-    "webpack-cli": "^3.3.12",
-    "webpack-dev-server": "^3.11.0"
+    "webpack": "^5.98.0",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.0"
+  },
+  "overrides": {
+    "tough-cookie": "^4.1.4",
+    "cheerio": "0.22.0"
   },
   "gitHead": "0fcac2cf1b51445c92c92a4dc4ce51f468a1a6fb"
 }
