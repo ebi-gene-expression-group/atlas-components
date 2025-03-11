@@ -19,7 +19,7 @@ AnimalSpeciesSummary.propTypes = {
 const FetchLoadAnimalSpeciesSummary = withFetchLoader(AnimalSpeciesSummary)
 
 const render = (options, target) => {
-  ReactDOM.render(<FetchLoadAnimalSpeciesSummary {...options}/>, document.getElementById(target))
+  ReactDOM.render(<FetchLoadAnimalSpeciesSummary {...options} host={`${process.env.SERVICE_URL}/gxa/sc/`}/>, document.getElementById(target))
 }
 
 export { render }

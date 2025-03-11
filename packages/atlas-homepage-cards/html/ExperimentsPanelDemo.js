@@ -212,8 +212,9 @@ const buildFeaturedExperimentsCards = (host) => {
 const render = (options, target) => {
   ReactDOM.render(
     <ResponsiveCardsRow
-      cards={buildFeaturedExperimentsCards(`https://www.ebi.ac.uk/gxa/`)} // Ideally options.host, but it may be down
+      cards={buildFeaturedExperimentsCards(`${process.env.SERVICE_URL}/gxa/`)} // Ideally options.host, but it may be down
       {...options}
+      host={`${process.env.SERVICE_URL}/gxa/`}
     />,
     document.getElementById(target))
 }
