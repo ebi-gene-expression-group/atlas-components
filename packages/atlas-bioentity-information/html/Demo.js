@@ -9,7 +9,7 @@ const render = (options, target) => {
   ReactDOM.render(
     <BioentityInformationWithFetchLoader
       {...options}
-      host={`http://localhost:8080/gxa/sc/`}
+      host={`https://wwwdev.ebi.ac.uk/gxa/sc/`}
       resource={`json/bioentity-information/${options.geneId}`}/>,
     document.getElementById(target))
 }

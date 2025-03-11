@@ -26,13 +26,13 @@ describe(`SelectionTableCell`, () => {
   test(`displays an unchecked checkbox if the current row is not in the array of selected rows`, () => {
     const wrapper = shallow(<SelectionTableCell {...props} selectedRowIds={[randomString()]}/>)
 
-    expect(wrapper.find(Checkbox)).toHaveProp({checked: false})
+    expect(wrapper.find(Checkbox).prop(`checked`)).toBe( false)
   })
 
   test(`displays a checked checkbox if the current row is in the array of selected rows`, () => {
     const wrapper = shallow(<SelectionTableCell {...props} selectedRowIds={[props.dataRow[props.dataKey]]}/>)
 
-    expect(wrapper.find(Checkbox)).toHaveProp({checked: true})
+    expect(wrapper.find(Checkbox).prop(`checked`)).toBe( true)
   })
 
   test(`calls selectOnChange with the keyed value from dataRow as argument when the checkbox is (de)selected`, () => {
