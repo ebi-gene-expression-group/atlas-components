@@ -6,6 +6,8 @@
   "scripts": {
     "prepare": "rm -rf lib && babel src -d lib --copy-files",
     "start": "webpack-dev-server --mode=development",
+    "start:localhost": "webpack serve --env host=http://localhost:8080 --mode=development",
+    "start:wwwdev": "webpack serve --env host=https://wwwdev.ebi.ac.uk --mode=development",
     "test": "jest -u"
   },
   "jest": {
