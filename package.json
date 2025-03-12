@@ -6,7 +6,7 @@
   "sideEffects": false,
   "scripts": {
     "prepack": "rm -rf lib && babel src -d lib --copy-files",
-    "parseSvgs": "node scripts/svgParse.js src/svg > src/json/svgsMetadata.json",
+    "parseSvgs": "node scripts/svgParse.js src/svg",
     "dist": " webpack -p",
     "pretest": "npm run parseSvgs",
     "test": "jest --coverage",
@@ -57,7 +57,7 @@
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.5",
     "eslint": "^7.11.0",
-    "fast-xml-parser": "^4.5.3",
+    "fast-xml-parser": "^3.21.1",
     "file-loader": "^6.1.1",
     "image-webpack-loader": "^8.1.0",
     "jest": "^29.7.0",
