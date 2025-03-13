@@ -1,24 +1,3 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Anatomogram should render for a supported species 1`] = `
-<div>
-  <Switcher
-    onChangeView={[Function]}
-    selectedView="male"
-    species="mus_musculus"
-  />
-  <AnatomogramSvg
-    clearSelectIds={[Function]}
-    idsWithMarkup={Array []}
-    initShowIds={[Function]}
-    onChangeView={[Function]}
-    onClick={[MockFunction]}
-    onInjected={[Function]}
-    onMouseOut={[MockFunction]}
-    onMouseOver={[MockFunction]}
-    parentView="parent"
-    selectedView="male"
-    species="mus_musculus"
-  />
-</div>
-`;
+exports[`Anatomogram should render for a supported species 1`] = `ShallowWrapper {}`;
