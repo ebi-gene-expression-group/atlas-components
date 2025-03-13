@@ -15,12 +15,16 @@ describe(`Anatomogram`, () => {
       species={`mus_musculus`}
       initShowIds={() => {}}
       clearSelectIds={() => {}}
+      showLinkBoxIds={() => {}}
     />)).toMatchSnapshot()
   })
 
   test(`should not render for an unsupported species`, () => {
-    expect(shallow(<Anatomogram species={`ovis_aries`}
-      initShowIds={() => {}} clearSelectIds={() => {}}/>).children()).toHaveLength(0)
+    expect(shallow(<Anatomogram
+        species={`ovis_aries`}
+        initShowIds={() => {}}
+        showLinkBoxIds={() => {}}
+        clearSelectIds={() => {}}/>).children()).toHaveLength(0)
   })
 
 })
