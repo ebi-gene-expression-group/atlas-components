@@ -3,7 +3,7 @@ import fs from 'fs'
 import path from 'path'
 
 const unique = (value, index, self) => self.indexOf(value) === index
-const organs = [`kidney`, `pancreas`, `liver`, `lung`, `gut`, `placenta`]
+const organs = [`kidney`, `pancreas`, `liver`, `lung`, `gut`, `placenta`, `ovary`, `reproduction`]
 describe(`Assets module`, () => {
 
   const expectedSpecies =

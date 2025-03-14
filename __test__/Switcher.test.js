@@ -17,7 +17,7 @@ const allChildrenViews = species =>
     .filter(view => view.hasOwnProperty(`parent`))
     .map(data => data.view)
 
-const organs = [`kidney`, `pancreas`, `liver`, `lung`, `gut`, `placenta`]
+const organs = [`kidney`, `pancreas`, `lung`, `liver`, `placenta`, `gut`, `ovary`, `reproduction`]
 
 describe(`Anatomogram switcher`, () => {
   const requiredProps = {
@@ -29,7 +29,7 @@ describe(`Anatomogram switcher`, () => {
       expect(mount(<Switcher {...requiredProps} species={species}/>).find(`img`)).toHaveLength(getAnatomogramViews(species).length)
     })
   })
-  
+
   test(`should contain a backward button for parent tissue parts for kidney species`, function() {
     const species = `kidney`
     allChildrenViews(species).forEach(view =>{
