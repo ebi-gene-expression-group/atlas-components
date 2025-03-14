@@ -1,5 +1,6 @@
 import { shallow, mount } from 'enzyme'
 import EbiSpeciesIcon from '@ebi-gene-expression-group/react-ebi-species'
+import React from 'react'
 
 import { generateRandomInt } from './TestUtils'
 import {
@@ -72,16 +73,29 @@ describe(`Card`, () => {
     const props = batmanFilmsSpeciesCardProps
     const size = generateRandomInt(1, 10)
     const wrapper = shallow(<Card {...props} speciesIconHeight={`${size}rem`}/>)
+    // Find the correct span element (the one with the style applied)
+    const spanElement = wrapper.find('span').at(0) // Access the first span element
 
-    expect(wrapper.find(`span`)).toHaveStyle(`fontSize`, `${size}rem`)
+    // Check if the style prop contains fontSize
+    const style = spanElement.prop('style')
+
+    // Ensure the style is applied correctly
+    expect(style.fontSize).toBe(`${size}rem`)
   })
 
   test(`changes image icon size according to props`, () => {
     const props = aRickleInTimeImageCardProps
     const size = generateRandomInt(100, 400)
-    const wrapper = shallow(<Card {...props} imageIconHeight={`${size}px`}/>)
+    const wrapper = mount(<Card {...props} imageIconHeight={`${size}px`}/>)
 
-    expect(wrapper.find(`img`)).toHaveStyle(`height`, `${size}px`)
+    // Find the correct span element (the one with the style applied)
+    const spanElement = wrapper.find('img').at(0) // Access the first span element
+
+    // Check if the style prop contains fontSize
+    const style = spanElement.prop('style')
+
+    // Ensure the style is applied correctly
+    expect(style.height).toBe(`${size}px`);
   })
 
   test.each([

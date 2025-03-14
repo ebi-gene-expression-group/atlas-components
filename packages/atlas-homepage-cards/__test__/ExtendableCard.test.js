@@ -1,5 +1,6 @@
 import { shallow, mount } from 'enzyme'
 import EbiSpeciesIcon from '@ebi-gene-expression-group/react-ebi-species'
+import React from 'react'
 
 import { generateRandomInt } from './TestUtils'
 import {
@@ -69,18 +70,33 @@ describe(`ExtendableCard`, () => {
   test(`changes species icon size according to props`, () => {
     const props = batmanFilmsSpeciesCardProps
     const size = generateRandomInt(1, 10)
-    const wrapper = shallow(<ExtendableCard {...props} speciesIconHeight={`${size}rem`}/>)
+    const wrapper = mount(<ExtendableCard {...props} speciesIconHeight={`${size}rem`} />)
 
-    expect(wrapper.find(`span`)).toHaveStyle(`fontSize`, `${size}rem`)
-  })
+    // Find the correct span element (the one with the style applied)
+    const spanElement = wrapper.find('span').at(0) // Access the first span element
 
-  test(`changes image icon size according to props`, () => {
+    // Check if the style prop contains fontSize
+    const style = spanElement.prop('style')
+
+    // Ensure the style is applied correctly
+    expect(style.fontSize).toBe(`${size}rem`)
+  });
+
+
+  test('changes image icon size according to props', () => {
     const props = aRickleInTimeImageCardProps
     const size = generateRandomInt(100, 400)
-    const wrapper = shallow(<ExtendableCard {...props} imageIconHeight={`${size}px`}/>)
+    const wrapper = mount(<ExtendableCard {...props} imageIconHeight={`${size}px`} />)
 
-    expect(wrapper.find(`img`)).toHaveStyle(`height`, `${size}px`)
-  })
+    // Find the correct span element (the one with the style applied)
+    const spanElement = wrapper.find('img').at(0) // Access the first span element
+
+    // Check if the style prop contains fontSize
+    const style = spanElement.prop('style')
+
+    // Ensure the style is applied correctly
+    expect(style.height).toBe(`${size}px`)
+  });
 
   test(`displays up to five content items by default with a button to show/hide the others`, () => {
     const props = [aRickleInTimeImageCardProps, batmanFilmsSpeciesCardProps][generateRandomInt(0, 2)]
