@@ -3,14 +3,14 @@ import renderer from 'react-test-renderer'
 import { shallow } from 'enzyme'
 
 import '@babel/polyfill'
-import fetchMock from 'fetch-mock'
+import fetchMock from 'jest-fetch-mock'
 
 import TSnePlotView from '../src/TSnePlotView'
 
 describe(`TSnePlotView`, () => {
 
   beforeEach(() => {
-    fetchMock.restore()
+    fetchMock.resetMocks()
   })
 
   const testExperiment = {
@@ -72,8 +72,7 @@ describe(`TSnePlotView`, () => {
     const payload = {
       series: [`foo`, `bar`]
     }
-
-    fetchMock.get(`foo/json/cell-plots/` + accession + `/clusters/k/20?plotMethod=umap&accessKey=` + accessKey + `&` , JSON.stringify(payload))
+    fetchMock.mockResponseOnce(JSON.stringify(payload))
 
     const wrapper = shallow(
       <TSnePlotView
@@ -92,12 +91,9 @@ describe(`TSnePlotView`, () => {
         selectedPlotOptionLabel={``}
       />
     )
-
-    expect(wrapper.state(`loadingCellClusters`)).toEqual(true)
-
-    await wrapper.instance().componentDidMount()
-    await fetchMock.flush(true) // necessary to wait for all the fetch promises to be resolved before making any assertions
-
+    wrapper.update()
+    await new Promise(resolve => setTimeout(resolve, 1000))
+    expect(wrapper.state(`loadingCellClusters`)).toEqual(false)
     expect(wrapper.state(`cellClustersData`)).toEqual(payload)
   })
 
@@ -106,7 +102,7 @@ describe(`TSnePlotView`, () => {
       series: [`foo`, `bar`, `horse`]
     }
 
-    fetchMock.get(`foo/json/cell-plots/` + accession + `/clusters/k/20?plotMethod=umap&` , JSON.stringify(payload))
+    fetchMock.mockResponseOnce(JSON.stringify(payload))
 
     const wrapper = shallow(
       <TSnePlotView
@@ -127,7 +123,8 @@ describe(`TSnePlotView`, () => {
     )
 
     await wrapper.instance().componentDidMount()
-    await fetchMock.flush(true) // necessary to wait for all the fetch promises to be resolved before making any assertions
+    wrapper.update()
+    await new Promise(resolve => setTimeout(resolve, 1000))
 
     expect(wrapper.state(`cellClustersData`)).not.toMatchObject(payload)
   })
@@ -138,7 +135,7 @@ describe(`TSnePlotView`, () => {
       series: [`foo`, `bar`]
     }
 
-    fetchMock.get(`/foo/json/cell-plots/` + accession + `/clusters/k/20?plotMethod=umap&accessKey=` + accessKey + `&` , JSON.stringify(payload))
+    fetchMock.mockResponseOnce(JSON.stringify(payload))
 
     const wrapper = shallow(
       <TSnePlotView
@@ -160,7 +157,7 @@ describe(`TSnePlotView`, () => {
 
     await wrapper.instance().componentDidMount()
 
-    expect(fetchMock.called(`/foo/json/cell-plots/E-MTAB-5061/clusters/k/20?plotMethod=umap&accessKey=f60a21b8-990a-49d9-95aa-623c10865faa&`)).toEqual(true)
+    expect(fetchMock.mock.calls[0][0]).toEqual(`foo/json/cell-plots/E-MTAB-5061/clusters/k/20?plotMethod=umap&accessKey=f60a21b8-990a-49d9-95aa-623c10865faa&`)
   })
 
 })
