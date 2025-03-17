@@ -51,12 +51,12 @@ describe(`GeneExpressionTSnePlot colourize function`, () => {
   test(`assigns maximum colour scale to the point with highest expression`, () => {
     const randomSeries = randomHighchartsSeries()
     const maximum = 10000
-    randomSeries[randomSeries.length - 1].data.push({
-      x: 0,
-      y: 0,
-      expressionLevel: maximum,
-      name: "Maximum overkill"
-    })
+    randomSeries[randomSeries.length - 1].data.push([
+      0, // x
+      0, //y
+      "Maximum overkill", //name
+      maximum, // expressionLevel
+    ])
 
     const allPoints = randomSeries.reduce((acc, series) => acc.concat(series.data), [])
     const maxExpressionLevel = Math.round10(Math.max(...allPoints.map((point) => point.expressionLevel)), -2)
@@ -76,12 +76,12 @@ describe(`GeneExpressionTSnePlot colourize function`, () => {
 
   test(`assigns grey colour to the point with 0 expression`, () => {
     const randomSeries = randomHighchartsSeries()
-    randomSeries[randomSeries.length - 1].data.push({
-      x: 0,
-      y: 0,
-      expressionLevel: 0,
-      name: `Minimum underkill`
-    })
+    randomSeries[randomSeries.length - 1].data.push([
+      0, //x
+      0, // y
+      `Minimum underkill`, // name
+      0 //expressionLevel
+    ])
 
     const allPoints = randomSeries.reduce((acc, series) => acc.concat(series.data), [])
     const minExpressionLevel = Math.round10(Math.min(...allPoints.map((point) => point.expressionLevel)), -2)
