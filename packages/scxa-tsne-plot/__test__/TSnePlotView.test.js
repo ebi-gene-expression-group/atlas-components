@@ -102,7 +102,13 @@ describe(`TSnePlotView`, () => {
       series: [`foo`, `bar`, `horse`]
     }
 
-    fetchMock.mockResponseOnce(JSON.stringify(payload))
+    fetchMock.mockIf(url => {
+      return url === `foo/json/cell-plots/` + accession + `/clusters/k/20?plotMethod=umap&accessKey=` + accessKey + `&`
+    }, {
+      status: 200,
+      body: JSON.stringify(payload),
+      headers: { 'Content-Type': 'application/json' }
+    })
 
     const wrapper = shallow(
       <TSnePlotView
