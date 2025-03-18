@@ -8,6 +8,7 @@
   "main": "lib/index.js",
   "scripts": {
     "prepare": "rm -rf lib && babel src -d lib --copy-files",
+    "test": "cypress run --component",
     "start": "webpack-dev-server --mode=development"
   },
   "author": "Expression Atlas developers <arrayexpress-atlas@ebi.ac.uk>",
