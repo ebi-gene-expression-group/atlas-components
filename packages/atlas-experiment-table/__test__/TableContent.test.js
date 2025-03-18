@@ -54,7 +54,7 @@ describe(`TableContent`, () => {
   test(`renders a table with header and body`, () => {
     const wrapper = shallow(<TableContent {...props}/>)
 
-    expect(wrapper).toContainExactlyOneMatchingElement(Table)
+    expect(wrapper.find(Table)).toHaveLength(1)
     expect(wrapper.find(Table).find(Table.Head)).toHaveLength(1)
     expect(wrapper.find(Table).find(Table.Body)).toHaveLength(1)
   })
@@ -62,7 +62,7 @@ describe(`TableContent`, () => {
   test(`renders a table with header and second level header and body`, () => {
     const wrapper = shallow(<TableContent {...props} tableSecondHeaders={tableSecondHeaders}/>)
 
-    expect(wrapper).toContainExactlyOneMatchingElement(Table)
+    expect(wrapper.find(Table)).toHaveLength(1)
     expect(wrapper.find(Table).find(Table.Head)).toHaveLength(2)
     expect(wrapper.find(Table).find(Table.Body)).toHaveLength(1)
   })

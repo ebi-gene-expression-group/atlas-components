@@ -17,11 +17,12 @@ describe(`TableHeaderCell`, () => {
     }
     const wrapper = shallow(<TableHeaderCell {...props}/>)
 
-    expect(wrapper).not.toContainMatchingElement(SearchInput)
-    expect(wrapper).not.toContainMatchingElement(Icon)
+    expect(wrapper.find(SearchInput)).toHaveLength(0)
+    expect(wrapper.find(Icon)).toHaveLength(0)
 
-    expect(wrapper).toContainExactlyOneMatchingElement(Table.HeaderCell)
-    expect(wrapper).toContainExactlyOneMatchingElement(Heading)
+    expect(wrapper.find(Table.HeaderCell)).toHaveLength(1)
+    expect(wrapper.find(Heading)).toHaveLength(1)
+
     expect(wrapper.find(Heading)).toHaveProp(`children`, props.label)
   })
 
@@ -33,9 +34,9 @@ describe(`TableHeaderCell`, () => {
     }
     const wrapper = shallow(<TableHeaderCell {...props}/>)
 
-    expect(wrapper).not.toContainMatchingElement(Icon)
+    expect(wrapper.find(Icon)).toHaveLength(0)
 
-    expect(wrapper).toContainExactlyOneMatchingElement(SearchInput)
+    expect(wrapper.find(SearchInput)).toHaveLength(1)
     expect(wrapper.find(SearchInput)).toHaveProp(`placeholder`, props.label)
   })
 
@@ -59,10 +60,11 @@ describe(`TableHeaderCell`, () => {
     }
     const wrapper = shallow(<TableHeaderCell {...props}/>)
 
-    expect(wrapper).not.toContainMatchingElement(SearchInput)
+    expect(wrapper.find(SearchInput)).toHaveLength(0)
 
-    expect(wrapper).toContainExactlyOneMatchingElement(Icon)
-    expect(wrapper).toContainExactlyOneMatchingElement(Heading)
+    expect(wrapper.find(Icon)).toHaveLength(1)
+    expect(wrapper.find(Heading)).toHaveLength(1)
+
     expect(wrapper.find(Heading)).toHaveProp(`children`, props.label)
   })
 

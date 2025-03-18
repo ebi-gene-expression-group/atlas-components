@@ -6,3 +6,10 @@ A component to search Single Cell Expression Atlas by gene ID. It offers suggest
 allows the same term to be searched in different species depending of the group from which it has been selected.
 
 More documentation coming soon.
+
+Use [webpack-dev-server](https://github.com/webpack/webpack-dev-server) to see the demo page:
+```
+npm run start:localhost   # Should use http://localhost:8080/
+npm run start:wwwdev      # Should use https://wwwdev.ebi.ac.uk/
+
+```

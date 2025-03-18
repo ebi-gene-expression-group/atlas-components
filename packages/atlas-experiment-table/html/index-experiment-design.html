@@ -25,7 +25,9 @@
 <script src="../dist/vendors.bundle.js"></script>
 <script src="../dist/experimentTable.bundle.js"></script>
 <script>
-      experimentTable.render(
+    $.getJSON('./experiment-design.json').done(
+      function(data) {
+        experimentTable.render(
         {
             tableSecondHeaders: [
                 {
@@ -165,11 +167,12 @@
 
           ],
           dropdownFilters:[],
-          dataRows: [],
-          numberOfRows: 24,
+          dataRows: data,
           host: 'https://www.ebi.ac.uk/gxa/'
         },
         'target'
-      );
+        );
+      }
+    );
 </script>
 </html>

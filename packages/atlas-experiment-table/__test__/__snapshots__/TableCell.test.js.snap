@@ -4,8 +4,8 @@ exports[`TableCell matches snapshot (array of numbers) 1`] = `
 <TableCell
   dataKey="arrayOfNumbers"
   dataRow={
-    Object {
-      "arrayOfNumbers": Array [
+    {
+      "arrayOfNumbers": [
         42,
         9001,
       ],
@@ -55,7 +55,7 @@ exports[`TableCell matches snapshot (array of numbers) 1`] = `
               boxSizing="border-box"
               className=""
               color="#425A70"
-              fontFamily="\\"SF UI Text\\", -apple-system, BlinkMacSystemFont, \\"Segoe UI\\", Roboto, Helvetica, Arial, sans-serif, \\"Apple Color Emoji\\", \\"Segoe UI Emoji\\", \\"Segoe UI Symbol\\""
+              fontFamily=""SF UI Text", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol""
               fontSize="14px"
               fontWeight={400}
               is="span"
@@ -91,8 +91,8 @@ exports[`TableCell matches snapshot (array of strings and numbers) 1`] = `
 <TableCell
   dataKey="arrayOfStringsAndNumbers"
   dataRow={
-    Object {
-      "arrayOfStringsAndNumbers": Array [
+    {
+      "arrayOfStringsAndNumbers": [
         "Answer to the ultimate question of life, the Universe, and everything",
         42,
         "Vegeta, what does the scouter say about his power level?",
@@ -144,7 +144,7 @@ exports[`TableCell matches snapshot (array of strings and numbers) 1`] = `
               boxSizing="border-box"
               className=""
               color="#425A70"
-              fontFamily="\\"SF UI Text\\", -apple-system, BlinkMacSystemFont, \\"Segoe UI\\", Roboto, Helvetica, Arial, sans-serif, \\"Apple Color Emoji\\", \\"Segoe UI Emoji\\", \\"Segoe UI Symbol\\""
+              fontFamily=""SF UI Text", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol""
               fontSize="14px"
               fontWeight={400}
               is="span"
@@ -190,8 +190,8 @@ exports[`TableCell matches snapshot (array of strings) 1`] = `
 <TableCell
   dataKey="arrayOfStrings"
   dataRow={
-    Object {
-      "arrayOfStrings": Array [
+    {
+      "arrayOfStrings": [
         "I mean, why would a Pop-Tart want to live inside a toaster, Rick?",
         "I mean, that would be like the scariest place for them to live.",
         "You know what I mean?",
@@ -242,7 +242,7 @@ exports[`TableCell matches snapshot (array of strings) 1`] = `
               boxSizing="border-box"
               className=""
               color="#425A70"
-              fontFamily="\\"SF UI Text\\", -apple-system, BlinkMacSystemFont, \\"Segoe UI\\", Roboto, Helvetica, Arial, sans-serif, \\"Apple Color Emoji\\", \\"Segoe UI Emoji\\", \\"Segoe UI Symbol\\""
+              fontFamily=""SF UI Text", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol""
               fontSize="14px"
               fontWeight={400}
               is="span"
@@ -283,14 +283,14 @@ exports[`TableCell matches snapshot (image link) 1`] = `
 <TableCell
   dataKey="string"
   dataRow={
-    Object {
+    {
       "string": "foobar",
     }
   }
   host=""
   image={
-    Object {
-      "foobar": Object {
+    {
+      "foobar": {
         "alt": "Ringtone Timeline",
         "src": "https://imgs.xkcd.com/comics/ringtone_timeline_2x.png",
         "title": "No one likes my novelty ringtone, an audio recording of a phone on vibrate sitting on a hard surface.",
@@ -340,7 +340,7 @@ exports[`TableCell matches snapshot (image link) 1`] = `
               boxSizing="border-box"
               className=""
               color="#425A70"
-              fontFamily="\\"SF UI Text\\", -apple-system, BlinkMacSystemFont, \\"Segoe UI\\", Roboto, Helvetica, Arial, sans-serif, \\"Apple Color Emoji\\", \\"Segoe UI Emoji\\", \\"Segoe UI Symbol\\""
+              fontFamily=""SF UI Text", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol""
               fontSize="14px"
               fontWeight={400}
               is="span"
@@ -369,14 +369,14 @@ exports[`TableCell matches snapshot (image) 1`] = `
 <TableCell
   dataKey="string"
   dataRow={
-    Object {
+    {
       "string": "foobar",
     }
   }
   host=""
   image={
-    Object {
-      "foobar": Object {
+    {
+      "foobar": {
         "alt": "Ringtone Timeline",
         "src": "https://imgs.xkcd.com/comics/ringtone_timeline_2x.png",
         "title": "No one likes my novelty ringtone, an audio recording of a phone on vibrate sitting on a hard surface.",
@@ -425,7 +425,7 @@ exports[`TableCell matches snapshot (image) 1`] = `
               boxSizing="border-box"
               className=""
               color="#425A70"
-              fontFamily="\\"SF UI Text\\", -apple-system, BlinkMacSystemFont, \\"Segoe UI\\", Roboto, Helvetica, Arial, sans-serif, \\"Apple Color Emoji\\", \\"Segoe UI Emoji\\", \\"Segoe UI Symbol\\""
+              fontFamily=""SF UI Text", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol""
               fontSize="14px"
               fontWeight={400}
               is="span"
@@ -454,12 +454,12 @@ exports[`TableCell matches snapshot (missing image) 1`] = `
 <TableCell
   dataKey="string"
   dataRow={
-    Object {
+    {
       "string": "foobar",
     }
   }
   host=""
-  image={Object {}}
+  image={{}}
   linkTo={null}
   width={1}
 >
@@ -502,7 +502,7 @@ exports[`TableCell matches snapshot (missing image) 1`] = `
               boxSizing="border-box"
               className=""
               color="#425A70"
-              fontFamily="\\"SF UI Text\\", -apple-system, BlinkMacSystemFont, \\"Segoe UI\\", Roboto, Helvetica, Arial, sans-serif, \\"Apple Color Emoji\\", \\"Segoe UI Emoji\\", \\"Segoe UI Symbol\\""
+              fontFamily=""SF UI Text", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol""
               fontSize="14px"
               fontWeight={400}
               is="span"
@@ -527,7 +527,7 @@ exports[`TableCell matches snapshot (number) 1`] = `
 <TableCell
   dataKey="number"
   dataRow={
-    Object {
+    {
       "number": 9001,
     }
   }
@@ -575,7 +575,7 @@ exports[`TableCell matches snapshot (number) 1`] = `
               boxSizing="border-box"
               className=""
               color="#425A70"
-              fontFamily="\\"SF UI Text\\", -apple-system, BlinkMacSystemFont, \\"Segoe UI\\", Roboto, Helvetica, Arial, sans-serif, \\"Apple Color Emoji\\", \\"Segoe UI Emoji\\", \\"Segoe UI Symbol\\""
+              fontFamily=""SF UI Text", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol""
               fontSize="14px"
               fontWeight={400}
               is="span"
@@ -600,7 +600,7 @@ exports[`TableCell matches snapshot (sring) 1`] = `
 <TableCell
   dataKey="string"
   dataRow={
-    Object {
+    {
       "string": "foobar",
     }
   }
@@ -648,7 +648,7 @@ exports[`TableCell matches snapshot (sring) 1`] = `
               boxSizing="border-box"
               className=""
               color="#425A70"
-              fontFamily="\\"SF UI Text\\", -apple-system, BlinkMacSystemFont, \\"Segoe UI\\", Roboto, Helvetica, Arial, sans-serif, \\"Apple Color Emoji\\", \\"Segoe UI Emoji\\", \\"Segoe UI Symbol\\""
+              fontFamily=""SF UI Text", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol""
               fontSize="14px"
               fontWeight={400}
               is="span"
@@ -673,7 +673,7 @@ exports[`TableCell matches snapshot (text link) 1`] = `
 <TableCell
   dataKey="string"
   dataRow={
-    Object {
+    {
       "string": "foobar",
     }
   }
@@ -722,7 +722,7 @@ exports[`TableCell matches snapshot (text link) 1`] = `
               boxSizing="border-box"
               className=""
               color="#425A70"
-              fontFamily="\\"SF UI Text\\", -apple-system, BlinkMacSystemFont, \\"Segoe UI\\", Roboto, Helvetica, Arial, sans-serif, \\"Apple Color Emoji\\", \\"Segoe UI Emoji\\", \\"Segoe UI Symbol\\""
+              fontFamily=""SF UI Text", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol""
               fontSize="14px"
               fontWeight={400}
               is="span"

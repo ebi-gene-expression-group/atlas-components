@@ -23,7 +23,7 @@ describe(`TableFooter`, () => {
 
   test(`shows nothing if the number of filtered rows is greater than the total number of rows`, () => {
     const wrapper = shallow(<TableFooter {...props} filteredDataRowsLength={props.dataRowsLength + 1}/>)
-    expect(wrapper).toBeEmptyRender()
+    expect(wrapper.isEmptyRender()).toBe(true)
   })
 
   test(`displays only two disabled links, Previous and Next, if no rows are shown in the table and we want all items`, () => {
