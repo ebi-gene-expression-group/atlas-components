@@ -59,7 +59,7 @@ describe(`GeneExpressionTSnePlot colourize function`, () => {
     ])
 
     const allPoints = randomSeries.reduce((acc, series) => acc.concat(series.data), [])
-    const maxExpressionLevel = Math.round10(Math.max(...allPoints.map((point) => point.expressionLevel)), -2)
+    const maxExpressionLevel = Math.round10(Math.max(...allPoints.map((point) => point[3])), -2)
 
     const maxExpressionLevelPoints = _colourizeExpressionLevel(gradientColourRanges(), [])(plotData(randomSeries))
       .reduce((acc, series) => {
@@ -84,7 +84,7 @@ describe(`GeneExpressionTSnePlot colourize function`, () => {
     ])
 
     const allPoints = randomSeries.reduce((acc, series) => acc.concat(series.data), [])
-    const minExpressionLevel = Math.round10(Math.min(...allPoints.map((point) => point.expressionLevel)), -2)
+    const minExpressionLevel = Math.round10(Math.min(...allPoints.map((point) => point[3])), -2)
 
     const minExpressionLevelPoints = _colourizeExpressionLevel(gradientColourRanges(), [])(plotData(randomSeries))
       .reduce((acc, series) => {
