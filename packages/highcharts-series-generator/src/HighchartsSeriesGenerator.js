@@ -12,12 +12,12 @@ const getRandomInt = (min, max) => {
 const generateRandomSeriesData = (pointsCount) => {
   const seriesData = []
   for (let i = 0 ; i < pointsCount ; i++) {
-    seriesData.push({
-      x: getRandomArbitrary(0, 100),
-      y: getRandomArbitrary(0, 100),
-      expressionLevel: getRandomArbitrary(0, 10000),
-      name: String(`cell_${i}`)
-    })
+    seriesData.push([
+      getRandomArbitrary(0, 100), // x
+      getRandomArbitrary(0, 100), // y
+      String(`cell_${i}`), //name
+      getRandomArbitrary(0, 10000), //expressionLevel
+    ])
   }
 
   return seriesData
