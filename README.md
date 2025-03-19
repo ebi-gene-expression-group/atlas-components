@@ -5,6 +5,21 @@ A collection of React components used in the front end of [Expression Atlas](htt
 
 This is a [Lerna](https://github.com/lerna/lerna)-managed monorepo. Read Lerna’s documentation for more details.
 
+
+## clone the monorepo (including subtree)
+We add [organ-anatomogram](https://github.com/ebi-gene-expression-group/organ-anatomogram) as a `git subtree`. 
+You don’t need to run `git submodule update` when pulling the Lerna monorepo. 
+
+Just pull as usual, and the subtree content will already be there:
+```bash
+git pull origin main
+```
+
+If you need to pull new changes from the original external repo or add more `subtree` repos into lerna monorepo, use:
+```bash
+git subtree pull --prefix=packages/<your-package-name> <repo-url> main --squash
+```
+
 ## local setup
 
 ```bash
