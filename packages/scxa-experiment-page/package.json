@@ -1,6 +1,6 @@
 {
   "name": "@ebi-gene-expression-group/scxa-experiment-page",
-  "version": "1.0.13",
+  "version": "1.0.12",
   "publishConfig": {
     "access": "public"
   },
@@ -24,11 +24,11 @@
     "url": "https://github.com/atlas-components.git"
   },
   "dependencies": {
-    "@ebi-gene-expression-group/atlas-bioentity-information": "^2.1.6",
+    "@ebi-gene-expression-group/atlas-bioentity-information": "^2.1.5",
     "@ebi-gene-expression-group/expression-atlas-disclaimers": "^1.4.0",
     "@ebi-gene-expression-group/organ-anatomogram": "^1.1.0",
-    "@ebi-gene-expression-group/scxa-marker-gene-heatmap": "^2.7.4",
-    "@ebi-gene-expression-group/scxa-tsne-plot": "^6.3.7",
+    "@ebi-gene-expression-group/scxa-marker-gene-heatmap": "^2.7.3",
+    "@ebi-gene-expression-group/scxa-tsne-plot": "^6.3.6",
     "jest": "^29.7.0",
     "linkifyjs": "^2.1.9",
     "lodash": "^4.17.20",
