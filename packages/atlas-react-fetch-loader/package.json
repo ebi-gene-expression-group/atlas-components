@@ -1,6 +1,6 @@
 {
   "name": "@ebi-gene-expression-group/atlas-react-fetch-loader",
-  "version": "3.9.1",
+  "version": "3.10.0",
   "description": "A React HOC that enables other components to remotely fetch data from an endpoint",
   "main": "lib/index.js",
   "scripts": {
