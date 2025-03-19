@@ -1,6 +1,6 @@
 {
   "name": "scxa-faceted-search-results-v5",
-  "version": "5.0.5",
+  "version": "5.0.4",
   "description": "Faceted experiments list for Single Cell Expression Atlas gene search results",
   "keywords": [
     "react",
@@ -26,7 +26,7 @@
     "url": "git+https://github.com/ebi-gene-expression-group/atlas-components.git"
   },
   "dependencies": {
-    "@ebi-gene-expression-group/atlas-react-fetch-loader": "^3.9.3",
+    "@ebi-gene-expression-group/atlas-react-fetch-loader": "^3.9.2",
     "format-number": "^3.0.0",
     "lodash": "^4.17.20",
     "prop-types": "^15.7.2",
@@ -45,7 +45,7 @@
     "@babel/preset-react": "^7.10.4",
     "@cypress/code-coverage": "^3.10.6",
     "@ebi-gene-expression-group/eslint-config": "^3.5.1",
-    "@ebi-gene-expression-group/react-ebi-species": "^2.6.5",
+    "@ebi-gene-expression-group/react-ebi-species": "^2.6.4",
     "@testing-library/cypress": "^9.0.0",
     "babel-loader": "^8.1.0",
     "babel-plugin-istanbul": "^6.1.1",

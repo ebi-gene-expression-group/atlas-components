@@ -1,6 +1,6 @@
 {
   "name": "@ebi-gene-expression-group/scxa-faceted-search-results",
-  "version": "4.1.10",
+  "version": "4.1.9",
   "publishConfig": {
     "access": "public"
   },
@@ -34,7 +34,7 @@
     "url": "https://github.com/ebi-gene-expression-group/atlas-components.git"
   },
   "dependencies": {
-    "@ebi-gene-expression-group/atlas-react-fetch-loader": "^3.9.3",
+    "@ebi-gene-expression-group/atlas-react-fetch-loader": "^3.9.2",
     "format-number": "^3.0.0",
     "lodash": "^4.17.21",
     "prop-types": "^15.8.1",
@@ -52,7 +52,7 @@
     "@babel/preset-env": "^7.20.2",
     "@babel/preset-react": "^7.18.6",
     "@cypress/code-coverage": "^3.10.0",
-    "@ebi-gene-expression-group/react-ebi-species": "^2.6.5",
+    "@ebi-gene-expression-group/react-ebi-species": "^2.6.4",
     "babel-loader": "^9.1.0",
     "babel-plugin-istanbul": "^6.1.1",
     "babel-plugin-transform-class-properties": "^6.24.1",
