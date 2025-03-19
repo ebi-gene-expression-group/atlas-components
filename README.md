@@ -30,3 +30,10 @@ cd ../A
 npm install ../B/B*.tgz
 npm test
 ```
+
+## Publish new npm versions
+```bash
+npm login #if you are first time try to publish
+lerna changed #Lists which packages will be published
+lerna publish
+```
