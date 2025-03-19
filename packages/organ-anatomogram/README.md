@@ -111,7 +111,7 @@ Run `npm run parseSvgs` to parse the updated IDs. When you are finished run a lo
 ```sh
 rm -rf node-modules
 npm install
-npx webpack-dev-server -d
+npm start
 ```
 
 Go to `localhost:9000` and see that the tissues show up like you want them to.
