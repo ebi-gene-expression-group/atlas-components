@@ -20,6 +20,24 @@ If you need to pull new changes from the original external repo or add more `sub
 git subtree pull --prefix=packages/<your-package-name> <repo-url> main --squash
 ```
 
+If you make changes inside the subtree directory in your Lerna monorepo, 
+those changes will not automatically update in the original external repository.
+
+If you made changes inside the subtree directory, you need to push them back manually. 
+Here’s how to push only the subtree changes back to the external repository:
+```bash
+git subtree push --prefix=packages/<your-package-name> <repo-url> main
+```
+
+We will deprecate [organ-anatomogram](https://github.com/ebi-gene-expression-group/organ-anatomogram) repo soon.
+Deleting the original repository from GitHub will NOT delete the subtree directory in the Lerna monorepo.
+
+🚨 What Happens If We Delete the Original Repo?
+
+1️⃣ The subtree directory in the monorepo remains intact—it won’t be removed.
+2️⃣ You won’t be able to pull new updates (`git subtree pull` will fail) because Git won’t find the remote repo.
+3️⃣ You can still modify the subtree files inside your monorepo as usual.
+
 ## local setup
 
 ```bash
