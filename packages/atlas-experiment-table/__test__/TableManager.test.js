@@ -37,9 +37,9 @@ describe(`TableManager`, () => {
   test(`renders a TablePreamble, a TableContent and a TableFooter`, () => {
     const wrapper = shallow(<TableManager {...props}/>)
 
-    expect(wrapper).toContainExactlyOneMatchingElement(TablePreamble)
-    expect(wrapper).toContainExactlyOneMatchingElement(TableContent)
-    expect(wrapper).toContainExactlyOneMatchingElement(TableFooter)
+    expect(wrapper.find(TablePreamble)).toHaveLength(1)
+    expect(wrapper.find(TableContent)).toHaveLength(1)
+    expect(wrapper.find(TableFooter)).toHaveLength(1)
   })
 
   test(`can filter changing a randomly picked dropdown`, () => {
@@ -55,7 +55,7 @@ describe(`TableManager`, () => {
     const randomDropdownValue = getRandomValueFromKeyedRows(bulkExperiments, randomDropdownFilter.dataKey)
     wrapper.find(TablePreamble).invoke(`dropdownOnChange`)(randomDropdownFilter.dataKey, randomDropdownValue)
 
-    expect(wrapper).toHaveState({ filters: { [randomDropdownFilter.dataKey]: randomDropdownValue } })
+    expect(wrapper.state(`filters`)).toEqual({ [randomDropdownFilter.dataKey]: randomDropdownValue })
 
     _.chain(wrapper.find(TableContent).prop(`dataRows`))
       .map(randomDropdownFilter.dataKey)
@@ -70,19 +70,21 @@ describe(`TableManager`, () => {
 
   test(`can change the number of rows per page`, () => {
     const wrapper =
-      shallow(
-        <TableManager
-          {...props}
-          dataRows={bulkExperiments}
-          tableHeaders={bulkTableHeaders}
-          dropdownFilters={bulkDropdownFilters}/>)
-    expect(wrapper).toHaveState({ rowsPerPage: 10 })
+        shallow(
+            <TableManager
+                {...props}
+                dataRows={bulkExperiments}
+                tableHeaders={bulkTableHeaders}
+                dropdownFilters={bulkDropdownFilters}/>
+        )
+
+    expect(wrapper.state(`rowsPerPage`)).toBe(10)
 
     // We could also pick a random <option> value instead of a random integer, either way is fine
     const randomNatural = getRandomInt(1, 100)
     wrapper.find(TablePreamble).invoke(`rowsPerPageOnChange`)(randomNatural)
 
-    expect(wrapper).toHaveState({ rowsPerPage: randomNatural })
+    expect(wrapper.state(`rowsPerPage`)).toBe(randomNatural)
     expect(wrapper.find(TableContent).prop(`dataRows`)).toHaveLength(randomNatural)
   })
 
@@ -112,7 +114,7 @@ describe(`TableManager`, () => {
     const randomQuery = randomString()
     wrapper.find(TablePreamble).invoke(`searchAllOnChange`)(randomQuery)
 
-    expect(wrapper).toHaveState({ searchAll: randomQuery })
+    expect(wrapper.state(`searchAll`)).toEqual(randomQuery)
     // Results not yet updated
     expect(wrapper.find(TableContent).prop(`dataRows`)).toHaveLength(10)
 
@@ -134,7 +136,9 @@ describe(`TableManager`, () => {
     const randomMatchingSubstring =
        getRandomValueFromKeyedRows(bulkExperiments, _.sample([ ...bulkTableHeaders, ...bulkDropdownFilters ]).dataKey)
     wrapper.find(TablePreamble).invoke(`searchAllOnChange`)(randomMatchingSubstring)
-    expect(wrapper).toHaveState({ searchAll: randomMatchingSubstring })
+
+    expect(wrapper.state(`searchAll`)).toEqual(randomMatchingSubstring)
+
     // Results not yet updated
     expect(wrapper.find(TableContent).prop(`dataRows`)).toHaveLength(10)
 
@@ -157,7 +161,8 @@ describe(`TableManager`, () => {
     const randomQuery = randomString()
     wrapper.find(TableContent).invoke(`tableHeaderCellOnChange`)(randomTableHeaderCellFilter.dataKey, randomQuery)
 
-    expect(wrapper).toHaveState({ filters: { [randomTableHeaderCellFilter.dataKey]: randomQuery } })
+    expect(wrapper.state(`filters`)).toEqual({ [randomTableHeaderCellFilter.dataKey]: randomQuery })
+
     // Results not yet updated
     expect(wrapper.find(TableContent).prop(`dataRows`)).toHaveLength(10)
 
@@ -180,7 +185,7 @@ describe(`TableManager`, () => {
     const randomQuery = randomString()
     wrapper.find(TableContent).invoke(`tableHeaderCellOnChange`)(randomTableHeaderCellFilter.dataKey, randomQuery, false)
 
-    expect(wrapper).toHaveState({ filters: { [randomTableHeaderCellFilter.dataKey]: randomQuery } })
+    expect(wrapper.state(`filters`)).toEqual({ [randomTableHeaderCellFilter.dataKey]: randomQuery })
     expect(wrapper.find(TableContent).prop(`dataRows`)).toHaveLength(0)
   })
 
@@ -213,7 +218,8 @@ describe(`TableManager`, () => {
       randomSubstring(getRandomValueFromKeyedRows(bulkExperiments, randomTableHeaderCellFilter.dataKey))
     wrapper.find(TableContent).invoke(`tableHeaderCellOnChange`)(randomTableHeaderCellFilter.dataKey, randomTableHeaderCellValueSubstring)
 
-    expect(wrapper).toHaveState({ filters: { [randomTableHeaderCellFilter.dataKey]: randomTableHeaderCellValueSubstring } })
+    expect(wrapper.state(`filters`)).toEqual({ [randomTableHeaderCellFilter.dataKey]: randomTableHeaderCellValueSubstring })
+
     // Results not yet updated
     expect(wrapper.find(TableContent).prop(`dataRows`)).toHaveLength(10)
 
@@ -320,48 +326,50 @@ describe(`TableManager`, () => {
 
   test(`can sort using a randomly picked sortable header`, () => {
     const wrapper =
-      shallow(
-        <TableManager
-          {...props}
-          dataRows={bulkExperiments}
-          tableHeaders={bulkTableHeaders}
-          dropdownFilters={bulkDropdownFilters}/>)
+        shallow(
+            <TableManager
+                {...props}
+                dataRows={bulkExperiments}
+                tableHeaders={bulkTableHeaders}
+                dropdownFilters={bulkDropdownFilters}
+            />
+        )
     const sortColumnIndex = wrapper.state(`sortColumnIndex`)
 
     const randomSortableTableHeaderCell = _.sample(bulkTableHeaders.filter(tableHeader => tableHeader.sortable))
     const randomSortableTableHeaderCellIndex =
-      bulkTableHeaders.findIndex(tableHeader => tableHeader.dataKey === randomSortableTableHeaderCell.dataKey)
+        bulkTableHeaders.findIndex(tableHeader => tableHeader.dataKey === randomSortableTableHeaderCell.dataKey)
     wrapper.find(TableContent).invoke(`tableHeaderCellOnClick`)(randomSortableTableHeaderCellIndex)
 
-    expect(wrapper).toHaveState({
-      sortColumnIndex: randomSortableTableHeaderCellIndex,
-      ascendingOrder: sortColumnIndex !== randomSortableTableHeaderCellIndex
-    })
+    expect(wrapper.state(`sortColumnIndex`)).toBe(randomSortableTableHeaderCellIndex)
+    expect(wrapper.state(`ascendingOrder`)).toBe(sortColumnIndex !== randomSortableTableHeaderCellIndex)
 
     // Remember that dates are formatted as DD-MM-YYYY and we need to treat it in a specific way
     const expected =
-      _.chain(wrapper.find(TableContent).prop(`dataRows`))
-        .sortBy(randomSortableTableHeaderCell.dataKey.toLowerCase().includes(`date`) ?
-          dataRow => dataRow[randomSortableTableHeaderCell.dataKey].split(`-`).reverse().join(``) :  // DD-MM-YYYY -> YYYYMMDD
-          randomSortableTableHeaderCell.dataKey)
-        .value()
+        _.chain(wrapper.find(TableContent).prop(`dataRows`))
+            .sortBy(randomSortableTableHeaderCell.dataKey.toLowerCase().includes(`date`) ?
+                dataRow => dataRow[randomSortableTableHeaderCell.dataKey].split(`-`).reverse().join(``) :  // DD-MM-YYYY -> YYYYMMDD
+                randomSortableTableHeaderCell.dataKey)
+            .value()
 
     expect(wrapper.find(TableContent).prop(`dataRows`)).toEqual(expected)
   })
 
   test(`can sort in descending order`, () => {
     const wrapper =
-      shallow(
-        <TableManager
-          {...props}
-          dataRows={bulkExperiments}
-          tableHeaders={bulkTableHeaders}
-          dropdownFilters={bulkDropdownFilters}/>)
+        shallow(
+            <TableManager
+                {...props}
+                dataRows={bulkExperiments}
+                tableHeaders={bulkTableHeaders}
+                dropdownFilters={bulkDropdownFilters}
+            />
+        )
     const sortColumnIndex = wrapper.state(`sortColumnIndex`)
 
     const randomSortableTableHeaderCell = _.sample(bulkTableHeaders.filter(tableHeader => tableHeader.sortable))
     const randomSortableTableHeaderCellIndex =
-      bulkTableHeaders.findIndex(tableHeader => tableHeader.dataKey === randomSortableTableHeaderCell.dataKey)
+        bulkTableHeaders.findIndex(tableHeader => tableHeader.dataKey === randomSortableTableHeaderCell.dataKey)
 
     wrapper.find(TableContent).invoke(`tableHeaderCellOnClick`)(randomSortableTableHeaderCellIndex)
     // Click twice if it’s a different column other than the default
@@ -369,25 +377,23 @@ describe(`TableManager`, () => {
       wrapper.find(TableContent).invoke(`tableHeaderCellOnClick`)(randomSortableTableHeaderCellIndex)
     }
 
-    expect(wrapper).toHaveState({
-      ascendingOrder: false
-    })
+    expect(wrapper.state(`ascendingOrder`)).toBe(false)
 
     // Remember that dates are formatted as DD-MM-YYYY and we need to treat it in a specific way
     const expected =
-      _.chain(wrapper.find(TableContent).prop(`dataRows`))
-        .cloneDeep()  // Because reverse mutates the array
-        .sortBy(randomSortableTableHeaderCell.dataKey.toLowerCase().includes(`date`) ?
-          dataRow => dataRow[randomSortableTableHeaderCell.dataKey].split(`-`).reverse().join(``) :  // DD-MM-YYYY -> YYYYMMDD
-          randomSortableTableHeaderCell.dataKey)
-        // Rows with the same value may appear in different order, we must check the sorted column only!
-        .map(dataRow => _.pick(dataRow, randomSortableTableHeaderCell.dataKey))
-        .reverse()
-        .value()
+        _.chain(wrapper.find(TableContent).prop(`dataRows`))
+            .cloneDeep()  // Because reverse mutates the array
+            .sortBy(randomSortableTableHeaderCell.dataKey.toLowerCase().includes(`date`) ?
+                dataRow => dataRow[randomSortableTableHeaderCell.dataKey].split(`-`).reverse().join(``) :  // DD-MM-YYYY -> YYYYMMDD
+                randomSortableTableHeaderCell.dataKey)
+            // Rows with the same value may appear in different order, we must check the sorted column only!
+            .map(dataRow => _.pick(dataRow, randomSortableTableHeaderCell.dataKey))
+            .reverse()
+            .value()
 
     expect(
-      wrapper.find(TableContent).prop(`dataRows`)
-        .map(dataRow => _.pick(dataRow, randomSortableTableHeaderCell.dataKey))
+        wrapper.find(TableContent).prop(`dataRows`)
+            .map(dataRow => _.pick(dataRow, randomSortableTableHeaderCell.dataKey))
     ).toEqual(expected)
   })
 
@@ -447,26 +453,26 @@ describe(`TableManager`, () => {
 
   test(`changes the displayed items when the page is changed in the footer`, () => {
     const wrapper =
-      shallow(
-        <TableManager
-          {...props}
-          dataRows={bulkExperiments}
-          tableHeaders={bulkTableHeaders}
-          dropdownFilters={bulkDropdownFilters}/>)
+        shallow(
+            <TableManager
+                {...props}
+                dataRows={bulkExperiments}
+                tableHeaders={bulkTableHeaders}
+                dropdownFilters={bulkDropdownFilters}/>
+        )
 
-    expect(wrapper).toHaveState({ currentPage: 1 })
+    expect(wrapper.state(`currentPage`)).toBe(1)
     const experimentAccessionsInFirstPage = wrapper.find(TableContent).prop(`dataRows`).map(e => e.experimentAccession)
 
     wrapper.find(TableFooter).invoke(`onChange`)(5)
 
-    expect(wrapper).toHaveState({ currentPage: 5 })
+    expect(wrapper.state(`currentPage`)).toBe(5)
     const rowsInAnotherPage = wrapper.find(TableContent).prop(`dataRows`).map(e => e.experimentAccession)
 
     expect(_.intersection(experimentAccessionsInFirstPage, rowsInAnotherPage)).toHaveLength(0)
   })
 
-  test(`fetches new data and changes the displayed items when the page is changed in the footer with props numberOfRows`,
-      () => {
+  test(`fetches new data and changes the displayed items when the page is changed in the footer with props numberOfRows`, () => {
     const wrapper =
         shallow(
             <TableManager
@@ -474,14 +480,19 @@ describe(`TableManager`, () => {
                 dataRows={bulkExperiments}
                 tableHeaders={bulkTableHeaders}
                 dropdownFilters={bulkDropdownFilters}
-                numberOfRows={50}/>)
-    TableManager.prototype._fetchAndSetStateExperimentDesign = jest.fn();
-    expect(wrapper).toHaveState({ currentPage: 1 })
+                numberOfRows={50}
+            />
+        )
+
+    TableManager.prototype._fetchAndSetStateExperimentDesign = jest.fn()
+
+    expect(wrapper.state(`currentPage`)).toBe(1)
 
     wrapper.find(TableFooter).invoke(`onChange`)(5)
-    expect(TableManager.prototype._fetchAndSetStateExperimentDesign).toHaveBeenCalledTimes(1);
-    expect(TableManager.prototype._fetchAndSetStateExperimentDesign).toHaveBeenCalledWith(5, 10);
-    expect(wrapper).toHaveState({ currentPage: 5 })
+
+    expect(TableManager.prototype._fetchAndSetStateExperimentDesign).toHaveBeenCalledTimes(1)
+    expect(TableManager.prototype._fetchAndSetStateExperimentDesign).toHaveBeenCalledWith(5, 10)
+    expect(wrapper.state(`currentPage`)).toBe(5)
   })
 
   test(`matches snapshot (bulk)`, () => {

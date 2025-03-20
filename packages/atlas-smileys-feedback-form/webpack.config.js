@@ -10,16 +10,15 @@ module.exports = {
   },
 
   plugins: [
-    new CleanWebpackPlugin({
-      verbose: true,
-      cleanOnceBeforeBuildPatterns: `dist`
-    }) 
+    new CleanWebpackPlugin()
   ],
 
   output: {
     library: `[name]`,
     filename: `[name].bundle.js`,
-    publicPath: commonPublicPath
+    publicPath: commonPublicPath,
+    devtoolNamespace: 'firefox',
+    path: path.resolve(__dirname, 'dist'),
   },
 
   resolve: {
@@ -57,8 +56,10 @@ module.exports = {
 
   devServer: {
     port: 9000,
-    contentBase: path.resolve(__dirname, `html`),
-    publicPath: commonPublicPath
+    static: path.resolve(__dirname, `html`),
+    devMiddleware: {
+      publicPath: commonPublicPath,
+    },
     // Add if developing a SPA to redirect non-matching routes known by WDS (i.e. no document in /html) to the router
     // historyApiFallback: true
   }

@@ -9,18 +9,18 @@ exports[`FeedbackButton matches snapshot 1`] = `
       className="mm-popup__overlay"
       onClick={[Function]}
       role="presentation"
-      style={Object {}}
+      style={{}}
     />
   </div>
   <button
-    className="sc-AxiKw Cpbuh"
+    className="sc-eqUAAy eXnlwn"
     onClick={[Function]}
   >
     <i
       className="icon icon-functional"
       data-icon="n"
       style={
-        Object {
+        {
           "paddingRight": "0.5rem",
         }
       }

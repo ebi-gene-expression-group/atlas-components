@@ -4,7 +4,7 @@ exports[`Prompt matches snapshot 1`] = `
 <div>
   <p
     style={
-      Object {
+      {
         "paddingBottom": "1rem",
       }
     }
@@ -12,34 +12,34 @@ exports[`Prompt matches snapshot 1`] = `
     How satisfied are you?
   </p>
   <div
-    className="sc-AxirZ cXMrdn"
+    className="sc-gEvEer DmCqb"
   >
     <div
-      className="sc-AxjAm fjZxKF"
+      className="sc-aXZVg dVDMIS"
       label="Terrible"
       onClick={[Function]}
       selected={false}
     />
     <div
-      className="sc-AxjAm dRpUMP"
+      className="sc-aXZVg kntdEc"
       label="Bad"
       onClick={[Function]}
       selected={false}
     />
     <div
-      className="sc-AxjAm gDcErk"
+      className="sc-aXZVg cMSubb"
       label="Okay"
       onClick={[Function]}
       selected={false}
     />
     <div
-      className="sc-AxjAm hRvmQO"
+      className="sc-aXZVg lduTJV"
       label="Good"
       onClick={[Function]}
       selected={false}
     />
     <div
-      className="sc-AxjAm cyNyeb"
+      className="sc-aXZVg dkhdwY"
       label="Great"
       onClick={[Function]}
       selected={false}
@@ -47,7 +47,7 @@ exports[`Prompt matches snapshot 1`] = `
   </div>
   <p
     style={
-      Object {
+      {
         "paddingTop": "1rem",
       }
     }

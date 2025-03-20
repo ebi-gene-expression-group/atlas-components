@@ -10,3 +10,14 @@ Elements use classes from the [EBI Visual Framework](https://github.com/ebiwd/EB
 
 To test this component, please uncomment `HighchartsExporting(Highcharts)
  HighchartsOfflineExporting(Highcharts)   HighchartsBoost(Highcharts)` in `Scatterplot.js` first, as highcharts wrappers are not been supported in the test.
+
+# Getting started
+
+```bash
+cd ../..
+npm install
+lerna install
+cd - 
+npm install
+npm start
+```

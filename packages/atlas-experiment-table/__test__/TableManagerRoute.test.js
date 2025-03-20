@@ -24,7 +24,7 @@ describe(`TableManagerRoute`, () => {
       </MemoryRouter>
     )
 
-    expect(wrapper).toContainExactlyOneMatchingElement(TableManager)
+  expect(wrapper.find(TableManager)).toHaveLength(1)
   })
 
   test(`renders nothing at any other route`, () => {
@@ -38,7 +38,7 @@ describe(`TableManagerRoute`, () => {
       </MemoryRouter>
     )
 
-    expect(wrapper).toBeEmptyRender()
+      expect(wrapper.isEmptyRender()).toBe(true)
   })
 
   test(`updates URL when afterStatusUpdate is called`, () => {
