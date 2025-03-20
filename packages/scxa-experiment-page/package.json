@@ -5,7 +5,8 @@
     "access": "public"
   },
   "scripts": {
-    "prepare": "rm -rf lib && babel src -d lib --copy-files"
+    "prepare": "rm -rf lib && babel src -d lib --copy-files",
+    "start": "webpack-dev-server --mode=development"
   },
   "files": [
     "lib"
