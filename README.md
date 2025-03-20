@@ -65,8 +65,9 @@ npm test
 ```
 
 ## Publish new npm versions
+If you can publish properly, the changes in all related `package.json` will be pushed automatically.
 ```bash
 npm login #if you are first time try to publish
 lerna changed #Lists which packages will be published
-lerna publish
+lerna publish --no-private #exclude any private packages
 ```
