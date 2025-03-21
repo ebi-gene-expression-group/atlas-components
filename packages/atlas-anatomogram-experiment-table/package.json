@@ -5,7 +5,8 @@
   "main": "lib/anatomogramCellTypeHeatmapView.js",
   "scripts": {
     "prepack": "babel src -d lib --copy-files",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server --mode=development"
   },
   "author": "",
   "license": "ISC",
@@ -36,17 +37,17 @@
     "enzyme-adapter-react-16": "^1.15.5",
     "eslint": "^5.16.0",
     "eslint-config-gene-expression": "^0.5.0",
-    "fetch-mock": "^7.7.3",
+    "fetch-mock": "^12.5.2",
     "file-loader": "^6.2.0",
-    "image-webpack-loader": "^6.0.0",
-    "jest": "^24.7.1",
+    "image-webpack-loader": "^8.1.0",
+    "jest": "^29.7.0",
     "jest-environment-enzyme": "^7.0.2",
-    "jest-enzyme": "^7.1.2",
+    "jest-enzyme": "^4.2.0",
     "node-fetch": "^2.6.1",
     "react-test-renderer": "^16.14.0",
-    "webpack": "^4.44.2",
-    "webpack-cli": "^3.3.12",
-    "webpack-dev-server": "^3.11.0"
+    "webpack": "^5.98.0",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.0"
   },
   "gitHead": "0fcac2cf1b51445c92c92a4dc4ce51f468a1a6fb"
 }
