@@ -86,7 +86,7 @@ describe(`FacetedSearchContainer`, () => {
       .invoke(`attr`, `aria-controls`)
       .as(`dropdownMenuId`)
 
-    cy.get(`@dropdownMenuId`).get(`div[class$="-MenuList"]`).first().then((selectedTitles) => {
+    cy.get(`@dropdownMenuId`).get(`div[class$="-menu"]`).then((selectedTitles) => {
         Object.values(selectedTitles)[0].childNodes.forEach(node => {
           let label = dropdownTitles.push(node.innerText)
           if (!dropdownTitles.includes(label)) {
