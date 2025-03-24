@@ -25,10 +25,10 @@ describe (`HighchartsSeriesGenerator`, () => {
       expect(series).toHaveProperty(`name`)
       expect(series).toHaveProperty(`data`)
       series.data.forEach((point) => {
-        expect(point).toHaveProperty(`x`)
-        expect(point).toHaveProperty(`y`)
-        expect(point).toHaveProperty(`name`)
-        expect(point).toHaveProperty(`expressionLevel`)
+        expect(typeof point[0]).toBe("number");
+        expect(typeof point[1]).toBe("number");
+        expect(typeof point[2]).toBe("string");
+        expect(typeof point[3]).toBe("number");
       })
     })
   })

@@ -11,6 +11,7 @@
     "search"
   ],
   "author": "Karoly Erdos <karoly@ebi.ac.uk>",
+  "private": "true",
   "homepage": "https://github.com/ebi-gene-expression-group/atlas-components#readme",
   "license": "Apache-2.0",
   "main": "lib/index.js",

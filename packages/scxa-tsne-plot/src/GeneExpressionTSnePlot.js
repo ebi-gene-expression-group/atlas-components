@@ -55,28 +55,32 @@ const _colourizeExpressionLevel = (highlightSeries) => {
       return {
         name: aSeries.name,
         data: aSeries.data.map((point) => {
-          if (point.expressionLevel > 0.1) {
-            return {
-              ...point,
-              expressionLevel: Math.round10(point.expressionLevel, -2),
-              color: _colorize(point.expressionLevel)
-            }
-          } else {
-            delete point.expressionLevel
-            return {
-              ...point,
-              color: Color(`lightgrey`).alpha(0.65).rgb().toString()
-            }
-          }
-
+              if (point[3] > 0.1) {
+                return {
+                  x:point[0],
+                  y:point[1],
+                  name:point[2],
+                  expressionLevel: Math.round10(point[3], -2),
+                  color: _colorize(point[3])
+                }
+              } else {
+                delete point[3]
+                return {
+                  x:point[0],
+                  y:point[1],
+                  name:point[2],
+                  color: Color(`lightgrey`).alpha(0.65).rgb().toString()
+                }
+              }
         })
       }
     } else {
       return {
         name: aSeries.name,
         data: aSeries.data.map((point) => ({
-          ...point,
-          expressionLevel: Math.round10(point.expressionLevel, -2),
+          x:point[0],
+          y:point[1],
+          expressionLevel: Math.round10(point[3], -2),
           color: Color(`lightgrey`).alpha(0.65).rgb().toString()
         }))
       }

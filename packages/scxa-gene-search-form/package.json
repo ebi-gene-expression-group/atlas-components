@@ -1,19 +1,32 @@
 {
   "name": "@ebi-gene-expression-group/scxa-gene-search-form",
-  "version": "2.1.1",
+  "version": "2.1.5",
   "description": "Single Cell Expression Atlas homepage gene search form",
   "main": "lib/index.js",
   "scripts": {
-    "prepare": "rm -rf lib && babel src -d lib --copy-files"
+    "prepare": "rm -rf lib && babel src -d lib --copy-files",
+    "start": "webpack-dev-server --mode=development",
+    "start:localhost": "webpack serve --env host=http://localhost:8080 --mode=development",
+    "start:wwwdev": "webpack serve --env host=https://wwwdev.ebi.ac.uk --mode=development",
+    "test": "jest -u"
   },
   "jest": {
     "setupFilesAfterEnv": [
       "@testing-library/jest-dom"
     ],
+    "setupFiles": [
+      "<rootDir>/jest.setup.js"
+    ],
     "coveragePathIgnorePatterns": [
       "<rootDir>/src/ebiVfReactSelectReplacements",
       "<rootDir>/__test__/fetch-mocks"
-    ]
+    ],
+    "testEnvironment": "jsdom",
+    "testEnvironmentOptions": {
+      "customExportConditions": [
+        ""
+      ]
+    }
   },
   "author": "Expression Atlas developers <atlas-developers@ebi.ac.uk>",
   "collaborators": [
@@ -27,7 +40,7 @@
     "url": "git+https://github.com/ebi-gene-expression-group/atlas-components.git"
   },
   "dependencies": {
-    "@ebi-gene-expression-group/atlas-react-fetch-loader": "^3.9.1",
+    "@ebi-gene-expression-group/atlas-react-fetch-loader": "^3.9.4",
     "prop-types": "^15.8.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -41,15 +54,17 @@
     "@babel/polyfill": "^7.10.4",
     "@babel/preset-env": "^7.18.2",
     "@babel/preset-react": "^7.17.12",
-    "@ebi-gene-expression-group/eslint-config": "^3.3.0",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^12.1.5",
     "@testing-library/user-event": "^14.2.1",
     "babel-loader": "^8.2.5",
+    "broadcast-channel": "^7.0.0",
     "eslint": "^8.17.0",
     "jest": "^28.1.1",
-    "jest-environment-jsdom": "^28.1.1",
-    "msw": "^0.42.1",
+    "jest-environment-jsdom": "^28.1.3",
+    "jest-environment-node": "^29.7.0",
+    "jest-fixed-jsdom": "^0.0.9",
+    "msw": "^2.7.3",
     "webpack": "^5.73.0",
     "webpack-cli": "^4.10.0",
     "webpack-dev-server": "^4.9.2",

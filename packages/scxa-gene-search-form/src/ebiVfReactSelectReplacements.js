@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-
+import React from 'react'
 // Styles stolen from https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/css/ebi-global.css select
 
 const styles = {
@@ -44,10 +44,11 @@ const DropdownIndicator = styled.span`
   width: 1.5rem;
   height: 1rem;
 `
+const CustomIndicatorsContainer = () =>  <DropdownIndicator />
 
 const ebiVfReactSelectReplacements = {
   styles,
-  DropdownIndicator
+  CustomIndicatorsContainer
 }
 
 export default ebiVfReactSelectReplacements

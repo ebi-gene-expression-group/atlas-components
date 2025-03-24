@@ -1,10 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`GeneExpressionTSnePlot with random data matches snapshot 1`] = `
-Array [
+[
   <div
     style={
-      Object {
+      {
         "visibility": "visible",
       }
     }
@@ -17,7 +17,7 @@ Array [
       </label>
       <div
         style={
-          Object {
+          {
             "display": "",
           }
         }
@@ -42,7 +42,7 @@ Array [
   <div
     className="row"
     style={
-      Object {
+      {
         "position": "relative",
       }
     }
@@ -53,7 +53,7 @@ Array [
       <div />
     </div>
     <div
-      className="sc-bczRLJ dMcFoN"
+      className="sc-aXZVg bGqqkF"
     >
       <p>
         Loading, please wait...

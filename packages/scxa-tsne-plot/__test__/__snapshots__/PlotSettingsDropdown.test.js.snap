@@ -24,7 +24,7 @@ exports[`PlotSettingsDropdown with no data matches snapshot 1`] = `
         <div
           className=""
           style={
-            Object {
+            {
               "display": "inline-block",
             }
           }
@@ -41,7 +41,7 @@ exports[`PlotSettingsDropdown with no data matches snapshot 1`] = `
             onFocus={[Function]}
             spellCheck="false"
             style={
-              Object {
+              {
                 "background": 0,
                 "border": 0,
                 "boxSizing": "content-box",
@@ -60,7 +60,7 @@ exports[`PlotSettingsDropdown with no data matches snapshot 1`] = `
           />
           <div
             style={
-              Object {
+              {
                 "height": 0,
                 "left": 0,
                 "overflow": "scroll",
@@ -76,14 +76,9 @@ exports[`PlotSettingsDropdown with no data matches snapshot 1`] = `
         </div>
       </div>
     </div>
-    <div
-      className=" css-1hb7zxy-IndicatorsContainer"
-    >
-      <span
-        className="sc-bczRLJ lfNMCO"
-        cx={[Function]}
-      />
-    </div>
+    <span
+      className="sc-aXZVg REtrm"
+    />
   </div>
 </div>
 `;
