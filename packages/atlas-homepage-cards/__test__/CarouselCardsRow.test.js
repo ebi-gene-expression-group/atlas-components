@@ -1,5 +1,6 @@
 import { shallow } from 'enzyme'
 import Slider from 'react-slick'
+import React from 'react'
 
 import {
   aRickleInTimeImageCardProps, findingNemoSpeciesCardProps,     // URL in title, no URLs in content
