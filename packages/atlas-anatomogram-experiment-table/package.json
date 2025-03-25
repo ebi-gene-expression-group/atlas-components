@@ -9,6 +9,7 @@
     "start": "webpack-dev-server --mode=development"
   },
   "author": "",
+  "private": true,
   "license": "ISC",
   "repository": {
     "type": "git",
