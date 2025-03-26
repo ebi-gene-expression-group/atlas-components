@@ -5,7 +5,7 @@ import speciesResponse from '../fixtures/speciesResponse.json'
 import cellTypeWheelData from '../fixtures/CellTypeDataForWheelResponse.json'
 import heatMapTCellResponse from '../fixtures/heatMapRegulatoryTCellResponse.json'
 import URI from 'urijs'
-import { encode as base64Encode } from 'base-64';
+import { encode as base64Encode } from 'base-64'
 
 function firstWordMatcherOf(str) {
   return new RegExp(`.${str.split(` `)[0]}*`)
@@ -100,7 +100,7 @@ describe(`CellTypeWheelExperimentHeatmap`, () => {
     cy.mount(<CellTypeWheelExperimentHeatmap{...props}/>)
 
     cy.get(`[data-cy='speciesDropDown']`)
-      .get(`div[class$='ValueContainer']`)
+      .get(`div[class$='-container']`)
       .last()
       .invoke(`text`)
       .should(`eq`, `Any`)
@@ -115,7 +115,7 @@ describe(`CellTypeWheelExperimentHeatmap`, () => {
     cy.mount(<CellTypeWheelExperimentHeatmap{...props}/>)
 
     cy.get(`[data-cy='speciesDropDown']`)
-      .get(`div[class$='ValueContainer']`)
+      .get(`div[class$='-container']`)
       .last()
       .invoke(`text`)
       .should(`eq`, `Any`)
@@ -131,7 +131,7 @@ describe(`CellTypeWheelExperimentHeatmap`, () => {
     cy.mount(<CellTypeWheelExperimentHeatmap{...props}/>)
 
     cy.get(`[data-cy='speciesDropDown']`)
-      .get(`div[class$='ValueContainer']`)
+      .get(`div[class$='-container']`)
       .last()
       .invoke(`text`)
       .should(`eq`, givenSpecies)
