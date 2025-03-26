@@ -11,6 +11,7 @@ const render = (options, target) => {
     <FetchLoadResponsiveCardsRow
       CardClass={ExtendableCard}
       {...options}
+      host={`${process.env.SERVICE_URL}/gxa/sc/`}
     />,
     document.getElementById(target))
 }

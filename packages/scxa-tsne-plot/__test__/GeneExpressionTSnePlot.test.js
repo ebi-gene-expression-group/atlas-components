@@ -20,7 +20,7 @@ import {
   plotData,
   randomHighchartsSeriesWithSeed
 } from './Utils'
-import PlotSettingsDropdown from "../src/PlotSettingsDropdown";
+import PlotSettingsDropdown from "../src/PlotSettingsDropdown"
 
 describe(`GeneExpressionTSnePlot colourize function`, () => {
 
@@ -51,15 +51,15 @@ describe(`GeneExpressionTSnePlot colourize function`, () => {
   test(`assigns maximum colour scale to the point with highest expression`, () => {
     const randomSeries = randomHighchartsSeries()
     const maximum = 10000
-    randomSeries[randomSeries.length - 1].data.push({
-      x: 0,
-      y: 0,
-      expressionLevel: maximum,
-      name: "Maximum overkill"
-    })
+    randomSeries[randomSeries.length - 1].data.push([
+      0, // x
+      0, //y
+      "Maximum overkill", //name
+      maximum, // expressionLevel
+    ])
 
     const allPoints = randomSeries.reduce((acc, series) => acc.concat(series.data), [])
-    const maxExpressionLevel = Math.round10(Math.max(...allPoints.map((point) => point.expressionLevel)), -2)
+    const maxExpressionLevel = Math.round10(Math.max(...allPoints.map((point) => point[3])), -2)
 
     const maxExpressionLevelPoints = _colourizeExpressionLevel(gradientColourRanges(), [])(plotData(randomSeries))
       .reduce((acc, series) => {
@@ -76,15 +76,15 @@ describe(`GeneExpressionTSnePlot colourize function`, () => {
 
   test(`assigns grey colour to the point with 0 expression`, () => {
     const randomSeries = randomHighchartsSeries()
-    randomSeries[randomSeries.length - 1].data.push({
-      x: 0,
-      y: 0,
-      expressionLevel: 0,
-      name: `Minimum underkill`
-    })
+    randomSeries[randomSeries.length - 1].data.push([
+      0, //x
+      0, // y
+      `Minimum underkill`, // name
+      0 //expressionLevel
+    ])
 
     const allPoints = randomSeries.reduce((acc, series) => acc.concat(series.data), [])
-    const minExpressionLevel = Math.round10(Math.min(...allPoints.map((point) => point.expressionLevel)), -2)
+    const minExpressionLevel = Math.round10(Math.min(...allPoints.map((point) => point[3])), -2)
 
     const minExpressionLevelPoints = _colourizeExpressionLevel(gradientColourRanges(), [])(plotData(randomSeries))
       .reduce((acc, series) => {
@@ -176,26 +176,40 @@ describe(`GeneExpressionTSnePlot`, () => {
 
   test(`wraps the autocomplete control in a hidden div when showControls is false`, () => {
     const wrapper = mount(<GeneExpressionTSnePlot {...props} showControls={false}/>)
-    expect(wrapper.find(AtlasAutocomplete).parent()).toHaveStyle({visibility: `hidden`})
+    const element = wrapper.find(AtlasAutocomplete).getDOMNode()
+    expect(window.getComputedStyle(element).visibility).toBe('hidden')
   })
 
   test(`wraps the autocomplete control in a visible div when showControls is true`, () => {
     const wrapper = mount(<GeneExpressionTSnePlot {...props} showControls={true}/>)
-    expect(wrapper.find(AtlasAutocomplete).parent()).toHaveStyle({visibility: `visible`})
+    const element = wrapper.find(AtlasAutocomplete).getDOMNode()
+    expect(window.getComputedStyle(element).visibility).toBe('visible')
   })
 
   test(`wraps the gene ids dropdown control in a hidden div when showControls is false`, () => {
     const wrapper = mount(<GeneExpressionTSnePlot {...props} showControls={false} geneIds={[`foo`, `bar`]}/>)
-    expect(wrapper.find(PlotSettingsDropdown).parent()).toHaveStyle({visibility: `hidden`})
+    const dropdown = wrapper.find(PlotSettingsDropdown)
+    // Ensure that the dropdown exists and is rendered
+    expect(dropdown.exists()).toBe(true)
+    const parentDiv = dropdown.parent()
+    const style = parentDiv.props().style
+    expect(style.visibility).toBe('hidden')
   })
 
   test(`wraps the gene ids control in a visible div when showControls is true`, () => {
     const wrapper = mount(<GeneExpressionTSnePlot {...props} showControls={true} geneIds={[`foo`, `bar`]}/>)
-    expect(wrapper.find(PlotSettingsDropdown).parent()).toHaveStyle({visibility: `visible`})
+    const dropdown = wrapper.find(PlotSettingsDropdown)
+    // Ensure that the dropdown exists and is rendered
+    expect(dropdown.exists()).toBe(true)
+    const parentDiv = dropdown.parent()
+    const style = parentDiv.props().style
+    expect(style.visibility).toBe('visible')
   })
 
   test(`do not render gene ids dropdown if gene ids is empty array`, () => {
     const wrapper = mount(<GeneExpressionTSnePlot {...props} showControls={true}/>)
-    expect(wrapper.find(AtlasAutocomplete).parent()).toHaveStyle({visibility: `visible`})
+    const element = wrapper.find(AtlasAutocomplete).getDOMNode()
+    expect(window.getComputedStyle(element).visibility).toBe('visible')
   })
+
 })

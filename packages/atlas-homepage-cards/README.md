@@ -64,10 +64,12 @@ card’s icon and a foldable list of items: five are shown plus a toggle button 
 ## Getting started
 Install dependencies
 ```
+rm -rf node_modules package-lock.json  # Optional: Clean install
 npm install
 ```
 
 Use [webpack-dev-server](https://github.com/webpack/webpack-dev-server) to see the demo page:
 ```
-npx webpack-dev-server -d
+npm run start:localhost   # Should use http://localhost:8080/
+npm run start:wwwdev      # Should use https://wwwdev.ebi.ac.uk/
 ```

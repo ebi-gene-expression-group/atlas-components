@@ -247,8 +247,9 @@ const sliderSettings = {
 const render = (options, target) => {
   ReactDOM.render(
     <CarouselCardsRow
-      cards={buildFeaturedExperimentsCards(`https://www.ebi.ac.uk/gxa/`)}
+      cards={buildFeaturedExperimentsCards(`${process.env.SERVICE_URL}/gxa/`)}
       {...options}
+      host={`${process.env.SERVICE_URL}/gxa/`}
       sliderSettings={sliderSettings}
     />,
     document.getElementById(target))

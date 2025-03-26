@@ -3,29 +3,29 @@
 exports[`ExtendableCard matches snapshot: A rickle in time 1`] = `
 <ExtendableCard
   content={
-    Array [
-      Object {
+    [
+      {
         "text": "Morty Smith",
       },
-      Object {
+      {
         "text": "Summer Smith",
       },
-      Object {
+      {
         "text": "Rick Sanchez",
       },
-      Object {
+      {
         "text": "Rick Sanchez(split reality)",
       },
-      Object {
+      {
         "text": "Morty Smith (split reality)",
       },
-      Object {
+      {
         "text": "Summer Smith (split reality)",
       },
     ]
   }
   description={
-    Object {
+    {
       "text": "A rickle in time",
       "url": "http://rickandmorty.wikia.com/wiki/A_Rickle_in_Time",
     }
@@ -37,7 +37,7 @@ exports[`ExtendableCard matches snapshot: A rickle in time 1`] = `
 >
   <div
     style={
-      Object {
+      {
         "marginBottom": 0,
         "paddingBottom": "2rem",
         "textAlign": "center",
@@ -54,7 +54,7 @@ exports[`ExtendableCard matches snapshot: A rickle in time 1`] = `
     <a
       href="http://rickandmorty.wikia.com/wiki/A_Rickle_in_Time"
       style={
-        Object {
+        {
           "borderBottom": 0,
         }
       }
@@ -62,7 +62,7 @@ exports[`ExtendableCard matches snapshot: A rickle in time 1`] = `
       <img
         src="https://upload.wikimedia.org/wikipedia/en/6/6b/A_Rickle_in_Time.jpg"
         style={
-          Object {
+          {
             "height": "8rem",
             "marginBottom": "2.35rem",
             "marginTop": "2.50rem",
@@ -74,12 +74,12 @@ exports[`ExtendableCard matches snapshot: A rickle in time 1`] = `
       className="content"
     >
       <ul
-        className="sc-AxjAm eGAVQN content"
+        className="sc-eqUAAy idyczQ content"
       >
         <li
           key="Morty Smith-0"
           style={
-            Object {
+            {
               "marginBottom": "0.3rem",
             }
           }
@@ -89,7 +89,7 @@ exports[`ExtendableCard matches snapshot: A rickle in time 1`] = `
         <li
           key="Summer Smith-1"
           style={
-            Object {
+            {
               "marginBottom": "0.3rem",
             }
           }
@@ -99,7 +99,7 @@ exports[`ExtendableCard matches snapshot: A rickle in time 1`] = `
         <li
           key="Rick Sanchez-2"
           style={
-            Object {
+            {
               "marginBottom": "0.3rem",
             }
           }
@@ -109,7 +109,7 @@ exports[`ExtendableCard matches snapshot: A rickle in time 1`] = `
         <li
           key="Rick Sanchez(split reality)-3"
           style={
-            Object {
+            {
               "marginBottom": "0.3rem",
             }
           }
@@ -119,7 +119,7 @@ exports[`ExtendableCard matches snapshot: A rickle in time 1`] = `
         <li
           key="Morty Smith (split reality)-4"
           style={
-            Object {
+            {
               "marginBottom": "0.3rem",
             }
           }
@@ -141,67 +141,67 @@ exports[`ExtendableCard matches snapshot: A rickle in time 1`] = `
 exports[`ExtendableCard matches snapshot: Batman films 1`] = `
 <ExtendableCard
   content={
-    Array [
-      Object {
+    [
+      {
         "text": "Batman (1943)",
         "url": "https://en.wikipedia.org/wiki/Batman_(serial)",
       },
-      Object {
+      {
         "text": "Batman and Robin (1949)",
         "url": "https://en.wikipedia.org/wiki/Batman_and_Robin_(serial)",
       },
-      Object {
+      {
         "text": "Batman (1966)",
         "url": "https://en.wikipedia.org/wiki/Batman_(1966_film)",
       },
-      Object {
+      {
         "text": "Batman (1989)",
         "url": "https://en.wikipedia.org/wiki/Batman_(1989_film)",
       },
-      Object {
+      {
         "text": "Batman Returns (1992)",
         "url": "https://en.wikipedia.org/wiki/Batman_Returns",
       },
-      Object {
+      {
         "text": "Batman Forever (1995)",
         "url": "https://en.wikipedia.org/wiki/Batman_Forever",
       },
-      Object {
+      {
         "text": "Batman &amp; Robin (1997)",
         "url": "https://en.wikipedia.org/wiki/Batman_%26_Robin_(film)",
       },
-      Object {
+      {
         "text": "Batman Begins (2005)",
         "url": "https://en.wikipedia.org/wiki/Batman_Begins",
       },
-      Object {
+      {
         "text": "The Dark Knight (2008)",
         "url": "https://en.wikipedia.org/wiki/The_Dark_Knight_(film)",
       },
-      Object {
+      {
         "text": "The Dark Knight Rises (2012)",
         "url": "https://en.wikipedia.org/wiki/The_Dark_Knight_Rises",
       },
-      Object {
+      {
         "text": "Batman v Superman: Dawn of Justice (2016)",
         "url": "https://en.wikipedia.org/wiki/Batman_v_Superman:_Dawn_of_Justice",
       },
-      Object {
+      {
         "text": "Suicide Squad (2016)",
         "url": "https://en.wikipedia.org/wiki/Suicide_Squad_(film)",
       },
-      Object {
+      {
         "text": "Justice League (2017)",
         "url": "https://en.wikipedia.org/wiki/Justice_League_(film)",
       },
-      Object {
+      {
         "text": "Joker (2019)",
         "url": "https://en.wikipedia.org/wiki/Joker_(2019_film)",
       },
     ]
   }
   description={
-    Object {
+    {
       "text": "Batman films",
     }
   }
@@ -212,7 +212,7 @@ exports[`ExtendableCard matches snapshot: Batman films 1`] = `
 >
   <div
     style={
-      Object {
+      {
         "marginBottom": 0,
         "paddingBottom": "2rem",
         "textAlign": "center",
@@ -224,14 +224,14 @@ exports[`ExtendableCard matches snapshot: Batman films 1`] = `
     </h4>
     <span
       style={
-        Object {
+        {
           "fontSize": "8rem",
         }
       }
     >
       <EbiSpeciesIcon
         groupColors={
-          Object {
+          {
             "other": "deepskyblue",
             "plants": "mediumseagreen",
             "warmBlooded": "indianred",
@@ -243,7 +243,7 @@ exports[`ExtendableCard matches snapshot: Batman films 1`] = `
           className="icon icon-species"
           data-icon="("
           style={
-            Object {
+            {
               "color": "indianred",
             }
           }
@@ -255,12 +255,12 @@ exports[`ExtendableCard matches snapshot: Batman films 1`] = `
       className="content"
     >
       <ul
-        className="sc-AxjAm eGAVQN content"
+        className="sc-eqUAAy idyczQ content"
       >
         <li
           key="Batman (1943)-0"
           style={
-            Object {
+            {
               "marginBottom": "0.3rem",
             }
           }
@@ -274,7 +274,7 @@ exports[`ExtendableCard matches snapshot: Batman films 1`] = `
         <li
           key="Batman and Robin (1949)-1"
           style={
-            Object {
+            {
               "marginBottom": "0.3rem",
             }
           }
@@ -288,7 +288,7 @@ exports[`ExtendableCard matches snapshot: Batman films 1`] = `
         <li
           key="Batman (1966)-2"
           style={
-            Object {
+            {
               "marginBottom": "0.3rem",
             }
           }
@@ -302,7 +302,7 @@ exports[`ExtendableCard matches snapshot: Batman films 1`] = `
         <li
           key="Batman (1989)-3"
           style={
-            Object {
+            {
               "marginBottom": "0.3rem",
             }
           }
@@ -316,7 +316,7 @@ exports[`ExtendableCard matches snapshot: Batman films 1`] = `
         <li
           key="Batman Returns (1992)-4"
           style={
-            Object {
+            {
               "marginBottom": "0.3rem",
             }
           }
@@ -342,20 +342,20 @@ exports[`ExtendableCard matches snapshot: Batman films 1`] = `
 exports[`ExtendableCard matches snapshot: Finding Nemo 1`] = `
 <ExtendableCard
   content={
-    Array [
-      Object {
+    [
+      {
         "text": "Dory",
       },
-      Object {
+      {
         "text": "Nemo",
       },
-      Object {
+      {
         "text": "Gill",
       },
     ]
   }
   description={
-    Object {
+    {
       "text": "Finding Nemo",
       "url": "https://en.wikipedia.org/wiki/Finding_Nemo",
     }
@@ -367,7 +367,7 @@ exports[`ExtendableCard matches snapshot: Finding Nemo 1`] = `
 >
   <div
     style={
-      Object {
+      {
         "marginBottom": 0,
         "paddingBottom": "2rem",
         "textAlign": "center",
@@ -384,21 +384,21 @@ exports[`ExtendableCard matches snapshot: Finding Nemo 1`] = `
     <a
       href="https://en.wikipedia.org/wiki/Finding_Nemo"
       style={
-        Object {
+        {
           "borderBottom": 0,
         }
       }
     >
       <span
         style={
-          Object {
+          {
             "fontSize": "8rem",
           }
         }
       >
         <EbiSpeciesIcon
           groupColors={
-            Object {
+            {
               "other": "deepskyblue",
               "plants": "mediumseagreen",
               "warmBlooded": "indianred",
@@ -410,7 +410,7 @@ exports[`ExtendableCard matches snapshot: Finding Nemo 1`] = `
             className="icon icon-species"
             data-icon="Z"
             style={
-              Object {
+              {
                 "color": "deepskyblue",
               }
             }
@@ -423,12 +423,12 @@ exports[`ExtendableCard matches snapshot: Finding Nemo 1`] = `
       className="content"
     >
       <ul
-        className="sc-AxjAm eGAVQN content"
+        className="sc-eqUAAy idyczQ content"
       >
         <li
           key="Dory-0"
           style={
-            Object {
+            {
               "marginBottom": "0.3rem",
             }
           }
@@ -438,7 +438,7 @@ exports[`ExtendableCard matches snapshot: Finding Nemo 1`] = `
         <li
           key="Nemo-1"
           style={
-            Object {
+            {
               "marginBottom": "0.3rem",
             }
           }
@@ -448,7 +448,7 @@ exports[`ExtendableCard matches snapshot: Finding Nemo 1`] = `
         <li
           key="Gill-2"
           style={
-            Object {
+            {
               "marginBottom": "0.3rem",
             }
           }
@@ -464,31 +464,31 @@ exports[`ExtendableCard matches snapshot: Finding Nemo 1`] = `
 exports[`ExtendableCard matches snapshot: The Smith household 1`] = `
 <ExtendableCard
   content={
-    Array [
-      Object {
+    [
+      {
         "text": "Jerry Smith",
         "url": "https://en.wikipedia.org/wiki/List_of_Rick_and_Morty_characters#Jerry_Smith",
       },
-      Object {
+      {
         "text": "Beth Smith",
         "url": "https://en.wikipedia.org/wiki/List_of_Rick_and_Morty_characters#Beth_Smith",
       },
-      Object {
+      {
         "text": "Summer Smith",
         "url": "https://en.wikipedia.org/wiki/List_of_Rick_and_Morty_characters#Summer_Smith",
       },
-      Object {
+      {
         "text": "Morty Smith",
         "url": "https://en.wikipedia.org/wiki/Morty_Smith",
       },
-      Object {
+      {
         "text": "Rick Sanchez",
         "url": "https://en.wikipedia.org/wiki/Rick_Sanchez_(Rick_and_Morty)",
       },
     ]
   }
   description={
-    Object {
+    {
       "text": "The Smith household",
     }
   }
@@ -499,7 +499,7 @@ exports[`ExtendableCard matches snapshot: The Smith household 1`] = `
 >
   <div
     style={
-      Object {
+      {
         "marginBottom": 0,
         "paddingBottom": "2rem",
         "textAlign": "center",
@@ -512,7 +512,7 @@ exports[`ExtendableCard matches snapshot: The Smith household 1`] = `
     <img
       src="https://upload.wikimedia.org/wikipedia/en/b/b0/Rick_and_Morty_characters.jpg"
       style={
-        Object {
+        {
           "height": "8rem",
           "marginBottom": "2.35rem",
           "marginTop": "2.50rem",
@@ -523,12 +523,12 @@ exports[`ExtendableCard matches snapshot: The Smith household 1`] = `
       className="content"
     >
       <ul
-        className="sc-AxjAm eGAVQN content"
+        className="sc-eqUAAy idyczQ content"
       >
         <li
           key="Jerry Smith-0"
           style={
-            Object {
+            {
               "marginBottom": "0.3rem",
             }
           }
@@ -542,7 +542,7 @@ exports[`ExtendableCard matches snapshot: The Smith household 1`] = `
         <li
           key="Beth Smith-1"
           style={
-            Object {
+            {
               "marginBottom": "0.3rem",
             }
           }
@@ -556,7 +556,7 @@ exports[`ExtendableCard matches snapshot: The Smith household 1`] = `
         <li
           key="Summer Smith-2"
           style={
-            Object {
+            {
               "marginBottom": "0.3rem",
             }
           }
@@ -570,7 +570,7 @@ exports[`ExtendableCard matches snapshot: The Smith household 1`] = `
         <li
           key="Morty Smith-3"
           style={
-            Object {
+            {
               "marginBottom": "0.3rem",
             }
           }
@@ -584,7 +584,7 @@ exports[`ExtendableCard matches snapshot: The Smith household 1`] = `
         <li
           key="Rick Sanchez-4"
           style={
-            Object {
+            {
               "marginBottom": "0.3rem",
             }
           }

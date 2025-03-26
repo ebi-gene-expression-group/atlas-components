@@ -203,7 +203,6 @@
   }, 'extendable-species-card-short');
 
   animalSpeciesSummary.render({
-    host: 'http://localhost:8080/gxa/sc/',
     resource: 'json/species-summary?limit=100',
     className: 'row small-up-2 medium-up-4 large-up-6',
     cardContainerClassName: 'column',
@@ -211,7 +210,6 @@
 
   experimentsPanelDemo.render(
     {
-      host: 'http://localhost:8080/gxa/',
       imageIconHeight: '4rem',
       className: 'row small-up-2 medium-up-3 large-up-4',
       cardContainerClassName: 'column',
@@ -219,7 +217,6 @@
     'experiments-container');
 
   responsiveCardsRowDemo.render({
-    host: 'http://localhost:8080/gxa/sc/',
     resource: 'json/hca',
     className: 'row small-up-2',
     cardContainerClassName: 'column',
@@ -229,7 +226,6 @@
   }, 'image-card-container');
 
   carouselCardsPanelDemo.render({
-    host: 'http://localhost:8080/gxa',
     imageIconHeight: '4rem',
     className: '',
     cardContainerClassName: '',

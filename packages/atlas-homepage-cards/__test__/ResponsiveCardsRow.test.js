@@ -1,5 +1,6 @@
 import { shallow, mount } from 'enzyme'
 import Slide from 'react-slick'
+import React from 'react'
 
 import {
   aRickleInTimeImageCardProps, findingNemoSpeciesCardProps,     // URL in title, no URLs in content

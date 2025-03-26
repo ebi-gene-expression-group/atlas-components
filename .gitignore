@@ -114,3 +114,4 @@ lib/
 
 # WebStorm / IntelliJ IDEA project files
 .idea
+.DS_Store

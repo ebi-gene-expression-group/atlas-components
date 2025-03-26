@@ -1,20 +1,22 @@
 {
   "name": "@ebi-gene-expression-group/atlas-homepage-cards",
-  "version": "2.5.4",
+  "version": "2.5.8",
   "description": "A package that renders grids of cards.",
   "main": "lib/index.js",
   "scripts": {
     "prepare": "rm -rf lib && babel src -d lib --copy-files",
     "test": "jest",
-    "posttest": "jest --coverage --coverageReporters=text-lcov | coveralls"
+    "start:localhost": "webpack serve --env host=http://localhost:8080/ --mode=development",
+    "start:wwwdev": "webpack serve --env host=https://wwwdev.ebi.ac.uk/ --mode=development"
   },
   "jest": {
+    "testEnvironment": "jsdom",
     "setupFilesAfterEnv": [
-      "jest-enzyme"
+      "jest-enzyme",
+      "<rootDir>/jest.setup.js"
     ],
-    "testEnvironment": "enzyme",
     "testEnvironmentOptions": {
-      "enzymeAdapter": "react16"
+      "customExportConditions": []
     },
     "moduleNameMapper": {
       "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
@@ -40,7 +42,8 @@
     "url": "git+https://github.com/ebi-gene-expression-group/atlas-components.git"
   },
   "dependencies": {
-    "@ebi-gene-expression-group/react-ebi-species": "^2.6.3",
+    "@ebi-gene-expression-group/atlas-react-fetch-loader": "^3.9.1",
+    "@ebi-gene-expression-group/react-ebi-species": "^2.6.6",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-slick": "^0.27.8",
@@ -51,23 +54,32 @@
     "@babel/cli": "^7.10.5",
     "@babel/core": "^7.11.1",
     "@babel/polyfill": "^7.10.4",
-    "@babel/preset-env": "^7.11.0",
-    "@babel/preset-react": "^7.10.4",
+    "@babel/preset-env": "^7.26.9",
+    "@babel/preset-react": "^7.26.3",
+    "@testing-library/jest-dom": "^5.16.4",
+    "babel-jest": "^29.7.0",
     "babel-loader": "^8.1.0",
     "clean-webpack-plugin": "^3.0.0",
     "coveralls": "^3.1.0",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.3",
     "eslint": "^7.6.0",
-    "fetch-mock": "^9.10.6",
-    "jest": "^26.4.0",
-    "jest-environment-enzyme": "^7.1.2",
+    "fetch-mock": "^12.5.2",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
     "jest-enzyme": "^7.1.2",
+    "jest-esm-transformer": "^1.0.0",
     "node-fetch": "^2.6.0",
     "react-dom": "^16.13.1",
-    "webpack": "^4.44.1",
-    "webpack-cli": "^3.3.12",
-    "webpack-dev-server": "^3.11.0"
+    "web-streams-polyfill": "^4.1.0",
+    "webpack": "^5.98.0",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.0"
+  },
+  "overrides": {
+    "tough-cookie": "^4.1.4",
+    "braces": "^3.0.3",
+    "cheerio": "0.22.0"
   },
   "gitHead": "7e03f78b4db84dbcf8247a040490afe00d57d105"
 }
