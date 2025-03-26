@@ -28,12 +28,13 @@
 <script src="/dist/facetedSearchContainerWithFetchLoaderDemo.bundle.js"></script>
 
 <script>
-    const symbol = `Aspa`;
+    const symbol = `Aspa`
 
     facetedSearchContainerWithFetchLoaderDemo.render({
       // Set to http://localhost:8080/gxa/, http://localhost:8080/gxa/sc/ or wherever, but remember the trailing slash!
       host: 'https://wwwdev.ebi.ac.uk/gxa/sc/',
-      resource: 'json/search?symbol=' + symbol, // Add species to see shared facets go away: + '&species=mus musculus',
+      query: `symbol=${symbol}`, // Add species to see shared facets go away: + '&species=mus musculus',
+      resource: `json/search`,
       // matchingGeneId will be populated for species-specific genes
       fulfilledPayloadProvider: function(data) {
         return {
