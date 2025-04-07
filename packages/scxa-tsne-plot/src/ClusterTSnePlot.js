@@ -6,28 +6,39 @@ import {find as _find, flatten as _flatten} from 'lodash'
 import ScatterPlotLoader from './plotloader/PlotLoader'
 import PlotSettingsDropdown from './PlotSettingsDropdown'
 
-const _colourizeClusters = (highlightSeries) =>
-  (series) => series.map((aSeries) => {
-    // I can’t think of a better way to reconcile series.name being a string and highlightSeries being an array of
-    // numbers. For more flexibility we might think of having our series be identified by an arbitrary ID string
-    if (!highlightSeries.length || highlightSeries.length === series.length || highlightSeries.map((hs) => `Cluster ${hs}`).includes(aSeries.name)) {
-      if(aSeries.name === `Not available`) {
-        return {
-          name: aSeries.name,
-          data: aSeries.data,
-          zIndex: -1,
-          color: Color(`lightgrey`).alpha(0.65).rgb().toString()
-        }
-      } else return aSeries
 
-    } else {
-      return {
-        name: aSeries.name,
-        data: aSeries.data,
-        color: Color(`lightgrey`).alpha(0.65).rgb().toString()
+const _colourizeClusters = (highlightSeries) => (series) => {
+  const isHighlighted = (name) =>
+      !highlightSeries.length ||
+      highlightSeries.length === series.length ||
+      highlightSeries.map((hs) => `Cluster ${hs}`).includes(name)
+
+  const toPointObject = ([x, y, name]) => ({ x, y, name })
+
+  return series.map((aSeries) => {
+    const base = {
+      name: aSeries.name,
+      data: aSeries.data.map(toPointObject),
+    }
+
+    if (isHighlighted(aSeries.name)) {
+      if (aSeries.name === 'Not available') {
+        return {
+          ...base,
+          zIndex: -1,
+          color: Color('lightgrey').alpha(0.65).rgb().toString(),
+        }
       }
+      return base
+    }
+
+    return {
+      ...base,
+      color: Color('lightgrey').alpha(0.65).rgb().toString(),
     }
   })
+}
+
 
 const tooltipHeader = (clusterType, series, point) => {
   const clusterName = clusterType === `clusters` ?
