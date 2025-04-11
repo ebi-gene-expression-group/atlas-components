@@ -55,6 +55,10 @@ const ClusterTSnePlot = (props) => {
 
   const highchartsConfig = {
     plotOptions: {
+      series: {
+        turboThreshold: 0, // disables turbo so name stays intact
+        boostThreshold: 0
+      },
       scatter: {
         marker: {
           symbol: `circle`
