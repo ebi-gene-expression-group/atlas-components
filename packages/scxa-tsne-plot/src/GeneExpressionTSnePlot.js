@@ -130,7 +130,9 @@ const GeneExpressionScatterPlot = (props) => {
     },
     plotOptions: {
       series: {
-        colorKey: `expressionLevel`
+        colorKey: `expressionLevel`,
+        turboThreshold: 0, // disables turbo so name stays intact
+        boostThreshold: 0
       }
     },
     colorAxis: plotIsDisabled ?

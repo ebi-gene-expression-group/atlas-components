@@ -55,6 +55,10 @@ const ClusterTSnePlot = (props) => {
 
   const highchartsConfig = {
     plotOptions: {
+      series: {
+        turboThreshold: 0, // disables turbo so name stays intact
+        boostThreshold: 0
+      },
       scatter: {
         marker: {
           symbol: `circle`
@@ -163,12 +167,14 @@ const ClusterTSnePlot = (props) => {
 
   const afterRender = (chart) => {
     chart.series.forEach(series => {
-      const legendSymbolSize = 10
-      series.legendSymbol.translate(
-          (series.legendSymbol.width / 2) - legendSymbolSize / 2,
-          (series.legendSymbol.height / 2) - legendSymbolSize / 2)
-      series.legendSymbol.attr(`width`, legendSymbolSize)
-      series.legendSymbol.attr(`height`, legendSymbolSize)
+      if (series.legendSymbol) {
+        const legendSymbolSize = 10
+        series.legendSymbol.translate(
+            (series.legendSymbol.width / 2) - legendSymbolSize / 2,
+            (series.legendSymbol.height / 2) - legendSymbolSize / 2)
+        series.legendSymbol.attr(`width`, legendSymbolSize)
+        series.legendSymbol.attr(`height`, legendSymbolSize)
+      }
     })
   }
 
