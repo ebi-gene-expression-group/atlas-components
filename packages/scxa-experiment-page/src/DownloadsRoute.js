@@ -14,7 +14,7 @@ const DownloadsRoute = ({ atlasUrl, data, experimentAccession }) => {
     <div className={`row expanded margin-top-large`}>
       <div className={`small-12 columns margin-bottom-xlarge`}>
         <h3 key={`title`}>Via FTP</h3>
-        <span>You can download data for this experiment in Expression Atlas through our <a href={`http://ftp.ebi.ac.uk/pub/databases/microarray/data/atlas/sc_experiments/${experimentAccession}`}>{`FTP site`}</a></span>
+        <span>You can download data for this experiment in Single Cell Expression Atlas through our <a href={`http://ftp.ebi.ac.uk/pub/databases/microarray/data/atlas/sc_experiments/${experimentAccession}`}>{`FTP site`}</a></span>
       </div>
       {downloadLinks}
     </div>
