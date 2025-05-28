@@ -94,7 +94,7 @@ const ResourcesSection = ({values, atlasUrl}) => {
 
 class ResourcesTab extends Component {
   render() {
-    const {resourcesFetch, atlasUrl} = this.props
+    const {resourcesFetch, atlasUrl, sectionName} = this.props
 
     if (resourcesFetch.pending) {
       return (
@@ -108,12 +108,19 @@ class ResourcesTab extends Component {
           <p>Error: {resourcesFetch.reason}</p>
         </div>
       )
-    } else if (resourcesFetch.fulfilled) {
+    } else if (resourcesFetch.fulfilled && resourcesFetch.value.length > 0) {
       return (
-          <ResourcesSection
-            values={resourcesFetch.value}
-            atlasUrl={atlasUrl} />
+          <div>
+            <h3>{sectionName}</h3>
+            <ResourcesSection
+                values={resourcesFetch.value}
+                atlasUrl={atlasUrl}/>
+          </div>
+
       )
+    } else {
+      console.log(`null`)
+      return null
     }
   }
 }
