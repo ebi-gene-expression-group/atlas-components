@@ -8,10 +8,11 @@ const sectionTypeComponent = {
   resources: Resources
 }
 
-const SectionContent = ({ type, props, atlasUrl }) => {
+// eslint-disable-next-line react/prop-types
+const SectionContent = ({ type, props, atlasUrl, sectionName }) => {
   const Section = sectionTypeComponent[type]
 
-  return (Section && <Section {...{ ...props, atlasUrl }} />)
+  return (Section && <Section {...{ ...props, atlasUrl, sectionName }} />)
 }
 
 const SupplementaryInformationRoute = (props) => {
@@ -22,12 +23,10 @@ const SupplementaryInformationRoute = (props) => {
   const sections = props.sections.map((section) => {
     const isAnnDataTextNeeded =
         props.experimentAccession.startsWith(`E-ANND`) && section.name === `Analysis Methods`
-
     return (
       <div key={section.name}>
-        <h3>{section.name}</h3>
         { isAnnDataTextNeeded && <p><i>{annDataText}</i></p> }
-        <SectionContent type={section.type} props={section.props} atlasUrl={props.atlasUrl}/>
+        <SectionContent type={section.type} props={section.props} atlasUrl={props.atlasUrl} sectionName={section.name}/>
       </div>
     )
   }
@@ -54,6 +53,13 @@ SupplementaryInformationRoute.propTypes = {
     type: PropTypes.string.isRequired,
     props: PropTypes.object.isRequired
   }))
+}
+
+SectionContent.protoTypes = {
+  type: PropTypes.string.isRequired,
+  props: PropTypes.object.isRequired,
+  atlasUrl: PropTypes.string.isRequired,
+  sectionName: PropTypes.string.isRequired
 }
 
 export default SupplementaryInformationRoute
