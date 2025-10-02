@@ -84,6 +84,23 @@ export default class TableManager extends React.Component {
         }, {})
         .value()
 
+    // Extract the data processing chain into a reusable function
+    const getUniqueFilterOptions = (dataRows, dataKey) => {
+      let chain = _.chain(dataRows)
+          .flatMap(dataKey)
+          .map(_.toString)
+          .map(_.trim);
+
+      // Only apply capitalizeEachWord if it's not a technology type dropdown
+      if (dataKey !== 'technologyType') {
+        chain = chain.map(capitalizeEachWord);
+      }
+
+      return chain
+          .uniq()
+          .value();
+    };
+
     this.state = {
       sortColumnIndex: props.sortColumnIndex,
       ascendingOrder: props.ascendingOrder,
@@ -93,14 +110,7 @@ export default class TableManager extends React.Component {
       dropdownFilters:
         props.dropdownFilters.map(dropdownFilter => ({
           ...dropdownFilter,
-          options:
-            _.chain(props.dataRows)
-              .flatMap(dropdownFilter.dataKey)
-              .map(_.toString)
-              .map(_.trim)
-              .map(capitalizeEachWord)
-              .uniq()
-              .value()
+          options: getUniqueFilterOptions(props.dataRows, dropdownFilter.dataKey)
         }))
       ,
       searchAll: ``,
