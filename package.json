@@ -2,8 +2,8 @@
   "name": "root",
   "private": true,
   "devDependencies": {
+    "@ebi-gene-expression-group/highcharts-series-generator": "file:packages/highcharts-series-generator",
     "lerna": "^5.1.2",
-    "webpack-cli": "^5.1.4",
-    "@ebi-gene-expression-group/highcharts-series-generator": "file:packages/highcharts-series-generator"
+    "webpack-cli": "^5.1.4"
   }
 }
