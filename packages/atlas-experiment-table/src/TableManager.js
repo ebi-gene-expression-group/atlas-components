@@ -86,19 +86,14 @@ export default class TableManager extends React.Component {
 
     // Extract the data processing chain into a reusable function
     const getUniqueFilterOptions = (dataRows, dataKey) => {
-      let chain = _.chain(dataRows)
+      return _.chain(dataRows)
           .flatMap(dataKey)
           .map(_.toString)
-          .map(_.trim);
-
-      // Only apply capitalizeEachWord if it's not a technology type dropdown
-      if (dataKey !== 'technologyType') {
-        chain = chain.map(capitalizeEachWord);
-      }
-
-      return chain
+          .map(_.trim)
+          .thru(chain => dataKey !== 'technologyType' ? chain.map(capitalizeEachWord) : chain)
           .uniq()
           .value();
+
     };
 
     this.state = {
